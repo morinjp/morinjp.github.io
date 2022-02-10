@@ -1,0 +1,323 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:01:41-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Back to \(\mathbf{\diff{}{x} a^x}\)</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.1/pretext.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on2.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="RQS.css">
+<link href="https://pretextbook.org/css/0.1/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\require{cancel}\newcommand{\dee}[1]{\mathrm{d}#1}
+\newcommand{\half}{ \frac{1}{2} }
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ts}{\textstyle}
+\newcommand{\es}{ {\varnothing}}
+\newcommand{\st}{ {\mbox{ s.t. }} }
+\newcommand{\pow}[1]{ \mathcal{P}\left(#1\right) }
+\newcommand{\set}[1]{ \left\{#1\right\} }
+\newcommand{\lin}{{\text{LIN}}}
+\newcommand{\quot}{{\text{QR}}}
+\newcommand{\simp}{{\text{SMP}}}
+\newcommand{\diff}[2]{ \frac{\mathrm{d}#1}{\mathrm{d}#2}}
+\newcommand{\bdiff}[2]{ \frac{\mathrm{d}}{\mathrm{d}#2} \left( #1 \right)}
+\newcommand{\ddiff}[3]{ \frac{\mathrm{d}^#1#2}{\mathrm{d}{#3}^#1}}
+\renewcommand{\neg}{ {\sim} }
+\newcommand{\limp}{ {\;\Rightarrow\;} }
+\newcommand{\nimp}{ {\;\not\Rightarrow\;} }
+\newcommand{\liff}{ {\;\Leftrightarrow\;} }
+\newcommand{\niff}{ {\;\not\Leftrightarrow\;} }
+\newcommand{\De}{\Delta}
+\newcommand{\bbbn}{\mathbb{N}}
+\newcommand{\bbbr}{\mathbb{R}}
+\newcommand{\bbbp}{\mathbb{P}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\Si}{\Sigma}
+
+\newcommand{\arccsc}{\mathop{\mathrm{arccsc}}}
+\newcommand{\arcsec}{\mathop{\mathrm{arcsec}}}
+\newcommand{\arccot}{\mathop{\mathrm{arccot}}}
+\newcommand{\erf}{\mathop{\mathrm{erf}}}
+\newcommand{\smsum}{\mathop{{\ts \sum}}}
+\newcommand{\atp}[2]{ \genfrac{}{}{0in}{}{#1}{#2} }
+
+\newcommand{\ave}{\mathrm{ave}}
+\newcommand{\llt}{\left \lt }
+\newcommand{\rgt}{\right \gt }
+
+
+\newcommand{\YEaxis}[2]{\draw[help lines] (-#1,0)--(#1,0) node[right]{$x$};\draw[help lines] (0,-#2)--(0,#2) node[above]{$y$};}
+
+\newcommand{\YEaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$x$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YEtaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+\newcommand{\YEtaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$}; \draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YExcoord}[2]{\draw (#1,.2)--(#1,-.2) node[below]{$#2$};}
+\newcommand{\YEycoord}[2]{\draw (.2,#1)--(-.2,#1) node[left]{$#2$};}
+\newcommand{\YEnxcoord}[2]{\draw (#1,-.2)--(#1,.2) node[above]{$#2$};}
+\newcommand{\YEnycoord}[2]{\draw (-.2,#1)--(.2,#1) node[right]{$#2$};}
+
+\newcommand{\YEstickfig}[3]{
+\draw (#1,#2) arc(-90:270:2mm);
+\draw (#1,#2)--(#1,#2-.5) (#1-.25,#2-.75)--(#1,#2-.5)--(#1+.25,#2-.75) (#1-.2,#2-.2)--(#1+.2,#2-.2);}
+
+
+\newcommand{\IBP}[7]{
+\begin{array}{|c  | l | l |}
+\hline
+\color{red}{\text{Option 1:}}
+&amp; u=#2
+&amp;\color{red}{\dee{u}=#3 ~ \dee{#1}}
+\\
+&amp; \dee{v}=#5~\dee{#1}
+&amp;\color{red}{v=#7}
+\\
+\hline
+\color{blue}{\text{Option 2:}}
+&amp; u=#5
+&amp;\color{blue}{\dee{u}=#6 ~ \dee{#1}}
+\\
+&amp;\dee{v}=#2 \dee{#1}
+&amp;\color{blue}{v=#4}
+\\
+\hline
+\end{array}
+}
+
+
+\renewcommand{\textcolor}[2]{{\color{#1}{#2}}}
+
+
+\newcommand{\trigtri}[4]{
+\begin{tikzpicture}
+\draw (-.5,0)--(2,0)--(2,1.5)--cycle;
+\draw (1.8,0) |- (2,.2);
+\draw[double] (0,0) arc(0:30:.5cm);
+\draw (0,.2) node[right]{$#1$};
+\draw (1,-.5) node{$#2$};
+\draw (2,.75) node[right]{$#3$};
+\draw (.6,1.1) node[rotate=30]{$#4$};
+\end{tikzpicture}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="clp_1_dc.html"><span class="title">CLP-1 Differential Calculus</span></a></h1>
+<p class="byline">Joel Feldman, Andrew Rechnitzer, Elyse Yeager</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec_diff_logs.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="sec_diff_logs.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="subsection-34.html" title="Next">Next</a></span></div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec_diff_logs.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="sec_diff_logs.html" title="Up">Up</a><a class="next-button button toolbar-item" href="subsection-34.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="index.html" data-scroll="index"><span class="title">Front Matter</span></a></h2>
+<ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface-2.html" data-scroll="preface-2">Using the exercises in this book</a></li>
+<li><a href="preface-3.html" data-scroll="preface-3">Feedback about the text</a></li>
+</ul>
+<h2 class="link"><a href="chap_basics.html" data-scroll="chap_basics"><span class="codenumber">0</span> <span class="title">The basics</span></a></h2>
+<ul>
+<li><a href="sec_0_1.html" data-scroll="sec_0_1">Numbers</a></li>
+<li><a href="sec_sets.html" data-scroll="sec_sets">Sets</a></li>
+<li><a href="sec_0_3.html" data-scroll="sec_0_3">Other Important Sets</a></li>
+<li><a href="sec_0_4.html" data-scroll="sec_0_4">Functions</a></li>
+<li><a href="sec_parsing.html" data-scroll="sec_parsing">Parsing Formulas</a></li>
+<li><a href="sec_inverse_functions.html" data-scroll="sec_inverse_functions">Inverse Functions</a></li>
+</ul>
+<h2 class="link"><a href="chap_limits.html" data-scroll="chap_limits"><span class="codenumber">1</span> <span class="title">Limits</span></a></h2>
+<ul>
+<li><a href="sec_first_lim.html" data-scroll="sec_first_lim">Drawing Tangents and a First Limit</a></li>
+<li><a href="sec_velocity.html" data-scroll="sec_velocity">Another Limit and Computing Velocity</a></li>
+<li><a href="sec_lim_func.html" data-scroll="sec_lim_func">The Limit of a Function</a></li>
+<li><a href="sec_1_4.html" data-scroll="sec_1_4">Calculating Limits with Limit Laws</a></li>
+<li><a href="sec_1_5.html" data-scroll="sec_1_5">Limits at Infinity</a></li>
+<li><a href="sec_1_6.html" data-scroll="sec_1_6">Continuity</a></li>
+<li><a href="sec_opt_formal_limit.html" data-scroll="sec_opt_formal_limit">(Optional) — Making the Informal a Little More Formal</a></li>
+<li><a href="sec_lim_inf_formal.html" data-scroll="sec_lim_inf_formal">(Optional) — Making Infinite Limits a Little More Formal</a></li>
+<li><a href="sec_proof_arith_lim.html" data-scroll="sec_proof_arith_lim">(Optional) — Proving the Arithmetic of Limits</a></li>
+</ul>
+<h2 class="link"><a href="chap_deriv.html" data-scroll="chap_deriv"><span class="codenumber">2</span> <span class="title">Derivatives</span></a></h2>
+<ul>
+<li><a href="sec_2_1.html" data-scroll="sec_2_1">Revisiting Tangent Lines</a></li>
+<li><a href="sec_def_deriv.html" data-scroll="sec_def_deriv">Definition of the Derivative</a></li>
+<li><a href="sec_2_3.html" data-scroll="sec_2_3">Interpretations of the Derivative</a></li>
+<li><a href="sec_2_4.html" data-scroll="sec_2_4">Arithmetic of Derivatives - a Differentiation Toolbox</a></li>
+<li><a href="sec_proof_arith_deriv.html" data-scroll="sec_proof_arith_deriv">Proofs of the Arithmetic of Derivatives</a></li>
+<li><a href="sec_2_6.html" data-scroll="sec_2_6">Using the Arithmetic of Derivatives –  Examples</a></li>
+<li><a href="sec_exp_func.html" data-scroll="sec_exp_func">Derivatives of Exponential Functions</a></li>
+<li><a href="sec_diff_trig.html" data-scroll="sec_diff_trig">Derivatives of Trigonometric Functions</a></li>
+<li><a href="sec_chain_rule.html" data-scroll="sec_chain_rule">One More Tool  – the Chain Rule</a></li>
+<li><a href="sec_diff_logs.html" data-scroll="sec_diff_logs">The Natural Logarithm</a></li>
+<li><a href="sec_2_11.html" data-scroll="sec_2_11">Implicit Differentiation</a></li>
+<li><a href="sec_invTrig.html" data-scroll="sec_invTrig">Inverse Trigonometric Functions</a></li>
+<li><a href="sec_mvt.html" data-scroll="sec_mvt">The Mean Value Theorem</a></li>
+<li><a href="sec_higher_diff.html" data-scroll="sec_higher_diff">Higher Order Derivatives</a></li>
+<li><a href="sec_cont_deriv.html" data-scroll="sec_cont_deriv">(Optional) — Is \(\lim_{x\to c}f'(x)\) Equal to \(f'(c)\text{?}\)</a></li>
+</ul>
+<h2 class="link"><a href="chap_appl_deriv.html" data-scroll="chap_appl_deriv"><span class="codenumber">3</span> <span class="title">Applications of derivatives</span></a></h2>
+<ul>
+<li><a href="sec_vel_acc.html" data-scroll="sec_vel_acc">Velocity and Acceleration</a></li>
+<li><a href="sec_rrates.html" data-scroll="sec_rrates">Related Rates</a></li>
+<li><a href="sec_ExpGthDecay.html" data-scroll="sec_ExpGthDecay">Exponential Growth and Decay</a></li>
+<li><a href="sec_DIFFTaylor.html" data-scroll="sec_DIFFTaylor">Taylor Polynomials</a></li>
+<li><a href="sec_optimise.html" data-scroll="sec_optimise">Optimisation</a></li>
+<li><a href="sec_curve_sketch.html" data-scroll="sec_curve_sketch">Sketching Graphs</a></li>
+<li><a href="sec_4_7.html" data-scroll="sec_4_7">L'Hôpital's Rule and Indeterminate Forms</a></li>
+</ul>
+<h2 class="link"><a href="chapter-5.html" data-scroll="chapter-5"><span class="codenumber">4</span> <span class="title">Towards Integral Calculus</span></a></h2>
+<ul><li><a href="sec_antidiff.html" data-scroll="sec_antidiff">Introduction to Antiderivatives</a></li></ul>
+<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Appendices</span></a></h2>
+<h2 class="link"><a href="app_highschool.html" data-scroll="app_highschool"><span class="codenumber">A</span> <span class="title">High School Material</span></a></h2>
+<ul>
+<li><a href="sec_simtri.html" data-scroll="sec_simtri">Similar Triangles</a></li>
+<li><a href="sec_A_2.html" data-scroll="sec_A_2">Pythagoras</a></li>
+<li><a href="sec_A_3.html" data-scroll="sec_A_3">Trigonometry — Definitions</a></li>
+<li><a href="app_rad_arc_sec.html" data-scroll="app_rad_arc_sec">Radians, Arcs and Sectors</a></li>
+<li><a href="app_sec_trig_graphs.html" data-scroll="app_sec_trig_graphs">Trigonometry — Graphs</a></li>
+<li><a href="sec_A_6.html" data-scroll="sec_A_6">Trigonometry — Special Triangles</a></li>
+<li><a href="sec_A_7.html" data-scroll="sec_A_7">Trigonometry — Simple Identities</a></li>
+<li><a href="sec_trig_add.html" data-scroll="sec_trig_add">Trigonometry — Add and Subtract Angles</a></li>
+<li><a href="sec_inv_trig.html" data-scroll="sec_inv_trig">Inverse Trig Functions</a></li>
+<li><a href="app_sec_areas.html" data-scroll="app_sec_areas">Areas</a></li>
+<li><a href="sec_volumes.html" data-scroll="sec_volumes">Volumes</a></li>
+<li><a href="sec_powers.html" data-scroll="sec_powers">Powers</a></li>
+<li><a href="sec_logs.html" data-scroll="sec_logs">Logarithms</a></li>
+<li><a href="sec_must_deriv.html" data-scroll="sec_must_deriv">You Should be Able to Derive</a></li>
+</ul>
+<h2 class="link"><a href="chap_app_B.html" data-scroll="chap_app_B"><span class="codenumber">B</span> <span class="title">Origin of Trig, Area and Volume Formulas</span></a></h2>
+<ul>
+<li><a href="sec_B_1.html" data-scroll="sec_B_1">Theorems about Triangles</a></li>
+<li><a href="sec_B_2.html" data-scroll="sec_B_2">Trigonometry</a></li>
+<li><a href="sec_B_3.html" data-scroll="sec_B_3">Inverse Trigonometric Functions</a></li>
+<li><a href="sec_B_4.html" data-scroll="sec_B_4">Cosine and Sine Laws</a></li>
+<li><a href="sec_B_5.html" data-scroll="sec_B_5">Circles, cones and spheres</a></li>
+</ul>
+<h2 class="link"><a href="app_root_finding.html" data-scroll="app_root_finding"><span class="codenumber">C</span> <span class="title">Root Finding</span></a></h2>
+<ul>
+<li><a href="sec_C_1.html" data-scroll="sec_C_1">Newton's Method</a></li>
+<li><a href="sec_C_2.html" data-scroll="sec_C_2">The Error Behaviour of Newton's Method</a></li>
+<li><a href="sec_C_3.html" data-scroll="sec_C_3">The false position (regula falsi) method</a></li>
+<li><a href="sec_C_4.html" data-scroll="sec_C_4">The secant method</a></li>
+<li><a href="sec_C_5.html" data-scroll="sec_C_5">The Error Behaviour of the Secant Method</a></li>
+</ul>
+<h2 class="link"><a href="app_hint.html" data-scroll="app_hint"><span class="codenumber">D</span> <span class="title">Hints for Exercises</span></a></h2>
+<h2 class="link"><a href="app_answ.html" data-scroll="app_answ"><span class="codenumber">E</span> <span class="title">Answers to Exercises</span></a></h2>
+<h2 class="link"><a href="app_soln.html" data-scroll="app_soln"><span class="codenumber">F</span> <span class="title">Solutions to Exercises</span></a></h2></nav><div class="extras"><nav><a class="feedback-link" href="mailto:clp@ugrad.math.ubc.ca?subject=clp-pretext" target="_blank">Feedback</a><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="mathbook-content"><section class="subsection" id="subsection-33"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.10.1</span> <span class="title">Back to \(\mathbf{\diff{}{x} a^x}\)</span>
+</h3>
+<p id="p-2123">We can also now finally get around to computing the derivative of \(a^x\) (which we started to do back in Section <a href="sec_exp_func.html" class="xref" title="Section 2.7: Derivatives of Exponential Functions">2.7</a>).</p>
+<div class="displaymath">
+\begin{align*}
+f(x) &amp;= a^x &amp; \text{take log of both sides}\\
+\log f(x) &amp;= x \log a &amp; \text{exponentiate both sides base $e$}\\
+f(x) &amp;= e^{x \log a} &amp; \text{chain rule}\\
+f'(x) &amp;= e^{x \log a} \cdot \log a\\
+&amp;= a^x \cdot \log a
+\end{align*}
+</div>
+<p>Notice that we could have also done the following:</p>
+<div class="displaymath">
+\begin{align*}
+f(x) &amp;= a^x &amp; \text{take log of both sides}\\
+\log f(x) &amp;= x \log a &amp; \text{differentiate both sides}\\
+\diff{}{x} \left( \log f(x) \right) &amp;=
+\log a\\
+\end{align*}
+<p class="intertext">We then process the left-hand side using the chain rule</p>
+\begin{align*}
+f'(x) \cdot \frac{1}{f(x)} &amp;= \log a\\
+f'(x) &amp;= f(x) \cdot \log a = a^x \cdot \log a
+\end{align*}
+</div>
+<p>We will see \(\diff{}{x} \log f(x)\) more below in the subsection on “logarithmic differentiation”.</p>
+<p id="p-2124">To summarise the results above:</p>
+<article class="theorem-like" id="cor_2_10"><h6 class="heading">
+<span class="type">Corollary</span> <span class="codenumber">2.10.6</span>
+</h6>
+<div class="displaymath" id="p-2125">
+\begin{align*}
+\diff{}{x} a^x &amp;= \log a \cdot a^x &amp; \text{for any $a \gt 0$}\\
+\diff{}{x} \log_a x &amp;= \frac{1}{x \cdot \log a} &amp; \text{for any $a \gt 0, a \neq 1$}
+\end{align*}
+</div>
+<p>where \(\log x\) is the natural logarithm.</p></article><p id="p-2126">Recall that we need the caveat \(a \neq 1\) because the logarithm base 1 is not well defined. This is because \(1^x = 1\) for any \(x\text{.}\) We do not need a similar caveat for the derivative of the exponential because we know (recall Example <a knowl="./knowl/eg_log_est.html" title="Example 2.7.1: Estimates of \(C(a)\)">2.7.1</a>)</p>
+<div class="displaymath">
+\begin{align*}
+\diff{}{x} 1^x &amp;= \diff{}{x} 1= 0 &amp;\text{while the above corollary tells us}\\
+&amp;= \log 1 \cdot 1^x = 0 \cdot 1 = 0.
+\end{align*}
+</div></section></div></main>
+</div>
+<!--Start: Google Universal code--><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-105798942-1', 'auto');
+ga('send', 'pageview');
+</script><!--End: Google Universal code--><div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.1/login.js"></script>
+</body>
+</html>

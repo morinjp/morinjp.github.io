@@ -1,0 +1,941 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:00:16-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Calculating Limits with Limit Laws</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.1/pretext.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on2.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="RQS.css">
+<link href="https://pretextbook.org/css/0.1/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\require{cancel}\newcommand{\dee}[1]{\mathrm{d}#1}
+\newcommand{\half}{ \frac{1}{2} }
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ts}{\textstyle}
+\newcommand{\es}{ {\varnothing}}
+\newcommand{\st}{ {\mbox{ s.t. }} }
+\newcommand{\pow}[1]{ \mathcal{P}\left(#1\right) }
+\newcommand{\set}[1]{ \left\{#1\right\} }
+\newcommand{\lin}{{\text{LIN}}}
+\newcommand{\quot}{{\text{QR}}}
+\newcommand{\simp}{{\text{SMP}}}
+\newcommand{\diff}[2]{ \frac{\mathrm{d}#1}{\mathrm{d}#2}}
+\newcommand{\bdiff}[2]{ \frac{\mathrm{d}}{\mathrm{d}#2} \left( #1 \right)}
+\newcommand{\ddiff}[3]{ \frac{\mathrm{d}^#1#2}{\mathrm{d}{#3}^#1}}
+\renewcommand{\neg}{ {\sim} }
+\newcommand{\limp}{ {\;\Rightarrow\;} }
+\newcommand{\nimp}{ {\;\not\Rightarrow\;} }
+\newcommand{\liff}{ {\;\Leftrightarrow\;} }
+\newcommand{\niff}{ {\;\not\Leftrightarrow\;} }
+\newcommand{\De}{\Delta}
+\newcommand{\bbbn}{\mathbb{N}}
+\newcommand{\bbbr}{\mathbb{R}}
+\newcommand{\bbbp}{\mathbb{P}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\Si}{\Sigma}
+
+\newcommand{\arccsc}{\mathop{\mathrm{arccsc}}}
+\newcommand{\arcsec}{\mathop{\mathrm{arcsec}}}
+\newcommand{\arccot}{\mathop{\mathrm{arccot}}}
+\newcommand{\erf}{\mathop{\mathrm{erf}}}
+\newcommand{\smsum}{\mathop{{\ts \sum}}}
+\newcommand{\atp}[2]{ \genfrac{}{}{0in}{}{#1}{#2} }
+
+\newcommand{\ave}{\mathrm{ave}}
+\newcommand{\llt}{\left \lt }
+\newcommand{\rgt}{\right \gt }
+
+
+\newcommand{\YEaxis}[2]{\draw[help lines] (-#1,0)--(#1,0) node[right]{$x$};\draw[help lines] (0,-#2)--(0,#2) node[above]{$y$};}
+
+\newcommand{\YEaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$x$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YEtaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+\newcommand{\YEtaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$}; \draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YExcoord}[2]{\draw (#1,.2)--(#1,-.2) node[below]{$#2$};}
+\newcommand{\YEycoord}[2]{\draw (.2,#1)--(-.2,#1) node[left]{$#2$};}
+\newcommand{\YEnxcoord}[2]{\draw (#1,-.2)--(#1,.2) node[above]{$#2$};}
+\newcommand{\YEnycoord}[2]{\draw (-.2,#1)--(.2,#1) node[right]{$#2$};}
+
+\newcommand{\YEstickfig}[3]{
+\draw (#1,#2) arc(-90:270:2mm);
+\draw (#1,#2)--(#1,#2-.5) (#1-.25,#2-.75)--(#1,#2-.5)--(#1+.25,#2-.75) (#1-.2,#2-.2)--(#1+.2,#2-.2);}
+
+
+\newcommand{\IBP}[7]{
+\begin{array}{|c  | l | l |}
+\hline
+\color{red}{\text{Option 1:}}
+&amp; u=#2
+&amp;\color{red}{\dee{u}=#3 ~ \dee{#1}}
+\\
+&amp; \dee{v}=#5~\dee{#1}
+&amp;\color{red}{v=#7}
+\\
+\hline
+\color{blue}{\text{Option 2:}}
+&amp; u=#5
+&amp;\color{blue}{\dee{u}=#6 ~ \dee{#1}}
+\\
+&amp;\dee{v}=#2 \dee{#1}
+&amp;\color{blue}{v=#4}
+\\
+\hline
+\end{array}
+}
+
+
+\renewcommand{\textcolor}[2]{{\color{#1}{#2}}}
+
+
+\newcommand{\trigtri}[4]{
+\begin{tikzpicture}
+\draw (-.5,0)--(2,0)--(2,1.5)--cycle;
+\draw (1.8,0) |- (2,.2);
+\draw[double] (0,0) arc(0:30:.5cm);
+\draw (0,.2) node[right]{$#1$};
+\draw (1,-.5) node{$#2$};
+\draw (2,.75) node[right]{$#3$};
+\draw (.6,1.1) node[rotate=30]{$#4$};
+\end{tikzpicture}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="clp_1_dc.html"><span class="title">CLP-1 Differential Calculus</span></a></h1>
+<p class="byline">Joel Feldman, Andrew Rechnitzer, Elyse Yeager</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec_1_4.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="sec_1_4.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="exercises-4.html" title="Next">Next</a></span></div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec_1_4.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="sec_1_4.html" title="Up">Up</a><a class="next-button button toolbar-item" href="exercises-4.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="index.html" data-scroll="index"><span class="title">Front Matter</span></a></h2>
+<ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface-2.html" data-scroll="preface-2">Using the exercises in this book</a></li>
+<li><a href="preface-3.html" data-scroll="preface-3">Feedback about the text</a></li>
+</ul>
+<h2 class="link"><a href="chap_basics.html" data-scroll="chap_basics"><span class="codenumber">0</span> <span class="title">The basics</span></a></h2>
+<ul>
+<li><a href="sec_0_1.html" data-scroll="sec_0_1">Numbers</a></li>
+<li><a href="sec_sets.html" data-scroll="sec_sets">Sets</a></li>
+<li><a href="sec_0_3.html" data-scroll="sec_0_3">Other Important Sets</a></li>
+<li><a href="sec_0_4.html" data-scroll="sec_0_4">Functions</a></li>
+<li><a href="sec_parsing.html" data-scroll="sec_parsing">Parsing Formulas</a></li>
+<li><a href="sec_inverse_functions.html" data-scroll="sec_inverse_functions">Inverse Functions</a></li>
+</ul>
+<h2 class="link"><a href="chap_limits.html" data-scroll="chap_limits"><span class="codenumber">1</span> <span class="title">Limits</span></a></h2>
+<ul>
+<li><a href="sec_first_lim.html" data-scroll="sec_first_lim">Drawing Tangents and a First Limit</a></li>
+<li><a href="sec_velocity.html" data-scroll="sec_velocity">Another Limit and Computing Velocity</a></li>
+<li><a href="sec_lim_func.html" data-scroll="sec_lim_func">The Limit of a Function</a></li>
+<li><a href="sec_1_4.html" data-scroll="sec_1_4">Calculating Limits with Limit Laws</a></li>
+<li><a href="sec_1_5.html" data-scroll="sec_1_5">Limits at Infinity</a></li>
+<li><a href="sec_1_6.html" data-scroll="sec_1_6">Continuity</a></li>
+<li><a href="sec_opt_formal_limit.html" data-scroll="sec_opt_formal_limit">(Optional) — Making the Informal a Little More Formal</a></li>
+<li><a href="sec_lim_inf_formal.html" data-scroll="sec_lim_inf_formal">(Optional) — Making Infinite Limits a Little More Formal</a></li>
+<li><a href="sec_proof_arith_lim.html" data-scroll="sec_proof_arith_lim">(Optional) — Proving the Arithmetic of Limits</a></li>
+</ul>
+<h2 class="link"><a href="chap_deriv.html" data-scroll="chap_deriv"><span class="codenumber">2</span> <span class="title">Derivatives</span></a></h2>
+<ul>
+<li><a href="sec_2_1.html" data-scroll="sec_2_1">Revisiting Tangent Lines</a></li>
+<li><a href="sec_def_deriv.html" data-scroll="sec_def_deriv">Definition of the Derivative</a></li>
+<li><a href="sec_2_3.html" data-scroll="sec_2_3">Interpretations of the Derivative</a></li>
+<li><a href="sec_2_4.html" data-scroll="sec_2_4">Arithmetic of Derivatives - a Differentiation Toolbox</a></li>
+<li><a href="sec_proof_arith_deriv.html" data-scroll="sec_proof_arith_deriv">Proofs of the Arithmetic of Derivatives</a></li>
+<li><a href="sec_2_6.html" data-scroll="sec_2_6">Using the Arithmetic of Derivatives –  Examples</a></li>
+<li><a href="sec_exp_func.html" data-scroll="sec_exp_func">Derivatives of Exponential Functions</a></li>
+<li><a href="sec_diff_trig.html" data-scroll="sec_diff_trig">Derivatives of Trigonometric Functions</a></li>
+<li><a href="sec_chain_rule.html" data-scroll="sec_chain_rule">One More Tool  – the Chain Rule</a></li>
+<li><a href="sec_diff_logs.html" data-scroll="sec_diff_logs">The Natural Logarithm</a></li>
+<li><a href="sec_2_11.html" data-scroll="sec_2_11">Implicit Differentiation</a></li>
+<li><a href="sec_invTrig.html" data-scroll="sec_invTrig">Inverse Trigonometric Functions</a></li>
+<li><a href="sec_mvt.html" data-scroll="sec_mvt">The Mean Value Theorem</a></li>
+<li><a href="sec_higher_diff.html" data-scroll="sec_higher_diff">Higher Order Derivatives</a></li>
+<li><a href="sec_cont_deriv.html" data-scroll="sec_cont_deriv">(Optional) — Is \(\lim_{x\to c}f'(x)\) Equal to \(f'(c)\text{?}\)</a></li>
+</ul>
+<h2 class="link"><a href="chap_appl_deriv.html" data-scroll="chap_appl_deriv"><span class="codenumber">3</span> <span class="title">Applications of derivatives</span></a></h2>
+<ul>
+<li><a href="sec_vel_acc.html" data-scroll="sec_vel_acc">Velocity and Acceleration</a></li>
+<li><a href="sec_rrates.html" data-scroll="sec_rrates">Related Rates</a></li>
+<li><a href="sec_ExpGthDecay.html" data-scroll="sec_ExpGthDecay">Exponential Growth and Decay</a></li>
+<li><a href="sec_DIFFTaylor.html" data-scroll="sec_DIFFTaylor">Taylor Polynomials</a></li>
+<li><a href="sec_optimise.html" data-scroll="sec_optimise">Optimisation</a></li>
+<li><a href="sec_curve_sketch.html" data-scroll="sec_curve_sketch">Sketching Graphs</a></li>
+<li><a href="sec_4_7.html" data-scroll="sec_4_7">L'Hôpital's Rule and Indeterminate Forms</a></li>
+</ul>
+<h2 class="link"><a href="chapter-5.html" data-scroll="chapter-5"><span class="codenumber">4</span> <span class="title">Towards Integral Calculus</span></a></h2>
+<ul><li><a href="sec_antidiff.html" data-scroll="sec_antidiff">Introduction to Antiderivatives</a></li></ul>
+<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Appendices</span></a></h2>
+<h2 class="link"><a href="app_highschool.html" data-scroll="app_highschool"><span class="codenumber">A</span> <span class="title">High School Material</span></a></h2>
+<ul>
+<li><a href="sec_simtri.html" data-scroll="sec_simtri">Similar Triangles</a></li>
+<li><a href="sec_A_2.html" data-scroll="sec_A_2">Pythagoras</a></li>
+<li><a href="sec_A_3.html" data-scroll="sec_A_3">Trigonometry — Definitions</a></li>
+<li><a href="app_rad_arc_sec.html" data-scroll="app_rad_arc_sec">Radians, Arcs and Sectors</a></li>
+<li><a href="app_sec_trig_graphs.html" data-scroll="app_sec_trig_graphs">Trigonometry — Graphs</a></li>
+<li><a href="sec_A_6.html" data-scroll="sec_A_6">Trigonometry — Special Triangles</a></li>
+<li><a href="sec_A_7.html" data-scroll="sec_A_7">Trigonometry — Simple Identities</a></li>
+<li><a href="sec_trig_add.html" data-scroll="sec_trig_add">Trigonometry — Add and Subtract Angles</a></li>
+<li><a href="sec_inv_trig.html" data-scroll="sec_inv_trig">Inverse Trig Functions</a></li>
+<li><a href="app_sec_areas.html" data-scroll="app_sec_areas">Areas</a></li>
+<li><a href="sec_volumes.html" data-scroll="sec_volumes">Volumes</a></li>
+<li><a href="sec_powers.html" data-scroll="sec_powers">Powers</a></li>
+<li><a href="sec_logs.html" data-scroll="sec_logs">Logarithms</a></li>
+<li><a href="sec_must_deriv.html" data-scroll="sec_must_deriv">You Should be Able to Derive</a></li>
+</ul>
+<h2 class="link"><a href="chap_app_B.html" data-scroll="chap_app_B"><span class="codenumber">B</span> <span class="title">Origin of Trig, Area and Volume Formulas</span></a></h2>
+<ul>
+<li><a href="sec_B_1.html" data-scroll="sec_B_1">Theorems about Triangles</a></li>
+<li><a href="sec_B_2.html" data-scroll="sec_B_2">Trigonometry</a></li>
+<li><a href="sec_B_3.html" data-scroll="sec_B_3">Inverse Trigonometric Functions</a></li>
+<li><a href="sec_B_4.html" data-scroll="sec_B_4">Cosine and Sine Laws</a></li>
+<li><a href="sec_B_5.html" data-scroll="sec_B_5">Circles, cones and spheres</a></li>
+</ul>
+<h2 class="link"><a href="app_root_finding.html" data-scroll="app_root_finding"><span class="codenumber">C</span> <span class="title">Root Finding</span></a></h2>
+<ul>
+<li><a href="sec_C_1.html" data-scroll="sec_C_1">Newton's Method</a></li>
+<li><a href="sec_C_2.html" data-scroll="sec_C_2">The Error Behaviour of Newton's Method</a></li>
+<li><a href="sec_C_3.html" data-scroll="sec_C_3">The false position (regula falsi) method</a></li>
+<li><a href="sec_C_4.html" data-scroll="sec_C_4">The secant method</a></li>
+<li><a href="sec_C_5.html" data-scroll="sec_C_5">The Error Behaviour of the Secant Method</a></li>
+</ul>
+<h2 class="link"><a href="app_hint.html" data-scroll="app_hint"><span class="codenumber">D</span> <span class="title">Hints for Exercises</span></a></h2>
+<h2 class="link"><a href="app_answ.html" data-scroll="app_answ"><span class="codenumber">E</span> <span class="title">Answers to Exercises</span></a></h2>
+<h2 class="link"><a href="app_soln.html" data-scroll="app_soln"><span class="codenumber">F</span> <span class="title">Solutions to Exercises</span></a></h2></nav><div class="extras"><nav><a class="feedback-link" href="mailto:clp@ugrad.math.ubc.ca?subject=clp-pretext" target="_blank">Feedback</a><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="mathbook-content"><section class="subsection" id="subsection-5"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.4.1</span> <span class="title">Calculating Limits with Limit Laws</span>
+</h3>
+<p id="p-379">Think back to the functions you know and the sorts of things you have  been  asked to draw, factor and so on. Then they are all constructed from simple  pieces, such as</p>
+<ul class="disc">
+<li id="li-168">constants — \(c\)</li>
+<li id="li-169">monomials — \(x^n\)</li>
+<li id="li-170">trigonometric functions — \(\sin(x), \cos(x)\) and \(\tan(x)\)</li>
+</ul>
+<p>These are the building blocks from which we construct functions. Soon we will  add a few more functions to this list, especially the exponential function and  various inverse functions.</p>
+<p id="p-380">We then take these building blocks and piece them together using arithmetic</p>
+<ul class="disc">
+<li id="li-171">addition and subtraction — \(f(x)  = g(x) + h(x)\) and \(f(x) = g(x) -  h(x)\)</li>
+<li id="li-172">multiplication — \(f(x) = g(x) \cdot h(x)\)</li>
+<li id="li-173">division — \(f(x) = \frac{g(x)}{h(x)}\)</li>
+<li id="li-174">substitution — \(f(x) = g( h(x) )\) — this is also called  the composition of \(g\) with \(h\text{.}\)</li>
+</ul>
+<p>The idea of building up complicated functions from simpler pieces was discussed  in <a href="sec_parsing.html" class="xref" title="Section 0.5: Parsing Formulas">Section 0.5</a>.</p>
+<p id="p-381">What we will learn in this section is how to compute the limits of the basic  building blocks and then how we can compute limits of sums, products and so  forth using “limit laws”. This process allows us to compute limits of  complicated functions, using very simple tools and without having to resort to  “plugging in numbers” or “closer and closer” or “\(\epsilon-\delta\)  arguments”.</p>
+<p id="p-382">In the examples we saw above, almost all the <em class="emphasis">interesting</em> limits happened  at points where the underlying function was badly behaved — where it jumped,  was not defined or blew up to infinity. In those cases we had to be careful and  think about what was happening. Thankfully most functions we will see do not  have too many points at which these sorts of things happen.</p>
+<p id="p-383">For example, polynomials do not have any nasty jumps and are defined everywhere  and do not “blow up”. If you plot them, they look smooth <a knowl="" class="id-ref" refid="hk-fn-32" id="fn-32"><sup> 1 </sup></a><span id="hk-fn-32" class="hidden-content tex2jax_ignore"><span class="footnote">We have  used this term in an imprecise way, but it does have a precise  mathematical meaning.</span></span>. Polynomials and limits behave very nicely together,  and for any polynomial \(P(x)\) and any real number \(a\) we have that</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{x \to a} P(x) &amp;= P(a)
+\end{align*}
+</div>
+<p>That is — to evaluate the limit we just plug in the number. We will build up  to this result over the next few pages.</p>
+<p id="p-384">Let us start with the two easiest limits <a knowl="" class="id-ref" refid="hk-fn-33" id="fn-33"><sup> 2 </sup></a><span id="hk-fn-33" class="hidden-content tex2jax_ignore"><span class="footnote">Though it lies outside the  scope of the course, you can find the formal \(\epsilon\)-\(\delta\) proof of this  result at the end of Section <a href="sec_opt_formal_limit.html" class="xref" title="Section 1.7: (Optional) — Making the Informal a Little More Formal">1.7</a>.</span></span></p>
+<article class="theorem-like" id="thm_easy_lim"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">1.4.1</span> <span class="title">Easiest limits</span>
+</h6>
+<p id="p-385">Let \(a,c \in \mathbb{R}\text{.}\) The following two limits hold</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{x \to a} c &amp; = c &amp; \text{ and }&amp;&amp;
+\lim_{x \to a} x &amp;= a.
+\end{align*}
+</div></article><p id="p-386">Since we have not seen too many theorems yet, let us examine it carefully piece  by piece.</p>
+<ul class="disc">
+<li id="li-175">
+<em class="alert">Let \(a,c \in \mathbb{R}\)</em> — just as was the case for  definitions, we start a theorem by defining terms and setting the scene. There  is not too much scene to set: the symbols \(a\) and \(c\) are real numbers.</li>
+<li id="li-176">
+<em class="alert">The following two limits hold</em> — this doesn't really  contribute much to the statement of the theorem, it just makes it easier to  read.</li>
+<li id="li-177">\(\ds \mathbf{\lim_{x \to a} c  = c}\)  — when we take the  limit of a  constant function (for example think of \(c=3\)), the limit is (unsurprisingly)  just that same constant.</li>
+<li id="li-178">\(\ds \mathbf{\lim_{x \to a} x = a}\) — as we noted above for general  polynomials, the limit of the function \(f(x) = x\) as \(x\) approaches a given  point \(a\text{,}\) is just \(a\text{.}\) This says something quite obvious — as \(x\) approaches  \(a\text{,}\) \(x\) approaches \(a\) (if you are not convinced then sketch the graph).</li>
+</ul>
+<p id="p-387">Armed with only these two limits, we cannot do very much. But combining these  limits with some arithmetic we can do quite a lot. For a moment, take a step  back from limits for a moment and think about how we construct functions. To  make the discussion a little more precise think about how we might construct  the function</p>
+<div class="displaymath">
+\begin{align*}
+h(x) &amp;= \frac{2x-3}{x^2+5x-6}
+\end{align*}
+</div>
+<p id="p-388">If we want to compute the value of the function at \(x=2\text{,}\) then we would</p>
+<ul class="disc">
+<li id="li-179">compute the numerator at \(x=2\)</li>
+<li id="li-180">compute the denominator at \(x=2\)</li>
+<li id="li-181">compute the ratio</li>
+</ul>
+<p>Now to compute the numerator we</p>
+<ul class="disc">
+<li id="li-182">take \(x\) and multiply it by 2</li>
+<li id="li-183">subtract 3 to the result</li>
+</ul>
+<p>While for the denominator</p>
+<ul class="disc">
+<li id="li-184">multiply \(x\) by \(x\)</li>
+<li id="li-185">multiply \(x\) by 5</li>
+<li id="li-186">add these two numbers and subtract \(6\)</li>
+</ul>
+<p>This sequence of operations can be represented pictorially as the tree shown in Figure <a knowl="./knowl/fig_parse_me.html" title="Figure 1.4.2">1.4.2</a> below.</p>
+<figure class="figure-like" id="fig_parse_me"><div style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="text/figs/tree3.svg" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span> <span class="codenumber">1.4.2</span> </figcaption></figure><p id="p-389">Such trees were discussed in Section <a href="sec_parsing.html" class="xref" title="Section 0.5: Parsing Formulas">0.5</a> (now is not a bad time to quickly review that section before proceeding). The point here is that in order to compute the  value of the function we just repeatedly add, subtract, multiply and divide constants and  \(x\text{.}\)</p>
+<p id="p-390">To compute the limit of the above function at \(x=2\) we can do something very  similar. From the previous theorem we know how to compute</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{x \to 2} c &amp;= c &amp;&amp; \text{and} &amp; \lim_{x \to 2} x &amp;= 2
+\end{align*}
+</div>
+<p>and the next theorem will tell us how to stitch together these two limits using  the arithmetic we used to construct the function.</p>
+<article class="theorem-like" id="thm_arith_lim"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">1.4.3</span> <span class="title">Arithmetic of limits</span>
+</h6>
+<p id="p-391">Let \(a,c \in \mathbb{R}\text{,}\) let \(f(x)\) and \(g(x)\) be defined for all \(x\)'s that lie in  some interval about \(a\) (but \(f,g\) need not be defined exactly at \(a\)).</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{x \to a} f(x)&amp;=F &amp; \lim_{x \to a} g(x) &amp;=G
+\end{align*}
+</div>
+<p>exist with \(F,G \in \mathbb{R}\text{.}\) Then the following limits hold</p>
+<ul class="disc">
+<li id="li-187">\(\ds \lim_{x \to a} ( f(x) + g(x) ) = F+G\) — limit of the sum is the  sum of the limits.</li>
+<li id="li-188">\(\ds \lim_{x \to a} ( f(x) - g(x) ) = F - G\) — limit of the difference  is the difference of the limits.</li>
+<li id="li-189">\(\ds \lim_{x \to a} c f(x) = c F\text{.}\)</li>
+<li id="li-190">\(\ds \lim_{x \to a} ( f(x) \cdot g(x) ) = F \cdot G\) — limit of  the product is the product of limits.</li>
+<li id="li-191">If \(G \neq 0\) then \(\ds \lim_{x \to a} \frac{f(x)}{g(x)} = \frac{F}{G}\) and, in particular, \(\ds \lim_{x \to a} \frac{1}{g(x)} = \frac{1}{G}\text{.}\)</li>
+</ul>
+<p>Note — be careful with this last one — the denominator cannot be zero.</p></article><p id="p-392">The above theorem shows that limits interact very simply with arithmetic. If  you are asked to find the limit of a sum then the answer is just the sum of the  limits. Similarly the limit of a product is just the product of the limits.</p>
+<p id="p-393">How do we apply the above theorem to the rational function \(h(x)\) we defined  above? Here is a warm-up example:</p>
+<article class="example-like" id="eg_1_4_1"><a knowl="" class="id-ref" refid="hk-eg_1_4_1"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.4.4</span> <span class="title">Using limit laws</span>
+</h6></a></article><div id="hk-eg_1_4_1" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-394">You are given two functions \(f,g\) (not explicitly) which have the following  limits as \(x\) approaches 1:</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{x \to 1} f(x)&amp;=3 &amp;&amp; \text{and} &amp; \lim_{x\to 1} g(x)&amp;=2
+\end{align*}
+</div>
+<p>Using the above theorem we can compute</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{x \to 1} 3f(x) &amp;= 3 \times 3 = 9\\
+\lim_{x \to 1} 3f(x) -g(x) &amp;= 3\times 3 -2 = 7\\
+\lim_{x \to 1} f(x) g(x) &amp;= 3\times 2 = 6\\
+\lim_{x \to 1} \frac{f(x)}{f(x) -g(x)} &amp;= \frac{3}{3-2} = 3
+\end{align*}
+</div></article></div>
+<p id="p-395">Another simple example</p>
+<article class="example-like" id="eg_1_4_2"><a knowl="" class="id-ref" refid="hk-eg_1_4_2"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.4.5</span> <span class="title">More using limit laws</span>
+</h6></a></article><div id="hk-eg_1_4_2" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-396">Find \(\ds \lim_{x \to 3} 4x^2-1\)</p>
+<p id="p-397">We use the arithmetic of limits:</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{x \to 3} 4x^2-1
+&amp;= \left( \lim_{x \to 3} 4x^2 \right) - \lim_{x \to 3} 1
+&amp; \text{difference of limits}\\
+&amp;= \left( \lim_{x \to 3} 4  \cdot \lim_{x \to 3} x^2 \right) -  \lim_{x \to 3} 1
+&amp; \text{product of limits}\\
+&amp;= 4 \cdot \left( \lim_{x \to 3} x^2 \right) -  1
+&amp; \text{limit of constant}\\
+&amp;= 4 \cdot \left( \lim_{x \to 3} x \right) \cdot \left( \lim_{x \to 3} x  \right)-1
+&amp; \text{product of limits}\\
+&amp;= 4 \cdot 3 \cdot 3 - 1
+&amp; \text{limit of $x$}\\
+&amp;= 36 - 1\\
+&amp;= 35
+\end{align*}
+</div></article></div>
+<p id="p-398">This is an excruciating level of detail, but when you first use this theorem  and try some examples it is a good idea to do things step by step by step until  you are comfortable with it.</p>
+<article class="example-like" id="eg_1_4_3"><a knowl="" class="id-ref" refid="hk-eg_1_4_3"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.4.6</span> <span class="title">Yet more using limit laws</span>
+</h6></a></article><div id="hk-eg_1_4_3" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-399">Yet another limit — compute \(\ds \lim_{x\to 2} \frac{x}{x-1}\text{.}\)</p>
+<p id="p-400">To apply the arithmetic of limits, we need to examine numerator and  denominator separately and make sure the limit of the denominator is non-zero.  Numerator first:</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{x \to 2} x &amp; = 2 &amp; \text{limit of $x$}\\
+\end{align*}
+<p class="intertext">and now the denominator:</p>
+\begin{align*}
+\lim_{x \to 2} x-1
+&amp; = \left( \lim_{x \to 2} x \right) - \left( \lim_{x \to 2} 1 \right)
+&amp; \text{difference of limits}\\
+&amp; = 2 - 1
+&amp; \text{limit of $x$ and limit of constant}
+&amp; = 1
+\end{align*}
+</div>
+<p>Since the limit of the denominator is non-zero we can put it back together to  get</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{x\to 2} \frac{x}{x-1} &amp;= \frac{\ds \lim_{x\to 2} x}{\ds \lim_{x \to
+2}(x-1)}\\
+&amp;= \frac{2}{1}\\
+&amp;= 2
+\end{align*}
+</div></article></div>
+<p id="p-401">In the next example we show that many different things can happen if  the limit of the denominator is zero.</p>
+<article class="example-like" id="eg_lim_rat"><a knowl="" class="id-ref" refid="hk-eg_lim_rat"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.4.7</span> <span class="title">Be careful with limits of ratios</span>
+</h6></a></article><div id="hk-eg_lim_rat" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-402">We must be careful when computing the limit of a ratio — it  is the ratio of the limits except when the limit of the denominator is zero.  When the limit of the denominator is zero Theorem <a knowl="./knowl/thm_arith_lim.html" title="Theorem 1.4.3: Arithmetic of limits">1.4.3</a>  <em class="alert">does not apply</em> and a few interesting things can happen</p>
+<ul class="disc">
+<li id="li-192">If the limit of the numerator is non-zero then the limit of the ratio  does not exist<div class="displaymath">
+\begin{align*}
+\lim_{x \to a} \frac{f(x)}{g(x)} &amp;= DNE &amp; \text{when $\lim_{x\to a} f(x) \neq
+0$ and $\lim_{x \to a} g(x)=0$}
+\end{align*}
+</div>For example, \(\ds \lim_{x \to 0} \frac{1}{x^2} = DNE\text{.}\)</li>
+<li id="li-193">
+<p id="p-403">If the limit of the numerator is zero then the above theorem does not  give us enough information to decide whether or not the limit exists. It is  possible that</p>
+<ul class="circle">
+<li id="li-194">the limit does not exist, eg. \(\ds \lim_{x \to 0} \frac{x}{x^2} =  \lim_{x  \to 0} \frac{1}{x} = DNE\)</li>
+<li id="li-195">the limit is \(\pm \infty\text{,}\) eg. \(\ds \lim_{x \to 0} \frac{x^2}{x^4} =  \lim_{x  \to 0} \frac{1}{x^2} = +\infty\) or \(\ds \lim_{x \to 0} \frac{-x^2}{x^4} =  \lim_{x\to 0} \frac{-1}{x^2} = -\infty\text{.}\)</li>
+<li id="li-196">the limit is zero, eg. \(\ds \lim_{x \to 0} \frac{x^2}{x} = 0\)</li>
+<li id="li-197">the limit exists and is non-zero, eg. \(\ds \lim_{x \to 0} \frac{x}{x} =  1\)</li>
+</ul>
+</li>
+</ul>
+<p>Now while the above examples are very simple and a little contrived they serve  to illustrate the point we are trying to make — be careful if the limit of  the denominator is zero.</p></article></div>
+<p id="p-404">We now have enough theory to return to our rational function and compute its  limit as \(x\) approaches 2.</p>
+<article class="example-like" id="eg_1_4_4"><a knowl="" class="id-ref" refid="hk-eg_1_4_4"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.4.8</span> <span class="title">More on limits of ratios</span>
+</h6></a></article><div id="hk-eg_1_4_4" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-405">Let \(\ds h(x) = \frac{2x-3}{x^2+5x-6}\) and find its limit as \(x\) approaches  \(2\text{.}\)</p>
+<p id="p-406">Since this is the limit  of a ratio, we compute the limit of the numerator and  denominator separately. Numerator first:</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{x \to 2} 2x-3
+&amp;= \left( \lim_{x \to 2} 2x \right) - \left( \lim_{x \to 2} 3 \right)
+&amp; \text{difference of limits}\\
+&amp;= 2 \cdot \left( \lim_{x \to 2} x \right) -3
+&amp; \text{product of limits and limit of constant}\\
+&amp;= 2 \cdot 2 -3
+&amp; \text{limits of $x$}\\
+&amp;= 1
+\end{align*}
+</div>
+<p>Denominator next:</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{x \to 2} x^2+5x-6
+&amp;= \left( \lim_{x \to 2} x^2 \right) + \left( \lim_{x \to 2} 5x \right)
+- \left( \lim_{x \to 2} 6 \right)
+&amp; \!\!\!\!\!\!\text{sum of limits}\\
+&amp;= \left( \lim_{x \to 2} x \right)\cdot \left( \lim_{x \to 2} x \right)
++ 5 \cdot \left( \lim_{x \to 2} x \right) - 6\\
+&amp;\hskip1.0in \text{product of limits and limit of constant}\\
+&amp;= 2 \cdot 2 + 5 \cdot 2 - 6
+&amp; \text{limits of $x$}\\
+&amp;= 8
+\end{align*}
+</div>
+<p>Since the limit of the denominator is non-zero, we can obtain our result by  taking the ratio of the separate limits.</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{x \to 2} \frac{2x-3}{x^2+5x-6}
+&amp;= \frac{\ds \lim_{x \to 2} 2x-3}{\ds \lim_{x \to 2} x^2+5x-6} = \frac{1}{8}
+\end{align*}
+</div>
+<p id="p-407">The above works out quite simply. However, if we were to take the limit as \(x  \to 1\) then things are a bit harder. The limit of the numerator is:</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{x \to 1} 2x-3 &amp;= 2 \cdot 1 - 3 = -1
+\end{align*}
+</div>
+<p>(we have not listed all the steps). And the limit of the denominator is</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{x \to 1} x^2 +5x-6 &amp;= 1 \cdot 1 + 5 - 6 = 0
+\end{align*}
+</div>
+<p>Since the limit of the numerator is non-zero, while the limit of the  denominator is zero, the limit of the ratio does not exist.</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{x \to 1} \frac{2x-3}{x^2+5x-6}
+&amp;= DNE
+\end{align*}
+</div></article></div>
+<p id="p-408">It is <em class="alert">IMPORTANT TO NOTE</em> that it is not correct to write</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{x \to 1} \frac{2x-3}{x^2+5x-6}
+&amp;= \frac{-1}{0} = DNE
+\end{align*}
+</div>
+<p>Because we can only write</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{x \to a} \frac{f(x)}{g(x)}
+&amp;= \frac{\ds \lim_{x \to a} f(x)}{\ds \lim_{x \to a} g(x) } = \text{something}
+\end{align*}
+</div>
+<p>when the limit of the denominator is non-zero (see Example <a knowl="./knowl/eg_lim_rat.html" title="Example 1.4.7: Be careful with limits of ratios">1.4.7</a> above).</p>
+<p id="p-409">With a little care you can use the arithmetic of limits to obtain the  following rules for limits of powers of functions and limits of roots of  functions:</p>
+<article class="theorem-like" id="thm_lim_powers"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">1.4.9</span> <span class="title">More arithmetic of limits — powers and roots</span>
+</h6>
+<p id="p-410">Let \(n\) be a positive integer, let \(a \in \mathbb{R}\) and let \(f\) be a  function so that</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{x \to a} f(x) &amp;= F
+\end{align*}
+</div>
+<p>for some real number \(F\text{.}\) Then the following holds</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{x \to a} \left( f(x) \right)^n
+&amp;= \left(\lim_{x \to a} f(x) \right)^n = F^n
+\end{align*}
+</div>
+<p>so that the limit of a power is the power of the limit. Similarly, if</p>
+<ul class="disc">
+<li id="li-198">\(n\) is an even number and \(F \gt 0\text{,}\) or</li>
+<li id="li-199">\(n\) is an odd number and \(F\) is any real number</li>
+</ul>
+<p>then</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{x \to a} \left( f(x) \right)^{1/n}
+&amp;= \left(\lim_{x \to a} f(x) \right)^{1/n} = F^{1/n}
+\end{align*}
+</div>
+<p>More generally<a knowl="" class="id-ref" refid="hk-fn-34" id="fn-34"><sup> 3 </sup></a><span id="hk-fn-34" class="hidden-content tex2jax_ignore"><span class="footnote">You may not know the definition of the power \(b^p\) when \(p\) is not a rational number, so here it is. If \(b&gt;0\) and \(p\) is any real number, then \(b^p\) is the limit of \(b^r\) as \(r\) approaches \(p\) through rational numbers. We won't do so here, but it is possible to prove that the limit exists.</span></span>, if \(F&gt;0\) and \(p\) is any real number,</p>
+<div class="displaymath">
+\begin{equation*}
+\lim_{x \to a} \left( f(x) \right)^p
+= \left(\lim_{x \to a} f(x) \right)^p = F^p
+\end{equation*}
+</div></article><p id="p-411">Notice that we have to be careful when taking roots of limits that might be  negative numbers. To see why, consider the case \(n=2\text{,}\) the limit</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{x \to 4} x^{1/2} &amp;= 4^{1/2} = 2\\
+\lim_{x \to 4} (-x)^{1/2} &amp;= (-4)^{1/2} = \text{not a real number}
+\end{align*}
+</div>
+<p>In order to evaluate such limits properly we need to use complex numbers which  are beyond the scope of this text.</p>
+<p id="p-412">Also note that the notation \(x^{1/2}\) refers to the <em class="emphasis">positive</em> square root  of \(x\text{.}\) While \(2\) and \((-2)\) are both square-roots of \(4\text{,}\) the notation  \(4^{1/2}\) means \(2\text{.}\) This is something we must be careful of <a knowl="" class="id-ref" refid="hk-fn-35" id="fn-35"><sup> 4 </sup></a><span id="hk-fn-35" class="hidden-content tex2jax_ignore"><span class="footnote">Like  ending sentences in prepositions — “This is something up with which we will  not put.” This quote is attributed to Churchill though there is some dispute as to  whether or not he really said it.</span></span>.</p>
+<p id="p-413">So again — let us do a few examples and carefully note what we are doing.</p>
+<article class="example-like" id="eg_1_4_5"><a knowl="" class="id-ref" refid="hk-eg_1_4_5"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.4.10</span> <span class="title">\(\ds \lim_{x \to 2} (4x^2-3)^{1/3}\)</span>
+</h6></a></article><div id="hk-eg_1_4_5" class="hidden-content tex2jax_ignore"><article class="example-like"><div class="displaymath" id="p-414">
+\begin{align*}
+\lim_{x \to 2} (4x^2-3)^{1/3} &amp;=
+\left( (\lim_{x\to 2} 4x^2) - (\lim_{x \to 2} 3) \right)^{1/3}\\
+&amp;= \left( 4 \cdot 2^2  - 3 \right)^{1/3}\\
+&amp;= \left( 16-3 \right)^{1/3}\\
+&amp;= 13^{1/3}
+\end{align*}
+</div></article></div>
+<p id="p-415">By combining the last few theorems we can make the evaluation of limits of  polynomials and rational functions much easier:</p>
+<article class="theorem-like" id="theorem-6"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">1.4.11</span> <span class="title">Limits of polynomials and rational functions</span>
+</h6>
+<p id="p-416">Let \(a \in \mathbb{R}\text{,}\) let \(P(x)\) be a polynomial and let \(R(x)\) be a rational  function. Then</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{x \to a} P(x) &amp;= P(a)
+\end{align*}
+</div>
+<p>and provided \(R(x)\) is defined at \(x=a\) then</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{x \to a} R(x) &amp;= R(a)
+\end{align*}
+</div>
+<p>If \(R(x)\) is not defined at \(x=a\) then we are not able to apply this result.</p></article><p id="p-417">So the previous examples are now much easier to compute:</p>
+<div class="displaymath">
+\begin{align*}
+\ds\lim_{x \to 2} \frac{2x-3}{x^2+5x-6} &amp;=&amp; \ds \frac{4-3}{4+10-6} &amp;=&amp; \ds \frac{1}{8}\\
+\ds\lim_{x\to 2} (4x^2-1) &amp;=&amp; 16-1 &amp;=&amp; 15\\
+\ds\lim_{x\to 2} \frac{x}{x-1} &amp;=&amp; \ds \frac{2}{2-1} &amp;=&amp; 2
+\end{align*}
+</div>
+<p id="p-418">It is clear that limits of polynomials are very easy, while those of rational  functions are easy except when the denominator might go to zero. We have seen  examples where the resulting limit does not exist, and some where it does. We  now work to explain this more systematically. The following example demonstrates that it  is sometimes possible to take the limit of a rational function to a point at which the  denominator is zero. Indeed we must be able to do exactly this in order to be able to define derivatives in the next chapter.</p>
+<article class="example-like" id="eg_zero_cancel_limit"><a knowl="" class="id-ref" refid="hk-eg_zero_cancel_limit"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.4.12</span> <span class="title">Numerator and denominator both go to 0</span>
+</h6></a></article><div id="hk-eg_zero_cancel_limit" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-419">Consider the limit</p>
+<div class="displaymath">
+\begin{gather*}
+\lim_{x \to 1} \frac{x^3-x^2}{x-1}.
+\end{gather*}
+</div>
+<p>If we try to apply the arithmetic of limits then we compute the limits of the numerator and denominator separately</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{x \to 1} x^3-x^2 &amp;= 1-1 = 0\\
+\lim_{x \to 1} x-1 &amp;= 1-1 = 0
+\end{align*}
+</div>
+<p>Since the denominator is zero, we cannot apply our theorem and we are, for the  moment, stuck. However, there is more that we can do here — the hint is that  the numerator and denominator <em class="emphasis">both</em> approach zero as \(x\) approaches 1. This  means that there might be something we can cancel.</p>
+<p id="p-420">So let us play with the expression a little more before we take the limit:</p>
+<div class="displaymath">
+\begin{align*}
+\frac{x^3-x^2}{x-1} &amp;= \frac{x^2(x-1)}{x-1} = x^2  &amp; \text{ provided } x \neq 1.
+\end{align*}
+</div>
+<p>So what we really have here is the following function</p>
+<div class="displaymath">
+\begin{align*}
+\frac{x^3-x^2}{x-1} &amp;= \begin{cases}
+x^2 &amp; x \neq 1\\
+\text{undefined } &amp; x = 1
+\end{cases}
+\end{align*}
+</div>
+<p>If we plot the above function the graph looks exactly the same as \(y=x^2\)  except that the function is not defined at \(x=1\) (since at \(x=1\) both numerator and  denominator are zero).</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/rat1.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p id="p-421">When we compute a limit as \(x \to a\text{,}\) the value of the function exactly at  \(x=a\) is irrelevant. We only care what happens to the function as we bring \(x\)  very close to \(a\text{.}\) So for the above problem we can write</p>
+<div class="displaymath">
+\begin{align*}
+\frac{x^3-x^2}{x-1} &amp;= x^2 &amp; \text{when $x$ is close to $1$ but not at $x=1$}
+\end{align*}
+</div>
+<p>So the limit as \(x \to 1\) of the function is the same as the limit \(\ds \lim_{x\to  1} x^2\) since the functions are the same except exactly at \(x=1\text{.}\) By this  reasoning we get</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{x \to 1} \frac{x^3-x^2}{x-1} &amp;=
+\lim_{x \to 1} x^2 = 1
+\end{align*}
+</div></article></div>
+<p id="p-422">The reasoning in the above example can be made more general:</p>
+<article class="theorem-like" id="theorem-7"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">1.4.13</span>
+</h6>
+<p id="p-423">If \(f(x) = g(x)\) except when \(x=a\) then \(\ds \lim_{x\to a} f(x) = \lim_{x\to a}  g(x)\) provided the limit of \(g\) exists.</p></article><p id="p-424">How do we know when to use this theorem? The big clue is that when we try to  compute the limit in a naive way, we end up with \(\frac{0}{0}\text{.}\) We know that  \(\frac{0}{0}\) does not make sense, but it is an indication that there might be a  common factor between numerator and denominator that can be cancelled. In the  previous example, this common factor was \((x-1)\text{.}\)</p>
+<article class="example-like" id="eg_easy_0on0_limit"><a knowl="" class="id-ref" refid="hk-eg_easy_0on0_limit"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.4.14</span> <span class="title">Another numerator and denominator both go to 0 limit</span>
+</h6></a></article><div id="hk-eg_easy_0on0_limit" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-425">Using this idea compute</p>
+<div class="displaymath">
+\begin{gather*}
+\lim_{h \to 0} \frac{(1+h)^2-1}{h}
+\end{gather*}
+</div>
+<ul id="p-426" class="disc">
+<li id="li-200">First we should check that we cannot just substitute \(h=0\) into this —  clearly we cannot because the denominator would be \(0\text{.}\)</li>
+<li id="li-201">But we should also check the numerator to see if we have \(\frac{0}{0}\text{,}\) and we see  that the numerator gives us \(1-1 = 0\text{.}\)</li>
+<li id="li-202">Thus we have a hint that there is a common factor that we might be able to  cancel. So now we look for the common factor and try to cancel it.<div class="displaymath">
+\begin{align*}
+\frac{(1+h)^2-1}{h} &amp;= \frac{1+2h+h^2-1}{h} &amp; \text{expand}\\
+&amp;= \frac{2h+h^2}{h} = \frac{h(2+h)}{h} &amp; \text{factor and then cancel}\\
+&amp;= 2+h
+\end{align*}
+</div>
+</li>
+<li id="li-203">Thus we really have that<div class="displaymath">
+\begin{align*}
+\frac{(1+h)^2-1}{h}&amp;= \begin{cases}
+2+h &amp; h \neq 0 \\
+\text{undefined} &amp; h=0
+\end{cases}
+\end{align*}
+</div>and because of this<div class="displaymath">
+\begin{align*}
+\lim_{h \to 0} \frac{(1+h)^2-1}{h}
+&amp;= \lim_{h \to 0} 2+h\\
+&amp;= 2
+\end{align*}
+</div>
+</li>
+</ul></article></div>
+<p id="p-427">Of course — we have written everything out in great detail here and  that is way more than is required for a solution to such a problem. Let us do  it again a little more succinctly.</p>
+<article class="example-like" id="eg_1_4_6"><a knowl="" class="id-ref" refid="hk-eg_1_4_6"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.4.15</span> <span class="title">\(\ds \lim_{h \to 0} \frac{(1+h)^2-1}{h}\)</span>
+</h6></a></article><div id="hk-eg_1_4_6" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-428">Compute the following limit:</p>
+<div class="displaymath">
+\begin{gather*}
+\lim_{h \to 0} \frac{(1+h)^2-1}{h}
+\end{gather*}
+</div>
+<p>If we try to use the arithmetic of limits, then we see that the limit of the  numerator and the limit of the denominator are both zero. Hence we should try  to factor them and cancel any common factor. This gives</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{h \to 0} \frac{(1+h)^2-1}{h}
+&amp;= \lim_{h \to 0} \frac{1+2h+h^2-1}{h}\\
+&amp;= \lim_{h \to 0} 2+h\\
+&amp;= 2
+\end{align*}
+</div></article></div>
+<p id="p-429">Notice that even though we did this example carefully above, we have still  written some text in our working explaining what we have done. You should  always think about the reader and if in doubt, put in more explanation rather  than less. We could make the above example even more terse</p>
+<article class="example-like" id="eg_1_4_7"><a knowl="" class="id-ref" refid="hk-eg_1_4_7"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.4.16</span> <span class="title">Redoing previous example with fewer words</span>
+</h6></a></article><div id="hk-eg_1_4_7" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-430">Compute the following limit:</p>
+<div class="displaymath">
+\begin{gather*}
+\lim_{h \to 0} \frac{(1+h)^2-1}{h}
+\end{gather*}
+</div>
+<p>Numerator and denominator both go to zero as \(h\to 0\text{.}\) So factor and simplify:</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{h \to 0} \frac{(1+h)^2-1}{h} &amp;= \lim_{h \to 0} \frac{1+2h+h^2-1}{h}\\
+&amp;= \lim_{h \to 0} 2+h = 2
+\end{align*}
+</div></article></div>
+<p id="p-431">A slightly harder one now</p>
+<article class="example-like" id="eg_zero_cancel_limit_harder"><a knowl="" class="id-ref" refid="hk-eg_zero_cancel_limit_harder"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.4.17</span> <span class="title">A harder limit with cancellations</span>
+</h6></a></article><div id="hk-eg_zero_cancel_limit_harder" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-432">Compute the limit</p>
+<div class="displaymath">
+\begin{gather*}
+\lim_{x \to 0} \frac{x}{\sqrt{1+x}-1}
+\end{gather*}
+</div>
+<p>If we try to use the arithmetic of limits we get</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{x \to 0} x &amp;= 0\\
+\lim_{x \to 0} \sqrt{1+x}-1 &amp;= \sqrt{ \lim_{x \to 0} 1+x}-1 = 1-1 =0
+\end{align*}
+</div>
+<p>So doing the naive thing we'd get \(0/0\text{.}\) This suggests a common factor that can  be cancelled. Since the numerator and denominator are not polynomials we have  to try other tricks <a knowl="" class="id-ref" refid="hk-fn-36" id="fn-36"><sup> 5 </sup></a><span id="hk-fn-36" class="hidden-content tex2jax_ignore"><span class="footnote">While these tricks are useful (and even cute<a knowl="" class="id-ref" refid="hk-fn-37" id="fn-37"><sup> 6 </sup></a><span id="hk-fn-37" class="hidden-content tex2jax_ignore"><span class="footnote">Mathematicians tend to have quite strong opinions on the beauty of mathematics. For example, Paul Erdős <a knowl="" class="id-ref" refid="hk-fn-38" id="fn-38"><sup> 7 </sup></a><span id="hk-fn-38" class="hidden-content tex2jax_ignore"><span class="footnote">Arguably the most prolific mathematician of the 20th century  — definitely worth a google. The authors do not know his opinion on nested  footnotes <a knowl="" class="id-ref" refid="hk-fn-39" id="fn-39"><sup> 8 </sup></a><span id="hk-fn-39" class="hidden-content tex2jax_ignore"><span class="footnote">Nested footnotes are generally frowned upon, since they can get  quite contorted; see XKCD-1208 and also the novel “House of Leaves” by Mark Z. Danielewski.</span></span>.</span></span> said “Why are numbers beautiful? It's like asking why is Beethoven's Ninth Symphony beautiful. If you don't see why, someone can't tell you. I know numbers are beautiful. If they aren't beautiful, nothing is.”.</span></span> — this footnote is better in the online edition), Taylor polynomials (see Section <a href="sec_DIFFTaylor.html" class="xref" title="Section 3.4: Taylor Polynomials">3.4</a>) give us a more systematic way of approaching this problem.</span></span>. We can simplify the denominator \(\sqrt{1+x}-1\) a  lot, and in particular eliminate the square root, by multiplying it by  its conjugate \(\sqrt{1+x}+1\text{.}\)</p>
+<div class="displaymath">
+\begin{align*}
+\frac{x}{\sqrt{1+x}-1}
+&amp;=\frac{x}{\sqrt{1+x}-1} \times \frac{\sqrt{1+x}+1}{\sqrt{1+x}+1}
+&amp; \text{multiply by $\frac{\text{conjugate}}{\text{conjugate}}=1$}\\
+&amp;=\frac{x \left( \sqrt{1+x}+1\right)}
+{\left(\sqrt{1+x}-1\right)\left(\sqrt{1+x}+1\right)}
+&amp; \text{bring things together }\\
+&amp;=\frac{x \left( \sqrt{1+x}+1\right)}
+{\left(\sqrt{1+x}\right)^2 - 1\cdot 1}
+&amp;\!\!\!\!\!\!\! \text{since $(a\!-\!b)(a\!+\!b)=a^2\!-\!b^2$}\\
+&amp;=\frac{x \left( \sqrt{1+x}+1\right)}
+{1+x - 1}
+&amp; \text{clean up a little}\\
+&amp;=\frac{x \left( \sqrt{1+x}+1\right)}{x}\\
+&amp;= \sqrt{1+x}+1
+&amp; \text{cancel the $x$}
+\end{align*}
+</div>
+<p>So now we have</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{x \to 0} \frac{x}{\sqrt{1+x}-1} &amp;= \lim_{x \to 0} \sqrt{1+x}+1\\
+&amp;= \sqrt{1+0}+1 = 2
+\end{align*}
+</div></article></div>
+<p id="p-433">How did we know what to multiply by? Our function was of the form</p>
+<div class="displaymath">
+\begin{gather*}
+\frac{a}{\sqrt{b} - c}
+\end{gather*}
+</div>
+<p>so, to eliminate the square root from the denominator, we employ a trick — we multiply  by 1. Of course, multiplying by 1 doesn't do anything. But if you multiply by 1  carefully you can leave the value the same, but change the form of the  expression. More precisely</p>
+<div class="displaymath">
+\begin{align*}
+\frac{a}{\sqrt{b} - c}  &amp;= \frac{a}{\sqrt{b} - c} \cdot 1\\
+&amp;= \frac{a}{\sqrt{b} - c} \cdot  \underbrace{\frac{\sqrt{b}+c}{\sqrt{b}+c}}_{=1}\\
+&amp;= \frac{a \left(\sqrt{b}+c \right)}{\left(\sqrt{b} - c\right)\left(\sqrt{b}+c \right)}
+&amp; \text{expand denominator carefully}\\
+&amp;= \frac{a \left(\sqrt{b}+c \right)}
+{\sqrt{b} \cdot \sqrt{b} - c\sqrt{b} + c\sqrt{b} - c\cdot c}
+&amp; \text{do some cancellation}\\
+&amp;= \frac{a \left(\sqrt{b}+c \right)} {b - c^2}
+\end{align*}
+</div>
+<p>Now the numerator contains roots, but the denominator is just a polynomial.</p>
+<p id="p-434">Before we move on to limits at infinity, there is one more theorem to see.  While the scope of its application is quite limited, it can be extremely  useful. It is called a sandwich theorem or a squeeze theorem for reasons that  will become apparent.</p>
+<p id="p-435">Sometimes one is presented with an unpleasant ugly function such as</p>
+<div class="displaymath">
+\begin{align*}
+f(x) &amp;= x^2 \sin(\pi/x)
+\end{align*}
+</div>
+<p>It is a fact of life, that not all the functions that are encountered in  mathematics will be elegant and simple; this is especially true when the  mathematics gets applied to real world problems. One just has to work with what one gets.  So how can we compute</p>
+<div class="displaymath">
+\begin{gather*}
+\lim_{x \to 0} x^2 \sin(\pi/x) ?
+\end{gather*}
+</div>
+<p>Since it is the product of two functions, we might try</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{x \to 0} x^2 \sin(\pi/x)
+&amp;=
+\left( \lim_{x \to 0} x^2 \right) \cdot \left( \lim_{x \to 0} \sin(\pi/x)
+\right)\\
+&amp;= 0 \cdot \left( \lim_{x \to 0} \sin(\pi/x)  \right)\\
+&amp; = 0
+\end{align*}
+</div>
+<p>But we just cheated — we cannot use the arithmetic of limits theorem here, because the  limit</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{x \to 0} \sin(\pi/x) &amp;= DNE
+\end{align*}
+</div>
+<p>does not exist. Now we did see the function \(\sin(\pi/x)\) before (in  Example <a knowl="./knowl/eg_sinpix.html" title="Example 1.3.5: A bad example">1.3.5</a>), so you should go back and look at it again.  Unfortunately the theorem “the limit of a product is the product of the  limits” only holds when the limits you are trying to multiply together actually  exist. So we cannot use it.</p>
+<p id="p-436">However, we do see that the function naturally decomposes into the product of  two pieces — the functions \(x^2\) and \(\sin(\pi/x)\text{.}\) We have sketched the two  functions  in the figure on the left below.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/squeeze1.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p id="p-437">While \(x^2\) is a very well behaved function and we know quite a lot about it,  the function \(\sin(\pi/x)\) is quite ugly. One of the few things we can say  about it is the following</p>
+<div class="displaymath">
+\begin{align*}
+-1 \leq \sin(\pi/x) \leq 1 &amp;&amp; \text{provided $x \neq 0$}
+\end{align*}
+</div>
+<p>But if we multiply this expression by \(x^2\) we get (because \(x^2 \geq 0\))</p>
+<div class="displaymath">
+\begin{align*}
+-x^2 \leq x^2\sin(\pi/x) \leq x^2 &amp;&amp; \text{provided $x \neq 0$}
+\end{align*}
+</div>
+<p>and we have sketched the result in the figure above (on the right). So the  function we are interested in is <em class="emphasis">squeezed</em> or <em class="emphasis">sandwiched</em> between  the functions \(x^2\) and \(-x^2\text{.}\)</p>
+<p id="p-438">If we focus in on the picture close to \(x=0\) we see that \(x\) approaches \(0\text{,}\)  the functions \(x^2\) and \(-x^2\) both approach \(0\text{.}\) Further, because \(x^2\sin(\pi/x)\) is sandwiched between them, it seems that it also approaches  \(0\text{.}\)</p>
+<p id="p-439">The following theorem tells us that this is indeed the case:</p>
+<article class="theorem-like" id="thm_squeeze"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">1.4.18</span> <span class="title">Squeeze theorem (or sandwich theorem or pinch theorem)</span>
+</h6>
+<p id="p-440">Let \(a \in \mathbb{R}\) and let \(f,g,h\) be three functions so that</p>
+<div class="displaymath">
+\begin{gather*}
+f(x) \leq g(x) \leq h(x)
+\end{gather*}
+</div>
+<p>for all \(x\) in an interval around \(a\text{,}\) except possibly exactly at \(x=a\text{.}\) Then  if</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{x \to a} f(x) &amp;= \lim_{x \to a} h(x) = L
+\end{align*}
+</div>
+<p>then it is also the case that</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{x \to a} g(x) &amp;= L
+\end{align*}
+</div></article><p id="p-441">Using the above theorem we can compute the limit we want and write it up nicely.</p>
+<article class="example-like" id="eg_1_4_8"><a knowl="" class="id-ref" refid="hk-eg_1_4_8"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.4.19</span> <span class="title">\(\ds \lim_{x \to 0} x^2 \sin(\pi/x) \)</span>
+</h6></a></article><div id="hk-eg_1_4_8" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-442">Compute the limit</p>
+<div class="displaymath">
+\begin{equation*}
+\lim_{x \to 0} x^2 \sin(\pi/x)
+\end{equation*}
+</div>
+<p id="p-443">Since \(-1 \leq \sin(\theta) \leq 1\) for all real numbers \(\theta\text{,}\) we have</p>
+<div class="displaymath">
+\begin{align*}
+-1 \leq \sin(\pi /x ) \leq 1 &amp;&amp; \text{for all } x \neq 0
+\end{align*}
+</div>
+<p>Multiplying the above by \(x^2\) we see that</p>
+<div class="displaymath">
+\begin{align*}
+-x^2 \leq x^2 \sin(\pi /x ) \leq x^2 &amp;&amp; \text{for all } x\neq0
+\end{align*}
+</div>
+<p>Since \(\ds \lim_{x \to 0} x^2 = \lim_{x \to 0} (-x^2) = 0\) by the sandwich  (or squeeze or pinch) theorem we have</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{x \to 0} x^2 \sin(\pi/x) &amp;= 0
+\end{align*}
+</div></article></div>
+<p id="p-444">Notice how we have used “words”. We have remarked on this several times  already in the text, but we will keep mentioning it. It is okay to use words in  your answers to maths problems — and you should do so! These let the reader  know what you are  doing and help you understand what you are doing.</p>
+<article class="example-like" id="eg_1_4_9"><a knowl="" class="id-ref" refid="hk-eg_1_4_9"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.4.20</span> <span class="title">Another sandwich theorem example</span>
+</h6></a></article><div id="hk-eg_1_4_9" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-445">Let \(f(x)\) be a function such that \(1 \leq f(x) \leq x^2-2x+2\text{.}\) What is  \(\ds \lim_{x \to 1} f(x)\text{?}\)</p>
+<p id="p-446">We are already supplied with an inequality, so it is likely that it is going to  help us. We should examine the limits of each side to see if they are the same:</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{x \to 1} 1 &amp;= 1\\
+\lim_{x \to 1} x^2-2x+2 &amp;= 1-2+2 = 1
+\end{align*}
+</div>
+<p>So we see that the function \(f(x)\) is trapped between two functions that both  approach \(1\) as \(x \to 1\text{.}\) Hence by the sandwich / pinch / squeeze theorem, we  know that</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{x \to 1} f(x) &amp; =1
+\end{align*}
+</div></article></div>
+<p id="p-447">To get some intuition as to why the squeeze theorem is true, consider when \(x\) is very very close to \(a\text{.}\)  In particular, consider when \(x\) is sufficiently close to \(a\) that we know \(h(x)\) is within \(10^{-6}\) of \(L\)  and that \(f(x)\) is also within \(10^{-6}\) of \(L\text{.}\) That is</p>
+<div class="displaymath">
+\begin{align*}
+|h(x)-L| &amp; \lt 10^{-6}  &amp; \text{and}&amp;&amp; |f(x)-L| &amp; \lt 10^{-6}.
+\end{align*}
+</div>
+<p>This means that</p>
+<div class="displaymath">
+\begin{align*}
+L-10^{-6} &amp; \lt  f(x) \leq h(x)  \lt  L+10^{-6}
+\end{align*}
+</div>
+<p>since we know that \(f(x) \leq h(x)\text{.}\)</p>
+<p id="p-448">But now by the hypothesis of the squeeze theorem we know that \(f(x) \leq g(x) \leq h(x)\) and so we have</p>
+<div class="displaymath">
+\begin{align*}
+L-10^{-6} &amp; \lt  f(x) \leq g(x) \leq h(x)  \lt  L+10^{-6}
+\end{align*}
+</div>
+<p>And thus we know that</p>
+<div class="displaymath">
+\begin{equation*}
+L-10^{-6} \leq g(x) \leq L+10^{-6}
+\end{equation*}
+</div>
+<p>That is \(g(x)\) is also within \(10^{-6}\) of \(L\text{.}\)</p>
+<p id="p-449">In this argument our choice of \(10^{-6}\) was arbitrary, so we can really replace \(10^{-6}\) with any small number we like.  Hence we know that we can force \(g(x)\) as close to \(L\) as we like, by bringing \(x\) sufficiently close to \(a\text{.}\) We give  a more formal and rigorous version of this argument at the end of Section <a href="sec_proof_arith_lim.html" class="xref" title="Section 1.9: (Optional) — Proving the Arithmetic of Limits">1.9</a>.</p></section></div></main>
+</div>
+<!--Start: Google Universal code--><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-105798942-1', 'auto');
+ga('send', 'pageview');
+</script><!--End: Google Universal code--><div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.1/login.js"></script>
+</body>
+</html>

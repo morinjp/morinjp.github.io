@@ -1,0 +1,70 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:13:51-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<ul class="disc">
+<li>
+<p>Solution 1: In Example <a knowl="./knowl/eg_DIFFsimpleToolsA.html" title="Example 2.6.6: Extending the product rule to more than two factors">2.6.6</a>, we generalized the product rule to three factors:</p>
+<div class="displaymath">
+\begin{align*}
+\diff{}{x}\{f(x)g(x)h(x)\}\amp=f'(x)g(x)h(x)+f(x)g'(x)h(x)\\
+\amp\hskip1in+f(x)g(x)h'(x)
+\end{align*}
+</div>
+<p>Using this rule:</p>
+<div class="displaymath">
+\begin{align*}
+\amp\diff{}{x}\left\{(x) \left(e^{2x}\right)( \cos 4x)\right\}\\
+&amp;=\diff{}{x}\{x\}\cdot e^{2x} \cos 4x
+\!+\!
+x\cdot\diff{}{x}\left\{e^{2x}\right\}\cdot\cos 4x
+\!+\!
+xe^{2x}\cdot\diff{}{x}\{\cos 4x\}\\
+&amp;=e^{2x}\cos4x+x\left(2e^{2x}\right)\cos4x+
+xe^{2x}(-4\sin 4x)\\
+&amp;=e^{2x}\cos4x+2xe^{2x}\cos4x-4xe^{2x}\sin 4x
+\end{align*}
+</div>
+</li>
+<li>
+<p>Solution 2: We can use the product rule twice. In the first step, we split the function \(x e^{2x} \cos 4x\) into the product of two functions.</p>
+<div class="displaymath">
+\begin{align*}
+\amp\diff{}{x}\left\{\left(x e^{2x}\right) (\cos 4x)\right\}\\
+&amp;=
+\diff{}{x}\left\{xe^{2x}\right\}\cdot\cos4x
++
+xe^{2x}\cdot\diff{}{x}\left\{ \cos 4x\right\}\\
+&amp;=
+\left(
+\diff{}{x}\left\{x\right\}\cdot e^{2x}+
+x\cdot\diff{}{x}\left\{e^{2x}\right\}
+\right)\cdot\cos4x
++
+xe^{2x}\cdot\diff{}{x}\left\{ \cos 4x\right\}\\
+&amp;=
+\left(
+e^{2x}+
+x\left(2e^{2x}\right)
+\right)\cdot\cos4x
++
+xe^{2x}(-4\sin 4x)\\
+&amp;=e^{2x}\cos4x+2xe^{2x}\cos4x-4xe^{2x}\sin4x
+\end{align*}
+</div>
+</li>
+</ul>
+<span class="incontext"><a href="exercises-14.html#p-2068">in-context</a></span>
+</body>
+</html>

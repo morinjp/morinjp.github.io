@@ -1,0 +1,59 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:22:43-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>We need 4 steps.</p>
+<ul class="disc">
+<li>The area of \(p_n\) is smaller than that of the circle — this follows since we can  construct \(p_n\) by cutting slices from the circle.</li>
+<li>
+<p>Let \(E_n\) be the difference between the area of the circle and \(p_n\text{:}\) \(E_n = A -  A(p_n)\) (see the left of the previous figure). By the previous point we know \(E_n \gt 0\text{.}\)  Now as we increase the number of sides, this difference becomes smaller. To be more  precise</p>
+<div class="displaymath">
+\begin{align*}
+E_{2n} &amp; \leq \frac{1}{2} E_n.
+\end{align*}
+</div>
+<p>The error \(E_n\) is made up of \(n\) “lobes”. In the centre-left of the previous figure we  draw one such lobe and surround it by a rectangle of dimensions \(a \times 2b\) — we could determine these more precisely using a little trigonometry, but it is not necessary.</p>
+<p>This diagram shows the lobe is smaller than the rectangle of base \(2b\) and height \(a\) Since there are \(n\) copies of the lobe, we have</p>
+<div class="displaymath">
+\begin{align*}
+E_n &amp; \leq n  \times 2ab &amp; \text{rewrite as } \frac{E_n}{2} &amp; \leq nab
+\end{align*}
+</div>
+<p>Now draw in the polygon \(p_{2n}\) and consider the associated “error” \(E_{2n}\text{.}\) If we  focus on the two lobes shown then we see that the area of these two new lobes is equal to  that of the old lobe (shown in centre-left) minus the area of the triangle with base \(2b\)  and height \(a\) (drawn in purple). Since there are \(n\) copies of this  picture we have</p>
+<div class="displaymath">
+\begin{align*}
+E_{2n} &amp;= E_n - nab &amp; \text{now use that $nab \geq  E_n/2$}\\
+&amp; \leq E_n - \frac{E_n}{2} = \frac{E_n}{2}
+\end{align*}
+</div>
+</li>
+<li>The area of \(p_n\) is smaller than \(T\text{.}\) To see this decompose \(p_n\) into \(n\)  isosceles triangles. Each of these has base shorter than \(C/n\text{;}\) the straight line is  shorter than the corresponding arc — though strictly speaking we should prove this. The  height of each triangle is shorter than \(r\text{.}\) Thus<div class="displaymath">
+\begin{align*}
+A(p_n) &amp;= n \times \frac{1}{2} \text{(base)}\times \text{(height)}\\
+&amp; \leq n \times \frac{Cr}{2n} = T
+\end{align*}
+</div>
+</li>
+<li>If we assume that \(T \lt A\text{,}\) then \(A-T = d\) where \(d\) is some positive number.  However we know from point 2 that we can make \(n\) large enough so that \(E_n  \lt  d\)  (each time we double \(n\) we halve the error). But now we have a contradiction to  step 3, since we have just shown that<div class="displaymath">
+\begin{align*}
+E_n = A-A(p_n) &amp;  \lt  A-T &amp; \text{which implies that}\\
+A(p_n) &amp;  \gt  T.
+\end{align*}
+</div>
+</li>
+</ul>
+<p>Thus we cannot have \(T \lt A\text{.}\)</p>
+<span class="incontext"><a href="ssec_B_5_1.html#p-5424">in-context</a></span>
+</body>
+</html>

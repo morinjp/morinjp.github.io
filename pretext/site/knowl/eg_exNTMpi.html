@@ -1,0 +1,51 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:22:54-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="example-like"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">C.1.3</span> <span class="title">(Approximating \(\pi\))</span>
+</h6>
+<p>In this example we compute, approximately, \(\pi\) by applying Newton's method to the equation</p>
+<div class="displaymath">
+\begin{equation*}
+f(x)=\sin x=0
+\end{equation*}
+</div>
+<p>starting with \(x_1=3\text{.}\) Since \(f'(x)=\cos x\text{,}\) Newton's method says that we should generate approximate solutions by iteratively applying</p>
+<div class="displaymath">
+\begin{equation*}
+x_{n+1}=x_n-\frac{f(x_n)}{f'(x_n)}=x_n-\frac{\sin x_n}{\cos x_n}
+=x_n-\tan x_n
+\end{equation*}
+</div>
+<p>Here goes</p>
+<div class="displaymath">
+\begin{align*}
+x_1\amp =3\\
+x_2\amp =x_1-\tan x_1
+=3-\tan 3\\
+\amp =3.142546543\\
+x_3\amp 
+=3.142546543-\tan 3.142546543\\
+\amp =3.141592653\\
+x_4\amp 
+=3.141592653-\tan 3.141592653\\
+\amp =3.141592654\\
+x_5\amp 
+=3.141592654-\tan 3.141592654\\
+\amp =3.141592654
+\end{align*}
+</div>
+<p>Since  \(f(3.1415926535)=9.0\times 10^{-11}\gt 0\) and \(f(3.1415926545)=-9.1\times 10^{-11}\lt 0\text{,}\) \(\pi\) must be between \(3.1415926535\) and \(3.1415926545\text{.}\) Of course to compute \(\pi\) in this way, we (or at least our computers) have to be able to evaluate \(\tan x\) for various values of \(x\text{.}\) Taylor expansions can help us do that. See Example <a knowl="./knowl/eg_taylorapprox.html" title="Example 3.4.22: Estimating \(\tan 46^\circ\)">3.4.22</a>.</p></article><span class="incontext"><a href="sec_C_1.html#eg_exNTMpi">in-context</a></span>
+</body>
+</html>

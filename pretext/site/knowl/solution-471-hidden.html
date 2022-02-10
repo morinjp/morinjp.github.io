@@ -1,0 +1,35 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:16:52-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><div class="solution">
+<p>As time goes on, temperatures that follow Newton's Law of Cooling get closer and closer to the ambient temperature. So, \(\ds\lim_{t \to \infty} T(t)\) exists. In particular, \(\ds\lim_{t \to \infty} 0.8^{kt}\) exists.</p>
+<ul class="disc">
+<li>If \(k \lt 0\text{,}\) then \(\ds\lim_{t \to \infty}0.8^{kt} = \infty\text{,}\) since \(0.8 \lt 1\text{.}\) So, \(k \geq 0\text{.}\)</li>
+<li>If \(k=0\text{,}\) then \(T(t)=16\) for all values of \(t\text{.}\) But, in the statement of the question, the object is changing temperature. So, \(k \gt 0\text{.}\)</li>
+</ul>
+<p>Therefore, \(k\) is positive.</p>
+<p>Remark: contrast this to Question <a knowl="./knowl/s3_3_2Knegative.html" title="Exercise 3.3.4.3">3.3.4.3</a>. The reason we get a different answer is that our base in this question (0.8) is less than one, while the base in Question <a knowl="./knowl/s3_3_2Knegative.html" title="Exercise 3.3.4.3">3.3.4.3</a> (\(e\)) is greater than one.</p>
+<p>Although the given equation \(T(t)\) does not exactly look like the Newton's Law equations we're used to, it is equivalent. Remembering \(e^{\log(0.8)}=0.8\text{:}\)</p>
+<div class="displaymath">
+\begin{align*}
+T(t) &amp;= 0.8^{kt} + 15\\
+&amp;= \big(e^{\log 0.8}\big)^{kt} + 15\\
+&amp;= e^{(k\log 0.8)t} + 15\\
+&amp;= [16-15]  e^{(k\log 0.8)t} + 15\\
+&amp;= [16-15]  e^{Kt} + 15
+\end{align*}
+</div>
+<p>with \(K=k\log 0.8\text{.}\) This is now the more familiar form for Newton's Law of Cooling (with \(A=15\) and \(T(0)=16\)).</p>
+<p>Since \(0.8 \lt 1\text{,}\) \(\log(0.8)\) is negative, so \(k\) and \(K\) have opposite signs.</p>
+</div></body>
+</html>

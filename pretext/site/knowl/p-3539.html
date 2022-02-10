@@ -1,0 +1,45 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:17:17-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>The constant, linear and quadratic approximations we used above were the first few Maclaurin polynomial approximations of \(e^x\text{.}\) That is</p>
+<div class="displaymath">
+\begin{align*}
+T_0 (x) &amp; = 1 &amp; T_1(x) &amp;= 1+x &amp; T_2(x) &amp;= 1+x+\frac{x^2}{2}
+\end{align*}
+</div>
+<p>Since \(\diff{}{x} e^x = e^x\text{,}\) the Maclaurin polynomials are very easy to compute. Indeed this invariance under differentiation means that</p>
+<div class="displaymath">
+\begin{align*}
+f^{(n)}(x) &amp;= e^x &amp; n=0,1,2,\dots &amp;&amp; \text{so}\\
+f^{(n)}(0) &amp;= 1
+\end{align*}
+</div>
+<p>Substituting this into equation <a knowl="./knowl/eq_taylorPoly.html" title="Equation 3.4.10: Taylor polynomial">3.4.10</a> we get</p>
+<div class="displaymath">
+\begin{align*}
+T_n(x) &amp;= \sum_{k=0}^n \frac{1}{k!} x^k
+\end{align*}
+</div>
+<p>Thus we can write down the seventh Maclaurin polynomial very easily:</p>
+<div class="displaymath">
+\begin{align*}
+T_7(x) &amp;= 1 + x + \frac{x^2}{2} + \frac{x^3}{6} + \frac{x^4}{24} + \frac{x^5}{120} +
+\frac{x^6}{720} + \frac{x^7}{5040}
+\end{align*}
+</div>
+<p>The following figure contains sketches of the graphs of \(e^x\) and its Taylor polynomials \(T_n(x)\) for \(n=0,1,2,3,4\text{.}\)</p>
+<span class="incontext"><a href="ssec_taylor_eg.html#p-3539">in-context</a></span>
+</body>
+</html>

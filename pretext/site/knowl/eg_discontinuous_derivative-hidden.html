@@ -1,0 +1,55 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:15:25-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><article class="example-like"><p>Consider the function</p>
+<div class="displaymath">
+\begin{equation*}
+f(x) = \begin{cases}
+x^2\sin\frac{1}{x} \amp\text{if }x\ne 0 \\
+0                  \amp\text{if }x=0
+\end{cases}
+\end{equation*}
+</div>
+<p>For \(x\ne 0\) we have, by the product and chain rules,</p>
+<div class="displaymath">
+\begin{align*}
+f'(x)  \amp= 2x\, \sin\frac{1}{x} + x^2 \left(\cos\frac{1}{x}\right)
+\left(-\frac{1}{x^2}\right) \\
+\amp=  2x\, \sin\frac{1}{x} - \cos\frac{1}{x}
+\end{align*}
+</div>
+<p>As \(\left|\sin\frac{1}{x}\right|\le 1\text{,}\) we have</p>
+<div class="displaymath">
+\begin{equation*}
+\lim_{x\rightarrow 0}2x\, \sin\frac{1}{x}=0
+\end{equation*}
+</div>
+<p>On the other hand, as \(x\) tends to zero, \(\frac{1}{x}\) goes to \(\pm\infty\text{.}\) So</p>
+<div class="displaymath">
+\begin{equation*}
+\lim_{x\rightarrow 0}\cos\frac{1}{x} = DNE
+\implies 
+\lim_{x\rightarrow 0}f'(x) = DNE
+\end{equation*}
+</div>
+<p>We will now see that, despite this, \(f'(0)\) is perfectly well defined. By definition</p>
+<div class="displaymath">
+\begin{align*}
+f'(0) \amp= \lim_{h\to 0}\frac{f(h)-f(0)}{h}  \\
+\amp = \lim_{h\to 0}\frac{h^2\sin\frac{1}{h}-0}{h} \\
+\amp = \lim_{h\to 0} h\sin\frac{1}{h} \\
+\amp = 0\qquad\text{since }\left|\sin\frac{1}{h}\right|\le 1
+\end{align*}
+</div>
+<p>So \(f'(0)\) exists, but is not equal to \(\lim_{x\rightarrow 0}f'(x)\text{,}\) which does not exist.</p></article></body>
+</html>

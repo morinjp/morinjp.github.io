@@ -1,0 +1,858 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:02:59-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Exercises</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.1/pretext.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on2.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="RQS.css">
+<link href="https://pretextbook.org/css/0.1/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\require{cancel}\newcommand{\dee}[1]{\mathrm{d}#1}
+\newcommand{\half}{ \frac{1}{2} }
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ts}{\textstyle}
+\newcommand{\es}{ {\varnothing}}
+\newcommand{\st}{ {\mbox{ s.t. }} }
+\newcommand{\pow}[1]{ \mathcal{P}\left(#1\right) }
+\newcommand{\set}[1]{ \left\{#1\right\} }
+\newcommand{\lin}{{\text{LIN}}}
+\newcommand{\quot}{{\text{QR}}}
+\newcommand{\simp}{{\text{SMP}}}
+\newcommand{\diff}[2]{ \frac{\mathrm{d}#1}{\mathrm{d}#2}}
+\newcommand{\bdiff}[2]{ \frac{\mathrm{d}}{\mathrm{d}#2} \left( #1 \right)}
+\newcommand{\ddiff}[3]{ \frac{\mathrm{d}^#1#2}{\mathrm{d}{#3}^#1}}
+\renewcommand{\neg}{ {\sim} }
+\newcommand{\limp}{ {\;\Rightarrow\;} }
+\newcommand{\nimp}{ {\;\not\Rightarrow\;} }
+\newcommand{\liff}{ {\;\Leftrightarrow\;} }
+\newcommand{\niff}{ {\;\not\Leftrightarrow\;} }
+\newcommand{\De}{\Delta}
+\newcommand{\bbbn}{\mathbb{N}}
+\newcommand{\bbbr}{\mathbb{R}}
+\newcommand{\bbbp}{\mathbb{P}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\Si}{\Sigma}
+
+\newcommand{\arccsc}{\mathop{\mathrm{arccsc}}}
+\newcommand{\arcsec}{\mathop{\mathrm{arcsec}}}
+\newcommand{\arccot}{\mathop{\mathrm{arccot}}}
+\newcommand{\erf}{\mathop{\mathrm{erf}}}
+\newcommand{\smsum}{\mathop{{\ts \sum}}}
+\newcommand{\atp}[2]{ \genfrac{}{}{0in}{}{#1}{#2} }
+
+\newcommand{\ave}{\mathrm{ave}}
+\newcommand{\llt}{\left \lt }
+\newcommand{\rgt}{\right \gt }
+
+
+\newcommand{\YEaxis}[2]{\draw[help lines] (-#1,0)--(#1,0) node[right]{$x$};\draw[help lines] (0,-#2)--(0,#2) node[above]{$y$};}
+
+\newcommand{\YEaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$x$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YEtaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+\newcommand{\YEtaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$}; \draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YExcoord}[2]{\draw (#1,.2)--(#1,-.2) node[below]{$#2$};}
+\newcommand{\YEycoord}[2]{\draw (.2,#1)--(-.2,#1) node[left]{$#2$};}
+\newcommand{\YEnxcoord}[2]{\draw (#1,-.2)--(#1,.2) node[above]{$#2$};}
+\newcommand{\YEnycoord}[2]{\draw (-.2,#1)--(.2,#1) node[right]{$#2$};}
+
+\newcommand{\YEstickfig}[3]{
+\draw (#1,#2) arc(-90:270:2mm);
+\draw (#1,#2)--(#1,#2-.5) (#1-.25,#2-.75)--(#1,#2-.5)--(#1+.25,#2-.75) (#1-.2,#2-.2)--(#1+.2,#2-.2);}
+
+
+\newcommand{\IBP}[7]{
+\begin{array}{|c  | l | l |}
+\hline
+\color{red}{\text{Option 1:}}
+&amp; u=#2
+&amp;\color{red}{\dee{u}=#3 ~ \dee{#1}}
+\\
+&amp; \dee{v}=#5~\dee{#1}
+&amp;\color{red}{v=#7}
+\\
+\hline
+\color{blue}{\text{Option 2:}}
+&amp; u=#5
+&amp;\color{blue}{\dee{u}=#6 ~ \dee{#1}}
+\\
+&amp;\dee{v}=#2 \dee{#1}
+&amp;\color{blue}{v=#4}
+\\
+\hline
+\end{array}
+}
+
+
+\renewcommand{\textcolor}[2]{{\color{#1}{#2}}}
+
+
+\newcommand{\trigtri}[4]{
+\begin{tikzpicture}
+\draw (-.5,0)--(2,0)--(2,1.5)--cycle;
+\draw (1.8,0) |- (2,.2);
+\draw[double] (0,0) arc(0:30:.5cm);
+\draw (0,.2) node[right]{$#1$};
+\draw (1,-.5) node{$#2$};
+\draw (2,.75) node[right]{$#3$};
+\draw (.6,1.1) node[rotate=30]{$#4$};
+\end{tikzpicture}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="clp_1_dc.html"><span class="title">CLP-1 Differential Calculus</span></a></h1>
+<p class="byline">Joel Feldman, Andrew Rechnitzer, Elyse Yeager</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="subsec_GMVT.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="sec_DIFFTaylor.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="sec_optimise.html" title="Next">Next</a></span></div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="subsec_GMVT.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="sec_DIFFTaylor.html" title="Up">Up</a><a class="next-button button toolbar-item" href="sec_optimise.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="index.html" data-scroll="index"><span class="title">Front Matter</span></a></h2>
+<ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface-2.html" data-scroll="preface-2">Using the exercises in this book</a></li>
+<li><a href="preface-3.html" data-scroll="preface-3">Feedback about the text</a></li>
+</ul>
+<h2 class="link"><a href="chap_basics.html" data-scroll="chap_basics"><span class="codenumber">0</span> <span class="title">The basics</span></a></h2>
+<ul>
+<li><a href="sec_0_1.html" data-scroll="sec_0_1">Numbers</a></li>
+<li><a href="sec_sets.html" data-scroll="sec_sets">Sets</a></li>
+<li><a href="sec_0_3.html" data-scroll="sec_0_3">Other Important Sets</a></li>
+<li><a href="sec_0_4.html" data-scroll="sec_0_4">Functions</a></li>
+<li><a href="sec_parsing.html" data-scroll="sec_parsing">Parsing Formulas</a></li>
+<li><a href="sec_inverse_functions.html" data-scroll="sec_inverse_functions">Inverse Functions</a></li>
+</ul>
+<h2 class="link"><a href="chap_limits.html" data-scroll="chap_limits"><span class="codenumber">1</span> <span class="title">Limits</span></a></h2>
+<ul>
+<li><a href="sec_first_lim.html" data-scroll="sec_first_lim">Drawing Tangents and a First Limit</a></li>
+<li><a href="sec_velocity.html" data-scroll="sec_velocity">Another Limit and Computing Velocity</a></li>
+<li><a href="sec_lim_func.html" data-scroll="sec_lim_func">The Limit of a Function</a></li>
+<li><a href="sec_1_4.html" data-scroll="sec_1_4">Calculating Limits with Limit Laws</a></li>
+<li><a href="sec_1_5.html" data-scroll="sec_1_5">Limits at Infinity</a></li>
+<li><a href="sec_1_6.html" data-scroll="sec_1_6">Continuity</a></li>
+<li><a href="sec_opt_formal_limit.html" data-scroll="sec_opt_formal_limit">(Optional) — Making the Informal a Little More Formal</a></li>
+<li><a href="sec_lim_inf_formal.html" data-scroll="sec_lim_inf_formal">(Optional) — Making Infinite Limits a Little More Formal</a></li>
+<li><a href="sec_proof_arith_lim.html" data-scroll="sec_proof_arith_lim">(Optional) — Proving the Arithmetic of Limits</a></li>
+</ul>
+<h2 class="link"><a href="chap_deriv.html" data-scroll="chap_deriv"><span class="codenumber">2</span> <span class="title">Derivatives</span></a></h2>
+<ul>
+<li><a href="sec_2_1.html" data-scroll="sec_2_1">Revisiting Tangent Lines</a></li>
+<li><a href="sec_def_deriv.html" data-scroll="sec_def_deriv">Definition of the Derivative</a></li>
+<li><a href="sec_2_3.html" data-scroll="sec_2_3">Interpretations of the Derivative</a></li>
+<li><a href="sec_2_4.html" data-scroll="sec_2_4">Arithmetic of Derivatives - a Differentiation Toolbox</a></li>
+<li><a href="sec_proof_arith_deriv.html" data-scroll="sec_proof_arith_deriv">Proofs of the Arithmetic of Derivatives</a></li>
+<li><a href="sec_2_6.html" data-scroll="sec_2_6">Using the Arithmetic of Derivatives –  Examples</a></li>
+<li><a href="sec_exp_func.html" data-scroll="sec_exp_func">Derivatives of Exponential Functions</a></li>
+<li><a href="sec_diff_trig.html" data-scroll="sec_diff_trig">Derivatives of Trigonometric Functions</a></li>
+<li><a href="sec_chain_rule.html" data-scroll="sec_chain_rule">One More Tool  – the Chain Rule</a></li>
+<li><a href="sec_diff_logs.html" data-scroll="sec_diff_logs">The Natural Logarithm</a></li>
+<li><a href="sec_2_11.html" data-scroll="sec_2_11">Implicit Differentiation</a></li>
+<li><a href="sec_invTrig.html" data-scroll="sec_invTrig">Inverse Trigonometric Functions</a></li>
+<li><a href="sec_mvt.html" data-scroll="sec_mvt">The Mean Value Theorem</a></li>
+<li><a href="sec_higher_diff.html" data-scroll="sec_higher_diff">Higher Order Derivatives</a></li>
+<li><a href="sec_cont_deriv.html" data-scroll="sec_cont_deriv">(Optional) — Is \(\lim_{x\to c}f'(x)\) Equal to \(f'(c)\text{?}\)</a></li>
+</ul>
+<h2 class="link"><a href="chap_appl_deriv.html" data-scroll="chap_appl_deriv"><span class="codenumber">3</span> <span class="title">Applications of derivatives</span></a></h2>
+<ul>
+<li><a href="sec_vel_acc.html" data-scroll="sec_vel_acc">Velocity and Acceleration</a></li>
+<li><a href="sec_rrates.html" data-scroll="sec_rrates">Related Rates</a></li>
+<li><a href="sec_ExpGthDecay.html" data-scroll="sec_ExpGthDecay">Exponential Growth and Decay</a></li>
+<li><a href="sec_DIFFTaylor.html" data-scroll="sec_DIFFTaylor">Taylor Polynomials</a></li>
+<li><a href="sec_optimise.html" data-scroll="sec_optimise">Optimisation</a></li>
+<li><a href="sec_curve_sketch.html" data-scroll="sec_curve_sketch">Sketching Graphs</a></li>
+<li><a href="sec_4_7.html" data-scroll="sec_4_7">L'Hôpital's Rule and Indeterminate Forms</a></li>
+</ul>
+<h2 class="link"><a href="chapter-5.html" data-scroll="chapter-5"><span class="codenumber">4</span> <span class="title">Towards Integral Calculus</span></a></h2>
+<ul><li><a href="sec_antidiff.html" data-scroll="sec_antidiff">Introduction to Antiderivatives</a></li></ul>
+<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Appendices</span></a></h2>
+<h2 class="link"><a href="app_highschool.html" data-scroll="app_highschool"><span class="codenumber">A</span> <span class="title">High School Material</span></a></h2>
+<ul>
+<li><a href="sec_simtri.html" data-scroll="sec_simtri">Similar Triangles</a></li>
+<li><a href="sec_A_2.html" data-scroll="sec_A_2">Pythagoras</a></li>
+<li><a href="sec_A_3.html" data-scroll="sec_A_3">Trigonometry — Definitions</a></li>
+<li><a href="app_rad_arc_sec.html" data-scroll="app_rad_arc_sec">Radians, Arcs and Sectors</a></li>
+<li><a href="app_sec_trig_graphs.html" data-scroll="app_sec_trig_graphs">Trigonometry — Graphs</a></li>
+<li><a href="sec_A_6.html" data-scroll="sec_A_6">Trigonometry — Special Triangles</a></li>
+<li><a href="sec_A_7.html" data-scroll="sec_A_7">Trigonometry — Simple Identities</a></li>
+<li><a href="sec_trig_add.html" data-scroll="sec_trig_add">Trigonometry — Add and Subtract Angles</a></li>
+<li><a href="sec_inv_trig.html" data-scroll="sec_inv_trig">Inverse Trig Functions</a></li>
+<li><a href="app_sec_areas.html" data-scroll="app_sec_areas">Areas</a></li>
+<li><a href="sec_volumes.html" data-scroll="sec_volumes">Volumes</a></li>
+<li><a href="sec_powers.html" data-scroll="sec_powers">Powers</a></li>
+<li><a href="sec_logs.html" data-scroll="sec_logs">Logarithms</a></li>
+<li><a href="sec_must_deriv.html" data-scroll="sec_must_deriv">You Should be Able to Derive</a></li>
+</ul>
+<h2 class="link"><a href="chap_app_B.html" data-scroll="chap_app_B"><span class="codenumber">B</span> <span class="title">Origin of Trig, Area and Volume Formulas</span></a></h2>
+<ul>
+<li><a href="sec_B_1.html" data-scroll="sec_B_1">Theorems about Triangles</a></li>
+<li><a href="sec_B_2.html" data-scroll="sec_B_2">Trigonometry</a></li>
+<li><a href="sec_B_3.html" data-scroll="sec_B_3">Inverse Trigonometric Functions</a></li>
+<li><a href="sec_B_4.html" data-scroll="sec_B_4">Cosine and Sine Laws</a></li>
+<li><a href="sec_B_5.html" data-scroll="sec_B_5">Circles, cones and spheres</a></li>
+</ul>
+<h2 class="link"><a href="app_root_finding.html" data-scroll="app_root_finding"><span class="codenumber">C</span> <span class="title">Root Finding</span></a></h2>
+<ul>
+<li><a href="sec_C_1.html" data-scroll="sec_C_1">Newton's Method</a></li>
+<li><a href="sec_C_2.html" data-scroll="sec_C_2">The Error Behaviour of Newton's Method</a></li>
+<li><a href="sec_C_3.html" data-scroll="sec_C_3">The false position (regula falsi) method</a></li>
+<li><a href="sec_C_4.html" data-scroll="sec_C_4">The secant method</a></li>
+<li><a href="sec_C_5.html" data-scroll="sec_C_5">The Error Behaviour of the Secant Method</a></li>
+</ul>
+<h2 class="link"><a href="app_hint.html" data-scroll="app_hint"><span class="codenumber">D</span> <span class="title">Hints for Exercises</span></a></h2>
+<h2 class="link"><a href="app_answ.html" data-scroll="app_answ"><span class="codenumber">E</span> <span class="title">Answers to Exercises</span></a></h2>
+<h2 class="link"><a href="app_soln.html" data-scroll="app_soln"><span class="codenumber">F</span> <span class="title">Solutions to Exercises</span></a></h2></nav><div class="extras"><nav><a class="feedback-link" href="mailto:clp@ugrad.math.ubc.ca?subject=clp-pretext" target="_blank">Feedback</a><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="mathbook-content"><section class="subsection" id="subsection-58"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.4.11</span> <span class="title">Exercises</span>
+</h3>
+<section class="exercises" id="exercises-26"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber"></span> <span class="title">Exercises for § 3.4.1</span>
+</h4>
+<div class="exercisegroup" id="exercisegroup-67">
+<h6 class="heading"><span class="title"><p><alert>Exercises — Stage 1</alert></p></span></h6>
+<div class="introduction" id="introduction-100"></div>
+<div class="exercisegroup-exercises"><article class="exercise-like boxed" id="exercise-486"><h6 class="heading">
+<span class="codenumber">1</span> </h6>
+<p id="p-3618">The graph below shows three curves. The black curve is \(y=f(x)\text{,}\) the red curve is \(y=g(x)=1+2\sin(1+x)\text{,}\) and the blue curve is \(y=h(x)=0.7\text{.}\) If you want to estimate \(f(0)\text{,}\) what might cause you to use \(g(0)\text{?}\) What might cause you to use \(h(0)\text{?}\)</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-295.svg" style="width: 100%; height: auto;" alt=""></div></div></div></article></div>
+</div>
+<div class="exercisegroup" id="exercisegroup-68">
+<h6 class="heading"><span class="title"><p><alert>Exercises — Stage 2</alert></p></span></h6>
+<div class="introduction" id="introduction-101">
+<p id="p-3625">In this and following sections, we will ask you to approximate the value of several constants, such as \(\log(0.93)\text{.}\) A valid question to consider is why we would ask for approximations of these constants that take lots of time, and are less accurate than what you get from a calculator.</p>
+<p id="p-3626">One answer to this question is historical: people were approximating logarithms before they had calculators, and these are some of the ways they did that. Pretend you're on a desert island without any of your usual devices and that you want to make a number of quick and dirty approximate evaluations.</p>
+<p id="p-3627">Another reason to make these approximations is technical: how does the <em class="emphasis">calculator</em> get such a good approximation of \(\log(0.93)\text{?}\) The techniques you will learn later on in this chapter give very accurate formulas for approximating functions like \(\log x\) and \(\sin x\text{,}\) which are sometimes used in calculators.</p>
+<p id="p-3628">A third reason to make simple approximations of expressions that a calculator could evaluate is to provide a reality check. If you have a ballpark guess for your answer, and your calculator gives you something wildly different, you know to double-check that you typed everything in correctly.</p>
+</div>
+<div class="introduction" id="introduction-102"><p id="p-3629">For now, questions like Question <a knowl="./knowl/s3_4_1startapprox.html" title="Exercise 3.4.11.2">3.4.11.2</a> through Question <a knowl="./knowl/s3_4_1endapprox.html" title="Exercise 3.4.11.4">3.4.11.4</a> are simply for you to practice the fundamental ideas we're learning.</p></div>
+<div class="exercisegroup-exercises">
+<article class="exercise-like" id="s3_4_1startapprox"><h6 class="heading">
+<span class="codenumber">2</span> </h6>
+<p id="p-3630">Use a constant approximation to estimate the value of \(\log(x)\) when \(x=0.93\text{.}\) Sketch the curve \(y=f(x)\) and your constant approximation.</p>
+<p id="p-3631">(Remember that in CLP-1 we use \(\log x\) to mean the natural logarithm of \(x\text{,}\) \(\log_e x\text{.}\))</p></article><article class="exercise-like boxed" id="exercise-488"><h6 class="heading">
+<span class="codenumber">3</span> </h6>
+<p id="p-3635">Use a constant approximation to estimate \(\arcsin(0.1)\text{.}\)</p></article><article class="exercise-like" id="s3_4_1endapprox"><h6 class="heading">
+<span class="codenumber">4</span> </h6>
+<p id="p-3639">Use a constant approximation to estimate \(\sqrt{3}\tan(1)\text{.}\)</p></article>
+</div>
+</div>
+<div class="exercisegroup" id="exercisegroup-69">
+<h6 class="heading"><span class="title"><p><alert>Exercises — Stage 3</alert></p></span></h6>
+<div class="introduction" id="introduction-103"></div>
+<div class="exercisegroup-exercises"><article class="exercise-like boxed" id="s3_4_1quickapprox"><h6 class="heading">
+<span class="codenumber">5</span> </h6>
+<p id="p-3643">Use a constant approximation to estimate the value of \(10.1^3\text{.}\) Your estimation should be something you can calculate in your head.</p></article></div>
+</div></section><section class="exercises" id="exercises-27"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber"></span> <span class="title">Exercises for § 3.4.2</span>
+</h4>
+<div class="exercisegroup" id="exercisegroup-70">
+<h6 class="heading"><span class="title"><p><alert>Exercises — Stage 1</alert></p></span></h6>
+<div class="introduction" id="introduction-104"></div>
+<div class="exercisegroup-exercises">
+<article class="exercise-like boxed" id="exercise-491"><h6 class="heading">
+<span class="codenumber">1</span> </h6>
+<p id="p-3648">Suppose \(f(x)\) is a function, and we calculated its linear approximation near \(x=5\) to be \(f(x) \approx 3x-9\text{.}\)</p>
+<ol class="lower-alpha">
+<li id="li-1086">What is \(f(5)\text{?}\)</li>
+<li id="li-1087">What is \(f'(5)\text{?}\)</li>
+<li id="li-1088">What is \(f(0)\text{?}\)</li>
+</ol></article><article class="exercise-like boxed" id="exercise-492"><h6 class="heading">
+<span class="codenumber">2</span> </h6>
+<p id="p-3657">The curve \(y=f(x)\) is shown below. Sketch the linear approximation of \(f(x)\) about \(x=2\text{.}\)</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:17%;margin-right:17%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-298.svg" style="width: 100%; height: auto;" alt=""></div></div></div></article><article class="exercise-like" id="exercise-493"><h6 class="heading">
+<span class="codenumber">3</span> </h6>
+<p id="p-3661">What is the linear approximation of the function \(f(x)=2x+5\) about \(x=a\text{?}\)</p></article>
+</div>
+</div>
+<div class="exercisegroup" id="exercisegroup-71">
+<h6 class="heading"><span class="title"><p><alert>Exercises — Stage 2</alert></p></span></h6>
+<div class="introduction" id="introduction-105"></div>
+<div class="exercisegroup-exercises">
+<article class="exercise-like boxed" id="exercise-494"><h6 class="heading">
+<span class="codenumber">4</span> </h6>
+<p id="p-3666">Use a linear approximation to estimate \(\log(x)\) when \(x=0.93\text{.}\) Sketch the curve \(y=f(x)\) and your linear approximation.</p>
+<p id="p-3667">(Remember that in CLP-1 we use \(\log x\) to mean the natural logarithm of \(x\text{,}\) \(\log_e x\text{.}\))</p></article><article class="exercise-like boxed" id="exercise-495"><h6 class="heading">
+<span class="codenumber">5</span> </h6>
+<p id="p-3671">Use a linear approximation to estimate \(\sqrt{5}\text{.}\)</p></article><article class="exercise-like" id="exercise-496"><h6 class="heading">
+<span class="codenumber">6</span> </h6>
+<p id="p-3676">Use a linear approximation to estimate \(\sqrt[5]{30}\)</p></article>
+</div>
+</div>
+<div class="exercisegroup" id="exercisegroup-72">
+<h6 class="heading"><span class="title"><p><alert>Exercises — Stage 3</alert></p></span></h6>
+<div class="introduction" id="introduction-106"></div>
+<div class="exercisegroup-exercises">
+<article class="exercise-like boxed" id="exercise-497"><h6 class="heading">
+<span class="codenumber">7</span> </h6>
+<p id="p-3681">Use a linear approximation to estimate \(10.1^3\text{,}\) then compare your estimation with the actual value.</p></article><article class="exercise-like" id="exercise-498"><h6 class="heading">
+<span class="codenumber">8</span> </h6>
+<p id="p-3686">Imagine \(f(x)\) is some function, and you want to estimate \(f(b)\text{.}\) To do this, you choose a value \(a\) and take an approximation (linear or constant) of \(f(x)\) about \(a\text{.}\) Give an example of a function \(f(x)\text{,}\) and values \(a\) and \(b\text{,}\) where the constant approximation gives a more accurate estimation of \(f(b)\) than the linear approximation.</p></article><article class="exercise-like" id="exercise-499"><h6 class="heading">
+<span class="codenumber">9</span> </h6>
+<p id="p-3692">The function</p>
+<div class="displaymath">
+\begin{equation*}
+L(x)=\frac{1}{4}x+\frac{4\pi-\sqrt{27}}{12}
+\end{equation*}
+</div>
+<p id="p-3693">is the linear approximation of \(f(x)=\arctan x\) about what point \(x=a\text{?}\)</p></article>
+</div>
+</div></section><section class="exercises" id="exercises-28"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber"></span> <span class="title">Exercises for § 3.4.3</span>
+</h4>
+<div class="exercisegroup" id="exercisegroup-73">
+<h6 class="heading"><span class="title"><p><alert>Exercises — Stage 1</alert></p></span></h6>
+<div class="introduction" id="introduction-107"></div>
+<div class="exercisegroup-exercises">
+<article class="exercise-like boxed" id="exercise-500"><h6 class="heading">
+<span class="codenumber">1</span> </h6>
+<p id="p-3697">The quadratic approximation of a function \(f(x)\) about \(x=3\) is</p>
+<div class="displaymath">
+\begin{equation*}
+f(x) \approx -x^2+6x 
+\end{equation*}
+</div>
+<p id="p-3698">What are the values of \(f(3)\text{,}\) \(f'(3)\text{,}\) \(f''(3)\text{,}\) and \(f'''(3)\text{?}\)</p></article><article class="exercise-like" id="exercise-501"><h6 class="heading">
+<span class="codenumber">2</span> </h6>
+<p id="p-3702">Give a quadratic approximation of \(f(x)=2x+5\) about \(x=a\text{.}\)</p></article>
+</div>
+</div>
+<div class="exercisegroup" id="exercisegroup-74">
+<h6 class="heading"><span class="title"><p><alert>Exercises — Stage 2</alert></p></span></h6>
+<div class="introduction" id="introduction-108"></div>
+<div class="exercisegroup-exercises">
+<article class="exercise-like boxed" id="exercise-502"><h6 class="heading">
+<span class="codenumber">3</span> </h6>
+<p id="p-3707">Use a quadratic approximation to estimate \(\log(0.93)\text{.}\)</p>
+<p id="p-3708">(Remember that in CLP-1 we use \(\log x\) to mean the natural logarithm of \(x\text{,}\) \(\log_e x\text{.}\))</p></article><article class="exercise-like boxed" id="exercise-503"><h6 class="heading">
+<span class="codenumber">4</span> </h6>
+<p id="p-3714">Use a quadratic approximation to estimate \(\cos\left(\dfrac{1}{15}\right)\text{.}\)</p></article><article class="exercise-like" id="exercise-504"><h6 class="heading">
+<span class="codenumber">5</span> </h6>
+<p id="p-3719">Calculate the quadratic approximation of \(f(x)=e^{2x}\) about \(x=0\text{.}\)</p></article><article class="exercise-like" id="exercise-505"><h6 class="heading">
+<span class="codenumber">6</span> </h6>
+<p id="p-3723">Use a quadratic approximation to estimate \(5^{\tfrac{4}{3}}\text{.}\)</p></article><article class="exercise-like" id="exercise-506"><h6 class="heading">
+<span class="codenumber">7</span> </h6>
+<p id="p-3728">Evaluate the expressions below.</p>
+<ol class="lower-alpha">
+<li id="s4_3_4sigma1">\(\ds\sum_{n=5}^{30} 1\)</li>
+<li id="s4_3_4sigma2">\(\ds\sum_{n=1}^{3} \left[ 2(n+3)-n^2 \right]\)</li>
+<li id="s4_3_4sigma3">\(\ds\sum_{n=1}^{10} \left[\frac{1}{n}-\frac{1}{n+1}\right]\)</li>
+<li id="s4_3_4sigma4">\(\ds\sum_{n=1}^{4}\frac{5\cdot 2^n}{4^{n+1}} \)</li>
+</ol></article><article class="exercise-like boxed" id="exercise-507"><h6 class="heading">
+<span class="codenumber">8</span> </h6>
+<p id="p-3740">Write the following in sigma notation:</p>
+<ol class="lower-alpha">
+<li id="li-1100">\(1+2+3+4+5\)</li>
+<li id="li-1101">\(2+4+6+8\)</li>
+<li id="li-1102">\(3+5+7+9+11\)</li>
+<li id="li-1103">\(9+16+25+36+49\)</li>
+<li id="li-1104">\(9+4+16+5+25+6+36+7+49+8\)</li>
+<li id="li-1105">\(8+15+24+35+48\)</li>
+<li id="li-1106">\(3-6+9-12+15-18\)</li>
+</ol></article>
+</div>
+</div>
+<div class="exercisegroup" id="exercisegroup-75">
+<h6 class="heading"><span class="title"><p><alert>Exercises — Stage 3</alert></p></span></h6>
+<div class="introduction" id="introduction-109"></div>
+<div class="exercisegroup-exercises">
+<article class="exercise-like boxed" id="exercise-508"><h6 class="heading">
+<span class="codenumber">9</span> </h6>
+<p id="p-3748">Use a quadratic approximation of \(f(x)=2\arcsin x\) about \(x=0\) to approximate \(f(1)\text{.}\) What number are you approximating?</p></article><article class="exercise-like boxed" id="exercise-509"><h6 class="heading">
+<span class="codenumber">10</span> </h6>
+<p id="p-3752">Use a quadratic approximation of \(e^x\) to estimate \(e\) as a decimal.</p></article><article class="exercise-like boxed" id="exercise-510"><h6 class="heading">
+<span class="codenumber">11</span> </h6>
+<p id="p-3759">Group the expressions below into collections of equivalent expressions.</p>
+<ol class="lower-alpha">
+<li id="s3_4_3equiv1">\(\ds\sum_{n=1}^{10} 2n\)</li>
+<li id="s3_4_3equiv5">\(\ds\sum_{n=1}^{10} 2^n\)</li>
+<li id="s3_4_3equiv7">\(\ds\sum_{n=1}^{10} n^2\)</li>
+<li id="s3_4_3equiv2">\(2\ds\sum_{n=1}^{10} n\)</li>
+<li id="s3_4_3equiv3">\(2\ds\sum_{n=2}^{11} (n-1)\)</li>
+<li id="s3_4_3equiv10">\(\ds\sum_{n=5}^{14} (n-4)^2\)</li>
+<li id="s3_4_3equiv6">\(\dfrac{1}{4}\ds\sum_{n=1}^{10}\left( \frac{4^{n+1}}{2^n}\right)\)</li>
+</ol></article>
+</div>
+</div></section><section class="exercises" id="exercises-29"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber"></span> <span class="title">Exercises for § 3.4.4</span>
+</h4>
+<div class="exercisegroup" id="exercisegroup-76">
+<h6 class="heading"><span class="title"><p><alert>Exercises — Stage 1</alert></p></span></h6>
+<div class="introduction" id="introduction-110"></div>
+<div class="exercisegroup-exercises">
+<article class="exercise-like" id="s3_4_4conc1"><h6 class="heading">
+<span class="codenumber">1</span> </h6>
+<p id="p-3768">The 3rd degree Taylor polynomial for a function \(f(x)\) about \(x=1\) is</p>
+<div class="displaymath">
+\begin{equation*}
+T_3(x)=x^3-5x^2+9x
+\end{equation*}
+</div>
+<p>What  is \(f''(1)\text{?}\)</p></article><article class="exercise-like boxed" id="exercise-512"><h6 class="heading">
+<span class="codenumber">2</span> </h6>
+<p id="p-3772">The \(n\)th degree Taylor polynomial for \(f(x)\) about \(x=5\) is</p>
+<div class="displaymath">
+\begin{equation*}
+T_n(x)=\sum_{k=0}^{n} \frac{2k+1}{3k-9}(x-5)^k
+\end{equation*}
+</div>
+<p id="p-3773">What is \(f^{(10)}(5)\text{?}\)</p></article>
+</div>
+</div>
+<div class="exercisegroup" id="exercisegroup-77">
+<h6 class="heading"><span class="title"><p><alert>Exercises — Stage 3</alert></p></span></h6>
+<div class="introduction" id="introduction-111"></div>
+<div class="exercisegroup-exercises">
+<article class="exercise-like" id="s3_4_4chop1"><h6 class="heading">
+<span class="codenumber">3</span> </h6>
+<p id="p-3778">The 4th-degree Maclaurin polynomial for \(f(x)\) is</p>
+<div class="displaymath">
+\begin{equation*}
+T_4(x)=x^4-x^3+x^2-x+1
+\end{equation*}
+</div>
+<p id="p-3779">What is the third-degree Maclaurin polynomial for \(f(x)\text{?}\)</p></article><article class="exercise-like boxed" id="exercise-514"><h6 class="heading">
+<span class="codenumber">4</span> </h6>
+<p id="p-3783">The 4th degree Taylor polynomial for \(f(x)\) about \(x=1\) is</p>
+<div class="displaymath">
+\begin{equation*}
+T_4(x)=x^4+x^3-9
+\end{equation*}
+</div>
+<p id="p-3784">What is the third degree Taylor polynomial for \(f(x)\) about \(x=1\text{?}\)</p></article><article class="exercise-like boxed" id="exercise-515"><h6 class="heading">
+<span class="codenumber">5</span> </h6>
+<p id="p-3790">For any even number \(n\text{,}\) suppose the \(n\)th degree Taylor polynomial for \(f(x)\) about \(x=5\) is</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{k=0}^{n/2} \frac{2k+1}{3k-9}(x-5)^{2k}
+\end{equation*}
+</div>
+<p id="p-3791">What is \(f^{(10)}(5)\text{?}\)</p></article><article class="exercise-like boxed" id="exercise-516"><h6 class="heading">
+<span class="codenumber">6</span> </h6>
+<p id="p-3796">The third-degree Taylor polynomial for \(f(x)=x^3\left[2\log x - \dfrac{11}{3}\right]\) about \(x=a\) is</p>
+<div class="displaymath">
+\begin{equation*}
+T_3(x)=-\frac{2}{3}\sqrt{e^3}+3ex-6\sqrt{e}x^2+x^3
+\end{equation*}
+</div>
+<p id="p-3797">What is \(a\text{?}\)</p></article>
+</div>
+</div></section><section class="exercises" id="exercises-30"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber"></span> <span class="title">Exercises for § 3.4.5</span>
+</h4>
+<div class="exercisegroup" id="exercisegroup-78">
+<h6 class="heading"><span class="title"><p><alert>Exercises — Stage 1</alert></p></span></h6>
+<div class="introduction" id="introduction-112"></div>
+<div class="exercisegroup-exercises">
+<article class="exercise-like boxed" id="exercise-517"><h6 class="heading">
+<span class="codenumber">1</span> </h6>
+<p id="p-3802">Give the 16th degree Maclaurin polynomial for \(f(x)=\sin x+ \cos x\text{.}\)</p></article><article class="exercise-like boxed" id="exercise-518"><h6 class="heading">
+<span class="codenumber">2</span> </h6>
+<p id="p-3806">Give the 100th degree Taylor polynomial for \(s(t)=4.9t^2-t+10\) about \(t=5\text{.}\)</p></article><article class="exercise-like" id="exercise-519"><h6 class="heading">
+<span class="codenumber">3</span> </h6>
+<p id="p-3811">Write the \(n\)th-degree Taylor polynomial for \(f(x)=2^x\) about \(x=1\) in sigma notation.</p></article><article class="exercise-like boxed" id="exercise-520"><h6 class="heading">
+<span class="codenumber">4</span> </h6>
+<p id="p-3815">Find the 6th degree Taylor polynomial of \(f(x)=x^2\log x+2x^2+5\) about \(x=1\text{,}\) remembering that \(\log x\) is the natural logarithm of \(x\text{,}\) \(\log_ex\text{.}\)</p></article><article class="exercise-like" id="exercise-521"><h6 class="heading">
+<span class="codenumber">5</span> </h6>
+<p id="p-3819">Give the \(n\)th degree Maclaurin polynomial for \(\dfrac{1}{1-x}\) in sigma notation.</p></article>
+</div>
+</div>
+<div class="exercisegroup" id="exercisegroup-79">
+<h6 class="heading"><span class="title"><p><alert>Exercises — Stage 3</alert></p></span></h6>
+<div class="introduction" id="introduction-113"></div>
+<div class="exercisegroup-exercises">
+<article class="exercise-like boxed" id="exercise-522"><h6 class="heading">
+<span class="codenumber">6</span> </h6>
+<p id="p-3823">Calculate the \(3\)rd-degree Taylor Polynomial for \(f(x)=x^x\) about \(x=1\text{.}\)</p></article><article class="exercise-like" id="exercise-523"><h6 class="heading">
+<span class="codenumber">7</span> </h6>
+<p id="p-3827">Use a 5th-degree Maclaurin polynomial for \(6\arctan x\) to approximate \(\pi\text{.}\)</p></article><article class="exercise-like" id="exercise-524"><h6 class="heading">
+<span class="codenumber">8</span> </h6>
+<p id="p-3832">Write the \(100\)th-degree Taylor polynomial for \(f(x)=x(\log x -1)\) about \(x=1\) in sigma notation.</p></article><article class="exercise-like" id="exercise-525"><h6 class="heading">
+<span class="codenumber">9</span> </h6>
+<p id="p-3836">Write the \((2n)\)th-degree Taylor polynomial for \(f(x)=\sin x\) about \(x=\dfrac{\pi}{4}\) in sigma notation.</p></article><article class="exercise-like boxed" id="exercise-526"><h6 class="heading">
+<span class="codenumber">10</span> </h6>
+<p id="p-3840">Estimate the sum below</p>
+<div class="displaymath">
+\begin{equation*}
+1+\frac{1}{2}+\frac{1}{3!}+\frac{1}{4!}+\cdots +\frac{1}{157!}
+\end{equation*}
+</div>
+<p id="p-3841">by interpreting it as a Maclaurin polynomial.</p></article><article class="exercise-like boxed" id="exercise-527"><h6 class="heading">
+<span class="codenumber">11</span> </h6>
+<p id="p-3845">Estimate the sum below</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{k=0}^{100}\frac{(-1)^k}{2k!}\left(\frac{5\pi}{4}\right)^{2k}
+\end{equation*}
+</div>
+<p id="p-3846">by interpreting it as a Maclaurin polynomial.</p></article>
+</div>
+</div></section><section class="exercises" id="exercises-31"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber"></span> <span class="title">Exercises for § 3.4.6</span>
+</h4>
+<div class="exercisegroup" id="exercisegroup-80">
+<h6 class="heading"><span class="title"><p><alert>Exercises — Stage 1</alert></p></span></h6>
+<div class="introduction" id="introduction-114"></div>
+<div class="exercisegroup-exercises">
+<article class="exercise-like boxed" id="exercise-528"><h6 class="heading">
+<span class="codenumber">1</span> </h6>
+<p id="p-3852">In the picture below, label the following:</p>
+<div class="displaymath">
+\begin{equation*}
+f(x) \qquad f\left(x+\Delta x\right) \qquad \Delta x \qquad \Delta y  
+\end{equation*}
+</div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-304.svg" style="width: 100%; height: auto;" alt=""></div></div></div></article><article class="exercise-like boxed" id="exercise-529"><h6 class="heading">
+<span class="codenumber">2</span> </h6>
+<p id="p-3854">At this point in the book, every homework problem takes you about 5 minutes. Use the terms you learned in this section to answer the question: if you spend 15 minutes more, how many more homework problems will you finish?</p></article>
+</div>
+</div>
+<div class="exercisegroup" id="exercisegroup-81">
+<h6 class="heading"><span class="title"><p><alert>Exercises — Stage 2</alert></p></span></h6>
+<div class="introduction" id="introduction-115"></div>
+<div class="exercisegroup-exercises">
+<article class="exercise-like boxed" id="exercise-530"><h6 class="heading">
+<span class="codenumber">3</span> </h6>
+<p id="p-3859">Let \(f(x)=\arctan x\text{.}\)</p>
+<ol class="lower-alpha">
+<li id="li-1146">Use a linear approximation to estimate \(f(5.1)-f(5)\text{.}\)</li>
+<li id="li-1147">Use a quadratic approximation to estimate \(f(5.1)-f(5)\text{.}\)</li>
+</ol></article><article class="exercise-like" id="exercise-531"><h6 class="heading">
+<span class="codenumber">4</span> </h6>
+<p id="p-3865">When diving off a cliff from \(x\) metres above the water, your speed as you hit the water is given by</p>
+<div class="displaymath">
+\begin{equation*}
+s(x)=\sqrt{19.6x}\;\frac{\mathrm{m}}{\mathrm{sec}}
+\end{equation*}
+</div>
+<p id="p-3866">Your last dive was from a height of 4 metres.</p>
+<ol class="lower-alpha">
+<li id="li-1148">Use a linear approximation of \(\Delta y\) to estimate how much faster you will be falling when you hit the water if you jump from a height of 5 metres.</li>
+<li id="li-1149">A diver makes three jumps: the first is from \(x\) metres, the second from \(x+\Delta x\) metres, and the third from \(x+2\Delta x\) metres, for some fixed positive values of \(x\) and \(\Delta x\text{.}\) Which is bigger: the increase in terminal speed from the first to the second jump, or the increase in terminal speed from the second to the third jump?</li>
+</ol></article>
+</div>
+</div></section><section class="exercises" id="exercises-32"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber"></span> <span class="title">Exercises for § 3.4.7</span>
+</h4>
+<div class="exercisegroup" id="exercisegroup-82">
+<h6 class="heading"><span class="title"><p><alert>Exercises — Stage 1</alert></p></span></h6>
+<div class="introduction" id="introduction-116"></div>
+<div class="exercisegroup-exercises">
+<article class="exercise-like" id="exercise-532"><h6 class="heading">
+<span class="codenumber">1</span> </h6>
+<p id="p-3873">Let \(f(x)=7x^2-3x+4\text{.}\) Suppose we measure \(x\) to be \(x_0 = 2\) but that the real value of \(x\) is \(x_0+\Delta x\text{.}\) Suppose further that the error in our measurement is \(\Delta x = 1\text{.}\) Let \(\Delta y\) be the change in \(f(x)\) corresponding to a change of \(\Delta x \) in \(x_0\text{.}\) That is, \(\Delta y = f\left(x_0+\Delta x\right)-f(x_0)\text{.}\)</p>
+<p id="p-3874">True or false: \(\Delta y = f'(2)(1)=25\)</p></article><article class="exercise-like" id="exercise-533"><h6 class="heading">
+<span class="codenumber">2</span> </h6>
+<p id="p-3881">Suppose the exact amount you are supposed to tip is $5.83, but you approximate and tip $6. What is the absolute error in your tip? What is the percent error in your tip?</p></article><article class="exercise-like" id="exercise-534"><h6 class="heading">
+<span class="codenumber">3</span> </h6>
+<p id="p-3888">Suppose \(f(x)=3x^2-5\text{.}\) If you measure \(x\) to be \(10\text{,}\) but its actual value is \(11\text{,}\) estimate the resulting error in \(f(x)\) using the linear approximation, and then the quadratic approximation.</p></article>
+</div>
+</div>
+<div class="exercisegroup" id="exercisegroup-83">
+<h6 class="heading"><span class="title"><p><alert>Exercises — Stage 2</alert></p></span></h6>
+<div class="introduction" id="introduction-117"></div>
+<div class="exercisegroup-exercises">
+<article class="exercise-like" id="exercise-535"><h6 class="heading">
+<span class="codenumber">4</span> </h6>
+<p id="p-3896">A circular pen is being built on a farm. The pen must contain \(A_0\) square metres, with an error of no more than 2%. Estimate the largest percentage error allowable on the radius.</p></article><article class="exercise-like" id="exercise-536"><h6 class="heading">
+<span class="codenumber">5</span> </h6>
+<p id="p-3901">A circle with radius 3 has a sector cut out of it. It's a smallish sector, no more than a quarter of the circle. You want to find out the area of the sector.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:30%;margin-right:30%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-307.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<ol id="p-3902" class="lower-alpha">
+<li id="li-1150">Suppose the angle of the sector is \(\theta\text{.}\) What is the area of the sector?</li>
+<li id="li-1151">Unfortunately, you don't have a protractor, only a ruler. So, you measure the chord made by the sector (marked \(d\) in the diagram above). What is \(\theta\) in terms of \(d\text{?}\)</li>
+<li id="li-1152">Suppose you measured \(d=0.7\text{,}\) but actually \(d=0.68\text{.}\) Estimate the absolute error in your calculation of the area removed.</li>
+</ol></article><article class="exercise-like" id="exercise-537"><h6 class="heading">
+<span class="codenumber">6</span> </h6>
+<p id="p-3911">A conical tank, standing on its pointy end, has height 2 metres and radius 0.5 metres. Estimate change in volume of the water in the tank associated to a change in the height of the water from 50 cm to 45 cm.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:33.5%;margin-right:33.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-309.svg" style="width: 100%; height: auto;" alt=""></div></div></div></article>
+</div>
+</div>
+<div class="exercisegroup" id="exercisegroup-84">
+<h6 class="heading"><span class="title"><p><alert>Exercises — Stage 3</alert></p></span></h6>
+<div class="introduction" id="introduction-118"></div>
+<div class="exercisegroup-exercises"><article class="exercise-like" id="exercise-538"><h6 class="heading">
+<span class="codenumber">7</span> </h6>
+<p id="p-3920">A sample begins with precisely 1 \(\mu\)g of a radioactive isotope, and after 3 years is measured to have 0.9 \(\mu\)g remaining. If this measurement is correct to within 0.05 \(\mu\)g, estimate the corresponding accuracy of the half-life calculated using it.</p></article></div>
+</div></section><section class="exercises" id="exercises-33"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber"></span> <span class="title">Exercises for § 3.4.8</span>
+</h4>
+<div class="exercisegroup" id="exercisegroup-85">
+<h6 class="heading"><span class="title"><p><alert>Exercises — Stage 1</alert></p></span></h6>
+<div class="introduction" id="introduction-119"></div>
+<div class="exercisegroup-exercises">
+<article class="exercise-like boxed" id="exercise-539"><h6 class="heading">
+<span class="codenumber">1</span> </h6>
+<p id="p-3926">Suppose \(f(x)\) is a function that we approximated by \(F(x)\text{.}\) Further, suppose \(f(10)=-3\text{,}\) while our approximation was \(F(10)=5\text{.}\) Let \(R(x)=f(x)-F(x)\text{.}\)</p>
+<ol class="lower-alpha">
+<li id="li-1153">True or false: \(|R(10)| \leq 7\)</li>
+<li id="li-1154">True or false: \(|R(10)| \leq 8\)</li>
+<li id="li-1155">True or false: \(|R(10)| \leq 9\)</li>
+<li id="li-1156">True or false: \(|R(10)| \leq 100\)</li>
+</ol></article><article class="exercise-like boxed" id="exercise-540"><h6 class="heading">
+<span class="codenumber">2</span> </h6>
+<p id="p-3936">Let \(f(x)=e^x\text{,}\) and let \(T_3(x)\) be the third-degree Maclaurin polynomial for \(f(x)\text{,}\)</p>
+<div class="displaymath">
+\begin{equation*}
+T_3(x)=1+x+\frac{1}{2}x^2+\frac{1}{3!}x^3
+\end{equation*}
+</div>
+<p id="p-3937">Use Equation <a knowl="./knowl/eq_taylorErrorN.html" title="Equation 3.4.33">3.4.33</a> to give a reasonable bound on the error \(|f(2)-T_3(2)|\text{.}\) Then, find the error \(|f(2)-T_3(2)|\) using a calculator.</p></article><article class="exercise-like" id="exercise-541"><h6 class="heading">
+<span class="codenumber">3</span> </h6>
+<p id="p-3944">Let \(f(x)= 5x^3-24x^2+ex-\pi^4\text{,}\) and let \(T_5(x)\) be the fifth-degree Taylor polynomial for \(f(x)\) about \(x=1\text{.}\) Give the best bound you can on the error \(|f(37)-T(37)|\text{.}\)</p></article><article class="exercise-like" id="exercise-542"><h6 class="heading">
+<span class="codenumber">4</span> </h6>
+<p id="p-3948">You and your friend both want to approximate \(\sin(33)\text{.}\) Your friend uses the first-degree Maclaurin polynomial for \(f(x)=\sin x\text{,}\) while you use the zeroth-degree (constant) Maclaurin polynomial for \(f(x)=\sin x\text{.}\) Who has a better approximation, you or your friend?</p></article>
+</div>
+</div>
+<div class="exercisegroup" id="exercisegroup-86">
+<h6 class="heading"><span class="title"><p><alert>Exercises — Stage 2</alert></p></span></h6>
+<div class="introduction" id="introduction-120"></div>
+<div class="exercisegroup-exercises">
+<article class="exercise-like boxed" id="exercise-543"><h6 class="heading">
+<span class="codenumber">5</span> </h6>
+<p id="p-3952">Suppose a function \(f(x)\) has sixth derivative</p>
+<div class="displaymath">
+\begin{equation*}
+f^{(6)}(x)=\dfrac{6!(2x-5)}{x+3}.
+\end{equation*}
+</div>
+<p>Let \(T_5(x)\) be the 5th-degree Taylor polynomial for \(f(x)\) about \(x=11\text{.}\)</p>
+<p id="p-3953">Give a bound for the error \(|f(11.5)-T_5(11.5)|\text{.}\)</p></article><article class="exercise-like" id="exercise-544"><h6 class="heading">
+<span class="codenumber">6</span> </h6>
+<p id="p-3957">Let \(f(x)= \tan x\text{,}\) and let \(T_2(x)\) be the second-degree Taylor polynomial for \(f(x)\) about \(x=0\text{.}\) Give a reasonable bound on the error \(|f(0.1)-T(0.1)|\) using Equation <a knowl="./knowl/eq_taylorErrorN.html" title="Equation 3.4.33">3.4.33</a>.</p></article><article class="exercise-like boxed" id="exercise-545"><h6 class="heading">
+<span class="codenumber">7</span> </h6>
+<p id="p-3962">Let \(f(x)=\log (1-x)\text{,}\) and let \(T_5(x)\) be the fifth-degree Maclaurin polynomial for \(f(x)\text{.}\) Use Equation <a knowl="./knowl/eq_taylorErrorN.html" title="Equation 3.4.33">3.4.33</a> to give a bound on the error \(|f\left(-\frac{1}{4}\right)-T_5\left(-\frac{1}{4}\right)|\text{.}\)</p>
+<p id="p-3963">(Remember \(\log x=\log_ex\text{,}\) the natural logarithm of \(x\text{.}\))</p></article><article class="exercise-like" id="exercise-546"><h6 class="heading">
+<span class="codenumber">8</span> </h6>
+<p id="p-3969">Let \(f(x)=\sqrt[5]{x}\text{,}\) and let \(T_3(x)\) be the third-degree Taylor polynomial for \(f(x)\) about \(x=32\text{.}\) Give a bound on the error \(|f(30)-T_3(30)|\text{.}\)</p></article><article class="exercise-like" id="exercise-547"><h6 class="heading">
+<span class="codenumber">9</span> </h6>
+<p id="p-3975">Let</p>
+<div class="displaymath">
+\begin{equation*}
+f(x)= \sin\left(\dfrac{1}{x}\right),
+\end{equation*}
+</div>
+<p>and let \(T_1(x)\) be the first-degree Taylor polynomial for \(f(x)\) about \(x=\dfrac{1}{\pi}\text{.}\) Give a bound on the error \(|f(0.01)-T_1(0.01)|\text{,}\) using Equation <a knowl="./knowl/eq_taylorErrorN.html" title="Equation 3.4.33">3.4.33</a>. You may leave your answer in terms of \(\pi\text{.}\)</p>
+<p id="p-3976">Then, give a <em class="emphasis">reasonable</em> bound on the error \(|f(0.01)-T_1(0.01)|\text{.}\)</p></article><article class="exercise-like boxed" id="exercise-548"><h6 class="heading">
+<span class="codenumber">10</span> </h6>
+<p id="p-3987">Let \(f(x)=\arcsin x\text{,}\) and let \(T_2(x)\) be the second-degree Maclaurin polynomial for \(f(x)\text{.}\) Give a reasonable bound on the error \(\left|f\left(\frac{1}{2}\right)-T_2\left(\frac{1}{2}\right)\right|\) using Equation <a knowl="./knowl/eq_taylorErrorN.html" title="Equation 3.4.33">3.4.33</a>. What is the exact value of the error \(\left|f\left(\frac{1}{2}\right)-T_2\left(\frac{1}{2}\right)\right|\text{?}\)</p></article>
+</div>
+</div>
+<div class="exercisegroup" id="exercisegroup-87">
+<h6 class="heading"><span class="title"><p><alert>Exercises — Stage 3</alert></p></span></h6>
+<div class="introduction" id="introduction-121"></div>
+<div class="exercisegroup-exercises">
+<article class="exercise-like" id="exercise-549"><h6 class="heading">
+<span class="codenumber">11</span> </h6>
+<p id="p-3997">Let \(f(x)=\log(x)\text{,}\) and let \(T_n(x)\) be the \(n\)th-degree Taylor polynomial for \(f(x)\) about \(x=1\text{.}\) You use \(T_n(1.1)\) to estimate \(\log (1.1)\text{.}\) If your estimation needs to have an error of no more than \(10^{-4}\text{,}\) what is an acceptable value of \(n\) to use?</p></article><article class="exercise-like boxed" id="exercise-550"><h6 class="heading">
+<span class="codenumber">12</span> </h6>
+<p id="p-4002">Give an estimation of \(\sqrt[7]{2200}\) using a Taylor polynomial. Your estimation should have an error of less than 0.001.</p></article><article class="exercise-like" id="exercise-551"><h6 class="heading">
+<span class="codenumber">13</span> </h6>
+<p id="p-4014">Use Equation <a knowl="./knowl/eq_taylorErrorN.html" title="Equation 3.4.33">3.4.33</a> to show that</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{4241}{5040}\leq\sin(1) \leq\frac{4243}{5040}
+\end{equation*}
+</div></article><article class="exercise-like" id="exercise-552"><h6 class="heading">
+<span class="codenumber">14</span> </h6>
+<p id="p-4022">In this question, we use the remainder of a Maclaurin polynomial to approximate \(e\text{.}\)</p>
+<ol class="lower-alpha">
+<li id="s3_4_8Tx">Write out the 4th degree Maclaurin polynomial \(T_4(x)\) of the function \(e^x\text{.}\)</li>
+<li id="s3_4_8T1">Compute \(T_4(1)\text{.}\)</li>
+<li id="s3_4_8e">Use your answer from <a knowl="./knowl/s3_4_8T1.html" title="Item 3.4.11.14.b">3.4.11.14.b</a> to conclude \(\dfrac{326}{120} \lt e \lt \dfrac{325}{119}\text{.}\)</li>
+</ol></article>
+</div>
+</div></section><section class="exercises" id="exercises-34"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber"></span> <span class="title">Further problems for § 3.4</span>
+</h4>
+<div class="exercisegroup" id="exercisegroup-88">
+<h6 class="heading"><span class="title"><p><alert>Exercises — Stage 1</alert></p></span></h6>
+<div class="introduction" id="introduction-122"></div>
+<div class="exercisegroup-exercises">
+<article class="exercise-like" id="exercise-553"><h6 class="heading">
+<span class="codenumber">1</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-4031">Consider a function \(f(x)\) whose third-degree Maclaurin polynomial is \(4 +
+3x^2 + \frac{1}{2}x^3\text{.}\) What is \(f'(0)\text{?}\) What is \(f''(0)\text{?}\)</p></article><article class="exercise-like" id="exercise-554"><h6 class="heading">
+<span class="codenumber">2</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-4037">Consider a function \(h(x)\) whose third-degree Maclaurin polynomial is \(1+4x-\dfrac{1}{3}x^2 + \dfrac{2}{3}x^3\text{.}\) What is \(h^{(3)}(0)\text{?}\)</p></article><article class="exercise-like" id="exercise-555"><h6 class="heading">
+<span class="codenumber">3</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-4040">The third-degree Taylor polynomial of \(h(x)\) about \(x=2\) is \(3 + \dfrac{1}{2}(x-2) + 2(x-2)^3\text{.}\)</p>
+<p id="p-4041">What is \(h'(2)\text{?}\) What is \(h''(2)\text{?}\)</p></article>
+</div>
+</div>
+<div class="exercisegroup" id="exercisegroup-89">
+<h6 class="heading"><span class="title"><p><alert>Exercises — Stage 2</alert></p></span></h6>
+<div class="introduction" id="introduction-123"></div>
+<div class="exercisegroup-exercises">
+<article class="exercise-like boxed" id="exercise-556"><h6 class="heading">
+<span class="codenumber">4</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-4047">The function \(f(x)\) has the property that \(f(3)=2,\ f'(3)=4\) and \(f''(3)=-10\text{.}\)</p>
+<ol class="lower-alpha">
+<li id="li-1178">Use the linear approximation to \(f(x)\) centred at \(x=3\) to approximate \(f(2.98)\text{.}\)</li>
+<li id="li-1179">Use the quadratic approximation to \(f(x)\) centred at \(x=3\) to approximate \(f(2.98)\text{.}\)</li>
+</ol></article><article class="exercise-like boxed" id="exercise-557"><h6 class="heading">
+<span class="codenumber">5</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-4051">Use the tangent line to the graph of \(y = x^{1/3}\) at \(x = 8\) to find an approximate value for \(10^{1/3}\text{.}\) Is the approximation too large or too small?</p></article><article class="exercise-like" id="exercise-558"><h6 class="heading">
+<span class="codenumber">6</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-4056">Estimate \(\sqrt{2}\) using a linear approximation.</p></article><article class="exercise-like" id="exercise-559"><h6 class="heading">
+<span class="codenumber">7</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-4060">Estimate \(\sqrt[3]{26}\) using a linear approximation.</p></article><article class="exercise-like" id="exercise-560"><h6 class="heading">
+<span class="codenumber">8</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-4064">Estimate \((10.1)^5\) using a linear approximation.</p></article><article class="exercise-like" id="exercise-561"><h6 class="heading">
+<span class="codenumber">9</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-4070">Estimate \(\sin\left(\dfrac{101\pi}{100}\right)\) using a linear approximation. (Leave your answer in terms of \(\pi\text{.}\))</p></article><article class="exercise-like boxed" id="exercise-562"><h6 class="heading">
+<span class="codenumber">10</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-4074">Use a linear approximation to estimate \(\arctan(1.1)\text{,}\) using \(\arctan 1 = \dfrac{\pi}{4}\text{.}\)</p></article><article class="exercise-like" id="exercise-563"><h6 class="heading">
+<span class="codenumber">11</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-4078">Use a linear approximation to estimate \((2.001)^3\text{.}\) Write your answer in the form \(n/1000\) where \(n\) is an integer.</p></article><article class="exercise-like" id="exercise-564"><h6 class="heading">
+<span class="codenumber">12</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-4084">Using a suitable linear approximation, estimate \((8.06)^{2/3}\text{.}\) Give your answer as a fraction in which both the numerator and denominator are integers.</p></article><article class="exercise-like" id="exercise-565"><h6 class="heading">
+<span class="codenumber">13</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-4088">Find the third--order Taylor polynomial for \(f(x)=(1 - 3x)^{-1/3}\) around \(x = 0\text{.}\)</p></article><article class="exercise-like" id="exercise-566"><h6 class="heading">
+<span class="codenumber">14</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-4092">Consider a function \(f(x)\) which has \(f^{(3)}(x)=\dfrac{x}{22-x^2}\text{.}\)  Show that when we approximate \(f(2)\) using its second degree Taylor polynomial at \(a=1\text{,}\) the absolute value of the error is less than \(\frac{1}{50}=0.02\text{.}\)</p></article><article class="exercise-like boxed" id="exercise-567"><h6 class="heading">
+<span class="codenumber">15</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-4096">Consider a function \(f(x)\) which has \(f^{(4)}(x)=\dfrac{\cos(x^2)}{3-x}\text{.}\)  Show that when we approximate \(f(0.5)\) using its third-degree Maclaurin polynomial, the absolute value of the error is less than \(\frac{1}{500}=0.002\text{.}\)</p></article><article class="exercise-like boxed" id="exercise-568"><h6 class="heading">
+<span class="codenumber">16</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-4099">Consider a function \(f(x)\) which has \(f^{(3)}(x)=\dfrac{e^{-x}}{8+x^2}\text{.}\)  Show that when we approximate \(f(1)\) using its second degree Maclaurin polynomial, the absolute value of the error is less than \(1/40\text{.}\)</p></article><article class="exercise-like" id="exercise-569"><h6 class="heading">
+<span class="codenumber">17</span> <span class="title">(✳)</span>
+</h6>
+<ol id="p-4102" class="lower-alpha">
+<li id="s3_4twoestimates1">By using an appropriate linear approximation for \(f(x)=x^{1/3}\text{,}\) estimate \(5^{2/3}\text{.}\)</li>
+<li id="s3_4twoestimates2">Improve your answer in <a knowl="./knowl/s3_4twoestimates1.html" title="Item 3.4.11.17.a">3.4.11.17.a</a> by making a quadratic approximation.</li>
+<li id="s3_4twoestimates3">Obtain an error estimate for your answer in <a knowl="./knowl/s3_4twoestimates1.html" title="Item 3.4.11.17.a">3.4.11.17.a</a> (not just by comparing with your calculator's answer for \(5^{2/3}\)).</li>
+</ol></article>
+</div>
+</div>
+<div class="exercisegroup" id="exercisegroup-90">
+<h6 class="heading"><span class="title"><p><alert>Exercises — Stage 3</alert></p></span></h6>
+<div class="introduction" id="introduction-124"></div>
+<div class="exercisegroup-exercises">
+<article class="exercise-like" id="exercise-570"><h6 class="heading">
+<span class="codenumber">18</span> </h6>
+<p id="p-4111">The 4th degree Maclaurin polynomial for \(f(x)\) is</p>
+<div class="displaymath">
+\begin{equation*}
+T_4(x)=5x^2-9
+\end{equation*}
+</div>
+<p id="p-4112">What is the third degree Maclaurin polynomial for \(f(x)\text{?}\)</p></article><article class="exercise-like boxed" id="exercise-571"><h6 class="heading">
+<span class="codenumber">19</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-4116">The equation \(y^4+xy=x^2-1\) defines \(y\) implicitly as a function of \(x\) near the point \(x=2,\ y=1\text{.}\)</p>
+<ol class="lower-alpha">
+<li id="li-1202">Use the tangent line approximation at the given point to estimate the value of \(y\) when \(x=2.1\text{.}\)</li>
+<li id="li-1203">Use the quadratic approximation at the given point to estimate the value of \(y\) when \(x=2.1\text{.}\)</li>
+<li id="s3_4sketch">Make a sketch showing how the curve relates to the tangent line at the given point.</li>
+</ol></article><article class="exercise-like" id="exercise-572"><h6 class="heading">
+<span class="codenumber">20</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-4123">The equation \(x^4+y+xy^4=1\) defines \(y\) implicitly as a function of \(x\) near the point \(x=-1, y=1\text{.}\)</p>
+<ol class="lower-alpha">
+<li id="s3_4tan1">Use the tangent line approximation at the given point to estimate the value of \(y\) when \(x=-0.9\text{.}\)</li>
+<li id="s3_4tan2">Use the quadratic approximation  at the given point to get another estimate of \(y\) when \(x=-0.9\text{.}\)</li>
+<li id="s3_4tan3">Make a sketch showing how the curve relates to the tangent line at the given point.</li>
+</ol></article><article class="exercise-like" id="exercise-573"><h6 class="heading">
+<span class="codenumber">21</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-4128">Given that \(\log 10\approx 2.30259\text{,}\) estimate \(\log 10.3\) using a suitable tangent line approximation. Give an upper and lower bound for the error in your approximation by using a suitable error estimate.</p></article><article class="exercise-like" id="exercise-574"><h6 class="heading">
+<span class="codenumber">22</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-4131">Consider \(f(x)=e^{e^x}\text{.}\)</p>
+<ol class="lower-alpha">
+<li id="li-1208">Give the linear approximation for \(f\) near \(x=0\) (call this \(L(x)\)).</li>
+<li id="li-1209">Give the quadratic approximation for \(f\) near \(x=0\) (call this \(Q(x)\)).</li>
+<li id="li-1210">Prove that \(L(x) \lt Q(x) \lt f(x)\) for all \(x \gt 0\text{.}\)</li>
+<li id="li-1211">Find an interval of length at most \(0.01\) that is guaranteed to contain the number \(e^{0.1}\text{.}\)</li>
+</ol></article>
+</div>
+</div></section></section></div></main>
+</div>
+<!--Start: Google Universal code--><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-105798942-1', 'auto');
+ga('send', 'pageview');
+</script><!--End: Google Universal code--><div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.1/login.js"></script>
+</body>
+</html>

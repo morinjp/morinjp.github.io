@@ -1,0 +1,541 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:02:34-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Exercises</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.1/pretext.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on2.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="RQS.css">
+<link href="https://pretextbook.org/css/0.1/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\require{cancel}\newcommand{\dee}[1]{\mathrm{d}#1}
+\newcommand{\half}{ \frac{1}{2} }
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ts}{\textstyle}
+\newcommand{\es}{ {\varnothing}}
+\newcommand{\st}{ {\mbox{ s.t. }} }
+\newcommand{\pow}[1]{ \mathcal{P}\left(#1\right) }
+\newcommand{\set}[1]{ \left\{#1\right\} }
+\newcommand{\lin}{{\text{LIN}}}
+\newcommand{\quot}{{\text{QR}}}
+\newcommand{\simp}{{\text{SMP}}}
+\newcommand{\diff}[2]{ \frac{\mathrm{d}#1}{\mathrm{d}#2}}
+\newcommand{\bdiff}[2]{ \frac{\mathrm{d}}{\mathrm{d}#2} \left( #1 \right)}
+\newcommand{\ddiff}[3]{ \frac{\mathrm{d}^#1#2}{\mathrm{d}{#3}^#1}}
+\renewcommand{\neg}{ {\sim} }
+\newcommand{\limp}{ {\;\Rightarrow\;} }
+\newcommand{\nimp}{ {\;\not\Rightarrow\;} }
+\newcommand{\liff}{ {\;\Leftrightarrow\;} }
+\newcommand{\niff}{ {\;\not\Leftrightarrow\;} }
+\newcommand{\De}{\Delta}
+\newcommand{\bbbn}{\mathbb{N}}
+\newcommand{\bbbr}{\mathbb{R}}
+\newcommand{\bbbp}{\mathbb{P}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\Si}{\Sigma}
+
+\newcommand{\arccsc}{\mathop{\mathrm{arccsc}}}
+\newcommand{\arcsec}{\mathop{\mathrm{arcsec}}}
+\newcommand{\arccot}{\mathop{\mathrm{arccot}}}
+\newcommand{\erf}{\mathop{\mathrm{erf}}}
+\newcommand{\smsum}{\mathop{{\ts \sum}}}
+\newcommand{\atp}[2]{ \genfrac{}{}{0in}{}{#1}{#2} }
+
+\newcommand{\ave}{\mathrm{ave}}
+\newcommand{\llt}{\left \lt }
+\newcommand{\rgt}{\right \gt }
+
+
+\newcommand{\YEaxis}[2]{\draw[help lines] (-#1,0)--(#1,0) node[right]{$x$};\draw[help lines] (0,-#2)--(0,#2) node[above]{$y$};}
+
+\newcommand{\YEaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$x$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YEtaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+\newcommand{\YEtaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$}; \draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YExcoord}[2]{\draw (#1,.2)--(#1,-.2) node[below]{$#2$};}
+\newcommand{\YEycoord}[2]{\draw (.2,#1)--(-.2,#1) node[left]{$#2$};}
+\newcommand{\YEnxcoord}[2]{\draw (#1,-.2)--(#1,.2) node[above]{$#2$};}
+\newcommand{\YEnycoord}[2]{\draw (-.2,#1)--(.2,#1) node[right]{$#2$};}
+
+\newcommand{\YEstickfig}[3]{
+\draw (#1,#2) arc(-90:270:2mm);
+\draw (#1,#2)--(#1,#2-.5) (#1-.25,#2-.75)--(#1,#2-.5)--(#1+.25,#2-.75) (#1-.2,#2-.2)--(#1+.2,#2-.2);}
+
+
+\newcommand{\IBP}[7]{
+\begin{array}{|c  | l | l |}
+\hline
+\color{red}{\text{Option 1:}}
+&amp; u=#2
+&amp;\color{red}{\dee{u}=#3 ~ \dee{#1}}
+\\
+&amp; \dee{v}=#5~\dee{#1}
+&amp;\color{red}{v=#7}
+\\
+\hline
+\color{blue}{\text{Option 2:}}
+&amp; u=#5
+&amp;\color{blue}{\dee{u}=#6 ~ \dee{#1}}
+\\
+&amp;\dee{v}=#2 \dee{#1}
+&amp;\color{blue}{v=#4}
+\\
+\hline
+\end{array}
+}
+
+
+\renewcommand{\textcolor}[2]{{\color{#1}{#2}}}
+
+
+\newcommand{\trigtri}[4]{
+\begin{tikzpicture}
+\draw (-.5,0)--(2,0)--(2,1.5)--cycle;
+\draw (1.8,0) |- (2,.2);
+\draw[double] (0,0) arc(0:30:.5cm);
+\draw (0,.2) node[right]{$#1$};
+\draw (1,-.5) node{$#2$};
+\draw (2,.75) node[right]{$#3$};
+\draw (.6,1.1) node[rotate=30]{$#4$};
+\end{tikzpicture}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="clp_1_dc.html"><span class="title">CLP-1 Differential Calculus</span></a></h1>
+<p class="byline">Joel Feldman, Andrew Rechnitzer, Elyse Yeager</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="ssec_pop.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="sec_ExpGthDecay.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="sec_DIFFTaylor.html" title="Next">Next</a></span></div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="ssec_pop.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="sec_ExpGthDecay.html" title="Up">Up</a><a class="next-button button toolbar-item" href="sec_DIFFTaylor.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="index.html" data-scroll="index"><span class="title">Front Matter</span></a></h2>
+<ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface-2.html" data-scroll="preface-2">Using the exercises in this book</a></li>
+<li><a href="preface-3.html" data-scroll="preface-3">Feedback about the text</a></li>
+</ul>
+<h2 class="link"><a href="chap_basics.html" data-scroll="chap_basics"><span class="codenumber">0</span> <span class="title">The basics</span></a></h2>
+<ul>
+<li><a href="sec_0_1.html" data-scroll="sec_0_1">Numbers</a></li>
+<li><a href="sec_sets.html" data-scroll="sec_sets">Sets</a></li>
+<li><a href="sec_0_3.html" data-scroll="sec_0_3">Other Important Sets</a></li>
+<li><a href="sec_0_4.html" data-scroll="sec_0_4">Functions</a></li>
+<li><a href="sec_parsing.html" data-scroll="sec_parsing">Parsing Formulas</a></li>
+<li><a href="sec_inverse_functions.html" data-scroll="sec_inverse_functions">Inverse Functions</a></li>
+</ul>
+<h2 class="link"><a href="chap_limits.html" data-scroll="chap_limits"><span class="codenumber">1</span> <span class="title">Limits</span></a></h2>
+<ul>
+<li><a href="sec_first_lim.html" data-scroll="sec_first_lim">Drawing Tangents and a First Limit</a></li>
+<li><a href="sec_velocity.html" data-scroll="sec_velocity">Another Limit and Computing Velocity</a></li>
+<li><a href="sec_lim_func.html" data-scroll="sec_lim_func">The Limit of a Function</a></li>
+<li><a href="sec_1_4.html" data-scroll="sec_1_4">Calculating Limits with Limit Laws</a></li>
+<li><a href="sec_1_5.html" data-scroll="sec_1_5">Limits at Infinity</a></li>
+<li><a href="sec_1_6.html" data-scroll="sec_1_6">Continuity</a></li>
+<li><a href="sec_opt_formal_limit.html" data-scroll="sec_opt_formal_limit">(Optional) — Making the Informal a Little More Formal</a></li>
+<li><a href="sec_lim_inf_formal.html" data-scroll="sec_lim_inf_formal">(Optional) — Making Infinite Limits a Little More Formal</a></li>
+<li><a href="sec_proof_arith_lim.html" data-scroll="sec_proof_arith_lim">(Optional) — Proving the Arithmetic of Limits</a></li>
+</ul>
+<h2 class="link"><a href="chap_deriv.html" data-scroll="chap_deriv"><span class="codenumber">2</span> <span class="title">Derivatives</span></a></h2>
+<ul>
+<li><a href="sec_2_1.html" data-scroll="sec_2_1">Revisiting Tangent Lines</a></li>
+<li><a href="sec_def_deriv.html" data-scroll="sec_def_deriv">Definition of the Derivative</a></li>
+<li><a href="sec_2_3.html" data-scroll="sec_2_3">Interpretations of the Derivative</a></li>
+<li><a href="sec_2_4.html" data-scroll="sec_2_4">Arithmetic of Derivatives - a Differentiation Toolbox</a></li>
+<li><a href="sec_proof_arith_deriv.html" data-scroll="sec_proof_arith_deriv">Proofs of the Arithmetic of Derivatives</a></li>
+<li><a href="sec_2_6.html" data-scroll="sec_2_6">Using the Arithmetic of Derivatives –  Examples</a></li>
+<li><a href="sec_exp_func.html" data-scroll="sec_exp_func">Derivatives of Exponential Functions</a></li>
+<li><a href="sec_diff_trig.html" data-scroll="sec_diff_trig">Derivatives of Trigonometric Functions</a></li>
+<li><a href="sec_chain_rule.html" data-scroll="sec_chain_rule">One More Tool  – the Chain Rule</a></li>
+<li><a href="sec_diff_logs.html" data-scroll="sec_diff_logs">The Natural Logarithm</a></li>
+<li><a href="sec_2_11.html" data-scroll="sec_2_11">Implicit Differentiation</a></li>
+<li><a href="sec_invTrig.html" data-scroll="sec_invTrig">Inverse Trigonometric Functions</a></li>
+<li><a href="sec_mvt.html" data-scroll="sec_mvt">The Mean Value Theorem</a></li>
+<li><a href="sec_higher_diff.html" data-scroll="sec_higher_diff">Higher Order Derivatives</a></li>
+<li><a href="sec_cont_deriv.html" data-scroll="sec_cont_deriv">(Optional) — Is \(\lim_{x\to c}f'(x)\) Equal to \(f'(c)\text{?}\)</a></li>
+</ul>
+<h2 class="link"><a href="chap_appl_deriv.html" data-scroll="chap_appl_deriv"><span class="codenumber">3</span> <span class="title">Applications of derivatives</span></a></h2>
+<ul>
+<li><a href="sec_vel_acc.html" data-scroll="sec_vel_acc">Velocity and Acceleration</a></li>
+<li><a href="sec_rrates.html" data-scroll="sec_rrates">Related Rates</a></li>
+<li><a href="sec_ExpGthDecay.html" data-scroll="sec_ExpGthDecay">Exponential Growth and Decay</a></li>
+<li><a href="sec_DIFFTaylor.html" data-scroll="sec_DIFFTaylor">Taylor Polynomials</a></li>
+<li><a href="sec_optimise.html" data-scroll="sec_optimise">Optimisation</a></li>
+<li><a href="sec_curve_sketch.html" data-scroll="sec_curve_sketch">Sketching Graphs</a></li>
+<li><a href="sec_4_7.html" data-scroll="sec_4_7">L'Hôpital's Rule and Indeterminate Forms</a></li>
+</ul>
+<h2 class="link"><a href="chapter-5.html" data-scroll="chapter-5"><span class="codenumber">4</span> <span class="title">Towards Integral Calculus</span></a></h2>
+<ul><li><a href="sec_antidiff.html" data-scroll="sec_antidiff">Introduction to Antiderivatives</a></li></ul>
+<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Appendices</span></a></h2>
+<h2 class="link"><a href="app_highschool.html" data-scroll="app_highschool"><span class="codenumber">A</span> <span class="title">High School Material</span></a></h2>
+<ul>
+<li><a href="sec_simtri.html" data-scroll="sec_simtri">Similar Triangles</a></li>
+<li><a href="sec_A_2.html" data-scroll="sec_A_2">Pythagoras</a></li>
+<li><a href="sec_A_3.html" data-scroll="sec_A_3">Trigonometry — Definitions</a></li>
+<li><a href="app_rad_arc_sec.html" data-scroll="app_rad_arc_sec">Radians, Arcs and Sectors</a></li>
+<li><a href="app_sec_trig_graphs.html" data-scroll="app_sec_trig_graphs">Trigonometry — Graphs</a></li>
+<li><a href="sec_A_6.html" data-scroll="sec_A_6">Trigonometry — Special Triangles</a></li>
+<li><a href="sec_A_7.html" data-scroll="sec_A_7">Trigonometry — Simple Identities</a></li>
+<li><a href="sec_trig_add.html" data-scroll="sec_trig_add">Trigonometry — Add and Subtract Angles</a></li>
+<li><a href="sec_inv_trig.html" data-scroll="sec_inv_trig">Inverse Trig Functions</a></li>
+<li><a href="app_sec_areas.html" data-scroll="app_sec_areas">Areas</a></li>
+<li><a href="sec_volumes.html" data-scroll="sec_volumes">Volumes</a></li>
+<li><a href="sec_powers.html" data-scroll="sec_powers">Powers</a></li>
+<li><a href="sec_logs.html" data-scroll="sec_logs">Logarithms</a></li>
+<li><a href="sec_must_deriv.html" data-scroll="sec_must_deriv">You Should be Able to Derive</a></li>
+</ul>
+<h2 class="link"><a href="chap_app_B.html" data-scroll="chap_app_B"><span class="codenumber">B</span> <span class="title">Origin of Trig, Area and Volume Formulas</span></a></h2>
+<ul>
+<li><a href="sec_B_1.html" data-scroll="sec_B_1">Theorems about Triangles</a></li>
+<li><a href="sec_B_2.html" data-scroll="sec_B_2">Trigonometry</a></li>
+<li><a href="sec_B_3.html" data-scroll="sec_B_3">Inverse Trigonometric Functions</a></li>
+<li><a href="sec_B_4.html" data-scroll="sec_B_4">Cosine and Sine Laws</a></li>
+<li><a href="sec_B_5.html" data-scroll="sec_B_5">Circles, cones and spheres</a></li>
+</ul>
+<h2 class="link"><a href="app_root_finding.html" data-scroll="app_root_finding"><span class="codenumber">C</span> <span class="title">Root Finding</span></a></h2>
+<ul>
+<li><a href="sec_C_1.html" data-scroll="sec_C_1">Newton's Method</a></li>
+<li><a href="sec_C_2.html" data-scroll="sec_C_2">The Error Behaviour of Newton's Method</a></li>
+<li><a href="sec_C_3.html" data-scroll="sec_C_3">The false position (regula falsi) method</a></li>
+<li><a href="sec_C_4.html" data-scroll="sec_C_4">The secant method</a></li>
+<li><a href="sec_C_5.html" data-scroll="sec_C_5">The Error Behaviour of the Secant Method</a></li>
+</ul>
+<h2 class="link"><a href="app_hint.html" data-scroll="app_hint"><span class="codenumber">D</span> <span class="title">Hints for Exercises</span></a></h2>
+<h2 class="link"><a href="app_answ.html" data-scroll="app_answ"><span class="codenumber">E</span> <span class="title">Answers to Exercises</span></a></h2>
+<h2 class="link"><a href="app_soln.html" data-scroll="app_soln"><span class="codenumber">F</span> <span class="title">Solutions to Exercises</span></a></h2></nav><div class="extras"><nav><a class="feedback-link" href="mailto:clp@ugrad.math.ubc.ca?subject=clp-pretext" target="_blank">Feedback</a><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="mathbook-content"><section class="subsection" id="subsection-47"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.3.4</span> <span class="title">Exercises</span>
+</h3>
+<section class="exercises" id="exercises-22"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber"></span> <span class="title">Exercises for § 3.3.1</span>
+</h4>
+<div class="exercisegroup" id="exercisegroup-58">
+<h6 class="heading"><span class="title"><p><alert>Exercises — Stage 1</alert></p></span></h6>
+<div class="introduction" id="introduction-89"></div>
+<div class="exercisegroup-exercises">
+<article class="exercise-like" id="exercise-452"><h6 class="heading">
+<span class="codenumber">1</span> </h6>
+<p id="p-3294">Which of the following is a differential equation for an unknown function \(y\) of \(x\text{?}\)</p>
+<div class="displaymath">
+\begin{align*}
+\amp\mbox{(a) } y=\diff{y}{x} \amp
+\amp\mbox{(b) } \diff{y}{x}=3\left[y-5\right] \amp
+\amp\mbox{(c) } y=3\left[y-\diff{x}{x}\right]\\
+\amp\mbox{(d) } e^x=e^y+1 \amp
+\amp\mbox{(e) } y=10e^x
+\end{align*}
+</div></article><article class="exercise-like boxed" id="exercise-453"><h6 class="heading">
+<span class="codenumber">2</span> </h6>
+<p id="p-3299">Which of the following functions \(Q(t)\) satisfy the differential equation \(Q(t)=5\ds\diff{Q}{t}\text{?}\)</p>
+<div class="displaymath">
+\begin{align*}
+\amp\mbox{(a) } Q(t)=0\amp
+\amp\mbox{(b) } Q(t)=5e^t\amp
+\amp\mbox{(c) } Q(t)=e^{5t}\\
+\amp\mbox{(d) } Q(t)=e^{t/5}\amp
+\amp\mbox{(e) } Q(t)=e^{t/5}+1
+\end{align*}
+</div></article><article class="exercise-like boxed" id="exercise-454"><h6 class="heading">
+<span class="codenumber">3</span> </h6>
+<p id="p-3304">Suppose a sample starts out with \(C\) grams of a radioactive isotope, and the amount of the radioactive isotope left in the sample at time \(t\) is given by</p>
+<div class="displaymath">
+\begin{equation*}
+Q(t)=Ce^{-kt}
+\end{equation*}
+</div>
+<p id="p-3305">for some positive constant \(k\text{.}\) When will \(Q(t)=0\text{?}\)</p></article>
+</div>
+</div>
+<div class="exercisegroup" id="exercisegroup-59">
+<h6 class="heading"><span class="title"><p><alert>Exercises — Stage 2</alert></p></span></h6>
+<div class="introduction" id="introduction-90"></div>
+<div class="exercisegroup-exercises">
+<article class="exercise-like" id="exercise-455"><h6 class="heading">
+<span class="codenumber">4</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-3312">Consider a function of the form \(f(x) = A e^{kx}\) where \(A\) and \(k\) are constants. If \(f(0)=5\) and \(f(7)=\pi\text{,}\) find the constants \(A\) and \(k\text{.}\)</p></article><article class="exercise-like" id="exercise-456"><h6 class="heading">
+<span class="codenumber">5</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-3316">Find the function \(y(t)\) if \(\ds\diff{y}{t} +3y = 0\text{,}\) \(y(1) = 2\text{.}\)</p></article><article class="exercise-like" id="exercise-457"><h6 class="heading">
+<span class="codenumber">6</span> </h6>
+<p id="p-3322">A sample of bone belongs to an animal that died 10,000 years ago. If the bone contained 5 \(\mu\)g of Carbon-14 when the animal died, how much Carbon-14 do you expect it to have now?</p></article><article class="exercise-like boxed" id="exercise-458"><h6 class="heading">
+<span class="codenumber">7</span> </h6>
+<p id="p-3328">A sample containing one gram of Radium-226 was stored in a lab 100 years ago; now the sample only contains 0.9576 grams of Radium-226. What is the half-life of Radium-226?</p></article><article class="exercise-like" id="exercise-459"><h6 class="heading">
+<span class="codenumber">8</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-3333">The mass of a sample of Polonium--210, initially 6 grams, decreases at a rate proportional to the mass. After one year, 1 gram remains. What is the half--life (the time it takes for the sample to decay to half its original mass)?</p></article><article class="exercise-like" id="exercise-460"><h6 class="heading">
+<span class="codenumber">9</span> </h6>
+<p id="p-3341">Radium-221 has a half-life of 30 seconds. How long does it take for only 0.01% of an original sample to be left?</p></article>
+</div>
+</div>
+<div class="exercisegroup" id="exercisegroup-60">
+<h6 class="heading"><span class="title"><p><alert>Exercises — Stage 3</alert></p></span></h6>
+<div class="introduction" id="introduction-91"></div>
+<div class="exercisegroup-exercises">
+<article class="exercise-like boxed" id="exercise-461"><h6 class="heading">
+<span class="codenumber">10</span> </h6>
+<p id="p-3346">Polonium-210 has a half life of 138 days. What percentage of a sample of Polonium-210 decays in a day?</p></article><article class="exercise-like" id="exercise-462"><h6 class="heading">
+<span class="codenumber">11</span> </h6>
+<p id="p-3354">A sample of ore is found to contain \(7.2 \pm 0.3\;\mu\)g of Uranium-232, the half-life of which is between 68.8 and 70 years. How much Uranium-232 will remain undecayed in the sample in 10 years?</p></article>
+</div>
+</div></section><section class="exercises" id="exercises-23"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber"></span> <span class="title">Exercises for § 3.3.2</span>
+</h4>
+<div class="exercisegroup" id="exercisegroup-61">
+<h6 class="heading"><span class="title"><p><alert>Exercises — Stage 1</alert></p></span></h6>
+<div class="introduction" id="introduction-92"></div>
+<div class="exercisegroup-exercises">
+<article class="exercise-like boxed" id="exercise-463"><h6 class="heading">
+<span class="codenumber">1</span> </h6>
+<p id="p-3359">Which of the following functions \(T(t)\) satisfy the differential equation \(\ds\diff{T}{t}=5\left[T-20\right]\text{?}\)</p>
+<div class="displaymath">
+\begin{align*}
+\amp\mbox{(a) }
+T(t)=20
+\amp
+\amp\mbox{(b) }
+T(t)=20e^{5t}-20
+\amp
+\mbox{(c) }
+T(t)=e^{5t}+20\\
+\amp\mbox{(d) }
+T(t)=20e^{5t}+20
+\end{align*}
+</div></article><article class="exercise-like" id="exercise-464"><h6 class="heading">
+<span class="codenumber">2</span> </h6>
+<p id="p-3364">At time \(t=0\text{,}\) an object is placed in a room, of temperature \(A\text{.}\) After \(t\) seconds, Newton's Law of Cooling gives the temperature of the object is as</p>
+<div class="displaymath">
+\begin{equation*}
+T(t)=35e^{Kt}-10
+\end{equation*}
+</div>
+<p id="p-3365">What is the temperature of the room? Is the room warmer or colder than the object?</p></article><article class="exercise-like boxed" id="s3_3_2Knegative"><h6 class="heading">
+<span class="codenumber">3</span> </h6>
+<p id="p-3371">A warm object is placed in a cold room. The temperature of the object, over time, approaches the temperature of the room it is in. The temperature of the object at time \(t\) is given by</p>
+<div class="displaymath">
+\begin{equation*}
+T(t)=[T(0)-A]e^{Kt}+A.
+\end{equation*}
+</div>
+<p id="p-3372">Can \(K\) be a positive number? Can \(K\) be a negative number? Can \(K\) be zero?</p></article><article class="exercise-like" id="exercise-466"><h6 class="heading">
+<span class="codenumber">4</span> </h6>
+<p id="p-3379">Suppose an object obeys Newton's Law of Cooling, and its temperature is given by</p>
+<div class="displaymath">
+\begin{equation*}
+T(t)=[T(0)-A]e^{kt}+A
+\end{equation*}
+</div>
+<p id="p-3380">for some constant \(k\text{.}\) At what time is \(T(t)=A\text{?}\)</p></article>
+</div>
+</div>
+<div class="exercisegroup" id="exercisegroup-62">
+<h6 class="heading"><span class="title"><p><alert>Exercises — Stage 2</alert></p></span></h6>
+<div class="introduction" id="introduction-93"></div>
+<div class="exercisegroup-exercises">
+<article class="exercise-like" id="exercise-467"><h6 class="heading">
+<span class="codenumber">5</span> </h6>
+<p id="p-3386">A piece of copper at room temperature (25\(^\circ\)) is placed in a boiling pot of water. After 10 seconds, it has heated to 90\(^\circ\text{.}\) When will it be 99.9\(^\circ\text{?}\)</p></article><article class="exercise-like boxed" id="exercise-468"><h6 class="heading">
+<span class="codenumber">6</span> </h6>
+<p id="p-3392">Today is a chilly day. We heated up a stone to 500\(^\circ\) C in a bonfire, then took it out and left it outside, where the temperature is 0\(^\circ\) C. After 10 minutes outside of the bonfire, the stone had cooled to a still-untouchable 100\(^\circ\) C. Now the stone is at a cozy 50\(^\circ\) C. How long ago was the stone taken out of the fire?</p></article>
+</div>
+</div>
+<div class="exercisegroup" id="exercisegroup-63">
+<h6 class="heading"><span class="title"><p><alert>Exercises — Stage 3</alert></p></span></h6>
+<div class="introduction" id="introduction-94"></div>
+<div class="exercisegroup-exercises">
+<article class="exercise-like" id="exercise-469"><h6 class="heading">
+<span class="codenumber">7</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-3397">Isaac Newton drinks his coffee with cream. To be exact, 9 parts coffee to 1 part cream. His landlady pours him a cup of coffee at \(95^\circ\) C into which Newton stirs cream taken from the icebox at \(5^\circ\) C. When he drinks the mixture ten minutes later, he notes that it has cooled to \(54^\circ\) C. Newton wonders if his coffee would be hotter (and by how much) if he waited until just before drinking it to add the cream. Analyze this question, assuming that:</p>
+<ol class="lower-roman">
+<li id="li-958">The temperature of the dining room is constant at \(22^\circ\) C.</li>
+<li id="li-959">When a volume \(V_1\) of liquid at temperature \(T_1\) is mixed with a volume \(V_2\) at temperature \(T_2\text{,}\) the temperature of the mixture is \(\dfrac{V_1T_1+V_2T_2}{V_1+V_2}\text{.}\)</li>
+<li id="li-960">Newton's Law of Cooling: The temperature of an object cools at a rate proportional to the difference in temperature between the object and its surroundings.</li>
+<li id="li-961">The constant of proportionality is the same for the cup of coffee with cream as for the cup of pure coffee.</li>
+</ol></article><article class="exercise-like boxed" id="exercise-470"><h6 class="heading">
+<span class="codenumber">8</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-3400">The temperature of a glass of iced tea is initially \(5^\circ\text{.}\) After 5 minutes, the tea has heated to \(10^\circ\) in a room where the air temperature is \(30^\circ\text{.}\)</p>
+<ol class="lower-alpha">
+<li id="li-964">Use Newton's law of cooling to obtain a differential equation for the temperature \(T(t)\) at time \(t\text{.}\)</li>
+<li id="li-965">Determine when the tea will reach a temperature of \(20^\circ\text{.}\)</li>
+</ol></article><article class="exercise-like boxed" id="s3_3_2Knegative2"><h6 class="heading">
+<span class="codenumber">9</span> </h6>
+<p id="p-3407">Suppose an object is changing temperature according to Newton's Law of Cooling, and its temperature at time \(t\) is given by</p>
+<div class="displaymath">
+\begin{equation*}
+T(t)=0.8^{kt}+15
+\end{equation*}
+</div>
+<p id="p-3408">Is \(k\) positive or negative?</p></article>
+</div>
+</div></section><section class="exercises" id="exercises-24"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber"></span> <span class="title">Exercises for § 3.3.3</span>
+</h4>
+<div class="exercisegroup" id="exercisegroup-64">
+<h6 class="heading"><span class="title"><p><alert>Exercises — Stage 1</alert></p></span></h6>
+<div class="introduction" id="introduction-95"></div>
+<div class="exercisegroup-exercises"><article class="exercise-like" id="exercise-472"><h6 class="heading">
+<span class="codenumber">1</span> </h6>
+<p id="p-3415">Let a population at time \(t\) be given by the Malthusian model,</p>
+<div class="displaymath">
+\begin{equation*}
+P(t)=P(0)e^{bt}\mbox{ for some positive constant } b.
+\end{equation*}
+</div>
+<p id="p-3416">Evaluate \(\ds\lim_{t \to \infty}P(t)\text{.}\) Does this model make sense for large values of \(t\text{?}\)</p></article></div>
+</div>
+<div class="exercisegroup" id="exercisegroup-65">
+<h6 class="heading"><span class="title"><p><alert>Exercises — Stage 2</alert></p></span></h6>
+<div class="introduction" id="introduction-96"></div>
+<div class="exercisegroup-exercises">
+<article class="exercise-like boxed" id="exercise-473"><h6 class="heading">
+<span class="codenumber">2</span> </h6>
+<p id="p-3421">In the 1950s, pure-bred wood bison were thought to be extinct. However, a small population was found in Canada. For decades, a captive breeding program has been working to increase their numbers, and from time to time wood bison are released to the wild. Suppose in 2015, a released herd numbered 121 animals, and a year later, there were 136 <a knowl="" class="id-ref" refid="hk-fn-133" id="fn-133"><sup> 14 </sup></a><span id="hk-fn-133" class="hidden-content tex2jax_ignore"><span class="footnote">These numbers are loosely based on animals actually released near Shageluk, Alaska in 2015. Watch the first batch being released <a class="url" href="https://www.youtube.com/watch?v=GqRHe769AQM" target="_blank">here</a>.</span></span>. If the wood bison adhere to the Malthusian model (a big assumption!), and if there are no more releases of captive animals, how many animals will the herd have in 2020?</p></article><article class="exercise-like" id="exercise-474"><h6 class="heading">
+<span class="codenumber">3</span> </h6>
+<p id="p-3425">A founding colony of 1,000 bacteria is placed in a petri dish of yummy bacteria food. After an hour, the population has doubled. Assuming the Malthusian model, how long will it take for the colony to triple its original population?</p></article><article class="exercise-like boxed" id="exercise-475"><h6 class="heading">
+<span class="codenumber">4</span> </h6>
+<p id="p-3429">A single pair of  rats comes to an island after a shipwreck. They multiply according to the Malthusian model. In 1928, there were 1,000 rats on the island, and the next year there were 1500. When was the shipwreck?</p></article><article class="exercise-like" id="exercise-476"><h6 class="heading">
+<span class="codenumber">5</span> </h6>
+<p id="p-3433">A farmer wants to farm cochineals, which are insects used to make red dye. The farmer raises a small number of cochineals as a test. In three months, a test population of cochineals will increase from 200 individuals to 1000, given ample space and food.</p>
+<p id="p-3434">The farmer's plan is to start with an initial population of \(P(0)\) cochineals, and after a year have \(1\,000\,000+P(0)\) cochineals, so that one million can be harvested, and \(P(0)\) saved to start breeding again. What initial population \(P(0)\) does the Malthusian model suggest?</p></article>
+</div>
+</div>
+<div class="exercisegroup" id="exercisegroup-66">
+<h6 class="heading"><span class="title"><p><alert>Exercises — Stage 3</alert></p></span></h6>
+<div class="introduction" id="introduction-97"></div>
+<div class="exercisegroup-exercises"><article class="exercise-like boxed" id="exercise-477"><h6 class="heading">
+<span class="codenumber">6</span> </h6>
+<p id="p-3439">Let \(f(t)=100e^{kt}\text{,}\) for some constant \(k\text{.}\)</p>
+<ol class="lower-alpha">
+<li id="li-972">If \(f(t)\) is the amount of a decaying radioactive isotope in a sample at time \(t\text{,}\) what is the amount of the isotope in the sample when \(t=0\text{?}\) What is the sign of \(k\text{?}\)</li>
+<li id="li-973">If \(f(t)\) is the number of individuals in a population that is growing according to the Malthusian model, how many individuals are there when \(t=0\text{?}\) What is the sign of \(k\text{?}\)</li>
+<li id="li-974">If \(f(t)\) is the temperature of an object at time \(t\text{,}\) given by Newton's Law of Cooling, what is the ambient temperature surrounding the object? What is the sign of \(k\text{?}\)</li>
+</ol></article></div>
+</div></section><section class="exercises" id="exercises-25"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber"></span> <span class="title">Further problems for § 3.3</span>
+</h4>
+<section class="introduction" id="introduction-98"></section><article class="exercise-like" id="exercise-478"><h6 class="heading">
+<span class="codenumber">1</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-3445">Find \(f(2)\) if \(f'(x) = \pi f(x)\) for all \(x\text{,}\) and \(f(0) = 2\text{.}\)</p></article><article class="exercise-like" id="exercise-479"><h6 class="heading">
+<span class="codenumber">2</span> </h6>
+<p id="p-3449">Which functions \(T(t)\) satisfy the differential equation \(\ds\diff{T}{t}=7T+9\text{?}\)</p></article><article class="exercise-like" id="exercise-480"><h6 class="heading">
+<span class="codenumber">3</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-3456">It takes 8 days for 20% of a particular radioactive material to decay. How long does it take for 100 grams of the material to decay to 40 grams?</p></article><article class="exercise-like" id="exercise-481"><h6 class="heading">
+<span class="codenumber">4</span> </h6>
+<p id="p-3460">A glass of boiling water is left in a room. After 15 minutes, it has cooled to 85\(^\circ\) C, and after 30 minutes it is 73\(^\circ\) C. What temperature is the room?</p></article><article class="exercise-like boxed" id="exercise-482"><h6 class="heading">
+<span class="codenumber">5</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-3464">A 25-year-old graduate of UBC is given $50,000 which is invested at 5% per year compounded continuously. The graduate also intends to deposit money continuously at the rate of $2000 per year. Assuming that the interest rate remains 5%, the amount \(A(t)\) of money at time \(t\) satisfies the equation</p>
+<div class="displaymath">
+\begin{equation*}
+\diff{A}{t}= 0.05 A+2000
+\end{equation*}
+</div>
+<ol class="lower-alpha">
+<li id="li-978">Solve this equation and determine the amount of money in the account when the graduate is 65.</li>
+<li id="li-979">At age 65, the graduate will withdraw money continuously at the rate of \(W\) dollars per year. If the money must last until the person is 85, what is the largest possible value of \(W\text{?}\)</li>
+</ol></article><article class="exercise-like" id="exercise-483"><h6 class="heading">
+<span class="codenumber">6</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-3468">An investor puts $120,000 which into a bank account which pays 6% annual interest, compounded continuously. She plans to withdraw money continuously from the account at the rate of $9000 per year. If \(A(t)\) is the amount of money at time \(t\text{,}\) then</p>
+<div class="displaymath">
+\begin{equation*}
+\diff{A}{t}= 0.06 A-9000
+\end{equation*}
+</div>
+<ol class="lower-alpha">
+<li id="s3_3investor1">Solve this equation for \(A(t)\text{.}\)</li>
+<li id="s3_3investor2">When will the money run out?</li>
+</ol></article><article class="exercise-like" id="exercise-484"><h6 class="heading">
+<span class="codenumber">7</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-3475">A particular bacterial culture grows at a rate proportional to the number of bacteria present. If the size of the culture triples every nine hours, how long does it take the culture to double?</p></article><article class="exercise-like" id="exercise-485"><h6 class="heading">
+<span class="codenumber">8</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-3479">An object falls under gravity near the surface of the earth and its motion is impeded by air resistance proportional to its speed. Its velocity \(v\) satisfies the differential equation</p>
+<div class="displaymath">
+\begin{equation*}
+\dfrac{dv}{dt}=-g-kv
+\end{equation*}
+</div>
+<p>where \(g\) and \(k\) are positive constants.</p>
+<ol class="lower-alpha">
+<li id="li-986">Find the velocity of the object as a function of time \(t\text{,}\) given that it was \(v_0\) at \(t=0\text{.}\)</li>
+<li id="li-987">Find \(\lim\limits_{t\rightarrow\infty} v(t)\text{.}\)</li>
+</ol></article></section></section></div></main>
+</div>
+<!--Start: Google Universal code--><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-105798942-1', 'auto');
+ga('send', 'pageview');
+</script><!--End: Google Universal code--><div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.1/login.js"></script>
+</body>
+</html>

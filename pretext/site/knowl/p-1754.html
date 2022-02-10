@@ -1,0 +1,53 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:13:16-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>The other way involves the double angle formula <a knowl="./knowl/fn-81-hidden.html" title="Footnote 2.8.4"><sup> 4 </sup></a>,</p>
+<div class="displaymath">
+\begin{gather*}
+\cos 2\theta = 1 - 2 \sin^2(\theta) \qquad\text{or}\qquad
+\cos 2\theta -1 = - 2 \sin^2(\theta)
+\end{gather*}
+</div>
+<p>Setting \(\theta = h/2\text{,}\) we have</p>
+<div class="displaymath">
+\begin{align*}
+\frac{\cos h - 1}{h}
+&amp;= \frac{-2\big(\sin\tfrac{h}{2}\big)^2}{h}\\
+\end{align*}
+<p class="intertext">Now this begins to look like \(\frac{\sin h?}{h}\text{,}\) except that inside the \(\sin(\cdot)\) we have \(h/2\text{.}\) So, setting \(\theta =h/2\text{,}\)</p>
+\begin{align*}
+\frac{\cos h - 1}{h}   &amp;= - \frac{\sin^2 \theta}{\theta}
+= - \theta \cdot\frac{ \sin^2 \theta}{\theta^2}\\
+&amp;= - \theta \cdot \frac{\sin \theta}{\theta} \cdot \frac{\sin \theta}{\theta}
+\end{align*}
+</div>
+<p>When we take the limit as \(h \to 0\text{,}\) we are also taking the limit as \(\theta=h/2 \to 0\text{,}\) and so</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{h \to 0} \frac{\cos h - 1}{h}
+&amp;= \lim_{\theta \to 0} \left[
+- \theta \cdot \frac{\sin \theta}{\theta} \cdot \frac{\sin \theta}{\theta}
+\right]\\
+&amp;= \lim_{\theta \to 0} \left[- \theta \right]
+\cdot \lim_{\theta \to 0} \left[\frac{\sin \theta}{\theta}\right]
+\cdot \lim_{\theta \to 0} \left[\frac{\sin \theta}{\theta}\right]\\
+&amp;= 0 \cdot 1 \cdot 1\\
+&amp;= 0
+\end{align*}
+</div>
+<p>where we have used the fact that \(\ds \lim_{h \to 0} \frac{\sin h}{h} = 1\) and that the limit of a product is the product of limits (i.e. Lemma <a knowl="./knowl/lem_sinhoverh.html" title="Lemma 2.8.1">2.8.1</a> and Theorem <a knowl="./knowl/thm_arith_lim.html" title="Theorem 1.4.3: Arithmetic of limits">1.4.3</a>).</p>
+<span class="incontext"><a href="subsection-26.html#p-1754">in-context</a></span>
+</body>
+</html>

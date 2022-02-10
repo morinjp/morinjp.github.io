@@ -1,0 +1,37 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:16:46-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><div class="solution">
+<p>As \(t\) grows very large, \(T(t)\) approaches \(A\text{.}\) That is:</p>
+<div class="displaymath">
+\begin{align*}
+\ds\lim_{t \to \infty}T(t)&amp;=A\\
+\lim_{t \to \infty}[T(0)-A]e^{Kt}+A&amp;=A\\
+\lim_{t \to \infty}[T(0)-A]e^{Kt}&amp;=0\\
+\end{align*}
+<p class="intertext">Since the object is warmer than the room, \(T(0)-A\) is a nonzero constant. So,</p>
+\begin{align*}
+\lim_{t \to \infty}e^{Kt}&amp;=0
+\end{align*}
+</div>
+<p>This tells us that \(K\) is a negative number. So, \(K\) must be negative--not zero, and not positive.</p>
+<p>Remark: in our work, we used the fact that the object and the room have different temperatures (but it didn't matter which one was hotter). If not, then \(T(0)=A\text{,}\) and \(T(t)=A\text{:}\) that is, the temperature of the object is constant. In this case, our usual form for the temperature of the object looks like this:</p>
+<div class="displaymath">
+\begin{equation*}
+T(t)=0e^{Kt}+A
+\end{equation*}
+</div>
+<p>Keeping the exponential piece in there is overkill: the temperature isn't changing, the function is simply constant. If the object and the room have the same temperature, \(K\) could be any real number since we're multiplying \(e^{Kt}\) by zero.</p>
+<p>Remark: contrast this to Question <a knowl="./knowl/s3_3_2Knegative2.html" title="Exercise 3.3.4.9">3.3.4.9</a>.</p>
+</div></body>
+</html>

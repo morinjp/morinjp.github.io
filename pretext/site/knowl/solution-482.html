@@ -1,0 +1,66 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:17:01-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="solution">
+<h6 class="heading">
+<span class="type">Solution</span> <span class="codenumber">3.3.4.5.1</span>
+</h6>
+<ol class="lower-alpha">
+<li>The amount of money at time \(t\) obeys<div class="displaymath">
+\begin{align*}
+\diff{A}{t}&amp;= 0.05 A+2,\!000=0.05[A-(-40,\!000)]\\
+\end{align*}
+<p class="intertext">Using Corollary <a knowl="./knowl/cor_coolingDEsoln.html" title="Corollary 3.3.8">3.3.8</a></p>
+\begin{align*}
+A(t)&amp;=[A(0)+40,\!000]e^{0.05t}-40,\!000\\
+&amp;=90,\!000\cdot e^{0.05t}-40,\!000\\
+\end{align*}
+<p class="intertext">where \(t=0\) corresponds to the year when the graduate is 25.</p>
+\begin{align*}
+\\
+\end{align*}
+<p class="intertext">When the graduate is 65 years old, \(t=40\text{,}\) so</p>
+\begin{align*}
+A(40)&amp;=90,\!000\, e^{0.05 \times 40}-40,000\approx 625,015.05
+\end{align*}
+</div>
+</li>
+<li>When the graduate stops depositing money and instead starts withdrawing money at a rate \(W\text{,}\) the equation for \(A\) becomes<div class="displaymath">
+\begin{align*}
+\diff{A}{t}&amp;= 0.05 A-W= 0.05 [A(t)-20 W]\\
+\end{align*}
+<p class="intertext">Using Corollary <a knowl="./knowl/cor_coolingDEsoln.html" title="Corollary 3.3.8">3.3.8</a> and assuming that the interest rate remains 5%</p>
+\begin{align*}
+A(t)&amp;=[A(0)-20W]e^{0.05t}+20W\\
+&amp;=[625,015.05-20W]e^{0.05t}+20W\\
+\end{align*}
+<p class="intertext">Note that, for part (b), we only care about what happens when the graduate starts withdrawing money. We take \(t=0\) to correspond to the year when the graduate is 65--so we're using a different \(t\) from part (a). Then from part (a), \(A(0)=625,025.05\text{.}\)</p>
+\begin{align*}
+\\
+\end{align*}
+<p class="intertext">We want the account to be depleted when the graduate is 85. So, we want</p>
+\begin{align*}
+0&amp;=A(20)\\
+0&amp;=20W+ e^{0.05\times 20}(625,015.05-20W)\\
+0&amp;=20W+ e(625,015.05-20W)\\
+20(e-1)W&amp;= 625,015.05e\\
+W&amp;=\frac{625,015.05e}{20(e-1)}\approx\$49,437.96
+\end{align*}
+</div>
+</li>
+</ol>
+</div>
+<span class="incontext"><a href="subsection-47.html#solution-482">in-context</a></span>
+</body>
+</html>

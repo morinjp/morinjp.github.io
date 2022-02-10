@@ -1,0 +1,54 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:21:32-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>Consider the limit</p>
+<div class="displaymath">
+\begin{gather*}
+\lim_{x\to \infty} \sqrt{x^2+4x}-\sqrt{x^2-3x}
+\end{gather*}
+</div>
+<p>Neither term is a fraction, but we can write</p>
+<div class="displaymath">
+\begin{align*}
+\sqrt{x^2+4x}-\sqrt{x^2-3x}
+&amp;= x\sqrt{1+4/x}-x\sqrt{1-3/x}  &amp; \text{assuming } x \gt 0\\
+&amp;= x \left( \sqrt{1+4/x}-\sqrt{1-3/x} \right)\\
+&amp;= \frac{\sqrt{1+4/x}-\sqrt{1-3/x}}{1/x}
+\end{align*}
+</div>
+<p>which is now a \(\frac00\) form with \(f(x)=\sqrt{1+4/x}-\sqrt{1-3/x}\) and \(g(x)=1/x\text{.}\) Then</p>
+<div class="displaymath">
+\begin{align*}
+f'(x) &amp;= \frac{-4/x^2}{2\sqrt{1+4/x}} - \frac{3/x^2}{2\sqrt{1-3/x}} &amp;
+g'(x) &amp;= - \frac{1}{x^2}
+\end{align*}
+</div>
+<p>Hence</p>
+<div class="displaymath">
+\begin{align*}
+\frac{f'(x)}{g'(x)} &amp;= \frac{4}{2\sqrt{1+4/x}} + \frac{3}{\sqrt{1-3/x}}
+\end{align*}
+</div>
+<p>And so in the limit as \(x\to \infty\)</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{x\to \infty} \frac{f'(x)}{g'(x)} &amp;= \frac{4}{2}+\frac{3}{2} =
+\frac{7}{2}
+\end{align*}
+</div>
+<p>and so our original limit is also \(7/2\text{.}\)</p>
+<span class="incontext"><a href="ssec_3_7_2.html#p-5019">in-context</a></span>
+</body>
+</html>

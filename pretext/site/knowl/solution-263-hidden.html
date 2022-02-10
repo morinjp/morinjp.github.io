@@ -1,0 +1,27 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:13:42-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><div class="solution">
+<p>If we let \(g(x)=e^x\) and \(h(x)=\cos(x^2)\text{,}\) then \(f(x)=g(h(x))\text{,}\) so \(f'(x)=g'(h(x))\cdot h'(x)\text{.}\)</p>
+<div class="displaymath">
+\begin{align*}
+f'(x)&amp;=e^{\textcolor{red}{\cos(x^2)}}\cdot \diff{}{x}\{\textcolor{red}{\cos(x^2)}\}\\
+\end{align*}
+<p class="intertext">In order to evaluate \(\diff{}{x}\{{\cos(x^2)}\}\text{,}\) we'll need the chain rule <em class="emphasis">again</em>.</p>
+\begin{align*}
+&amp;=e^{\cos(x^2)}\cdot [-\sin(\textcolor{orange}{x^2})]\cdot\diff{}{x}\{\textcolor{orange}{x^2}\}\\
+&amp;=-e^{\cos(x^2)}\cdot \sin(x^2)\cdot 2x
+\end{align*}
+</div>
+</div></body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:22:59-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>Let \(r\) be any solution of \(f(x)=0\text{.}\) Then \(f(r)=0\text{.}\) Suppose that we have already computed \(x_n\text{.}\) The error in \(x_n\) is \(\big|x_n-r\big|\text{.}\) We now derive a formula that relates the error after the next step, \(\big|x_{n+1}-r\big|\text{,}\) to \(\big|x_n-r\big|\text{.}\) We have seen in (<a knowl="./knowl/eq_taylorErrorQ.html" title="Equation 3.4.32: The error in linear approximation">3.4.32</a>) that</p>
+<div class="displaymath">
+\begin{gather*}
+f(x)=f(x_n)+f'(x_n)(x-x_n)+\frac{1}{2} f''(c)(x-x_n)^2
+\end{gather*}
+</div>
+<p>for some \(c\) between \(x_n\) and \(x\text{.}\) In particular, choosing \(x=r\text{,}\)</p>
+<div class="displaymath">
+\begin{equation*}
+0=f(r)=f(x_n)+f'(x_n)(r-x_n)+\frac{1}{2} f''(c)(r-x_n)^2
+\tag{E1}
+\end{equation*}
+</div>
+<p>Recall that \(x_{n+1}\) is the solution of \(0=f(x_n)+f'(x_n)(x-x_n)\text{.}\) So</p>
+<div class="displaymath">
+\begin{equation*}
+0=f(x_n)+f'(x_n)(x_{n+1}-x_n)
+\tag{E2}
+\end{equation*}
+</div>
+<p>We need to get an expression for \(x_{n+1}-r\text{.}\) Subtracting (E2) from (E1) gives</p>
+<div class="displaymath">
+\begin{align*}
+0=f'(x_n)(r-x_{n+1})+\frac{1}{2} f''(c)(r-x_n)^2
+\ \amp \implies\  x_{n+1}-r=\frac{f''(c)}{2f'(x_n)}(x_n-r)^2\\
+\amp \implies\  \big|x_{n+1}-r\big| =\frac{|f''(c)|}{2|f'(x_n)|}|x_n-r|^2
+\end{align*}
+</div>
+<p>If the guess \(x_n\) is close to \(r\text{,}\) then \(c\text{,}\) which must be between \(x_n\) and \(r\text{,}\) is also close to \(r\) and we will have \(f''(c)\approx f''(r)\) and \(f'(x_n)\approx f'(r)\) and</p>
+<div class="displaymath">
+\begin{equation*}
+\big|x_{n+1}-r\big| \approx\frac{|f''(r)|}{2|f'(r)|}|x_n-r|^2
+\tag{E3}
+\end{equation*}
+</div>
+<p>Even when \(x_n\) is not close to \(r\text{,}\) if we know that there are two numbers \(L,M\gt 0\) such that \(f\) obeys:</p>
+<ol class="decimal">
+<li>\(\big|f'(x_n)\big|\ge L\)</li>
+<li>\(\big|f''(c)\big|\le M\)</li>
+</ol>
+<p>(we'll see examples of this below) then we will have</p>
+<div class="displaymath">
+\begin{equation*}
+\big|x_{n+1}-r\big| \le\frac{M}{2L}|x_n-r|^2
+\tag{E4}
+\end{equation*}
+</div>
+<p>Let's denote by \(\varepsilon_1\) the error, \(|x_1-r|\text{,}\) of our initial guess. In fact, let's denote  by \(\varepsilon_n\) the error, \(|x_n-r|\text{,}\) in \(x_n\text{.}\) Then (E4) says</p>
+<div class="displaymath">
+\begin{equation*}
+\varepsilon_{n+1}\le \frac{M}{2L}\varepsilon_n^2
+\end{equation*}
+</div>
+<p>In particular</p>
+<div class="displaymath">
+\begin{alignat*}{3}
+\varepsilon_2\amp \le \frac{M}{2L}\varepsilon_1^2\\
+\varepsilon_3\amp \le \frac{M}{2L}\varepsilon_2^2 \amp 
+\amp \le \frac{M}{2L}\left( \frac{M}{2L}\varepsilon_1^2\right)^2 \amp 
+\amp = \left( \frac{M}{2L}\right)^3\varepsilon_1^4\\
+\varepsilon_4\amp \le \frac{M}{2L}\varepsilon_3^2 \amp 
+\amp \le \frac{M}{2L}\left[\left( \frac{M}{2L}\right)^3\varepsilon_1^4\right]^2 \amp 
+\amp = \left( \frac{M}{2L}\right)^7\varepsilon_1^8\\
+\varepsilon_5\amp \le \frac{M}{2L}\varepsilon_4^2 \amp 
+\amp \le \frac{M}{2L}\left[\left( \frac{M}{2L}\right)^7\varepsilon_1^8\right]^2 \amp 
+\amp = \left( \frac{M}{2L}\right)^{15}\varepsilon_1^{16}
+\end{alignat*}
+</div>
+<p>By now we can see a pattern forming, that is easily verified by induction<a knowl="./knowl/fn-183-hidden.html" title="Footnote C.2.1"><sup> 1 </sup></a>.</p>
+<div class="displaymath">
+\begin{equation*}
+\varepsilon_n\le \left( \frac{M}{2L}\right)^{2^{n-1}-1}\varepsilon_1^{2^{n-1}}
+=\frac{2L}{M}\left(\frac{M}{2L}\varepsilon_1\right)^{2^{n-1}}
+\tag{E5}
+\end{equation*}
+</div>
+<p>As long as \(\frac{M}{2L}\varepsilon_1\lt 1\) (which gives us a quantitative idea as to how good our first guess has to be in order for Newton's method to work), this goes to zero extremely quickly as \(n\) increases. For example, suppose that \(\frac{M}{2L}\varepsilon_1\le \frac{1}{2}\text{.}\) Then</p>
+<div class="displaymath">
+\begin{equation*}
+\varepsilon_n\le \frac{2L}{M}\left(\frac{1}{2}\right)^{2^{n-1}}
+\le \frac{2L}{M}\cdot\begin{cases}
+0.25 \amp \text{if }n=2 \\
+0.0625\amp \text{if }n=3 \\
+0.0039=3.9\times 10^{-3}\amp \text{if }n=4 \\
+0.000015=1.5\times 10^{-5}\amp \text{if }n=5 \\
+0.00000000023=2.3\times 10^{-10}\amp \text{if }n=6 \\
+0.000000000000000000054=5.4\times 10^{-20}
+\amp \text{if }n=7
+\end{cases}
+\end{equation*}
+</div>
+<p>Each time you increase \(n\) by one, the number of zeroes after the decimal place roughly doubles. You can see why from (E5). Since</p>
+<div class="displaymath">
+\begin{equation*}
+\left(\frac{M}{2L}\varepsilon_1\right)^{2^{(n+1)-1}}
+=\left(\frac{M}{2L}\varepsilon_1\right)^{2^{n-1}\times 2}
+=\left[\left(\frac{M}{2L}\varepsilon_1\right)^{2^{n-1}}\right]^2
+\end{equation*}
+</div>
+<p>we have, <em class="emphasis">very</em> roughly speaking, \(\varepsilon_{n+1}\approx\varepsilon_n^2\text{.}\) This <em class="emphasis">quadratic</em> behaviour is the reason that Newton's method is so useful.</p>
+<span class="incontext"><a href="sec_C_2.html#p-5472">in-context</a></span>
+</body>
+</html>

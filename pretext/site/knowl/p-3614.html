@@ -1,0 +1,59 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:17:41-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>We begin by proving the remainder formula for \(n=1\text{.}\) That is</p>
+<div class="displaymath">
+\begin{align*}
+f(x) - T_1(x) &amp;= \frac{1}{2}f''(c) \cdot(x-a)^2
+\end{align*}
+</div>
+<ul class="disc">
+<li>Start by setting<div class="displaymath">
+\begin{align*}
+F(x) &amp;= f(x)-T_1(x) &amp;
+G(x) &amp;= (x-a)^2
+\end{align*}
+</div>Notice that, since \(T_1(a)=f(a)\) and \(T'_1(x) = f'(a)\text{,}\)<div class="displaymath">
+\begin{align*}
+F(a) &amp;= 0 &amp; G(a)&amp;=0\\
+F'(x) &amp;= f'(x)-f'(a) &amp; G'(x) &amp;= 2(x-a)
+\end{align*}
+</div>
+</li>
+<li>Now apply the generalised MVT with \(b=x\text{:}\) there exists a point \(q\) between \(a\) and \(x\) such that<div class="displaymath">
+\begin{align*}
+\frac{F(x)-F(a)}{G(x)-G(a)} &amp;= \frac{F'(q)}{G'(q)}\\
+\frac{F(x)-0}{G(x) - 0} &amp;= \frac{f'(q)-f'(a)}{2(q-a)}\\
+2 \cdot \frac{F(x)}{G(x)} &amp;= \frac{f'(q)-f'(a)}{q-a}
+\end{align*}
+</div>
+</li>
+<li>Consider the right-hand side of the above equation and set \(g(x) = f'(x)\text{.}\) Then we have the term \(\frac{g(q)-g(a)}{q-a}\)  — this is exactly the form needed to apply the MVT. So now apply the standard MVT to the right-hand side of the above equation — there is some \(c\) between \(q\) and \(a\) so that<div class="displaymath">
+\begin{align*}
+\frac{f'(q)-f'(a)}{q-a} &amp;= \frac{g(q)-g(a)}{q-a} = g'(c) = f''(c)
+\end{align*}
+</div>Notice that here we have assumed that \(f''(x)\) exists.</li>
+<li>Putting this together we have that<div class="displaymath">
+\begin{align*}
+2 \cdot \frac{F(x)}{G(x)} &amp;= \frac{f'(q)-f'(a)}{q-a} = f''(c)\\
+2 \frac{f(x)-T_1(x)}{(x-a)^2} &amp;= f''(c)\\
+f(x) - T_1(x) &amp;= \frac{1}{2!} f''(c) \cdot (x-a)^2
+\end{align*}
+</div>as required.</li>
+</ul>
+<p>Oof! We have now proved the cases \(n=1\) (and we did \(n=0\) earlier).</p>
+<span class="incontext"><a href="subsec_GMVT.html#p-3614">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:11:17-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="solution">
+<h6 class="heading">
+<span class="type">Solution</span> <span class="codenumber">1.4.2.25.1</span>
+</h6>
+<p>This is a classic example of the Squeeze Theorem. It is tempting to try to use arithmetic of limits: \(\displaystyle\lim_{x \rightarrow 0} -x^2=0\text{,}\) and \(\displaystyle\lim_{x \rightarrow 0}\cos\left(\frac{3}{x}\right)=something\text{,}\) and zero times something is 0. However, this is invalid reasoning, because we can only use arithmetic of limits when those limits exist, and \(\displaystyle\lim_{x \rightarrow 0}\cos\left(\frac{3}{x}\right)\) does not exist. So, we need the Squeeze Theorem.</p>
+<p>Since \(-1 \leq \cos\left(\frac{3}{x}\right) \leq 1\text{,}\) we can bound our function of interest from above and below (being careful of the sign!):</p>
+<div class="displaymath">
+\begin{equation*}
+-x^2({\textcolor{red}{1}})\leq -x^2{\textcolor{red}{\cos\left(\frac{3}{x}\right)}} \leq -x^2({\textcolor{red}{-1}})
+\end{equation*}
+</div>
+<p>So our function of interest is between \(-x^2\) and \(x^2\text{.}\) Since \(\displaystyle\lim_{x \rightarrow 0} -x^2=\displaystyle\lim_{x \rightarrow 0} x^2=0\text{,}\) by the Squeeze Theorem, also \(\displaystyle\lim_{x \rightarrow 0}-x^2\cos\left(\frac{3}{x}\right)=0\text{.}\)</p>
+<p>Advice about writing these up: whenever we use the Squeeze Theorem, we need to explicitly write that two things are true: that the function we're interested is bounded above and below by two other functions, and that both of those functions have the same limit. Then we can conclude (and we need to write this down as well!) that our original function also shares that limit.</p>
+</div>
+<span class="incontext"><a href="exercises-4.html#solution-53">in-context</a></span>
+</body>
+</html>

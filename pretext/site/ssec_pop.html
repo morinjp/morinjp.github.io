@@ -1,0 +1,422 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:02:31-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Population Growth</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.1/pretext.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on2.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="RQS.css">
+<link href="https://pretextbook.org/css/0.1/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\require{cancel}\newcommand{\dee}[1]{\mathrm{d}#1}
+\newcommand{\half}{ \frac{1}{2} }
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ts}{\textstyle}
+\newcommand{\es}{ {\varnothing}}
+\newcommand{\st}{ {\mbox{ s.t. }} }
+\newcommand{\pow}[1]{ \mathcal{P}\left(#1\right) }
+\newcommand{\set}[1]{ \left\{#1\right\} }
+\newcommand{\lin}{{\text{LIN}}}
+\newcommand{\quot}{{\text{QR}}}
+\newcommand{\simp}{{\text{SMP}}}
+\newcommand{\diff}[2]{ \frac{\mathrm{d}#1}{\mathrm{d}#2}}
+\newcommand{\bdiff}[2]{ \frac{\mathrm{d}}{\mathrm{d}#2} \left( #1 \right)}
+\newcommand{\ddiff}[3]{ \frac{\mathrm{d}^#1#2}{\mathrm{d}{#3}^#1}}
+\renewcommand{\neg}{ {\sim} }
+\newcommand{\limp}{ {\;\Rightarrow\;} }
+\newcommand{\nimp}{ {\;\not\Rightarrow\;} }
+\newcommand{\liff}{ {\;\Leftrightarrow\;} }
+\newcommand{\niff}{ {\;\not\Leftrightarrow\;} }
+\newcommand{\De}{\Delta}
+\newcommand{\bbbn}{\mathbb{N}}
+\newcommand{\bbbr}{\mathbb{R}}
+\newcommand{\bbbp}{\mathbb{P}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\Si}{\Sigma}
+
+\newcommand{\arccsc}{\mathop{\mathrm{arccsc}}}
+\newcommand{\arcsec}{\mathop{\mathrm{arcsec}}}
+\newcommand{\arccot}{\mathop{\mathrm{arccot}}}
+\newcommand{\erf}{\mathop{\mathrm{erf}}}
+\newcommand{\smsum}{\mathop{{\ts \sum}}}
+\newcommand{\atp}[2]{ \genfrac{}{}{0in}{}{#1}{#2} }
+
+\newcommand{\ave}{\mathrm{ave}}
+\newcommand{\llt}{\left \lt }
+\newcommand{\rgt}{\right \gt }
+
+
+\newcommand{\YEaxis}[2]{\draw[help lines] (-#1,0)--(#1,0) node[right]{$x$};\draw[help lines] (0,-#2)--(0,#2) node[above]{$y$};}
+
+\newcommand{\YEaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$x$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YEtaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+\newcommand{\YEtaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$}; \draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YExcoord}[2]{\draw (#1,.2)--(#1,-.2) node[below]{$#2$};}
+\newcommand{\YEycoord}[2]{\draw (.2,#1)--(-.2,#1) node[left]{$#2$};}
+\newcommand{\YEnxcoord}[2]{\draw (#1,-.2)--(#1,.2) node[above]{$#2$};}
+\newcommand{\YEnycoord}[2]{\draw (-.2,#1)--(.2,#1) node[right]{$#2$};}
+
+\newcommand{\YEstickfig}[3]{
+\draw (#1,#2) arc(-90:270:2mm);
+\draw (#1,#2)--(#1,#2-.5) (#1-.25,#2-.75)--(#1,#2-.5)--(#1+.25,#2-.75) (#1-.2,#2-.2)--(#1+.2,#2-.2);}
+
+
+\newcommand{\IBP}[7]{
+\begin{array}{|c  | l | l |}
+\hline
+\color{red}{\text{Option 1:}}
+&amp; u=#2
+&amp;\color{red}{\dee{u}=#3 ~ \dee{#1}}
+\\
+&amp; \dee{v}=#5~\dee{#1}
+&amp;\color{red}{v=#7}
+\\
+\hline
+\color{blue}{\text{Option 2:}}
+&amp; u=#5
+&amp;\color{blue}{\dee{u}=#6 ~ \dee{#1}}
+\\
+&amp;\dee{v}=#2 \dee{#1}
+&amp;\color{blue}{v=#4}
+\\
+\hline
+\end{array}
+}
+
+
+\renewcommand{\textcolor}[2]{{\color{#1}{#2}}}
+
+
+\newcommand{\trigtri}[4]{
+\begin{tikzpicture}
+\draw (-.5,0)--(2,0)--(2,1.5)--cycle;
+\draw (1.8,0) |- (2,.2);
+\draw[double] (0,0) arc(0:30:.5cm);
+\draw (0,.2) node[right]{$#1$};
+\draw (1,-.5) node{$#2$};
+\draw (2,.75) node[right]{$#3$};
+\draw (.6,1.1) node[rotate=30]{$#4$};
+\end{tikzpicture}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="clp_1_dc.html"><span class="title">CLP-1 Differential Calculus</span></a></h1>
+<p class="byline">Joel Feldman, Andrew Rechnitzer, Elyse Yeager</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec_newtonCooling.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="sec_ExpGthDecay.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="subsection-47.html" title="Next">Next</a></span></div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec_newtonCooling.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="sec_ExpGthDecay.html" title="Up">Up</a><a class="next-button button toolbar-item" href="subsection-47.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="index.html" data-scroll="index"><span class="title">Front Matter</span></a></h2>
+<ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface-2.html" data-scroll="preface-2">Using the exercises in this book</a></li>
+<li><a href="preface-3.html" data-scroll="preface-3">Feedback about the text</a></li>
+</ul>
+<h2 class="link"><a href="chap_basics.html" data-scroll="chap_basics"><span class="codenumber">0</span> <span class="title">The basics</span></a></h2>
+<ul>
+<li><a href="sec_0_1.html" data-scroll="sec_0_1">Numbers</a></li>
+<li><a href="sec_sets.html" data-scroll="sec_sets">Sets</a></li>
+<li><a href="sec_0_3.html" data-scroll="sec_0_3">Other Important Sets</a></li>
+<li><a href="sec_0_4.html" data-scroll="sec_0_4">Functions</a></li>
+<li><a href="sec_parsing.html" data-scroll="sec_parsing">Parsing Formulas</a></li>
+<li><a href="sec_inverse_functions.html" data-scroll="sec_inverse_functions">Inverse Functions</a></li>
+</ul>
+<h2 class="link"><a href="chap_limits.html" data-scroll="chap_limits"><span class="codenumber">1</span> <span class="title">Limits</span></a></h2>
+<ul>
+<li><a href="sec_first_lim.html" data-scroll="sec_first_lim">Drawing Tangents and a First Limit</a></li>
+<li><a href="sec_velocity.html" data-scroll="sec_velocity">Another Limit and Computing Velocity</a></li>
+<li><a href="sec_lim_func.html" data-scroll="sec_lim_func">The Limit of a Function</a></li>
+<li><a href="sec_1_4.html" data-scroll="sec_1_4">Calculating Limits with Limit Laws</a></li>
+<li><a href="sec_1_5.html" data-scroll="sec_1_5">Limits at Infinity</a></li>
+<li><a href="sec_1_6.html" data-scroll="sec_1_6">Continuity</a></li>
+<li><a href="sec_opt_formal_limit.html" data-scroll="sec_opt_formal_limit">(Optional) — Making the Informal a Little More Formal</a></li>
+<li><a href="sec_lim_inf_formal.html" data-scroll="sec_lim_inf_formal">(Optional) — Making Infinite Limits a Little More Formal</a></li>
+<li><a href="sec_proof_arith_lim.html" data-scroll="sec_proof_arith_lim">(Optional) — Proving the Arithmetic of Limits</a></li>
+</ul>
+<h2 class="link"><a href="chap_deriv.html" data-scroll="chap_deriv"><span class="codenumber">2</span> <span class="title">Derivatives</span></a></h2>
+<ul>
+<li><a href="sec_2_1.html" data-scroll="sec_2_1">Revisiting Tangent Lines</a></li>
+<li><a href="sec_def_deriv.html" data-scroll="sec_def_deriv">Definition of the Derivative</a></li>
+<li><a href="sec_2_3.html" data-scroll="sec_2_3">Interpretations of the Derivative</a></li>
+<li><a href="sec_2_4.html" data-scroll="sec_2_4">Arithmetic of Derivatives - a Differentiation Toolbox</a></li>
+<li><a href="sec_proof_arith_deriv.html" data-scroll="sec_proof_arith_deriv">Proofs of the Arithmetic of Derivatives</a></li>
+<li><a href="sec_2_6.html" data-scroll="sec_2_6">Using the Arithmetic of Derivatives –  Examples</a></li>
+<li><a href="sec_exp_func.html" data-scroll="sec_exp_func">Derivatives of Exponential Functions</a></li>
+<li><a href="sec_diff_trig.html" data-scroll="sec_diff_trig">Derivatives of Trigonometric Functions</a></li>
+<li><a href="sec_chain_rule.html" data-scroll="sec_chain_rule">One More Tool  – the Chain Rule</a></li>
+<li><a href="sec_diff_logs.html" data-scroll="sec_diff_logs">The Natural Logarithm</a></li>
+<li><a href="sec_2_11.html" data-scroll="sec_2_11">Implicit Differentiation</a></li>
+<li><a href="sec_invTrig.html" data-scroll="sec_invTrig">Inverse Trigonometric Functions</a></li>
+<li><a href="sec_mvt.html" data-scroll="sec_mvt">The Mean Value Theorem</a></li>
+<li><a href="sec_higher_diff.html" data-scroll="sec_higher_diff">Higher Order Derivatives</a></li>
+<li><a href="sec_cont_deriv.html" data-scroll="sec_cont_deriv">(Optional) — Is \(\lim_{x\to c}f'(x)\) Equal to \(f'(c)\text{?}\)</a></li>
+</ul>
+<h2 class="link"><a href="chap_appl_deriv.html" data-scroll="chap_appl_deriv"><span class="codenumber">3</span> <span class="title">Applications of derivatives</span></a></h2>
+<ul>
+<li><a href="sec_vel_acc.html" data-scroll="sec_vel_acc">Velocity and Acceleration</a></li>
+<li><a href="sec_rrates.html" data-scroll="sec_rrates">Related Rates</a></li>
+<li><a href="sec_ExpGthDecay.html" data-scroll="sec_ExpGthDecay">Exponential Growth and Decay</a></li>
+<li><a href="sec_DIFFTaylor.html" data-scroll="sec_DIFFTaylor">Taylor Polynomials</a></li>
+<li><a href="sec_optimise.html" data-scroll="sec_optimise">Optimisation</a></li>
+<li><a href="sec_curve_sketch.html" data-scroll="sec_curve_sketch">Sketching Graphs</a></li>
+<li><a href="sec_4_7.html" data-scroll="sec_4_7">L'Hôpital's Rule and Indeterminate Forms</a></li>
+</ul>
+<h2 class="link"><a href="chapter-5.html" data-scroll="chapter-5"><span class="codenumber">4</span> <span class="title">Towards Integral Calculus</span></a></h2>
+<ul><li><a href="sec_antidiff.html" data-scroll="sec_antidiff">Introduction to Antiderivatives</a></li></ul>
+<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Appendices</span></a></h2>
+<h2 class="link"><a href="app_highschool.html" data-scroll="app_highschool"><span class="codenumber">A</span> <span class="title">High School Material</span></a></h2>
+<ul>
+<li><a href="sec_simtri.html" data-scroll="sec_simtri">Similar Triangles</a></li>
+<li><a href="sec_A_2.html" data-scroll="sec_A_2">Pythagoras</a></li>
+<li><a href="sec_A_3.html" data-scroll="sec_A_3">Trigonometry — Definitions</a></li>
+<li><a href="app_rad_arc_sec.html" data-scroll="app_rad_arc_sec">Radians, Arcs and Sectors</a></li>
+<li><a href="app_sec_trig_graphs.html" data-scroll="app_sec_trig_graphs">Trigonometry — Graphs</a></li>
+<li><a href="sec_A_6.html" data-scroll="sec_A_6">Trigonometry — Special Triangles</a></li>
+<li><a href="sec_A_7.html" data-scroll="sec_A_7">Trigonometry — Simple Identities</a></li>
+<li><a href="sec_trig_add.html" data-scroll="sec_trig_add">Trigonometry — Add and Subtract Angles</a></li>
+<li><a href="sec_inv_trig.html" data-scroll="sec_inv_trig">Inverse Trig Functions</a></li>
+<li><a href="app_sec_areas.html" data-scroll="app_sec_areas">Areas</a></li>
+<li><a href="sec_volumes.html" data-scroll="sec_volumes">Volumes</a></li>
+<li><a href="sec_powers.html" data-scroll="sec_powers">Powers</a></li>
+<li><a href="sec_logs.html" data-scroll="sec_logs">Logarithms</a></li>
+<li><a href="sec_must_deriv.html" data-scroll="sec_must_deriv">You Should be Able to Derive</a></li>
+</ul>
+<h2 class="link"><a href="chap_app_B.html" data-scroll="chap_app_B"><span class="codenumber">B</span> <span class="title">Origin of Trig, Area and Volume Formulas</span></a></h2>
+<ul>
+<li><a href="sec_B_1.html" data-scroll="sec_B_1">Theorems about Triangles</a></li>
+<li><a href="sec_B_2.html" data-scroll="sec_B_2">Trigonometry</a></li>
+<li><a href="sec_B_3.html" data-scroll="sec_B_3">Inverse Trigonometric Functions</a></li>
+<li><a href="sec_B_4.html" data-scroll="sec_B_4">Cosine and Sine Laws</a></li>
+<li><a href="sec_B_5.html" data-scroll="sec_B_5">Circles, cones and spheres</a></li>
+</ul>
+<h2 class="link"><a href="app_root_finding.html" data-scroll="app_root_finding"><span class="codenumber">C</span> <span class="title">Root Finding</span></a></h2>
+<ul>
+<li><a href="sec_C_1.html" data-scroll="sec_C_1">Newton's Method</a></li>
+<li><a href="sec_C_2.html" data-scroll="sec_C_2">The Error Behaviour of Newton's Method</a></li>
+<li><a href="sec_C_3.html" data-scroll="sec_C_3">The false position (regula falsi) method</a></li>
+<li><a href="sec_C_4.html" data-scroll="sec_C_4">The secant method</a></li>
+<li><a href="sec_C_5.html" data-scroll="sec_C_5">The Error Behaviour of the Secant Method</a></li>
+</ul>
+<h2 class="link"><a href="app_hint.html" data-scroll="app_hint"><span class="codenumber">D</span> <span class="title">Hints for Exercises</span></a></h2>
+<h2 class="link"><a href="app_answ.html" data-scroll="app_answ"><span class="codenumber">E</span> <span class="title">Answers to Exercises</span></a></h2>
+<h2 class="link"><a href="app_soln.html" data-scroll="app_soln"><span class="codenumber">F</span> <span class="title">Solutions to Exercises</span></a></h2></nav><div class="extras"><nav><a class="feedback-link" href="mailto:clp@ugrad.math.ubc.ca?subject=clp-pretext" target="_blank">Feedback</a><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="mathbook-content"><section class="subsection" id="ssec_pop"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.3.3</span> <span class="title">Population Growth</span>
+</h3>
+<a href="ssec_pop.html" class="permalink">¶</a><section class="introduction" id="introduction-88"><p id="p-3284">Suppose that we wish to predict the size \(P(t)\) of a  population as a function of the time \(t\text{.}\)  In the most naive model of population growth,  each couple produces  \(\beta\) offspring (for some constant \(\beta\)) and then dies. Thus  over the course of one generation \(\beta\tfrac{P(t)}{2}\) children are produced and \(P(t)\) parents die so that the size of the population grows  from  \(P(t)\) to</p>
+<div class="displaymath">
+\begin{gather*}
+P(t+t_g)= \underbrace{P(t)+\beta\frac{P(t)}{2}}_{\text{parents+offspring}}
+-\underbrace{P(t)}_{\text{parents  die}}=\frac{\beta}{ 2 } P(t)
+\end{gather*}
+</div>
+<p>where \(t_g\) denotes the lifespan of one generation. The rate of change  of the size of the population per unit time is</p>
+<div class="displaymath">
+\begin{gather*}
+\frac{P(t+t_g)-P(t)}{t_g}
+=\frac{1}{t_g}\Big[\frac{\beta}{2}P(t) -P(t)\Big]
+= b P(t)
+\end{gather*}
+</div>
+<p>where \(b=\tfrac{\beta-2}{2t_g}\) is the net birthrate per member  of the population per unit time. If we approximate</p>
+<div class="displaymath">
+\begin{gather*}
+\tfrac{P(t+t_g)-P(t)}{t_g}\approx\diff{P}{t}(t)
+\end{gather*}
+</div>
+<p>we get the differential equation</p>
+<article class="theorem-like" id="eqn_simple_pop"><h6 class="heading">
+<span class="type">Equation</span> <span class="codenumber">3.3.12</span> <span class="title">Simple population model</span>
+</h6>
+<div class="displaymath" id="p-3285">
+\begin{gather*}
+\diff{P}{t} = bP(t)
+\end{gather*}
+</div></article><p id="p-3286">By Corollary <a knowl="./knowl/cor_decay_soln.html" title="Corollary 3.3.4">3.3.4</a>, with \(-k\) replaced by \(b\text{,}\)</p>
+<div class="displaymath">
+\begin{align*}
+P(t) &amp;= P(0)\cdot e^{bt}
+\end{align*}
+</div>
+<p>This is called the Malthusian <a knowl="" class="id-ref" refid="hk-fn-129" id="fn-129"><sup> 10 </sup></a><span id="hk-fn-129" class="hidden-content tex2jax_ignore"><span class="footnote">This is named after Rev. Thomas  Robert Malthus. He described this model in a 1798 paper called “An essay on  the principle of population”.</span></span> growth model. It is, of course, very  simplistic. One of its main characteristics is that, since \(P(t+T) = P(0)\cdot  e^{b(t+T)} = P(t)\cdot e^{bT}\text{,}\) every time you <em class="emphasis">add</em> \(T\) to the time, the  population size is <em class="emphasis">multiplied</em> by \(e^{bT}\text{.}\) In particular, the population  size doubles every \(\frac{\log 2}{b}\) units of time. The Malthusian growth model  can be a reasonably good model only when the population size is very small  compared to its environment <a knowl="" class="id-ref" refid="hk-fn-130" id="fn-130"><sup> 11 </sup></a><span id="hk-fn-130" class="hidden-content tex2jax_ignore"><span class="footnote">That is, the population has plenty of food  and space to grow.</span></span>. A more sophisticated model of population growth, that takes  into account the “carrying capacity of the environment” is considered in the  optional subsection below.</p>
+<article class="example-like" id="eg_SDEpopgthA"><a knowl="" class="id-ref" refid="hk-eg_SDEpopgthA"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">3.3.13</span> <span class="title">A simple prediction of future population</span>
+</h6></a></article><div id="hk-eg_SDEpopgthA" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-3287">In 1927 the population of the world was about 2 billion. In 1974 it was about 4 billion. Estimate when it reached 6 billion. What will the population of the world be in 2100, assuming the Malthusian growth model?</p>
+<p id="p-3288"><em class="alert">Solution</em> We follow our usual pattern for dealing with such problems.</p>
+<ul class="disc">
+<li id="li-932">Let \(P(t)\) be the world's population \(t\) years after 1927.  Note that 1974 corresponds to \(t=1974-1927 = 47\text{.}\)</li>
+<li id="li-933">We are assuming that \(P(t)\) obeys equation <a knowl="./knowl/eqn_simple_pop.html" title="Equation 3.3.12: Simple population model">3.3.12</a>. So, by Corollary <a knowl="./knowl/cor_decay_soln.html" title="Corollary 3.3.4">3.3.4</a> with \(-k\) replaced by \(b\text{,}\)<div class="displaymath">
+\begin{gather*}
+P(t)=P(0)\cdot e^{bt}
+\end{gather*}
+</div>Notice that there are 2 unknowns here — \(b\) and \(P(0)\)  — so we need two pieces of information to find them.</li>
+<li id="li-934">We are told \(P(0)=2\text{,}\) so<div class="displaymath">
+\begin{gather*}
+P(t)=2\cdot e^{bt}
+\end{gather*}
+</div>
+</li>
+<li id="li-935">We are also told \(P(47)=4\text{,}\) which gives<div class="displaymath">
+\begin{align*}
+4 &amp;=2\cdot e^{47b} &amp; \text{clean up}\\
+e^{47b}&amp;=2 &amp; \text{take the log and clean up}\\
+b&amp;=\frac{\log 2}{47} = 0.0147 &amp; \text{to 3 significant digits}
+\end{align*}
+</div>
+</li>
+<li id="li-936">We now know \(P(t)\) completely, so we can easily determine the predicted population <a knowl="" class="id-ref" refid="hk-fn-131" id="fn-131"><sup> 12 </sup></a><span id="hk-fn-131" class="hidden-content tex2jax_ignore"><span class="footnote">The <em class="emphasis">2015 Revision of World Population</em>, a publication of the United Nations, predicts that the world's population in 2100 will be about 11 billion. They are predicting a reduction in the world population growth rate due to lower fertility rates, which the Malthusian growth model does not take into account.</span></span> in 2100, i.e. at \(t=2100-1927 = 173\text{.}\)<div class="displaymath">
+\begin{gather*}
+P(173) = 2 e^{173 b} = 2 e^{173\times 0.0147} = 25.4\text{ billion}
+\end{gather*}
+</div>
+</li>
+<li id="li-937">Finally, our crude model predicts that the population is 6 billion at the time \(t\) that obeys<div class="displaymath">
+\begin{align*}
+P(t) &amp;= 2 e^{b t} = 6 &amp; \text{clean up}\\
+e^{b t}&amp;=3 &amp; \text{take the log and clean up}\\
+t&amp;=\frac{\log 3}{b} = 47\frac{\log 3}{\log 2}
+= 74.5
+\end{align*}
+</div>which corresponds <a knowl="" class="id-ref" refid="hk-fn-132" id="fn-132"><sup> 13 </sup></a><span id="hk-fn-132" class="hidden-content tex2jax_ignore"><span class="footnote">The world population really reached  6 billion in about 1999.</span></span> to the middle of 2001.</li>
+</ul></article></div></section><section class="subsubsection" id="subsubsection-5"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber">3.3.3.1</span> <span class="title">(Optional) — Logistic Population Growth</span>
+</h4>
+<p id="p-3289">Logistic growth adds one more wrinkle to the simple population model. It assumes that the population only has access to limited resources. As the size of the population grows the amount of food available to each member decreases. This in turn causes the net birth rate \(b\) to decrease. In the logistic growth model \(b=b_0\left(1-\tfrac{P}{K}\right)\text{,}\) where \(K\) is called the carrying capacity of the environment,  so that</p>
+<div class="displaymath">
+\begin{gather*}
+P'(t) =b_0\left(1-\frac{P(t)}{K}\right)P(t)
+\end{gather*}
+</div>
+<p id="p-3290">We can learn quite a bit about the behaviour of solutions to differential equations like this, without ever finding formulae for the solutions,  just by watching the sign of \(P'(t)\text{.}\) For concreteness, we'll look at solutions of the differential equation</p>
+<div class="displaymath">
+\begin{gather*}
+\diff{P}{t}(t)=\big(\,6000-3P(t)\,\big)\,P(t)
+\end{gather*}
+</div>
+<p>We'll sketch the graphs of four functions \(P(t)\) that obey this equation.</p>
+<ul class="disc">
+<li id="li-938">For the first function, \(P(0)=0\text{.}\)</li>
+<li id="li-939">For the second function, \(P(0)=1000\text{.}\)</li>
+<li id="li-940">For the third function, \(P(0)=2000\text{.}\)</li>
+<li id="li-941">For the fourth function, \(P(0)=3000\text{.}\)</li>
+</ul>
+<p id="p-3291">The sketches will be based on the observation that \((6000-3P)\,P=3(2000-P)\,P\)</p>
+<ul class="disc">
+<li id="li-942">is zero for \(P=0,\ 2000\text{,}\)</li>
+<li id="li-943">is strictly positive for \(0 \lt P \lt 2000\) and</li>
+<li id="li-944">is strictly negative for \(P \gt 2000\text{.}\)</li>
+</ul>
+<p>Consequently</p>
+<div class="displaymath">
+\begin{align*}
+\diff{P}{t}(t)\ \begin{cases}
+=0  &amp; \text{if }P(t)=0\\
+\gt 0 &amp; \text{if }0 \lt P(t) \lt 2000\\
+=0 &amp; \text{if }P(t)=2000 \\
+\lt 0 &amp; \text{if }P(t) \gt 2000
+\end{cases}
+\end{align*}
+</div>
+<p>Thus if \(P(t)\) is some function that obeys  \(\diff{P}{t}(t)=\big(6000-3P(t)\big)P(t)\text{,}\) then as the graph of \(P(t)\) passes through \(\big(t,P(t)\big)\)</p>
+<div class="displaymath">
+\begin{align*}
+\text{the graph has }
+\begin{cases}
+\text{slope zero,}&amp; \text{i.e. is horizontal, if }P(t)=0
+\\
+\text{positive slope,}&amp; \text{i.e. is increasing, if }
+0 \lt P(t) \lt 2000
+\\
+\text{slope zero,}&amp; \text{i.e. is horizontal, if }P(t)=2000
+\\
+\text{negative slope,}&amp; \text{i.e. is decreasing, if }P(t) \gt 2000
+\end{cases}
+\end{align*}
+</div>
+<p>as illustrated in the figure</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/pop1.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p id="p-3292">As a result,</p>
+<ul class="disc">
+<li id="li-945">if \(P(0)=0\text{,}\) the graph starts out horizontally. In other words, as \(t\) starts to increase, \(P(t)\) remains at zero, so the slope of the graph remains at zero. The population size remains zero for all time. As a check, observe that  the function \(P(t)=0\) obeys \(\diff{P}{t}(t)=\big(6000-3P(t)\big)P(t)\)  for all \(t\text{.}\)</li>
+<li id="li-946">Similarly, if \(P(0)=2000\text{,}\) the graph again starts out  horizontally. So \(P(t)\) remains at \(2000\) and the slope remains at zero.  The population size remains 2000 for all time. Again, the function  \(P(t)=2000\) obeys \(\diff{P}{t}(t)=\big(6000-3P(t)\big)P(t)\) for all \(t\text{.}\)</li>
+<li id="li-947">If \(P(0)=1000\text{,}\) the graph starts out with positive slope. So \(P(t)\) increases with \(t\text{.}\) As \(P(t)\) increases towards 2000, the slope \((6000-3P(t)\big)P(t)\text{,}\) while remaining positive, gets closer and closer to zero. As the graph approaches height 2000, it becomes more and more  horizontal. The graph cannot actually cross from below 2000 to above 2000, because to do so, it would have to have strictly positive slope for  some value of \(P\) above 2000, which is not allowed.</li>
+<li id="li-948">If \(P(0)=3000\text{,}\) the graph starts out with negative slope. So \(P(t)\) decreases with \(t\text{.}\) As \(P(t)\) decreases towards 2000, the slope \((6000-3P(t)\big)P(t)\text{,}\) while remaining negative, gets closer and closer to zero. As the graph approaches height 2000, it becomes more and more  horizontal. The graph cannot actually cross from above 2000 to below 2000, because to do so, it would have to have negative slope for some value of \(P\) below 2000. which is not allowed.</li>
+</ul>
+<p id="p-3293">These curves are sketched in the figure below. We conclude that for any initial population size \(P(0)\text{,}\) except \(P(0)=0\text{,}\) the population size approaches \(2000\) as \(t\rightarrow\infty\text{.}\)</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:30%;margin-right:30%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/pop2.svg" style="width: 100%; height: auto;" alt=""></div></div></div></section></section></div></main>
+</div>
+<!--Start: Google Universal code--><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-105798942-1', 'auto');
+ga('send', 'pageview');
+</script><!--End: Google Universal code--><div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.1/login.js"></script>
+</body>
+</html>

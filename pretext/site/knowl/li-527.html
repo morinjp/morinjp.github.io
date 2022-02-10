@@ -1,0 +1,39 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:13:37-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="listitem"><h6 class="heading"><span class="type">Item</span></h6>Here goes (recall Example <a knowl="./knowl/eg_DIFFsimpleToolsA.html" title="Example 2.6.6: Extending the product rule to more than two factors">2.6.6</a>):<div class="displaymath">
+\begin{align*}
+\diff{}{x}\big[x^5\,{(3+x^6)}^{\frac{1}{2}}\ {(4+x^2)}^{-3}\big]
+&amp;=\diff{}{x}\big[x^5\big] \cdot {(3+x^6)}^{\frac{1}{2}}\cdot {(4+x^2)}^{-3}\\
+&amp;\phantom{=} +x^5\cdot \diff{}{x}\big[{(3+x^6)}^{\frac{1}{2}}\big]
+\cdot {(4+x^2)}^{-3}\\
+&amp;\phantom{=} +x^5\cdot {(3+x^6)}^{\frac{1}{2}}\cdot
+\diff{}{x}\big[{(4+x^2)}^{-3}\big]
+\end{align*}
+</div>This has reduced our problem to computing the derivatives of \(x^5\text{,}\) which is easy, and of \({(3+x^6)}^{\frac{1}{2}}\) and \({(4+x^2)}^{-3}\text{,}\) both of which can be done by the chain rule. Doing so,<div class="displaymath">
+\begin{align*}
+\diff{}{x}\big[x^5\,{(3+x^6)}^{\frac{1}{2}}\ {(4+x^2)}^{-3}\big]
+&amp;=\overbrace{\diff{}{x}\big[x^5\big]}^{5x^4}
+\cdot{(3+x^6)}^{\frac{1}{2}}\cdot {(4+x^2)}^{-3}\\
+&amp; \phantom{=}+x^5\cdot
+\overbrace{\diff{}{x}\big[{(3+x^6)}^{\frac{1}{2}}\big]}^
+{\frac{1}{2}(3+x^6)^{-\frac{1}{2}}\cdot 6x^5}
+\cdot {(4+x^2)}^{-3}\\
+&amp;\phantom{=} +x^5\cdot{(3+x^6)}^{\frac{1}{2}}\cdot
+\overbrace{\diff{}{x}\big[{(4+x^2)}^{-3}\big]}^
+{-3{(4+x^2)}^{-4}\cdot 2x}
+\end{align*}
+</div></article><span class="incontext"><a href="subsection-32.html#li-527">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:13:13-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="displaymath">
+\begin{align*}
+\lim_{h \to 0} \frac{f(1+h)-f(1)}{h}&amp;\\
+\end{align*}
+<p class="intertext">In particular, we need the one-sided limits to exist and be equal:</p>
+\begin{align*}
+\textcolor{red}{\lim_{h \to 0^-}\frac{f(1+h)-f(1)}{h}}&amp;=\textcolor{blue}{\lim_{h \to 0^+}\frac{f(1+h)-f(1)}{h}}\\
+\end{align*}
+<p class="intertext">If \(h \lt 0\text{,}\) then \(1+h \lt 1\text{,}\) so \(f(1+h)=a(1+h)^2+b\text{.}\) If \(h \gt 0\text{,}\) then \(1+h \gt 1\text{,}\) so \(f(1+h)=e^{1+h}\text{.}\) With this in mind, we begin to evaluate the one-sided limits:</p>
+\begin{align*}
+\color{red}{\lim_{h \to 0^-}\frac{f(1+h)-f(1)}{h}}&amp;\color{red}{=
+\lim_{h \to 0^-}\frac{[a(1+h)^2+b]-[a+b]}{h}}\\
+&amp;\color{red}={\lim_{h \to 0^-}\frac{ah^2+2ah}{h}=2a}\\
+\color{blue}{\lim_{h \to 0^+}\frac{f(1+h)-f(1)}{h}}&amp;\color{blue}{=
+\lim_{h \to 0^+}\frac{e^{1+h}-(a+b)}{h}}\\
+\end{align*}
+<p class="intertext">Since we take \(a+b\) to be equal to \(e\) (to ensure continuity):</p>
+\begin{align*}
+&amp;\color{blue}{=
+\lim_{h \to 0^+}\frac{e^{1+h}-e^1}{h}}\\
+&amp;\color{blue}={\left.\diff{}{x}\{e^x\}\right|_{x=1}=e^1=e}
+\end{align*}
+</div>
+<span class="incontext"><a href="exercises-12.html#mjx-eqn-mrow-1117">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:15:36-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><div class="solution">
+<p>From Example <a knowl="./knowl/eg_fallingBallB.html" title="Example 3.1.2: Position and velocity from acceleration">3.1.2</a>, we know that an object falling from rest on the Earth is subject to the acceleration due to gravity, \(9.8\;\frac{\mathrm{m}}{\mathrm{s}^2}\text{.}\) So, if \(h(t)\) is the height of the flower pot \(t\) seconds after it rolls out the window, then \(h''(t)=-9.8\text{.}\) (We make the acceleration negative, since the measure “height” has “up” as the positive direction, while gravity pulls the pot in the negative direction, “down.”)</p>
+<p>Then \(h'(t)\) is a function whose derivative is the constant \(-9.8\) and with \(h'(0)=0\) (since the object fell, instead of being thrown up or down), so \(h'(t)=-9.8t\text{.}\)</p>
+<p>What we want to know is \(h'(t)\) at the time \(t\) when the pot hits the ground. We don't know yet exactly what time that happens, so we go a little farther and find an expression for \(h(t)\text{.}\) The function \(h(t)\) has derivative \(-9.8t\) and \(h(0)=10\text{,}\) so (again following the ideas in Example <a knowl="./knowl/eg_fallingBallB.html" title="Example 3.1.2: Position and velocity from acceleration">3.1.2</a>)</p>
+<div class="displaymath">
+\begin{equation*}
+h(t)=\frac{-9.8}{2}t^2+10
+\end{equation*}
+</div>
+<p>Now, we can find the time when the pot hits the ground: it is the time when \(h(t)=0\) (and \(t \gt 0\)).</p>
+<div class="displaymath">
+\begin{align*}
+0&amp;=\frac{-9.8}{2}t^2+10\\
+\frac{9.8}{2}t^2&amp;=10\\
+t^2&amp;=\frac{20}{9.8}\\
+t&amp;=+\sqrt{\frac{20}{9.8}}\approx1.4 \mathrm{sec}\\
+\end{align*}
+<p class="intertext">The velocity of the pot at this time is</p>
+\begin{align*}
+h'\left(\sqrt{\frac{20}{9.8}}\right)&amp;=-9.8\left(\sqrt{\frac{20}{9.8}}\right)=-\sqrt{20\cdot 9.8}
+=-14 \frac{\mathrm{m}}{\mathrm{s}}
+\end{align*}
+</div>
+<p>So, the pot is falling at 14 metres per second, just as it hits the ground.</p>
+</div></body>
+</html>

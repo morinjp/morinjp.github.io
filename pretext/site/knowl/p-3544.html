@@ -1,0 +1,47 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:17:18-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p><em class="alert">Solution</em> We have been told \(a=1\) and fifth degree, so we should start by writing down the function and its first five derivatives:</p>
+<div class="displaymath">
+\begin{align*}
+f(x) &amp;= \log x &amp; f(1) &amp;= \log 1 = 0\\
+f'(x) &amp;= \frac{1}{x} &amp; f'(1) &amp;= 1\\
+f''(x) &amp;= \frac{-1}{x^2} &amp; f''(1) &amp;= -1\\
+f'''(x) &amp;= \frac{2}{x^3} &amp; f'''(1) &amp;= 2\\
+f^{(4)}(x) &amp;= \frac{-6}{x^4} &amp; f^{(4)}(1) &amp;= -6\\
+f^{(5)}(x) &amp;= \frac{24}{x^5} &amp; f^{(5)}(1) &amp;= 24
+\end{align*}
+</div>
+<p>Substituting this into equation <a knowl="./knowl/eq_taylorPoly.html" title="Equation 3.4.10: Taylor polynomial">3.4.10</a> gives</p>
+<div class="displaymath">
+\begin{align*}
+T_5(x)&amp;= 0 + 1\cdot (x-1)
++ \frac{1}{2} \cdot (-1) \cdot (x-1)^2
++ \frac{1}{6} \cdot 2 \cdot (x-1)^3\\
+\amp\hskip0.5in+ \frac{1}{24} \cdot (-6) \cdot (x-1)^4
++ \frac{1}{120} \cdot 24 \cdot (x-1)^5\\
+&amp;= (x-1) - \frac{1}{2}(x-1)^2 + \frac{1}{3}(x-1)^3 - \frac{1}{4}(x-1)^4 +
+\frac{1}{5}(x-1)^5
+\end{align*}
+</div>
+<p>Again, it is not too hard to generalise the above work to find the Taylor polynomial of degree \(n\text{:}\) With a little work one can show that</p>
+<div class="displaymath">
+\begin{align*}
+T_n(x) &amp;= \sum_{k=1}^n \frac{(-1)^{k+1}}{k} (x-1)^k.
+\end{align*}
+</div>
+<span class="incontext"><a href="ssec_taylor_eg.html#p-3544">in-context</a></span>
+</body>
+</html>

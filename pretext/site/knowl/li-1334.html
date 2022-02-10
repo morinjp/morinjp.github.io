@@ -1,0 +1,55 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:19:43-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="listitem"><h6 class="heading"><span class="type">Item</span></h6>
+<p>If we allow the viewer to stand at any point in front of the statue, then \(0\le x
+\lt \infty\text{.}\) Further observe that as \(x \rightarrow \infty\) or \(x \rightarrow 0\) the angle \(\theta \rightarrow 0\text{,}\)  since</p>
+<div class="displaymath">
+\begin{equation*}
+\lim_{x\rightarrow\infty} \arctan \frac{p+h}{x} =
+\lim_{x\rightarrow\infty} \arctan \frac{p}{x} = 0
+\end{equation*}
+</div>
+<p>and</p>
+<div class="displaymath">
+\begin{equation*}
+\lim_{x\rightarrow 0^+} \arctan \frac{p+h}{x} =
+\lim_{x\rightarrow 0^+} \arctan \frac{p}{x} = \frac{\pi}{2}
+\end{equation*}
+</div>
+<p>Clearly the largest value of \(\theta\) will be strictly positive and so has to be taken for some \(0 \lt x \lt \infty\text{.}\) (Note the strict inequalities.) This \(x\) will be a local maximum as well as a global maximum. As \(\theta\) is not singular at any \(0 \lt x \lt \infty\text{,}\) we need only search for critical points.</p>
+<p>A careful application of the chain rule shows that the derivative is</p>
+<div class="displaymath">
+\begin{align*}
+\diff{\theta}{x}
+&amp;=
+\frac{1}{1+(\frac{p+h}{x})^2}\cdot \left(\frac{-(p+h)}{x^2}\right) -
+\frac{1}{1+(\frac{p}{x})^2}\cdot \left(\frac{-p}{x^2}\right)\\
+&amp;= \frac{-(p+h)}{x^2+(p+h)^2} + \frac{p}{x^2+p^2}
+\end{align*}
+</div>
+<p>So a critical point occurs when</p>
+<div class="displaymath">
+\begin{align*}
+\frac{(p+h)}{x^2+(p+h)^2} &amp;= \frac{p}{x^2+p^2} &amp; \text{cross multiply}\\
+(p+h)(x^2+p^2) &amp;= p(x^2+(p+h)^2) &amp; \text{collect $x$ terms}\\
+x^2 (p+h-p) &amp;= p(p+h)^2 - p^2 (p+h) &amp; \text{clean up}\\
+h x^2 &amp;= p(p+h)(p+h-p) = ph(p+h) \\
+\amp\hskip1in \text{cancel common factors}\\
+x^2 &amp;= p(p+h)\\
+x &amp;= \pm\sqrt{p(p+h)} \approx \pm 64.9m
+\end{align*}
+</div></article><span class="incontext"><a href="sec_opt_eg.html#li-1334">in-context</a></span>
+</body>
+</html>

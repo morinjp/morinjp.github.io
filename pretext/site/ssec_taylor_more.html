@@ -1,0 +1,510 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:02:50-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Further Examples</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.1/pretext.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on2.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="RQS.css">
+<link href="https://pretextbook.org/css/0.1/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\require{cancel}\newcommand{\dee}[1]{\mathrm{d}#1}
+\newcommand{\half}{ \frac{1}{2} }
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ts}{\textstyle}
+\newcommand{\es}{ {\varnothing}}
+\newcommand{\st}{ {\mbox{ s.t. }} }
+\newcommand{\pow}[1]{ \mathcal{P}\left(#1\right) }
+\newcommand{\set}[1]{ \left\{#1\right\} }
+\newcommand{\lin}{{\text{LIN}}}
+\newcommand{\quot}{{\text{QR}}}
+\newcommand{\simp}{{\text{SMP}}}
+\newcommand{\diff}[2]{ \frac{\mathrm{d}#1}{\mathrm{d}#2}}
+\newcommand{\bdiff}[2]{ \frac{\mathrm{d}}{\mathrm{d}#2} \left( #1 \right)}
+\newcommand{\ddiff}[3]{ \frac{\mathrm{d}^#1#2}{\mathrm{d}{#3}^#1}}
+\renewcommand{\neg}{ {\sim} }
+\newcommand{\limp}{ {\;\Rightarrow\;} }
+\newcommand{\nimp}{ {\;\not\Rightarrow\;} }
+\newcommand{\liff}{ {\;\Leftrightarrow\;} }
+\newcommand{\niff}{ {\;\not\Leftrightarrow\;} }
+\newcommand{\De}{\Delta}
+\newcommand{\bbbn}{\mathbb{N}}
+\newcommand{\bbbr}{\mathbb{R}}
+\newcommand{\bbbp}{\mathbb{P}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\Si}{\Sigma}
+
+\newcommand{\arccsc}{\mathop{\mathrm{arccsc}}}
+\newcommand{\arcsec}{\mathop{\mathrm{arcsec}}}
+\newcommand{\arccot}{\mathop{\mathrm{arccot}}}
+\newcommand{\erf}{\mathop{\mathrm{erf}}}
+\newcommand{\smsum}{\mathop{{\ts \sum}}}
+\newcommand{\atp}[2]{ \genfrac{}{}{0in}{}{#1}{#2} }
+
+\newcommand{\ave}{\mathrm{ave}}
+\newcommand{\llt}{\left \lt }
+\newcommand{\rgt}{\right \gt }
+
+
+\newcommand{\YEaxis}[2]{\draw[help lines] (-#1,0)--(#1,0) node[right]{$x$};\draw[help lines] (0,-#2)--(0,#2) node[above]{$y$};}
+
+\newcommand{\YEaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$x$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YEtaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+\newcommand{\YEtaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$}; \draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YExcoord}[2]{\draw (#1,.2)--(#1,-.2) node[below]{$#2$};}
+\newcommand{\YEycoord}[2]{\draw (.2,#1)--(-.2,#1) node[left]{$#2$};}
+\newcommand{\YEnxcoord}[2]{\draw (#1,-.2)--(#1,.2) node[above]{$#2$};}
+\newcommand{\YEnycoord}[2]{\draw (-.2,#1)--(.2,#1) node[right]{$#2$};}
+
+\newcommand{\YEstickfig}[3]{
+\draw (#1,#2) arc(-90:270:2mm);
+\draw (#1,#2)--(#1,#2-.5) (#1-.25,#2-.75)--(#1,#2-.5)--(#1+.25,#2-.75) (#1-.2,#2-.2)--(#1+.2,#2-.2);}
+
+
+\newcommand{\IBP}[7]{
+\begin{array}{|c  | l | l |}
+\hline
+\color{red}{\text{Option 1:}}
+&amp; u=#2
+&amp;\color{red}{\dee{u}=#3 ~ \dee{#1}}
+\\
+&amp; \dee{v}=#5~\dee{#1}
+&amp;\color{red}{v=#7}
+\\
+\hline
+\color{blue}{\text{Option 2:}}
+&amp; u=#5
+&amp;\color{blue}{\dee{u}=#6 ~ \dee{#1}}
+\\
+&amp;\dee{v}=#2 \dee{#1}
+&amp;\color{blue}{v=#4}
+\\
+\hline
+\end{array}
+}
+
+
+\renewcommand{\textcolor}[2]{{\color{#1}{#2}}}
+
+
+\newcommand{\trigtri}[4]{
+\begin{tikzpicture}
+\draw (-.5,0)--(2,0)--(2,1.5)--cycle;
+\draw (1.8,0) |- (2,.2);
+\draw[double] (0,0) arc(0:30:.5cm);
+\draw (0,.2) node[right]{$#1$};
+\draw (1,-.5) node{$#2$};
+\draw (2,.75) node[right]{$#3$};
+\draw (.6,1.1) node[rotate=30]{$#4$};
+\end{tikzpicture}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="clp_1_dc.html"><span class="title">CLP-1 Differential Calculus</span></a></h1>
+<p class="byline">Joel Feldman, Andrew Rechnitzer, Elyse Yeager</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="ssec_est_change.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="sec_DIFFTaylor.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="ssec_taylor_error.html" title="Next">Next</a></span></div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="ssec_est_change.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="sec_DIFFTaylor.html" title="Up">Up</a><a class="next-button button toolbar-item" href="ssec_taylor_error.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="index.html" data-scroll="index"><span class="title">Front Matter</span></a></h2>
+<ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface-2.html" data-scroll="preface-2">Using the exercises in this book</a></li>
+<li><a href="preface-3.html" data-scroll="preface-3">Feedback about the text</a></li>
+</ul>
+<h2 class="link"><a href="chap_basics.html" data-scroll="chap_basics"><span class="codenumber">0</span> <span class="title">The basics</span></a></h2>
+<ul>
+<li><a href="sec_0_1.html" data-scroll="sec_0_1">Numbers</a></li>
+<li><a href="sec_sets.html" data-scroll="sec_sets">Sets</a></li>
+<li><a href="sec_0_3.html" data-scroll="sec_0_3">Other Important Sets</a></li>
+<li><a href="sec_0_4.html" data-scroll="sec_0_4">Functions</a></li>
+<li><a href="sec_parsing.html" data-scroll="sec_parsing">Parsing Formulas</a></li>
+<li><a href="sec_inverse_functions.html" data-scroll="sec_inverse_functions">Inverse Functions</a></li>
+</ul>
+<h2 class="link"><a href="chap_limits.html" data-scroll="chap_limits"><span class="codenumber">1</span> <span class="title">Limits</span></a></h2>
+<ul>
+<li><a href="sec_first_lim.html" data-scroll="sec_first_lim">Drawing Tangents and a First Limit</a></li>
+<li><a href="sec_velocity.html" data-scroll="sec_velocity">Another Limit and Computing Velocity</a></li>
+<li><a href="sec_lim_func.html" data-scroll="sec_lim_func">The Limit of a Function</a></li>
+<li><a href="sec_1_4.html" data-scroll="sec_1_4">Calculating Limits with Limit Laws</a></li>
+<li><a href="sec_1_5.html" data-scroll="sec_1_5">Limits at Infinity</a></li>
+<li><a href="sec_1_6.html" data-scroll="sec_1_6">Continuity</a></li>
+<li><a href="sec_opt_formal_limit.html" data-scroll="sec_opt_formal_limit">(Optional) — Making the Informal a Little More Formal</a></li>
+<li><a href="sec_lim_inf_formal.html" data-scroll="sec_lim_inf_formal">(Optional) — Making Infinite Limits a Little More Formal</a></li>
+<li><a href="sec_proof_arith_lim.html" data-scroll="sec_proof_arith_lim">(Optional) — Proving the Arithmetic of Limits</a></li>
+</ul>
+<h2 class="link"><a href="chap_deriv.html" data-scroll="chap_deriv"><span class="codenumber">2</span> <span class="title">Derivatives</span></a></h2>
+<ul>
+<li><a href="sec_2_1.html" data-scroll="sec_2_1">Revisiting Tangent Lines</a></li>
+<li><a href="sec_def_deriv.html" data-scroll="sec_def_deriv">Definition of the Derivative</a></li>
+<li><a href="sec_2_3.html" data-scroll="sec_2_3">Interpretations of the Derivative</a></li>
+<li><a href="sec_2_4.html" data-scroll="sec_2_4">Arithmetic of Derivatives - a Differentiation Toolbox</a></li>
+<li><a href="sec_proof_arith_deriv.html" data-scroll="sec_proof_arith_deriv">Proofs of the Arithmetic of Derivatives</a></li>
+<li><a href="sec_2_6.html" data-scroll="sec_2_6">Using the Arithmetic of Derivatives –  Examples</a></li>
+<li><a href="sec_exp_func.html" data-scroll="sec_exp_func">Derivatives of Exponential Functions</a></li>
+<li><a href="sec_diff_trig.html" data-scroll="sec_diff_trig">Derivatives of Trigonometric Functions</a></li>
+<li><a href="sec_chain_rule.html" data-scroll="sec_chain_rule">One More Tool  – the Chain Rule</a></li>
+<li><a href="sec_diff_logs.html" data-scroll="sec_diff_logs">The Natural Logarithm</a></li>
+<li><a href="sec_2_11.html" data-scroll="sec_2_11">Implicit Differentiation</a></li>
+<li><a href="sec_invTrig.html" data-scroll="sec_invTrig">Inverse Trigonometric Functions</a></li>
+<li><a href="sec_mvt.html" data-scroll="sec_mvt">The Mean Value Theorem</a></li>
+<li><a href="sec_higher_diff.html" data-scroll="sec_higher_diff">Higher Order Derivatives</a></li>
+<li><a href="sec_cont_deriv.html" data-scroll="sec_cont_deriv">(Optional) — Is \(\lim_{x\to c}f'(x)\) Equal to \(f'(c)\text{?}\)</a></li>
+</ul>
+<h2 class="link"><a href="chap_appl_deriv.html" data-scroll="chap_appl_deriv"><span class="codenumber">3</span> <span class="title">Applications of derivatives</span></a></h2>
+<ul>
+<li><a href="sec_vel_acc.html" data-scroll="sec_vel_acc">Velocity and Acceleration</a></li>
+<li><a href="sec_rrates.html" data-scroll="sec_rrates">Related Rates</a></li>
+<li><a href="sec_ExpGthDecay.html" data-scroll="sec_ExpGthDecay">Exponential Growth and Decay</a></li>
+<li><a href="sec_DIFFTaylor.html" data-scroll="sec_DIFFTaylor">Taylor Polynomials</a></li>
+<li><a href="sec_optimise.html" data-scroll="sec_optimise">Optimisation</a></li>
+<li><a href="sec_curve_sketch.html" data-scroll="sec_curve_sketch">Sketching Graphs</a></li>
+<li><a href="sec_4_7.html" data-scroll="sec_4_7">L'Hôpital's Rule and Indeterminate Forms</a></li>
+</ul>
+<h2 class="link"><a href="chapter-5.html" data-scroll="chapter-5"><span class="codenumber">4</span> <span class="title">Towards Integral Calculus</span></a></h2>
+<ul><li><a href="sec_antidiff.html" data-scroll="sec_antidiff">Introduction to Antiderivatives</a></li></ul>
+<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Appendices</span></a></h2>
+<h2 class="link"><a href="app_highschool.html" data-scroll="app_highschool"><span class="codenumber">A</span> <span class="title">High School Material</span></a></h2>
+<ul>
+<li><a href="sec_simtri.html" data-scroll="sec_simtri">Similar Triangles</a></li>
+<li><a href="sec_A_2.html" data-scroll="sec_A_2">Pythagoras</a></li>
+<li><a href="sec_A_3.html" data-scroll="sec_A_3">Trigonometry — Definitions</a></li>
+<li><a href="app_rad_arc_sec.html" data-scroll="app_rad_arc_sec">Radians, Arcs and Sectors</a></li>
+<li><a href="app_sec_trig_graphs.html" data-scroll="app_sec_trig_graphs">Trigonometry — Graphs</a></li>
+<li><a href="sec_A_6.html" data-scroll="sec_A_6">Trigonometry — Special Triangles</a></li>
+<li><a href="sec_A_7.html" data-scroll="sec_A_7">Trigonometry — Simple Identities</a></li>
+<li><a href="sec_trig_add.html" data-scroll="sec_trig_add">Trigonometry — Add and Subtract Angles</a></li>
+<li><a href="sec_inv_trig.html" data-scroll="sec_inv_trig">Inverse Trig Functions</a></li>
+<li><a href="app_sec_areas.html" data-scroll="app_sec_areas">Areas</a></li>
+<li><a href="sec_volumes.html" data-scroll="sec_volumes">Volumes</a></li>
+<li><a href="sec_powers.html" data-scroll="sec_powers">Powers</a></li>
+<li><a href="sec_logs.html" data-scroll="sec_logs">Logarithms</a></li>
+<li><a href="sec_must_deriv.html" data-scroll="sec_must_deriv">You Should be Able to Derive</a></li>
+</ul>
+<h2 class="link"><a href="chap_app_B.html" data-scroll="chap_app_B"><span class="codenumber">B</span> <span class="title">Origin of Trig, Area and Volume Formulas</span></a></h2>
+<ul>
+<li><a href="sec_B_1.html" data-scroll="sec_B_1">Theorems about Triangles</a></li>
+<li><a href="sec_B_2.html" data-scroll="sec_B_2">Trigonometry</a></li>
+<li><a href="sec_B_3.html" data-scroll="sec_B_3">Inverse Trigonometric Functions</a></li>
+<li><a href="sec_B_4.html" data-scroll="sec_B_4">Cosine and Sine Laws</a></li>
+<li><a href="sec_B_5.html" data-scroll="sec_B_5">Circles, cones and spheres</a></li>
+</ul>
+<h2 class="link"><a href="app_root_finding.html" data-scroll="app_root_finding"><span class="codenumber">C</span> <span class="title">Root Finding</span></a></h2>
+<ul>
+<li><a href="sec_C_1.html" data-scroll="sec_C_1">Newton's Method</a></li>
+<li><a href="sec_C_2.html" data-scroll="sec_C_2">The Error Behaviour of Newton's Method</a></li>
+<li><a href="sec_C_3.html" data-scroll="sec_C_3">The false position (regula falsi) method</a></li>
+<li><a href="sec_C_4.html" data-scroll="sec_C_4">The secant method</a></li>
+<li><a href="sec_C_5.html" data-scroll="sec_C_5">The Error Behaviour of the Secant Method</a></li>
+</ul>
+<h2 class="link"><a href="app_hint.html" data-scroll="app_hint"><span class="codenumber">D</span> <span class="title">Hints for Exercises</span></a></h2>
+<h2 class="link"><a href="app_answ.html" data-scroll="app_answ"><span class="codenumber">E</span> <span class="title">Answers to Exercises</span></a></h2>
+<h2 class="link"><a href="app_soln.html" data-scroll="app_soln"><span class="codenumber">F</span> <span class="title">Solutions to Exercises</span></a></h2></nav><div class="extras"><nav><a class="feedback-link" href="mailto:clp@ugrad.math.ubc.ca?subject=clp-pretext" target="_blank">Feedback</a><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="mathbook-content"><section class="subsection" id="ssec_taylor_more"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.4.8</span> <span class="title">Further Examples</span>
+</h3>
+<a href="ssec_taylor_more.html" class="permalink">¶</a><p id="p-3566">In this subsection we give further examples of computation and use of Taylor approximations.</p>
+<article class="example-like" id="eg_taylorapprox"><a knowl="" class="id-ref" refid="hk-eg_taylorapprox"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">3.4.22</span> <span class="title">Estimating \(\tan 46^\circ\)</span>
+</h6></a></article><div id="hk-eg_taylorapprox" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-3567">Estimate \(\tan 46^\circ\text{,}\) using the constant-, linear- and quadratic-approximations (equations <a knowl="./knowl/eq_constApprox.html" title="Equation 3.4.1: Constant approximation">3.4.1</a>, <a knowl="./knowl/eq_linApprox.html" title="Equation 3.4.3: Linear approximation">3.4.3</a> and <a knowl="./knowl/eq_quadApprox.html" title="Equation 3.4.6: Quadratic approximation">3.4.6</a>).</p>
+<p id="p-3568"><em class="alert">Solution</em> Note that we need to be careful to translate angles measured in degrees to radians.</p>
+<ul class="disc">
+<li id="li-1014">
+<p id="p-3569">Set \(f(x)=\tan x\text{,}\) \(x=46\tfrac{\pi}{180}\) radians and \(a=45\tfrac{\pi}{180}=\tfrac{\pi}{4}\) radians. This is a good choice for \(a\) because</p>
+<ul class="circle">
+<li id="li-1015">\(a=45^\circ\) is close to \(x=46^\circ\text{.}\) As noted above, it is generally the case that the closer \(x\) is to \(a\text{,}\) the better various approximations will be.</li>
+<li id="li-1016">We know the values of all trig functions at \(45^\circ\text{.}\)</li>
+</ul>
+</li>
+<li id="li-1017">
+<p id="p-3570">Now we need to compute \(f\) and its first two derivatives at \(x=a\text{.}\) It is a good time to recall the special \(1:1:\sqrt{2}\) triangle</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:40%;margin-right:40%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/triangle45.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p id="p-3571">So</p>
+<div class="displaymath">
+\begin{align*}
+f(x) &amp;= \tan x &amp; f(\pi/4) &amp;= 1\\
+f'(x) &amp;= \sec^2 x = \frac{1}{\cos^2 x}
+&amp; f'(\pi/4) &amp;= \frac{1}{1/\sqrt{2}^2} = 2\\
+f''(x) &amp;= \frac{2\sin x}{\cos^3 x}
+&amp; f''(\pi/4) &amp;= \frac{2/\sqrt{2}}{1/\sqrt{2}^3} = 4
+\end{align*}
+</div>
+</li>
+<li id="li-1018">As \(x-a=46\tfrac{\pi}{180}-45\tfrac{\pi}{180}=\tfrac{\pi}{180}\) radians, the three approximations are<div class="displaymath">
+\begin{alignat*}{2}
+f(x)&amp;\approx f(a) \\
+\amp=1\\
+f(x)&amp;\approx f(a)+f'(a)(x-a) &amp;
+&amp;=1+2\tfrac{\pi}{180} \\
+&amp;=1.034907\\
+f(x)&amp;\approx f(a)+f'(a)(x\!-\!a)+\half f''(a)(x\!-\!a)^2&amp;
+&amp;=1+2\tfrac{\pi}{180}+\half 4\big(\tfrac{\pi}{180}\big)^2\\
+&amp; =1.035516
+\end{alignat*}
+</div>For comparison purposes, \(\tan 46^\circ\) really is \(1.035530\) to 6 decimal places.</li>
+</ul></article></div>
+<article class="remark-like" id="warning_radians"><h6 class="heading">
+<span class="type">Warning</span> <span class="codenumber">3.4.23</span>
+</h6>
+<p id="p-3572">All of our derivative formulae for trig functions were developed under the assumption that angles are measured in radians. Those derivatives appeared in the approximation formulae that we used in Example <a knowl="./knowl/eg_taylorapprox.html" title="Example 3.4.22: Estimating \(\tan 46^\circ\)">3.4.22</a>, so we were obliged to express \(x-a\) in radians.</p></article><article class="example-like" id="eg_taylorPole"><a knowl="" class="id-ref" refid="hk-eg_taylorPole"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">3.4.24</span> <span class="title">Error inferring a height from an angle</span>
+</h6></a></article><div id="hk-eg_taylorPole" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-3573">Suppose that you are ten meters from a vertical pole. You were contracted to measure the height of the pole. You can't take it down or climb it. So you measure the angle subtended by the top of the pole. You measure \(\theta=30^\circ\text{,}\)  which gives</p>
+<div class="displaymath">
+\begin{gather*}
+h=10\tan 30^\circ=\tfrac{10}{\sqrt{3}}\approx 5.77\text{m}\qquad\qquad
+\end{gather*}
+</div>
+<p>This is just standard trigonometry —  if we know the angle exactly then we know the height exactly.</p>
+<p id="p-3574">However, in the “real world” angles are hard to measure with such precision. If the contract requires you the measurement of the pole to be accurate within \(10\) cm, how accurate does your measurement of the angle \(\theta\) need to be?</p>
+<p id="p-3575"><em class="alert">Solution</em> For simplicity <a knowl="" class="id-ref" refid="hk-fn-148" id="fn-148"><sup> 15 </sup></a><span id="hk-fn-148" class="hidden-content tex2jax_ignore"><span class="footnote">Mathematicians love assumptions that let us tame the real world.</span></span> , we are going to assume that the pole is perfectly straight and perfectly vertical and that your distance from the pole was exactly 10 m.</p>
+<ul class="disc">
+<li id="li-1019">Write \(\theta=\theta_0+\De\theta\) where \(\theta\) is the exact angle, \(\theta_0\) is the measured angle and \(\De \theta\) is the error.</li>
+<li id="li-1020">Similarly write \(h=h_0+\De h\text{,}\) where \(h\) is the exact height and \(h_0=\tfrac{10}{\sqrt{3}}\) is the computed height. Their difference, \(\De h\text{,}\) is the error.</li>
+<li id="li-1021">Then<div class="displaymath">
+\begin{align*}
+h_0&amp;=10\tan\theta_0 &amp; h_0+\De h&amp;=10\tan(\theta_0+\De\theta)\\
+\De h &amp;= 10\tan(\theta_0+\De\theta) - 10\tan\theta_0
+\end{align*}
+</div>We could attempt to solve this equation for \(\De\theta\) in terms of \(\De h\) — but it is far simpler to approximate \(\De h\) using the linear approximation in equation <a knowl="./knowl/eq_lineDe.html" title="Equation 3.4.20: Linear approximation of \(\De y\)">3.4.20</a>.</li>
+<li id="li-1022">To use equation <a knowl="./knowl/eq_lineDe.html" title="Equation 3.4.20: Linear approximation of \(\De y\)">3.4.20</a>, replace \(y\) with \(h\text{,}\) \(x\) with \(\theta\) and \(a\) with \(\theta_0\text{.}\) Our function \(f(\theta) = 10 \tan\theta\) and \(\theta_0 = 30^\circ =
+\pi/6\) radians. Then<div class="displaymath">
+\begin{align*}
+\De y &amp;\approx f'(a) \De x &amp; \text{ becomes }&amp;&amp;
+\De h &amp;\approx f'(\theta_0) \De \theta
+\end{align*}
+</div>Since \(f(\theta)=10 \tan \theta\text{,}\) \(f'(\theta) = 10\sec^2\theta\) and<div class="displaymath">
+\begin{gather*}
+f'(\theta_0) = 10\sec^2(\pi/6)
+= 10 \cdot \left(\frac{2}{\sqrt{3}} \right)^2 = \frac{40}{3}
+\end{gather*}
+</div>
+</li>
+<li id="li-1023">Putting things together gives<div class="displaymath">
+\begin{align*}
+\De h &amp;\approx f'(\theta_0) \De \theta &amp; \text{ becomes }&amp;&amp;
+\De h &amp; \approx \frac{40}{3} \De \theta
+\end{align*}
+</div>We can then solve this equation for \(\De\theta\) in terms of \(\De h\text{:}\)<div class="displaymath">
+\begin{align*}
+\De \theta &amp; \approx \frac{3}{40} \De h
+\end{align*}
+</div>
+</li>
+<li id="li-1024">We are told that we must have \(|\De h|  \lt  0.1\text{,}\) so we must have<div class="displaymath">
+\begin{align*}
+|\De \theta| &amp;\leq \frac{3}{400}
+\end{align*}
+</div>This is measured in radians, so converting back to degrees<div class="displaymath">
+\begin{align*}
+\frac{3}{400} \cdot \frac{180}{\pi} &amp;= 0.43^\circ
+\end{align*}
+</div>
+</li>
+</ul></article></div>
+<article class="definition-like" id="def_APPrelError"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">3.4.25</span>
+</h6>
+<p id="p-3576">Suppose that you measure, approximately, some quantity. Suppose that the exact value of that quantity is \(Q_0\) and that your measurement yielded \(Q_0+\De Q\text{.}\) Then \(|\De Q|\) is called the absolute error of the measurement and \(100\frac{|\De Q|}{Q_0}\) is called the percentage error of the measurement. As an example, if the exact value is \(4\) and the measured value is \(5\text{,}\) then the absolute error is \(|5-4|=1\) and the percentage error is \(100\frac{|5-4|}{4}=25\text{.}\) That is, the error, \(1\text{,}\) was \(25\%\) of the exact value, \(4\text{.}\)</p></article><article class="example-like" id="eg_taylorSphere"><a knowl="" class="id-ref" refid="hk-eg_taylorSphere"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">3.4.26</span> <span class="title">Error inferring the area and volume from the radius</span>
+</h6></a></article><div id="hk-eg_taylorSphere" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-3577">Suppose that the radius of a sphere has been measured with a percentage error of at most \(\varepsilon\)%. Find the corresponding approximate percentage errors in the surface area and volume of the sphere.</p>
+<p id="p-3578"><em class="alert">Solution</em> We need to be careful in this problem to convert between absolute and percentage errors correctly.</p>
+<ul id="p-3579" class="disc">
+<li id="li-1025">Suppose that the exact radius is \(r_0\) and that the measured radius is \(r_0+\De r\text{.}\)</li>
+<li id="li-1026">Then the absolute error in the measurement is \(|\De r|\) and, by definition, the percentage error is \(100\tfrac{|\De r|}{r_0}\text{.}\) We are told that \(100\tfrac{|\De
+r|}{r_0}\le\varepsilon\text{.}\)</li>
+<li id="li-1027">The surface area <a knowl="" class="id-ref" refid="hk-fn-149" id="fn-149"><sup> 16 </sup></a><span id="hk-fn-149" class="hidden-content tex2jax_ignore"><span class="footnote">We do not expect you to remember the surface areas of solids for this course.</span></span> of a sphere of radius \(r\) is \(A(r)=4\pi r^2\text{.}\) The error in the surface area computed with the measured radius is<div class="displaymath">
+\begin{align*}
+\De A &amp;=A(r_0+\De r)-A(r_0)\approx A'(r_0)\De r\\
+&amp;= 8\pi r_0 \Delta r
+\end{align*}
+</div>where we have made use of the linear approximation, equation <a knowl="./knowl/eq_lineDe.html" title="Equation 3.4.20: Linear approximation of \(\De y\)">3.4.20</a>.</li>
+<li id="li-1028">The corresponding percentage error is then<div class="displaymath">
+\begin{gather*}
+100\frac{|\De A|}{A(r_0)}
+\approx 100\frac{|A'(r_0)\De r|}{A(r_0)}
+= 100\frac{8\pi r_0|\De r|}{4\pi r_0^2}
+= 2\times 100\frac{|\De r|}{r_0}
+\le 2\varepsilon
+\end{gather*}
+</div>
+</li>
+<li id="li-1029">The volume of a sphere <a knowl="" class="id-ref" refid="hk-fn-150" id="fn-150"><sup> 17 </sup></a><span id="hk-fn-150" class="hidden-content tex2jax_ignore"><span class="footnote">We do expect you to remember the formula for the volume of a sphere.</span></span> of radius \(r\) is \(V(r)=\frac{4}{3}\pi r^3\text{.}\) The error in the volume computed with the measured radius is<div class="displaymath">
+\begin{align*}
+\De V &amp;=V(r_0+\De r)-V(r_0)\approx V'(r_0)\De r\\
+&amp;= 4\pi r_0^2 \Delta r
+\end{align*}
+</div>where we have again made use of the linear approximation, equation <a knowl="./knowl/eq_lineDe.html" title="Equation 3.4.20: Linear approximation of \(\De y\)">3.4.20</a>.</li>
+<li id="li-1030">The corresponding percentage error is<div class="displaymath">
+\begin{gather*}
+100\frac{|\De V|}{V(r_0)}
+\approx 100\frac{|V'(r_0)\De r|}{V(r_0)}
+= 100\frac{4\pi r_0^2|\De r|}{4\pi r_0^3/3}
+= 3\times 100\frac{|\De r|}{r_0}
+\le 3\varepsilon
+\end{gather*}
+</div>
+</li>
+</ul>
+<p>We have just computed an approximation to \(\Delta V\text{.}\) This problem is actually sufficiently simple that we can compute \(\Delta V\) exactly:</p>
+<div class="displaymath">
+\begin{align*}
+\Delta V &amp;=  V(r_0 + \Delta r) - V(r_0)
+= \tfrac{4}{3} \pi (r_0 + \Delta r)^3
+- \tfrac{4}{3} \pi r_0^3
+\end{align*}
+</div>
+<ul class="disc">
+<li id="li-1031">Applying \((a+b)^3=a^3+3a^2b+3ab^2+b^3\) with \(a=r_0\) and \(b=\De r\text{,}\) gives<div class="displaymath">
+\begin{align*}
+V(r_0+\De r)-V(r_0)&amp;=\tfrac{4}{3}\pi
+\left[r_0^3+3r_0^2\De r+3r_0\,(\De r)^2+(\De r)^3\right] - \tfrac{4}{3}\pi r_0^3\\
+&amp;=\tfrac{4}{3}\pi[3r_0^2\De r+3r_0\,(\De r)^2+(\De r)^3]
+\end{align*}
+</div>
+</li>
+<li id="li-1032">Thus the difference between the exact error and the linear approximation to the error is obtained by retaining only the last two terms in the square brackets. This has magnitude<div class="displaymath">
+\begin{gather*}
+\tfrac{4}{3}\pi\big|3r_0\,(\De r)^2+(\De r)^3\big|
+=\tfrac{4}{3}\pi\big|3r_0+\De r\big|(\De r)^2
+\end{gather*}
+</div>or in percentage terms<div class="displaymath">
+\begin{align*}
+100\cdot \dfrac{1}{\tfrac{4}{3}\pi r_0^3} \cdot
+\tfrac{4}{3}\pi \big|3r_0\,(\De r)^2+(\De r)^3\big|
+&amp;=100\left|3\frac{\De r^2}{r_0^2}+\frac{\De r^3}{r_0^3}\right|\\
+&amp;=\left(100 \frac{3\De r}{r_0}\right)
+\cdot \left(\frac{\De r}{r_0}\right)
+\left|1 +\frac{\De r}{3r_0}\right|\\
+&amp; \le 3\varepsilon \left(\frac{\varepsilon}{100}\right)\cdot \left(1+\frac{\varepsilon}{300}\right)
+\end{align*}
+</div>Since \(\varepsilon\) is small, we can assume that \(1 + \frac{\varepsilon}{300} \approx 1\text{.}\) Hence the difference between the exact error and the linear approximation of the error is roughly a factor of \(\tfrac{\varepsilon}{100}\) smaller than the linear approximation \(3\varepsilon\text{.}\)</li>
+<li id="li-1033">As an aside, notice that if we argue that \(\De r\) is very small and so we can ignore terms involving \((\De r)^2\) and \((\De r)^3\) as being really really small, then we obtain<div class="displaymath">
+\begin{align*}
+V(r_0+\De r)-V(r_0)
+&amp;=\tfrac{4}{3}\pi[3r_0^2\De r \underbrace{+3r_0\,(\De r)^2+(\De
+r)^3}_\text{really really small}]\\
+&amp;\approx \tfrac{4}{3}\pi \cdot 3r_0^2\De r  = 4 \pi r_0^2 \De r
+\end{align*}
+</div>which is precisely the result of our linear approximation above.</li>
+</ul></article></div>
+<article class="example-like" id="eg_taylorLamp"><a knowl="" class="id-ref" refid="hk-eg_taylorLamp"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">3.4.27</span> <span class="title">Percentage error inferring a height</span>
+</h6></a></article><div id="hk-eg_taylorLamp" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-3580">To compute the height \(h\) of a lamp post, the length \(s\) of the shadow of a two meter pole is measured. The pole is 6 m from the lamp post. If the length of the shadow was measured to be 4 m, with an error of at most one cm, find the height of the lamp post and estimate the percentage error in the height.</p>
+<p id="p-3581"><em class="alert">Solution</em> We should first draw a picture <a knowl="" class="id-ref" refid="hk-fn-151" id="fn-151"><sup> 18 </sup></a><span id="hk-fn-151" class="hidden-content tex2jax_ignore"><span class="footnote">We get to reuse that nice lamp post picture from Example <a knowl="./knowl/eg_fallingBall.html" title="Example 3.2.4: The shadow of a falling ball">3.2.4</a>.</span></span></p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/lamp_shadow.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<ul id="p-3582" class="disc">
+<li id="li-1034">By similar triangles we see that<div class="displaymath">
+\begin{align*}
+\frac{2}{s} &amp;= \frac{h}{6+s}
+\end{align*}
+</div>from which we can isolate \(h\) as a function of \(s\text{:}\)<div class="displaymath">
+\begin{align*}
+h &amp;= \frac{2(6+s)}{s} = \frac{12}{s} + 2
+\end{align*}
+</div>
+</li>
+<li id="li-1035">The length of the shadow was measured to be \(s_0=4\) m. The corresponding height of the lamp post is<div class="displaymath">
+\begin{align*}
+h_0 &amp;= \frac{12}{4} + 2 = 5m
+\end{align*}
+</div>
+</li>
+<li id="li-1036">If the error in the measurement of the length of the shadow was \(\De s\text{,}\) then the exact shadow length was \(s=s_0+\De s\) and the exact lamp post height is \(h=f(s_0+\De s)\text{,}\) where \(f(s)=\tfrac{12}{s}+2\text{.}\) The error in the computed lamp post height is<div class="displaymath">
+\begin{gather*}
+\De h=h-h_0=f(s_0+\De s)-f(s_0)
+\end{gather*}
+</div>
+</li>
+<li id="li-1037">We can then make a linear approximation of this error using equation <a knowl="./knowl/eq_lineDe.html" title="Equation 3.4.20: Linear approximation of \(\De y\)">3.4.20</a>:<div class="displaymath">
+\begin{align*}
+\De h &amp;\approx f'(s_0)\De s =-\frac{12}{s_0^2}\De s =-\frac{12}{4^2}\De s
+\end{align*}
+</div>
+</li>
+<li id="li-1038">We are told that \(|\De s|\le\frac{1}{100}\) m. Consequently, approximately,<div class="displaymath">
+\begin{gather*}
+|\De h|\le \frac{12}{4^2}\frac{1}{100}=\frac{3}{400}
+\end{gather*}
+</div>The percentage error is then approximately<div class="displaymath">
+\begin{align*}
+100\frac{|\De h|}{h_0} &amp; \le 100\frac{3}{400\times 5}=0.15\%
+\end{align*}
+</div>
+</li>
+</ul></article></div></section></div></main>
+</div>
+<!--Start: Google Universal code--><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-105798942-1', 'auto');
+ga('send', 'pageview');
+</script><!--End: Google Universal code--><div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.1/login.js"></script>
+</body>
+</html>

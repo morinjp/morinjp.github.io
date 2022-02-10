@@ -1,0 +1,57 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:23:06-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="example-like"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">C.4.2</span> <span class="title">Approximating \(\sqrt{2}\text{,}\) again</span>
+</h6>
+<p>In this example we compute, approximately, the square root of two by applying the secant method to the equation</p>
+<div class="displaymath">
+\begin{equation*}
+f(x)=x^2-2=0
+\end{equation*}
+</div>
+<p>and we'll compare the secant method results with the corresponding Newton's method results. (See Example <a knowl="./knowl/eg_NTMsqrttwo.html" title="Example C.1.2: (Approximating \(\sqrt{2}\))">C.1.2</a>.)</p>
+<p>Since \(f'(x)=2x\text{,}\) (<a knowl="./knowl/eq_APPnewton.html" title="Equation C.1.1: (Newton's method)">C.1.1</a>) says that, under Newton's method, we should iteratively apply</p>
+<div class="displaymath">
+\begin{equation*}
+x_{n+1}=x_n-\frac{f(x_n)}{f'(x_n)}=x_n-\frac{x_n^2-2}{2x_n}
+=\frac{x_n}{2} +\frac{1}{x_n}
+\end{equation*}
+</div>
+<p>while (<a knowl="./knowl/eq_APPsecant.html" title="Equation C.4.1: secant method">C.4.1</a>) says that, under the secant method, we should iteratively apply  (after a little simplifying algebra)</p>
+<div class="displaymath">
+\begin{align*}
+x_{n+1}\amp =\frac{x_{n-1} f(x_n) - x_n f(x_{n-1}) }{f(x_n)-f(x_{n-1})}
+=\frac{x_{n-1}[x_n^2-2] - x_n[x_{n-1}^2-2] }{x_n^2-x_{n-1}^2} \\
+\amp =\frac{x_{n-1}x_n[x_n-x_{n-1}]+2[x_n-x_{n-1}]}{x_n^2-x_{n-1}^2} \\
+\amp =\frac{x_{n-1}x_n+2}{x_{n-1}+x_n}
+\end{align*}
+</div>
+<p>Here are the results, starting Newton's method with \(x_1=4\) and starting the secant method with \(x_0=4\text{,}\) \(x_1=3\text{.}\) (So we are giving the secant method a bit of a head start.)</p>
+<div class="displaymath">
+\begin{alignat*}{3}
+\amp   \amp \amp \text{secant method}\qquad \amp \amp \text{Newton's method} \\
+\amp x_0\quad \amp \amp  4 \amp \amp  \\
+\amp x_1 \amp \amp  3 \amp \amp  4 \\
+\amp x_2 \amp \amp  2 \amp \amp  2.25 \\
+\amp x_3 \amp \amp  1.6 \amp \amp  1.57 \\
+\amp x_4 \amp \amp  1.444 \amp \amp  1.422 \\
+\amp x_5 \amp \amp  1.4161 \amp \amp  1.414234 \\
+\amp x_6 \amp \amp  1.414233 \amp \amp  1.414213562525 \\
+\amp x_7 \amp \amp  1.414213575 \amp \amp  1.414213562373095
+\end{alignat*}
+</div>
+<p>For comparison purposes, the square root of \(2\text{,}\) to 15 decimal places, is \(1.414213562373095\text{.}\) So the secant method \(x_7\) is accurate to 7 decimal places and the Newton's method \(x_7\) is accurate to at least 15 decimal places.</p></article><span class="incontext"><a href="sec_C_4.html#eg_NTMsqrttwoC">in-context</a></span>
+</body>
+</html>

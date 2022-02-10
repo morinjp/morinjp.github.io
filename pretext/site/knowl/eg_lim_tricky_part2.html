@@ -1,0 +1,42 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:11:28-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="example-like"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.5.7</span> <span class="title">Be careful of limits involving roots — continued</span>
+</h6>
+<p>Find the limit as \(x \to -\infty\) of \(\frac{\sqrt{4x^2+1}}{5x-1}\)</p>
+<p>We use the same trick — try to work out what is the biggest term in the  numerator and denominator and pull it to one side. Since we are taking the  limit as \(x \to -\infty\) we should think of \(x\) as a large negative number.</p>
+<ul class="disc">
+<li>The denominator is dominated by \(5x\text{.}\)</li>
+<li>The biggest contribution to the numerator comes from the \(4x^2\) inside  the square-root. When we pull the \(x^2\) outside a square-root it becomes \(|x| =  -x\) (since we are taking the limit as \(x \to -\infty\)), so the numerator is  dominated by \(-x\cdot\sqrt{4} = -2x\)</li>
+<li>To see this more explicitly rewrite the numerator<div class="displaymath">
+\begin{align*}
+\sqrt{4x^2+1} &amp;= \sqrt{x^2 (4+1/x^2)}  = \sqrt{x^2} \sqrt{4+1/x^2}\\
+&amp;= |x|\sqrt{4+1/x^2} \qquad \text{ and since $x \lt 0$ we have}\\
+&amp; = -x\sqrt{4+1/x^2}
+\end{align*}
+</div>
+</li>
+<li>Thus the limit as \(x \to -\infty\) is<div class="displaymath">
+\begin{align*}
+\lim_{x \to -\infty} \frac{\sqrt{4x^2+1}}{5x-1}
+&amp;= \lim_{x \to -\infty} \frac{-x \sqrt{4+1/x^2}}{x(5-1/x)}\\
+&amp;= \lim_{x \to -\infty} \frac{-\sqrt{4+1/x^2}}{5-1/x}\\
+&amp; = -\frac{2}{5}
+\end{align*}
+</div>
+</li>
+</ul></article><span class="incontext"><a href="subsection-6.html#eg_lim_tricky_part2">in-context</a></span>
+</body>
+</html>

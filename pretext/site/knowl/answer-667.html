@@ -1,0 +1,47 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:21:54-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="solution">
+<h6 class="heading">
+<span class="type">Answer</span> <span class="codenumber">3.7.4.25.1</span>
+</h6>
+<ul class="disc">
+<li>
+<p>We want to find the limit as \(n\) goes to infinity of the percentage error, \(\ds\lim_{n \rightarrow \infty} 100\frac{|S(n)-A(n)|}{|S(n)|}\text{.}\) Since \(A(n)\) is a nicer function than \(S(n)\text{,}\) let's simplify: \(\ds\lim_{n \rightarrow \infty} 100\frac{|S(n)-A(n)|}{|S(n)|} = 100\left|1-\ds\lim_{n \to \infty}\frac{A(n)}{S(n)}\right|\text{.}\)</p>
+<p>We  figure out this limit the natural way:</p>
+<div class="displaymath">
+\begin{align*}
+100\left|1-\ds\lim_{n \to \infty}\frac{A(n)}{S(n)}\right|&amp;=
+100\left|1-\ds\lim_{n \rightarrow \infty}\underbrace{\frac{5n^4}{5n^4-13n^3-4n+\log (n)}}_{\atp
+{\mathrm{num}\to\infty}
+{\mathrm{den}\to\infty}}\right|\\
+&amp;=
+100\left|1-\ds\lim_{n \rightarrow \infty}\frac{20n^3}{20n^3-39n^2-4+\frac{1}{n}}\right|\\
+&amp;=
+100\left|1-\ds\lim_{n \rightarrow \infty}\frac{n^3}{n^3}\cdot\frac{20}{20-\frac{39}{n}-\frac{4}{n^3}+\frac{1}{n^4}}\right|\\
+&amp;=100|1-1|=0
+\end{align*}
+</div>
+<p>So, as \(n\) gets larger and larger, the relative error in the approximation gets closer and closer to 0.</p>
+</li>
+<li>Now, let's look at the absolute error.<div class="displaymath">
+\begin{align*}
+\lim_{n \rightarrow \infty} \left| S(n)-A(n)\right|&amp;=\lim_{n \rightarrow \infty} |-13n^3-4n+\log n|=\infty
+\end{align*}
+</div>So although the error gets small <em class="emphasis">relative to the giant numbers we're talking about</em>, the absolute error grows without bound.</li>
+</ul>
+</div>
+<span class="incontext"><a href="exercises-43.html#answer-667">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:17:21-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p><em class="alert">Solution</em> We are told that \(a\) is the number of cars currently produced per week; the cost of production  is then \(f(a)\text{.}\)</p>
+<ul class="disc">
+<li>Say the number of cars produced is changed from \(a\) to \(a+\De x\) (where \(\De x\) is some small number.</li>
+<li>As \(x\) undergoes this change, the costs change from \(y=f(a)\) to \(f(a+\De x)\text{.}\) Hence<div class="displaymath">
+\begin{align*}
+\De y &amp;= f(a+\De x) - f(a)
+\end{align*}
+</div>
+</li>
+<li>
+<p>We can estimate this change using a linear approximation. Substituting \(x=a+\De x\) into the equation <a knowl="./knowl/eq_linApprox.html" title="Equation 3.4.3: Linear approximation">3.4.3</a> yields the approximation</p>
+<div class="displaymath">
+\begin{gather*}
+f(a+\De x)\approx f(a)+f'(a)(a+\De x-a)
+\end{gather*}
+</div>
+<p>and consequently the approximation</p>
+<div class="displaymath">
+\begin{gather*}
+\De y=f(a+\De x)-f(a)\approx f(a)+f'(a)\De x-f(a)
+\end{gather*}
+</div>
+<p>simplifies to the following neat estimate of \(\De y\text{:}\)</p>
+<article class="theorem-like"><h6 class="heading">
+<span class="type">Equation</span> <span class="codenumber">3.4.20</span> <span class="title">Linear approximation of \(\De y\)</span>
+</h6>
+<div class="displaymath">
+\begin{gather*}
+\De y\approx f'(a)\De x
+\end{gather*}
+</div></article>
+</li>
+<li>In the automobile manufacturing example, when the production level is \(a\) cars per week, increasing the production level by \(\De x\) will cost approximately \(f'(a)\De x\text{.}\) The additional cost per additional car, \(f'(a)\text{,}\)  is called the “marginal cost” of a car.</li>
+<li>
+<p>If we instead use the quadratic approximation (given by equation <a knowl="./knowl/eq_quadApprox.html" title="Equation 3.4.6: Quadratic approximation">3.4.6</a>) then we estimate</p>
+<div class="displaymath">
+\begin{gather*}
+f(a+\De x)\approx f(a)+f'(a)\De x+\half f''(a)\De x^2
+\end{gather*}
+</div>
+<p>and so</p>
+<div class="displaymath">
+\begin{align*}
+\De y&amp;=f(a+\De x)-f(a) \approx f(a)+f'(a)\De x +\half f''(a)\De x^2-f(a)
+\end{align*}
+</div>
+<p>which simplifies to</p>
+<article class="theorem-like"><h6 class="heading">
+<span class="type">Equation</span> <span class="codenumber">3.4.21</span> <span class="title">Quadratic approximation of \(\De y\)</span>
+</h6>
+<div class="displaymath">
+\begin{align*}
+\De y &amp;\approx f'(a)\De x+\half f''(a)\De x^2
+\end{align*}
+</div></article>
+</li>
+</ul>
+<span class="incontext"><a href="ssec_est_change.html#p-3561">in-context</a></span>
+</body>
+</html>

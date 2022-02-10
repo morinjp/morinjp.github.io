@@ -1,0 +1,70 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:16:28-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="example-like"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">3.3.9</span> <span class="title">Warming iced tea</span>
+</h6>
+<p>The temperature of a glass of iced tea is initially \(5^\circ\text{.}\) After 5 minutes, the tea has heated to \(10^\circ\) in a room where the air temperature is \(30^\circ\text{.}\)</p>
+<ol class="lower-alpha">
+<li>Determine the temperature as a function of time.</li>
+<li>What is the temperature after 10 minutes?</li>
+<li>Determine when the tea will reach a temperature of \(20^\circ\text{.}\)</li>
+</ol>
+<p><em class="alert">Solution</em> Part (a)</p>
+<ul class="disc">
+<li>Denote by \(T(t)\) the temperature of the tea \(t\) minutes after it was removed  from the fridge, and let \(A=30\) be the ambient temperature.</li>
+<li>By Newton's law of cooling,<div class="displaymath">
+\begin{gather*}
+\diff{T}{t}=K(T-A) = K(T-30)
+\end{gather*}
+</div>for some, as yet unknown, constant of proportionality \(K\text{.}\)</li>
+<li>By Corollary <a knowl="./knowl/cor_coolingDEsoln.html" title="Corollary 3.3.8">3.3.8</a>,<div class="displaymath">
+\begin{gather*}
+T(t) = [T(0)-30]\,e^{Kt} + 30
+=30-25 e^{Kt}
+\end{gather*}
+</div>since the initial temperature \(T(0)=5\text{.}\)</li>
+<li>This solution is not complete because it still contains an unknown constant, namely  \(K\text{.}\) We have not yet used the given data that \(T(5)=10\text{.}\) We can use it to determine \(K\text{.}\) At \(t=5\text{,}\)<div class="displaymath">
+\begin{align*}
+T(5) &amp;=30-25 e^{5K}=10 &amp; \text{rearrange}\\
+e^{5K} &amp;=\frac{20}{25}\\
+5K &amp;=\log\frac{20}{25} &amp; \text{and so}\\
+K &amp;=\frac{1}{5}\log\frac{4}{5}=-0.044629 &amp; \text{ to 6 digits}
+\end{align*}
+</div>
+</li>
+</ul>
+<p>Part (b)</p>
+<ul class="disc"><li>To find the temperature at 10 minutes we can just use the solution we have  determined above.<div class="displaymath">
+\begin{align*}
+T(10)&amp;=30-25 e^{10K}\\
+&amp;=30-25 e^{10\times\frac{1}{5}\log\frac{4}{5}}\\
+&amp;=30-25 e^{2\log\frac{4}{5}}  = 30-25 e^{\log\frac{16}{25}}\\
+&amp;=30-16=\text{$14^\circ$}
+\end{align*}
+</div>
+</li></ul>
+<p>Part (c)</p>
+<ul class="disc"><li>We can find when the temperature is \(20^\circ\) by solving \(T(t)=20\text{:}\)<div class="displaymath">
+\begin{align*}
+20 &amp;= 30-25 e^{Kt} &amp; \text{rearrange}\\
+e^{Kt} &amp;=\frac{10}{25} = \frac{2}{5}\\
+K t &amp;= \log \frac{2}{5}\\
+t &amp;= \frac{\log \frac{2}{5}}{K}\\
+&amp;= \text{20.5 minutes} &amp; \text{ to 1 decimal place}
+\end{align*}
+</div>
+</li></ul></article><span class="incontext"><a href="sec_newtonCooling.html#eg_SDEcoolingA">in-context</a></span>
+</body>
+</html>

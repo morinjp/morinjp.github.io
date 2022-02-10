@@ -1,0 +1,31 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:13:43-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>First, we manipulate our function to make it easier to differentiate:</p>
+<div class="displaymath">
+\begin{align*}
+f(x)&amp;=x^{-2}+(x^2-1)^{1/2}\\
+\end{align*}
+<p class="intertext">Now, we can use the power rule to differentiate \(\dfrac{1}{x^2}\text{.}\) This will be easier than differentiating \(\dfrac{1}{x^2}\) using quotient rule, but if you prefer, quotient rule will also work.</p>
+\begin{align*}
+f'(x)&amp;=-2x^{-3}+\frac{1}{2}(\textcolor{red}{x^2-1})^{-1/2}\cdot\diff{}{x}\{\textcolor{red}{x^2-1}\}\\
+&amp;=-2x^{-3}+\frac{1}{2}({x^2-1})^{-1/2}(2x)\\
+&amp;=\frac{-2}{x^3}+\frac{x}{\sqrt{x^2-1}}
+\end{align*}
+</div>
+<p>The function \(f(x)\) is only defined when \(x \neq 0\) and when \(x^2-1 \geq 0\text{.}\) That is, when \(x\) is in \((-\infty,-1] \cup [1,\infty)\text{.}\) We have an added restriction on the domain of \(f'(x)\text{:}\) \(x^2-1\) must not be zero. So, the domain of \(f'(x)\) is \((-\infty,-1)\cup(1,\infty)\text{.}\)</p>
+<span class="incontext"><a href="exercises-14.html#p-1996">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:11:28-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><article class="example-like"><p>Compute the following limit:</p>
+<div class="displaymath">
+\begin{gather*}
+\lim_{x \to \infty} \left( x^{7/5}-x \right)
+\end{gather*}
+</div>
+<p>In this case we cannot use the arithmetic of limits to write this as</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{x \to \infty} \left( x^{7/5}-x \right)
+&amp;= \left( \lim_{x \to \infty} x^{7/5}\right)
+- \left( \lim_{x \to \infty} x \right)\\
+&amp;= \infty -\infty
+\end{align*}
+</div>
+<p>because the limits do not exist. We can only use the limit laws when the limits  exist. So we should go back and think some more.</p>
+<p>When \(x\) is very large, \(x^{7/5} = x\cdot x^{2/5}\) will be much larger than \(x\text{,}\) so the  \(x^{7/5}\) term will dominate the \(x\) term. So factor out \(x^{7/5}\) and rewrite it as</p>
+<div class="displaymath">
+\begin{align*}
+x^{7/5}-x &amp;= x^{7/5} \left(1 - \frac{1}{x^{2/5}} \right)
+\end{align*}
+</div>
+<p>Consider what happens to each of the factors as \(x \to \infty\)</p>
+<ul class="disc">
+<li>For large \(x\text{,}\) \(x^{7/5} \gt x\) (this is actually true for any \(x \gt 1\)).  In the limit as \(x \to +\infty\text{,}\) \(x\) becomes arbitrarily large and  positive, and \(x^{7/5}\) must be bigger still, so it follows that<div class="displaymath">
+\begin{align*}
+\lim_{x \to \infty} x^{7/5} &amp;= + \infty.
+\end{align*}
+</div>
+</li>
+<li>On the other hand, \((1-x^{-2/5})\) becomes closer and closer to \(1\) —  we can use the arithmetic of limits to write this as<div class="displaymath">
+\begin{align*}
+\lim_{x \to \infty} (1-x^{-2/5}) &amp;= \lim_{x \to \infty} 1 - \lim_{x \to
+\infty} x^{-2/5} = 1-0 = 1
+\end{align*}
+</div>
+</li>
+</ul>
+<p>So the product of these two factors will be come larger and larger (and  positive) as \(x\) moves off to infinity. Hence we have</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{x \to \infty} x^{7/5} \left(1 - 1/x^{2/5} \right) &amp;= + \infty
+\end{align*}
+</div></article></body>
+</html>

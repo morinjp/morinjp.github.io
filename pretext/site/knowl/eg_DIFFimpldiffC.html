@@ -1,0 +1,54 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:14:16-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="example-like"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">2.11.4</span> <span class="title">A rough game of baseball</span>
+</h6>
+<p>You are standing at the origin. At time zero a pitcher throws a ball at your head <a knowl="./knowl/fn-93-hidden.html" title="Footnote 2.11.2"><sup> 2 </sup></a>.</p>
+<figure class="figure-like"><div style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="text/figs/baseball.svg" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span> <span class="codenumber">2.11.5</span> </figcaption></figure><p>The position of the (centre of the) ball at time \(t\) is \(x(t)=d-vt\text{,}\) where \(d\) is the distance from your head to the  pitcher's mound and \(v\) is the ball's velocity. Your eye sees the ball filling <a knowl="./knowl/fn-94-hidden.html" title="Footnote 2.11.3"><sup> 3 </sup></a> an angle \(2\theta(t)\) with</p>
+<div class="displaymath">
+\begin{gather*}
+\sin\big(\theta(t)\big)=\frac{r}{d-vt}
+\end{gather*}
+</div>
+<p>where \(r\) is the radius of the baseball. The question is “How fast is \(\theta\) growing at time \(t\text{?}\)” That is, what is \(\diff{\theta}{t}\text{?}\)</p>
+<ul class="disc">
+<li>We don't know (yet) how to solve this equation to find \(\theta(t)\) explicitly. So we use implicit differentiation.</li>
+<li>To do so we apply \(\diff{}{t}\) to both sides of our equation. This gives<div class="displaymath">
+\begin{gather*}
+\cos\big(\theta(t)\big)\cdot\theta'(t)=\frac{rv}{(d-vt)^2}
+\end{gather*}
+</div>
+</li>
+<li>Then we solve for \(\theta'(t)\text{:}\)<div class="displaymath">
+\begin{gather*}
+\theta'(t)=\frac{rv}{(d-vt)^2\cos\big(\theta(t)\big)}
+\end{gather*}
+</div>
+</li>
+<li>As is often the case, when using implicit differentiation, this answer is not very satisfying because it contains \(\theta(t)\text{,}\) for which we still do not have an explicit formula. However in this case we can get an explicit formula for \(\cos\big(\theta(t)\big)\text{,}\) without having an explicit formula for \(\theta(t)\text{,}\) just by looking at the right–angled triangle in Figure <a knowl="./knowl/fig_DIFFbaseball.html" title="Figure 2.11.5">2.11.5</a>, above.</li>
+<li>The hypotenuse of that triangle has length \(d-vt\text{.}\) By Pythagoras, the length of the side of the triangle adjacent of the angle \(\theta(t)\) is \(\sqrt{(d-vt)^2-r^2}\text{.}\) So<div class="displaymath">
+\begin{equation*}
+\cos\big(\theta(t)\big)=\frac{\sqrt{(d-vt)^2-r^2}}{d-vt}
+\end{equation*}
+</div>and<div class="displaymath">
+\begin{gather*}
+\theta'(t)=\frac{rv}{(d-vt)\sqrt{(d-vt)^2-r^2}}
+\end{gather*}
+</div>
+</li>
+</ul></article><span class="incontext"><a href="subsection-35.html#eg_DIFFimpldiffC">in-context</a></span>
+</body>
+</html>

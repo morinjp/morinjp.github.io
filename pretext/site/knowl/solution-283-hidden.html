@@ -1,0 +1,29 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:13:49-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><div class="solution">
+<p>Let \(f(x)=xe^{-(x^2-1)/2}=xe^{(1-x^2)/2}\text{.}\) Then, using the product rule,</p>
+<div class="displaymath">
+\begin{align*}
+f'(x)&amp;=e^{(1-x^2)/2}+x\cdot\diff{}{x}\left\{e^{(1-x^2)/2}\right\}\\
+\end{align*}
+<p class="intertext">Here, we need the chain rule:</p>
+\begin{align*}
+&amp;=e^{(1-x^2)/2}+x\cdot e^{\textcolor{red}{(1-x^2)/2}}\diff{}{x}\left\{\textcolor{red}{\frac{1}{2}(1-x^2)}\right\}\\
+&amp;=e^{(1-x^2)/2}+x\cdot e^{{(1-x^2)/2}}\cdot (-x)\\
+&amp;=(1-x^2)e^{(1-x^2)/2}
+\end{align*}
+</div>
+<p>There is no power of \(e\) that is equal to zero; so if the product above is zero, it must be that \(1-x^2=0\text{.}\) This happens for \(x=\pm 1\text{.}\) On the curve, when \(x=1\text{,}\) \(y=1\text{,}\) and when \(x=-1\text{,}\) \(y=-1\text{.}\) So the points are \((1,1)\) and \((-1,-1)\text{.}\)</p>
+</div></body>
+</html>

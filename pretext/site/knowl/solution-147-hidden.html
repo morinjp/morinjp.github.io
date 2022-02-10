@@ -1,0 +1,42 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:12:20-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><div class="solution">
+<p>In general, this is false. The key problem that can arise is that \(f(x)\) might not be continuous at \(x=1\text{.}\)  One example is the function</p>
+<div class="displaymath">
+\begin{equation*}
+f(x)=\left\{\begin{array}{ll}
+x&amp;x \lt 0\\
+x-1&amp;x \geq 0
+\end{array}\right.
+\end{equation*}
+</div>
+<p>where \(f'(x)=1\) whenever \(x \neq 0\)  (so in particular, \(\ds\lim_{x \to 0^-}f'(x)=\ds\lim_{x \to 0^+} f'(x)=1\)) but \(f'(0)\) does not exist.</p>
+<p>There are two ways to see that \(f'(0)\) does not exist. One is to notice that \(f\) is not continuous at \(x=0\text{.}\)</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:17%;margin-right:17%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-128.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p>Another way to see that \(f'(0)\) does not exist is to use the definition of the derivative. Remember, in order for a limit to exist, both one-sided limits must exist. Let's consider the limit from the left. If \(h \to 0^-\text{,}\) then \(h \lt 0\text{,}\) so \(f(h)\) is equal to \(h\) (not \(h-1\)).</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{h \to 0^-}\frac{f(0+h)-f(0)}{h}&amp;=\lim_{h \to 0^-}\frac{(h)-(-1)}{h}\\
+&amp;=\lim_{h \to 0^-}\frac{h+1}{h}\\
+&amp;=\lim_{h \to 0^-}1+\frac{1}{h}\\
+&amp;=-\infty\\
+\end{align*}
+<p class="intertext">In particular, this limit does not exist. Since the one-sided limit does not exist,</p>
+\begin{align*}
+\lim_{h \to 0}\frac{f(0+h)-f(0)}{h}&amp;=DNE
+\end{align*}
+</div>
+<p>and so \(f'(0)\) does not exist.</p>
+</div></body>
+</html>

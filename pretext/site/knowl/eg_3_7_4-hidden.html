@@ -1,0 +1,50 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:21:29-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><article class="example-like"><p>Consider the limit</p>
+<div class="displaymath">
+\begin{gather*}
+\lim_{x\to\infty} \frac{ e^x + e^{-x} }{e^x - e^{-x}}
+\end{gather*}
+</div>
+<p>Clearly both numerator and denominator go to \(\infty\text{,}\) so we have a \(\frac\infty\infty\) indeterminate form. Naively applying l'Hôpital's rule gives</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{x\to\infty} \frac{ e^x + e^{-x} }{e^x - e^{-x}}
+&amp;= \lim_{x\to\infty} \frac{ e^x - e^{-x} }{e^x + e^{-x}}
+\end{align*}
+</div>
+<p>which is again a \(\frac\infty\infty\) indeterminate form. So apply l'Hôpital's rule again:</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{x\to\infty} \frac{ e^x - e^{-x} }{e^x + e^{-x}}
+&amp;= \lim_{x\to\infty} \frac{ e^x + e^{-x} }{e^x - e^{-x}}
+\end{align*}
+</div>
+<p>which is right back where we started!</p>
+<p>The correct approach to such a limit is to apply the methods we learned in Chapter <a href="chap_limits.html" class="xref" title="Chapter 1: Limits">1</a> and rewrite</p>
+<div class="displaymath">
+\begin{align*}
+\frac{e^x+e^{-x}}{e^x-e^{-x}} &amp;= \frac{e^x(1+e^{-2x})}{e^x(1-e^{-2x})}
+= \frac{1+e^{-2x}}{1-e^{-2x}}
+\end{align*}
+</div>
+<p>and then take the limit.</p>
+<p>A similar sort of l'Hôpital-rule-loop will occur if you naively apply l'Hôpital's rule to the limit</p>
+<div class="displaymath">
+\begin{gather*}
+\lim_{x\to\infty} \frac{\sqrt{4x^2+1}}{5x-1}
+\end{gather*}
+</div>
+<p>which appeared in Example <a knowl="./knowl/eg_lim_tricky.html" title="Example 1.5.6: Be careful of limits involving roots">1.5.6</a>.</p></article></body>
+</html>

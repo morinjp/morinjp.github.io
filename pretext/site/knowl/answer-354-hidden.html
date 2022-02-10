@@ -1,0 +1,34 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:14:39-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><div class="solution">
+<p>Let \(\theta = \arcsin x\text{.}\) Then \(\theta\) is the angle of a right triangle that gives \(\sin \theta = x\text{.}\) In particular, the ratio of the opposite side to the hypotenuse is \(x\text{.}\) So, we have a  triangle that looks like this:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-187.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p>where the length of the adjacent side came from the Pythagorean Theorem. Now,</p>
+<div class="displaymath">
+\begin{equation*}
+\cot\left(\arcsin x\right) = \cot \theta = \frac{\mbox{adj}}{\mbox{opp}} = \frac{\sqrt{1-x^2}}{x}
+\end{equation*}
+</div>
+<p>From here, we differentiate using the quotient rule:</p>
+<div class="displaymath">
+\begin{align*}
+\diff{}{x}\left\{\frac{\sqrt{1-x^2}}{x}
+\right\}&amp;=
+\frac{x\frac{-2x}{2\sqrt{1-x^2}}-\sqrt{1-x^2}}{x^2}\\
+&amp;=\frac{-x^2-(1-x^2)}{x^2\sqrt{1-x^2}}\\
+&amp;=\frac{-1}{x^2\sqrt{1-x^2}}
+\end{align*}
+</div>
+</div></body>
+</html>

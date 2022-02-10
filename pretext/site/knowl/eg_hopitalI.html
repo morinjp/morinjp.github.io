@@ -1,0 +1,63 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:21:29-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="example-like"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">3.7.13</span> <span class="title">A messier double l'Hôpital</span>
+</h6>
+<p>Compute the limit</p>
+<div class="displaymath">
+\begin{gather*}
+\lim_{x\rightarrow 0+} \frac{\log x}{\tan\big(\frac{\pi}{2}-x\big)}
+\end{gather*}
+</div>
+<p>We can compute this using l'Hôpital's rule twice:</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{x\rightarrow 0+}\underbrace{\frac{\log x}
+{\tan\big(\frac{\pi}{2}-x\big)}}_{\atp
+{\mathrm{num}\rightarrow -\infty}
+{\mathrm{den}\rightarrow +\infty}}
+&amp; =\lim_{x\rightarrow 0+}\frac{\frac{1}{x}}
+{-\sec^2(\frac{\pi}{2}-x)}
+=-\lim_{x\rightarrow 0+}\underbrace{\frac{\cos^2(\frac{\pi}{2}-x)}{x}}_{\atp
+{\mathrm{num}\rightarrow 0}
+{\mathrm{den}\rightarrow 0}}\\
+&amp;=-\lim_{x\rightarrow 0+}\underbrace{\frac
+{2\cos(\frac{\pi}{2}-x)\sin(\frac{\pi}{2}-x)}{1}}_{\atp
+{\mathrm{num}\rightarrow 0}
+{\mathrm{den}\rightarrow 1}}
+=0
+\end{align*}
+</div>
+<p>The first application of L'Hôpital's was with</p>
+<div class="displaymath">
+\begin{align*}
+f(x) &amp;= \log x &amp;
+g(x) &amp;=\tan\Big(\frac{\pi}{2}-x\Big)\\
+f'(x)&amp;=\frac{1}{x}\qquad&amp;
+g'(x)&amp;=-\sec^2\Big(\frac{\pi}{2}-x\Big)
+\end{align*}
+</div>
+<p>and the second time with</p>
+<div class="displaymath">
+\begin{align*}
+f(x) &amp;= \cos^2\Big(\frac{\pi}{2}-x\Big) &amp;
+g(x) &amp;=x\\
+f'(x)&amp;=2\cos\Big(\frac{\pi}{2}-x\Big)
+\Big[-\sin\Big(\frac{\pi}{2}-x\Big)\Big](-1)\qquad&amp;
+g'(x)&amp;=1
+\end{align*}
+</div></article><span class="incontext"><a href="ssec_3_7_2.html#eg_hopitalI">in-context</a></span>
+</body>
+</html>

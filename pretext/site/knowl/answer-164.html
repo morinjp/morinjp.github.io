@@ -1,0 +1,36 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:12:26-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="solution">
+<h6 class="heading">
+<span class="type">Answer</span> <span class="codenumber">2.2.4.24.1</span>
+</h6>
+<div class="displaymath">
+\begin{align*}
+p'(x) &amp;= \lim_{h \rightarrow 0} \frac{p(x+h)-p(x)}{h}\\
+&amp;= \lim_{h \rightarrow 0} \frac{f(x+h)+g(x+h)-f(x)-g(x)}{h}\\
+&amp;= \lim_{h \rightarrow 0} \frac{f(x+h)-f(x)+g(x+h)-g(x)}{h}\\
+&amp;= \lim_{h \rightarrow 0}\left[\frac{f(x+h)-f(x)}{h}+
+\frac{g(x+h)-g(x)}{h}\right]\\
+(*)&amp;= \left[\lim_{h \rightarrow 0} \frac{f(x+h)-f(x)}{h}\right]+ \left[\lim_{h \rightarrow 0}
+\frac{g(x+h)-g(x)}{h}\right]\\
+&amp;= f'(x)+g'(x)
+\end{align*}
+</div>
+<p>At step (\(*\)), we use the limit law that \(\displaystyle\lim_{x \rightarrow a}\left[ F(x)+G(x)\right] = \displaystyle\lim_{x \rightarrow a} F(x)+\displaystyle\lim_{x \rightarrow a}G(x)\text{,}\) as long as  \(\displaystyle\lim_{x \rightarrow a} F(x)\) and \(\displaystyle\lim_{x \rightarrow a}G(x)\) exist. Because the problem states that \(f'(x)\) and \(g'(x)\) exist, we know that \(\displaystyle\lim_{h \rightarrow 0} \frac{f(x+h)-f(x)}{h}\) and \(\displaystyle\lim_{h \rightarrow 0}
+\frac{g(x+h)-g(x)}{h}\) exist, so our work is valid.</p>
+</div>
+<span class="incontext"><a href="exercises-8.html#answer-164">in-context</a></span>
+</body>
+</html>

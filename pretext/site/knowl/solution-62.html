@@ -1,0 +1,36 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:11:19-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="solution">
+<h6 class="heading">
+<span class="type">Solution</span> <span class="codenumber">1.4.2.34.1</span>
+</h6>
+<p>There's a lot going on inside that sine function... and we don't have to care about any of it. No matter what horrible thing we put inside a sine function, the sine function will spit out a number between \(-1\) and \(1\text{.}\) So that means we can bound our horrible function like this:</p>
+<div class="displaymath">
+\begin{equation*}
+(x-1)^2\cdot({\textcolor{red}{-1}}) \leq (x-1)^2{\textcolor{red}{\sin\left[\left(\dfrac{x^2-3x+2}{x^2-2x+1}\right)^2+15\right]}}
+\leq(x-1)^2\cdot({\textcolor{red}{1}})
+\end{equation*}
+</div>
+<p>Since \(\displaystyle\lim_{x \rightarrow 1}(x-1)^2\cdot(-1) = \displaystyle\lim_{x\rightarrow1}(x-1)^2\cdot(1)=0\text{,}\) the Squeeze Theorem tells us that</p>
+<div class="displaymath">
+\begin{equation*}
+\displaystyle\lim_{x \rightarrow 1} (x-1)^2\sin\left[\left(\dfrac{x^2-3x+2}{x^2-2x+1}\right)^2+15\right]=0
+\end{equation*}
+</div>
+<p>as well.</p>
+</div>
+<span class="incontext"><a href="exercises-4.html#solution-62">in-context</a></span>
+</body>
+</html>

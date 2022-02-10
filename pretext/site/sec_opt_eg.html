@@ -1,0 +1,931 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:03:09-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Max/Min Examples</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.1/pretext.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on2.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="RQS.css">
+<link href="https://pretextbook.org/css/0.1/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\require{cancel}\newcommand{\dee}[1]{\mathrm{d}#1}
+\newcommand{\half}{ \frac{1}{2} }
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ts}{\textstyle}
+\newcommand{\es}{ {\varnothing}}
+\newcommand{\st}{ {\mbox{ s.t. }} }
+\newcommand{\pow}[1]{ \mathcal{P}\left(#1\right) }
+\newcommand{\set}[1]{ \left\{#1\right\} }
+\newcommand{\lin}{{\text{LIN}}}
+\newcommand{\quot}{{\text{QR}}}
+\newcommand{\simp}{{\text{SMP}}}
+\newcommand{\diff}[2]{ \frac{\mathrm{d}#1}{\mathrm{d}#2}}
+\newcommand{\bdiff}[2]{ \frac{\mathrm{d}}{\mathrm{d}#2} \left( #1 \right)}
+\newcommand{\ddiff}[3]{ \frac{\mathrm{d}^#1#2}{\mathrm{d}{#3}^#1}}
+\renewcommand{\neg}{ {\sim} }
+\newcommand{\limp}{ {\;\Rightarrow\;} }
+\newcommand{\nimp}{ {\;\not\Rightarrow\;} }
+\newcommand{\liff}{ {\;\Leftrightarrow\;} }
+\newcommand{\niff}{ {\;\not\Leftrightarrow\;} }
+\newcommand{\De}{\Delta}
+\newcommand{\bbbn}{\mathbb{N}}
+\newcommand{\bbbr}{\mathbb{R}}
+\newcommand{\bbbp}{\mathbb{P}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\Si}{\Sigma}
+
+\newcommand{\arccsc}{\mathop{\mathrm{arccsc}}}
+\newcommand{\arcsec}{\mathop{\mathrm{arcsec}}}
+\newcommand{\arccot}{\mathop{\mathrm{arccot}}}
+\newcommand{\erf}{\mathop{\mathrm{erf}}}
+\newcommand{\smsum}{\mathop{{\ts \sum}}}
+\newcommand{\atp}[2]{ \genfrac{}{}{0in}{}{#1}{#2} }
+
+\newcommand{\ave}{\mathrm{ave}}
+\newcommand{\llt}{\left \lt }
+\newcommand{\rgt}{\right \gt }
+
+
+\newcommand{\YEaxis}[2]{\draw[help lines] (-#1,0)--(#1,0) node[right]{$x$};\draw[help lines] (0,-#2)--(0,#2) node[above]{$y$};}
+
+\newcommand{\YEaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$x$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YEtaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+\newcommand{\YEtaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$}; \draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YExcoord}[2]{\draw (#1,.2)--(#1,-.2) node[below]{$#2$};}
+\newcommand{\YEycoord}[2]{\draw (.2,#1)--(-.2,#1) node[left]{$#2$};}
+\newcommand{\YEnxcoord}[2]{\draw (#1,-.2)--(#1,.2) node[above]{$#2$};}
+\newcommand{\YEnycoord}[2]{\draw (-.2,#1)--(.2,#1) node[right]{$#2$};}
+
+\newcommand{\YEstickfig}[3]{
+\draw (#1,#2) arc(-90:270:2mm);
+\draw (#1,#2)--(#1,#2-.5) (#1-.25,#2-.75)--(#1,#2-.5)--(#1+.25,#2-.75) (#1-.2,#2-.2)--(#1+.2,#2-.2);}
+
+
+\newcommand{\IBP}[7]{
+\begin{array}{|c  | l | l |}
+\hline
+\color{red}{\text{Option 1:}}
+&amp; u=#2
+&amp;\color{red}{\dee{u}=#3 ~ \dee{#1}}
+\\
+&amp; \dee{v}=#5~\dee{#1}
+&amp;\color{red}{v=#7}
+\\
+\hline
+\color{blue}{\text{Option 2:}}
+&amp; u=#5
+&amp;\color{blue}{\dee{u}=#6 ~ \dee{#1}}
+\\
+&amp;\dee{v}=#2 \dee{#1}
+&amp;\color{blue}{v=#4}
+\\
+\hline
+\end{array}
+}
+
+
+\renewcommand{\textcolor}[2]{{\color{#1}{#2}}}
+
+
+\newcommand{\trigtri}[4]{
+\begin{tikzpicture}
+\draw (-.5,0)--(2,0)--(2,1.5)--cycle;
+\draw (1.8,0) |- (2,.2);
+\draw[double] (0,0) arc(0:30:.5cm);
+\draw (0,.2) node[right]{$#1$};
+\draw (1,-.5) node{$#2$};
+\draw (2,.75) node[right]{$#3$};
+\draw (.6,1.1) node[rotate=30]{$#4$};
+\end{tikzpicture}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="clp_1_dc.html"><span class="title">CLP-1 Differential Calculus</span></a></h1>
+<p class="byline">Joel Feldman, Andrew Rechnitzer, Elyse Yeager</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="ssec_find_maxmin.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="sec_optimise.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="subsection-62.html" title="Next">Next</a></span></div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="ssec_find_maxmin.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="sec_optimise.html" title="Up">Up</a><a class="next-button button toolbar-item" href="subsection-62.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="index.html" data-scroll="index"><span class="title">Front Matter</span></a></h2>
+<ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface-2.html" data-scroll="preface-2">Using the exercises in this book</a></li>
+<li><a href="preface-3.html" data-scroll="preface-3">Feedback about the text</a></li>
+</ul>
+<h2 class="link"><a href="chap_basics.html" data-scroll="chap_basics"><span class="codenumber">0</span> <span class="title">The basics</span></a></h2>
+<ul>
+<li><a href="sec_0_1.html" data-scroll="sec_0_1">Numbers</a></li>
+<li><a href="sec_sets.html" data-scroll="sec_sets">Sets</a></li>
+<li><a href="sec_0_3.html" data-scroll="sec_0_3">Other Important Sets</a></li>
+<li><a href="sec_0_4.html" data-scroll="sec_0_4">Functions</a></li>
+<li><a href="sec_parsing.html" data-scroll="sec_parsing">Parsing Formulas</a></li>
+<li><a href="sec_inverse_functions.html" data-scroll="sec_inverse_functions">Inverse Functions</a></li>
+</ul>
+<h2 class="link"><a href="chap_limits.html" data-scroll="chap_limits"><span class="codenumber">1</span> <span class="title">Limits</span></a></h2>
+<ul>
+<li><a href="sec_first_lim.html" data-scroll="sec_first_lim">Drawing Tangents and a First Limit</a></li>
+<li><a href="sec_velocity.html" data-scroll="sec_velocity">Another Limit and Computing Velocity</a></li>
+<li><a href="sec_lim_func.html" data-scroll="sec_lim_func">The Limit of a Function</a></li>
+<li><a href="sec_1_4.html" data-scroll="sec_1_4">Calculating Limits with Limit Laws</a></li>
+<li><a href="sec_1_5.html" data-scroll="sec_1_5">Limits at Infinity</a></li>
+<li><a href="sec_1_6.html" data-scroll="sec_1_6">Continuity</a></li>
+<li><a href="sec_opt_formal_limit.html" data-scroll="sec_opt_formal_limit">(Optional) — Making the Informal a Little More Formal</a></li>
+<li><a href="sec_lim_inf_formal.html" data-scroll="sec_lim_inf_formal">(Optional) — Making Infinite Limits a Little More Formal</a></li>
+<li><a href="sec_proof_arith_lim.html" data-scroll="sec_proof_arith_lim">(Optional) — Proving the Arithmetic of Limits</a></li>
+</ul>
+<h2 class="link"><a href="chap_deriv.html" data-scroll="chap_deriv"><span class="codenumber">2</span> <span class="title">Derivatives</span></a></h2>
+<ul>
+<li><a href="sec_2_1.html" data-scroll="sec_2_1">Revisiting Tangent Lines</a></li>
+<li><a href="sec_def_deriv.html" data-scroll="sec_def_deriv">Definition of the Derivative</a></li>
+<li><a href="sec_2_3.html" data-scroll="sec_2_3">Interpretations of the Derivative</a></li>
+<li><a href="sec_2_4.html" data-scroll="sec_2_4">Arithmetic of Derivatives - a Differentiation Toolbox</a></li>
+<li><a href="sec_proof_arith_deriv.html" data-scroll="sec_proof_arith_deriv">Proofs of the Arithmetic of Derivatives</a></li>
+<li><a href="sec_2_6.html" data-scroll="sec_2_6">Using the Arithmetic of Derivatives –  Examples</a></li>
+<li><a href="sec_exp_func.html" data-scroll="sec_exp_func">Derivatives of Exponential Functions</a></li>
+<li><a href="sec_diff_trig.html" data-scroll="sec_diff_trig">Derivatives of Trigonometric Functions</a></li>
+<li><a href="sec_chain_rule.html" data-scroll="sec_chain_rule">One More Tool  – the Chain Rule</a></li>
+<li><a href="sec_diff_logs.html" data-scroll="sec_diff_logs">The Natural Logarithm</a></li>
+<li><a href="sec_2_11.html" data-scroll="sec_2_11">Implicit Differentiation</a></li>
+<li><a href="sec_invTrig.html" data-scroll="sec_invTrig">Inverse Trigonometric Functions</a></li>
+<li><a href="sec_mvt.html" data-scroll="sec_mvt">The Mean Value Theorem</a></li>
+<li><a href="sec_higher_diff.html" data-scroll="sec_higher_diff">Higher Order Derivatives</a></li>
+<li><a href="sec_cont_deriv.html" data-scroll="sec_cont_deriv">(Optional) — Is \(\lim_{x\to c}f'(x)\) Equal to \(f'(c)\text{?}\)</a></li>
+</ul>
+<h2 class="link"><a href="chap_appl_deriv.html" data-scroll="chap_appl_deriv"><span class="codenumber">3</span> <span class="title">Applications of derivatives</span></a></h2>
+<ul>
+<li><a href="sec_vel_acc.html" data-scroll="sec_vel_acc">Velocity and Acceleration</a></li>
+<li><a href="sec_rrates.html" data-scroll="sec_rrates">Related Rates</a></li>
+<li><a href="sec_ExpGthDecay.html" data-scroll="sec_ExpGthDecay">Exponential Growth and Decay</a></li>
+<li><a href="sec_DIFFTaylor.html" data-scroll="sec_DIFFTaylor">Taylor Polynomials</a></li>
+<li><a href="sec_optimise.html" data-scroll="sec_optimise">Optimisation</a></li>
+<li><a href="sec_curve_sketch.html" data-scroll="sec_curve_sketch">Sketching Graphs</a></li>
+<li><a href="sec_4_7.html" data-scroll="sec_4_7">L'Hôpital's Rule and Indeterminate Forms</a></li>
+</ul>
+<h2 class="link"><a href="chapter-5.html" data-scroll="chapter-5"><span class="codenumber">4</span> <span class="title">Towards Integral Calculus</span></a></h2>
+<ul><li><a href="sec_antidiff.html" data-scroll="sec_antidiff">Introduction to Antiderivatives</a></li></ul>
+<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Appendices</span></a></h2>
+<h2 class="link"><a href="app_highschool.html" data-scroll="app_highschool"><span class="codenumber">A</span> <span class="title">High School Material</span></a></h2>
+<ul>
+<li><a href="sec_simtri.html" data-scroll="sec_simtri">Similar Triangles</a></li>
+<li><a href="sec_A_2.html" data-scroll="sec_A_2">Pythagoras</a></li>
+<li><a href="sec_A_3.html" data-scroll="sec_A_3">Trigonometry — Definitions</a></li>
+<li><a href="app_rad_arc_sec.html" data-scroll="app_rad_arc_sec">Radians, Arcs and Sectors</a></li>
+<li><a href="app_sec_trig_graphs.html" data-scroll="app_sec_trig_graphs">Trigonometry — Graphs</a></li>
+<li><a href="sec_A_6.html" data-scroll="sec_A_6">Trigonometry — Special Triangles</a></li>
+<li><a href="sec_A_7.html" data-scroll="sec_A_7">Trigonometry — Simple Identities</a></li>
+<li><a href="sec_trig_add.html" data-scroll="sec_trig_add">Trigonometry — Add and Subtract Angles</a></li>
+<li><a href="sec_inv_trig.html" data-scroll="sec_inv_trig">Inverse Trig Functions</a></li>
+<li><a href="app_sec_areas.html" data-scroll="app_sec_areas">Areas</a></li>
+<li><a href="sec_volumes.html" data-scroll="sec_volumes">Volumes</a></li>
+<li><a href="sec_powers.html" data-scroll="sec_powers">Powers</a></li>
+<li><a href="sec_logs.html" data-scroll="sec_logs">Logarithms</a></li>
+<li><a href="sec_must_deriv.html" data-scroll="sec_must_deriv">You Should be Able to Derive</a></li>
+</ul>
+<h2 class="link"><a href="chap_app_B.html" data-scroll="chap_app_B"><span class="codenumber">B</span> <span class="title">Origin of Trig, Area and Volume Formulas</span></a></h2>
+<ul>
+<li><a href="sec_B_1.html" data-scroll="sec_B_1">Theorems about Triangles</a></li>
+<li><a href="sec_B_2.html" data-scroll="sec_B_2">Trigonometry</a></li>
+<li><a href="sec_B_3.html" data-scroll="sec_B_3">Inverse Trigonometric Functions</a></li>
+<li><a href="sec_B_4.html" data-scroll="sec_B_4">Cosine and Sine Laws</a></li>
+<li><a href="sec_B_5.html" data-scroll="sec_B_5">Circles, cones and spheres</a></li>
+</ul>
+<h2 class="link"><a href="app_root_finding.html" data-scroll="app_root_finding"><span class="codenumber">C</span> <span class="title">Root Finding</span></a></h2>
+<ul>
+<li><a href="sec_C_1.html" data-scroll="sec_C_1">Newton's Method</a></li>
+<li><a href="sec_C_2.html" data-scroll="sec_C_2">The Error Behaviour of Newton's Method</a></li>
+<li><a href="sec_C_3.html" data-scroll="sec_C_3">The false position (regula falsi) method</a></li>
+<li><a href="sec_C_4.html" data-scroll="sec_C_4">The secant method</a></li>
+<li><a href="sec_C_5.html" data-scroll="sec_C_5">The Error Behaviour of the Secant Method</a></li>
+</ul>
+<h2 class="link"><a href="app_hint.html" data-scroll="app_hint"><span class="codenumber">D</span> <span class="title">Hints for Exercises</span></a></h2>
+<h2 class="link"><a href="app_answ.html" data-scroll="app_answ"><span class="codenumber">E</span> <span class="title">Answers to Exercises</span></a></h2>
+<h2 class="link"><a href="app_soln.html" data-scroll="app_soln"><span class="codenumber">F</span> <span class="title">Solutions to Exercises</span></a></h2></nav><div class="extras"><nav><a class="feedback-link" href="mailto:clp@ugrad.math.ubc.ca?subject=clp-pretext" target="_blank">Feedback</a><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="mathbook-content"><section class="subsection" id="sec_opt_eg"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.5.3</span> <span class="title">Max/Min Examples</span>
+</h3>
+<a href="sec_opt_eg.html" class="permalink">¶</a><p id="p-4204">As noted at the beginning of this section, the problem of finding maxima and minima is a very important application of differential calculus in the real world. We now turn to a number of examples of this process. But to guide the reader we will describe a general procedure to follow for these problems.</p>
+<ol id="p-4205" class="decimal">
+<li id="li-1267">Read — read the problem carefully. Work out what information is given in the statement of the problem and what we are being asked to compute.</li>
+<li id="li-1268">Diagram — draw a diagram. This will typically help you to identify what you know about the problem and what quantities you need to work out.</li>
+<li id="li-1269">Variables — assign variables to the quantities in the problem along with their units. It is typically a good idea to make sensible choices of variable names: \(A\) for area, \(h\) for height, \(t\) for time etc.</li>
+<li id="li-1270">Relations — find relations between the variables. By now you should know the quantity we are interested in (the one we want to maximise or minimise) and we need to establish a relation between it and the other variables.</li>
+<li id="li-1271">Reduce — the relation down to a function of one variable. In order to apply the calculus we know, we must have a function of a single variable. To do this we need to use all the information we have to eliminate variables. We should also work out the domain of the resulting function.</li>
+<li id="li-1272">Maximise or minimise — we can now apply the methods of Corollary <a knowl="./knowl/cor_find_maxmin.html" title="Corollary 3.5.13">3.5.13</a> to find the maximum or minimum of the quantity we need (as the problem dictates).</li>
+<li id="li-1273">Be careful — make sure your answer makes sense. Make sure quantities are physical. For example, lengths and areas cannot be negative.</li>
+<li id="li-1274">Answer the question — be sure your answer really answers the question asked in the problem.</li>
+</ol>
+<p id="p-4206">Let us start with a relatively simple problem:</p>
+<article class="example-like" id="APPglobalMaxMinB"><a knowl="" class="id-ref" refid="hk-APPglobalMaxMinB"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">3.5.15</span> <span class="title">Constructing a container of maximal volume</span>
+</h6></a></article><div id="hk-APPglobalMaxMinB" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-4207">A closed rectangular container with a square base is to be made from two different materials. The material for the base costs $5 per square meter, while the material for the other five sides costs $1 per square meter. Find the dimensions of the container which has the largest possible volume if the total cost of materials is $72.</p>
+<p id="p-4208"><em class="alert">Solution</em> We can follow the steps we outlined above to find the solution.</p>
+<ul class="disc">
+<li id="li-1275">We need to determine the area of the two types of materials used and the corresponding total cost.</li>
+<li id="li-1276">
+<p id="p-4209">Draw a picture of the box.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/container.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p id="p-4210">The more useful picture is the unfolded box on the right.</p>
+</li>
+<li id="li-1277">In the picture we have already introduced two variables. The square base has side-length \(b\) metres and it has height \(h\) metres. Let the area of the base be \(A_b\) and the area of the other fives sides be \(A_s\) (both in \(m^2\)), and the total cost be \(C\) (in dollars). Finally let the volume enclosed be \(V m^3\text{.}\)</li>
+<li id="li-1278">Some simple geometry tells us that<div class="displaymath">
+\begin{align*}
+A_b &amp;= b^2\\
+A_s &amp;= 4 bh + b^2\\
+V &amp;= b^2h\\
+C &amp;= 5 \cdot A_b + 1\cdot A_s = 5b^2+4bh+b^2 = 6b^2+4bh.
+\end{align*}
+</div>
+</li>
+<li id="li-1279">To eliminate one of the variables we use the fact that the total cost is $72.<div class="displaymath">
+\begin{align*}
+C &amp;= 6b^2+4bh = 72 &amp; \text{rearrange}\\
+4bh &amp;= 72-6b^2  &amp; \text{isolate } h\\
+h &amp;= \frac{72-6b^2}{4b} = \frac{3}{2} \cdot \frac{12-b^2}{b}
+\end{align*}
+</div>Substituting this into the volume gives<div class="displaymath">
+\begin{align*}
+V&amp;= b^2 h = \frac{3b}{2} (12-b^2) = 18b - \frac{3}{2} b^3
+\end{align*}
+</div>Now note that since \(b\) is a length it cannot be negative, so \(b \geq 0\text{.}\) Further since volume cannot be negative, we must also have<div class="displaymath">
+\begin{gather*}
+12-b^2 \geq 0
+\end{gather*}
+</div>and so \(b \leq \sqrt{12}\text{.}\)</li>
+<li id="li-1280">Now we can apply Corollary <a knowl="./knowl/cor_find_maxmin.html" title="Corollary 3.5.13">3.5.13</a> on the above expression for the volume with \(0 \leq b \leq \sqrt{12}\text{.}\) The endpoints give:<div class="displaymath">
+\begin{align*}
+V(0) &amp;= 0\\
+V(\sqrt{12}) &amp;= 0
+\end{align*}
+</div>The derivative is<div class="displaymath">
+\begin{align*}
+V'(b) &amp;= 18 - \frac{9b^2}{2}
+\end{align*}
+</div>Since this is a polynomial there are no singular points. However we can solve \(V'(b) = 0\) to find critical points:<div class="displaymath">
+\begin{align*}
+18 - \frac{9b^2}{2} &amp;= 0  &amp; \text{divide by 9 and multiply by 2}\\
+4 - b^2 &amp;= 0
+\end{align*}
+</div>Hence \(b = \pm 2\text{.}\) Thus the only critical point in the domain is \(b=2\text{.}\) The corresponding volume is<div class="displaymath">
+\begin{align*}
+V(2) &amp;= 18\times2 - \frac{3}{2} \times 2^3\\
+&amp;= 36 - 12 = 24.
+\end{align*}
+</div>So by Corollary <a knowl="./knowl/cor_find_maxmin.html" title="Corollary 3.5.13">3.5.13</a>, the maximum volume is when 24 when \(b=2\) and<div class="displaymath">
+\begin{align*}
+h &amp;= \frac{3}{2} \cdot \frac{12-b^2}{b} = \frac{3}{2} \frac{12-4}{2} = 6.
+\end{align*}
+</div>
+</li>
+<li id="li-1281">All our quantities make sense; lengths, areas and volumes are all non-negative.</li>
+<li id="li-1282">
+<p id="p-4211">Checking the question again, we see that we are asked for the dimensions of the container (rather than its volume) so we can answer with</p>
+<blockquote class="blockquote" id="blockquote-37"><p id="p-4212">The container with dimensions \(2 \times 2 \times 6m\) will be the largest possible.</p></blockquote>
+</li>
+</ul></article></div>
+<article class="example-like" id="APPglobalMaxMinC"><a knowl="" class="id-ref" refid="hk-APPglobalMaxMinC"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">3.5.16</span> <span class="title">Constructing another box</span>
+</h6></a></article><div id="hk-APPglobalMaxMinC" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-4213">A rectangular sheet of cardboard is 6 inches by 9 inches. Four identical squares are cut from the corners of the cardboard, as shown in the figure below, and the remaining piece is folded into an open rectangular box. What should the size of the cut out squares be in order to maximize the volume of the box?</p>
+<p id="p-4214"><em class="alert">Solution</em> This one is quite similar to the previous one, so we perhaps don't need to go into so much detail.</p>
+<ul class="disc">
+<li id="li-1283">
+<p id="p-4215">After reading carefully we produce the following picture:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/box_vol.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+</li>
+<li id="li-1284">Let the height of the box be \(x\) inches, and the base be \(\ell \times w\) inches. The volume of the box is then \(V\) cubic inches.</li>
+<li id="li-1285">Some simple geometry tells us that \(\ell = 9-2x, w=6-2x\) and so<div class="displaymath">
+\begin{align*}
+V &amp;= x(9-2x)(6-2x) \text{cubic inches}\\
+&amp;= 54x-30x^2+4x^3.
+\end{align*}
+</div>Notice that since all lengths must be non-negative, we must have<div class="displaymath">
+\begin{gather*}
+x,\ell,w \geq 0
+\end{gather*}
+</div>and so \(0 \leq x \leq 3\) (if \(x \gt 3\) then \(w \lt 0\)).</li>
+<li id="li-1286">
+<p id="p-4216">We can now apply Corollary <a knowl="./knowl/cor_find_maxmin.html" title="Corollary 3.5.13">3.5.13</a>. First the endpoints of the interval give</p>
+<div class="displaymath">
+\begin{align*}
+V(0) &amp;= 0 &amp; V(3) &amp;= 0
+\end{align*}
+</div>
+<p>The derivative is</p>
+<div class="displaymath">
+\begin{align*}
+V'(x) &amp;= 54 - 60x +12x^2\\
+&amp;= 6(9-10x+2x^2)
+\end{align*}
+</div>
+<p>Since this is a polynomial there are no singular points. To find critical points we solve \(V'(x) = 0\) to get</p>
+<div class="displaymath">
+\begin{align*}
+x_\pm &amp;= \frac{10 \pm \sqrt{100 - 4\times2\times9}}{4}\\
+&amp;= \frac{10 \pm \sqrt{28}}{4} = \frac{10 \pm 2\sqrt{7}}{4} = \frac{5 \pm \sqrt{7}}{2}
+\end{align*}
+</div>
+<p>We can then use a calculator to approximate</p>
+<div class="displaymath">
+\begin{align*}
+x_+ &amp;\approx 3.82 &amp; x_- &amp;\approx 1.18.
+\end{align*}
+</div>
+<p>So \(x_-\) is inside the domain, while \(x_+\) lies outside.</p>
+<p id="p-4217">Alternatively <a knowl="" class="id-ref" refid="hk-fn-162" id="fn-162"><sup> 6 </sup></a><span id="hk-fn-162" class="hidden-content tex2jax_ignore"><span class="footnote">Say if we do not have a calculator to hand, or your instructor insists that the problem be done without one.</span></span> , we can bound \(x_\pm\) by first noting that \(2 \leq \sqrt{7} \leq 3\text{.}\) From this we know that</p>
+<div class="displaymath">
+\begin{align*}
+1=\frac{5-3}{2} &amp; \leq x_- = \frac{5 - \sqrt{7}}{2} \leq \frac{5-2}{2} = 1.5\\
+3.5=\frac{5+2}{2} &amp; \leq x_+ = \frac{5 + \sqrt{7}}{2} \leq \frac{5+3}{2} = 4
+\end{align*}
+</div>
+</li>
+<li id="li-1287">Since the volume is zero when \(x=0,3\text{,}\) it must be the case that the volume is maximised when \(x = x_- = \frac{5 - \sqrt{7}}{2}\text{.}\)</li>
+<li id="li-1288">Notice that since \(0  \lt  x_-  \lt 3\) we know that the other lengths are positive, so our answer makes sense. Further, the question only asks for the length \(x\) and not the resulting volume so we have answered the question.</li>
+</ul></article></div>
+<p id="p-4218">There is a new wrinkle in the next two examples. Each involves finding the minimum value of a function \(f(x)\) with \(x\) running over all real numbers, rather than just over a finite interval as in Corollary <a knowl="./knowl/cor_find_maxmin.html" title="Corollary 3.5.13">3.5.13</a>. Both in Example <a knowl="./knowl/APPglobalMaxMinD.html" title="Example 3.5.18: How far from a point to a line">3.5.18</a> and in Example <a knowl="./knowl/APPglobalMaxMinDist.html" title="Example 3.5.19: How far from a point to a curve">3.5.19</a> the function \(f(x)\) tends to \(+\infty\) as \(x\) tends to either \(+\infty\) or \(-\infty\text{.}\) So the minimum value of \(f(x)\) will be achieved for some finite value of \(x\text{,}\) which will be a local minimum as well as a global minimum.</p>
+<article class="theorem-like" id="thm_maxMinOnR"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">3.5.17</span>
+</h6>
+<p id="p-4219">Let \(f(x)\) be defined and continuous for all \(-\infty \lt x \lt \infty\text{.}\) Let \(c\) be a finite real number.</p>
+<ol id="p-4220" class="lower-alpha">
+<li id="li-1289">
+<p id="p-4221">If \(\displaystyle \lim_{x\rightarrow+\infty} f(x)=+\infty\) and \(\displaystyle \lim_{x\rightarrow-\infty} f(x)=+\infty\) and if \(f(x)\) has a global minimum at \(x = c\text{,}\) then there are 2 possibilities. Either</p>
+<ul class="disc">
+<li id="li-1290">\(f'(c) = 0\text{,}\) or</li>
+<li id="li-1291">\(f'(c)\) does not exist</li>
+</ul>
+<p>That is, a global minimum must occur either at a critical point or at a singular point.</p>
+</li>
+<li id="li-1292">
+<p id="p-4222">If \(\displaystyle \lim_{x\rightarrow+\infty} f(x)=-\infty\) and \(\displaystyle \lim_{x\rightarrow-\infty} f(x)=-\infty\) and if \(f(x)\) has a global maximum at \(x = c\text{,}\) then there are 2 possibilities. Either</p>
+<ul class="disc">
+<li id="li-1293">\(f'(c) = 0\text{,}\) or</li>
+<li id="li-1294">\(f'(c)\) does not exist</li>
+</ul>
+<p>That is, a global maximum must occur either at a critical point or at a singular point.</p>
+</li>
+</ol></article><article class="example-like" id="APPglobalMaxMinD"><a knowl="" class="id-ref" refid="hk-APPglobalMaxMinD"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">3.5.18</span> <span class="title">How far from a point to a line</span>
+</h6></a></article><div id="hk-APPglobalMaxMinD" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-4223">Find the point on the line \(y=6-3x\) that is closest to the point \((7,5)\text{.}\)</p>
+<p id="p-4224"><em class="alert">Solution</em> In this problem</p>
+<ul id="p-4225" class="disc">
+<li id="li-1295">
+<p id="p-4226">A simple picture</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:12.5%;margin-right:12.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/line_dist.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+</li>
+<li id="li-1296">Some notation is already given to us. Let a point on the line have coordinates \((x,y)\text{,}\) and we do not need units. And let \(\ell\) be the distance from the point \((x,y)\) to the point \((7,5)\text{.}\)</li>
+<li id="li-1297">Since the points are on the line the coordinates \((x,y)\) must obey<div class="displaymath">
+\begin{gather*}
+y=6-3x
+\end{gather*}
+</div>Notice that \(x\) and \(y\) have no further constraints. The distance \(\ell\) is given by<div class="displaymath">
+\begin{align*}
+\ell^2 &amp;= (x-7)^2 + (y-5)^2
+\end{align*}
+</div>
+</li>
+<li id="li-1298">We can now eliminate the variable \(y\text{:}\)<div class="displaymath">
+\begin{align*}
+\ell^2 &amp;= (x-7)^2 + (y-5)^2\\
+&amp;= (x-7)^2 + (6-3x-5)^2 = (x-7)^2 + (1-3x)^2\\
+&amp;= x^2-14x+49 + 1-6x+9x^2 = 10x^2-20x+50\\
+&amp;= 10(x^2-2x+5)\\
+\ell &amp;= \sqrt{10} \cdot \sqrt{x^2-2x+5}
+\end{align*}
+</div>Notice that as \(x \to \pm \infty\) the distance \(\ell \to +\infty\text{.}\)</li>
+<li id="li-1299">
+<p id="p-4227">We can now apply Theorem <a knowl="./knowl/thm_maxMinOnR.html" title="Theorem 3.5.17">3.5.17</a></p>
+<ul class="circle">
+<li id="li-1300">Since the distance is defined for all real \(x\text{,}\) we do not have to check the endpoints of the domain — there are none.</li>
+<li id="li-1301">Form the derivative:<div class="displaymath">
+\begin{align*}
+\diff{\ell}{x} &amp;= \sqrt{10} \frac{2x-2}{2\sqrt{x^2-2x+5}}
+\end{align*}
+</div>It is zero when \(x=1\text{,}\) and undefined if \(x^2-2x+5 \lt 0\text{.}\) However, since<div class="displaymath">
+\begin{align*}
+x^2-2x+5 &amp;= (x^2-2x+1)+4 = \underbrace{(x-1)^2}_{\geq0}+4
+\end{align*}
+</div>we know that \(x^2-2x+5 \geq 4\text{.}\) Thus the function has no singular points and the only critical point occurs at \(x=1\text{.}\) The corresponding function value is then<div class="displaymath">
+\begin{align*}
+\ell(1) &amp;=\sqrt{10} \sqrt{1-2+5} = 2 \sqrt{10}.
+\end{align*}
+</div>
+</li>
+<li id="li-1302">Thus the minimum value of the distance is \(\ell=2\sqrt{10}\) and occurs at \(x=1\text{.}\)</li>
+</ul>
+</li>
+<li id="li-1303">This answer makes sense — the distance is not negative.</li>
+<li id="li-1304">
+<p id="p-4228">The question asks for the point that minimises the distance, not that minimum distance. Hence the answer is \(x=1, y=6-3 = 3\text{.}\) I.e.</p>
+<blockquote class="blockquote" id="blockquote-38"><p id="p-4229">The point that minimises the distance is \((1,3)\text{.}\)</p></blockquote>
+</li>
+</ul>
+<p id="p-4230">Notice that we can make the analysis easier by observing that the point that minimises the distance also minimises the squared-distance. So that instead of minimising the function \(\ell\text{,}\) we can just minimise \(\ell^2\text{:}\)</p>
+<div class="displaymath">
+\begin{align*}
+\ell^2 &amp;= 10(x^2-2x+5)
+\end{align*}
+</div>
+<p>The resulting algebra is a bit easier and we don't have to hunt for singular points.</p></article></div>
+<article class="example-like" id="APPglobalMaxMinDist"><a knowl="" class="id-ref" refid="hk-APPglobalMaxMinDist"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">3.5.19</span> <span class="title">How far from a point to a curve</span>
+</h6></a></article><div id="hk-APPglobalMaxMinDist" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-4231">Find the minimum distance from \((2,0)\) to the curve \(y^2=x^2+1\text{.}\)</p>
+<p id="p-4232"><em class="alert">Solution</em> This is very much like the previous question.</p>
+<ul class="disc">
+<li id="li-1305">
+<p id="p-4233">After reading the problem carefully we can draw a picture</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:30%;margin-right:30%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/hyperbolaMaxMin.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+</li>
+<li id="li-1306">In this problem we do not need units and the variables \(x,y\) are supplied. We define the distance to be \(\ell\) and it is given by<div class="displaymath">
+\begin{align*}
+\ell^2 &amp;= (x-2)^2+y^2.
+\end{align*}
+</div>As noted in the previous problem, we will minimise the squared-distance since that also minimises the distance.</li>
+<li id="li-1307">Since \(x,y\) satisfy \(y^2=x^2+1\text{,}\) we can write the distance as a function of \(x\text{:}\)<div class="displaymath">
+\begin{align*}
+\ell^2 &amp;= (x-2)^2 + y^2 = (x-2)^2 + (x^2+1)
+\end{align*}
+</div>Notice that as \(x \to \pm \infty\) the squared-distance \(\ell^2 \to +\infty\text{.}\)</li>
+<li id="li-1308">Since the squared-distance is a polynomial it will not have any singular points, only critical points. The derivative is<div class="displaymath">
+\begin{align*}
+\diff{}{x} \ell^2 &amp;= 2(x-2) + 2x = 4x-4
+\end{align*}
+</div>so the only critical point occurs at \(x=1\text{.}\)</li>
+<li id="li-1309">When \(x=1, y=\pm \sqrt{2}\) and the distance is<div class="displaymath">
+\begin{align*}
+\ell^2 &amp;= (1-2)^2 + (1+1) = 3 &amp; \ell=\sqrt{3}
+\end{align*}
+</div>and thus the minimum distance from the curve to \((2,0)\) is \(\sqrt{3}\text{.}\)</li>
+</ul></article></div>
+<article class="example-like" id="APPglobalMaxMinrain"><a knowl="" class="id-ref" refid="hk-APPglobalMaxMinrain"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">3.5.20</span> <span class="title">Constructing a trough</span>
+</h6></a></article><div id="hk-APPglobalMaxMinrain" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-4234">A water trough is to be constructed from a metal sheet of width \(45\) cm by bending up one third of the sheet on each side through an angle \(\theta\text{.}\)  Which \(\theta\) will allow the trough to carry the maximum amount of water?</p>
+<p id="p-4235"><em class="alert">Solution</em> Clearly \(0 \leq \theta \leq \pi\text{,}\) so we are back in the domain <a knowl="" class="id-ref" refid="hk-fn-163" id="fn-163"><sup> 7 </sup></a><span id="hk-fn-163" class="hidden-content tex2jax_ignore"><span class="footnote">Again, no pun intended.</span></span> of Corollary <a knowl="./knowl/cor_find_maxmin.html" title="Corollary 3.5.13">3.5.13</a>.</p>
+<ul class="disc">
+<li id="li-1310">
+<p id="p-4236">After reading the problem carefully we should realise that it is really asking us to maximise the cross-sectional area. A figure really helps.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/gutter.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+</li>
+<li id="li-1311">From this we are led to define the height \(h\) \(cm\) and cross-sectional area \(A\) \(cm^2\text{.}\) Both are functions of \(\theta\text{.}\)<div class="displaymath">
+\begin{align*}
+h &amp;= 15 \sin \theta
+\end{align*}
+</div>while the area can be computed as the sum of the central \(15 \times h\) rectangle, plus two triangles. Each triangle has height \(h\) and base \(15 \cos \theta\text{.}\) Hence<div class="displaymath">
+\begin{align*}
+A &amp;= 15h + 2 \cdot \frac{1}{2} \cdot h \cdot 15 \cos \theta\\
+&amp;= 15h \left(1 + \cos \theta \right)
+\end{align*}
+</div>
+</li>
+<li id="li-1312">Since \(h = 15\sin \theta\) we can rewrite the area as a function of just \(\theta\text{:}\)<div class="displaymath">
+\begin{align*}
+A(\theta) &amp;= 225 \sin\theta \left(1 + \cos \theta \right)
+\end{align*}
+</div>where \(0 \leq \theta \leq \pi\text{.}\)</li>
+<li id="li-1313">Now we use Corollary <a knowl="./knowl/cor_find_maxmin.html" title="Corollary 3.5.13">3.5.13</a>. The ends of the interval give<div class="displaymath">
+\begin{align*}
+A(0) &amp;= 225 \sin 0 (1 + \cos 0) = 0\\
+A(\pi) &amp;= 225 \sin \pi ( 1+ \cos \pi) = 0
+\end{align*}
+</div>The derivative is<div class="displaymath">
+\begin{align*}
+A'(\theta) &amp;= 225 \cos\theta \cdot (1+\cos\theta) + 225 \sin\theta \cdot(-\sin\theta)\\
+&amp;= 225 \left[ \cos \theta + \cos^2\theta - \sin^2\theta \right]
+\qquad\text {recall }\sin^2\theta = 1 - \cos^2\theta\\
+&amp;= 225 \left[ \cos\theta +2\cos^2\theta -1 \right]
+\end{align*}
+</div>This is a continuous function, so there are no singular points. However we can still hunt for critical points by solving \(A'(\theta) = 0\text{.}\) That is<div class="displaymath">
+\begin{align*}
+2\cos^2\theta + \cos \theta -1 &amp;= 0 &amp; \text{factor carefully}\\
+(2\cos\theta -1)(\cos \theta+1) &amp;= 0
+\end{align*}
+</div>Hence we must have \(\cos \theta =-1\) or \(\cos\theta = \half\text{.}\) On the domain \(0\leq \theta
+\leq \pi\text{,}\) this means \(\theta = \pi/3\) or \(\theta = \pi\text{.}\)<div class="displaymath">
+\begin{align*}
+A(\pi) &amp;= 0\\
+A(\pi/3) &amp;= 225 \sin(\pi/3) (1 + \cos(\pi/3))\\
+&amp; = 225 \cdot \frac{\sqrt{3}}{2} \cdot \left( 1 + \frac{1}{2} \right)\\
+&amp;= 225 \cdot \frac{3\sqrt{3}}{4} \approx 292.28
+\end{align*}
+</div>
+</li>
+<li id="li-1314">Thus the cross-sectional area is maximised when \(\theta = \dfrac{\pi}{3}\text{.}\)</li>
+</ul></article></div>
+<article class="example-like" id="APPglobalMaxMinDD"><a knowl="" class="id-ref" refid="hk-APPglobalMaxMinDD"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">3.5.21</span> <span class="title">Closest and farthest points on a curve to a given point</span>
+</h6></a></article><div id="hk-APPglobalMaxMinDD" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-4237">Find the points on the ellipse \(\frac{x^2}{4}+y^2=1\) that are nearest to and farthest from the point \((1,0)\text{.}\)</p>
+<p id="p-4238"><em class="alert">Solution</em> While this is another distance problem, the possible values of \(x,y\) are bounded, so we need Corollary <a knowl="./knowl/cor_find_maxmin.html" title="Corollary 3.5.13">3.5.13</a> rather than Theorem <a knowl="./knowl/thm_maxMinOnR.html" title="Theorem 3.5.17">3.5.17</a>.</p>
+<ul class="disc">
+<li id="li-1315">
+<p id="p-4239">We start by drawing a picture:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:12.5%;margin-right:12.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/ellipseMaxMin.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+</li>
+<li id="li-1316">Let \(\ell\) be the distance from the point \((x,y)\) on the ellipse to the point \((1,0)\text{.}\) As was the case above, we will maximise the squared-distance.<div class="displaymath">
+\begin{align*}
+\ell^2 &amp;= (x-1)^2 + y^2.
+\end{align*}
+</div>
+</li>
+<li id="li-1317">
+<p id="p-4240">Since \((x,y)\) lie on the ellipse we have</p>
+<div class="displaymath">
+\begin{gather*}
+\frac{x^2}{4}+y^2=1
+\end{gather*}
+</div>
+<p>Note that this also shows that \(-2 \leq x \leq 2\) and \(-1 \leq y \leq 1\text{.}\)</p>
+<p id="p-4241">Isolating \(y^2\) and substituting this into our expression for \(\ell^2\) gives</p>
+<div class="displaymath">
+\begin{align*}
+\ell^2 &amp;= (x-1)^2 + \underbrace{1-x^2/4}_{=y^2}.
+\end{align*}
+</div>
+</li>
+<li id="li-1318">Now we can apply Corollary <a knowl="./knowl/cor_find_maxmin.html" title="Corollary 3.5.13">3.5.13</a>. The endpoints of the domain give<div class="displaymath">
+\begin{align*}
+\ell^2(-2) &amp;= (-2-1)^2 + 1 - (-2)^2/4 = 3^2+1-1 = 9\\
+\ell^2(2) &amp;= (2-1)^2 + 1 - 2^2/4 = 1+1-1 = 1
+\end{align*}
+</div>The derivative is<div class="displaymath">
+\begin{align*}
+\diff{}{x} \ell^2 &amp;= 2(x-1) - x/2 = \frac{3x}{2} - 2
+\end{align*}
+</div>Thus there are no singular points, but there is a critical point at \(x = 4/3\text{.}\) The corresponding squared-distance is<div class="displaymath">
+\begin{align*}
+\ell^2(4/3) &amp;= \left( \frac{4}{3}-1\right)^2 +1 - \frac{(4/3)^2}{4}\\
+&amp;= (1/3)^2 + 1 - (4/9) = 6/9 = 2/3.
+\end{align*}
+</div>
+</li>
+<li id="li-1319">
+<p id="p-4242">To summarise (and giving distances and coordinates of points):</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<tr>
+<td class="c m b1 r1 l1 t1 lines">\(x\)</td>
+<td class="c m b1 r1 l0 t1 lines">\((x,y)\)</td>
+<td class="c m b1 r1 l0 t1 lines">\(\ell\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">\(-2\)</td>
+<td class="c m b1 r1 l0 t0 lines">\((-2,0)\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(3\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">\(\frac{4}{3}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\big(\frac{4}{3},\pm\frac{\sqrt{5}}{3}\big)\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\sqrt{\frac{2}{3}}\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">\(2\)</td>
+<td class="c m b1 r1 l0 t0 lines">\((2,0)\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(1\)</td>
+</tr>
+</table></div></div></div>
+<p id="p-4243">The point of maximum distance is \((-2,0)\text{,}\) and the point of minimum distance is \(\left(\frac{4}{3},\pm\frac{\sqrt{5}}{3}\right)\text{.}\)</p>
+</li>
+</ul></article></div>
+<article class="example-like" id="APPglobalMaxMinE"><a knowl="" class="id-ref" refid="hk-APPglobalMaxMinE"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">3.5.22</span> <span class="title">Largest rectangle inside a triangle</span>
+</h6></a></article><div id="hk-APPglobalMaxMinE" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-4244">Find the dimensions of the rectangle of largest area that can be inscribed in an equilateral triangle of side \(a\) if one side of the rectangle lies on the base of the triangle.</p>
+<p id="p-4245"><em class="alert">Solution</em> Since the rectangle must sit inside the triangle, its dimensions are bounded and we will end up using Corollary <a knowl="./knowl/cor_find_maxmin.html" title="Corollary 3.5.13">3.5.13</a>.</p>
+<ul class="disc">
+<li id="li-1320">
+<p id="p-4246">Carefully draw a picture:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:1.25%;margin-right:1.25%;">
+<div class="sbspanel" style="width:41.025641025641%;justify-content:flex-start;"><img src="text/figs/inscribedB.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:56.4102564102564%;justify-content:flex-start;"><img src="text/figs/inscribed.svg" style="width: 100%; height: auto;" alt=""></div>
+</div></div>
+<p id="p-4247">We have drawn (on the left) the triangle in the \(xy\)-plane with its base on the \(x\)-axis. The base has been drawn running from \((-a/2,0)\) to \((a/2,0)\) so its centre lies at the origin. A little Pythagoras (or a little trigonometry) tells us that the height of the triangle is</p>
+<div class="displaymath">
+\begin{align*}
+\sqrt{a^2-(a/2)^2} &amp;= \frac{\sqrt{3}}{2}\cdot a = a\cdot \sin\frac{\pi}{3}
+\end{align*}
+</div>
+<p>Thus the vertex at the top of the triangle lies at \(\left(0,\frac{\sqrt{3}}{2}\cdot a\right)\text{.}\)</p>
+</li>
+<li id="li-1321">If we construct a rectangle that does not touch the sides of the triangle, then we can increase the dimensions of the rectangle until it touches the triangle and so make its area larger. Thus we can assume that the two top corners of the rectangle touch the triangle as drawn in the right-hand figure above.</li>
+<li id="li-1322">Now let the rectangle be \(2x\) wide and \(y\) high. And let \(A\) denote its area. Clearly<div class="displaymath">
+\begin{align*}
+A &amp;= 2xy.
+\end{align*}
+</div>where \(0 \leq x \leq a/2\) and \(0\leq y\leq \frac{\sqrt{3}}{2}a\text{.}\)</li>
+<li id="li-1323">Our construction means that the top-right corner of the rectangle will have coordinates \((x,y)\) and lie on the line joining the top vertex of the triangle at \((0,\sqrt{3}a/2)\) to the bottom-right vertex at \((a/2,0)\text{.}\) In order to write the area as a function of \(x\) alone, we need the equation for this line since it will tell us how to write \(y\) as a function of \(x\text{.}\) The line has slope<div class="displaymath">
+\begin{align*}
+\text{slope} &amp;= \frac{\sqrt{3}a/2 - 0}{0-a/2} = -\sqrt{3}.
+\end{align*}
+</div>and passes through the point \((0,\sqrt{3}a/2)\text{,}\) so any point \((x,y)\) on that line satisfies:<div class="displaymath">
+\begin{align*}
+y &amp;= -\sqrt{3}x + \frac{\sqrt{3}}{2}a.
+\end{align*}
+</div>
+</li>
+<li id="li-1324">We can now write the area as a function of \(x\) alone<div class="displaymath">
+\begin{align*}
+A(x) &amp;= 2x \left( -\sqrt{3}x + \frac{\sqrt{3}}{2}a \right)\\
+&amp;= \sqrt{3} x(a-2x).
+\end{align*}
+</div>with \(0\leq x \leq a/2\text{.}\)</li>
+<li id="li-1325">The ends of the domain give:<div class="displaymath">
+\begin{align*}
+A(0) &amp;= 0 &amp; A(a/2) &amp;= 0.
+\end{align*}
+</div>The derivative is<div class="displaymath">
+\begin{align*}
+A'(x) &amp;= \sqrt{3} \left( x \cdot (-2) + 1 \cdot (a-2x) \right) = \sqrt{3}
+(a-4x).
+\end{align*}
+</div>Since this is a polynomial there are no singular points, but there is a critical point at \(x=a/4\text{.}\) There<div class="displaymath">
+\begin{align*}
+A(a/4) &amp;= \sqrt{3} \cdot \frac{a}{4} \cdot (a - a/2) = \sqrt{3} \cdot
+\frac{a^2}{8}.\\
+y &amp;= -\sqrt{3}\cdot (a/4) + \frac{\sqrt{3}}{2} a = \sqrt{3}\cdot \frac{a}{4}.
+\end{align*}
+</div>
+</li>
+<li id="li-1326">
+<p id="p-4248">Checking the question again, we see that we are asked for the dimensions rather than the area, so the answer is \(2x \times y\text{:}\)</p>
+<blockquote class="blockquote" id="blockquote-39"><p id="p-4249">The largest such rectangle has dimensions \(\frac{a}{2} \times \frac{\sqrt{3}
+a}{4}\text{.}\)</p></blockquote>
+</li>
+</ul></article></div>
+<p id="p-4250">This next one is a good physics example. In it we will derive Snell's Law <a knowl="" class="id-ref" refid="hk-fn-164" id="fn-164"><sup> 8 </sup></a><span id="hk-fn-164" class="hidden-content tex2jax_ignore"><span class="footnote">Snell's law is named after the Dutch astronomer Willebrord Snellius who derived it in around 1621, though it was first stated accurately in 984 by Ibn Sahl.</span></span> from Fermat's principle <a knowl="" class="id-ref" refid="hk-fn-165" id="fn-165"><sup> 9 </sup></a><span id="hk-fn-165" class="hidden-content tex2jax_ignore"><span class="footnote">Named after Pierre de Fermat who described it in a letter in 1662. The beginnings of the idea, however, go back as far as Hero of Alexandria in around 60CE. Hero is credited with many inventions including the first vending machine, and a precursor of the steam engine called an aeolipile.</span></span> .</p>
+<article class="example-like" id="APPglobalMaxMinF"><a knowl="" class="id-ref" refid="hk-APPglobalMaxMinF"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">3.5.23</span> <span class="title">Snell's law</span>
+</h6></a></article><div id="hk-APPglobalMaxMinF" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-4251">Consider the figure below which shows the trajectory of a ray of light as it passes through two different mediums (say air and water).</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/snell.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p id="p-4252">Let \(c_a\) be the speed of light in air and \(c_w\) be the speed of light in water. Fermat's principle states that a ray of light will always travel along a path that minimises the time taken. So if a ray of light travels from \(P\) (in air) to \(Q\) (in water) then it will “choose” the point \(O\) (on the interface) so as to minimise the total time taken. Use this idea to show Snell's law,</p>
+<div class="displaymath">
+\begin{align*}
+\frac{\sin\theta_i}{\sin\theta_r}&amp;=\frac{c_a}{c_w}
+\end{align*}
+</div>
+<p>where \(\theta_i\) is the angle of incidence and \(\theta_r\) is the angle of refraction (as illustrated in the figure above).</p>
+<p id="p-4253"><em class="alert">Solution</em> This problem is a little more abstract than the others we have examined, but we can still apply Theorem <a knowl="./knowl/thm_maxMinOnR.html" title="Theorem 3.5.17">3.5.17</a>.</p>
+<ul class="disc">
+<li id="li-1327">
+<p id="p-4254">We are given a figure in the statement of the problem and it contains all the relevant points and angles. However it will simplify things if we decide on a coordinate system. Let's assume that the point \(O\) lies on the \(x\)-axis, at coordinates \((x,0)\text{.}\) The point \(P\) then lies above the axis at \((X_P,+Y_P)\text{,}\) while \(Q\) lies below the axis at \((X_Q,-Y_Q)\text{.}\) This is drawn below.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/snellB.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+</li>
+<li id="li-1328">The statement of Snell's law contains terms \(\sin \theta_i\) and \(\sin
+\theta_r\text{,}\) so it is a good idea for us to see how to express these in terms of the coordinates we have just introduced:<div class="displaymath">
+\begin{align*}
+\sin \theta_i &amp;=  \frac{\text{opposite}}{\text{hypotenuse}}
+= \frac{(x-X_P)}{\sqrt{(X_P-x)^2 + Y_P^2}}\\
+\sin \theta_r &amp;=  \frac{\text{opposite}}{\text{hypotenuse}}
+= \frac{(X_Q-x)}{\sqrt{(X_Q-x)^2 + Y_Q^2}}
+\end{align*}
+</div>
+</li>
+<li id="li-1329">Let \(\ell_P\) denote the distance \(PO\text{,}\) and \(\ell_Q\) denote the distance \(OQ\text{.}\) Then we have<div class="displaymath">
+\begin{align*}
+\ell_P &amp;= \sqrt{(X_P-x)^2+Y_P^2}\\
+\ell_Q &amp;= \sqrt{(X_Q-x)^2+Y_Q^2}
+\end{align*}
+</div>If we then denote the total time taken by \(T\text{,}\) then<div class="displaymath">
+\begin{align*}
+T &amp;= \frac{\ell_P}{c_a} + \frac{\ell_Q}{c_w}
+= \frac{1}{c_a}\sqrt{(X_P-x)^2+Y_P^2} + \frac{1}{c_w}\sqrt{(X_Q-x)^2+Y_Q^2}
+\end{align*}
+</div>which is written as a function of \(x\) since all the other terms are constants.</li>
+<li id="li-1330">Notice that as \(x \to +\infty\) or \(x\to-\infty\) the total time \(T \to
+\infty\) and so we can apply Theorem <a knowl="./knowl/thm_maxMinOnR.html" title="Theorem 3.5.17">3.5.17</a>. The derivative is<div class="displaymath">
+\begin{align*}
+\diff{T}{x} &amp;=
+\frac{1}{c_a} \frac{-2(X_P-x)}{2\sqrt{(X_P-x)^2+Y_P^2}} +
+\frac{1}{c_w} \frac{-2(X_Q-x)}{2\sqrt{(X_Q-x)^2+Y_Q^2}}
+\end{align*}
+</div>Notice that the terms inside the square-roots cannot be zero or negative since they are both sums of squares and \(Y_P,Y_Q  \gt  0\text{.}\) So there are no singular points, but there is a critical point when \(T'(x) = 0\text{,}\) namely when<div class="displaymath">
+\begin{align*}
+0 &amp;= \frac{1}{c_a} \frac{X_P-x}{\sqrt{(X_P-x)^2+Y_P^2}} +
+\frac{1}{c_w} \frac{X_Q-x}{\sqrt{(X_Q-x)^2+Y_Q^2}}\\
+&amp;= \frac{-\sin\theta_i}{c_a} + \frac{\sin\theta_r}{c_w}
+\end{align*}
+</div>Rearrange this to get<div class="displaymath">
+\begin{align*}
+\frac{\sin\theta_i}{c_a} &amp;= \frac{\sin\theta_r}{c_w}\\
+\end{align*}
+<p class="intertext">move sines to one side</p>
+\begin{align*}
+\frac{\sin\theta_i}{\sin \theta_r} &amp;= \frac{c_a}{c_w}
+\end{align*}
+</div>which is exactly Snell's law.</li>
+</ul></article></div>
+<article class="example-like" id="APPglobalMaxMinG"><a knowl="" class="id-ref" refid="hk-APPglobalMaxMinG"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">3.5.24</span> <span class="title">Finding the best viewing angle</span>
+</h6></a></article><div id="hk-APPglobalMaxMinG" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-4255">The Statue of Liberty has height \(46\)m and stands on a \(47\)m tall pedestal. How far from the statue should an observer stand to maximize the angle subtended by the statue at the observer's eye, which is \(1.5\)m above the base of the pedestal?</p>
+<p id="p-4256"><em class="alert">Solution</em> Obviously if we stand too close then all the observer sees is the pedestal, while if they stand too far then everything is tiny. The best spot for taking a photograph is somewhere in between.</p>
+<ul class="disc">
+<li id="li-1331">
+<p id="p-4257">Draw a careful picture <a knowl="" class="id-ref" refid="hk-fn-166" id="fn-166"><sup> 10 </sup></a><span id="hk-fn-166" class="hidden-content tex2jax_ignore"><span class="footnote">And make some healthy use of public domain clip art.</span></span></p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/liberty.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p id="p-4258">and we can put in the relevant lengths and angles.</p>
+</li>
+<li id="li-1332">The height of the statue is \(h = 46\)m, and the height of the pedestal (above the eye) is \(p = 47-1.5 = 45.5\)m. The horizontal distance from the statue to the eye is \(x\text{.}\) There are two relevant angles. First \(\theta\) is the angle subtended by the statue, while \(\varphi\) is the angle subtended by the portion of the pedestal above the eye.</li>
+<li id="li-1333">Some trigonometry gives us<div class="displaymath">
+\begin{align*}
+\tan \varphi &amp;= \frac{p}{x}\\
+\tan (\varphi+\theta) &amp;= \frac{p+h}{x}
+\end{align*}
+</div>Thus<div class="displaymath">
+\begin{align*}
+\varphi &amp;= \arctan \frac{p}{x}\\
+\varphi+\theta &amp;= \arctan \frac{p+h}{x}
+\end{align*}
+</div>and so<div class="displaymath">
+\begin{align*}
+\theta &amp;= \arctan \frac{p+h}{x} - \arctan\frac{p}{x}.
+\end{align*}
+</div>
+</li>
+<li id="li-1334">
+<p id="p-4259">If we allow the viewer to stand at any point in front of the statue, then \(0\le x
+\lt \infty\text{.}\) Further observe that as \(x \rightarrow \infty\) or \(x \rightarrow 0\) the angle \(\theta \rightarrow 0\text{,}\)  since</p>
+<div class="displaymath">
+\begin{equation*}
+\lim_{x\rightarrow\infty} \arctan \frac{p+h}{x} =
+\lim_{x\rightarrow\infty} \arctan \frac{p}{x} = 0
+\end{equation*}
+</div>
+<p>and</p>
+<div class="displaymath">
+\begin{equation*}
+\lim_{x\rightarrow 0^+} \arctan \frac{p+h}{x} =
+\lim_{x\rightarrow 0^+} \arctan \frac{p}{x} = \frac{\pi}{2}
+\end{equation*}
+</div>
+<p>Clearly the largest value of \(\theta\) will be strictly positive and so has to be taken for some \(0 \lt x \lt \infty\text{.}\) (Note the strict inequalities.) This \(x\) will be a local maximum as well as a global maximum. As \(\theta\) is not singular at any \(0 \lt x \lt \infty\text{,}\) we need only search for critical points.</p>
+<p id="p-4260">A careful application of the chain rule shows that the derivative is</p>
+<div class="displaymath">
+\begin{align*}
+\diff{\theta}{x}
+&amp;=
+\frac{1}{1+(\frac{p+h}{x})^2}\cdot \left(\frac{-(p+h)}{x^2}\right) -
+\frac{1}{1+(\frac{p}{x})^2}\cdot \left(\frac{-p}{x^2}\right)\\
+&amp;= \frac{-(p+h)}{x^2+(p+h)^2} + \frac{p}{x^2+p^2}
+\end{align*}
+</div>
+<p>So a critical point occurs when</p>
+<div class="displaymath">
+\begin{align*}
+\frac{(p+h)}{x^2+(p+h)^2} &amp;= \frac{p}{x^2+p^2} &amp; \text{cross multiply}\\
+(p+h)(x^2+p^2) &amp;= p(x^2+(p+h)^2) &amp; \text{collect $x$ terms}\\
+x^2 (p+h-p) &amp;= p(p+h)^2 - p^2 (p+h) &amp; \text{clean up}\\
+h x^2 &amp;= p(p+h)(p+h-p) = ph(p+h) \\
+\amp\hskip1in \text{cancel common factors}\\
+x^2 &amp;= p(p+h)\\
+x &amp;= \pm\sqrt{p(p+h)} \approx \pm 64.9m
+\end{align*}
+</div>
+</li>
+<li id="li-1335">Thus the best place to stand approximately \(64.9\)m in front or behind the statue. At that point \(\theta \approx 0.348\) radians or \(19.9^\circ\text{.}\)</li>
+</ul></article></div>
+<article class="example-like" id="APPglobalMaxMinJ"><a knowl="" class="id-ref" refid="hk-APPglobalMaxMinJ"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">3.5.25</span> <span class="title">Moving objects around corners</span>
+</h6></a></article><div id="hk-APPglobalMaxMinJ" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-4261">Find the length of the longest rod that can be carried horizontally (no tilting allowed) from a corridor \(3\)m wide into a corridor \(2\)m wide. The two corridors are perpendicular to each other.</p>
+<p id="p-4262"><em class="alert">Solution</em></p>
+<ul class="disc">
+<li id="li-1336">
+<p id="p-4263">Suppose that we are carrying the rod around the corner, then if the rod is as long as possible it must touch the corner and the outside walls of both corridors. A picture of this is show below.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/corridor.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p id="p-4264">You can see that this gives rise to two similar triangles, one inside each corridor. Also the maximum length of the rod changes with the angle it makes with the walls of the corridor.</p>
+</li>
+<li id="li-1337">Suppose that the angle between the rod and the inner wall of the \(3\)m corridor is \(\theta\text{,}\) as illustrated in the figure above. At the same time it will make an angle of \(\frac{\pi}{2}-\theta\) with the outer wall of the 2m corridor. Denote by \(\ell_1(\theta)\) the length of the part of the rod forming the hypotenuse of the upper triangle in the figure above. Similarly, denote by \(\ell_2(\theta)\) the length of the part of the rod forming the hypotenuse of the lower triangle in the figure above.  Then<div class="displaymath">
+\begin{gather*}
+\ell_1(\theta) = \frac{3}{\sin\theta}\qquad
+\ell_2(\theta) = \frac{2}{\cos\theta}
+\end{gather*}
+</div>and the total length is<div class="displaymath">
+\begin{gather*}
+\ell(\theta) = \ell_1(\theta) +\ell_2(\theta)
+= \frac{3}{\sin\theta}+\frac{2}{\cos\theta}
+\end{gather*}
+</div>where \(0 \leq \theta \leq \frac{\pi}{2}\text{.}\)</li>
+<li id="li-1338">
+<p id="p-4265">The length of the longest rod we can move through the corridor in this way is the minimum of \(\ell(\theta)\text{.}\) Notice that \(\ell(\theta)\) is not defined at \(\theta = 0,
+\frac{\pi}{2}\text{.}\) Indeed we find that as \(\theta \rightarrow 0^+\) or \(\theta\rightarrow
+\frac{\pi}{2}^-\text{,}\) the length \(\ell\rightarrow +\infty\text{.}\) (You should be able to picture what happens to our rod in those two limits). Clearly the minimum allowed \(\ell(\theta)\) is going to be finite and will be achieved for some \(0 \lt \theta \lt \frac{\pi}{2}\) (note the strict inequalities) and so will be a local minimum as well as a global minimum. So we only need to find zeroes of \(\ell'(\theta)\text{.}\)</p>
+<p id="p-4266">Differentiating \(\ell\) gives</p>
+<div class="displaymath">
+\begin{align*}
+\diff{\ell}{\theta} &amp;= -\frac{3 \cos\theta}{\sin^2\theta} +
+\frac{2\sin\theta}{\cos^2\theta}
+= \frac{-3\cos^3\theta  +2 \sin^3\theta}{\sin^2\theta
+\cos^2\theta}.
+\end{align*}
+</div>
+<p>This does not exist at \(\theta = 0, \frac{\pi}{2}\) (which we have already analysed) but does exist at every \(0  \lt \theta \lt  \frac{\pi}{2}\) and is equal to zero when the numerator is zero. Namely when</p>
+<div class="displaymath">
+\begin{align*}
+2\sin^3\theta &amp;= 3 \cos^3 \theta &amp; \text{divide by $\cos^3 \theta$}\\
+2 \tan^3\theta &amp;= 3\\
+\tan\theta &amp;= \sqrt[3]{\frac{3}{2}}
+\end{align*}
+</div>
+</li>
+<li id="li-1339">
+<p id="p-4267">From this we can recover \(sin\theta\) and  \(cos\theta\text{,}\) without having to compute \(\theta\) itself. We can, for example, construct a right-angle triangle with adjacent length \(\sqrt[3]{2}\) and opposite length \(\sqrt[3]{3}\) (so that \(\tan\theta=\sqrt[3]{3/2}\)):</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:33.5%;margin-right:33.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/triangleCor.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p id="p-4268">It has hypotenuse \(\sqrt{ 3^{2/3} + 2^{2/3}}\text{,}\) and so</p>
+<div class="displaymath">
+\begin{align*}
+\sin \theta &amp;= \frac{3^{1/3}}{\sqrt{3^{2/3}+2^{2/3}}}\\
+\cos \theta &amp;= \frac{2^{1/3}}{\sqrt{3^{2/3}+2^{2/3}}}
+\end{align*}
+</div>
+<p>Alternatively could use the identities:</p>
+<div class="displaymath">
+\begin{align*}
+1 + \tan^2\theta &amp;= \sec^2\theta &amp; 1+\cot^2\theta &amp;= \csc^2\theta
+\end{align*}
+</div>
+<p>to obtain expressions for \(1/\cos\theta\) and \(1/\sin\theta\text{.}\)</p>
+</li>
+<li id="li-1340">Using the above expressions for \(\sin\theta, \cos\theta\) we find the minimum of \(\ell\) (which is the longest rod that we can move):<div class="displaymath">
+\begin{align*}
+\ell &amp;= \frac{3}{\sin\theta} + \frac{2}{\cos\theta}
+=\frac{3}{ \frac{\root 3\of 3}
+{\sqrt{2^{\frac{2}{3}}+3^{\frac{2}{3}}}} }
++\frac{2}{ \frac{\root 3\of 2}{\sqrt{2^{\frac{2}{3}}+3^{\frac{2}{3}}}} }\\
+&amp; =\sqrt{2^{\frac{2}{3}}+3^{\frac{2}{3}}}
+\big[3^{\frac{2}{3}}+2^{\frac{2}{3}}\big]\\
+&amp; ={\big[2^{\frac{2}{3}}+3^{\frac{2}{3}}\big]}^{\frac{3}{2}}
+\approx 7.02\text{m}
+\end{align*}
+</div>
+</li>
+</ul></article></div></section></div></main>
+</div>
+<!--Start: Google Universal code--><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-105798942-1', 'auto');
+ga('send', 'pageview');
+</script><!--End: Google Universal code--><div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.1/login.js"></script>
+</body>
+</html>

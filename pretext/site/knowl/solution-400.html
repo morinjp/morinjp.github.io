@@ -1,0 +1,45 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:15:13-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="solution">
+<h6 class="heading">
+<span class="type">Solution</span> <span class="codenumber">2.14.2.12.1</span>
+</h6>
+<div class="displaymath">
+\begin{align*}
+x^2+x+y&amp;=\sin(xy)\\
+\end{align*}
+<p class="intertext">We differentiate implicitly. For ease of notation, we write \(y'\) for \(\ds\diff{y}{x}\text{.}\)</p>
+\begin{align*}
+2x+1+y'&amp;=\cos(xy)(y+xy')\\
+\end{align*}
+<p class="intertext">We're interested in \(y''\text{,}\) so we implicitly differentiate again.</p>
+\begin{align*}
+2+y''&amp;=-\sin(xy)(y+xy')^2+\cos(xy)(2y'+xy'')\\
+\end{align*}
+<p class="intertext">We want to know what \(y''\) is when \(x=y=0\text{.}\) Plugging these in yields the following:</p>
+\begin{align*}
+2+y''&amp;=2y'\\
+\end{align*}
+<p class="intertext">So, we need to know what \(y'\) is when \(x=y=0\text{.}\) We can get this from the equation \(2x+1+y'=\cos(xy)(y+xy')\text{,}\) which becomes \(1+y'=0\) when \(x=y=0\text{.}\) So, at the origin, \(y'=-1\text{,}\) and</p>
+\begin{align*}
+2+y''&amp;=2(-1)\\
+y''&amp;=-4
+\end{align*}
+</div>
+<p>Remark: a common mistake is to stop at the equation \(2x+1+y'=\cos(xy)(y+xy')\text{,}\) plug in \(x=y=0\text{,}\) find \(y'=-1\text{,}\) and decide \(y''=\ds\diff{}{x}\{-1\}=0\text{.}\) This is due to a slight sloppiness in the usual notation. When we wrote \(y'=1\text{,}\) what we meant is that <em class="emphasis">at the point</em> \((0,0)\text{,}\) \(\ds\diff{y}{x}=-1\text{.}\) More properly written: \(\left.\ds\diff{y}{x}\right|_{x=0, y=0}=-1\text{.}\) This is not the same as saying \(y'=1\) everywhere (in which case, indeed, \(y''\) would be 0 everywhere).</p>
+</div>
+<span class="incontext"><a href="exercises-19.html#solution-400">in-context</a></span>
+</body>
+</html>

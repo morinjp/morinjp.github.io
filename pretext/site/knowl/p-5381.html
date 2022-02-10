@@ -1,0 +1,53 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:22:36-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<ul class="disc">
+<li>The left-most figure shows two right-angled triangles with angles \(\alpha\) and \(\beta\) and both with hypotenuse length \(1\text{.}\)</li>
+<li>The next figure simply rearranges the triangles — translating and rotating the lower triangle so that it lies adjacent to the top of the upper triangle.</li>
+<li>Now scale the lower triangle by a factor of \(q\) so that edges opposite the angles \(\alpha\) and \(\beta\) are flush. This means that \(q \cos \beta = \cos \alpha\text{.}\) ie<div class="displaymath">
+\begin{align*}
+q &amp;= \frac{\cos\alpha}{\cos\beta}
+\end{align*}
+</div>Now compute the areas of these (blue and red) triangles<div class="displaymath">
+\begin{align*}
+A_\text{red} &amp;= \frac{1}{2} q^2 \sin\beta \cos \beta\\
+A_\text{blue} &amp;= \frac{1}{2} \sin \alpha \cos \alpha\\
+\end{align*}
+<p class="intertext">So twice the total area is</p>
+\begin{align*}
+2 A_\text{total} &amp;= \sin \alpha \cos \alpha  + q^2 \sin\beta \cos \beta
+\end{align*}
+</div>
+</li>
+<li>But we can also compute the total area using the rightmost triangle:<div class="displaymath">
+\begin{align*}
+2 A_\text{total} &amp;= q \sin(\alpha+\beta)
+\end{align*}
+</div>
+</li>
+</ul>
+<p>Since the total area must be the same no matter how we compute it we have</p>
+<div class="displaymath">
+\begin{align*}
+q \sin(\alpha+\beta) &amp;=  \sin \alpha \cos \alpha  + q^2 \sin\beta \cos \beta\\
+\sin(\alpha+\beta) &amp;= \frac{1}{q} \sin \alpha \cos \alpha + q \sin\beta \cos \beta\\
+&amp;= \frac{\cos \beta}{\cos \alpha} \sin \alpha \cos \alpha + \frac{\cos \alpha}{\cos \beta} \sin\beta \cos \beta\\
+&amp;= \sin \alpha \cos \beta +  \cos \alpha \sin\beta
+\end{align*}
+</div>
+<p>as required.</p>
+<span class="incontext"><a href="ssec_B_2_5.html#p-5381">in-context</a></span>
+</body>
+</html>

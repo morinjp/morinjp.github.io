@@ -1,0 +1,33 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:11:18-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="solution">
+<h6 class="heading">
+<span class="type">Solution</span> <span class="codenumber">1.4.2.28.1</span>
+</h6>
+<p>When we plug \(w=5\) in to the numerator and denominator, we find that each becomes zero. Since we can't divide by zero, we have to dig a little deeper. When a polynomial has a root, that also means it has a factor: we can factor \((w-5)\) out of the top. That lets us cancel:</p>
+<div class="displaymath">
+\begin{equation*}
+\displaystyle\lim_{w \rightarrow 5} \dfrac{2w^2-50}{(w-5)(w-1)}
+=\displaystyle\lim_{w \rightarrow 5} \dfrac{2(w-5)(w+5)}{(w-5)(w-1)}
+=\displaystyle\lim_{w \rightarrow 5} \dfrac{2(w+5)}{(w-1)}.
+\end{equation*}
+</div>
+<p>Note that the function \(\dfrac{2w^2-50}{(w-5)(w-1)} \) is NOT defined at \(w=5\text{,}\) while the function \(\dfrac{2(w+5)}{(w-1)}\) IS defined at \(w=5\text{;}\) so strictly speaking, these two functions are not equal. However, for every value of \(w\) that is not 5, the functions are the same, so their <em class="emphasis">limits</em> are equal. Furthermore, the limit of the second function is quite easy to calculate, since we've eliminated the zero in the denominator: \(\displaystyle\lim_{w \rightarrow 5} \dfrac{2(w+5)}{(w-1)}
+=\dfrac{2(5+5)}{5-1}=5.\)</p>
+<p>So \(\displaystyle\lim_{w \rightarrow 5} \dfrac{2w^2-50}{(w-5)(w-1)}=\displaystyle\lim_{w \rightarrow 5} \dfrac{2(w+5)}{(w-1)}=5\text{.}\)</p>
+</div>
+<span class="incontext"><a href="exercises-4.html#solution-56">in-context</a></span>
+</body>
+</html>

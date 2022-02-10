@@ -1,0 +1,44 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:22:55-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>This example illustrates how Newton's method can go badly wrong if your initial guess is not good enough. We'll try to solve the equation</p>
+<div class="displaymath">
+\begin{equation*}
+f(x)=\arctan x=0
+\end{equation*}
+</div>
+<p>starting with \(x_1=1.5\text{.}\) (Of course the solution to \(f(x)=0\) is just \(x=0\text{;}\) we chose \(x_1=1.5\) for demonstration purposes.) Since the derivative \(f'(x)=\frac{1}{1+x^2}
+\text{,}\) Newton's method gives</p>
+<div class="displaymath">
+\begin{equation*}
+x_{n+1}=x_n-\frac{f(x_n)}{f'(x_n)}=x_n-(1+x_n^2)\arctan x_n
+\end{equation*}
+</div>
+<p>So<a knowl="./knowl/fn-179-hidden.html" title="Footnote C.1.3"><sup> 3 </sup></a></p>
+<div class="displaymath">
+\begin{align*}
+x_1\amp =1.5\\
+x_2\amp =1.5-(1+1.5^2)\arctan 1.5=-1.69\\
+x_3\amp =-1.69-(1+1.69^2)\arctan (-1.69)=2.32\\
+x_4\amp =2.32-(1+2.32^2)\arctan (2.32)=-5.11\\
+x_5\amp =-5.11-(1+5.11^2)\arctan (-5.11)=32.3\\
+x_6\amp =32.3-(1+32.3^2)\arctan (32.3)=-1575\\
+x_7\amp =3,894,976
+\end{align*}
+</div>
+<p>Looks pretty bad! Our \(x_n\)'s are not settling down at all!</p>
+<span class="incontext"><a href="sec_C_1.html#p-5463">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:16:25-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><article class="example-like"><p>A scientist in a B-grade science fiction film is studying a sample of the rare  and fictitious   element, implausium <a knowl="./knowl/fn-125-hidden.html" title="Footnote 3.3.6"><sup> 6 </sup></a>. With great effort he has produced  a sample of pure implausium. The next day — 17 hours later — he comes back  to his lab and discovers that his sample is now only 37% pure. What is the  half-life of the element?</p>
+<p><em class="alert">Solution</em> We can again set up our problem using Corollary <a knowl="./knowl/cor_decay_soln.html" title="Corollary 3.3.4">3.3.4</a>. Let  \(Q(t)\) denote the quantity of implausium at time \(t\text{,}\) measured in hours. Then  we know</p>
+<div class="displaymath">
+\begin{align*}
+Q(t)&amp;= Q(0) \cdot e^{-kt}
+\end{align*}
+</div>
+<p>We also know that</p>
+<div class="displaymath">
+\begin{align*}
+Q(17) &amp;= 0.37 Q(0).
+\end{align*}
+</div>
+<p>That enables us to determine \(k\) via</p>
+<div class="displaymath">
+\begin{align*}
+Q(17) = 0.37 Q(0) &amp;= Q(0) e^{-17k} &amp; \text{ divide both sides by $Q(0)$}\\
+0.37 &amp;= e^{-17k}\\
+\end{align*}
+<p class="intertext">and so</p>
+\begin{align*}
+k &amp;= -\frac{\log 0.37}{17} = 0.05849
+\end{align*}
+</div>
+<p>We can then convert this to the half life using Corollary <a knowl="./knowl/cor_decay_soln.html" title="Corollary 3.3.4">3.3.4</a>:</p>
+<div class="displaymath">
+\begin{align*}
+t_{1/2} &amp;= \frac{\log 2}{k} \approx 11.85 \text{ hours}
+\end{align*}
+</div>
+<p>While this example is entirely fictitious, one really can use this approach to  measure the half-life of materials.</p></article></body>
+</html>

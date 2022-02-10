@@ -1,0 +1,40 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:12:51-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>In this example we'll compute \(\diff{}{x}\big\{(3x+9)(x^2+4x^3)\big\}\) in two different ways. For the first, we'll start with the product rule.</p>
+<div class="displaymath">
+\begin{align*}
+\amp\diff{}{x}\big\{(3x+9)(x^2+4x^3)\big\}\\
+\amp\hskip0.5in=\Big\{\diff{}{x}(3x+9)\Big\}\ (x^2+4x^3)
++(3x+9)\ \diff{}{x}\{x^2+4x^3\}\\
+\amp\hskip0.5in=\big\{3\times 1+9\times 0\big\}\ (x^2+4x^3)
++(3x+9)\ \{2x+4(3x^2)\}\\
+\amp\hskip0.5in=3(x^2+4x^3)+(3x+9)\ (2x+12x^2)\\
+\amp\hskip0.5in=3x^2+12x^3+(6x^2+18x+36x^3+108x^2)\\
+\amp\hskip0.5in=18x+117x^2+48x^3
+\end{align*}
+</div>
+<p>For the second, we expand the product first and then differentiate.</p>
+<div class="displaymath">
+\begin{align*}
+\diff{}{x}\big\{(3x+9)(x^2+4x^3)\big\}
+&amp;=\diff{}{x}\big\{9x^2+39x^3+12x^4\big\}\\
+&amp;=9(2x)+39(3x^2)+12(4x^3)\\
+&amp;=18x+117x^2+48x^3
+\end{align*}
+</div>
+<span class="incontext"><a href="subsection-20.html#p-1549">in-context</a></span>
+</body>
+</html>

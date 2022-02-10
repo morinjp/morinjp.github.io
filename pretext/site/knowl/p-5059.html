@@ -1,0 +1,44 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:21:42-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>We rearrange the expression to a more natural form:</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{x\rightarrow\infty}(\log x)^2e^{-x}
+&amp;=\lim_{x\rightarrow\infty}\underbrace{\dfrac{(\log x)^2}{e^{x}}}_{\atp
+{\mathrm{num}\to\infty}
+{\mathrm{den}\to\infty}}
+\end{align*}
+</div>
+<p>Both the numerator and denominator go to infinity as \(x\) goes to infinity. So, we can apply l'Hôpital's Rule. In fact, we end up applying it twice.</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{x\rightarrow\infty}(\log x)^2e^{-x}
+&amp;=\lim_{x\rightarrow\infty}\underbrace{\dfrac{2\log x}{xe^{x}}}_{\atp
+{\mathrm{num}\to\infty}
+{\mathrm{den}\to\infty}}\\
+&amp;=\lim_{x\rightarrow\infty}\dfrac{2/x}{xe^{x}+e^x}
+\end{align*}
+</div>
+<p>The numerator gets smaller and smaller while the denominator gets larger and larger, so:</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{x\rightarrow\infty}(\log x)^2e^{-x}
+&amp;={0}
+\end{align*}
+</div>
+<span class="incontext"><a href="exercises-43.html#p-5059">in-context</a></span>
+</body>
+</html>

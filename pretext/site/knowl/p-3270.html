@@ -1,0 +1,46 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:16:27-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>Now to find the general solution to equation <a knowl="./knowl/eq_newtonCooling.html" title="Equation 3.3.7: Newton's law of cooling">3.3.7</a>. Since this  equation is so similar in form to equation <a knowl="./knowl/eq_carbonDating.html" title="Equation 3.3.1: Radioactive decay">3.3.1</a>, we might expect a  similar solution. Start by trying \(T(t) = Ce^{Kt}\) and let's see what goes  wrong. Substitute it into the equation:</p>
+<div class="displaymath">
+\begin{align*}
+\diff{T}{t} &amp;= K( T(t)- A)\\
+K C e^{Kt} &amp;= KCe^{KT} - KA\\
+?0 &amp; = -KA? &amp; \text{the constant $A$ causes problems!}
+\end{align*}
+</div>
+<p>Let's try something a little different — recall that the derivative of a  constant is zero. So we can add or subtract a constant from \(T(t)\) without  changing its derivative. Set \(Q(t) =  T(t)+B\text{,}\) then</p>
+<div class="displaymath">
+\begin{align*}
+\diff{Q}{t}(t) &amp;= \diff{T}{t}(t) &amp; \text{by Newton's law of cooling}\\
+&amp; = K(T(t)-A) = K(Q(t)-B-A)
+\end{align*}
+</div>
+<p>So if we choose \(B=-A\) then we will have</p>
+<div class="displaymath">
+\begin{align*}
+\diff{Q}{t}(t) &amp;= K Q(t)
+\end{align*}
+</div>
+<p>which is exactly the same form as equation <a knowl="./knowl/eq_carbonDating.html" title="Equation 3.3.1: Radioactive decay">3.3.1</a>, but with \(K=-k\text{.}\) So  by Theorem <a knowl="./knowl/thm_growthDEsoln.html" title="Theorem 3.3.2">3.3.2</a></p>
+<div class="displaymath">
+\begin{align*}
+Q(t) &amp;= Q(0) e^{Kt}
+\end{align*}
+</div>
+<p>We can translate back to \(T(t)\text{,}\) since \(Q(t)=T(t)-A\) and \(Q(0)=T(0)-A\text{.}\) This gives us the solution.</p>
+<span class="incontext"><a href="sec_newtonCooling.html#p-3270">in-context</a></span>
+</body>
+</html>

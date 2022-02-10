@@ -1,0 +1,35 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:11:19-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="solution">
+<h6 class="heading">
+<span class="type">Solution</span> <span class="codenumber">1.4.2.32.1</span>
+</h6>
+<p>As usual, we first try plugging in \(t=7\text{,}\) but the denominator is 0, so we need to think harder. The top and bottom are both squares, so let's go ahead and factor: \(\dfrac{t^2x^2+2tx+1}{t^2-14t+49}=\dfrac{(tx+1)^2}{(t-7)^2}\text{.}\) Since \(x\) is positive, the numerator is nonzero. Also, the numerator is positive near \(t=7\text{.}\) So, we have something positive and nonzero on the top, and we divide it by the bottom, which is positive and getting closer and closer to zero. The quotient is always positive near \(t=7\text{,}\) and it is growing in magnitude without bound, so \(\displaystyle\lim_{t \rightarrow 7} \dfrac{t^2x^2+2tx+1}{t^2-14t+49}=\infty\text{.}\)</p>
+<p>Remark: there is an important reason we specified that \(x\) must be a <em class="emphasis">positive</em> constant. Suppose \(x\) were \(-\frac{1}{7}\) (which is negative and so was not allowed in the question posed). In this case, we would have</p>
+<div class="displaymath">
+\begin{align*}
+\ds\lim_{t\rightarrow 7} \frac{t^2x^2+2tx+1}{t^2-14t+49}
+&amp;= \ds\lim_{t\rightarrow 7} \frac{(tx+1)^2}{(t-7)^2}\\
+&amp;= \ds\lim_{t\rightarrow 7} \frac{(-t/7+1)^2}{(t-7)^2}\\
+&amp;= \ds\lim_{t\rightarrow 7} \frac{(-1/7)^2(t-7)^2}{(t-7)^2}\\
+&amp;= \ds\lim_{t\rightarrow 7} (-1/7)^2\\
+&amp;= \dfrac{1}{49}\\
+&amp;\neq \infty
+\end{align*}
+</div>
+</div>
+<span class="incontext"><a href="exercises-4.html#solution-60">in-context</a></span>
+</body>
+</html>

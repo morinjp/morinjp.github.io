@@ -1,0 +1,35 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:19:08-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><div class="solution"><ul class="disc">
+<li>By Equation <a knowl="./knowl/eq_taylorErrorN.html" title="Equation 3.4.33">3.4.33</a>, there is \(c\in(0,0.5)\) such that the error is<div class="displaymath">
+\begin{align*}
+R_4 &amp;= \frac{f^{(4)}(c)}{4!} (0.5-0)^4\\
+&amp;= \frac{1}{24\cdot 16} \cdot \frac{\cos(c^2)}{3-c}
+\end{align*}
+</div>
+</li>
+<li>For any \(c\) we have \(|\cos(c^2)| \leq 1\text{,}\) and for \(c \lt 0.5\) we have \(3-c \gt 2.5\text{,}\) so that<div class="displaymath">
+\begin{equation*}
+\left|\frac{\cos(c^2)}{3-c}\right| \leq \frac{1}{2.5}\,.
+\end{equation*}
+</div>
+</li>
+<li>We conclude that<div class="displaymath">
+\begin{equation*}
+\left| R_4 \right| \leq \frac{1}{2.5\cdot 24\cdot 16} = \frac{1}{60\cdot 16} \lt \frac{1}{60\cdot 10}=\frac{1}{600} \lt \frac{1}{500}
+\end{equation*}
+</div>
+</li>
+</ul></div></body>
+</html>

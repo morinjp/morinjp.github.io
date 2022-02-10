@@ -1,0 +1,59 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:12:56-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<ul class="disc">
+<li>As we seen before, the best strategy for dealing with nasty expressions is to break them up into easy pieces. We can think of \(f(x)\) as the five–fold product<div class="displaymath">
+\begin{equation*}
+f(x)=f_1(x)\cdot f_2(x)\cdot f_3(x)\cdot \frac{1}{f_4(x)}\cdot \frac{1}{f_5(x)}
+\end{equation*}
+</div>with<div class="displaymath">
+\begin{align*}
+f_1(x)\amp=\sqrt{x}-1\amp
+f_2(x)\amp=2-x\amp
+f_3(x)\amp=1-x^2\\
+f_4(x)\amp=\sqrt{x}\amp
+f_5(x)\amp=3+2x
+\end{align*}
+</div>
+</li>
+<li>By now, the derivatives of the \(f_j\)'s should be easy to find:<div class="displaymath">
+\begin{align*}
+f'_1(x)\amp=\frac{1}{2\sqrt{x}}\amp
+f'_2(x)\amp=-1\amp
+f'_3(x)\amp=-2x\\
+f'_4(x)\amp=\frac{1}{2\sqrt{x}}\amp
+f'_5(x)\amp=2
+\end{align*}
+</div>
+</li>
+<li>Now, to get the derivative \(f(x)\) we use the \(n\)–fold product rule which was  developed in Example <a knowl="./knowl/eg_DIFFsimpleToolsA.html" title="Example 2.6.6: Extending the product rule to more than two factors">2.6.6</a>, together with the special case of the quotient rule (Corollary <a knowl="./knowl/cor_diff_recip.html" title="Corollary 2.4.6: Derivative of a reciprocal">2.4.6</a>).<div class="displaymath">
+\begin{align*}
+f'(x)&amp;=f'_1f_2f_3\frac{1}{f_4}\frac{1}{f_5}
++f_1f'_2f_3\frac{1}{f_4}\frac{1}{f_5}
++f_1f_2f'_3\frac{1}{f_4}\frac{1}{f_5}
+-f_1f_2f_3\frac{f'_4}{f^2_4}\frac{1}{f_5}\\
+\amp\hskip2.5in-f_1f_2f_3\frac{1}{f_4}\frac{f'_5}{f^2_5}\\
+&amp;=\Big[\frac{f'_1}{f_1}+\frac{f'_2}{f_2}+\frac{f'_3}{f_3}-\frac{f'_4}{f_4}
+-\frac{f'_5}{f_5}\Big]f_1f_2f_3\frac{1}{f_4}\frac{1}{f_5}\\
+&amp;=\bigg[\frac{1}{2\sqrt{x}(\sqrt{x}-1)}
+-\frac{1}{2-x}-\frac{2x}{1-x^2}-\frac{1}{2x}
+-\frac{2}{3+2x}\bigg]\\
+\amp\hskip2.5in\frac{(\sqrt{x}-1)(2-x)(1-x^2)}{\sqrt{x}(3+2x)}
+\end{align*}
+</div>The trick that we used in going from the first line to the second line, namely multiplying term number \(j\) by \(\frac{f_j(x)}{f_j(x)}\) is often useful in simplifying the derivative of a product of many  factors <a knowl="./knowl/fn-69-hidden.html" title="Footnote 2.6.1"><sup> 1 </sup></a>.</li>
+</ul>
+<span class="incontext"><a href="subsection-20.html#p-1562">in-context</a></span>
+</body>
+</html>

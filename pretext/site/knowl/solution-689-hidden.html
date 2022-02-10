@@ -1,0 +1,28 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:22:20-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><div class="solution">
+<p>The function \(f(x)\) looks like perhaps it came from the quotient rule. Recall</p>
+<div class="displaymath">
+\begin{align*}
+\diff{}{x}\left\{\frac{\textcolor{red}{u(x)}}{\textcolor{blue}{v(x)}}\right\}&amp;=
+\frac{\textcolor{blue}{v(x)}\textcolor{red}{u'(x)}-\textcolor{red}{u(x)}\textcolor{blue}{v'(x)}}{(\textcolor{blue}{v(x)})^2}\\
+\end{align*}
+<p class="intertext">Then, since the denominator of \(f(x)\) is \((x^2+1)^2\text{,}\) we might guess \(v(x)=(x^2+1)\text{.}\) That leaves \(u(x)=e^x\text{.}\)</p>
+\begin{align*}
+\diff{}{x}\left\{\frac{e^x}{x^2+1}\right\}&amp;=\frac{(x^2+1)e^x-e^x(2x)}{(x^2+1)^2}=f(x)
+\end{align*}
+</div>
+<p>So, the antiderivative of \(f(x)\) is \(F(x)=\dfrac{e^x}{x^2+1}+C\text{.}\)</p>
+</div></body>
+</html>

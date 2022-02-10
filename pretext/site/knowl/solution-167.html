@@ -1,0 +1,84 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:12:28-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="solution">
+<h6 class="heading">
+<span class="type">Solution</span> <span class="codenumber">2.2.4.27.1</span>
+</h6>
+<p>Using the definition of the derivative, \(f\) is differentiable at \(0\) if and only if</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{h \to 0}\frac{f(h)-f(0)}{h}&amp;\\
+\end{align*}
+<p class="intertext">exists. In particular, this means \(f\) is differentiable at \(0\) if and only if both one-sided limits exist and are equal to each other.</p>
+\begin{align*}
+\\
+\end{align*}
+<p class="intertext">When \(h \lt 0\text{,}\) \(f(h)=0\text{,}\) so</p>
+\begin{align*}
+\lim_{h \to 0^-}\frac{f(h)-f(0)}{h}&amp;=\lim_{h \to 0^-}\frac{0-0}{h}=0\\
+\end{align*}
+<p class="intertext">So, \(f\) is differentiable at \(x=0\) if and only if</p>
+\begin{align*}
+\lim_{h \to 0^+}\frac{f(h)-f(0)}{h}&amp;=0.\\
+\end{align*}
+<p class="intertext">To evaluate the  limit above, we note \(f(0)=0\) and, when \(h \gt 0\text{,}\) \(f(h)=h^a\sin\left(\frac{1}{h}\right)\text{,}\) so</p>
+\begin{align*}
+\lim_{h \to 0^+}\frac{f(h)-f(0)}{h}&amp;=\lim_{h \to 0^+}\frac{h^a\sin\left(\frac{1}{h}\right)}{h}\\
+&amp;=\lim_{h \to 0^+}h^{a-1}\sin\left(\frac{1}{h}\right)
+\end{align*}
+</div>
+<p>We will spend the rest of this solution evaluating the limit above for different values of \(a\text{,}\) to find when it is equal to zero and when it is not. Let's consider the different values that could be taken by \(h^{a-1.}\)</p>
+<ul class="disc">
+<li>
+<p>If \(a=1\text{,}\) then \(a-1=0\text{,}\) so \(h^{a-1}=h^0=1\) for all values of \(h\text{.}\) Then</p>
+<div class="displaymath">
+\begin{equation*}
+\lim_{h \to 0^+}h^{a-1}\sin\left(\frac{1}{h}\right)=\lim_{h \to 0^+}\sin\left(\frac{1}{h}\right)=DNE
+\end{equation*}
+</div>
+<p>(Recall that the function \(\sin\left(\frac{1}{x}\right)\) oscillates faster and faster as \(x\) goes to 0. We first saw this behaviour in Example <a knowl="./knowl/eg_sinpix.html" title="Example 1.3.5: A bad example">1.3.5</a>.)</p>
+</li>
+<li>
+<p>If \(a \lt 1\text{,}\) then \(a-1 \lt 0\text{,}\) so \(\ds\lim_{h \to 0^+}h^{a-1}=\infty\text{.}\) (Since we have a negative exponent, we are in effect <em class="emphasis">dividing  by</em> a smaller and smaller positive number. For example, if \(a=\frac{1}{2}\text{,}\) then \(\ds\lim_{h \to 0^+}h^{a-1}=\ds\lim_{h \to 0^+}h^{-\frac{1}{2}}=\ds\lim_{h \to 0^+}\frac{1}{\sqrt{h}}=\infty\text{.}\)) Since \(\sin\left(\frac{1}{x}\right)\) goes back and forth between one and negative one,</p>
+<div class="displaymath">
+\begin{equation*}
+\lim_{h \to 0^+}h^{a-1}\sin\left(\frac{1}{x}\right)=DNE
+\end{equation*}
+</div>
+<p>since as \(h\) goes to 0, the function oscillates between positive and negative numbers of ever-increasing magnitude.</p>
+</li>
+<li>
+<p>If \(a \gt 1\text{,}\) then \(a-1 \gt 0\text{,}\) so \(\ds\lim_{h \to 0^+}h^{a-1}=0\text{.}\) Although \(\sin\left(\frac{1}{x}\right)\) oscillates wildly near \(x=0\text{,}\) it is bounded by \(-1\) and \(1\text{.}\) So,</p>
+<div class="displaymath">
+\begin{equation*}
+(-1)h^{a-1} \leq h^{a-1}\sin\left(\frac{1}{h}\right) \leq h^{a-1}
+\end{equation*}
+</div>
+<p>Since both \(\ds\lim_{h \to 0^+} (-1)h^{a-1}=0\) and \(\ds\lim_{h \to 0^+} h^{a-1}=0\text{,}\) by the Squeeze Theorem,</p>
+<div class="displaymath">
+\begin{equation*}
+\ds\lim_{h \to 0^+} h^{a-1}\sin\left(\frac{1}{x}\right)=0
+\end{equation*}
+</div>
+<p>as well.</p>
+</li>
+</ul>
+<p>In the above cases, we learned \(\ds\lim_{h \to 0^+}\frac{f(h)-f(0)}{h}=\ds\lim_{h \to 0^+} h^{a-1}\sin\left(\frac{1}{x}\right)=0\) when \(a \gt 1\text{,}\) and</p>
+<p>\(\ds\lim_{h \to 0^+}\frac{f(h)-f(0)}{h}=\ds\lim_{h \to 0^+} h^{a-1}\sin\left(\frac{1}{x}\right)\neq 0\) when \(a \leq 1\text{.}\)</p>
+<p>So, \(f\) is differentiable at \(x=0\) if and only if \(a \gt 1\text{.}\)</p>
+</div>
+<span class="incontext"><a href="exercises-8.html#solution-167">in-context</a></span>
+</body>
+</html>

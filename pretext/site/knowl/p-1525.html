@@ -1,0 +1,76 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:12:45-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>After the warm-up above, we will just jump straight in. Let \(P(x)=f(x)\, g(x)\text{,}\) the  product of our two functions. The derivative of the product is given by</p>
+<div class="displaymath">
+\begin{align*}
+P'(x) &amp;= \lim_{h \to 0} \frac{P(x+h)-P(x)}{h}
+\end{align*}
+</div>
+<p>Again we will focus on the numerator inside the limit and massage it into the form we  need. To simplify these manipulations, define</p>
+<div class="displaymath">
+\begin{align*}
+F(h) &amp;= \frac{f(x+h)-f(x)}{h} &amp; \text{ and } &amp;&amp;
+G(h) &amp;= \frac{g(x+h)-g(x)}{h}.\\
+\end{align*}
+<p class="intertext">Then we can write</p>
+\begin{align*}
+f(x+h)&amp;= f(x)+hF(h) &amp;\text{and} &amp;&amp; g(x+h)&amp;=g(x)+hG(h).\\
+\end{align*}
+<p class="intertext">We can also write</p>
+\begin{align*}
+f'(x) &amp;= \lim_{h\to0} F(h) &amp; \text{and}&amp;&amp;
+g'(x) &amp;= \lim_{h\to0} G(h).
+\end{align*}
+</div>
+<p>So back to that numerator:</p>
+<div class="displaymath">
+\begin{align*}
+\amp P(x+h)-P(x)
+=f(x+h)\cdot g(x+h)-f(x) \cdot g(x) &amp; \text{substitute}\\
+&amp;=[f(x)+ hF(h)]\ [g(x)+hG(h)]-f(x) \cdot g(x) &amp; \text{expand}\\
+&amp;=f(x)g(x) + f(x)\cdot hG(h) + hF(h)\cdot g(x) + h^2 F(h)\cdot G(h) -f(x) \cdot
+g(x)\hskip-0.5in\\
+&amp;= f(x) \cdot hG(h) + hF(h) \cdot g(x) + h^2F(h) \cdot G(h).
+\end{align*}
+</div>
+<p>Armed with this we return to the definition of the derivative:</p>
+<div class="displaymath">
+\begin{align*}
+P'(x)
+&amp;=\lim_{h\to 0}\frac{P(x+h)-P(x)}{h}\\
+&amp;= \lim_{h\to 0} \frac{f(x) \cdot hG(h) + hF(h) \cdot g(x) + h^2 F(h) \cdot
+G(h) }{h}\\
+&amp;= \left(\lim_{h\to 0} \frac{f(x) \cdot h G(h)}{h}\right)
++ \left(\lim_{h\to 0} \frac{h F(h) \cdot g(x)}{h}\right)
++ \left(\lim_{h\to 0} \frac{h^2 F(h) \cdot G(h) }{h}\right)\\
+&amp;= \left(\lim_{h\to 0} f(x) \cdot G(h)\right)
++ \left(\lim_{h\to 0} F(h) \cdot g(x)\right)
++ \left(\lim_{h\to 0} h  F(h) \cdot G(h)\right)\\
+\end{align*}
+<p class="intertext">Now since \(f(x)\) and \(g(x)\) do not change as we send \(h\) to zero, we can pull  them outside. We can also write the third term as the product of 3 limits:</p>
+\begin{align*}
+&amp;= \left(f(x) \lim_{h\to 0} G(h)\right)
++ \left(g(x) \lim_{h\to 0} F(h)\right)
++ \left(\lim_{h\to 0} h\right)  \cdot \left(\lim_{h\to0} F(h)\right) \cdot
+\left(\lim_{h\to0} G(h)\right)\\
+&amp;= f(x) \cdot g'(x) + g(x)\cdot f'(x) + 0 \cdot f'(x) \cdot g'(x)\\
+&amp;= f(x) \cdot g'(x) + g(x) \cdot f'(x).
+\end{align*}
+</div>
+<p>And so we recover the product rule.</p>
+<span class="incontext"><a href="subsection-18.html#p-1525">in-context</a></span>
+</body>
+</html>

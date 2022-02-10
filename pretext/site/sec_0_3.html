@@ -1,0 +1,371 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T10:59:59-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Other Important Sets</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.1/pretext.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on2.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="RQS.css">
+<link href="https://pretextbook.org/css/0.1/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\require{cancel}\newcommand{\dee}[1]{\mathrm{d}#1}
+\newcommand{\half}{ \frac{1}{2} }
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ts}{\textstyle}
+\newcommand{\es}{ {\varnothing}}
+\newcommand{\st}{ {\mbox{ s.t. }} }
+\newcommand{\pow}[1]{ \mathcal{P}\left(#1\right) }
+\newcommand{\set}[1]{ \left\{#1\right\} }
+\newcommand{\lin}{{\text{LIN}}}
+\newcommand{\quot}{{\text{QR}}}
+\newcommand{\simp}{{\text{SMP}}}
+\newcommand{\diff}[2]{ \frac{\mathrm{d}#1}{\mathrm{d}#2}}
+\newcommand{\bdiff}[2]{ \frac{\mathrm{d}}{\mathrm{d}#2} \left( #1 \right)}
+\newcommand{\ddiff}[3]{ \frac{\mathrm{d}^#1#2}{\mathrm{d}{#3}^#1}}
+\renewcommand{\neg}{ {\sim} }
+\newcommand{\limp}{ {\;\Rightarrow\;} }
+\newcommand{\nimp}{ {\;\not\Rightarrow\;} }
+\newcommand{\liff}{ {\;\Leftrightarrow\;} }
+\newcommand{\niff}{ {\;\not\Leftrightarrow\;} }
+\newcommand{\De}{\Delta}
+\newcommand{\bbbn}{\mathbb{N}}
+\newcommand{\bbbr}{\mathbb{R}}
+\newcommand{\bbbp}{\mathbb{P}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\Si}{\Sigma}
+
+\newcommand{\arccsc}{\mathop{\mathrm{arccsc}}}
+\newcommand{\arcsec}{\mathop{\mathrm{arcsec}}}
+\newcommand{\arccot}{\mathop{\mathrm{arccot}}}
+\newcommand{\erf}{\mathop{\mathrm{erf}}}
+\newcommand{\smsum}{\mathop{{\ts \sum}}}
+\newcommand{\atp}[2]{ \genfrac{}{}{0in}{}{#1}{#2} }
+
+\newcommand{\ave}{\mathrm{ave}}
+\newcommand{\llt}{\left \lt }
+\newcommand{\rgt}{\right \gt }
+
+
+\newcommand{\YEaxis}[2]{\draw[help lines] (-#1,0)--(#1,0) node[right]{$x$};\draw[help lines] (0,-#2)--(0,#2) node[above]{$y$};}
+
+\newcommand{\YEaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$x$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YEtaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+\newcommand{\YEtaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$}; \draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YExcoord}[2]{\draw (#1,.2)--(#1,-.2) node[below]{$#2$};}
+\newcommand{\YEycoord}[2]{\draw (.2,#1)--(-.2,#1) node[left]{$#2$};}
+\newcommand{\YEnxcoord}[2]{\draw (#1,-.2)--(#1,.2) node[above]{$#2$};}
+\newcommand{\YEnycoord}[2]{\draw (-.2,#1)--(.2,#1) node[right]{$#2$};}
+
+\newcommand{\YEstickfig}[3]{
+\draw (#1,#2) arc(-90:270:2mm);
+\draw (#1,#2)--(#1,#2-.5) (#1-.25,#2-.75)--(#1,#2-.5)--(#1+.25,#2-.75) (#1-.2,#2-.2)--(#1+.2,#2-.2);}
+
+
+\newcommand{\IBP}[7]{
+\begin{array}{|c  | l | l |}
+\hline
+\color{red}{\text{Option 1:}}
+&amp; u=#2
+&amp;\color{red}{\dee{u}=#3 ~ \dee{#1}}
+\\
+&amp; \dee{v}=#5~\dee{#1}
+&amp;\color{red}{v=#7}
+\\
+\hline
+\color{blue}{\text{Option 2:}}
+&amp; u=#5
+&amp;\color{blue}{\dee{u}=#6 ~ \dee{#1}}
+\\
+&amp;\dee{v}=#2 \dee{#1}
+&amp;\color{blue}{v=#4}
+\\
+\hline
+\end{array}
+}
+
+
+\renewcommand{\textcolor}[2]{{\color{#1}{#2}}}
+
+
+\newcommand{\trigtri}[4]{
+\begin{tikzpicture}
+\draw (-.5,0)--(2,0)--(2,1.5)--cycle;
+\draw (1.8,0) |- (2,.2);
+\draw[double] (0,0) arc(0:30:.5cm);
+\draw (0,.2) node[right]{$#1$};
+\draw (1,-.5) node{$#2$};
+\draw (2,.75) node[right]{$#3$};
+\draw (.6,1.1) node[rotate=30]{$#4$};
+\end{tikzpicture}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="clp_1_dc.html"><span class="title">CLP-1 Differential Calculus</span></a></h1>
+<p class="byline">Joel Feldman, Andrew Rechnitzer, Elyse Yeager</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec_sets.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="chap_basics.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="subsection-1.html" title="Next">Next</a></span></div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec_sets.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="chap_basics.html" title="Up">Up</a><a class="next-button button toolbar-item" href="subsection-1.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="index.html" data-scroll="index"><span class="title">Front Matter</span></a></h2>
+<ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface-2.html" data-scroll="preface-2">Using the exercises in this book</a></li>
+<li><a href="preface-3.html" data-scroll="preface-3">Feedback about the text</a></li>
+</ul>
+<h2 class="link"><a href="chap_basics.html" data-scroll="chap_basics"><span class="codenumber">0</span> <span class="title">The basics</span></a></h2>
+<ul>
+<li><a href="sec_0_1.html" data-scroll="sec_0_1">Numbers</a></li>
+<li><a href="sec_sets.html" data-scroll="sec_sets">Sets</a></li>
+<li><a href="sec_0_3.html" data-scroll="sec_0_3" class="active">Other Important Sets</a></li>
+<li><a href="sec_0_4.html" data-scroll="sec_0_4">Functions</a></li>
+<li><a href="sec_parsing.html" data-scroll="sec_parsing">Parsing Formulas</a></li>
+<li><a href="sec_inverse_functions.html" data-scroll="sec_inverse_functions">Inverse Functions</a></li>
+</ul>
+<h2 class="link"><a href="chap_limits.html" data-scroll="chap_limits"><span class="codenumber">1</span> <span class="title">Limits</span></a></h2>
+<ul>
+<li><a href="sec_first_lim.html" data-scroll="sec_first_lim">Drawing Tangents and a First Limit</a></li>
+<li><a href="sec_velocity.html" data-scroll="sec_velocity">Another Limit and Computing Velocity</a></li>
+<li><a href="sec_lim_func.html" data-scroll="sec_lim_func">The Limit of a Function</a></li>
+<li><a href="sec_1_4.html" data-scroll="sec_1_4">Calculating Limits with Limit Laws</a></li>
+<li><a href="sec_1_5.html" data-scroll="sec_1_5">Limits at Infinity</a></li>
+<li><a href="sec_1_6.html" data-scroll="sec_1_6">Continuity</a></li>
+<li><a href="sec_opt_formal_limit.html" data-scroll="sec_opt_formal_limit">(Optional) — Making the Informal a Little More Formal</a></li>
+<li><a href="sec_lim_inf_formal.html" data-scroll="sec_lim_inf_formal">(Optional) — Making Infinite Limits a Little More Formal</a></li>
+<li><a href="sec_proof_arith_lim.html" data-scroll="sec_proof_arith_lim">(Optional) — Proving the Arithmetic of Limits</a></li>
+</ul>
+<h2 class="link"><a href="chap_deriv.html" data-scroll="chap_deriv"><span class="codenumber">2</span> <span class="title">Derivatives</span></a></h2>
+<ul>
+<li><a href="sec_2_1.html" data-scroll="sec_2_1">Revisiting Tangent Lines</a></li>
+<li><a href="sec_def_deriv.html" data-scroll="sec_def_deriv">Definition of the Derivative</a></li>
+<li><a href="sec_2_3.html" data-scroll="sec_2_3">Interpretations of the Derivative</a></li>
+<li><a href="sec_2_4.html" data-scroll="sec_2_4">Arithmetic of Derivatives - a Differentiation Toolbox</a></li>
+<li><a href="sec_proof_arith_deriv.html" data-scroll="sec_proof_arith_deriv">Proofs of the Arithmetic of Derivatives</a></li>
+<li><a href="sec_2_6.html" data-scroll="sec_2_6">Using the Arithmetic of Derivatives –  Examples</a></li>
+<li><a href="sec_exp_func.html" data-scroll="sec_exp_func">Derivatives of Exponential Functions</a></li>
+<li><a href="sec_diff_trig.html" data-scroll="sec_diff_trig">Derivatives of Trigonometric Functions</a></li>
+<li><a href="sec_chain_rule.html" data-scroll="sec_chain_rule">One More Tool  – the Chain Rule</a></li>
+<li><a href="sec_diff_logs.html" data-scroll="sec_diff_logs">The Natural Logarithm</a></li>
+<li><a href="sec_2_11.html" data-scroll="sec_2_11">Implicit Differentiation</a></li>
+<li><a href="sec_invTrig.html" data-scroll="sec_invTrig">Inverse Trigonometric Functions</a></li>
+<li><a href="sec_mvt.html" data-scroll="sec_mvt">The Mean Value Theorem</a></li>
+<li><a href="sec_higher_diff.html" data-scroll="sec_higher_diff">Higher Order Derivatives</a></li>
+<li><a href="sec_cont_deriv.html" data-scroll="sec_cont_deriv">(Optional) — Is \(\lim_{x\to c}f'(x)\) Equal to \(f'(c)\text{?}\)</a></li>
+</ul>
+<h2 class="link"><a href="chap_appl_deriv.html" data-scroll="chap_appl_deriv"><span class="codenumber">3</span> <span class="title">Applications of derivatives</span></a></h2>
+<ul>
+<li><a href="sec_vel_acc.html" data-scroll="sec_vel_acc">Velocity and Acceleration</a></li>
+<li><a href="sec_rrates.html" data-scroll="sec_rrates">Related Rates</a></li>
+<li><a href="sec_ExpGthDecay.html" data-scroll="sec_ExpGthDecay">Exponential Growth and Decay</a></li>
+<li><a href="sec_DIFFTaylor.html" data-scroll="sec_DIFFTaylor">Taylor Polynomials</a></li>
+<li><a href="sec_optimise.html" data-scroll="sec_optimise">Optimisation</a></li>
+<li><a href="sec_curve_sketch.html" data-scroll="sec_curve_sketch">Sketching Graphs</a></li>
+<li><a href="sec_4_7.html" data-scroll="sec_4_7">L'Hôpital's Rule and Indeterminate Forms</a></li>
+</ul>
+<h2 class="link"><a href="chapter-5.html" data-scroll="chapter-5"><span class="codenumber">4</span> <span class="title">Towards Integral Calculus</span></a></h2>
+<ul><li><a href="sec_antidiff.html" data-scroll="sec_antidiff">Introduction to Antiderivatives</a></li></ul>
+<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Appendices</span></a></h2>
+<h2 class="link"><a href="app_highschool.html" data-scroll="app_highschool"><span class="codenumber">A</span> <span class="title">High School Material</span></a></h2>
+<ul>
+<li><a href="sec_simtri.html" data-scroll="sec_simtri">Similar Triangles</a></li>
+<li><a href="sec_A_2.html" data-scroll="sec_A_2">Pythagoras</a></li>
+<li><a href="sec_A_3.html" data-scroll="sec_A_3">Trigonometry — Definitions</a></li>
+<li><a href="app_rad_arc_sec.html" data-scroll="app_rad_arc_sec">Radians, Arcs and Sectors</a></li>
+<li><a href="app_sec_trig_graphs.html" data-scroll="app_sec_trig_graphs">Trigonometry — Graphs</a></li>
+<li><a href="sec_A_6.html" data-scroll="sec_A_6">Trigonometry — Special Triangles</a></li>
+<li><a href="sec_A_7.html" data-scroll="sec_A_7">Trigonometry — Simple Identities</a></li>
+<li><a href="sec_trig_add.html" data-scroll="sec_trig_add">Trigonometry — Add and Subtract Angles</a></li>
+<li><a href="sec_inv_trig.html" data-scroll="sec_inv_trig">Inverse Trig Functions</a></li>
+<li><a href="app_sec_areas.html" data-scroll="app_sec_areas">Areas</a></li>
+<li><a href="sec_volumes.html" data-scroll="sec_volumes">Volumes</a></li>
+<li><a href="sec_powers.html" data-scroll="sec_powers">Powers</a></li>
+<li><a href="sec_logs.html" data-scroll="sec_logs">Logarithms</a></li>
+<li><a href="sec_must_deriv.html" data-scroll="sec_must_deriv">You Should be Able to Derive</a></li>
+</ul>
+<h2 class="link"><a href="chap_app_B.html" data-scroll="chap_app_B"><span class="codenumber">B</span> <span class="title">Origin of Trig, Area and Volume Formulas</span></a></h2>
+<ul>
+<li><a href="sec_B_1.html" data-scroll="sec_B_1">Theorems about Triangles</a></li>
+<li><a href="sec_B_2.html" data-scroll="sec_B_2">Trigonometry</a></li>
+<li><a href="sec_B_3.html" data-scroll="sec_B_3">Inverse Trigonometric Functions</a></li>
+<li><a href="sec_B_4.html" data-scroll="sec_B_4">Cosine and Sine Laws</a></li>
+<li><a href="sec_B_5.html" data-scroll="sec_B_5">Circles, cones and spheres</a></li>
+</ul>
+<h2 class="link"><a href="app_root_finding.html" data-scroll="app_root_finding"><span class="codenumber">C</span> <span class="title">Root Finding</span></a></h2>
+<ul>
+<li><a href="sec_C_1.html" data-scroll="sec_C_1">Newton's Method</a></li>
+<li><a href="sec_C_2.html" data-scroll="sec_C_2">The Error Behaviour of Newton's Method</a></li>
+<li><a href="sec_C_3.html" data-scroll="sec_C_3">The false position (regula falsi) method</a></li>
+<li><a href="sec_C_4.html" data-scroll="sec_C_4">The secant method</a></li>
+<li><a href="sec_C_5.html" data-scroll="sec_C_5">The Error Behaviour of the Secant Method</a></li>
+</ul>
+<h2 class="link"><a href="app_hint.html" data-scroll="app_hint"><span class="codenumber">D</span> <span class="title">Hints for Exercises</span></a></h2>
+<h2 class="link"><a href="app_answ.html" data-scroll="app_answ"><span class="codenumber">E</span> <span class="title">Answers to Exercises</span></a></h2>
+<h2 class="link"><a href="app_soln.html" data-scroll="app_soln"><span class="codenumber">F</span> <span class="title">Solutions to Exercises</span></a></h2></nav><div class="extras"><nav><a class="feedback-link" href="mailto:clp@ugrad.math.ubc.ca?subject=clp-pretext" target="_blank">Feedback</a><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="mathbook-content"><section class="section" id="sec_0_3"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">0.3</span> <span class="title">Other Important Sets</span>
+</h2>
+<a href="sec_0_3.html" class="permalink">¶</a><section class="introduction" id="introduction-4"><p id="p-73">We have seen a few important sets above — namely \(\mathbb{N}, \mathbb{Z}, \mathbb{Q}\) and \(\mathbb{R}\text{.}\) However, arguably the most important set in mathematics is the empty set.</p>
+<article class="definition-like" id="def_0_3_1"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">0.3.1</span> <span class="title">Empty set</span>
+</h6>
+<p id="p-74">The empty set (or null set or void set) is the set which contains no elements. It is denoted \(\es\text{.}\) For any object \(x\text{,}\) we always have \(x \notin \es\text{;}\) hence \(\es = \{ \}\text{.}\)</p></article><p id="p-75">Note that it is important to realise that the empty set is not <em class="emphasis">nothing</em>; think of it  as an empty bag. Also note that with quite a bit of hard work you can actually define the  natural numbers in terms of the empty set. Doing so is very formal and well beyond the  scope of this text.</p>
+<p id="p-76">When a set does not contain too many elements it is fine to specify it by listing out its  elements.  But for infinite sets or even just big sets we can't do this and instead we  have to give the defining rule. For example the set of all perfect square numbers we write as</p>
+<div class="displaymath">
+\begin{align*}
+S &amp;= \{x \st x = k^2 \mbox{ where } k \in \mathbb{Z} \}
+\end{align*}
+</div>
+<p>Notice we have used another piece of shorthand here, namely \(\st\text{,}\) which stands for “such that” or “so that”. We read the above statement as “\(S\) is the set of elements \(x\) such that \(x\) equals \(k\)-squared where \(k\) is an integer”. This is the standard way of writing a set defined by a rule, though there are  several shorthands for “such that”. We shall use two them:</p>
+<div class="displaymath">
+\begin{align*}
+P &amp;= \{ p \st p \mbox{ is prime} \} = \{ p \,|\, p \mbox{ is prime} \}
+\end{align*}
+</div>
+<p>Other people also use “:” is shorthand for “such that”. You should recognise all  three of these shorthands.</p>
+<article class="example-like" id="eg_0_3_1"><a knowl="" class="id-ref" refid="hk-eg_0_3_1"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">0.3.2</span> <span class="title">examples of sets</span>
+</h6></a></article><div id="hk-eg_0_3_1" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-77">Even more examples…</p>
+<ul class="disc">
+<li id="li-43">Let \(A = \{2,3,5,7,11,13,17,19\}\) and let<div class="displaymath">
+\begin{align*}
+B &amp;= \{ a \in A | a \lt 8\} = \{2,3,5,7\}
+\end{align*}
+</div>the set of elements of \(A\) that are strictly less than 8.</li>
+<li id="li-44">Even and odd integers<div class="displaymath">
+\begin{align*}
+E &amp;= \{ n | n \mbox{ is an even integer} \}\\
+&amp;= \{n | n =2k \mbox{ for some $k \in \mathbb{Z}$ } \}\\
+&amp;= \{2n | n \in \mathbb{Z}\},
+\end{align*}
+</div>and similarly<div class="displaymath">
+\begin{align*}
+O &amp;= \{ n | n \mbox{ is an odd integer} \}\\
+&amp;= \{2n+1 | n \in \mathbb{Z}\}.
+\end{align*}
+</div>
+</li>
+<li id="li-45">Square integers<div class="displaymath">
+\begin{align*}
+S &amp;= \{n^2 | n \in \mathbb{Z}\}.
+\end{align*}
+</div>The set <a knowl="" class="id-ref" refid="hk-fn-10" id="fn-10"><sup> 1 </sup></a><span id="hk-fn-10" class="hidden-content tex2jax_ignore"><span class="footnote">Notice here we are using another common piece of mathematical short-hand. Very often in mathematics we will be talking or writing about some object, like the set \(S\) above, and then we will create a closely related object. Rather than calling this new object by a new symbol (we could have used \(T\) or \(R\) or…), we instead use the same symbol but with some sort of accent — such as the little single quote mark we added to the symbol \(S\) to make \(S'\) (read “S prime”). The point of this is to let the reader know that this new object is related to the original one, but not the same. You might also see \(\dot{S}, \hat{S}, \bar{S}, \tilde{S}\) and others.</span></span> \(S'= \set{n^2 | n \in \mathbb{N}}\) is not the same as \(S\) because \(S'\) does not contain the number \(0\text{,}\) which is definitely a square integer and \(0\) is in \(S\text{.}\) We could also write \(S = \set{n^2 | n \in \mathbb{Z}, n \geq 0}\) and \(S=\set{n^2 | n=0,1,2,\dots}\text{.}\)</li>
+</ul></article></div>
+<p id="p-78">The sets \(A\) and \(B\) in the above example illustrate an important point. Every element in \(B\) is an element in \(A\text{,}\) and so we say that \(B\) is a subset of \(A\)</p>
+<article class="definition-like" id="def_0_3_2"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">0.3.3</span>
+</h6>
+<p id="p-79">Let \(A\) and \(B\) be sets. We say “\(A\) is a subset of \(B\)” if every element of \(A\) is also an element of \(B\text{.}\) We denote this \(A \subseteq B\) (or \(B \supseteq A\)). If \(A\) is a subset of \(B\) and \(A\) and \(B\) are not the same , so that there is some element of \(B\) that is not in \(A\) then we say that \(A\) is a proper subset of \(B\text{.}\) We denote this by \(A \subset B\) (or \(B \supset A\)).</p></article><p id="p-80">Two things to note about subsets:</p>
+<ul class="disc">
+<li id="li-46">Let \(A\) be a set. It is always the case that \(\es \subseteq A\text{.}\)</li>
+<li id="li-47">If \(A\) is not a subset of \(B\) then we write \(A \not\subseteq B\text{.}\) This is the same as saying that there is some element of \(A\) that is not in \(B\text{.}\) That is, there is some \(a \in A\) such that \(a \notin B\text{.}\)</li>
+</ul>
+<article class="example-like" id="eg_0_3_2"><a knowl="" class="id-ref" refid="hk-eg_0_3_2"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">0.3.4</span> <span class="title">subsets</span>
+</h6></a></article><div id="hk-eg_0_3_2" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-81">Let \(S = \{1,2\}\text{.}\) What are all the subsets of \(S\text{?}\) Well — each element of \(S\) can either be in the subset or not (independent of the other elements of the set). So we have \(2\times2 = 4\) possibilities: neither \(1\) nor \(2\) is in the subset, \(1\) is but \(2\) is not, \(2\) is but \(1\) is not, and both \(1\) and \(2\) are. That is</p>
+<div class="displaymath">
+\begin{align*}
+\es, \{1\}, \{2\}, \{1,2\} &amp; \subseteq S
+\end{align*}
+</div>
+<p>This argument can be generalised with a little work to show that a set that contains exactly \(n\) elements has exactly \(2^n\) subsets.</p></article></div>
+<p id="p-82">In much of our work with functions later in the text we will need to work with subsets of real numbers, particularly segments of the “real line”. A convenient and standard way of representing such subsets is with interval notation.</p>
+<article class="definition-like" id="def_intervals"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">0.3.5</span> <span class="title">Open and closed intervals of \(\mathbb{R}\)</span>
+</h6>
+<p id="p-83">Let \(a, b \in \mathbb{R}\) such that \(a \lt b\text{.}\) We name the subset of all numbers between \(a\) and \(b\) in different ways depending on whether or not the ends of the interval (\(a\) and \(b\)) are elements of the subset.</p>
+<ul class="disc">
+<li id="li-48">The closed interval \([a,b] = \{x \in \mathbb{R} : a \leq x \leq b\}\) — both end points are included.</li>
+<li id="li-49">The open interval \((a,b) = \{x \in \mathbb{R} : a  \lt  x  \lt  b\}\) — neither end point is included.</li>
+</ul>
+<p id="p-84">We also define half-open <a knowl="" class="id-ref" refid="hk-fn-11" id="fn-11"><sup> 2 </sup></a><span id="hk-fn-11" class="hidden-content tex2jax_ignore"><span class="footnote">Also called “half-closed”. The  preference for one term over the other may be related to whether a 500ml glass containing 250ml of water is half-full or half-empty.</span></span> intervals which contain one end point but not the other:</p>
+<div class="displaymath">
+\begin{align*}
+(a,b] &amp;= \{ x \in \mathbb{R} : a  \lt  x \leq b\}
+&amp; [a,b) &amp;= \{ x \in \mathbb{R} : a \leq x  \lt  b\}
+\end{align*}
+</div>
+<p>We sometimes also need unbounded intervals</p>
+<div class="displaymath">
+\begin{align*}
+[a, \infty) &amp;= \{ x \in \mathbb{R} : a \leq x \}
+&amp; (a, \infty) &amp;= \{ x \in \mathbb{R} : a  \lt  x \}\\
+(-\infty, b] &amp;= \{ x \in \mathbb{R} : x \leq b \}
+&amp; (-\infty, b) &amp;= \{ x \in \mathbb{R} : x  \lt  b \}
+\end{align*}
+</div>
+<p>These unbounded intervals do not include “\(\pm\infty\)”, so that end of the interval is always open <a knowl="" class="id-ref" refid="hk-fn-12" id="fn-12"><sup> 3 </sup></a><span id="hk-fn-12" class="hidden-content tex2jax_ignore"><span class="footnote">Infinity is not a real number. As mentioned in an earlier footnote, Cantor proved that there are an infinite number of different infinities and so it is incorrect to think of \(\infty\) as being a single number. As such it cannot be an element in an interval of the real line. We suggest that the reader that wants to learn  more about how mathematics handles infinity look up transfinite numbers and  transfinite arithmetic. Needless to say these topics are beyond the scope of this text.</span></span>.</p></article></section><nav class="summary-links"><ul><li><a href="subsection-1.html"><span class="codenumber">0.3.1</span> <span class="title">More on Sets</span></a></li></ul></nav></section></div></main>
+</div>
+<!--Start: Google Universal code--><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-105798942-1', 'auto');
+ga('send', 'pageview');
+</script><!--End: Google Universal code--><div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.1/login.js"></script>
+</body>
+</html>
