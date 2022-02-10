@@ -1,0 +1,38 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:22:25-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>Recall that the volume inside the object of length \(2H\) and outside the object of length \(2h\) consists of <em class="emphasis">two</em> copies of the shape shown above. Therefore:</p>
+<div class="displaymath">
+\begin{gather*}
+2(H-h)\pi(h^2+1)^2 \lt V(H)-V(h)  \lt 2(H-h)\pi(H^2+1)^2
+\end{gather*}
+</div>
+<p><font color="red">Now that we have upper and lower bounds for \(V(H)-V(h)\text{,}\) we can find \(V'(H)\text{.}\)</font></p>
+<div class="displaymath">
+\begin{alignat*}{4}
+\frac{2(H-h)\pi(h^2+1)^2}{H-h} &amp;&amp; \lt &amp;&amp;\frac{V(H)-V(h)}{H-h}&amp;&amp; \lt &amp;\frac{2(H-h)\pi(H^2+1)^2}{H-h}\\
+2\pi(h^2+1)^2 &amp;&amp; \lt &amp;&amp;\frac{V(H)-V(h)}{H-h}\ \ \ &amp;&amp; \lt &amp; 2\pi(H^2+1)^2\\
+\lim_{h \to H}2\pi(h^2+1)^2 &amp;&amp;\le&amp;&amp;\lim_{h \to H}\frac{V(H)-V(h)}{H-h}\ \ \ &amp;&amp;\le&amp;\lim_{h \to H}2\pi(H^2+1)^2
+\end{alignat*}
+</div>
+<p>Since the limits on both ends are simply \(2\pi(H^2+1)^2\text{,}\) by the Squeeze Theorem,</p>
+<div class="displaymath">
+\begin{equation*}
+V'(H)=\lim_{h \to H}\frac{V(H)-V(h)}{H-h}=2\pi(H^2+1)^2
+\end{equation*}
+</div>
+<span class="incontext"><a href="exercises-44.html#p-5303">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:18:40-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="displaymath">
+\begin{align*}
+|f(x)-T_n(x)| &amp;= \left|\frac{f^{(n+1)}(c)}{(n+1)!}(x-a)^{n+1}\right|\\
+\end{align*}
+<p class="intertext">for some \(c\) strictly between \(x\) and \(a\text{.}\) In our case, \(n=5\text{,}\) \(a=0\text{,}\) and \(x=-\dfrac{1}{4}\text{,}\)  so</p>
+\begin{align*}
+\left|f\left(-\frac{1}{4}\right)-T_5\left(-\frac{1}{4}\right)\right| &amp;= \left|\frac{f^{(6)}(c)}{6!}\left(-\frac{1}{4}-0\right)^6\right|\\
+&amp;= \frac{\left|f^{(6)}(c)\right|}{6!\cdot 4^6}\\
+\end{align*}
+<p class="intertext">for some \(c\) in \(\left(-\frac{1}{4},0\right)\text{.}\) We'll need to know the sixth derivative of \(f(x)\text{.}\)</p>
+\begin{align*}
+f(x)&amp;=\log (1-x)\\
+f'(x)&amp;=-(1-x)^{-1}\\
+f''(x)&amp;=-(1-x)^{-2}\\
+f'''(x)&amp;=-2(1-x)^{-3}\\
+f^{(4)}(x)&amp;=-3!(1-x)^{-4}\\
+f^{(5)}(x)&amp;=-4!(1-x)^{-5}\\
+f^{(6)}(x)&amp;=-5!(1-x)^{-6}\\
+\end{align*}
+<p class="intertext">Plugging in \(\left|f^{(6)}(c)\right|=\dfrac{5!}{(1-c)^{6}}\text{:}\)</p>
+\begin{align*}
+\left|f\left(-\frac{1}{4}\right)-T_5\left(-\frac{1}{4}\right)\right| &amp;=
+\frac{5!}{6!\cdot 4^6\cdot(1-c)^6}=\frac{1}{6\cdot 4^6 \cdot (1-c)^6}
+\end{align*}
+</div>
+<span class="incontext"><a href="subsection-58.html#mjx-eqn-mrow-3355">in-context</a></span>
+</body>
+</html>

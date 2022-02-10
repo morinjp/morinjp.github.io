@@ -1,0 +1,62 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:17:28-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="example-like"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">3.4.27</span> <span class="title">Percentage error inferring a height</span>
+</h6>
+<p>To compute the height \(h\) of a lamp post, the length \(s\) of the shadow of a two meter pole is measured. The pole is 6 m from the lamp post. If the length of the shadow was measured to be 4 m, with an error of at most one cm, find the height of the lamp post and estimate the percentage error in the height.</p>
+<p><em class="alert">Solution</em> We should first draw a picture <a knowl="./knowl/fn-151-hidden.html" title="Footnote 3.4.18"><sup> 18 </sup></a></p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/lamp_shadow.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<ul class="disc">
+<li>By similar triangles we see that<div class="displaymath">
+\begin{align*}
+\frac{2}{s} &amp;= \frac{h}{6+s}
+\end{align*}
+</div>from which we can isolate \(h\) as a function of \(s\text{:}\)<div class="displaymath">
+\begin{align*}
+h &amp;= \frac{2(6+s)}{s} = \frac{12}{s} + 2
+\end{align*}
+</div>
+</li>
+<li>The length of the shadow was measured to be \(s_0=4\) m. The corresponding height of the lamp post is<div class="displaymath">
+\begin{align*}
+h_0 &amp;= \frac{12}{4} + 2 = 5m
+\end{align*}
+</div>
+</li>
+<li>If the error in the measurement of the length of the shadow was \(\De s\text{,}\) then the exact shadow length was \(s=s_0+\De s\) and the exact lamp post height is \(h=f(s_0+\De s)\text{,}\) where \(f(s)=\tfrac{12}{s}+2\text{.}\) The error in the computed lamp post height is<div class="displaymath">
+\begin{gather*}
+\De h=h-h_0=f(s_0+\De s)-f(s_0)
+\end{gather*}
+</div>
+</li>
+<li>We can then make a linear approximation of this error using equation <a knowl="./knowl/eq_lineDe.html" title="Equation 3.4.20: Linear approximation of \(\De y\)">3.4.20</a>:<div class="displaymath">
+\begin{align*}
+\De h &amp;\approx f'(s_0)\De s =-\frac{12}{s_0^2}\De s =-\frac{12}{4^2}\De s
+\end{align*}
+</div>
+</li>
+<li>We are told that \(|\De s|\le\frac{1}{100}\) m. Consequently, approximately,<div class="displaymath">
+\begin{gather*}
+|\De h|\le \frac{12}{4^2}\frac{1}{100}=\frac{3}{400}
+\end{gather*}
+</div>The percentage error is then approximately<div class="displaymath">
+\begin{align*}
+100\frac{|\De h|}{h_0} &amp; \le 100\frac{3}{400\times 5}=0.15\%
+\end{align*}
+</div>
+</li>
+</ul></article><span class="incontext"><a href="ssec_taylor_more.html#eg_taylorLamp">in-context</a></span>
+</body>
+</html>

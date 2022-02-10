@@ -1,0 +1,34 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:14:56-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="solution">
+<h6 class="heading">
+<span class="type">Solution</span> <span class="codenumber">2.13.5.13.1</span>
+</h6>
+<ul class="disc">
+<li>We can see by inspection that \(f(0)=0\text{,}\) so there is at least one root.</li>
+<li>To hunt for other roots, notice than when \(f(x)=0\text{,}\) \(x^3=-\sin\left(x^5\right)\text{,}\) and since the sine function only takes on values in \([-1,1]\text{,}\) this means \(-1 \leq x^3 \leq 1\text{.}\) That is, all roots of \(f(x)\) are in the interval \([-1,1]\text{.}\) (An equivalent way to see this is to notice that for all \(x  \gt 1\text{,}\) \(f(x) \gt 0\text{,}\) and for all \(x \lt 1\text{,}\) \(f(x) \lt 0\text{.}\))</li>
+<li>If there is a root \(a \neq 0\text{,}\) then by Rolle's Theorem (since \(f(x)\) is continuous and differentiable for all real numbers) \(f'(c)=0\) for some \(c\) strictly between 0 and \(a\text{.}\) In particular, since we already know any roots \(a\) will be between \(-1\) and \(1\text{,}\) if \(f(x)\) has two roots then \(f'(c)=0\) for some \(c \in (-1,0) \cup (0,1)\text{.}\)</li>
+<li>
+<div class="displaymath">
+\begin{equation*}
+f'(x)=3x^2+5x^4\cos\left(x^5\right)=x^2\left(3+5x^2\cos\left(x^5\right)\right)
+\end{equation*}
+</div>So, if \(f'(x)=0\text{,}\) then \(x=0\) or \(\left(3+5x^2\cos\left(x^5\right)\right)=0\text{.}\) If \(x \in (-1,0) \cup (0,1)\text{,}\) then \(|x| \lt 1\) and so \(|x^5| \lt 1 \lt \frac{\pi}{2}\text{,}\) so \(\cos\left(x^5\right) \gt 0\text{.}\) Then \(3+5x^2\cos\left(x^5\right)  \gt  3\text{,}\) so \(f'(x) \neq 0\text{.}\) That is, there is no \(c \in (-1,0) \cup (0,1)\) with \(f'(c)=0\text{.}\) Therefore, following our last  bullet point, \(f(x)\) has only one root.</li>
+</ul>
+<p>Note here that \(f'(x)\) has many zeroes--infinitely many, in fact. However, \(x=0\) is the only root of \(f'(x)\) in the interval \((-1,1)\text{.}\)</p>
+</div>
+<span class="incontext"><a href="exercises-18.html#solution-378">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,394 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:00:03-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Inverse Functions</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.1/pretext.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on2.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="RQS.css">
+<link href="https://pretextbook.org/css/0.1/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\require{cancel}\newcommand{\dee}[1]{\mathrm{d}#1}
+\newcommand{\half}{ \frac{1}{2} }
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ts}{\textstyle}
+\newcommand{\es}{ {\varnothing}}
+\newcommand{\st}{ {\mbox{ s.t. }} }
+\newcommand{\pow}[1]{ \mathcal{P}\left(#1\right) }
+\newcommand{\set}[1]{ \left\{#1\right\} }
+\newcommand{\lin}{{\text{LIN}}}
+\newcommand{\quot}{{\text{QR}}}
+\newcommand{\simp}{{\text{SMP}}}
+\newcommand{\diff}[2]{ \frac{\mathrm{d}#1}{\mathrm{d}#2}}
+\newcommand{\bdiff}[2]{ \frac{\mathrm{d}}{\mathrm{d}#2} \left( #1 \right)}
+\newcommand{\ddiff}[3]{ \frac{\mathrm{d}^#1#2}{\mathrm{d}{#3}^#1}}
+\renewcommand{\neg}{ {\sim} }
+\newcommand{\limp}{ {\;\Rightarrow\;} }
+\newcommand{\nimp}{ {\;\not\Rightarrow\;} }
+\newcommand{\liff}{ {\;\Leftrightarrow\;} }
+\newcommand{\niff}{ {\;\not\Leftrightarrow\;} }
+\newcommand{\De}{\Delta}
+\newcommand{\bbbn}{\mathbb{N}}
+\newcommand{\bbbr}{\mathbb{R}}
+\newcommand{\bbbp}{\mathbb{P}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\Si}{\Sigma}
+
+\newcommand{\arccsc}{\mathop{\mathrm{arccsc}}}
+\newcommand{\arcsec}{\mathop{\mathrm{arcsec}}}
+\newcommand{\arccot}{\mathop{\mathrm{arccot}}}
+\newcommand{\erf}{\mathop{\mathrm{erf}}}
+\newcommand{\smsum}{\mathop{{\ts \sum}}}
+\newcommand{\atp}[2]{ \genfrac{}{}{0in}{}{#1}{#2} }
+
+\newcommand{\ave}{\mathrm{ave}}
+\newcommand{\llt}{\left \lt }
+\newcommand{\rgt}{\right \gt }
+
+
+\newcommand{\YEaxis}[2]{\draw[help lines] (-#1,0)--(#1,0) node[right]{$x$};\draw[help lines] (0,-#2)--(0,#2) node[above]{$y$};}
+
+\newcommand{\YEaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$x$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YEtaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+\newcommand{\YEtaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$}; \draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YExcoord}[2]{\draw (#1,.2)--(#1,-.2) node[below]{$#2$};}
+\newcommand{\YEycoord}[2]{\draw (.2,#1)--(-.2,#1) node[left]{$#2$};}
+\newcommand{\YEnxcoord}[2]{\draw (#1,-.2)--(#1,.2) node[above]{$#2$};}
+\newcommand{\YEnycoord}[2]{\draw (-.2,#1)--(.2,#1) node[right]{$#2$};}
+
+\newcommand{\YEstickfig}[3]{
+\draw (#1,#2) arc(-90:270:2mm);
+\draw (#1,#2)--(#1,#2-.5) (#1-.25,#2-.75)--(#1,#2-.5)--(#1+.25,#2-.75) (#1-.2,#2-.2)--(#1+.2,#2-.2);}
+
+
+\newcommand{\IBP}[7]{
+\begin{array}{|c  | l | l |}
+\hline
+\color{red}{\text{Option 1:}}
+&amp; u=#2
+&amp;\color{red}{\dee{u}=#3 ~ \dee{#1}}
+\\
+&amp; \dee{v}=#5~\dee{#1}
+&amp;\color{red}{v=#7}
+\\
+\hline
+\color{blue}{\text{Option 2:}}
+&amp; u=#5
+&amp;\color{blue}{\dee{u}=#6 ~ \dee{#1}}
+\\
+&amp;\dee{v}=#2 \dee{#1}
+&amp;\color{blue}{v=#4}
+\\
+\hline
+\end{array}
+}
+
+
+\renewcommand{\textcolor}[2]{{\color{#1}{#2}}}
+
+
+\newcommand{\trigtri}[4]{
+\begin{tikzpicture}
+\draw (-.5,0)--(2,0)--(2,1.5)--cycle;
+\draw (1.8,0) |- (2,.2);
+\draw[double] (0,0) arc(0:30:.5cm);
+\draw (0,.2) node[right]{$#1$};
+\draw (1,-.5) node{$#2$};
+\draw (2,.75) node[right]{$#3$};
+\draw (.6,1.1) node[rotate=30]{$#4$};
+\end{tikzpicture}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="clp_1_dc.html"><span class="title">CLP-1 Differential Calculus</span></a></h1>
+<p class="byline">Joel Feldman, Andrew Rechnitzer, Elyse Yeager</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec_parsing.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="chap_basics.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="chap_limits.html" title="Next">Next</a></span></div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec_parsing.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="chap_basics.html" title="Up">Up</a><a class="next-button button toolbar-item" href="chap_limits.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="index.html" data-scroll="index"><span class="title">Front Matter</span></a></h2>
+<ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface-2.html" data-scroll="preface-2">Using the exercises in this book</a></li>
+<li><a href="preface-3.html" data-scroll="preface-3">Feedback about the text</a></li>
+</ul>
+<h2 class="link"><a href="chap_basics.html" data-scroll="chap_basics"><span class="codenumber">0</span> <span class="title">The basics</span></a></h2>
+<ul>
+<li><a href="sec_0_1.html" data-scroll="sec_0_1">Numbers</a></li>
+<li><a href="sec_sets.html" data-scroll="sec_sets">Sets</a></li>
+<li><a href="sec_0_3.html" data-scroll="sec_0_3">Other Important Sets</a></li>
+<li><a href="sec_0_4.html" data-scroll="sec_0_4">Functions</a></li>
+<li><a href="sec_parsing.html" data-scroll="sec_parsing">Parsing Formulas</a></li>
+<li><a href="sec_inverse_functions.html" data-scroll="sec_inverse_functions" class="active">Inverse Functions</a></li>
+</ul>
+<h2 class="link"><a href="chap_limits.html" data-scroll="chap_limits"><span class="codenumber">1</span> <span class="title">Limits</span></a></h2>
+<ul>
+<li><a href="sec_first_lim.html" data-scroll="sec_first_lim">Drawing Tangents and a First Limit</a></li>
+<li><a href="sec_velocity.html" data-scroll="sec_velocity">Another Limit and Computing Velocity</a></li>
+<li><a href="sec_lim_func.html" data-scroll="sec_lim_func">The Limit of a Function</a></li>
+<li><a href="sec_1_4.html" data-scroll="sec_1_4">Calculating Limits with Limit Laws</a></li>
+<li><a href="sec_1_5.html" data-scroll="sec_1_5">Limits at Infinity</a></li>
+<li><a href="sec_1_6.html" data-scroll="sec_1_6">Continuity</a></li>
+<li><a href="sec_opt_formal_limit.html" data-scroll="sec_opt_formal_limit">(Optional) — Making the Informal a Little More Formal</a></li>
+<li><a href="sec_lim_inf_formal.html" data-scroll="sec_lim_inf_formal">(Optional) — Making Infinite Limits a Little More Formal</a></li>
+<li><a href="sec_proof_arith_lim.html" data-scroll="sec_proof_arith_lim">(Optional) — Proving the Arithmetic of Limits</a></li>
+</ul>
+<h2 class="link"><a href="chap_deriv.html" data-scroll="chap_deriv"><span class="codenumber">2</span> <span class="title">Derivatives</span></a></h2>
+<ul>
+<li><a href="sec_2_1.html" data-scroll="sec_2_1">Revisiting Tangent Lines</a></li>
+<li><a href="sec_def_deriv.html" data-scroll="sec_def_deriv">Definition of the Derivative</a></li>
+<li><a href="sec_2_3.html" data-scroll="sec_2_3">Interpretations of the Derivative</a></li>
+<li><a href="sec_2_4.html" data-scroll="sec_2_4">Arithmetic of Derivatives - a Differentiation Toolbox</a></li>
+<li><a href="sec_proof_arith_deriv.html" data-scroll="sec_proof_arith_deriv">Proofs of the Arithmetic of Derivatives</a></li>
+<li><a href="sec_2_6.html" data-scroll="sec_2_6">Using the Arithmetic of Derivatives –  Examples</a></li>
+<li><a href="sec_exp_func.html" data-scroll="sec_exp_func">Derivatives of Exponential Functions</a></li>
+<li><a href="sec_diff_trig.html" data-scroll="sec_diff_trig">Derivatives of Trigonometric Functions</a></li>
+<li><a href="sec_chain_rule.html" data-scroll="sec_chain_rule">One More Tool  – the Chain Rule</a></li>
+<li><a href="sec_diff_logs.html" data-scroll="sec_diff_logs">The Natural Logarithm</a></li>
+<li><a href="sec_2_11.html" data-scroll="sec_2_11">Implicit Differentiation</a></li>
+<li><a href="sec_invTrig.html" data-scroll="sec_invTrig">Inverse Trigonometric Functions</a></li>
+<li><a href="sec_mvt.html" data-scroll="sec_mvt">The Mean Value Theorem</a></li>
+<li><a href="sec_higher_diff.html" data-scroll="sec_higher_diff">Higher Order Derivatives</a></li>
+<li><a href="sec_cont_deriv.html" data-scroll="sec_cont_deriv">(Optional) — Is \(\lim_{x\to c}f'(x)\) Equal to \(f'(c)\text{?}\)</a></li>
+</ul>
+<h2 class="link"><a href="chap_appl_deriv.html" data-scroll="chap_appl_deriv"><span class="codenumber">3</span> <span class="title">Applications of derivatives</span></a></h2>
+<ul>
+<li><a href="sec_vel_acc.html" data-scroll="sec_vel_acc">Velocity and Acceleration</a></li>
+<li><a href="sec_rrates.html" data-scroll="sec_rrates">Related Rates</a></li>
+<li><a href="sec_ExpGthDecay.html" data-scroll="sec_ExpGthDecay">Exponential Growth and Decay</a></li>
+<li><a href="sec_DIFFTaylor.html" data-scroll="sec_DIFFTaylor">Taylor Polynomials</a></li>
+<li><a href="sec_optimise.html" data-scroll="sec_optimise">Optimisation</a></li>
+<li><a href="sec_curve_sketch.html" data-scroll="sec_curve_sketch">Sketching Graphs</a></li>
+<li><a href="sec_4_7.html" data-scroll="sec_4_7">L'Hôpital's Rule and Indeterminate Forms</a></li>
+</ul>
+<h2 class="link"><a href="chapter-5.html" data-scroll="chapter-5"><span class="codenumber">4</span> <span class="title">Towards Integral Calculus</span></a></h2>
+<ul><li><a href="sec_antidiff.html" data-scroll="sec_antidiff">Introduction to Antiderivatives</a></li></ul>
+<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Appendices</span></a></h2>
+<h2 class="link"><a href="app_highschool.html" data-scroll="app_highschool"><span class="codenumber">A</span> <span class="title">High School Material</span></a></h2>
+<ul>
+<li><a href="sec_simtri.html" data-scroll="sec_simtri">Similar Triangles</a></li>
+<li><a href="sec_A_2.html" data-scroll="sec_A_2">Pythagoras</a></li>
+<li><a href="sec_A_3.html" data-scroll="sec_A_3">Trigonometry — Definitions</a></li>
+<li><a href="app_rad_arc_sec.html" data-scroll="app_rad_arc_sec">Radians, Arcs and Sectors</a></li>
+<li><a href="app_sec_trig_graphs.html" data-scroll="app_sec_trig_graphs">Trigonometry — Graphs</a></li>
+<li><a href="sec_A_6.html" data-scroll="sec_A_6">Trigonometry — Special Triangles</a></li>
+<li><a href="sec_A_7.html" data-scroll="sec_A_7">Trigonometry — Simple Identities</a></li>
+<li><a href="sec_trig_add.html" data-scroll="sec_trig_add">Trigonometry — Add and Subtract Angles</a></li>
+<li><a href="sec_inv_trig.html" data-scroll="sec_inv_trig">Inverse Trig Functions</a></li>
+<li><a href="app_sec_areas.html" data-scroll="app_sec_areas">Areas</a></li>
+<li><a href="sec_volumes.html" data-scroll="sec_volumes">Volumes</a></li>
+<li><a href="sec_powers.html" data-scroll="sec_powers">Powers</a></li>
+<li><a href="sec_logs.html" data-scroll="sec_logs">Logarithms</a></li>
+<li><a href="sec_must_deriv.html" data-scroll="sec_must_deriv">You Should be Able to Derive</a></li>
+</ul>
+<h2 class="link"><a href="chap_app_B.html" data-scroll="chap_app_B"><span class="codenumber">B</span> <span class="title">Origin of Trig, Area and Volume Formulas</span></a></h2>
+<ul>
+<li><a href="sec_B_1.html" data-scroll="sec_B_1">Theorems about Triangles</a></li>
+<li><a href="sec_B_2.html" data-scroll="sec_B_2">Trigonometry</a></li>
+<li><a href="sec_B_3.html" data-scroll="sec_B_3">Inverse Trigonometric Functions</a></li>
+<li><a href="sec_B_4.html" data-scroll="sec_B_4">Cosine and Sine Laws</a></li>
+<li><a href="sec_B_5.html" data-scroll="sec_B_5">Circles, cones and spheres</a></li>
+</ul>
+<h2 class="link"><a href="app_root_finding.html" data-scroll="app_root_finding"><span class="codenumber">C</span> <span class="title">Root Finding</span></a></h2>
+<ul>
+<li><a href="sec_C_1.html" data-scroll="sec_C_1">Newton's Method</a></li>
+<li><a href="sec_C_2.html" data-scroll="sec_C_2">The Error Behaviour of Newton's Method</a></li>
+<li><a href="sec_C_3.html" data-scroll="sec_C_3">The false position (regula falsi) method</a></li>
+<li><a href="sec_C_4.html" data-scroll="sec_C_4">The secant method</a></li>
+<li><a href="sec_C_5.html" data-scroll="sec_C_5">The Error Behaviour of the Secant Method</a></li>
+</ul>
+<h2 class="link"><a href="app_hint.html" data-scroll="app_hint"><span class="codenumber">D</span> <span class="title">Hints for Exercises</span></a></h2>
+<h2 class="link"><a href="app_answ.html" data-scroll="app_answ"><span class="codenumber">E</span> <span class="title">Answers to Exercises</span></a></h2>
+<h2 class="link"><a href="app_soln.html" data-scroll="app_soln"><span class="codenumber">F</span> <span class="title">Solutions to Exercises</span></a></h2></nav><div class="extras"><nav><a class="feedback-link" href="mailto:clp@ugrad.math.ubc.ca?subject=clp-pretext" target="_blank">Feedback</a><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="mathbook-content"><section class="section" id="sec_inverse_functions"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">0.6</span> <span class="title">Inverse Functions</span>
+</h2>
+<a href="sec_inverse_functions.html" class="permalink">¶</a><section class="introduction" id="introduction-7"><p id="p-138">There is one last thing that we should review before we get into the main material of the  course and that is inverse functions. As we have seen above functions are really just  rules for taking an input (almost always a number), processing it somehow (usually by a  formula) and then returning an output (again, almost always a number).</p>
+<div class="displaymath">
+\begin{gather*}
+\text{input number}\;\; x \quad \mapsto \quad f\;\; \text{does ``stuff'' to}\;\; x \quad  \mapsto \quad \text{return number}\;\; y
+\end{gather*}
+</div>
+<p>In many situations it will turn out to be very useful if we can undo whatever it is that  our function has done. ie</p>
+<div class="displaymath">
+\begin{gather*}
+\text{take output}\;\;y \quad \mapsto \quad \text{do ``stuff'' to}\;\; y  \quad \mapsto \quad \text{return the original}\;\; x
+\end{gather*}
+</div>
+<p>When it exists, the function “which undoes” the function \(f(x)\) is found by solving  \(y=f(x)\) for \(x\) as a function of \(y\) and is called the inverse function of \(f\text{.}\)  It turns out that it is not always possible to solve \(y=f(x)\) for \(x\) as a  function of \(y\text{.}\) Even when it is possible, it can be really hard to do <a knowl="" class="id-ref" refid="hk-fn-19" id="fn-19"><sup> 1 </sup></a><span id="hk-fn-19" class="hidden-content tex2jax_ignore"><span class="footnote">Indeed much of encryption exploits the fact that you can find  functions that are very quick to do, but very hard to undo. For example — it  is very fast to multiply two large prime numbers together, but very hard to take  that result and factor it back into the original two primes. The interested  reader should look up trapdoor functions.</span></span>.</p>
+<p id="p-139">For example — a particle's position, \(s\text{,}\) at time \(t\) is given by the formula  \(s(t) = 7t\) (sketched below). Given a calculator, and any particular number \(t\text{,}\)  you can quickly work out the corresponding positions \(s\text{.}\) However, if you are  asked the question “When does the particle reach \(s=4\text{?}\)” then to answer it we  need to be able to “undo” \(s(t)=4\) to isolate \(t\text{.}\) In this case, because  \(s(t)\) is always increasing, we can always undo \(s(t)\) to get a unique answer:</p>
+<div class="displaymath">
+\begin{align*}
+s(t) &amp;= 7t = 4 &amp; \text{ if and only if }&amp;&amp; t&amp;= \frac{4}{7}.
+\end{align*}
+</div>
+<p id="p-140">However, this question is not always so easy. Consider the sketch of \(y=\sin(x)\)  below; when is \(y=\half\text{?}\) That is, for which values \(x\) is \(\sin(x)=\half\text{?}\) To  rephrase it again, at which values of \(x\) does the curve \(y=\sin x\) (which is  sketched in the right  half of Figure <a knowl="./knowl/fig_inv1.html" title="Figure 0.6.1">0.6.1</a>) cross the horizontal straight line \(y=\frac{1}{2}\) (which  is also sketched in the same figure)?</p>
+<figure class="figure-like" id="fig_inv1"><div style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="text/figs/inv1.svg" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span> <span class="codenumber">0.6.1</span> </figcaption></figure><p id="p-141">We can see that there are going to be an infinite number of \(x\)-values that give  \(y=\sin(x)=\half\text{;}\) there is no unique answer.</p>
+<p id="p-142">Recall (from Definition <a knowl="./knowl/def_function.html" title="Definition 0.4.1">0.4.1</a>) that for any given input, a function must give a unique output. So if we want to find a <em class="emphasis">function</em> that undoes \(s(t)\text{,}\) then  things are good — because each \(s\)-value corresponds to a unique \(t\)-value. On the  other hand, the situation with \(y=\sin x\) is problematic — any given \(y\)-value is  mapped to by many different \(x\)-values. So when we look for an <em class="emphasis">unique</em> answer to  the question “When is \(\sin x = \half\text{?}\)” we cannot answer it.</p>
+<p id="p-143">This “uniqueness” condition can be made more precise:</p>
+<article class="definition-like" id="def_0_6_1"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">0.6.2</span>
+</h6>
+<p id="p-144">A function \(f\) is one-to-one (injective) when it never takes the same \(y\) value more than once. That is</p>
+<div class="displaymath">
+\begin{gather*}
+\mbox{if } x_1 \neq x_2 \mbox{ then } f(x_1) \neq f(x_2)
+\end{gather*}
+</div></article><p id="p-145">There is an easy way to test this when you have a plot of the function — the  horizontal line test.</p>
+<article class="definition-like" id="def_0_6_2"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">0.6.3</span> <span class="title">Horizontal line test</span>
+</h6>
+<p id="p-146">A function is one-to-one if and only if no horizontal line \(y=c\) intersects the graph \(y=f(x)\) more than once.</p></article><p id="p-147">i.e. every horizontal line intersects the graph either zero or  one times. Never twice or more. This test tell us that \(y=x^3\) is  one-to-one, but \(y=x^2\) is not. However note that if we restrict the domain of  \(y=x^2\) to \(x \geq 0\) then the horizontal line test is passed. This is one of  the reasons we have to be careful to consider the domain of the function.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/inv1A.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p id="p-148">When a function is one-to-one then it has an inverse function.</p>
+<article class="definition-like" id="def_inv_func"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">0.6.4</span>
+</h6>
+<p id="p-149">Let \(f\) be a one-to-one function with domain \(A\) and range \(B\text{.}\) Then its inverse function is denoted \(f^{-1}\) and has domain \(B\) and range \(A\text{.}\) It is defined by</p>
+<div class="displaymath">
+\begin{align*}
+f^{-1}(y) &amp;= x &amp; \text{ whenever }&amp;&amp; f(x)&amp;=y
+\end{align*}
+</div>
+<p>for any \(y \in B\text{.}\)</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:30%;margin-right:30%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/inv2.svg" style="width: 100%; height: auto;" alt=""></div></div></div></article><p id="p-150">So if \(f\) maps \(x\) to \(y\text{,}\) then \(f^{-1}\) maps \(y\) back to \(x\text{.}\) That is \(f^{-1}\) “undoes” \(f\text{.}\) Because of this we have</p>
+<div class="displaymath">
+\begin{align*}
+f^{-1}( f(x) ) &amp;= x  &amp;\mbox{ for any $x \in A$}\\
+f( f^{-1}(y) )&amp;=y &amp;\mbox{ for any $y \in B$}
+\end{align*}
+</div>
+<p>We have to be careful not to confuse \(f^{-1}(x)\) with \(\ds \frac{1}{f(x)}\text{.}\) The “\(-1\)” is not an exponent.</p>
+<article class="example-like" id="eg_0_6_1"><a knowl="" class="id-ref" refid="hk-eg_0_6_1"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">0.6.5</span> <span class="title">Inverse of \(x^5+3\)</span>
+</h6></a></article><div id="hk-eg_0_6_1" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-151">Let \(f(x)=x^5+3\) on domain \(\mathbb{R}\text{.}\) To find its inverse we do the following</p>
+<ul class="disc">
+<li id="li-77">Write \(y=f(x)\text{;}\) that is \(y=x^5+3\text{.}\)</li>
+<li id="li-78">Solve for \(x\) in terms of \(y\) (this is not always easy) — \(x^5=y-3\text{,}\) so  \(x=(y-3)^{1/5}\text{.}\)</li>
+<li id="li-79">The solution is \(f^{-1}(y) = (y-3)^{1/5}\text{.}\)</li>
+<li id="li-80">Recall that the “\(y\)” in \(f^{-1}(y)\) is a dummy variable. That is,  \(f^{-1}(y) = (y-3)^{1/5}\) means that if you feed the number \(y\) into the function  \(f^{-1}\) it outputs the number \((y-3)^{1/5}\text{.}\) You may call the input variable anything  you like. So if you wish to call the input variable “\(x\)” instead of “\(y\)” then just  replace every \(y\) in \(f^{-1}(y)\) with an \(x\text{.}\)</li>
+<li id="li-81">That is \(f^{-1}(x) = (x-3)^{1/5}\text{.}\)</li>
+</ul></article></div>
+<article class="example-like" id="eg_0_6_2"><a knowl="" class="id-ref" refid="hk-eg_0_6_2"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">0.6.6</span> <span class="title">Inverse of \(\sqrt{x-1}\)</span>
+</h6></a></article><div id="hk-eg_0_6_2" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-152">Let \(g(x) = \sqrt{x-1}\) on the domain \(x \geq 1\text{.}\) We can find the inverse in the same way:</p>
+<div class="displaymath">
+\begin{align*}
+y &amp;= \sqrt{x-1}\\
+y^2 &amp;= x-1\\
+x &amp;= y^2+1 = f^{-1}(y) &amp; \text{or, writing input variable as ``$x$'':}\\
+f^{-1}(x) &amp;= x^2+1.
+\end{align*}
+</div></article></div>
+<p id="p-153">Let us now turn to finding the inverse of \(\sin(x)\) — it is a little more tricky and we  have to think carefully about domains.</p>
+<article class="example-like" id="eg_0_6_3"><a knowl="" class="id-ref" refid="hk-eg_0_6_3"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">0.6.7</span> <span class="title">Inverse of \(\sin(x)\)</span>
+</h6></a></article><div id="hk-eg_0_6_3" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-154">We have seen (back in Figure <a knowl="./knowl/fig_inv1.html" title="Figure 0.6.1">0.6.1</a>) that \(\sin(x)\) takes each value \(y\)  between \(-1\) and \(+1\) for infinitely many different values of \(x\) (see  the left-hand graph in the figure below). Consequently \(\sin(x)\text{,}\) with domain  \(-\infty  \lt x  \lt \infty\) does not have an inverse function.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/inv2B.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p id="p-155">But notice that as \(x\) runs from \(-\frac{\pi}{2}\) to \(+\frac{\pi}{2}\text{,}\) \(\sin(x)\) increases  from \(-1\) to \(+1\text{.}\) (See the middle graph in the figure above.) In particular, \(\sin(x)\)  takes each value \(-1 \le y\le 1\) for exactly one \(-\frac{\pi}{2}\le x\le \frac{\pi}{2}\text{.}\)  So if we restrict \(\sin x\) to have domain \(-\frac{\pi}{2}\le x\le \frac{\pi}{2}\text{,}\) it does  have an inverse function, which is traditionally called arcsine (see Appendix <a href="sec_inv_trig.html" class="xref" title="Section A.9: Inverse Trig Functions">A.9</a>).</p>
+<p id="p-156">That is, by definition, for each \(-1\le y\le 1\text{,}\) \(\arcsin(y)\) is the unique  \(-\frac{\pi}{2}\le x\le \frac{\pi}{2}\) obeying \(\sin(x)=y\text{.}\) Equivalently, exchanging the  dummy variables x and y throughout the last sentence gives that for each \(-1\le  x\le 1\text{,}\) \(\arcsin(x)\) is the unique \(-\frac{\pi}{2}\le y\le \frac{\pi}{2}\)  obeying \(\sin(y)=x\text{.}\)</p></article></div>
+<p id="p-157">It is an easy matter to construct the graph of an inverse function  from the graph of the original function. We just need to remember that</p>
+<div class="displaymath">
+\begin{equation*}
+Y=f^{-1}(X)  \iff f(Y)=X
+\end{equation*}
+</div>
+<p>which is \(y=f(x)\) with \(x\) renamed to \(Y\) and \(y\) renamed to \(X\text{.}\)</p>
+<p id="p-158">Start by drawing the graph of \(f\text{,}\) labelling the \(x\)– and \(y\)–axes and labelling the curve \(y=f(x)\text{.}\)</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:30%;margin-right:30%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/fInvA.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p id="p-159">Now replace each \(x\) by \(Y\) and each \(y\) by \(X\)  and replace the resulting label \(X=f(Y)\) on the curve by the equivalent \(Y=f^{-1}(X)\text{.}\)</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:30%;margin-right:30%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/fInvB.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p id="p-160">Finally we just need to redraw the sketch with the \(Y\) axis running vertically (with \(Y\) increasing upwards) and the \(X\) axis running horizontally (with \(X\) increasing to the right). To do so, pretend that the sketch is on a transparency or on a very thin piece of paper that you can see through. Lift the sketch up and flip it over so that the \(Y\) axis runs vertically and the \(X\) axis runs horizontally. If you want, you can also convert the upper case \(X\) into a lower case \(x\) and the upper case \(Y\) into a lower case \(y\text{.}\)</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;">
+<div class="sbspanel" style="width:44.4444444444444%;justify-content:flex-start;"><img src="text/figs/fInvC.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:44.4444444444444%;justify-content:flex-start;"><img src="text/figs/fInvD.svg" style="width: 100%; height: auto;" alt=""></div>
+</div></div>
+<p id="p-161">Another way to say “flip the sketch over so as to exchange the \(x\)– and \(y\)–axes” is “reflect in the line \(y=x\)”. In the figure below the blue “horizontal” elliptical disk that is centred on \((a,b)\) has been reflected in the line \(y=x\) to give the red “vertical” elliptical disk centred on \((b,a)\text{.}\)</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/fInvR.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<article class="example-like" id="eg_INVlogbaseten"><a knowl="" class="id-ref" refid="hk-eg_INVlogbaseten"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">0.6.8</span> <span class="title">Sketching inverse of \(y=x^2\)</span>
+</h6></a></article><div id="hk-eg_INVlogbaseten" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-162">As an example, let \(f(x) = x^2\) with domain \(0\le x \lt  \infty\text{.}\)</p>
+<ul class="disc">
+<li id="li-82">When \(x=0\text{,}\) \(f(x)=0^2=0\text{.}\)</li>
+<li id="li-83">As \(x\) increases, \(x^2\) gets bigger and bigger.</li>
+<li id="li-84">When \(x\) is very large and positive, \(x^2\) is also very large and positive. (For example, think \(x=100\text{.}\))</li>
+</ul>
+<p>The graph of \(y=f(x)=x^2\) is the blue curve below. By definition, \(Y=f^{-1}(X)\) if \(X=f(Y)=Y^2\text{.}\) That is, if \(Y=\sqrt{X}\text{.}\) (Remember that, to be in the domain of \(f\text{,}\) we must have \(Y\ge 0\text{.}\)) So the inverse function of “square” is “square root”. The graph of \(f^{-1}\) is the red curve below. The red curve is the reflection of the blue curve in the line \(y=x\text{.}\)</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/fInvSqA.svg" style="width: 100%; height: auto;" alt=""></div></div></div></article></div></section></section></div></main>
+</div>
+<!--Start: Google Universal code--><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-105798942-1', 'auto');
+ga('send', 'pageview');
+</script><!--End: Google Universal code--><div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.1/login.js"></script>
+</body>
+</html>

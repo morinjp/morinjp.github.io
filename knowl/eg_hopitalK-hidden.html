@@ -1,0 +1,44 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:21:32-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><article class="example-like"><p>Consider the limit</p>
+<div class="displaymath">
+\begin{gather*}
+\lim_{x\to \frac{\pi}{2}^-} \left( \sec x - \tan x\right)
+\end{gather*}
+</div>
+<p>Since the limit of both \(\sec x\) and \(\tan x\) is \(+\infty\) as \(x \to
+\frac{\pi}{2}^-\text{,}\) this is an \(\infty-\infty\) indeterminate form. However we can rewrite this as</p>
+<div class="displaymath">
+\begin{align*}
+\sec x - \tan x &amp;= \frac{1}{\cos x} - \frac{\sin x}{\cos x} = \frac{1-\sin x}{\cos x}
+\end{align*}
+</div>
+<p>which is then a \(\frac00\) indeterminate form. This then gives</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{x\rightarrow \frac{\pi}{2}^-}\Big(
+\underbrace{\sec x}_{\rightarrow +\infty}
+- \underbrace{\tan x}_{\rightarrow+\infty}\Big)
+&amp; =\lim_{x\rightarrow \frac{\pi}{2}^-}\underbrace{\frac{1-\sin x}
+{\cos x}}_{\atp
+{\mathrm{num}\rightarrow 0}
+{\mathrm{den}\rightarrow 0}}
+=\lim_{x\rightarrow \frac{\pi}{2}^-}\underbrace{\frac{-\cos x}
+{-\sin x}}_{\atp
+{\mathrm{num}\rightarrow 0}
+{\mathrm{den}\rightarrow -1}}
+=0
+\end{align*}
+</div></article></body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:14:15-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>Now we should go back and do the same but for a general point on the curve \((x_0,y_0)\text{:}\)</p>
+<ul class="disc">
+<li>
+<p>A good first step here is to sketch the curve. Since this is an ellipse, it is pretty straight-forward.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;">
+<div class="sbspanel" style="width:57.8947368421053%;justify-content:flex-start;"><img src="text/figs/ellipse.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:36.8421052631579%;justify-content:flex-start;"><img src="text/figs/ellipseB.svg" style="width: 100%; height: auto;" alt=""></div>
+</div></div>
+</li>
+<li>Notice that there are two points on the ellipse — the extreme right and left points  \((x_0,y_0)=\pm\big(\sqrt{\frac{7}{3}},0\big)\) — at which the tangent line is vertical. In those two cases, the tangent line is just \(x=x_0\text{.}\)</li>
+<li>
+<p>Since this is a quadratic for \(y\text{,}\) we could solve it explicitly to get</p>
+<div class="displaymath">
+\begin{align*}
+y &amp;= \pm \sqrt{\frac{7-3x^2}{5}}
+\end{align*}
+</div>
+<p>and choose the positive or negative branch as appropriate. Then we could differentiate to find the slope and put things together to get the tangent line.</p>
+<p>But even in this relatively easy case, it is computationally cleaner, and hence less vulnerable to mechanical errors, to use implicit differentiation. So that's what we'll do.</p>
+</li>
+<li>Now we could again “pretend” that we have solved the equation for the ellipse for \(y=f(x)\)  near \((x_0,y_0)\text{,}\) but let's not do that. Instead (as we did just before this example) just remember that when we differentiate \(y\) is really a function of \(x\text{.}\) So starting from<div class="displaymath">
+\begin{align*}
+3x^2 + 5y^2 &amp;=7 &amp;\text{differentiating gives}\\
+6x + 5\cdot 2y \cdot y' &amp;= 0
+\end{align*}
+</div>We can then solve this for \(y'\text{:}\)<div class="displaymath">
+\begin{align*}
+y' &amp;= -\frac{3x}{5y}
+\end{align*}
+</div>where \(y'\) and \(y\) are both functions of \(x\text{.}\)</li>
+<li>Hence at the point \((x_0,y_0)\) we have<div class="displaymath">
+\begin{align*}
+\left. y' \right|_{(x_0,y_0)} &amp;= -\frac{3x_0}{5y_0}
+\end{align*}
+</div>This is the slope of the tangent line at \((x_0,y_0)\) and so its equation is<div class="displaymath">
+\begin{align*}
+y &amp;=y_0+y' \cdot (x-x_0)\\
+&amp;= y_0 -\frac{3x_0}{5y_0}(x-x_0)\\
+\end{align*}
+<p class="intertext">We can simplify this by multiplying through by \(5y_0\) to get</p>
+\begin{align*}
+5y_0 y &amp;= 5y_0^2-3x_0x +3x_0^2\\
+\end{align*}
+<p class="intertext">We can clean this up more by moving all the terms that contain \(x\) or \(y\) to the left-hand side and everything else to the right:</p>
+\begin{align*}
+3x_0x+5y_0y &amp;=3x_0^2+5y_0^2\\
+\end{align*}
+<p class="intertext">But there is one more thing we can do, our original equation is \(3x^2+5y^2=7\) for all points on the curve, so we know that \(3x_0^2+5y_0^2=7\text{.}\) This cleans up the right-hand side.</p>
+\begin{align*}
+3x_0x+5y_0y &amp;=7
+\end{align*}
+</div>
+</li>
+<li>In deriving this formula for the tangent line at \((x_0,y_0)\) we have assumed that \(y_0\ne 0\text{.}\) But in fact the final answer happens to also work when \(y_0=0\) (which means \(x_0=\pm\sqrt{\frac{7}{3} }\)), so that the tangent line is \(x=x_0\text{.}\)</li>
+</ul>
+<p>We can also check that our answer for general \((x_0,y_0)\) reduces to our answer for \(x_0=1\text{.}\)</p>
+<ul class="disc">
+<li>When \(x_0=1\) we worked out that \(y_0=2/\sqrt{5}\text{.}\)</li>
+<li>Plugging this into our answer above gives<div class="displaymath">
+\begin{align*}
+3x_0x+5y_0y &amp;=7  &amp;\text{sub in $(x_0,y_0)=(1,2/\sqrt{5})$}:\\
+3 x + 5 \frac{2}{\sqrt{5}} y &amp;= 7 &amp; \text{clean up a little}\\
+3x + 2\sqrt{5} y &amp;=7
+\end{align*}
+</div>as required.</li>
+</ul>
+<span class="incontext"><a href="subsection-35.html#p-2283">in-context</a></span>
+</body>
+</html>

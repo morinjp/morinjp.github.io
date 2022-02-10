@@ -1,0 +1,668 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:02:53-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>The Error in the Taylor Polynomial Approximations</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.1/pretext.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on2.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="RQS.css">
+<link href="https://pretextbook.org/css/0.1/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\require{cancel}\newcommand{\dee}[1]{\mathrm{d}#1}
+\newcommand{\half}{ \frac{1}{2} }
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ts}{\textstyle}
+\newcommand{\es}{ {\varnothing}}
+\newcommand{\st}{ {\mbox{ s.t. }} }
+\newcommand{\pow}[1]{ \mathcal{P}\left(#1\right) }
+\newcommand{\set}[1]{ \left\{#1\right\} }
+\newcommand{\lin}{{\text{LIN}}}
+\newcommand{\quot}{{\text{QR}}}
+\newcommand{\simp}{{\text{SMP}}}
+\newcommand{\diff}[2]{ \frac{\mathrm{d}#1}{\mathrm{d}#2}}
+\newcommand{\bdiff}[2]{ \frac{\mathrm{d}}{\mathrm{d}#2} \left( #1 \right)}
+\newcommand{\ddiff}[3]{ \frac{\mathrm{d}^#1#2}{\mathrm{d}{#3}^#1}}
+\renewcommand{\neg}{ {\sim} }
+\newcommand{\limp}{ {\;\Rightarrow\;} }
+\newcommand{\nimp}{ {\;\not\Rightarrow\;} }
+\newcommand{\liff}{ {\;\Leftrightarrow\;} }
+\newcommand{\niff}{ {\;\not\Leftrightarrow\;} }
+\newcommand{\De}{\Delta}
+\newcommand{\bbbn}{\mathbb{N}}
+\newcommand{\bbbr}{\mathbb{R}}
+\newcommand{\bbbp}{\mathbb{P}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\Si}{\Sigma}
+
+\newcommand{\arccsc}{\mathop{\mathrm{arccsc}}}
+\newcommand{\arcsec}{\mathop{\mathrm{arcsec}}}
+\newcommand{\arccot}{\mathop{\mathrm{arccot}}}
+\newcommand{\erf}{\mathop{\mathrm{erf}}}
+\newcommand{\smsum}{\mathop{{\ts \sum}}}
+\newcommand{\atp}[2]{ \genfrac{}{}{0in}{}{#1}{#2} }
+
+\newcommand{\ave}{\mathrm{ave}}
+\newcommand{\llt}{\left \lt }
+\newcommand{\rgt}{\right \gt }
+
+
+\newcommand{\YEaxis}[2]{\draw[help lines] (-#1,0)--(#1,0) node[right]{$x$};\draw[help lines] (0,-#2)--(0,#2) node[above]{$y$};}
+
+\newcommand{\YEaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$x$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YEtaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+\newcommand{\YEtaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$}; \draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YExcoord}[2]{\draw (#1,.2)--(#1,-.2) node[below]{$#2$};}
+\newcommand{\YEycoord}[2]{\draw (.2,#1)--(-.2,#1) node[left]{$#2$};}
+\newcommand{\YEnxcoord}[2]{\draw (#1,-.2)--(#1,.2) node[above]{$#2$};}
+\newcommand{\YEnycoord}[2]{\draw (-.2,#1)--(.2,#1) node[right]{$#2$};}
+
+\newcommand{\YEstickfig}[3]{
+\draw (#1,#2) arc(-90:270:2mm);
+\draw (#1,#2)--(#1,#2-.5) (#1-.25,#2-.75)--(#1,#2-.5)--(#1+.25,#2-.75) (#1-.2,#2-.2)--(#1+.2,#2-.2);}
+
+
+\newcommand{\IBP}[7]{
+\begin{array}{|c  | l | l |}
+\hline
+\color{red}{\text{Option 1:}}
+&amp; u=#2
+&amp;\color{red}{\dee{u}=#3 ~ \dee{#1}}
+\\
+&amp; \dee{v}=#5~\dee{#1}
+&amp;\color{red}{v=#7}
+\\
+\hline
+\color{blue}{\text{Option 2:}}
+&amp; u=#5
+&amp;\color{blue}{\dee{u}=#6 ~ \dee{#1}}
+\\
+&amp;\dee{v}=#2 \dee{#1}
+&amp;\color{blue}{v=#4}
+\\
+\hline
+\end{array}
+}
+
+
+\renewcommand{\textcolor}[2]{{\color{#1}{#2}}}
+
+
+\newcommand{\trigtri}[4]{
+\begin{tikzpicture}
+\draw (-.5,0)--(2,0)--(2,1.5)--cycle;
+\draw (1.8,0) |- (2,.2);
+\draw[double] (0,0) arc(0:30:.5cm);
+\draw (0,.2) node[right]{$#1$};
+\draw (1,-.5) node{$#2$};
+\draw (2,.75) node[right]{$#3$};
+\draw (.6,1.1) node[rotate=30]{$#4$};
+\end{tikzpicture}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="clp_1_dc.html"><span class="title">CLP-1 Differential Calculus</span></a></h1>
+<p class="byline">Joel Feldman, Andrew Rechnitzer, Elyse Yeager</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="ssec_taylor_more.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="sec_DIFFTaylor.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="subsec_GMVT.html" title="Next">Next</a></span></div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="ssec_taylor_more.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="sec_DIFFTaylor.html" title="Up">Up</a><a class="next-button button toolbar-item" href="subsec_GMVT.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="index.html" data-scroll="index"><span class="title">Front Matter</span></a></h2>
+<ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface-2.html" data-scroll="preface-2">Using the exercises in this book</a></li>
+<li><a href="preface-3.html" data-scroll="preface-3">Feedback about the text</a></li>
+</ul>
+<h2 class="link"><a href="chap_basics.html" data-scroll="chap_basics"><span class="codenumber">0</span> <span class="title">The basics</span></a></h2>
+<ul>
+<li><a href="sec_0_1.html" data-scroll="sec_0_1">Numbers</a></li>
+<li><a href="sec_sets.html" data-scroll="sec_sets">Sets</a></li>
+<li><a href="sec_0_3.html" data-scroll="sec_0_3">Other Important Sets</a></li>
+<li><a href="sec_0_4.html" data-scroll="sec_0_4">Functions</a></li>
+<li><a href="sec_parsing.html" data-scroll="sec_parsing">Parsing Formulas</a></li>
+<li><a href="sec_inverse_functions.html" data-scroll="sec_inverse_functions">Inverse Functions</a></li>
+</ul>
+<h2 class="link"><a href="chap_limits.html" data-scroll="chap_limits"><span class="codenumber">1</span> <span class="title">Limits</span></a></h2>
+<ul>
+<li><a href="sec_first_lim.html" data-scroll="sec_first_lim">Drawing Tangents and a First Limit</a></li>
+<li><a href="sec_velocity.html" data-scroll="sec_velocity">Another Limit and Computing Velocity</a></li>
+<li><a href="sec_lim_func.html" data-scroll="sec_lim_func">The Limit of a Function</a></li>
+<li><a href="sec_1_4.html" data-scroll="sec_1_4">Calculating Limits with Limit Laws</a></li>
+<li><a href="sec_1_5.html" data-scroll="sec_1_5">Limits at Infinity</a></li>
+<li><a href="sec_1_6.html" data-scroll="sec_1_6">Continuity</a></li>
+<li><a href="sec_opt_formal_limit.html" data-scroll="sec_opt_formal_limit">(Optional) — Making the Informal a Little More Formal</a></li>
+<li><a href="sec_lim_inf_formal.html" data-scroll="sec_lim_inf_formal">(Optional) — Making Infinite Limits a Little More Formal</a></li>
+<li><a href="sec_proof_arith_lim.html" data-scroll="sec_proof_arith_lim">(Optional) — Proving the Arithmetic of Limits</a></li>
+</ul>
+<h2 class="link"><a href="chap_deriv.html" data-scroll="chap_deriv"><span class="codenumber">2</span> <span class="title">Derivatives</span></a></h2>
+<ul>
+<li><a href="sec_2_1.html" data-scroll="sec_2_1">Revisiting Tangent Lines</a></li>
+<li><a href="sec_def_deriv.html" data-scroll="sec_def_deriv">Definition of the Derivative</a></li>
+<li><a href="sec_2_3.html" data-scroll="sec_2_3">Interpretations of the Derivative</a></li>
+<li><a href="sec_2_4.html" data-scroll="sec_2_4">Arithmetic of Derivatives - a Differentiation Toolbox</a></li>
+<li><a href="sec_proof_arith_deriv.html" data-scroll="sec_proof_arith_deriv">Proofs of the Arithmetic of Derivatives</a></li>
+<li><a href="sec_2_6.html" data-scroll="sec_2_6">Using the Arithmetic of Derivatives –  Examples</a></li>
+<li><a href="sec_exp_func.html" data-scroll="sec_exp_func">Derivatives of Exponential Functions</a></li>
+<li><a href="sec_diff_trig.html" data-scroll="sec_diff_trig">Derivatives of Trigonometric Functions</a></li>
+<li><a href="sec_chain_rule.html" data-scroll="sec_chain_rule">One More Tool  – the Chain Rule</a></li>
+<li><a href="sec_diff_logs.html" data-scroll="sec_diff_logs">The Natural Logarithm</a></li>
+<li><a href="sec_2_11.html" data-scroll="sec_2_11">Implicit Differentiation</a></li>
+<li><a href="sec_invTrig.html" data-scroll="sec_invTrig">Inverse Trigonometric Functions</a></li>
+<li><a href="sec_mvt.html" data-scroll="sec_mvt">The Mean Value Theorem</a></li>
+<li><a href="sec_higher_diff.html" data-scroll="sec_higher_diff">Higher Order Derivatives</a></li>
+<li><a href="sec_cont_deriv.html" data-scroll="sec_cont_deriv">(Optional) — Is \(\lim_{x\to c}f'(x)\) Equal to \(f'(c)\text{?}\)</a></li>
+</ul>
+<h2 class="link"><a href="chap_appl_deriv.html" data-scroll="chap_appl_deriv"><span class="codenumber">3</span> <span class="title">Applications of derivatives</span></a></h2>
+<ul>
+<li><a href="sec_vel_acc.html" data-scroll="sec_vel_acc">Velocity and Acceleration</a></li>
+<li><a href="sec_rrates.html" data-scroll="sec_rrates">Related Rates</a></li>
+<li><a href="sec_ExpGthDecay.html" data-scroll="sec_ExpGthDecay">Exponential Growth and Decay</a></li>
+<li><a href="sec_DIFFTaylor.html" data-scroll="sec_DIFFTaylor">Taylor Polynomials</a></li>
+<li><a href="sec_optimise.html" data-scroll="sec_optimise">Optimisation</a></li>
+<li><a href="sec_curve_sketch.html" data-scroll="sec_curve_sketch">Sketching Graphs</a></li>
+<li><a href="sec_4_7.html" data-scroll="sec_4_7">L'Hôpital's Rule and Indeterminate Forms</a></li>
+</ul>
+<h2 class="link"><a href="chapter-5.html" data-scroll="chapter-5"><span class="codenumber">4</span> <span class="title">Towards Integral Calculus</span></a></h2>
+<ul><li><a href="sec_antidiff.html" data-scroll="sec_antidiff">Introduction to Antiderivatives</a></li></ul>
+<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Appendices</span></a></h2>
+<h2 class="link"><a href="app_highschool.html" data-scroll="app_highschool"><span class="codenumber">A</span> <span class="title">High School Material</span></a></h2>
+<ul>
+<li><a href="sec_simtri.html" data-scroll="sec_simtri">Similar Triangles</a></li>
+<li><a href="sec_A_2.html" data-scroll="sec_A_2">Pythagoras</a></li>
+<li><a href="sec_A_3.html" data-scroll="sec_A_3">Trigonometry — Definitions</a></li>
+<li><a href="app_rad_arc_sec.html" data-scroll="app_rad_arc_sec">Radians, Arcs and Sectors</a></li>
+<li><a href="app_sec_trig_graphs.html" data-scroll="app_sec_trig_graphs">Trigonometry — Graphs</a></li>
+<li><a href="sec_A_6.html" data-scroll="sec_A_6">Trigonometry — Special Triangles</a></li>
+<li><a href="sec_A_7.html" data-scroll="sec_A_7">Trigonometry — Simple Identities</a></li>
+<li><a href="sec_trig_add.html" data-scroll="sec_trig_add">Trigonometry — Add and Subtract Angles</a></li>
+<li><a href="sec_inv_trig.html" data-scroll="sec_inv_trig">Inverse Trig Functions</a></li>
+<li><a href="app_sec_areas.html" data-scroll="app_sec_areas">Areas</a></li>
+<li><a href="sec_volumes.html" data-scroll="sec_volumes">Volumes</a></li>
+<li><a href="sec_powers.html" data-scroll="sec_powers">Powers</a></li>
+<li><a href="sec_logs.html" data-scroll="sec_logs">Logarithms</a></li>
+<li><a href="sec_must_deriv.html" data-scroll="sec_must_deriv">You Should be Able to Derive</a></li>
+</ul>
+<h2 class="link"><a href="chap_app_B.html" data-scroll="chap_app_B"><span class="codenumber">B</span> <span class="title">Origin of Trig, Area and Volume Formulas</span></a></h2>
+<ul>
+<li><a href="sec_B_1.html" data-scroll="sec_B_1">Theorems about Triangles</a></li>
+<li><a href="sec_B_2.html" data-scroll="sec_B_2">Trigonometry</a></li>
+<li><a href="sec_B_3.html" data-scroll="sec_B_3">Inverse Trigonometric Functions</a></li>
+<li><a href="sec_B_4.html" data-scroll="sec_B_4">Cosine and Sine Laws</a></li>
+<li><a href="sec_B_5.html" data-scroll="sec_B_5">Circles, cones and spheres</a></li>
+</ul>
+<h2 class="link"><a href="app_root_finding.html" data-scroll="app_root_finding"><span class="codenumber">C</span> <span class="title">Root Finding</span></a></h2>
+<ul>
+<li><a href="sec_C_1.html" data-scroll="sec_C_1">Newton's Method</a></li>
+<li><a href="sec_C_2.html" data-scroll="sec_C_2">The Error Behaviour of Newton's Method</a></li>
+<li><a href="sec_C_3.html" data-scroll="sec_C_3">The false position (regula falsi) method</a></li>
+<li><a href="sec_C_4.html" data-scroll="sec_C_4">The secant method</a></li>
+<li><a href="sec_C_5.html" data-scroll="sec_C_5">The Error Behaviour of the Secant Method</a></li>
+</ul>
+<h2 class="link"><a href="app_hint.html" data-scroll="app_hint"><span class="codenumber">D</span> <span class="title">Hints for Exercises</span></a></h2>
+<h2 class="link"><a href="app_answ.html" data-scroll="app_answ"><span class="codenumber">E</span> <span class="title">Answers to Exercises</span></a></h2>
+<h2 class="link"><a href="app_soln.html" data-scroll="app_soln"><span class="codenumber">F</span> <span class="title">Solutions to Exercises</span></a></h2></nav><div class="extras"><nav><a class="feedback-link" href="mailto:clp@ugrad.math.ubc.ca?subject=clp-pretext" target="_blank">Feedback</a><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="mathbook-content"><section class="subsection" id="ssec_taylor_error"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.4.9</span> <span class="title">The Error in the Taylor Polynomial Approximations</span>
+</h3>
+<a href="ssec_taylor_error.html" class="permalink">¶</a><p id="p-3583">Any time you make an approximation, it is desirable to have some idea of the size of the error you introduced. That is, we would like to know the difference \(R(x)\) between the original function \(f(x)\) and our approximation \(F(x)\text{:}\)</p>
+<div class="displaymath">
+\begin{align*}
+R(x) &amp;= f(x)-F(x).
+\end{align*}
+</div>
+<p>Of course if we know \(R(x)\) exactly, then we could recover \(f(x) = F(x)+R(x)\) — so this is an unrealistic hope. In practice we would simply like to bound \(R(x)\text{:}\)</p>
+<div class="displaymath">
+\begin{align*}
+|R(x)| &amp;= |f(x)-F(x)| \leq M
+\end{align*}
+</div>
+<p>where (hopefully) \(M\) is some small number. It is worth stressing that we do not need the tightest possible value of \(M\text{,}\) we just need a relatively easily computed \(M\) that isn't too far off the true value of \(|f(x)-F(x)|\text{.}\)</p>
+<p id="p-3584">We will now develop a formula for the error introduced by the constant approximation, equation <a knowl="./knowl/eq_constApprox.html" title="Equation 3.4.1: Constant approximation">3.4.1</a> (developed back in Section <a href="ssec_const_approx.html" class="xref" title="Subsection 3.4.1: Zeroth Approximation — the Constant Approximation">3.4.1</a>)</p>
+<div class="displaymath">
+\begin{align*}
+f(x)&amp;\approx f(a) = T_0(x) &amp; \text{$0^\mathrm{th}$ Taylor polynomial}
+\end{align*}
+</div>
+<p>The resulting formula can be used to get an upper bound on the size of the error \(|R(x)|\text{.}\)</p>
+<p id="p-3585">The main ingredient we will need is the Mean-Value Theorem (Theorem <a knowl="./knowl/thm_DIFFmvt.html" title="Theorem 2.13.5: The mean value theorem">2.13.5</a>) — so we suggest you quickly revise it. Consider the following obvious statement:</p>
+<div class="displaymath">
+\begin{align*}
+f(x) &amp;= f(x) &amp; \text{now some sneaky manipulations}\\
+&amp; = f(a) + (f(x)-f(a))\\
+&amp;= \underbrace{f(a)}_{=T_0(x)} + (f(x)-f(a)) \cdot \underbrace{\frac{x-a}{x-a}}_{=1}\\
+&amp;= T_0(x) + \underbrace{\frac{f(x)-f(a)}{x-a}}_\text{looks familiar} \cdot (x-a)
+\end{align*}
+</div>
+<p>Indeed, this equation is important in the discussion that follows, so we'll highlight it</p>
+<article class="theorem-like" id="eq_taylorErrorA"><h6 class="heading">
+<span class="type">Equation</span> <span class="codenumber">3.4.28</span> <span class="title">We will need it again soon</span>
+</h6>
+<div class="displaymath" id="p-3586">
+\begin{align*}
+f(x) &amp;= T_0(x) + \left[ \frac{f(x)-f(a)}{x-a} \right](x-a)
+\end{align*}
+</div></article><p id="p-3587">The coefficient \(\dfrac{f(x)-f(a)}{x-a}\) of \((x-a)\) is the average slope of \(f(t)\) as \(t\) moves from \(t=a\) to \(t=x\text{.}\) We can picture this as the slope of the secant joining the points \((a,f(a))\) and \((x,f(x))\) in the sketch below.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/approx4bb.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p id="p-3588">As \(t\) moves from \(a\) to \(x\text{,}\) the instantaneous slope \(f'(t)\) keeps changing. Sometimes \(f'(t)\) might be larger than the average slope \(\tfrac{f(x)-f(a)}{x-a}\text{,}\) and sometimes \(f'(t)\) might be smaller than the average slope \(\tfrac{f(x)-f(a)}{x-a}\text{.}\) However, by the Mean-Value Theorem (Theorem <a knowl="./knowl/thm_DIFFmvt.html" title="Theorem 2.13.5: The mean value theorem">2.13.5</a>), there must be some number \(c\text{,}\) strictly between \(a\) and \(x\text{,}\) for which  \(f'(c)=\dfrac{f(x)-f(a)}{x-a}\) exactly.</p>
+<p id="p-3589">Substituting this into formula <a knowl="./knowl/eq_taylorErrorA.html" title="Equation 3.4.28: We will need it again soon">3.4.28</a> gives</p>
+<article class="theorem-like" id="eq_taylorErrorL"><h6 class="heading">
+<span class="type">Equation</span> <span class="codenumber">3.4.29</span> <span class="title">Towards the error</span>
+</h6>
+<div class="displaymath" id="p-3590">
+\begin{align*}
+f(x) &amp;=T_0(x) +f'(c)(x-a) &amp; \text{for some $c$ strictly between $a$ and $x$}
+\end{align*}
+</div></article><p id="p-3591">Notice that this expression as it stands is not quite what we want. Let us massage this around a little more into a more useful form</p>
+<article class="theorem-like" id="eq_taylorErrorL2"><h6 class="heading">
+<span class="type">Equation</span> <span class="codenumber">3.4.30</span> <span class="title">The error in constant approximation</span>
+</h6>
+<div class="displaymath" id="p-3592">
+\begin{align*}
+f(x) - T_0(x) &amp;= f'(c) \cdot (x-a) &amp; \text{for some $c$ strictly between
+$a$ and $x$}
+\end{align*}
+</div></article><p id="p-3593">Notice that the MVT doesn't tell us the value of \(c\text{,}\) however we do know that it lies strictly between \(x\) and \(a\text{.}\) So if we can get a good bound on \(f'(c)\) on this interval then we can get a good bound on the error.</p>
+<article class="example-like" id="eg_zero_approx_of_e"><a knowl="" class="id-ref" refid="hk-eg_zero_approx_of_e"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">3.4.31</span> <span class="title">Error in the approximation in 3.4.2</span>
+</h6></a></article><div id="hk-eg_zero_approx_of_e" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-3594">Let us return to Example <a knowl="./knowl/eg_ex_const_approx.html" title="Example 3.4.2: A (weak) approximation of \(e^{0.1}\)">3.4.2</a>, and we'll try to bound the error in our approximation of \(e^{0.1}\text{.}\)</p>
+<ul id="p-3595" class="disc">
+<li id="li-1039">Recall that \(f(x) = e^x\text{,}\) \(a=0\) and \(T_0(x) = e^0 = 1\text{.}\)</li>
+<li id="li-1040">Then by equation <a knowl="./knowl/eq_taylorErrorL2.html" title="Equation 3.4.30: The error in constant approximation">3.4.30</a><div class="displaymath">
+\begin{align*}
+e^{0.1} - T_0(0.1) &amp;= f'(c) \cdot (0.1 - 0) &amp; \text{with $0 \lt c \lt 0.1$}
+\end{align*}
+</div>
+</li>
+<li id="li-1041">Now \(f'(c) = e^c\text{,}\) so we need to bound \(e^c\) on \((0,0.1)\text{.}\) Since \(e^c\) is an increasing function, we know that<div class="displaymath">
+\begin{align*}
+e^0 &amp; \lt  f'(c)  \lt  e^{0.1}  &amp; \text{ when $0 \lt c \lt 0.1$}
+\end{align*}
+</div>So one is tempted to write that<div class="displaymath">
+\begin{align*}
+|e^{0.1} - T_0(0.1)| &amp;= |R(x)| = |f'(c)| \cdot (0.1 - 0)\\
+&amp;  \lt  e^{0.1} \cdot 0.1
+\end{align*}
+</div>And while this is true, it is rather circular. We have just bounded the error in our approximation of \(e^{0.1}\) by \(\frac{1}{10}e^{0.1}\) — if we actually knew \(e^{0.1}\) then we wouldn't need to estimate it!</li>
+<li id="li-1042">While we don't know \(e^{0.1}\) exactly, we do know <a knowl="" class="id-ref" refid="hk-fn-152" id="fn-152"><sup> 19 </sup></a><span id="hk-fn-152" class="hidden-content tex2jax_ignore"><span class="footnote">Oops! Do we really know that \(e \lt 3\text{?}\) We haven't proved it. We will do so soon.</span></span> that \(1 = e^0  \lt  e^{0.1}  \lt  e^1  \lt
+3\text{.}\) This   gives us<div class="displaymath">
+\begin{gather*}
+|R(0.1)|  \lt  3 \times 0.1 = 0.3
+\end{gather*}
+</div>That is — the error in our approximation of \(e^{0.1}\) is no greater than \(0.3\text{.}\) Recall that we don't need the error exactly, we just need a good idea of how large it actually is.</li>
+<li id="li-1043">In fact the real error here is<div class="displaymath">
+\begin{align*}
+|e^{0.1} - T_0(0.1)| &amp;=|e^{0.1} - 1| = 0.1051709\dots
+\end{align*}
+</div>so we have over-estimated the error by a factor of 3.</li>
+</ul>
+<p id="p-3596">But we can actually go a little further here — we can bound the error above and below. If we do not take absolute values, then since</p>
+<div class="displaymath">
+\begin{align*}
+e^{0.1} - T_0(0.1) &amp;= f'(c) \cdot 0.1 &amp; \text{ and } 1  \lt  f'(c)  \lt  3
+\end{align*}
+</div>
+<p>we can write</p>
+<div class="displaymath">
+\begin{align*}
+1\times 0.1 \leq ( e^{0.1} - T_0(0.1) ) &amp; \leq 3\times 0.1
+\end{align*}
+</div>
+<p>so</p>
+<div class="displaymath">
+\begin{align*}
+T_0(0.1) + 0.1 &amp;\leq e^{0.1} \leq T_0(0.1)+0.3\\
+1.1 &amp;\leq e^{0.1} \leq 1.3
+\end{align*}
+</div>
+<p>So while the upper bound is weak, the lower bound is quite tight.</p></article></div>
+<p id="p-3597">There are formulae similar to equation <a knowl="./knowl/eq_taylorErrorL.html" title="Equation 3.4.29: Towards the error">3.4.29</a>, that can be used to bound the error in our other approximations; all are based on generalisations of the MVT. The next one — for linear approximations — is</p>
+<div class="displaymath">
+\begin{align*}
+f(x) &amp; =\underbrace{f(a)+f'(a)(x-a)}_{=T_1(x)}+\half f''(c)(x-a)^2 &amp;
+\text{for some } c \text{ strictly between } a \text{ and } x
+\end{align*}
+</div>
+<p>which we can rewrite in terms of \(T_1(x)\text{:}\)</p>
+<article class="theorem-like" id="eq_taylorErrorQ"><h6 class="heading">
+<span class="type">Equation</span> <span class="codenumber">3.4.32</span> <span class="title">The error in linear approximation</span>
+</h6>
+<div class="displaymath" id="p-3598">
+\begin{align*}
+f(x)-T_1(x) &amp;=  \half f''(c)(x-a)^2 &amp;
+\text{for some } c \text{ strictly between } a \text{ and } x
+\end{align*}
+</div></article><p id="p-3599">It implies that the error that we make when we approximate \(f(x)\) by \(T_1(x) = f(a)+f'(a)\,(x-a)\) is exactly \(\half f''(c)\,(x-a)^2\) for some \(c\) strictly between \(a\) and \(x\text{.}\)</p>
+<p id="p-3600">More generally</p>
+<div class="displaymath">
+\begin{align*}
+f(x)=&amp;
+\underbrace{f(a)\!+\!f'(a)\cdot(x\!-\!a)\!+\cdots+\!\frac{1}{n!}f^{(n)}(a)\cdot(x\!-\!a)^n}_{= T_n(x)}
+\!+\!\frac{1}{(n\!+\!1)!}f^{(n+1)}(c)\cdot (x\!-\!a)^{n+1}
+\end{align*}
+</div>
+<p>for some \(c\) strictly between \(a\) and \(x\text{.}\) Again, rewriting this in terms of \(T_n(x)\) gives</p>
+<article class="theorem-like" id="eq_taylorErrorN"><h6 class="heading">
+<span class="type">Equation</span> <span class="codenumber">3.4.33</span>
+</h6>
+<div class="displaymath" id="p-3601">
+\begin{align*}
+f(x) - T_n(x) &amp;= \frac{1}{(n+1)!}f^{(n+1)}(c)\cdot (x-a)^{n+1}
+\quad \text{for some $c$ strictly between $a$ and $x$}
+\end{align*}
+</div></article><p id="p-3602">That is, the error introduced when \(f(x)\) is approximated by its Taylor polynomial of degree \(n\text{,}\) is precisely the last term of the Taylor polynomial of degree \(n+1\text{,}\) but with the derivative evaluated at some point between \(a\) and \(x\text{,}\) rather than exactly at \(a\text{.}\) These error formulae are proven in the optional Section <a href="subsec_GMVT.html" class="xref" title="Subsection 3.4.10: (Optional) — Derivation of the Error Formulae">3.4.10</a> later in this chapter.</p>
+<article class="example-like" id="eg_taylorErrorSin"><a knowl="" class="id-ref" refid="hk-eg_taylorErrorSin"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">3.4.34</span> <span class="title">Approximate \(\sin 46^\circ\) and estimate the error</span>
+</h6></a></article><div id="hk-eg_taylorErrorSin" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-3603">Approximate \(\sin 46^\circ\) using Taylor polynomials about \(a=45^\circ\text{,}\) and estimate the resulting error.</p>
+<p id="p-3604"><em class="alert">Solution</em></p>
+<ul class="disc">
+<li id="li-1044">Start by defining \(f(x) = \sin x\) and<div class="displaymath">
+\begin{align*}
+a&amp;=45^\circ=45\tfrac{\pi}{180} {\rm radians}&amp;
+x&amp;=46^\circ=46\tfrac{\pi}{180} {\rm radians}\\
+x-a&amp;=\tfrac{\pi}{180} {\rm radians}
+\end{align*}
+</div>
+</li>
+<li id="li-1045">The first few derivatives of \(f\) at \(a\) are<div class="displaymath">
+\begin{align*}
+f(x)&amp;=\sin x
+&amp;f(a)&amp;=\frac{1}{\sqrt{2}}\\
+f'(x)&amp;=\cos x &amp;\\
+f'(a)&amp;=\frac{1}{\sqrt{2}}\\
+f''(x)&amp;=-\sin x &amp;\\
+f''(a)&amp;=-\frac{1}{\sqrt{2}}\\
+f^{(3)}(x)&amp;=-\cos x &amp;
+f^{(3)}(a)&amp;=-\frac{1}{\sqrt{2}}
+\end{align*}
+</div>
+</li>
+<li id="li-1046">The constant, linear and quadratic Taylor approximations for \(\sin(x)\) about \(\frac{\pi}{4}\) are<div class="displaymath">
+\begin{alignat*}{2}
+T_0(x) &amp;= f(a)
+&amp;&amp;= \frac{1}{\sqrt{2}}\\
+T_1(x) &amp;= T_0(x) + f'(a) \cdot(x\!-\!a)
+&amp;&amp;= \frac{1}{\sqrt{2}} + \frac{1}{\sqrt{2}}\left(x\! -\! \frac{\pi}{4} \right)\\
+T_2(x) &amp;= T_1(x)\! +\! \half f''(a) \cdot(x\!-\!a)^2
+&amp;&amp;=\!  \frac{1}{\sqrt{2}} \!+\! \frac{1}{\sqrt{2}}\left(x\!-\! \frac{\pi}{4} \right)
+\!-\! \frac{1}{2\sqrt{2}}\left(x\! -\! \frac{\pi}{4} \right)^2
+\end{alignat*}
+</div>
+</li>
+<li id="li-1047">So the approximations for \(\sin 46^\circ\) are<div class="displaymath">
+\begin{align*}
+\sin46^\circ &amp;\approx T_0\left(\frac{46\pi}{180}\right) = \frac{1}{\sqrt{2}}\\
+&amp;=0.70710678\\
+\sin46^\circ &amp;\approx T_1\left(\frac{46\pi}{180}\right)
+= \frac{1}{\sqrt{2}} + \frac{1}{\sqrt{2}} \left(\frac{\pi}{180}\right)\\
+&amp;=0.71944812\\
+\sin46^\circ&amp;\approx T_2\left(\frac{46\pi}{180}\right)
+= \frac{1}{\sqrt{2}} + \frac{1}{\sqrt{2}} \left(\frac{\pi}{180}\right)
+- \frac{1}{2\sqrt{2}}\left(\frac{\pi}{180}\right)^2\\
+&amp;=0.71934042
+\end{align*}
+</div>
+</li>
+<li id="li-1048">The errors in those approximations are (respectively)<div class="displaymath">
+\begin{alignat*}{3}
+&amp;{\rm error\ in\ 0.70710678}&amp;
+&amp;=f'(c)(x-a)&amp;
+&amp;=\cos c \cdot \left(\frac{\pi}{180}\right)\\
+&amp;{\rm error\ in\ 0.71944812}&amp;
+&amp;=\frac{1}{2} f''(c)(x-a)^2&amp;
+&amp;=-\frac{1}{2} \cdot \sin c\cdot \left(\frac{\pi}{180}\right)^2\\
+&amp;{\rm error\ in\ 0.71923272}&amp;
+&amp;=\frac{1}{3!}f^{(3)}(c)(x-a)^3&amp;
+&amp;=-\frac{1}{3!}\cdot \cos c \cdot \left(\frac{\pi}{180}\right)^3
+\end{alignat*}
+</div>In each of these three cases \(c\) must lie somewhere between \(45^\circ\) and \(46^\circ\text{.}\)</li>
+<li id="li-1049">Rather than carefully estimating \(\sin c\) and \(\cos c\) for \(c\) in that range, we make use of a simpler (but much easier bound). No matter what \(c\) is, we know that \(|\sin
+c|\le 1\) and \(|\cos c|\le 1\text{.}\) Hence<div class="displaymath">
+\begin{alignat*}{3}
+&amp;\big|{\rm error\ in\ 0.70710678}\big|&amp;
+&amp;\le  \left(\frac{\pi}{180}\right)&amp;
+&amp; \lt 0.018\\
+&amp;\big|{\rm error\ in\ 0.71944812}\big|&amp;
+&amp;\le\frac{1}{2} \left(\frac{\pi}{180}\right)^2&amp;
+&amp; \lt 0.00015\\
+&amp;\big|{\rm error\ in\ 0.71934042}\big|&amp;
+&amp;\le \frac{1}{3!} \left(\frac{\pi}{180}\right)^3&amp;
+&amp; \lt 0.0000009
+\end{alignat*}
+</div>
+</li>
+</ul></article></div>
+<article class="example-like" id="eg_3_4_5"><a knowl="" class="id-ref" refid="hk-eg_3_4_5"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">3.4.35</span> <span class="title">Showing \(e \lt 3\)</span>
+</h6></a></article><div id="hk-eg_3_4_5" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-3605">In Example <a knowl="./knowl/eg_zero_approx_of_e.html" title="Example 3.4.31: Error in the approximation in 3.4.2">3.4.31</a> above we used the fact that \(e \lt 3\) without actually proving it. Let's do so now.</p>
+<ul id="p-3606" class="disc">
+<li id="li-1050">Consider the linear approximation of \(e^x\) about \(a=0\text{.}\)<div class="displaymath">
+\begin{align*}
+T_1(x) &amp;= f(0) + f'(0)\cdot x = 1 + x
+\end{align*}
+</div>So at \(x=1\) we have<div class="displaymath">
+\begin{align*}
+e &amp;\approx T_1(1) = 2
+\end{align*}
+</div>
+</li>
+<li id="li-1051">The error in this approximation is<div class="displaymath">
+\begin{align*}
+e^x - T_1(x) &amp;= \frac{1}{2} f''(c) \cdot x^2 = \frac{e^c}{2} \cdot x^2
+\end{align*}
+</div>So at \(x=1\) we have<div class="displaymath">
+\begin{align*}
+e - T_1(1) &amp;= \frac{e^c}{2}
+\end{align*}
+</div>where \(0 \lt c \lt 1\text{.}\)</li>
+<li id="li-1052">Now since \(e^x\) is an increasing <a knowl="" class="id-ref" refid="hk-fn-153" id="fn-153"><sup> 20 </sup></a><span id="hk-fn-153" class="hidden-content tex2jax_ignore"><span class="footnote">Since the derivative of \(e^x\) is \(e^x\) which is positive everywhere, the function is increasing everywhere.</span></span> function, it follows that \(e^c  \lt  e\text{.}\) Hence<div class="displaymath">
+\begin{align*}
+e - T_1(1) &amp;= \frac{e^c}{2}  \lt  \frac{e}{2}
+\end{align*}
+</div>Moving the \(\frac{e}{2}\) to the left hand side and the \(T_1(1)\) to the right hand side gives<div class="displaymath">
+\begin{gather*}
+\frac{e}{2} \leq T_1(1) = 2
+\end{gather*}
+</div>So \(e \lt 4\text{.}\)</li>
+<li id="li-1053">This isn't as tight as we would like — so now do the same with the quadratic approximation with \(a=0\text{:}\)<div class="displaymath">
+\begin{align*}
+e^x &amp; \approx T_2(x) = 1 + x + \frac{x^2}{2}\\
+\end{align*}
+<p class="intertext">So when \(x=1\) we have</p>
+\begin{align*}
+e &amp; \approx T_2(1) = 1 + 1 + \frac{1}{2} = \frac{5}{2}
+\end{align*}
+</div>
+</li>
+<li id="li-1054">The error in this approximation is<div class="displaymath">
+\begin{align*}
+e^x - T_2(x) &amp;= \frac{1}{3!} f'''(c) \cdot x^3 = \frac{e^c}{6} \cdot x^3
+\end{align*}
+</div>So at \(x=1\) we have<div class="displaymath">
+\begin{align*}
+e - T_2(1) &amp;= \frac{e^c}{6}
+\end{align*}
+</div>where \(0 \lt c \lt 1\text{.}\)</li>
+<li id="li-1055">Again since \(e^x\) is an increasing function we have \(e^c  \lt  e\text{.}\) Hence<div class="displaymath">
+\begin{align*}
+e - T_2(1) &amp;= \frac{e^c}{6}  \lt  \frac{e}{6}
+\end{align*}
+</div>That is<div class="displaymath">
+\begin{gather*}
+\frac{5e}{6} \lt T_2(1) = \frac{5}{2}
+\end{gather*}
+</div>So \(e \lt 3\) as required.</li>
+</ul></article></div>
+<article class="example-like" id="eg_exp"><a knowl="" class="id-ref" refid="hk-eg_exp"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">3.4.36</span> <span class="title">More on \(e^x\)</span>
+</h6></a></article><div id="hk-eg_exp" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-3607">We wrote down the general \(n^\mathrm{th}\) degree Maclaurin polynomial approximation of \(e^x\) in Example <a knowl="./knowl/eg_taylor_e_to_the_x.html" title="Example 3.4.12: Taylor approximations of \(e^x\)">3.4.12</a> above.</p>
+<ul class="disc">
+<li id="li-1056">Recall that<div class="displaymath">
+\begin{align*}
+T_n(x) &amp;= \sum_{k=0}^n \frac{1}{k!} x^k
+\end{align*}
+</div>
+</li>
+<li id="li-1057">The error in this approximation is (by equation <a knowl="./knowl/eq_taylorErrorN.html" title="Equation 3.4.33">3.4.33</a>)<div class="displaymath">
+\begin{align*}
+e^x - T_n(x) &amp;= \frac{1}{(n+1)!} e^c
+\end{align*}
+</div>where \(c\) is some number between \(0\) and \(x\text{.}\)</li>
+<li id="li-1058">So setting \(x=1\) in this gives<div class="displaymath">
+\begin{align*}
+e - T_n(1) &amp;= \frac{1}{(n+1)!} e^c
+\end{align*}
+</div>where \(0 \lt c \lt 1\text{.}\)</li>
+<li id="li-1059">Since \(e^x\) is an increasing function we know that \(1 = e^0  \lt  e^c  \lt  e^1  \lt  3\text{,}\) so the above expression becomes<div class="displaymath">
+\begin{align*}
+\frac{1}{(n+1)!} \leq e - T_n(1) &amp;= \frac{1}{(n+1)!} e^c \leq \frac{3}{(n+1)!}
+\end{align*}
+</div>
+</li>
+<li id="li-1060">So when \(n=9\) we have<div class="displaymath">
+\begin{align*}
+\frac{1}{10!} \leq e - \left(1 + 1 + \frac{1}{2} +\cdots + \frac{1}{9!} \right) &amp;\leq
+\frac{3}{10!}
+\end{align*}
+</div>
+</li>
+<li id="li-1061">Now \(1/10!  \lt  3/10!  \lt  10^{-6}\text{,}\) so the approximation of \(e\) by<div class="displaymath">
+\begin{gather*}
+e \approx 1 + 1 + \frac{1}{2} +\cdots + \frac{1}{9!} = \frac{98641}{36288} =
+2.718281\dots
+\end{gather*}
+</div>is correct to 6 decimal places.</li>
+<li id="li-1062">More generally we know that using \(T_n(1)\) to approximate \(e\) will have an error of at most \(\frac{3}{(n+1)!}\) — so it converges very quickly.</li>
+</ul></article></div>
+<article class="example-like" id="eg_3_4_6"><a knowl="" class="id-ref" refid="hk-eg_3_4_6"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">3.4.37</span> <span class="title">3.4.24 Revisited</span>
+</h6></a></article><div id="hk-eg_3_4_6" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-3608">Recall <a knowl="" class="id-ref" refid="hk-fn-154" id="fn-154"><sup> 21 </sup></a><span id="hk-fn-154" class="hidden-content tex2jax_ignore"><span class="footnote">Now is a good time to go back and re-read it.</span></span> that in Example <a knowl="./knowl/eg_taylorPole.html" title="Example 3.4.24: Error inferring a height from an angle">3.4.24</a> (measuring the height of the pole), we used the linear approximation</p>
+<div class="displaymath">
+\begin{align*}
+f(\theta_0+\De\theta)&amp;\approx f(\theta_0)+f'(\theta_0)\De\theta
+\end{align*}
+</div>
+<p>with \(f(\theta)=10\tan\theta\) and \(\theta_0=30\dfrac{\pi}{180}\) to get</p>
+<div class="displaymath">
+\begin{align*}
+\De h &amp;=f(\theta_0+\De\theta)-f(\theta_0)\approx f'(\theta_0)\De\theta
+\quad \text{which implies that} \quad
+\De\theta \approx \frac{\De h}{f'(\theta_0)}
+\end{align*}
+</div>
+<ul class="disc">
+<li id="li-1063">While this procedure is fairly reliable, it did involve an approximation. So that you could not 100% guarantee to your client's lawyer  that an accuracy of 10 cm was achieved.</li>
+<li id="li-1064">On the other hand, if we use the <em class="emphasis">exact</em> formula <a knowl="./knowl/eq_taylorErrorL.html" title="Equation 3.4.29: Towards the error">3.4.29</a>, with the replacements \(x\rightarrow \theta_0+\De\theta\) and \(a\rightarrow\theta_0\)<div class="displaymath">
+\begin{align*}
+f(\theta_0+\De\theta)&amp;=f(\theta_0)+f'(c)\De\theta
+&amp; \text{for some $c$ between $\theta_0$ and $\theta_0+\De\theta$}
+\end{align*}
+</div>in place of the approximate formula <a knowl="./knowl/eq_linApprox.html" title="Equation 3.4.3: Linear approximation">3.4.3</a>, this legality is taken care of:<div class="displaymath">
+\begin{align*}
+\De h &amp;=f(\theta_0\!+\!\De\theta)-f(\theta_0) =f'(c)\De\theta
+\quad \text{for some $c$ between $\theta_0$ and $\theta_0+\De\theta$}
+\end{align*}
+</div>We can clean this up a little more since in our example \(f'(\theta) = 10\sec^2\theta\text{.}\) Thus for some \(c\) between \(\theta_0\) and \(\theta_0 + \De\theta\text{:}\)<div class="displaymath">
+\begin{gather*}
+|\De h| = 10 \sec^2(c) |\De \theta|
+\end{gather*}
+</div>
+</li>
+<li id="li-1065">Of course we do not know exactly what \(c\) is. But suppose that we know that the angle was somewhere between \(25^\circ\) and \(35^\circ\text{.}\) In other words suppose that, even though we don't know precisely what our measurement error was, it was certainly no more than \(5^\circ\text{.}\)</li>
+<li id="li-1066">Now on the range \(25^\circ  \lt  c  \lt  35^\circ\text{,}\) \(\sec(c)\) is an increasing and positive function. Hence on this range<div class="displaymath">
+\begin{gather*}
+1.217\dots  = \sec^2 25^\circ \leq \sec^2 c \leq \sec^2 35^\circ = 1.490\dots
+\lt  1.491
+\end{gather*}
+</div>So<div class="displaymath">
+\begin{align*}
+12.17 \cdot |\De \theta| &amp;\leq |\De h|
+= 10 \sec^2(c) \cdot |\De \theta| \leq 14.91 \cdot
+| \De \theta|
+\end{align*}
+</div>
+</li>
+<li id="li-1067">Since we require \(|\De h|  \lt  0.1\text{,}\) we need \(14.91 |\De \theta|  \lt 0.1\text{,}\) that is<div class="displaymath">
+\begin{gather*}
+|\De \theta|  \lt  \frac{0.1}{14.91} = 0.0067\dots
+\end{gather*}
+</div>So we must measure angles with an accuracy of no less than \(0.0067\) radians — which is<div class="displaymath">
+\begin{gather*}
+\frac{180}{\pi} \cdot 0.0067 = 0.38^\circ.
+\end{gather*}
+</div>Hence a measurement error of \(0.38^\circ\) or less is acceptable.</li>
+</ul></article></div></section></div></main>
+</div>
+<!--Start: Google Universal code--><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-105798942-1', 'auto');
+ga('send', 'pageview');
+</script><!--End: Google Universal code--><div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.1/login.js"></script>
+</body>
+</html>

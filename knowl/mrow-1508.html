@@ -1,0 +1,38 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:13:56-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="displaymath">
+\begin{align*}
+\diff{}{x} x &amp;= \diff{}{x} e^{\log x}\\
+\end{align*}
+<p class="intertext">The left-hand side is easy, and the right-hand side we can process using the chain rule with \(f(u)=e^u\) and \(u=\log x\text{.}\)</p>
+\begin{align*}
+1 &amp;= \diff{f}{u} \cdot \diff{u}{x}\\
+&amp;= e^u \cdot
+\underbrace{\diff{}{x} \log x }_\text{what we want to compute}\\
+\\
+\end{align*}
+<p class="intertext">Recall that \(e^u = e^{\log x} = x\text{,}\) so</p>
+\begin{align*}
+1 &amp;= x \cdot
+\underbrace{\diff{}{x} \log x }_\text{now what?}\\
+\end{align*}
+<p class="intertext">We can now just rearrange this equation to make the thing we want the subject:</p>
+\begin{align*}
+\diff{}{x} \log x &amp;= \frac{1}{x}
+\end{align*}
+</div>
+<span class="incontext"><a href="sec_diff_logs.html#mjx-eqn-mrow-1508">in-context</a></span>
+</body>
+</html>

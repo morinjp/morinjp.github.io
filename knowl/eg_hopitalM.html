@@ -1,0 +1,47 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:21:34-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="example-like"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">3.7.22</span> <span class="title">Compute \(\ds \lim_{x\rightarrow 0+}x^x\)</span>
+</h6>
+<p>For example, in the limit</p>
+<div class="displaymath">
+\begin{gather*}
+\lim_{x\rightarrow 0+}x^x
+\end{gather*}
+</div>
+<p>both the base, \(x\text{,}\) and the exponent, also \(x\text{,}\) go to zero. But if we consider the logarithm then we have</p>
+<div class="displaymath">
+\begin{gather*}
+\log x^x = x\log x
+\end{gather*}
+</div>
+<p>which is a \(0\cdot\infty\) indeterminate form, which we already know how to treat. In fact, we already found, in Example <a knowl="./knowl/eg_hopitalJ.html" title="Example 3.7.15: \(\ds \lim_{x\to 0^+} x \cdot \log x\)">3.7.15</a>, that</p>
+<div class="displaymath">
+\begin{gather*}
+\lim_{x\rightarrow 0+} x\log x=0
+\end{gather*}
+</div>
+<p>Since the exponential is a continuous function</p>
+<div class="displaymath">
+\begin{gather*}
+\lim_{x\rightarrow 0+}x^x
+=\lim_{x\rightarrow 0+}\exp\big(x\log x\big)
+=\exp\Big(\lim_{x\rightarrow 0+}x\log x\Big)
+=e^0
+=1
+\end{gather*}
+</div></article><span class="incontext"><a href="ssec_3_7_2.html#eg_hopitalM">in-context</a></span>
+</body>
+</html>

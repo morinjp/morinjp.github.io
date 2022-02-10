@@ -1,0 +1,31 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:12:23-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><div class="solution">
+<p>We plug in \(f(x)\) to the definition of a derivative. To evaluate the limit, we multiply and divide by the conjugate of the numerator, then simplify.</p>
+<div class="displaymath">
+\begin{align*}
+\amp f'(x)=\lim\limits_{h\rightarrow 0}\frac{f(x+h)-f(x)}{h}
+=\lim\limits_{h\rightarrow 0}\frac{\sqrt{1+x+h}-\sqrt{1+x}}{h}\\
+&amp;\hskip0.5in=\lim\limits_{h\rightarrow 0}\frac{\sqrt{1+x+h}-\sqrt{1+x}}{h}
+\left(\frac{\sqrt{1+x+h}+\sqrt{1+x}}{\sqrt{1+x+h}+\sqrt{1+x}}\right)\\
+&amp;\hskip0.5in=\lim\limits_{h\rightarrow 0}\frac{(1+x+h)-(1+x)}{h(\sqrt{1+x+h}+\sqrt{1+x})}\\
+&amp;\hskip0.5in=\lim\limits_{h\rightarrow 0}\frac{h}{h(\sqrt{1+x+h}+\sqrt{1+x})}\\
+&amp;\hskip0.5in=\lim\limits_{h\rightarrow 0}\frac{1}{\sqrt{1+x+h}+\sqrt{1+x}}\\
+&amp;\hskip0.5in=\frac{1}{\sqrt{1+x+0}+\sqrt{1+x}}=\frac{1}{2\sqrt{1+x}}
+\end{align*}
+</div>
+<p>The domain of the function is \([-1,\infty)\text{.}\) In particular, \(f(x)\) is defined when \(x=-1\text{.}\) However, \(f'(x)\) is not defined when \(x=-1\text{,}\) so \(f'(x)\) only exists over \((-1,\infty)\text{.}\)</p>
+<p>Remark: \(\ds\lim_{x \to -1^+}f'(x)=\infty\text{,}\) so the tangent line to \(f(x)\) at the point \(x=-1\) has a vertical slope.</p>
+</div></body>
+</html>

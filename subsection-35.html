@@ -1,0 +1,578 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:01:47-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Implicit Differentiation</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.1/pretext.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on2.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="RQS.css">
+<link href="https://pretextbook.org/css/0.1/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\require{cancel}\newcommand{\dee}[1]{\mathrm{d}#1}
+\newcommand{\half}{ \frac{1}{2} }
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ts}{\textstyle}
+\newcommand{\es}{ {\varnothing}}
+\newcommand{\st}{ {\mbox{ s.t. }} }
+\newcommand{\pow}[1]{ \mathcal{P}\left(#1\right) }
+\newcommand{\set}[1]{ \left\{#1\right\} }
+\newcommand{\lin}{{\text{LIN}}}
+\newcommand{\quot}{{\text{QR}}}
+\newcommand{\simp}{{\text{SMP}}}
+\newcommand{\diff}[2]{ \frac{\mathrm{d}#1}{\mathrm{d}#2}}
+\newcommand{\bdiff}[2]{ \frac{\mathrm{d}}{\mathrm{d}#2} \left( #1 \right)}
+\newcommand{\ddiff}[3]{ \frac{\mathrm{d}^#1#2}{\mathrm{d}{#3}^#1}}
+\renewcommand{\neg}{ {\sim} }
+\newcommand{\limp}{ {\;\Rightarrow\;} }
+\newcommand{\nimp}{ {\;\not\Rightarrow\;} }
+\newcommand{\liff}{ {\;\Leftrightarrow\;} }
+\newcommand{\niff}{ {\;\not\Leftrightarrow\;} }
+\newcommand{\De}{\Delta}
+\newcommand{\bbbn}{\mathbb{N}}
+\newcommand{\bbbr}{\mathbb{R}}
+\newcommand{\bbbp}{\mathbb{P}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\Si}{\Sigma}
+
+\newcommand{\arccsc}{\mathop{\mathrm{arccsc}}}
+\newcommand{\arcsec}{\mathop{\mathrm{arcsec}}}
+\newcommand{\arccot}{\mathop{\mathrm{arccot}}}
+\newcommand{\erf}{\mathop{\mathrm{erf}}}
+\newcommand{\smsum}{\mathop{{\ts \sum}}}
+\newcommand{\atp}[2]{ \genfrac{}{}{0in}{}{#1}{#2} }
+
+\newcommand{\ave}{\mathrm{ave}}
+\newcommand{\llt}{\left \lt }
+\newcommand{\rgt}{\right \gt }
+
+
+\newcommand{\YEaxis}[2]{\draw[help lines] (-#1,0)--(#1,0) node[right]{$x$};\draw[help lines] (0,-#2)--(0,#2) node[above]{$y$};}
+
+\newcommand{\YEaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$x$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YEtaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+\newcommand{\YEtaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$}; \draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YExcoord}[2]{\draw (#1,.2)--(#1,-.2) node[below]{$#2$};}
+\newcommand{\YEycoord}[2]{\draw (.2,#1)--(-.2,#1) node[left]{$#2$};}
+\newcommand{\YEnxcoord}[2]{\draw (#1,-.2)--(#1,.2) node[above]{$#2$};}
+\newcommand{\YEnycoord}[2]{\draw (-.2,#1)--(.2,#1) node[right]{$#2$};}
+
+\newcommand{\YEstickfig}[3]{
+\draw (#1,#2) arc(-90:270:2mm);
+\draw (#1,#2)--(#1,#2-.5) (#1-.25,#2-.75)--(#1,#2-.5)--(#1+.25,#2-.75) (#1-.2,#2-.2)--(#1+.2,#2-.2);}
+
+
+\newcommand{\IBP}[7]{
+\begin{array}{|c  | l | l |}
+\hline
+\color{red}{\text{Option 1:}}
+&amp; u=#2
+&amp;\color{red}{\dee{u}=#3 ~ \dee{#1}}
+\\
+&amp; \dee{v}=#5~\dee{#1}
+&amp;\color{red}{v=#7}
+\\
+\hline
+\color{blue}{\text{Option 2:}}
+&amp; u=#5
+&amp;\color{blue}{\dee{u}=#6 ~ \dee{#1}}
+\\
+&amp;\dee{v}=#2 \dee{#1}
+&amp;\color{blue}{v=#4}
+\\
+\hline
+\end{array}
+}
+
+
+\renewcommand{\textcolor}[2]{{\color{#1}{#2}}}
+
+
+\newcommand{\trigtri}[4]{
+\begin{tikzpicture}
+\draw (-.5,0)--(2,0)--(2,1.5)--cycle;
+\draw (1.8,0) |- (2,.2);
+\draw[double] (0,0) arc(0:30:.5cm);
+\draw (0,.2) node[right]{$#1$};
+\draw (1,-.5) node{$#2$};
+\draw (2,.75) node[right]{$#3$};
+\draw (.6,1.1) node[rotate=30]{$#4$};
+\end{tikzpicture}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="clp_1_dc.html"><span class="title">CLP-1 Differential Calculus</span></a></h1>
+<p class="byline">Joel Feldman, Andrew Rechnitzer, Elyse Yeager</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec_2_11.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="sec_2_11.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="exercises-16.html" title="Next">Next</a></span></div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec_2_11.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="sec_2_11.html" title="Up">Up</a><a class="next-button button toolbar-item" href="exercises-16.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="index.html" data-scroll="index"><span class="title">Front Matter</span></a></h2>
+<ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface-2.html" data-scroll="preface-2">Using the exercises in this book</a></li>
+<li><a href="preface-3.html" data-scroll="preface-3">Feedback about the text</a></li>
+</ul>
+<h2 class="link"><a href="chap_basics.html" data-scroll="chap_basics"><span class="codenumber">0</span> <span class="title">The basics</span></a></h2>
+<ul>
+<li><a href="sec_0_1.html" data-scroll="sec_0_1">Numbers</a></li>
+<li><a href="sec_sets.html" data-scroll="sec_sets">Sets</a></li>
+<li><a href="sec_0_3.html" data-scroll="sec_0_3">Other Important Sets</a></li>
+<li><a href="sec_0_4.html" data-scroll="sec_0_4">Functions</a></li>
+<li><a href="sec_parsing.html" data-scroll="sec_parsing">Parsing Formulas</a></li>
+<li><a href="sec_inverse_functions.html" data-scroll="sec_inverse_functions">Inverse Functions</a></li>
+</ul>
+<h2 class="link"><a href="chap_limits.html" data-scroll="chap_limits"><span class="codenumber">1</span> <span class="title">Limits</span></a></h2>
+<ul>
+<li><a href="sec_first_lim.html" data-scroll="sec_first_lim">Drawing Tangents and a First Limit</a></li>
+<li><a href="sec_velocity.html" data-scroll="sec_velocity">Another Limit and Computing Velocity</a></li>
+<li><a href="sec_lim_func.html" data-scroll="sec_lim_func">The Limit of a Function</a></li>
+<li><a href="sec_1_4.html" data-scroll="sec_1_4">Calculating Limits with Limit Laws</a></li>
+<li><a href="sec_1_5.html" data-scroll="sec_1_5">Limits at Infinity</a></li>
+<li><a href="sec_1_6.html" data-scroll="sec_1_6">Continuity</a></li>
+<li><a href="sec_opt_formal_limit.html" data-scroll="sec_opt_formal_limit">(Optional) — Making the Informal a Little More Formal</a></li>
+<li><a href="sec_lim_inf_formal.html" data-scroll="sec_lim_inf_formal">(Optional) — Making Infinite Limits a Little More Formal</a></li>
+<li><a href="sec_proof_arith_lim.html" data-scroll="sec_proof_arith_lim">(Optional) — Proving the Arithmetic of Limits</a></li>
+</ul>
+<h2 class="link"><a href="chap_deriv.html" data-scroll="chap_deriv"><span class="codenumber">2</span> <span class="title">Derivatives</span></a></h2>
+<ul>
+<li><a href="sec_2_1.html" data-scroll="sec_2_1">Revisiting Tangent Lines</a></li>
+<li><a href="sec_def_deriv.html" data-scroll="sec_def_deriv">Definition of the Derivative</a></li>
+<li><a href="sec_2_3.html" data-scroll="sec_2_3">Interpretations of the Derivative</a></li>
+<li><a href="sec_2_4.html" data-scroll="sec_2_4">Arithmetic of Derivatives - a Differentiation Toolbox</a></li>
+<li><a href="sec_proof_arith_deriv.html" data-scroll="sec_proof_arith_deriv">Proofs of the Arithmetic of Derivatives</a></li>
+<li><a href="sec_2_6.html" data-scroll="sec_2_6">Using the Arithmetic of Derivatives –  Examples</a></li>
+<li><a href="sec_exp_func.html" data-scroll="sec_exp_func">Derivatives of Exponential Functions</a></li>
+<li><a href="sec_diff_trig.html" data-scroll="sec_diff_trig">Derivatives of Trigonometric Functions</a></li>
+<li><a href="sec_chain_rule.html" data-scroll="sec_chain_rule">One More Tool  – the Chain Rule</a></li>
+<li><a href="sec_diff_logs.html" data-scroll="sec_diff_logs">The Natural Logarithm</a></li>
+<li><a href="sec_2_11.html" data-scroll="sec_2_11">Implicit Differentiation</a></li>
+<li><a href="sec_invTrig.html" data-scroll="sec_invTrig">Inverse Trigonometric Functions</a></li>
+<li><a href="sec_mvt.html" data-scroll="sec_mvt">The Mean Value Theorem</a></li>
+<li><a href="sec_higher_diff.html" data-scroll="sec_higher_diff">Higher Order Derivatives</a></li>
+<li><a href="sec_cont_deriv.html" data-scroll="sec_cont_deriv">(Optional) — Is \(\lim_{x\to c}f'(x)\) Equal to \(f'(c)\text{?}\)</a></li>
+</ul>
+<h2 class="link"><a href="chap_appl_deriv.html" data-scroll="chap_appl_deriv"><span class="codenumber">3</span> <span class="title">Applications of derivatives</span></a></h2>
+<ul>
+<li><a href="sec_vel_acc.html" data-scroll="sec_vel_acc">Velocity and Acceleration</a></li>
+<li><a href="sec_rrates.html" data-scroll="sec_rrates">Related Rates</a></li>
+<li><a href="sec_ExpGthDecay.html" data-scroll="sec_ExpGthDecay">Exponential Growth and Decay</a></li>
+<li><a href="sec_DIFFTaylor.html" data-scroll="sec_DIFFTaylor">Taylor Polynomials</a></li>
+<li><a href="sec_optimise.html" data-scroll="sec_optimise">Optimisation</a></li>
+<li><a href="sec_curve_sketch.html" data-scroll="sec_curve_sketch">Sketching Graphs</a></li>
+<li><a href="sec_4_7.html" data-scroll="sec_4_7">L'Hôpital's Rule and Indeterminate Forms</a></li>
+</ul>
+<h2 class="link"><a href="chapter-5.html" data-scroll="chapter-5"><span class="codenumber">4</span> <span class="title">Towards Integral Calculus</span></a></h2>
+<ul><li><a href="sec_antidiff.html" data-scroll="sec_antidiff">Introduction to Antiderivatives</a></li></ul>
+<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Appendices</span></a></h2>
+<h2 class="link"><a href="app_highschool.html" data-scroll="app_highschool"><span class="codenumber">A</span> <span class="title">High School Material</span></a></h2>
+<ul>
+<li><a href="sec_simtri.html" data-scroll="sec_simtri">Similar Triangles</a></li>
+<li><a href="sec_A_2.html" data-scroll="sec_A_2">Pythagoras</a></li>
+<li><a href="sec_A_3.html" data-scroll="sec_A_3">Trigonometry — Definitions</a></li>
+<li><a href="app_rad_arc_sec.html" data-scroll="app_rad_arc_sec">Radians, Arcs and Sectors</a></li>
+<li><a href="app_sec_trig_graphs.html" data-scroll="app_sec_trig_graphs">Trigonometry — Graphs</a></li>
+<li><a href="sec_A_6.html" data-scroll="sec_A_6">Trigonometry — Special Triangles</a></li>
+<li><a href="sec_A_7.html" data-scroll="sec_A_7">Trigonometry — Simple Identities</a></li>
+<li><a href="sec_trig_add.html" data-scroll="sec_trig_add">Trigonometry — Add and Subtract Angles</a></li>
+<li><a href="sec_inv_trig.html" data-scroll="sec_inv_trig">Inverse Trig Functions</a></li>
+<li><a href="app_sec_areas.html" data-scroll="app_sec_areas">Areas</a></li>
+<li><a href="sec_volumes.html" data-scroll="sec_volumes">Volumes</a></li>
+<li><a href="sec_powers.html" data-scroll="sec_powers">Powers</a></li>
+<li><a href="sec_logs.html" data-scroll="sec_logs">Logarithms</a></li>
+<li><a href="sec_must_deriv.html" data-scroll="sec_must_deriv">You Should be Able to Derive</a></li>
+</ul>
+<h2 class="link"><a href="chap_app_B.html" data-scroll="chap_app_B"><span class="codenumber">B</span> <span class="title">Origin of Trig, Area and Volume Formulas</span></a></h2>
+<ul>
+<li><a href="sec_B_1.html" data-scroll="sec_B_1">Theorems about Triangles</a></li>
+<li><a href="sec_B_2.html" data-scroll="sec_B_2">Trigonometry</a></li>
+<li><a href="sec_B_3.html" data-scroll="sec_B_3">Inverse Trigonometric Functions</a></li>
+<li><a href="sec_B_4.html" data-scroll="sec_B_4">Cosine and Sine Laws</a></li>
+<li><a href="sec_B_5.html" data-scroll="sec_B_5">Circles, cones and spheres</a></li>
+</ul>
+<h2 class="link"><a href="app_root_finding.html" data-scroll="app_root_finding"><span class="codenumber">C</span> <span class="title">Root Finding</span></a></h2>
+<ul>
+<li><a href="sec_C_1.html" data-scroll="sec_C_1">Newton's Method</a></li>
+<li><a href="sec_C_2.html" data-scroll="sec_C_2">The Error Behaviour of Newton's Method</a></li>
+<li><a href="sec_C_3.html" data-scroll="sec_C_3">The false position (regula falsi) method</a></li>
+<li><a href="sec_C_4.html" data-scroll="sec_C_4">The secant method</a></li>
+<li><a href="sec_C_5.html" data-scroll="sec_C_5">The Error Behaviour of the Secant Method</a></li>
+</ul>
+<h2 class="link"><a href="app_hint.html" data-scroll="app_hint"><span class="codenumber">D</span> <span class="title">Hints for Exercises</span></a></h2>
+<h2 class="link"><a href="app_answ.html" data-scroll="app_answ"><span class="codenumber">E</span> <span class="title">Answers to Exercises</span></a></h2>
+<h2 class="link"><a href="app_soln.html" data-scroll="app_soln"><span class="codenumber">F</span> <span class="title">Solutions to Exercises</span></a></h2></nav><div class="extras"><nav><a class="feedback-link" href="mailto:clp@ugrad.math.ubc.ca?subject=clp-pretext" target="_blank">Feedback</a><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="mathbook-content"><section class="subsection" id="subsection-35"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.11.1</span> <span class="title">Implicit Differentiation</span>
+</h3>
+<p id="p-2275">Implicit differentiation is a simple trick that is used to compute derivatives of functions either</p>
+<ul class="disc">
+<li id="li-561">when you don't know an explicit formula for the function, but you know an equation that the function obeys or</li>
+<li id="li-562">even when you have an explicit, but complicated, formula for the function, and the function obeys a simple equation.</li>
+</ul>
+<p>The trick is just to differentiate both sides of the equation and then solve for the derivative we are seeking. In fact we have already done this, without using the name “implicit differentiation”, when we found the derivative of \(\log x\) in the previous section. There we knew that the function \(f(x)=\log x\) satisfied the equation \(e^{f(x)}=x\) for all \(x\text{.}\) That is, the functions \(e^{f(x)}\) and \(x\) are in fact the same function and so have the same derivative. So we had</p>
+<div class="displaymath">
+\begin{gather*}
+\diff{}{x}e^{f(x)} = \diff{}{x}x = 1
+\end{gather*}
+</div>
+<p>We then used the chain rule to get \(\diff{}{x}e^{f(x)}=e^{f(x)}f'(x)\text{,}\) which told us that \(f'(x)\) obeys the equation</p>
+<div class="displaymath">
+\begin{align*}
+e^{f(x)}f'(x) &amp;=1 &amp; \text{and we can now solve for $f'(x)$}\\
+f'(x) &amp;= e^{-f(x)} = e^{-\log x} = \frac{1}{x}.
+\end{align*}
+</div>
+<p id="p-2276">The typical way to get used to implicit differentiation is to play with problems involving tangent lines to curves. So here are a few examples finding the equations of tangent lines to curves. Recall, from Theorem <a knowl="./knowl/thm_DIFFtangentLine.html" title="Theorem 2.3.4: Tangent line">2.3.4</a>, that, in general, the tangent line to the curve \(y=f(x)\) at \(\big(x_0,y_0\big)\) is \(y=f(x_0)+f'(x_0)(x-x_0)=y_0+f'(x_0)(x-x_0)\text{.}\)</p>
+<article class="example-like" id="eg_DIFFimpldiffD"><a knowl="" class="id-ref" refid="hk-eg_DIFFimpldiffD"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">2.11.1</span> <span class="title">Finding a tangent line using implicit differentiation</span>
+</h6></a></article><div id="hk-eg_DIFFimpldiffD" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-2277">Find the equation of the tangent line to \(y=y^3+xy+x^3\) at \(x=1\text{.}\)</p>
+<p id="p-2278">This is a very standard sounding example, but made a little complicated by the fact that the curve is given by a cubic equation — which means we cannot solve directly for \(y\) in terms of \(x\) or vice versa. So we really do need implicit differentiation.</p>
+<ul class="disc">
+<li id="li-563">First notice that when \(x=1\) the equation, \(y=y^3+xy+x^3\text{,}\) of the curve simplifies to \(y=y^3+y+1\) or \(y^3=-1\text{,}\) which we can solve <a knowl="" class="id-ref" refid="hk-fn-92" id="fn-92"><sup> 1 </sup></a><span id="hk-fn-92" class="hidden-content tex2jax_ignore"><span class="footnote">This type of luck rarely happens in the “real world”. But it happens remarkably frequently in textbooks, problem sets and tests.</span></span> : \(y=-1\text{.}\) So we know that the curve passes through \((1,-1)\) when \(x=1\text{.}\)</li>
+<li id="li-564">Now, to find the  slope of the tangent line at \((1,-1)\text{,}\) pretend that our curve is \(y=f(x)\) so that \(f(x)\) obeys<div class="displaymath">
+\begin{align*}
+f(x) &amp;= f(x)^3 + x f(x) + x^3
+\end{align*}
+</div>for all \(x\text{.}\) Differentiating both sides gives<div class="displaymath">
+\begin{gather*}
+f'(x)=3f(x)^2f'(x)+f(x)+xf'(x)+3x^2
+\end{gather*}
+</div>
+</li>
+<li id="li-565">At this point we could isolate for \(f'(x)\) and write it in terms of \(f(x)\) and \(x\text{,}\) but since we only want answers when \(x=1\text{,}\) let us substitute in \(x=1\) and \(f(1)=-1\) (since the curve passes through \((1,-1)\)) and clean things up before doing anything else.</li>
+<li id="li-566">Subbing in \(x=1,\ f(1)=-1\) gives<div class="displaymath">
+\begin{align*}
+f'(1)&amp;=3f'(1)-1+f'(1)+3 &amp; \text{ and so } f'(1)=-\frac{2}{3}
+\end{align*}
+</div>
+</li>
+<li id="li-567">The equation of the tangent line is<div class="displaymath">
+\begin{gather*}
+y=y_0+f'(x_0)(x-x_0)=-1-\frac{2}{3}(x-1)
+=-\frac{2}{3}x-\frac{1}{3}
+\end{gather*}
+</div>
+</li>
+</ul>
+<p>We can further clean up the equation of the line to write it as \(2x+3y=-1\text{.}\)</p></article></div>
+<p id="p-2279">In the previous example we replace \(y\) by \(f(x)\) in the middle of the computation. We don't actually have to do this. When we are writing out our solution we can remember that \(y\) is a function of \(x\text{.}\) So we can start with</p>
+<div class="displaymath">
+\begin{align*}
+y &amp;=y^3+xy+x^3 &amp; \\
+\end{align*}
+<p class="intertext">and differentiate remembering that \(y\equiv
+y(x)\)</p>
+\begin{align*}
+y' &amp;= 3 y^2 y' + xy' + y + 3x^2\\
+\end{align*}
+<p class="intertext">And now substitute \(x=1, y=-1\) to get</p>
+\begin{align*}
+y'(1) &amp;= 3 \cdot y'(1) + y'(1) - 1 + 3 &amp; \text{and so}\\
+y'(1) &amp;= -\frac{2}{3}
+\end{align*}
+</div>
+<p id="p-2280">The next one is at the same time a bit easier (because it is a quadratic) and a bit harder (because we are asked for the tangent at a general point on the curve, not a specific one).</p>
+<article class="example-like" id="eg_DIFFimpldiffA"><a knowl="" class="id-ref" refid="hk-eg_DIFFimpldiffA"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">2.11.2</span> <span class="title">Another tangent line through implicit differentiation</span>
+</h6></a></article><div id="hk-eg_DIFFimpldiffA" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-2281">Let \((x_0,y_0)\) be a point on the ellipse \(3x^2+5y^2=7\text{.}\) Find the equation for the tangent lines when \(x=1\) and \(y\) is positive. Then find an equation for the tangent line to the ellipse at a general point \((x_0,y_0)\text{.}\)</p>
+<p id="p-2282">Since we are not given an specific point \(x_0\) we are going to have to be careful with the second half of this question.</p>
+<ul class="disc">
+<li id="li-568">When \(x=1\) the equation simplifies to<div class="displaymath">
+\begin{align*}
+3 + 5y^2 &amp;= 7\\
+5y^2 &amp;= 4\\
+y &amp;= \pm \frac{2}{\sqrt{5}}.
+\end{align*}
+</div>We are only interested in positive \(y\text{,}\) so our point on the curve is \((1,2/\sqrt{5})\text{.}\)</li>
+<li id="li-569">Now we use implicit differentiation to find \(\diff{y}{x}\) at this point. First we pretend that we have solved the curve explicitly, for some interval of \(x\)'s, as \(y=f(x)\text{.}\) The equation becomes<div class="displaymath">
+\begin{align*}
+3x^2 + 5f(x)^2 &amp;= 7 &amp; \text{now differentiate}\\
+6x + 10 f(x) f'(x) &amp;= 0\\
+f'(x) &amp;= - \frac{3x}{5f(x)}
+\end{align*}
+</div>
+</li>
+<li id="li-570">When \(x=1, y= 2/\sqrt{5}\) this becomes<div class="displaymath">
+\begin{align*}
+f'(1) &amp;= - \frac{3}{5 \cdot 2/\sqrt{5}} = - \frac{3}{2\sqrt{5}}
+\end{align*}
+</div>So the tangent line passes through \((1,2/\sqrt{5})\) and has slope \(-
+\frac{3}{2\sqrt{5}}\text{.}\) Hence the tangent line has equation<div class="displaymath">
+\begin{align*}
+y &amp;=y_0+f'(x_0)(x-x_0)\\
+&amp;= \frac{2}{\sqrt{5}} - \frac{3}{2\sqrt{5}} (x-1)\\
+&amp;= \frac{7 - 3x}{2\sqrt{5}} &amp; \text{or equivalently}\\
+3x + 2\sqrt{5} y&amp;= 7
+\end{align*}
+</div>
+</li>
+</ul>
+<p id="p-2283">Now we should go back and do the same but for a general point on the curve \((x_0,y_0)\text{:}\)</p>
+<ul class="disc">
+<li id="li-571">
+<p id="p-2284">A good first step here is to sketch the curve. Since this is an ellipse, it is pretty straight-forward.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;">
+<div class="sbspanel" style="width:57.8947368421053%;justify-content:flex-start;"><img src="text/figs/ellipse.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:36.8421052631579%;justify-content:flex-start;"><img src="text/figs/ellipseB.svg" style="width: 100%; height: auto;" alt=""></div>
+</div></div>
+</li>
+<li id="li-572">Notice that there are two points on the ellipse — the extreme right and left points  \((x_0,y_0)=\pm\big(\sqrt{\frac{7}{3}},0\big)\) — at which the tangent line is vertical. In those two cases, the tangent line is just \(x=x_0\text{.}\)</li>
+<li id="li-573">
+<p id="p-2285">Since this is a quadratic for \(y\text{,}\) we could solve it explicitly to get</p>
+<div class="displaymath">
+\begin{align*}
+y &amp;= \pm \sqrt{\frac{7-3x^2}{5}}
+\end{align*}
+</div>
+<p>and choose the positive or negative branch as appropriate. Then we could differentiate to find the slope and put things together to get the tangent line.</p>
+<p id="p-2286">But even in this relatively easy case, it is computationally cleaner, and hence less vulnerable to mechanical errors, to use implicit differentiation. So that's what we'll do.</p>
+</li>
+<li id="li-574">Now we could again “pretend” that we have solved the equation for the ellipse for \(y=f(x)\)  near \((x_0,y_0)\text{,}\) but let's not do that. Instead (as we did just before this example) just remember that when we differentiate \(y\) is really a function of \(x\text{.}\) So starting from<div class="displaymath">
+\begin{align*}
+3x^2 + 5y^2 &amp;=7 &amp;\text{differentiating gives}\\
+6x + 5\cdot 2y \cdot y' &amp;= 0
+\end{align*}
+</div>We can then solve this for \(y'\text{:}\)<div class="displaymath">
+\begin{align*}
+y' &amp;= -\frac{3x}{5y}
+\end{align*}
+</div>where \(y'\) and \(y\) are both functions of \(x\text{.}\)</li>
+<li id="li-575">Hence at the point \((x_0,y_0)\) we have<div class="displaymath">
+\begin{align*}
+\left. y' \right|_{(x_0,y_0)} &amp;= -\frac{3x_0}{5y_0}
+\end{align*}
+</div>This is the slope of the tangent line at \((x_0,y_0)\) and so its equation is<div class="displaymath">
+\begin{align*}
+y &amp;=y_0+y' \cdot (x-x_0)\\
+&amp;= y_0 -\frac{3x_0}{5y_0}(x-x_0)\\
+\end{align*}
+<p class="intertext">We can simplify this by multiplying through by \(5y_0\) to get</p>
+\begin{align*}
+5y_0 y &amp;= 5y_0^2-3x_0x +3x_0^2\\
+\end{align*}
+<p class="intertext">We can clean this up more by moving all the terms that contain \(x\) or \(y\) to the left-hand side and everything else to the right:</p>
+\begin{align*}
+3x_0x+5y_0y &amp;=3x_0^2+5y_0^2\\
+\end{align*}
+<p class="intertext">But there is one more thing we can do, our original equation is \(3x^2+5y^2=7\) for all points on the curve, so we know that \(3x_0^2+5y_0^2=7\text{.}\) This cleans up the right-hand side.</p>
+\begin{align*}
+3x_0x+5y_0y &amp;=7
+\end{align*}
+</div>
+</li>
+<li id="li-576">In deriving this formula for the tangent line at \((x_0,y_0)\) we have assumed that \(y_0\ne 0\text{.}\) But in fact the final answer happens to also work when \(y_0=0\) (which means \(x_0=\pm\sqrt{\frac{7}{3} }\)), so that the tangent line is \(x=x_0\text{.}\)</li>
+</ul>
+<p>We can also check that our answer for general \((x_0,y_0)\) reduces to our answer for \(x_0=1\text{.}\)</p>
+<ul class="disc">
+<li id="li-577">When \(x_0=1\) we worked out that \(y_0=2/\sqrt{5}\text{.}\)</li>
+<li id="li-578">Plugging this into our answer above gives<div class="displaymath">
+\begin{align*}
+3x_0x+5y_0y &amp;=7  &amp;\text{sub in $(x_0,y_0)=(1,2/\sqrt{5})$}:\\
+3 x + 5 \frac{2}{\sqrt{5}} y &amp;= 7 &amp; \text{clean up a little}\\
+3x + 2\sqrt{5} y &amp;=7
+\end{align*}
+</div>as required.</li>
+</ul></article></div>
+<article class="example-like" id="eg_DIFFimpldiffE"><a knowl="" class="id-ref" refid="hk-eg_DIFFimpldiffE"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">2.11.3</span> <span class="title">A more involved example</span>
+</h6></a></article><div id="hk-eg_DIFFimpldiffE" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-2287">At which points does the curve  \(x^2-xy+y^2=3\) cross the \(x\)–axis? Are the tangent lines to the curve at those points parallel?</p>
+<p id="p-2288">This is a 2 part question — first the \(x\)-intercepts and then we need to examine  tangent lines.</p>
+<ul class="disc">
+<li id="li-579">Finding where the curve crosses the \(x\)-axis is straight forward. It does so when \(y=0\text{.}\) This means \(x\) satisfies<div class="displaymath">
+\begin{align*}
+x^2-x\cdot 0+0^2&amp;=3 &amp; \text{ so $x = \pm\sqrt{3}$}.
+\end{align*}
+</div>So the curve crosses the \(x\)–axis at two points \(\big(\pm\sqrt{3}\,,\,0\big)\text{.}\)</li>
+<li id="li-580">Now we need to find the tangent lines at those points. But we don't actually need the lines, just their slopes. Again we can pretend that near one of those points the curve is \(y=f(x)\text{.}\) Applying \(\diff{}{x}\) to both sides of \(x^2-xf(x)+f(x)^2=3\) gives<div class="displaymath">
+\begin{align*}
+2x-f(x)-xf'(x)+2f(x)f'(x)&amp;=0
+\end{align*}
+</div>etc etc.</li>
+<li id="li-581">But let us stop “pretending”. Just make sure we remember that \(y\) is a function of \(x\) when we differentiate:<div class="displaymath">
+\begin{align*}
+x^2-xy+y^2 &amp;= 3 &amp; \text{start with the curve, and differentiate}\\
+2x - xy' -y + 2yy' &amp;=0 &amp;
+\end{align*}
+</div>Now substitute in the first point, \(x=+\sqrt{3}, y=0\text{:}\)<div class="displaymath">
+\begin{align*}
+2\sqrt{3} - \sqrt{3}y' + 0 &amp;=0\\
+y' &amp;= 2
+\end{align*}
+</div>And now do the second point \(x=-\sqrt{3}, y=0\text{:}\)<div class="displaymath">
+\begin{align*}
+-2\sqrt{3} + \sqrt{3}y' + 0 &amp;=0\\
+y' &amp;= 2
+\end{align*}
+</div>Thus the slope is the same at \(x=\sqrt{3}\) and \(x=-\sqrt{3}\) and the tangent lines are parallel.</li>
+</ul>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/implicit_eg1.svg" style="width: 100%; height: auto;" alt=""></div></div></div></article></div>
+<p id="p-2289">Okay — let's get away from curves and do something a little different.</p>
+<article class="example-like" id="eg_DIFFimpldiffC"><a knowl="" class="id-ref" refid="hk-eg_DIFFimpldiffC"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">2.11.4</span> <span class="title">A rough game of baseball</span>
+</h6></a></article><div id="hk-eg_DIFFimpldiffC" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-2290">You are standing at the origin. At time zero a pitcher throws a ball at your head <a knowl="" class="id-ref" refid="hk-fn-93" id="fn-93"><sup> 2 </sup></a><span id="hk-fn-93" class="hidden-content tex2jax_ignore"><span class="footnote">It seems that it is not a friendly game today.</span></span>.</p>
+<figure class="figure-like" id="fig_DIFFbaseball"><div style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="text/figs/baseball.svg" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span> <span class="codenumber">2.11.5</span> </figcaption></figure><p id="p-2291">The position of the (centre of the) ball at time \(t\) is \(x(t)=d-vt\text{,}\) where \(d\) is the distance from your head to the  pitcher's mound and \(v\) is the ball's velocity. Your eye sees the ball filling <a knowl="" class="id-ref" refid="hk-fn-94" id="fn-94"><sup> 3 </sup></a><span id="hk-fn-94" class="hidden-content tex2jax_ignore"><span class="footnote">This is the “visual angle” or “angular size”.</span></span> an angle \(2\theta(t)\) with</p>
+<div class="displaymath">
+\begin{gather*}
+\sin\big(\theta(t)\big)=\frac{r}{d-vt}
+\end{gather*}
+</div>
+<p>where \(r\) is the radius of the baseball. The question is “How fast is \(\theta\) growing at time \(t\text{?}\)” That is, what is \(\diff{\theta}{t}\text{?}\)</p>
+<ul id="p-2292" class="disc">
+<li id="li-582">We don't know (yet) how to solve this equation to find \(\theta(t)\) explicitly. So we use implicit differentiation.</li>
+<li id="li-583">To do so we apply \(\diff{}{t}\) to both sides of our equation. This gives<div class="displaymath">
+\begin{gather*}
+\cos\big(\theta(t)\big)\cdot\theta'(t)=\frac{rv}{(d-vt)^2}
+\end{gather*}
+</div>
+</li>
+<li id="li-584">Then we solve for \(\theta'(t)\text{:}\)<div class="displaymath">
+\begin{gather*}
+\theta'(t)=\frac{rv}{(d-vt)^2\cos\big(\theta(t)\big)}
+\end{gather*}
+</div>
+</li>
+<li id="li-585">As is often the case, when using implicit differentiation, this answer is not very satisfying because it contains \(\theta(t)\text{,}\) for which we still do not have an explicit formula. However in this case we can get an explicit formula for \(\cos\big(\theta(t)\big)\text{,}\) without having an explicit formula for \(\theta(t)\text{,}\) just by looking at the right–angled triangle in Figure <a knowl="./knowl/fig_DIFFbaseball.html" title="Figure 2.11.5">2.11.5</a>, above.</li>
+<li id="li-586">The hypotenuse of that triangle has length \(d-vt\text{.}\) By Pythagoras, the length of the side of the triangle adjacent of the angle \(\theta(t)\) is \(\sqrt{(d-vt)^2-r^2}\text{.}\) So<div class="displaymath">
+\begin{equation*}
+\cos\big(\theta(t)\big)=\frac{\sqrt{(d-vt)^2-r^2}}{d-vt}
+\end{equation*}
+</div>and<div class="displaymath">
+\begin{gather*}
+\theta'(t)=\frac{rv}{(d-vt)\sqrt{(d-vt)^2-r^2}}
+\end{gather*}
+</div>
+</li>
+</ul></article></div>
+<p id="p-2293">Okay — just one more tangent-to-the-curve example and then we'll go on to something different.</p>
+<article class="example-like" id="eg_DIFFimpldiffB"><a knowl="" class="id-ref" refid="hk-eg_DIFFimpldiffB"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">2.11.6</span> <span class="title">The astroid (no that is not a typo)</span>
+</h6></a></article><div id="hk-eg_DIFFimpldiffB" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-2294">Let \((x_0,y_0)\) be a point on the astroid <a knowl="" class="id-ref" refid="hk-fn-95" id="fn-95"><sup> 4 </sup></a><span id="hk-fn-95" class="hidden-content tex2jax_ignore"><span class="footnote">Here is where is the astroid comes from. Imagine two circles, one of radius \(1/4\) and one of radius \(1\text{.}\) Paint a red dot on the smaller circle. Then imagine the smaller circle rolling around the inside of the larger circle. The curve traced by the red dot is our astroid. Google “astroid” (be careful about the spelling) to find animations showing this.</span></span> <a knowl="" class="id-ref" refid="hk-fn-96" id="fn-96"><sup> 5 </sup></a><span id="hk-fn-96" class="hidden-content tex2jax_ignore"><span class="footnote">The astroid was first discussed by Johann Bernoulli in 1691–92. It also appears in the work of Leibniz.</span></span></p>
+<div class="displaymath" id="p-2295">
+\begin{gather*}
+x^{\frac{2}{3}}+y^{\frac{2}{3}}=1.
+\end{gather*}
+</div>
+<p>Find an equation for the tangent line to the astroid at \((x_0,y_0)\text{.}\)</p>
+<ul id="p-2296" class="disc">
+<li id="li-587">As was the case in examples above we can rewrite the equation of the astroid near \((x_0,y_0)\) in the form \(y=f(x)\text{,}\) with an explicit \(f(x)\text{,}\) by solving the equation \(x^{\frac{2}{3}}+y^{\frac{2}{3}}=1\text{.}\) But again, it is computationally cleaner, and hence less vulnerable to mechanical errors, to use implicit differentiation. So that's what we'll do.</li>
+<li id="li-588">First up, since \((x_0,y_0)\) lies on the curve, it satisfies<div class="displaymath">
+\begin{gather*}
+x_0^{\frac{2}{3}}+y_0^{\frac{2}{3}}=1.
+\end{gather*}
+</div>
+</li>
+<li id="li-589">Now, no pretending that \(y=f(x)\text{,}\) this time — just make sure we remember when we differentiate that \(y\) changes with \(x\text{.}\)<div class="displaymath">
+\begin{align*}
+x^{\frac{2}{3}}+y^{\frac{2}{3}} &amp;=1\\
+\end{align*}
+<p class="intertext">Start with the curve, and then differentiate</p>
+\begin{align*}
+\frac{2}{3}x^{-\frac{1}{3}} + \frac{2}{3} y^{-\frac{1}{3}} y' &amp;=0
+\end{align*}
+</div>
+</li>
+<li id="li-590">Note the derivative of \(x^{\frac{2}{3}}\text{,}\) namely \(\frac{2}{3}x^{-\frac{1}{3}}\text{,}\) and the derivative of \(y^{\frac{2}{3}}\text{,}\) namely \(\frac{2}{3} y^{-\frac{1}{3}}y'\text{,}\) are defined only when \(x\ne 0\) and \(y\ne 0\text{.}\) We are interested in the case that \(x=x_0\) and \(y=y_0\text{.}\) So we better assume that \(x_0\ne 0\) and \(y_0\ne 0\text{.}\) Probably something weird happens when \(x_0=0\) or \(y_0=0\text{.}\) We'll come back to this shortly.</li>
+<li id="li-591">To continue on, we set \(x=x_0, y=y_0\) in the equation above, and then solve for \(y'\text{:}\)<div class="displaymath">
+\begin{equation*}
+\frac{2}{3}x_0^{-\frac{1}{3}}
++\frac{2}{3} y_0^{-\frac{1}{3}} y'(x)=0
+\implies y'(x_0)= -\left( \frac{y_0}{x_0} \right)^{\frac{1}{3}}
+\end{equation*}
+</div>This is the slope of the tangent line and its equation is<div class="displaymath">
+\begin{equation*}
+y=y_0+f'(x_0)(x-x_0) = y_0
+-\left(\frac{y_0}{x_0}\right)^{\frac{1}{3}}(x-x_0)
+\end{equation*}
+</div>
+</li>
+</ul>
+<p id="p-2297">Now let's think a little bit about what the tangent line slope of \(-\root{3}\of {\frac{y_0}{x_0}}\) tells us about the astroid.</p>
+<ul class="disc">
+<li id="li-592">First, as a preliminary observation, note that since \(x_0^{\frac{2}{3}}\ge0\) and \(y_0^{\frac{2}{3}}\ge0\) the equation \(x_0^{\frac{2}{3}}+y_0^{\frac{2}{3}}=1\) of the astroid forces \(0\le x_0^{\frac{2}{3}},y_0^{\frac{2}{3}} \le 1\) and hence \(-1\le x_0,y_0\le 1\text{.}\)</li>
+<li id="li-593">For all \(x_0,y_0 \gt 0\) the slope \(-\root{3}\of {\frac{y_0}{x_0}}
+\lt 0\text{.}\) So at all points on the astroid that are in the first quadrant, the tangent line has negative slope, i.e. is “leaning backwards”.</li>
+<li id="li-594">As \(x_0\) tends to zero, \(y_0\) tends to \(\pm 1\) and the tangent line slope tends to infinity. So at points on the astroid near \((0,\pm 1)\text{,}\) the tangent line is almost vertical.</li>
+<li id="li-595">As \(y_0\) tends to zero, \(x_0\) tends to \(\pm 1\) and the tangent line slope tends to zero. So at points on the astroid near \((\pm 1,0)\text{,}\) the tangent line is almost horizontal.</li>
+</ul>
+<p>Here is a figure illustrating all this.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;">
+<div class="sbspanel" style="width:47.3684210526316%;justify-content:flex-start;"><img src="text/figs/astroid.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:47.3684210526316%;justify-content:flex-start;"><img src="text/figs/astroidB.svg" style="width: 100%; height: auto;" alt=""></div>
+</div></div>
+<p id="p-2298">Sure enough, as we speculated earlier, something weird does happen to the astroid when \(x_0\) or \(y_0\) is zero. The astroid is pointy, and does not have a tangent there.</p></article></div></section></div></main>
+</div>
+<!--Start: Google Universal code--><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-105798942-1', 'auto');
+ga('send', 'pageview');
+</script><!--End: Google Universal code--><div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.1/login.js"></script>
+</body>
+</html>

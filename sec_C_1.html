@@ -1,0 +1,483 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:05:09-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Newton's Method</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.1/pretext.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on2.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="RQS.css">
+<link href="https://pretextbook.org/css/0.1/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\require{cancel}\newcommand{\dee}[1]{\mathrm{d}#1}
+\newcommand{\half}{ \frac{1}{2} }
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ts}{\textstyle}
+\newcommand{\es}{ {\varnothing}}
+\newcommand{\st}{ {\mbox{ s.t. }} }
+\newcommand{\pow}[1]{ \mathcal{P}\left(#1\right) }
+\newcommand{\set}[1]{ \left\{#1\right\} }
+\newcommand{\lin}{{\text{LIN}}}
+\newcommand{\quot}{{\text{QR}}}
+\newcommand{\simp}{{\text{SMP}}}
+\newcommand{\diff}[2]{ \frac{\mathrm{d}#1}{\mathrm{d}#2}}
+\newcommand{\bdiff}[2]{ \frac{\mathrm{d}}{\mathrm{d}#2} \left( #1 \right)}
+\newcommand{\ddiff}[3]{ \frac{\mathrm{d}^#1#2}{\mathrm{d}{#3}^#1}}
+\renewcommand{\neg}{ {\sim} }
+\newcommand{\limp}{ {\;\Rightarrow\;} }
+\newcommand{\nimp}{ {\;\not\Rightarrow\;} }
+\newcommand{\liff}{ {\;\Leftrightarrow\;} }
+\newcommand{\niff}{ {\;\not\Leftrightarrow\;} }
+\newcommand{\De}{\Delta}
+\newcommand{\bbbn}{\mathbb{N}}
+\newcommand{\bbbr}{\mathbb{R}}
+\newcommand{\bbbp}{\mathbb{P}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\Si}{\Sigma}
+
+\newcommand{\arccsc}{\mathop{\mathrm{arccsc}}}
+\newcommand{\arcsec}{\mathop{\mathrm{arcsec}}}
+\newcommand{\arccot}{\mathop{\mathrm{arccot}}}
+\newcommand{\erf}{\mathop{\mathrm{erf}}}
+\newcommand{\smsum}{\mathop{{\ts \sum}}}
+\newcommand{\atp}[2]{ \genfrac{}{}{0in}{}{#1}{#2} }
+
+\newcommand{\ave}{\mathrm{ave}}
+\newcommand{\llt}{\left \lt }
+\newcommand{\rgt}{\right \gt }
+
+
+\newcommand{\YEaxis}[2]{\draw[help lines] (-#1,0)--(#1,0) node[right]{$x$};\draw[help lines] (0,-#2)--(0,#2) node[above]{$y$};}
+
+\newcommand{\YEaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$x$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YEtaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+\newcommand{\YEtaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$}; \draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YExcoord}[2]{\draw (#1,.2)--(#1,-.2) node[below]{$#2$};}
+\newcommand{\YEycoord}[2]{\draw (.2,#1)--(-.2,#1) node[left]{$#2$};}
+\newcommand{\YEnxcoord}[2]{\draw (#1,-.2)--(#1,.2) node[above]{$#2$};}
+\newcommand{\YEnycoord}[2]{\draw (-.2,#1)--(.2,#1) node[right]{$#2$};}
+
+\newcommand{\YEstickfig}[3]{
+\draw (#1,#2) arc(-90:270:2mm);
+\draw (#1,#2)--(#1,#2-.5) (#1-.25,#2-.75)--(#1,#2-.5)--(#1+.25,#2-.75) (#1-.2,#2-.2)--(#1+.2,#2-.2);}
+
+
+\newcommand{\IBP}[7]{
+\begin{array}{|c  | l | l |}
+\hline
+\color{red}{\text{Option 1:}}
+&amp; u=#2
+&amp;\color{red}{\dee{u}=#3 ~ \dee{#1}}
+\\
+&amp; \dee{v}=#5~\dee{#1}
+&amp;\color{red}{v=#7}
+\\
+\hline
+\color{blue}{\text{Option 2:}}
+&amp; u=#5
+&amp;\color{blue}{\dee{u}=#6 ~ \dee{#1}}
+\\
+&amp;\dee{v}=#2 \dee{#1}
+&amp;\color{blue}{v=#4}
+\\
+\hline
+\end{array}
+}
+
+
+\renewcommand{\textcolor}[2]{{\color{#1}{#2}}}
+
+
+\newcommand{\trigtri}[4]{
+\begin{tikzpicture}
+\draw (-.5,0)--(2,0)--(2,1.5)--cycle;
+\draw (1.8,0) |- (2,.2);
+\draw[double] (0,0) arc(0:30:.5cm);
+\draw (0,.2) node[right]{$#1$};
+\draw (1,-.5) node{$#2$};
+\draw (2,.75) node[right]{$#3$};
+\draw (.6,1.1) node[rotate=30]{$#4$};
+\end{tikzpicture}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="clp_1_dc.html"><span class="title">CLP-1 Differential Calculus</span></a></h1>
+<p class="byline">Joel Feldman, Andrew Rechnitzer, Elyse Yeager</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="app_root_finding.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="app_root_finding.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="sec_C_2.html" title="Next">Next</a></span></div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="app_root_finding.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="app_root_finding.html" title="Up">Up</a><a class="next-button button toolbar-item" href="sec_C_2.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="index.html" data-scroll="index"><span class="title">Front Matter</span></a></h2>
+<ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface-2.html" data-scroll="preface-2">Using the exercises in this book</a></li>
+<li><a href="preface-3.html" data-scroll="preface-3">Feedback about the text</a></li>
+</ul>
+<h2 class="link"><a href="chap_basics.html" data-scroll="chap_basics"><span class="codenumber">0</span> <span class="title">The basics</span></a></h2>
+<ul>
+<li><a href="sec_0_1.html" data-scroll="sec_0_1">Numbers</a></li>
+<li><a href="sec_sets.html" data-scroll="sec_sets">Sets</a></li>
+<li><a href="sec_0_3.html" data-scroll="sec_0_3">Other Important Sets</a></li>
+<li><a href="sec_0_4.html" data-scroll="sec_0_4">Functions</a></li>
+<li><a href="sec_parsing.html" data-scroll="sec_parsing">Parsing Formulas</a></li>
+<li><a href="sec_inverse_functions.html" data-scroll="sec_inverse_functions">Inverse Functions</a></li>
+</ul>
+<h2 class="link"><a href="chap_limits.html" data-scroll="chap_limits"><span class="codenumber">1</span> <span class="title">Limits</span></a></h2>
+<ul>
+<li><a href="sec_first_lim.html" data-scroll="sec_first_lim">Drawing Tangents and a First Limit</a></li>
+<li><a href="sec_velocity.html" data-scroll="sec_velocity">Another Limit and Computing Velocity</a></li>
+<li><a href="sec_lim_func.html" data-scroll="sec_lim_func">The Limit of a Function</a></li>
+<li><a href="sec_1_4.html" data-scroll="sec_1_4">Calculating Limits with Limit Laws</a></li>
+<li><a href="sec_1_5.html" data-scroll="sec_1_5">Limits at Infinity</a></li>
+<li><a href="sec_1_6.html" data-scroll="sec_1_6">Continuity</a></li>
+<li><a href="sec_opt_formal_limit.html" data-scroll="sec_opt_formal_limit">(Optional) — Making the Informal a Little More Formal</a></li>
+<li><a href="sec_lim_inf_formal.html" data-scroll="sec_lim_inf_formal">(Optional) — Making Infinite Limits a Little More Formal</a></li>
+<li><a href="sec_proof_arith_lim.html" data-scroll="sec_proof_arith_lim">(Optional) — Proving the Arithmetic of Limits</a></li>
+</ul>
+<h2 class="link"><a href="chap_deriv.html" data-scroll="chap_deriv"><span class="codenumber">2</span> <span class="title">Derivatives</span></a></h2>
+<ul>
+<li><a href="sec_2_1.html" data-scroll="sec_2_1">Revisiting Tangent Lines</a></li>
+<li><a href="sec_def_deriv.html" data-scroll="sec_def_deriv">Definition of the Derivative</a></li>
+<li><a href="sec_2_3.html" data-scroll="sec_2_3">Interpretations of the Derivative</a></li>
+<li><a href="sec_2_4.html" data-scroll="sec_2_4">Arithmetic of Derivatives - a Differentiation Toolbox</a></li>
+<li><a href="sec_proof_arith_deriv.html" data-scroll="sec_proof_arith_deriv">Proofs of the Arithmetic of Derivatives</a></li>
+<li><a href="sec_2_6.html" data-scroll="sec_2_6">Using the Arithmetic of Derivatives –  Examples</a></li>
+<li><a href="sec_exp_func.html" data-scroll="sec_exp_func">Derivatives of Exponential Functions</a></li>
+<li><a href="sec_diff_trig.html" data-scroll="sec_diff_trig">Derivatives of Trigonometric Functions</a></li>
+<li><a href="sec_chain_rule.html" data-scroll="sec_chain_rule">One More Tool  – the Chain Rule</a></li>
+<li><a href="sec_diff_logs.html" data-scroll="sec_diff_logs">The Natural Logarithm</a></li>
+<li><a href="sec_2_11.html" data-scroll="sec_2_11">Implicit Differentiation</a></li>
+<li><a href="sec_invTrig.html" data-scroll="sec_invTrig">Inverse Trigonometric Functions</a></li>
+<li><a href="sec_mvt.html" data-scroll="sec_mvt">The Mean Value Theorem</a></li>
+<li><a href="sec_higher_diff.html" data-scroll="sec_higher_diff">Higher Order Derivatives</a></li>
+<li><a href="sec_cont_deriv.html" data-scroll="sec_cont_deriv">(Optional) — Is \(\lim_{x\to c}f'(x)\) Equal to \(f'(c)\text{?}\)</a></li>
+</ul>
+<h2 class="link"><a href="chap_appl_deriv.html" data-scroll="chap_appl_deriv"><span class="codenumber">3</span> <span class="title">Applications of derivatives</span></a></h2>
+<ul>
+<li><a href="sec_vel_acc.html" data-scroll="sec_vel_acc">Velocity and Acceleration</a></li>
+<li><a href="sec_rrates.html" data-scroll="sec_rrates">Related Rates</a></li>
+<li><a href="sec_ExpGthDecay.html" data-scroll="sec_ExpGthDecay">Exponential Growth and Decay</a></li>
+<li><a href="sec_DIFFTaylor.html" data-scroll="sec_DIFFTaylor">Taylor Polynomials</a></li>
+<li><a href="sec_optimise.html" data-scroll="sec_optimise">Optimisation</a></li>
+<li><a href="sec_curve_sketch.html" data-scroll="sec_curve_sketch">Sketching Graphs</a></li>
+<li><a href="sec_4_7.html" data-scroll="sec_4_7">L'Hôpital's Rule and Indeterminate Forms</a></li>
+</ul>
+<h2 class="link"><a href="chapter-5.html" data-scroll="chapter-5"><span class="codenumber">4</span> <span class="title">Towards Integral Calculus</span></a></h2>
+<ul><li><a href="sec_antidiff.html" data-scroll="sec_antidiff">Introduction to Antiderivatives</a></li></ul>
+<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Appendices</span></a></h2>
+<h2 class="link"><a href="app_highschool.html" data-scroll="app_highschool"><span class="codenumber">A</span> <span class="title">High School Material</span></a></h2>
+<ul>
+<li><a href="sec_simtri.html" data-scroll="sec_simtri">Similar Triangles</a></li>
+<li><a href="sec_A_2.html" data-scroll="sec_A_2">Pythagoras</a></li>
+<li><a href="sec_A_3.html" data-scroll="sec_A_3">Trigonometry — Definitions</a></li>
+<li><a href="app_rad_arc_sec.html" data-scroll="app_rad_arc_sec">Radians, Arcs and Sectors</a></li>
+<li><a href="app_sec_trig_graphs.html" data-scroll="app_sec_trig_graphs">Trigonometry — Graphs</a></li>
+<li><a href="sec_A_6.html" data-scroll="sec_A_6">Trigonometry — Special Triangles</a></li>
+<li><a href="sec_A_7.html" data-scroll="sec_A_7">Trigonometry — Simple Identities</a></li>
+<li><a href="sec_trig_add.html" data-scroll="sec_trig_add">Trigonometry — Add and Subtract Angles</a></li>
+<li><a href="sec_inv_trig.html" data-scroll="sec_inv_trig">Inverse Trig Functions</a></li>
+<li><a href="app_sec_areas.html" data-scroll="app_sec_areas">Areas</a></li>
+<li><a href="sec_volumes.html" data-scroll="sec_volumes">Volumes</a></li>
+<li><a href="sec_powers.html" data-scroll="sec_powers">Powers</a></li>
+<li><a href="sec_logs.html" data-scroll="sec_logs">Logarithms</a></li>
+<li><a href="sec_must_deriv.html" data-scroll="sec_must_deriv">You Should be Able to Derive</a></li>
+</ul>
+<h2 class="link"><a href="chap_app_B.html" data-scroll="chap_app_B"><span class="codenumber">B</span> <span class="title">Origin of Trig, Area and Volume Formulas</span></a></h2>
+<ul>
+<li><a href="sec_B_1.html" data-scroll="sec_B_1">Theorems about Triangles</a></li>
+<li><a href="sec_B_2.html" data-scroll="sec_B_2">Trigonometry</a></li>
+<li><a href="sec_B_3.html" data-scroll="sec_B_3">Inverse Trigonometric Functions</a></li>
+<li><a href="sec_B_4.html" data-scroll="sec_B_4">Cosine and Sine Laws</a></li>
+<li><a href="sec_B_5.html" data-scroll="sec_B_5">Circles, cones and spheres</a></li>
+</ul>
+<h2 class="link"><a href="app_root_finding.html" data-scroll="app_root_finding"><span class="codenumber">C</span> <span class="title">Root Finding</span></a></h2>
+<ul>
+<li><a href="sec_C_1.html" data-scroll="sec_C_1" class="active">Newton's Method</a></li>
+<li><a href="sec_C_2.html" data-scroll="sec_C_2">The Error Behaviour of Newton's Method</a></li>
+<li><a href="sec_C_3.html" data-scroll="sec_C_3">The false position (regula falsi) method</a></li>
+<li><a href="sec_C_4.html" data-scroll="sec_C_4">The secant method</a></li>
+<li><a href="sec_C_5.html" data-scroll="sec_C_5">The Error Behaviour of the Secant Method</a></li>
+</ul>
+<h2 class="link"><a href="app_hint.html" data-scroll="app_hint"><span class="codenumber">D</span> <span class="title">Hints for Exercises</span></a></h2>
+<h2 class="link"><a href="app_answ.html" data-scroll="app_answ"><span class="codenumber">E</span> <span class="title">Answers to Exercises</span></a></h2>
+<h2 class="link"><a href="app_soln.html" data-scroll="app_soln"><span class="codenumber">F</span> <span class="title">Solutions to Exercises</span></a></h2></nav><div class="extras"><nav><a class="feedback-link" href="mailto:clp@ugrad.math.ubc.ca?subject=clp-pretext" target="_blank">Feedback</a><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="mathbook-content"><section class="section" id="sec_C_1"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">C.1</span> <span class="title">Newton's Method</span>
+</h2>
+<a href="sec_C_1.html" class="permalink">¶</a><p id="p-5456">Newton's method<a knowl="" class="id-ref" refid="hk-fn-177" id="fn-177"><sup> 1 </sup></a><span id="hk-fn-177" class="hidden-content tex2jax_ignore"><span class="footnote">The algorithm that we are about to describe grew out of a method that Newton wrote about in 1669. But the modern method incorporates substantial changes introduced by Raphson in 1690 and Simpson in 1740.</span></span>,  also known as the Newton-Raphson method, is another technique for generating numerical approximate solutions to equations of the form \(f(x)=0\text{.}\) For example, one can easily get a good approximation to \(\sqrt{2}\) by applying Newton's method to the equation \(x^2-2=0\text{.}\) This will be done in Example <a knowl="./knowl/eg_NTMsqrttwo.html" title="Example C.1.2: (Approximating \(\sqrt{2}\))">C.1.2</a>, below.</p>
+<p id="p-5457">Here is the derivation of Newton's method. We start by simply making a guess for the solution. For example, we could base the guess on a sketch of the graph of \(f(x)\text{.}\) Call the initial guess \(x_1\text{.}\) Next recall, from Theorem <a knowl="./knowl/thm_DIFFtangentLine.html" title="Theorem 2.3.4: Tangent line">2.3.4</a>, that the tangent line to \(y=f(x)\) at \(x=x_1\) is \(y=F(x)\text{,}\) where</p>
+<div class="displaymath">
+\begin{equation*}
+F(x) = f(x_1) + f'(x_1)\,(x-x_1)
+\end{equation*}
+</div>
+<p>Usually \(F(x)\) is a pretty good approximation to \(f(x)\) for \(x\) near \(x_1\text{.}\) So, instead of trying to solve \(f(x)=0\text{,}\) we solve the linear equation \(F(x)=0\) and call the solution \(x_2\text{.}\)</p>
+<div class="displaymath">
+\begin{align*}
+0=F(x)=f(x_1) + f'(x_1)\,(x-x_1)
+\amp \iff x-x_1=-\frac{f(x_1)}{f'(x_1)} \\
+\amp \iff x= x_2= x_1 -\frac{f(x_1)}{f'(x_1)}
+\end{align*}
+</div>
+<p>Note that if \(f(x)\) were a linear function, then \(F(x)\) would be exactly \(f(x)\) and \(x_2\) would solve \(f(x)=0\) exactly.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/NewtonM.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p id="p-5458">Now we repeat, but starting with the (second) guess \(x_2\) rather than \(x_1\text{.}\) This gives the (third) guess \(x_3= x_2 -\frac{f(x_2)}{f'(x_2)}\text{.}\) And so on. By way of summary, Newton's method is</p>
+<ol class="decimal">
+<li id="li-1784">Make a preliminary guess \(x_1\text{.}\)</li>
+<li id="li-1785">Define \(x_2=x_1-\frac{f(x_1)}{f'(x_1)}\text{.}\)</li>
+<li id="li-1786">
+<p id="p-5459">Iterate. That is, for each natural number \(n\text{,}\) once you have computed \(x_n\text{,}\) define</p>
+<article class="theorem-like" id="eq_APPnewton"><h6 class="heading">
+<span class="type">Equation</span> <span class="codenumber">C.1.1</span> <span class="title">(Newton's method)</span>
+</h6>
+<div class="displaymath" id="p-5460">
+\begin{equation*}
+x_{n+1}=x_n-\frac{f(x_n)}{f'(x_n)}
+\end{equation*}
+</div></article>
+</li>
+</ol>
+<article class="example-like" id="eg_NTMsqrttwo"><a knowl="" class="id-ref" refid="hk-eg_NTMsqrttwo"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">C.1.2</span> <span class="title">(Approximating \(\sqrt{2}\))</span>
+</h6></a></article><div id="hk-eg_NTMsqrttwo" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-5461">In this example we compute, approximately, the square root of two. We will of course pretend that we do not already know that \(\sqrt{2}=1.41421\cdots\text{.}\) So we cannot find it by solving, approximately, the equation \(f(x)=x-\sqrt{2}=0\text{.}\) Instead we apply Newton's method to the equation</p>
+<div class="displaymath">
+\begin{equation*}
+f(x)=x^2-2=0
+\end{equation*}
+</div>
+<p>Since \(f'(x)=2x\text{,}\) Newton's method says that we should generate approximate solutions by iteratively applying</p>
+<div class="displaymath">
+\begin{equation*}
+x_{n+1}=x_n-\frac{f(x_n)}{f'(x_n)}=x_n-\frac{x_n^2-2}{2x_n}
+=\frac{x_n}{2} +\frac{1}{x_n}
+\end{equation*}
+</div>
+<p>We need a starting point. Since \(1^2=1\lt 2\) and \(2^2=4\gt 2\text{,}\) the square root of two must be between \(1\) and \(2\text{,}\) so let's start Newton's method with the initial guess \(x_1=1.5\text{.}\) Here goes<a knowl="" class="id-ref" refid="hk-fn-178" id="fn-178"><sup> 2 </sup></a><span id="hk-fn-178" class="hidden-content tex2jax_ignore"><span class="footnote">The following computations have been carried out in double precision, which is computer speak for about 15 significant digits. We are displaying each \(x_n\) rounded to 10 significant digits (9 decimal places). So each displayed \(x_n\) has not been impacted by roundoff error, and still contains more decimal places than are usually needed.</span></span>:</p>
+<div class="displaymath">
+\begin{align*}
+x_1\amp =1.5\\
+x_2\amp =\frac{1}{2} x_1+\frac{1}{x_1}
+=\frac{1}{2}(1.5)+\frac{1}{1.5}\\
+\amp =1.416666667 \\
+x_3\amp =\frac{1}{2} x_2+\frac{1}{x_2}
+=\frac{1}{2}(1.416666667)+\frac{1}{1.416666667} \\
+\amp =1.414215686  \\
+x_4\amp =\frac{1}{2} x_3+\frac{1}{x_3}
+=\frac{1}{2}(1.414215686)+\frac{1}{1.414215686} \\
+\amp =1.414213562 \\
+x_5\amp =\frac{1}{2} x_4+\frac{1}{x_4}
+=\frac{1}{2}(1.414213562)+\frac{1}{1.414213562}\\
+\amp =1.414213562
+\end{align*}
+</div>
+<p>It looks like the \(x_n\)'s, rounded to nine decimal places, have stabilized to \(1.414213562\text{.}\) So it is reasonable to guess that \(\sqrt{2}\text{,}\) rounded to nine decimal places, is exactly \(1.414213562\text{.}\) Recalling that all numbers \(1.4142135615 \le y \lt 1.4142135625\) round to \(1.414213562\text{,}\) we can check our guess by evaluating \(f(1.4142135615)\) and \(f(1.4142135625)\text{.}\) Since  \(f(1.4142135615)=-2.5\times 10^{-9}\lt 0\) and \(f(1.4142135625)=3.6\times 10^{-10}\gt 0\) the square root of two must indeed be between \(1.4142135615\) and \(1.4142135625\text{.}\)</p></article></div>
+<article class="example-like" id="eg_exNTMpi"><a knowl="" class="id-ref" refid="hk-eg_exNTMpi"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">C.1.3</span> <span class="title">(Approximating \(\pi\))</span>
+</h6></a></article><div id="hk-eg_exNTMpi" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-5462">In this example we compute, approximately, \(\pi\) by applying Newton's method to the equation</p>
+<div class="displaymath">
+\begin{equation*}
+f(x)=\sin x=0
+\end{equation*}
+</div>
+<p>starting with \(x_1=3\text{.}\) Since \(f'(x)=\cos x\text{,}\) Newton's method says that we should generate approximate solutions by iteratively applying</p>
+<div class="displaymath">
+\begin{equation*}
+x_{n+1}=x_n-\frac{f(x_n)}{f'(x_n)}=x_n-\frac{\sin x_n}{\cos x_n}
+=x_n-\tan x_n
+\end{equation*}
+</div>
+<p>Here goes</p>
+<div class="displaymath">
+\begin{align*}
+x_1\amp =3\\
+x_2\amp =x_1-\tan x_1
+=3-\tan 3\\
+\amp =3.142546543\\
+x_3\amp 
+=3.142546543-\tan 3.142546543\\
+\amp =3.141592653\\
+x_4\amp 
+=3.141592653-\tan 3.141592653\\
+\amp =3.141592654\\
+x_5\amp 
+=3.141592654-\tan 3.141592654\\
+\amp =3.141592654
+\end{align*}
+</div>
+<p>Since  \(f(3.1415926535)=9.0\times 10^{-11}\gt 0\) and \(f(3.1415926545)=-9.1\times 10^{-11}\lt 0\text{,}\) \(\pi\) must be between \(3.1415926535\) and \(3.1415926545\text{.}\) Of course to compute \(\pi\) in this way, we (or at least our computers) have to be able to evaluate \(\tan x\) for various values of \(x\text{.}\) Taylor expansions can help us do that. See Example <a knowl="./knowl/eg_taylorapprox.html" title="Example 3.4.22: Estimating \(\tan 46^\circ\)">3.4.22</a>.</p></article></div>
+<article class="example-like" id="eg_NTMbad"><a knowl="" class="id-ref" refid="hk-eg_NTMbad"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">C.1.4</span> <span class="title">wild instability</span>
+</h6></a></article><div id="hk-eg_NTMbad" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-5463">This example illustrates how Newton's method can go badly wrong if your initial guess is not good enough. We'll try to solve the equation</p>
+<div class="displaymath">
+\begin{equation*}
+f(x)=\arctan x=0
+\end{equation*}
+</div>
+<p>starting with \(x_1=1.5\text{.}\) (Of course the solution to \(f(x)=0\) is just \(x=0\text{;}\) we chose \(x_1=1.5\) for demonstration purposes.) Since the derivative \(f'(x)=\frac{1}{1+x^2}
+\text{,}\) Newton's method gives</p>
+<div class="displaymath">
+\begin{equation*}
+x_{n+1}=x_n-\frac{f(x_n)}{f'(x_n)}=x_n-(1+x_n^2)\arctan x_n
+\end{equation*}
+</div>
+<p>So<a knowl="" class="id-ref" refid="hk-fn-179" id="fn-179"><sup> 3 </sup></a><span id="hk-fn-179" class="hidden-content tex2jax_ignore"><span class="footnote">Once again, the following computations have been carried out in double precision. This time, it is clear that the \(x_n\)'s are growing madly as \(n\) increases.  So there is not much point to displaying many decimal places and we have not done so.</span></span></p>
+<div class="displaymath">
+\begin{align*}
+x_1\amp =1.5\\
+x_2\amp =1.5-(1+1.5^2)\arctan 1.5=-1.69\\
+x_3\amp =-1.69-(1+1.69^2)\arctan (-1.69)=2.32\\
+x_4\amp =2.32-(1+2.32^2)\arctan (2.32)=-5.11\\
+x_5\amp =-5.11-(1+5.11^2)\arctan (-5.11)=32.3\\
+x_6\amp =32.3-(1+32.3^2)\arctan (32.3)=-1575\\
+x_7\amp =3,894,976
+\end{align*}
+</div>
+<p>Looks pretty bad! Our \(x_n\)'s are not settling down at all!</p>
+<p id="p-5464">The figure below shows what went wrong. In this figure, \(y=F_1(x)\) is the tangent line to \(y=\arctan x\) at \(x=x_1\text{.}\) Under Newton's method, this tangent line crosses the \(x\)-axis at \(x=x_2\text{.}\) Then \(y=F_2(x)\) is the tangent to \(y=\arctan x\) at \(x=x_2\text{.}\) Under Newton's method, this tangent line crosses the \(x\)-axis at \(x=x_3\text{.}\) And so on.</p>
+<p id="p-5465">The problem arose because the \(x_n\)'s were far enough from the solution, \(x=0\text{,}\) that the tangent line approximations, while good approximations to \(f(x)\) for \(x\approx x_n\text{,}\) were very poor approximations to \(f(x)\) for \(x\approx 0\text{.}\) In particular, \(y=F_1(x)\) (i.e. the tangent line at \(x=x_1\)) was a bad enough approximation to \(y=\arctan x\) for \(x\approx0\) that \(x=x_2\) (i.e. the value of \(x\) where \(y=F_1(x)\) crosses the \(x\)-axis) is farther from the solution \(x=0\) than our original guess \(x=x_1\text{.}\)</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:2%;margin-right:2%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/badNewtonF.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p id="p-5466">If we had started with \(x_1=0.5\) instead of \(x_1=1.5\text{,}\) Newton's method would have succeeded very nicely:</p>
+<div class="displaymath">
+\begin{gather*}
+x_1=0.5\qquad
+x_2=-0.0796\qquad
+x_3=0.000335\qquad
+x_4=-2.51\times 10^{-11}
+\end{gather*}
+</div></article></div>
+<article class="example-like" id="eg_NTMcar"><a knowl="" class="id-ref" refid="hk-eg_NTMcar"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">C.1.5</span> <span class="title">interest rate</span>
+</h6></a></article><div id="hk-eg_NTMcar" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-5467">A car dealer sells a new car for $23,520. He also offers to finance the same car for payments of $420 per month for five years. What interest rate is this dealer charging?</p>
+<p id="p-5468"><em class="alert">Solution.</em> By way of preparation, we'll start with a simpler problem. Suppose that you will have to make a single $420 payment \(n\) months in the future. The simpler problem is to determine how much money you have to deposit now in an account that pays an interest rate of  \(100 r\%\) per month, compounded monthly<a knowl="" class="id-ref" refid="hk-fn-180" id="fn-180"><sup> 4 </sup></a><span id="hk-fn-180" class="hidden-content tex2jax_ignore"><span class="footnote">“Compounded monthly”, means that, each month, interest is paid on the accumulated interest that was paid in all previous months.</span></span>, in order to be able to make the $420 payment in \(n\) months.</p>
+<p id="p-5469">Let's denote by \(P\) the initial deposit. Because the  interest rate is \(100 r\%\) per month, compounded monthly,</p>
+<ul class="disc">
+<li id="li-1787">the first month's interest is \(P\times r\text{.}\) So at the end of month #1, the account balance is \(P+P\,r=P(1+r)\text{.}\)</li>
+<li id="li-1788">The second month's interest is \([P(1+r)]\times r\text{.}\) So at the end of month #2, the account balance is \(P(1+r)+P(1+r)\,r=P(1+r)^2\text{.}\)</li>
+<li id="li-1789">And so on.</li>
+<li id="li-1790">So at the end of \(n\) months, the account balance is \(P(1+r)^n\text{.}\)</li>
+</ul>
+<p>In order for the balance at the end of \(n\) months, \(P(1+r)^n\text{,}\) to be $420, the initial deposit has to be \(P=420(1+r)^{-n}\text{.}\) That is what is meant by the statement “The present value<a knowl="" class="id-ref" refid="hk-fn-181" id="fn-181"><sup> 5 </sup></a><span id="hk-fn-181" class="hidden-content tex2jax_ignore"><span class="footnote">Inflation means that prices of goods (typically) increase with time, and hence $100 now is worth more than $100 in 10 years time. The term “present value” is widely used in economics and finance to mean “the current amount of money that will have a specified value at a specified time in the future”. It takes inflation into account.  If the money is invested, it takes into account the rate of return of the investment.  We recommend that the interested reader do some search-engining to find out more.</span></span> of a $420 payment made \(n\) months in the future, when the interest rate is \(100 r\%\) per month, compounded monthly, is \(420(1+r)^{-n}\text{.}\)”</p>
+<p id="p-5470">Now back to the original problem. We will be making 60 monthly payments of $420. The present value of all 60 payments is<a knowl="" class="id-ref" refid="hk-fn-182" id="fn-182"><sup> 6 </sup></a><span id="hk-fn-182" class="hidden-content tex2jax_ignore"><span class="footnote">Don't worry if you don't know how to evaluate such sums. They are called geometric sums, and will be covered in the CLP-2 text. (See (1.1.3) in the CLP-2 text. In any event, you can check that this is correct, by multiplying the whole equation by \(1-(1+r)^{-1}\text{.}\) When you simplify the left hand side, you should get the right hand side.</span></span></p>
+<div class="displaymath">
+\begin{align*}
+\amp 420(1+r)^{-1}+420(1+r)^{-2}+\cdots +420(1+r)^{-60} \\
+\amp \hskip1in
+=420\frac{(1+r)^{-1}-(1+r)^{-61} }{1-(1+r)^{-1} } \\
+\amp \hskip1in=420\frac{1-(1+r)^{-60} }{(1+r)-1}\\
+\amp \hskip1in
+=420\frac{1-(1+r)^{-60} }{r}
+\end{align*}
+</div>
+<p>The interest rate \(100r\%\) being charged by the car dealer is such that the present value of 60 monthly payments of $420 is $23520. That is, the monthly interest rate being charged by the car dealer is the solution of</p>
+<div class="displaymath">
+\begin{align*}
+23520=420\frac{1-(1+r)^{-60} }{r} 
+\qquad\amp \text{or}\qquad 
+56=\frac{1-(1+r)^{-60} }{r} \\
+\amp \text{or}\qquad 
+56r=1-(1+r)^{-60} \\
+\amp \text{or}\qquad 
+56r(1+r)^{60}=(1+r)^{60}-1 \\
+\amp \text{or}\qquad 
+(1-56r)(1+r)^{60}=1
+\end{align*}
+</div>
+<p>Set \(f(r)=(1-56r)(1+r)^{60}-1\text{.}\) Then</p>
+<div class="displaymath">
+\begin{equation*}
+f'(r)=-56(1+r)^{60}+60(1-56r)(1+r)^{59}
+\end{equation*}
+</div>
+<p>or</p>
+<div class="displaymath">
+\begin{equation*}
+f'(r)=\big[-56(1+r)+60(1-56r)\big](1+r)^{59}
+=(4-3416r)(1+r)^{59}
+\end{equation*}
+</div>
+<p>Apply Newton's method with an initial guess of \(r_1=.002\text{.}\) (That's \(0.2\)% per month or 2.4% per year.) Then</p>
+<div class="displaymath">
+\begin{align*}
+r_2\amp =r_1-\frac{(1-56r_1)(1+r_1)^{60}-1}{(4-3416r_1)(1+r_1)^{59}}=0.002344\\
+\
+r_3\amp =r_2-\frac{(1-56r_2)(1+r_2)^{60}-1}{(4-3416r_2)(1+r_2)^{59}}=0.002292\\
+r_4\amp =r_3-\frac{(1-56r_3)(1+r_3)^{60}-1}{(4-3416r_3)(1+r_3)^{59}}=0.002290\\
+r_5\amp =r_4-\frac{(1-56r_4)(1+r_4)^{60}-1}{(4-3416r_4)(1+r_4)^{59}}=0.002290
+\end{align*}
+</div>
+<p>So the interest rate is 0.229% per month or 2.75% per year.</p></article></div></section></div></main>
+</div>
+<!--Start: Google Universal code--><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-105798942-1', 'auto');
+ga('send', 'pageview');
+</script><!--End: Google Universal code--><div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.1/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,373 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:02:02-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Exercises</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.1/pretext.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on2.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="RQS.css">
+<link href="https://pretextbook.org/css/0.1/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\require{cancel}\newcommand{\dee}[1]{\mathrm{d}#1}
+\newcommand{\half}{ \frac{1}{2} }
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ts}{\textstyle}
+\newcommand{\es}{ {\varnothing}}
+\newcommand{\st}{ {\mbox{ s.t. }} }
+\newcommand{\pow}[1]{ \mathcal{P}\left(#1\right) }
+\newcommand{\set}[1]{ \left\{#1\right\} }
+\newcommand{\lin}{{\text{LIN}}}
+\newcommand{\quot}{{\text{QR}}}
+\newcommand{\simp}{{\text{SMP}}}
+\newcommand{\diff}[2]{ \frac{\mathrm{d}#1}{\mathrm{d}#2}}
+\newcommand{\bdiff}[2]{ \frac{\mathrm{d}}{\mathrm{d}#2} \left( #1 \right)}
+\newcommand{\ddiff}[3]{ \frac{\mathrm{d}^#1#2}{\mathrm{d}{#3}^#1}}
+\renewcommand{\neg}{ {\sim} }
+\newcommand{\limp}{ {\;\Rightarrow\;} }
+\newcommand{\nimp}{ {\;\not\Rightarrow\;} }
+\newcommand{\liff}{ {\;\Leftrightarrow\;} }
+\newcommand{\niff}{ {\;\not\Leftrightarrow\;} }
+\newcommand{\De}{\Delta}
+\newcommand{\bbbn}{\mathbb{N}}
+\newcommand{\bbbr}{\mathbb{R}}
+\newcommand{\bbbp}{\mathbb{P}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\Si}{\Sigma}
+
+\newcommand{\arccsc}{\mathop{\mathrm{arccsc}}}
+\newcommand{\arcsec}{\mathop{\mathrm{arcsec}}}
+\newcommand{\arccot}{\mathop{\mathrm{arccot}}}
+\newcommand{\erf}{\mathop{\mathrm{erf}}}
+\newcommand{\smsum}{\mathop{{\ts \sum}}}
+\newcommand{\atp}[2]{ \genfrac{}{}{0in}{}{#1}{#2} }
+
+\newcommand{\ave}{\mathrm{ave}}
+\newcommand{\llt}{\left \lt }
+\newcommand{\rgt}{\right \gt }
+
+
+\newcommand{\YEaxis}[2]{\draw[help lines] (-#1,0)--(#1,0) node[right]{$x$};\draw[help lines] (0,-#2)--(0,#2) node[above]{$y$};}
+
+\newcommand{\YEaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$x$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YEtaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+\newcommand{\YEtaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$}; \draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YExcoord}[2]{\draw (#1,.2)--(#1,-.2) node[below]{$#2$};}
+\newcommand{\YEycoord}[2]{\draw (.2,#1)--(-.2,#1) node[left]{$#2$};}
+\newcommand{\YEnxcoord}[2]{\draw (#1,-.2)--(#1,.2) node[above]{$#2$};}
+\newcommand{\YEnycoord}[2]{\draw (-.2,#1)--(.2,#1) node[right]{$#2$};}
+
+\newcommand{\YEstickfig}[3]{
+\draw (#1,#2) arc(-90:270:2mm);
+\draw (#1,#2)--(#1,#2-.5) (#1-.25,#2-.75)--(#1,#2-.5)--(#1+.25,#2-.75) (#1-.2,#2-.2)--(#1+.2,#2-.2);}
+
+
+\newcommand{\IBP}[7]{
+\begin{array}{|c  | l | l |}
+\hline
+\color{red}{\text{Option 1:}}
+&amp; u=#2
+&amp;\color{red}{\dee{u}=#3 ~ \dee{#1}}
+\\
+&amp; \dee{v}=#5~\dee{#1}
+&amp;\color{red}{v=#7}
+\\
+\hline
+\color{blue}{\text{Option 2:}}
+&amp; u=#5
+&amp;\color{blue}{\dee{u}=#6 ~ \dee{#1}}
+\\
+&amp;\dee{v}=#2 \dee{#1}
+&amp;\color{blue}{v=#4}
+\\
+\hline
+\end{array}
+}
+
+
+\renewcommand{\textcolor}[2]{{\color{#1}{#2}}}
+
+
+\newcommand{\trigtri}[4]{
+\begin{tikzpicture}
+\draw (-.5,0)--(2,0)--(2,1.5)--cycle;
+\draw (1.8,0) |- (2,.2);
+\draw[double] (0,0) arc(0:30:.5cm);
+\draw (0,.2) node[right]{$#1$};
+\draw (1,-.5) node{$#2$};
+\draw (2,.75) node[right]{$#3$};
+\draw (.6,1.1) node[rotate=30]{$#4$};
+\end{tikzpicture}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="clp_1_dc.html"><span class="title">CLP-1 Differential Calculus</span></a></h1>
+<p class="byline">Joel Feldman, Andrew Rechnitzer, Elyse Yeager</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="warning_mvt.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="sec_mvt.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="sec_higher_diff.html" title="Next">Next</a></span></div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="warning_mvt.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="sec_mvt.html" title="Up">Up</a><a class="next-button button toolbar-item" href="sec_higher_diff.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="index.html" data-scroll="index"><span class="title">Front Matter</span></a></h2>
+<ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface-2.html" data-scroll="preface-2">Using the exercises in this book</a></li>
+<li><a href="preface-3.html" data-scroll="preface-3">Feedback about the text</a></li>
+</ul>
+<h2 class="link"><a href="chap_basics.html" data-scroll="chap_basics"><span class="codenumber">0</span> <span class="title">The basics</span></a></h2>
+<ul>
+<li><a href="sec_0_1.html" data-scroll="sec_0_1">Numbers</a></li>
+<li><a href="sec_sets.html" data-scroll="sec_sets">Sets</a></li>
+<li><a href="sec_0_3.html" data-scroll="sec_0_3">Other Important Sets</a></li>
+<li><a href="sec_0_4.html" data-scroll="sec_0_4">Functions</a></li>
+<li><a href="sec_parsing.html" data-scroll="sec_parsing">Parsing Formulas</a></li>
+<li><a href="sec_inverse_functions.html" data-scroll="sec_inverse_functions">Inverse Functions</a></li>
+</ul>
+<h2 class="link"><a href="chap_limits.html" data-scroll="chap_limits"><span class="codenumber">1</span> <span class="title">Limits</span></a></h2>
+<ul>
+<li><a href="sec_first_lim.html" data-scroll="sec_first_lim">Drawing Tangents and a First Limit</a></li>
+<li><a href="sec_velocity.html" data-scroll="sec_velocity">Another Limit and Computing Velocity</a></li>
+<li><a href="sec_lim_func.html" data-scroll="sec_lim_func">The Limit of a Function</a></li>
+<li><a href="sec_1_4.html" data-scroll="sec_1_4">Calculating Limits with Limit Laws</a></li>
+<li><a href="sec_1_5.html" data-scroll="sec_1_5">Limits at Infinity</a></li>
+<li><a href="sec_1_6.html" data-scroll="sec_1_6">Continuity</a></li>
+<li><a href="sec_opt_formal_limit.html" data-scroll="sec_opt_formal_limit">(Optional) — Making the Informal a Little More Formal</a></li>
+<li><a href="sec_lim_inf_formal.html" data-scroll="sec_lim_inf_formal">(Optional) — Making Infinite Limits a Little More Formal</a></li>
+<li><a href="sec_proof_arith_lim.html" data-scroll="sec_proof_arith_lim">(Optional) — Proving the Arithmetic of Limits</a></li>
+</ul>
+<h2 class="link"><a href="chap_deriv.html" data-scroll="chap_deriv"><span class="codenumber">2</span> <span class="title">Derivatives</span></a></h2>
+<ul>
+<li><a href="sec_2_1.html" data-scroll="sec_2_1">Revisiting Tangent Lines</a></li>
+<li><a href="sec_def_deriv.html" data-scroll="sec_def_deriv">Definition of the Derivative</a></li>
+<li><a href="sec_2_3.html" data-scroll="sec_2_3">Interpretations of the Derivative</a></li>
+<li><a href="sec_2_4.html" data-scroll="sec_2_4">Arithmetic of Derivatives - a Differentiation Toolbox</a></li>
+<li><a href="sec_proof_arith_deriv.html" data-scroll="sec_proof_arith_deriv">Proofs of the Arithmetic of Derivatives</a></li>
+<li><a href="sec_2_6.html" data-scroll="sec_2_6">Using the Arithmetic of Derivatives –  Examples</a></li>
+<li><a href="sec_exp_func.html" data-scroll="sec_exp_func">Derivatives of Exponential Functions</a></li>
+<li><a href="sec_diff_trig.html" data-scroll="sec_diff_trig">Derivatives of Trigonometric Functions</a></li>
+<li><a href="sec_chain_rule.html" data-scroll="sec_chain_rule">One More Tool  – the Chain Rule</a></li>
+<li><a href="sec_diff_logs.html" data-scroll="sec_diff_logs">The Natural Logarithm</a></li>
+<li><a href="sec_2_11.html" data-scroll="sec_2_11">Implicit Differentiation</a></li>
+<li><a href="sec_invTrig.html" data-scroll="sec_invTrig">Inverse Trigonometric Functions</a></li>
+<li><a href="sec_mvt.html" data-scroll="sec_mvt">The Mean Value Theorem</a></li>
+<li><a href="sec_higher_diff.html" data-scroll="sec_higher_diff">Higher Order Derivatives</a></li>
+<li><a href="sec_cont_deriv.html" data-scroll="sec_cont_deriv">(Optional) — Is \(\lim_{x\to c}f'(x)\) Equal to \(f'(c)\text{?}\)</a></li>
+</ul>
+<h2 class="link"><a href="chap_appl_deriv.html" data-scroll="chap_appl_deriv"><span class="codenumber">3</span> <span class="title">Applications of derivatives</span></a></h2>
+<ul>
+<li><a href="sec_vel_acc.html" data-scroll="sec_vel_acc">Velocity and Acceleration</a></li>
+<li><a href="sec_rrates.html" data-scroll="sec_rrates">Related Rates</a></li>
+<li><a href="sec_ExpGthDecay.html" data-scroll="sec_ExpGthDecay">Exponential Growth and Decay</a></li>
+<li><a href="sec_DIFFTaylor.html" data-scroll="sec_DIFFTaylor">Taylor Polynomials</a></li>
+<li><a href="sec_optimise.html" data-scroll="sec_optimise">Optimisation</a></li>
+<li><a href="sec_curve_sketch.html" data-scroll="sec_curve_sketch">Sketching Graphs</a></li>
+<li><a href="sec_4_7.html" data-scroll="sec_4_7">L'Hôpital's Rule and Indeterminate Forms</a></li>
+</ul>
+<h2 class="link"><a href="chapter-5.html" data-scroll="chapter-5"><span class="codenumber">4</span> <span class="title">Towards Integral Calculus</span></a></h2>
+<ul><li><a href="sec_antidiff.html" data-scroll="sec_antidiff">Introduction to Antiderivatives</a></li></ul>
+<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Appendices</span></a></h2>
+<h2 class="link"><a href="app_highschool.html" data-scroll="app_highschool"><span class="codenumber">A</span> <span class="title">High School Material</span></a></h2>
+<ul>
+<li><a href="sec_simtri.html" data-scroll="sec_simtri">Similar Triangles</a></li>
+<li><a href="sec_A_2.html" data-scroll="sec_A_2">Pythagoras</a></li>
+<li><a href="sec_A_3.html" data-scroll="sec_A_3">Trigonometry — Definitions</a></li>
+<li><a href="app_rad_arc_sec.html" data-scroll="app_rad_arc_sec">Radians, Arcs and Sectors</a></li>
+<li><a href="app_sec_trig_graphs.html" data-scroll="app_sec_trig_graphs">Trigonometry — Graphs</a></li>
+<li><a href="sec_A_6.html" data-scroll="sec_A_6">Trigonometry — Special Triangles</a></li>
+<li><a href="sec_A_7.html" data-scroll="sec_A_7">Trigonometry — Simple Identities</a></li>
+<li><a href="sec_trig_add.html" data-scroll="sec_trig_add">Trigonometry — Add and Subtract Angles</a></li>
+<li><a href="sec_inv_trig.html" data-scroll="sec_inv_trig">Inverse Trig Functions</a></li>
+<li><a href="app_sec_areas.html" data-scroll="app_sec_areas">Areas</a></li>
+<li><a href="sec_volumes.html" data-scroll="sec_volumes">Volumes</a></li>
+<li><a href="sec_powers.html" data-scroll="sec_powers">Powers</a></li>
+<li><a href="sec_logs.html" data-scroll="sec_logs">Logarithms</a></li>
+<li><a href="sec_must_deriv.html" data-scroll="sec_must_deriv">You Should be Able to Derive</a></li>
+</ul>
+<h2 class="link"><a href="chap_app_B.html" data-scroll="chap_app_B"><span class="codenumber">B</span> <span class="title">Origin of Trig, Area and Volume Formulas</span></a></h2>
+<ul>
+<li><a href="sec_B_1.html" data-scroll="sec_B_1">Theorems about Triangles</a></li>
+<li><a href="sec_B_2.html" data-scroll="sec_B_2">Trigonometry</a></li>
+<li><a href="sec_B_3.html" data-scroll="sec_B_3">Inverse Trigonometric Functions</a></li>
+<li><a href="sec_B_4.html" data-scroll="sec_B_4">Cosine and Sine Laws</a></li>
+<li><a href="sec_B_5.html" data-scroll="sec_B_5">Circles, cones and spheres</a></li>
+</ul>
+<h2 class="link"><a href="app_root_finding.html" data-scroll="app_root_finding"><span class="codenumber">C</span> <span class="title">Root Finding</span></a></h2>
+<ul>
+<li><a href="sec_C_1.html" data-scroll="sec_C_1">Newton's Method</a></li>
+<li><a href="sec_C_2.html" data-scroll="sec_C_2">The Error Behaviour of Newton's Method</a></li>
+<li><a href="sec_C_3.html" data-scroll="sec_C_3">The false position (regula falsi) method</a></li>
+<li><a href="sec_C_4.html" data-scroll="sec_C_4">The secant method</a></li>
+<li><a href="sec_C_5.html" data-scroll="sec_C_5">The Error Behaviour of the Secant Method</a></li>
+</ul>
+<h2 class="link"><a href="app_hint.html" data-scroll="app_hint"><span class="codenumber">D</span> <span class="title">Hints for Exercises</span></a></h2>
+<h2 class="link"><a href="app_answ.html" data-scroll="app_answ"><span class="codenumber">E</span> <span class="title">Answers to Exercises</span></a></h2>
+<h2 class="link"><a href="app_soln.html" data-scroll="app_soln"><span class="codenumber">F</span> <span class="title">Solutions to Exercises</span></a></h2></nav><div class="extras"><nav><a class="feedback-link" href="mailto:clp@ugrad.math.ubc.ca?subject=clp-pretext" target="_blank">Feedback</a><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="mathbook-content"><section class="exercises" id="exercises-18"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.13.5</span> <span class="title">Exercises</span>
+</h3>
+<div class="exercisegroup" id="exercisegroup-46">
+<h6 class="heading"><span class="title"><p><alert>Exercises — Stage 1</alert></p></span></h6>
+<div class="introduction" id="introduction-70"></div>
+<div class="exercisegroup-exercises">
+<article class="exercise-like boxed" id="exercise-366"><h6 class="heading">
+<span class="codenumber">1</span> </h6>
+<p id="p-2589">Suppose a particular caribou has a top speed of 70 kph, and in one year it migrates 5000 km. What do you know about the amount of time the caribou spent travelling during its migration?</p></article><article class="exercise-like boxed" id="exercise-367"><h6 class="heading">
+<span class="codenumber">2</span> </h6>
+<p id="p-2593">Suppose a migrating sandhill crane flew 240 kilometres in one day. What does the mean value theorem tell you about its speed during that day?</p></article><article class="exercise-like boxed" id="exercise-368"><h6 class="heading">
+<span class="codenumber">3</span> </h6>
+<p id="p-2597">Below is the graph of \(y=f(x)\text{,}\) where \(x\) is continuous on \([a,b]\) and differentiable on \((a,b)\text{.}\) Mark on the graph the approximate location of a value \(c\) guaranteed by the mean value theorem.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-199.svg" style="width: 100%; height: auto;" alt=""></div></div></div></article><article class="exercise-like" id="exercise-369"><h6 class="heading">
+<span class="codenumber">4</span> </h6>
+<p id="p-2604">Give a function \(f(x)\) with the properties that:</p>
+<ul class="disc">
+<li id="li-680">\(f(x)\) is differentiable on the open interval \(0 \lt x \lt 10\)</li>
+<li id="li-681">\(f(0)=0\text{,}\) \(f(10)=10\)</li>
+</ul>
+<p>but for all \(c \in (0,10)\text{,}\) \(f'(c)=0\text{.}\)</p></article><article class="exercise-like boxed" id="exercise-370"><h6 class="heading">
+<span class="codenumber">5</span> </h6>
+<p id="p-2613">For each of the parts below, sketch a function \(f(x)\) (different in each part) that is continuous and differentiable over all real numbers, with \(f(1)=f(2)=0\text{,}\) and with the listed property, or explain why no such function exists.</p>
+<ol class="lower-alpha">
+<li id="li-682">\(f'(c)=0\) for <em class="emphasis">no</em> point \(c \in (1,2)\)</li>
+<li id="li-683">\(f'(c)=0\) for <em class="emphasis">exactly one</em> point \(c \in (1,2)\)</li>
+<li id="li-684">\(f'(c)=0\) for <em class="emphasis">exactly five</em> points \(c \in (1,2)\)</li>
+<li id="li-685">\(f'(c)=0\) for <em class="emphasis">infinitely many</em> points \(c \in (1,2)\)</li>
+</ol></article><article class="exercise-like" id="exercise-371"><h6 class="heading">
+<span class="codenumber">6</span> </h6>
+<p id="p-2618">Suppose you want to show that a point exists where the function \(f(x)=\sqrt{|x|}\) has a tangent line with slope \(\frac{1}{13}\text{.}\) Find the mistake(s) in the following work, and give a correct proof.</p>
+<blockquote class="blockquote" id="blockquote-25"><p id="p-2619">The function \(f(x)\) is continuous and differentiable over all real numbers, so the mean value theorem applies. \(f(-4)=2\) and \(f(9)=3\text{,}\) so by the mean value theorem, there exists some \(c \in (-4,9)\) such that \(f'(x) = \dfrac{3-2}{9-(-4)}=\dfrac{1}{13}\text{.}\)</p></blockquote></article>
+</div>
+</div>
+<div class="exercisegroup" id="exercisegroup-47">
+<h6 class="heading"><span class="title"><p><alert>Exercises — Stage 2</alert></p></span></h6>
+<div class="introduction" id="introduction-71"></div>
+<div class="exercisegroup-exercises">
+<article class="exercise-like boxed" id="exercise-372"><h6 class="heading">
+<span class="codenumber">7</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-2627">Let \(f(x)=x^2-2\pi x+ \cos(x)-1\text{.}\) Show that there exists a real number \(c\) such that \(f'(c)=0\text{.}\)</p></article><article class="exercise-like" id="exercise-373"><h6 class="heading">
+<span class="codenumber">8</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-2631">Let \(f(x)=e^x + (1-e)x^2 - 1\text{.}\) Show that there exists a real number \(c\) such that \(f'(c)=0\text{.}\)</p></article><article class="exercise-like" id="exercise-374"><h6 class="heading">
+<span class="codenumber">9</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-2634">Let \(f(x)=\sqrt{3 + \sin(x)} + (x - \pi)^2\text{.}\) Show that there exists a real number \(c\) such that \(f'(c)=0\text{.}\)</p></article><article class="exercise-like" id="exercise-375"><h6 class="heading">
+<span class="codenumber">10</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-2637">Let \(f(x)=x\cos(x) - x\sin(x)\text{.}\) Show that there exists a real number \(c\) such that \(f'(c)=0\text{.}\)</p></article><article class="exercise-like boxed" id="exercise-376"><h6 class="heading">
+<span class="codenumber">11</span> </h6>
+<p id="p-2640">How many roots does the function \(f(x)=3x-\sin x\) have?</p></article><article class="exercise-like" id="exercise-377"><h6 class="heading">
+<span class="codenumber">12</span> </h6>
+<p id="p-2644">How many roots does the function \(f(x)=\dfrac{(4x+1)^4}{16}+x\) have?</p></article><article class="exercise-like" id="exercise-378"><h6 class="heading">
+<span class="codenumber">13</span> </h6>
+<p id="p-2654">How many roots does the function \(f(x)=x^3+\sin\left(x^5\right)\) have?</p></article><article class="exercise-like" id="exercise-379"><h6 class="heading">
+<span class="codenumber">14</span> </h6>
+<p id="p-2658">How many positive-valued solutions does the equation \(e^x=4\cos(2x)\) have?</p></article><article class="exercise-like boxed" id="exercise-380"><h6 class="heading">
+<span class="codenumber">15</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-2665">Let \(f(x)=3x^5-10x^3+15x+a\text{,}\) where \(a\) is some constant.</p>
+<ol class="lower-alpha">
+<li id="s2_131997_1">Prove that, regardless of the value \(a\text{,}\) \(f'(x) \gt 0\) for all \(x\) in \((-1,1)\text{.}\)</li>
+<li id="s2_131997_2">Prove that, regardless of the value \(a\text{,}\) \(f(x)=3x^5-10x^3+15x+a\) has at most one root in \([-1,1]\text{.}\)</li>
+</ol></article><article class="exercise-like boxed" id="exercise-381"><h6 class="heading">
+<span class="codenumber">16</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-2671">Find the point promised by the Mean Value Theorem for the function \(e^x\) on the interval \([0, T]\text{.}\)</p></article><article class="exercise-like" id="exercise-382"><h6 class="heading">
+<span class="codenumber">17</span> </h6>
+<p id="p-2676">Use  Corollary <a knowl="./knowl/cor_DIFFmvtcons.html" title="Corollary 2.13.12: Consequences of the mean value theorem">2.13.12</a> and Theorem <a knowl="./knowl/thm_DIFFinvtrigderiv.html" title="Theorem 2.12.8">2.12.8</a> to show that \(\arcsec x=C-\arccsc x\) for some constant \(C\text{;}\) then find \(C\text{.}\)</p></article>
+</div>
+</div>
+<div class="exercisegroup" id="exercisegroup-48">
+<h6 class="heading"><span class="title"><p><alert>Exercises — Stage 3</alert></p></span></h6>
+<div class="introduction" id="introduction-72"></div>
+<div class="exercisegroup-exercises">
+<article class="exercise-like" id="exercise-383"><h6 class="heading">
+<span class="codenumber">18</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-2683">Suppose \(f(0) = 0\) and \(f'(x) = \dfrac{1}{1 + e^{-f(x)}}\) . Prove that \(f(100)  \lt  100\text{.}\)</p>
+<p id="p-2684">Remark: an equation  relating a function to its own derivative is called a differential equation. We'll see some very basic differential equations in Section <a href="sec_ExpGthDecay.html" class="xref" title="Section 3.3: Exponential Growth and Decay">3.3</a>.</p></article><article class="exercise-like boxed" id="exercise-384"><h6 class="heading">
+<span class="codenumber">19</span> </h6>
+<p id="p-2692">Let \(f(x)=2x+\sin x\text{.}\) What is the largest interval containing \(x=0\) over which  \(f(x)\) is one--to--one?  What are the domain and range of \(f^{-1}(x)\text{?}\)</p></article><article class="exercise-like" id="exercise-385"><h6 class="heading">
+<span class="codenumber">20</span> </h6>
+<p id="p-2697">Let \(f(x)=\dfrac{x}{2}+\sin x\text{.}\) What is the largest interval containing \(x=0\) over which  \(f(x)\) is one--to--one?  What are the domain and range of \(f^{-1}(x)\text{,}\) if we restrict \(f\) to this interval?</p></article><article class="exercise-like" id="exercise-386"><h6 class="heading">
+<span class="codenumber">21</span> </h6>
+<p id="p-2703">Suppose \(f(x)\) and \(g(x)\) are functions that are continuous over the interval \([a,b]\) and differentiable over the interval \((a,b)\text{.}\) Suppose further that \(f(a)  \lt  g(a)\) and \(g(b) \lt  f(b)\text{.}\) Show that there exists some \(c \in [a,b]\) with \(f'(c) \gt g'(c)\text{.}\)</p></article><article class="exercise-like boxed" id="exercise-387"><h6 class="heading">
+<span class="codenumber">22</span> </h6>
+<p id="p-2709">Suppose \(f(x)\) is a function that is differentiable over all real numbers, and \(f'(x)\) has precisely two roots. What is the maximum number of distinct roots that \(f(x)\) may have?</p></article><article class="exercise-like boxed" id="exercise-388"><h6 class="heading">
+<span class="codenumber">23</span> </h6>
+<p id="p-2713">How many roots does \(f(x)=\sin x + x^2 + 5x +1\) have?</p></article>
+</div>
+</div></section></div></main>
+</div>
+<!--Start: Google Universal code--><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-105798942-1', 'auto');
+ga('send', 'pageview');
+</script><!--End: Google Universal code--><div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.1/login.js"></script>
+</body>
+</html>

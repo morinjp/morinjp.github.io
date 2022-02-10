@@ -1,0 +1,41 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:17:19-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p><em class="alert">Solution</em> We could simply work as before and compute the first five derivatives of \(\sin x\text{.}\) But set \(g(x) = \sin x\) and notice that \(g(x) = - f'(x)\text{,}\) where \(f(x) =\cos x\text{.}\) Then we have</p>
+<div class="displaymath">
+\begin{align*}
+g(0) &amp;= -f'(0) = 0\\
+g'(0) &amp;= -f''(0) = 1\\
+g''(0) &amp;= -f'''(0) = 0\\
+g'''(0) &amp;= -f^{(4)}(0) = -1\\
+g^{(4)}(0) &amp;= -f^{(5)}(0) = 0\\
+g^{(5)}(0) &amp;= -f^{(6)}(0) = 1
+\end{align*}
+</div>
+<p>Hence the required Maclaurin polynomial is</p>
+<div class="displaymath">
+\begin{align*}
+T_5(x) &amp;= x - \frac{x^3}{3!} + \frac{x^5}{5!}
+\end{align*}
+</div>
+<p>Just as we extended to the \(2n^\mathrm{th}\) Maclaurin polynomial for cosine, we can also extend our work to compute the \((2n+1)^\mathrm{th}\) Maclaurin polynomial for sine:</p>
+<div class="displaymath">
+\begin{align*}
+T_{2n+1}(x) &amp;= \sum_{k=0}^n \frac{(-1)^k}{(2k+1)!} \cdot x^{2k+1}
+\end{align*}
+</div>
+<span class="incontext"><a href="ssec_taylor_eg.html#p-3552">in-context</a></span>
+</body>
+</html>

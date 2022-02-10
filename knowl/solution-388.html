@@ -1,0 +1,37 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:15:02-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="solution">
+<h6 class="heading">
+<span class="type">Solution</span> <span class="codenumber">2.13.5.23.1</span>
+</h6>
+<p>We are asked to find the number of solutions to the equation \(x^2+5x+1 = -\sin x\text{.}\)  The figure below contains the graphs of \(y=x^2+5x+1\) and \(y=-\sin x\text{.}\) The solutions to \(x^2+5x+1 = -\sin x\) are precisely the \(x\)'s where \(y=x^2+5x+1\) and \(y=-\sin x\) cross.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-216.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p>From the figure, it sure looks like there are two crossings. Since the function \(-\sin x\) has range \([-1,1]\text{,}\) if the two functions cross, then also \(-1 \leq x^2+5x+1\leq 1 \text{.}\) This portion of the quadratic function is highlighted in blue in the figure. The \(x\) coordinates of the end points of the blue arcs are found by solving \(x^2+5x+1 = \pm1\text{,}\) i.e. \(x=0\text{,}\) \(-5\text{,}\) and (using the quadratic equation) \(x= \frac{-5\pm\sqrt{17}}{2}\text{.}\)</p>
+<p>We are now in a position to exploit the intuition that we have built using the above figure to write a concise argument showing that \(f(x)\) has exactly two roots. Remember that, in general, if we want to show that a function has \(n\) roots, we need to show that there exist \(n\) distinct roots somewhere, and that there do not exist \(n+1\) distinct roots. This argument is given below, in blue text. <font color="blue"><ul class="disc">
+<li id="li-698">\(f(x)\) is continuous over all real numbers</li>
+<li id="li-699">\(f(x)=0\) only when \(-\sin x=x^2+5x+1\text{,}\) which only happens when \(|x^2+5x+1| \leq 1\text{.}\) Thus, \(f(x)\) only has roots in the intervals \(\left[-5,\frac{-5-\sqrt{17}}{2}\right]\) and \(\left[\frac{-5+\sqrt{17}}{2},0\right]\text{.}\)</li>
+<li id="li-700">\(f(-5)=\sin(-5)+1  \gt  0\text{,}\) and \(f\left(\frac{-5-\sqrt{17}}{2}\right)=\sin\left(\frac{-5-\sqrt{17}}{2}\right)-1  \lt 0\text{.}\) So, by the IVT, \(f(c)=0\) for some \(c \in \left(-5,\frac{-5-\sqrt{17}}{2}\right)\text{.}\)</li>
+<li id="li-701">\(f(0)=1 \gt 0\text{,}\) and \(f\left(\frac{-5+\sqrt{17}}{2}\right)=\sin\left(\frac{-5+\sqrt{17}}{2}\right)-1 \lt 0\text{.}\) So, by the IVT, \(f(c)=0\) for some \(c \in \left(\frac{-5+\sqrt{17}}{2},0\right)\text{.}\)</li>
+<li id="li-702">\(f'(x)=\cos x + 2x + 5\text{.}\) If \(f'(x)=0\text{,}\) then \(2x+5=-\cos x\text{,}\) so \(|2x+5| \leq 1\text{.}\) So, the only interval that can contain roots of \(f'(x)\) is \([-3,-2]\text{.}\)</li>
+<li id="li-703">
+<p id="p-2719">Suppose \(f(x)\) has more than two roots. Then it has two roots in the interval \(\left[-5,\frac{-5-\sqrt{17}}{2}\right]\) OR it has two roots in the interval \(\left[\frac{-5+\sqrt{17}}{2},0\right]\text{.}\) Since \(f(x)\) is differentiable for all real numbers,  Rolle's Theorem tells us that \(f'(x)\) has a root in \(\left(-5,\frac{-5-\sqrt{17}}{2}\right)\) or in \(\left(\frac{-5+\sqrt{17}}{2},0\right)\text{.}\) However, since all roots of \(f'(x)\) are in the interval \([-3,-2]\text{,}\) and this interval shares no points with \(\left(-5,\frac{-5-\sqrt{17}}{2}\right)\) or \(\left(\frac{-5+\sqrt{17}}{2},0\right)\text{,}\) this cannot be the case. Therefore \(f(x)\) does not have more than two roots.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-217.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+</li>
+<li id="li-704">Since \(f(x)\) has at least two roots, and not more than two roots, \(f(x)\) has exactly two roots.</li>
+</ul></font></p>
+</div>
+<span class="incontext"><a href="exercises-18.html#solution-388">in-context</a></span>
+</body>
+</html>

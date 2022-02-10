@@ -1,0 +1,49 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:21:30-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="displaymath">
+\begin{align*}
+\frac{f(x)}{g(x)}
+&amp;= \frac{f(x)}{g(x)}
++\underbrace{\left( \frac{f(t)}{g(x)} - \frac{f(t)}{g(x)}\right)}_{=0}
++ \underbrace{\left(\frac{f(x)-f(t)}{g(x)-g(t)}
+- \frac{f(x)-f(t)}{g(x)-g(t)}\right)}_{=0}\\
+&amp;= \underbrace{\frac{f(x)-f(t)}{g(x)-g(t)}}_\text{ready for GMVT}
++ \frac{f(t)}{g(x)}
++ \underbrace{\left(
+\frac{f(x)}{g(x)} - \frac{f(t)}{g(x)} - \frac{f(x)-f(t)}{g(x)-g(t)}
+\right)}_\text{we can clean it up}\\
+&amp;= \frac{f(x)-f(t)}{g(x)-g(t)}
++ \frac{f(t)}{g(x)}
++ \left(
+\frac{f(x)-f(t)}{g(x)} - \frac{f(x)-f(t)}{g(x)-g(t)}
+\right)\\
+&amp;= \frac{f(x)-f(t)}{g(x)-g(t)}
++ \frac{f(t)}{g(x)}
++ \left(
+\frac{1}{g(x)} - \frac{1}{g(x)-g(t)}
+\right)\cdot (f(x)-f(t))\\
+&amp;= \frac{f(x)-f(t)}{g(x)-g(t)}
++ \frac{f(t)}{g(x)}
++ \left(
+\frac{g(x)-g(t) - g(x)}{g(x)(g(x)-g(t))}
+\right)\cdot (f(x)-f(t))\\
+&amp;= \underbrace{\frac{f(x)-f(t)}{g(x)-g(t)}}_\text{ready for GMVT}
++ \frac{f(t)}{g(x)}
+- \frac{g(t)}{g(x)}\cdot \underbrace{\frac{f(x)-f(t)}{g(x)-g(t)}}_\text{ready for GMVT}
+\end{align*}
+</div>
+<span class="incontext"><a href="ssec_3_7_2.html#mjx-eqn-mrow-4208">in-context</a></span>
+</body>
+</html>

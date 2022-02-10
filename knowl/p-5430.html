@@ -1,0 +1,75 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:22:44-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<ol class="decimal">
+<li>The area of \(P_n\) is greater than that of the circle — this follows since we  can construct the circle by trimming the polygon \(P_n\text{.}\)</li>
+<li>
+<p>Let \(E_n\) be the difference between the area of the polygon and the circle: \(E_n =  A(P_n)-A\) (see the left of the previous figure). By the previous point we know \(E_n \gt 0\text{.}\)  Now as we increase the number of sides, this difference becomes smaller. To be more  precise we will show</p>
+<div class="displaymath">
+\begin{align*}
+E_{2n} &amp; \leq \frac{1}{2} E_n.
+\end{align*}
+</div>
+<p>The error \(E_n\) is made up of \(n\) “lobes”. In the centre-left of the previous figure we  draw one such lobe. Let \(L_n\) denote the area of one of these lobes, so \(E_n = nL_n\text{.}\)  In  the centre of the previous figure we have labelled this lobe carefully and also shown how  it changes when we create the polygon \(P_{2n}\text{.}\) In particular, the original lobe is  bounded by the straight lines \(\vec{ad}, \vec{af}\) and the arc \(\widehat{fbd}\text{.}\) We create  \(P_{2n}\) from \(P_n\) by cutting away the corner triangle \(\triangle aec\text{.}\) Accordingly the  lines \(\vec{ec}\) and \(\vec{ba}\) are orthogonal and the segments \(|bc|=|cd|\text{.}\)</p>
+<p>By the construction of \(P_{2n}\) from \(P_n\text{,}\) we have</p>
+<div class="displaymath">
+\begin{align*}
+2L_{2n} &amp;= L_n - A( \triangle aec) &amp; \text{or equivalently }
+L_{2n} &amp;= \frac{1}{2} L_n - A( \triangle abc)
+\end{align*}
+</div>
+<p>And additionally</p>
+<div class="displaymath">
+\begin{align*}
+L_{2n} &amp; \leq A( \triangle bcd)
+\end{align*}
+</div>
+<p>Now consider the triangle \(\triangle abd\) (centre-right of the previous figure) and the  two triangles within it \(\triangle abc\) and \(\triangle bcd\text{.}\) We know that \(\vec{ab}\) and  \(\vec{cb}\) form a right-angle. Consequently \(\vec{ac}\) is the hypotenuse of a right-angled  triangle, so \(|ac| \gt |bc| = |cd|\text{.}\) So now, the triangles \(\triangle abc\) and \(\triangle bcd\)  have the same heights, but the base of \(\vec{ac}\) is longer than \(\vec{cd}\text{.}\) Hence the  area of \(\triangle abc\) is strictly larger than that of \(\triangle bcd\text{.}\)</p>
+<p>Thus we have</p>
+<div class="displaymath">
+\begin{align*}
+L_{2n} &amp; \leq A(\triangle bcd)  \lt  A(\triangle abc)
+\end{align*}
+</div>
+<p>But now we can write</p>
+<div class="displaymath">
+\begin{align*}
+L_{2n} &amp;= \frac{1}{2} L_n - A( \triangle abc)  \lt  \frac{1}{2} L_n - L_{2n}  &amp;
+\text{rearrange}\\
+2L_{2n} &amp; \lt  \frac{1}{2} L_n &amp; \text{there are $n$ such lobes, so }\\
+2n L_{2n} &amp; \lt  \frac{n}{2} L_n &amp; \text{since $E_n = n L_n$, we have}\\
+E_{2n} &amp;  \lt  \frac{1}{2} E_n &amp; \text{which is what we wanted to show.}
+\end{align*}
+</div>
+</li>
+<li>The area of \(P_n\) is greater than \(T\text{.}\) To see this decompose \(P_n\) into \(n\)  isosceles triangles. The height of each triangle is \(r\text{,}\) while the base of each is longer  than \(C/n\) (this is a subtle point and its proof is equivalent to showing that \(\tan  \theta  \gt  \theta\)). Thus<div class="displaymath">
+\begin{align*}
+A(P_n) &amp;= n \times \frac{1}{2} \text{(base)}\times \text{(height)}\\
+&amp; \geq n \times \frac{Cr}{2n} = T
+\end{align*}
+</div>
+</li>
+<li>If we assume that \(T \gt A\text{,}\) then \(T-A = d\) where \(d\) is some positive number.  However we know from point 2 that we can make \(n\) large enough so that \(E_n  \lt  d\) (each  time we double \(n\) we halve the error). But now we have a contradiction since we have just  shown that<div class="displaymath">
+\begin{align*}
+E_n = A(P_n) - A &amp;  \lt  T-A &amp; \text{which implies that}\\
+A(p_n) &amp;  \gt  T.
+\end{align*}
+</div>
+</li>
+</ol>
+<p>Thus we cannot have \(T \gt A\text{.}\) The only possibility that remains is that \(T=A\text{.}\)</p>
+<span class="incontext"><a href="ssec_B_5_1.html#p-5430">in-context</a></span>
+</body>
+</html>

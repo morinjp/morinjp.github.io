@@ -1,0 +1,73 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:22:57-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><article class="example-like"><p>A car dealer sells a new car for $23,520. He also offers to finance the same car for payments of $420 per month for five years. What interest rate is this dealer charging?</p>
+<p><em class="alert">Solution.</em> By way of preparation, we'll start with a simpler problem. Suppose that you will have to make a single $420 payment \(n\) months in the future. The simpler problem is to determine how much money you have to deposit now in an account that pays an interest rate of  \(100 r\%\) per month, compounded monthly<a knowl="./knowl/fn-180-hidden.html" title="Footnote C.1.4"><sup> 4 </sup></a>, in order to be able to make the $420 payment in \(n\) months.</p>
+<p>Let's denote by \(P\) the initial deposit. Because the  interest rate is \(100 r\%\) per month, compounded monthly,</p>
+<ul class="disc">
+<li>the first month's interest is \(P\times r\text{.}\) So at the end of month #1, the account balance is \(P+P\,r=P(1+r)\text{.}\)</li>
+<li>The second month's interest is \([P(1+r)]\times r\text{.}\) So at the end of month #2, the account balance is \(P(1+r)+P(1+r)\,r=P(1+r)^2\text{.}\)</li>
+<li>And so on.</li>
+<li>So at the end of \(n\) months, the account balance is \(P(1+r)^n\text{.}\)</li>
+</ul>
+<p>In order for the balance at the end of \(n\) months, \(P(1+r)^n\text{,}\) to be $420, the initial deposit has to be \(P=420(1+r)^{-n}\text{.}\) That is what is meant by the statement “The present value<a knowl="" class="id-ref" refid="hk-fn-181" id="fn-181"><sup> 5 </sup></a><span id="hk-fn-181" class="hidden-content tex2jax_ignore"><span class="footnote">Inflation means that prices of goods (typically) increase with time, and hence $100 now is worth more than $100 in 10 years time. The term “present value” is widely used in economics and finance to mean “the current amount of money that will have a specified value at a specified time in the future”. It takes inflation into account.  If the money is invested, it takes into account the rate of return of the investment.  We recommend that the interested reader do some search-engining to find out more.</span></span> of a $420 payment made \(n\) months in the future, when the interest rate is \(100 r\%\) per month, compounded monthly, is \(420(1+r)^{-n}\text{.}\)”</p>
+<p>Now back to the original problem. We will be making 60 monthly payments of $420. The present value of all 60 payments is<a knowl="./knowl/fn-182-hidden.html" title="Footnote C.1.6"><sup> 6 </sup></a></p>
+<div class="displaymath">
+\begin{align*}
+\amp 420(1+r)^{-1}+420(1+r)^{-2}+\cdots +420(1+r)^{-60} \\
+\amp \hskip1in
+=420\frac{(1+r)^{-1}-(1+r)^{-61} }{1-(1+r)^{-1} } \\
+\amp \hskip1in=420\frac{1-(1+r)^{-60} }{(1+r)-1}\\
+\amp \hskip1in
+=420\frac{1-(1+r)^{-60} }{r}
+\end{align*}
+</div>
+<p>The interest rate \(100r\%\) being charged by the car dealer is such that the present value of 60 monthly payments of $420 is $23520. That is, the monthly interest rate being charged by the car dealer is the solution of</p>
+<div class="displaymath">
+\begin{align*}
+23520=420\frac{1-(1+r)^{-60} }{r} 
+\qquad\amp \text{or}\qquad 
+56=\frac{1-(1+r)^{-60} }{r} \\
+\amp \text{or}\qquad 
+56r=1-(1+r)^{-60} \\
+\amp \text{or}\qquad 
+56r(1+r)^{60}=(1+r)^{60}-1 \\
+\amp \text{or}\qquad 
+(1-56r)(1+r)^{60}=1
+\end{align*}
+</div>
+<p>Set \(f(r)=(1-56r)(1+r)^{60}-1\text{.}\) Then</p>
+<div class="displaymath">
+\begin{equation*}
+f'(r)=-56(1+r)^{60}+60(1-56r)(1+r)^{59}
+\end{equation*}
+</div>
+<p>or</p>
+<div class="displaymath">
+\begin{equation*}
+f'(r)=\big[-56(1+r)+60(1-56r)\big](1+r)^{59}
+=(4-3416r)(1+r)^{59}
+\end{equation*}
+</div>
+<p>Apply Newton's method with an initial guess of \(r_1=.002\text{.}\) (That's \(0.2\)% per month or 2.4% per year.) Then</p>
+<div class="displaymath">
+\begin{align*}
+r_2\amp =r_1-\frac{(1-56r_1)(1+r_1)^{60}-1}{(4-3416r_1)(1+r_1)^{59}}=0.002344\\
+\
+r_3\amp =r_2-\frac{(1-56r_2)(1+r_2)^{60}-1}{(4-3416r_2)(1+r_2)^{59}}=0.002292\\
+r_4\amp =r_3-\frac{(1-56r_3)(1+r_3)^{60}-1}{(4-3416r_3)(1+r_3)^{59}}=0.002290\\
+r_5\amp =r_4-\frac{(1-56r_4)(1+r_4)^{60}-1}{(4-3416r_4)(1+r_4)^{59}}=0.002290
+\end{align*}
+</div>
+<p>So the interest rate is 0.229% per month or 2.75% per year.</p></article></body>
+</html>

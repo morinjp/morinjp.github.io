@@ -1,0 +1,45 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:12:46-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>We now give the proof of the quotient rule in two steps<a knowl="./knowl/fn-68-hidden.html" title="Footnote 2.5.1"><sup> 1 </sup></a>. We assume throughout that \(g(x) \neq 0\) and that \(f(x)\) and \(g(x)\) are differentiable, meaning that the limits defining \(f'(x)\text{,}\) \(g'(x)\) exist.</p>
+<ul class="disc">
+<li>In the first step, we prove the quotient rule under the assumption that \(f(x)/g(x)\) is differentiable.</li>
+<li>In the second step, we prove that \(1/g(x)\) differentiable. Once we know that \(1/g(x)\) is differentiable, the product rule implies that \(f(x)/g(x)\) is differentiable.</li>
+</ul>
+<p><em class="emphasis">Step 1: the proof of the quotient rule assumng that \(\frac{f(x)}{g(x)}\) is differentiable.\(\ \ \ \)</em> Write \(Q(x)=\frac{f(x)}{g(x)}\text{.}\) Then \(f(x) = g(x)\,Q(x)\) so that \(f'(x) = g'(x)\,Q(x) + g(x)\,Q'(x)\text{,}\) by the product rule, and</p>
+<div class="displaymath">
+\begin{align*}
+Q'(x) &amp;= \frac{f'(x)-g'(x)\,Q(x)}{g(x)}
+= \frac{f'(x)-g'(x)\,\frac{f(x)}{g(x)}}{g(x)}\\
+&amp;= \frac{f'(x)g(x)-f(x)g'(x)}{g(x)^2}
+\end{align*}
+</div>
+<p><em class="emphasis">Step 2: the proof that \(1/g(x)\) is differentiable.\(\ \ \ \)</em> By definition</p>
+<div class="displaymath">
+\begin{align*}
+\diff{}{x}\frac{1}{g(x)}
+&amp;=\lim_{h\rightarrow 0}\frac{1}{h}\left[\frac{1}{g(x+h)}-\frac{1}{g(x)}\right]
+=\lim_{h\rightarrow 0}\frac{g(x)-g(x+h)}{h\,g(x)\,g(x+h)}\\
+&amp;=-\lim_{h\rightarrow 0}\frac{1}{g(x)}\ \frac{1}{g(x+h)}\ 
+\frac{g(x+h)-g(x)}{h}\\
+&amp;=-\frac{1}{g(x)}\ 
+\lim_{h\rightarrow 0}\frac{1}{g(x+h)}\ 
+\lim_{h\rightarrow 0}\frac{g(x+h)-g(x)}{h}\\
+&amp;=-\frac{1}{g(x)^2}g'(x)
+\end{align*}
+</div>
+<span class="incontext"><a href="subsection-19.html#p-1526">in-context</a></span>
+</body>
+</html>

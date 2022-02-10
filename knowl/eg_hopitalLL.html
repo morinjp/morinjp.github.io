@@ -1,0 +1,76 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:21:34-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="example-like"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">3.7.21</span> <span class="title">A more complicated example</span>
+</h6>
+<p>In the limit</p>
+<div class="displaymath">
+\begin{gather*}
+\lim_{x\rightarrow 0}\Big(\frac{\sin x}{x}\Big)^{\frac{1}{x^2}}
+\end{gather*}
+</div>
+<p>the base, \(\frac{\sin x}{x}\text{,}\) converges to \(1\) (see Example <a knowl="./knowl/eg_hopitalA.html" title="Example 3.7.3: Find \(\ds \lim_{x\to 0} \frac{\sin x}{x}\)">3.7.3</a>) and the exponent, \(\frac{1}{x^2}\text{,}\) goes to \(\infty\text{.}\) But if we take logarithms then</p>
+<div class="displaymath">
+\begin{gather*}
+\log \Big(\frac{\sin x}{x}\Big)^{\frac{1}{x^2}}
+= \frac{\log\frac{\sin x}{x}}{x^2}
+\end{gather*}
+</div>
+<p>then, in the limit \(x\rightarrow 0\text{,}\) we have a \(\frac{0}{0}\) indeterminate form. One application of l'Hôpital's rule gives</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{x\rightarrow 0}\underbrace{\frac{\log\frac{\sin x}{x}}{x^2}}_{\atp
+{\mathrm{num}\rightarrow 0}
+{\mathrm{den}\rightarrow 0}}
+&amp; =\lim_{x\rightarrow 0}
+\frac {\frac{x}{\sin x}\frac{x\cos x -\sin x}{x^2} }{2x}
+=\lim_{x\rightarrow 0}
+\frac{ \frac{x\cos x -\sin x}{x\sin x} }{2x}
+=\lim_{x\rightarrow 0} \frac{x\cos x -\sin x}{2x^2\sin x}
+\end{align*}
+</div>
+<p>which is another \(\frac00\) form. Applying l'Hôpital's rule again gives:</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{x\rightarrow 0}\underbrace{
+\frac{x\cos x -\sin x}{2x^2\sin x} }_{\atp
+{\mathrm{num}\rightarrow 0}
+{\mathrm{den}\rightarrow 0}}
+&amp;=\lim_{x\rightarrow 0}
+\frac{\cos x -x\sin x-\cos x}{4x\sin x+2x^2\cos x}\\
+&amp;=-\lim_{x\rightarrow 0}
+\frac{x\sin x}{4x\sin x+2x^2\cos x}
+=-\lim_{x\rightarrow 0}
+\frac{\sin x}{4\sin x+2x\cos x}
+\end{align*}
+</div>
+<p>which is yet another \(\frac00\) form. Once more with l'Hôpital's rule:</p>
+<div class="displaymath">
+\begin{align*}
+-\lim_{x\rightarrow 0}\underbrace{
+\frac{\sin x}{4\sin x+2x\cos x} }_{\atp
+{\mathrm{num}\rightarrow 0}
+{\mathrm{den}\rightarrow 0}}
+&amp;=-\lim_{x\rightarrow 0}\underbrace{
+\frac{\cos x}{4\cos x+2\cos x-2x\sin x} }_{\atp
+{\mathrm{num}\rightarrow 1}
+{\mathrm{den}\rightarrow 6}}\\
+&amp;=-\frac{1}{6}
+\end{align*}
+</div>
+<p>Oof! We have just shown that the logarithm of our original limit is \(-\frac{1}{6}\text{.}\) Hence the original limit itself is \(e^{-1/6}\text{.}\)</p>
+<p>This was quite a complicated example. However it does illustrate the importance of cleaning up your algebraic expressions. This will both reduce the amount of work you have to do and will also reduce the number of errors you make.</p></article><span class="incontext"><a href="ssec_3_7_2.html#eg_hopitalLL">in-context</a></span>
+</body>
+</html>

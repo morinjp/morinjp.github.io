@@ -1,0 +1,38 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:11:09-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>How did we know what to multiply by? Our function was of the form</p>
+<div class="displaymath">
+\begin{gather*}
+\frac{a}{\sqrt{b} - c}
+\end{gather*}
+</div>
+<p>so, to eliminate the square root from the denominator, we employ a trick — we multiply  by 1. Of course, multiplying by 1 doesn't do anything. But if you multiply by 1  carefully you can leave the value the same, but change the form of the  expression. More precisely</p>
+<div class="displaymath">
+\begin{align*}
+\frac{a}{\sqrt{b} - c}  &amp;= \frac{a}{\sqrt{b} - c} \cdot 1\\
+&amp;= \frac{a}{\sqrt{b} - c} \cdot  \underbrace{\frac{\sqrt{b}+c}{\sqrt{b}+c}}_{=1}\\
+&amp;= \frac{a \left(\sqrt{b}+c \right)}{\left(\sqrt{b} - c\right)\left(\sqrt{b}+c \right)}
+&amp; \text{expand denominator carefully}\\
+&amp;= \frac{a \left(\sqrt{b}+c \right)}
+{\sqrt{b} \cdot \sqrt{b} - c\sqrt{b} + c\sqrt{b} - c\cdot c}
+&amp; \text{do some cancellation}\\
+&amp;= \frac{a \left(\sqrt{b}+c \right)} {b - c^2}
+\end{align*}
+</div>
+<p>Now the numerator contains roots, but the denominator is just a polynomial.</p>
+<span class="incontext"><a href="subsection-5.html#p-433">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:13:35-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="example-like"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">2.9.14</span> <span class="title">Derivative of a double-composition</span>
+</h6>
+<p>Find the derivative of \(\diff{}{x} f(g(h(x)))\text{.}\)</p>
+<p>This is very similar to the previous example. Let us set \(F(x) = f(g(h(x)))\) with \(u=g(h(x))\) then the chain rule tells us</p>
+<div class="displaymath">
+\begin{align*}
+\diff{F}{x} &amp;= \diff{f}{u} \cdot \diff{u}{x}\\
+&amp;= f'(g(h(x))) \cdot \diff{}{x} g(h(x))\\
+\end{align*}
+<p class="intertext">We now just apply the chain rule again</p>
+\begin{align*}
+&amp;= f'(g(h(x))) \cdot g'(h(x)) \cdot h'(x).
+\end{align*}
+</div>
+<p>Indeed it is not too hard to generalise further (in the manner of Example <a knowl="./knowl/eg_DIFFsimpleToolsA.html" title="Example 2.6.6: Extending the product rule to more than two factors">2.6.6</a> to find the derivative of the composition of 4 or more functions (though things start to become tedious to write down):</p>
+<div class="displaymath">
+\begin{align*}
+\diff{}{x} f_1(f_2(f_3(f_4(x))))
+&amp;= f'_1(f_2(f_3(f_4(x)))) \cdot \diff{}{x} f_2(f_3(f_4(x)))\\
+&amp;= f'_1(f_2(f_3(f_4(x)))) \cdot f'_2(f_3(f_4(x))) \cdot \diff{}{x} f_3(f_4(x))\\
+&amp;= f'_1(f_2(f_3(f_4(x)))) \cdot f'_2(f_3(f_4(x))) \cdot f'_3(f_4(x)) \cdot
+f'_4(x)
+\end{align*}
+</div></article><span class="incontext"><a href="subsection-32.html#eg_2_9_3">in-context</a></span>
+</body>
+</html>

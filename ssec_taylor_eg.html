@@ -1,0 +1,467 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:02:46-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Some Examples</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.1/pretext.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on2.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="RQS.css">
+<link href="https://pretextbook.org/css/0.1/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\require{cancel}\newcommand{\dee}[1]{\mathrm{d}#1}
+\newcommand{\half}{ \frac{1}{2} }
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ts}{\textstyle}
+\newcommand{\es}{ {\varnothing}}
+\newcommand{\st}{ {\mbox{ s.t. }} }
+\newcommand{\pow}[1]{ \mathcal{P}\left(#1\right) }
+\newcommand{\set}[1]{ \left\{#1\right\} }
+\newcommand{\lin}{{\text{LIN}}}
+\newcommand{\quot}{{\text{QR}}}
+\newcommand{\simp}{{\text{SMP}}}
+\newcommand{\diff}[2]{ \frac{\mathrm{d}#1}{\mathrm{d}#2}}
+\newcommand{\bdiff}[2]{ \frac{\mathrm{d}}{\mathrm{d}#2} \left( #1 \right)}
+\newcommand{\ddiff}[3]{ \frac{\mathrm{d}^#1#2}{\mathrm{d}{#3}^#1}}
+\renewcommand{\neg}{ {\sim} }
+\newcommand{\limp}{ {\;\Rightarrow\;} }
+\newcommand{\nimp}{ {\;\not\Rightarrow\;} }
+\newcommand{\liff}{ {\;\Leftrightarrow\;} }
+\newcommand{\niff}{ {\;\not\Leftrightarrow\;} }
+\newcommand{\De}{\Delta}
+\newcommand{\bbbn}{\mathbb{N}}
+\newcommand{\bbbr}{\mathbb{R}}
+\newcommand{\bbbp}{\mathbb{P}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\Si}{\Sigma}
+
+\newcommand{\arccsc}{\mathop{\mathrm{arccsc}}}
+\newcommand{\arcsec}{\mathop{\mathrm{arcsec}}}
+\newcommand{\arccot}{\mathop{\mathrm{arccot}}}
+\newcommand{\erf}{\mathop{\mathrm{erf}}}
+\newcommand{\smsum}{\mathop{{\ts \sum}}}
+\newcommand{\atp}[2]{ \genfrac{}{}{0in}{}{#1}{#2} }
+
+\newcommand{\ave}{\mathrm{ave}}
+\newcommand{\llt}{\left \lt }
+\newcommand{\rgt}{\right \gt }
+
+
+\newcommand{\YEaxis}[2]{\draw[help lines] (-#1,0)--(#1,0) node[right]{$x$};\draw[help lines] (0,-#2)--(0,#2) node[above]{$y$};}
+
+\newcommand{\YEaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$x$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YEtaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+\newcommand{\YEtaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$}; \draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YExcoord}[2]{\draw (#1,.2)--(#1,-.2) node[below]{$#2$};}
+\newcommand{\YEycoord}[2]{\draw (.2,#1)--(-.2,#1) node[left]{$#2$};}
+\newcommand{\YEnxcoord}[2]{\draw (#1,-.2)--(#1,.2) node[above]{$#2$};}
+\newcommand{\YEnycoord}[2]{\draw (-.2,#1)--(.2,#1) node[right]{$#2$};}
+
+\newcommand{\YEstickfig}[3]{
+\draw (#1,#2) arc(-90:270:2mm);
+\draw (#1,#2)--(#1,#2-.5) (#1-.25,#2-.75)--(#1,#2-.5)--(#1+.25,#2-.75) (#1-.2,#2-.2)--(#1+.2,#2-.2);}
+
+
+\newcommand{\IBP}[7]{
+\begin{array}{|c  | l | l |}
+\hline
+\color{red}{\text{Option 1:}}
+&amp; u=#2
+&amp;\color{red}{\dee{u}=#3 ~ \dee{#1}}
+\\
+&amp; \dee{v}=#5~\dee{#1}
+&amp;\color{red}{v=#7}
+\\
+\hline
+\color{blue}{\text{Option 2:}}
+&amp; u=#5
+&amp;\color{blue}{\dee{u}=#6 ~ \dee{#1}}
+\\
+&amp;\dee{v}=#2 \dee{#1}
+&amp;\color{blue}{v=#4}
+\\
+\hline
+\end{array}
+}
+
+
+\renewcommand{\textcolor}[2]{{\color{#1}{#2}}}
+
+
+\newcommand{\trigtri}[4]{
+\begin{tikzpicture}
+\draw (-.5,0)--(2,0)--(2,1.5)--cycle;
+\draw (1.8,0) |- (2,.2);
+\draw[double] (0,0) arc(0:30:.5cm);
+\draw (0,.2) node[right]{$#1$};
+\draw (1,-.5) node{$#2$};
+\draw (2,.75) node[right]{$#3$};
+\draw (.6,1.1) node[rotate=30]{$#4$};
+\end{tikzpicture}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="clp_1_dc.html"><span class="title">CLP-1 Differential Calculus</span></a></h1>
+<p class="byline">Joel Feldman, Andrew Rechnitzer, Elyse Yeager</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="ssec_taylor_poly.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="sec_DIFFTaylor.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="ssec_est_change.html" title="Next">Next</a></span></div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="ssec_taylor_poly.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="sec_DIFFTaylor.html" title="Up">Up</a><a class="next-button button toolbar-item" href="ssec_est_change.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="index.html" data-scroll="index"><span class="title">Front Matter</span></a></h2>
+<ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface-2.html" data-scroll="preface-2">Using the exercises in this book</a></li>
+<li><a href="preface-3.html" data-scroll="preface-3">Feedback about the text</a></li>
+</ul>
+<h2 class="link"><a href="chap_basics.html" data-scroll="chap_basics"><span class="codenumber">0</span> <span class="title">The basics</span></a></h2>
+<ul>
+<li><a href="sec_0_1.html" data-scroll="sec_0_1">Numbers</a></li>
+<li><a href="sec_sets.html" data-scroll="sec_sets">Sets</a></li>
+<li><a href="sec_0_3.html" data-scroll="sec_0_3">Other Important Sets</a></li>
+<li><a href="sec_0_4.html" data-scroll="sec_0_4">Functions</a></li>
+<li><a href="sec_parsing.html" data-scroll="sec_parsing">Parsing Formulas</a></li>
+<li><a href="sec_inverse_functions.html" data-scroll="sec_inverse_functions">Inverse Functions</a></li>
+</ul>
+<h2 class="link"><a href="chap_limits.html" data-scroll="chap_limits"><span class="codenumber">1</span> <span class="title">Limits</span></a></h2>
+<ul>
+<li><a href="sec_first_lim.html" data-scroll="sec_first_lim">Drawing Tangents and a First Limit</a></li>
+<li><a href="sec_velocity.html" data-scroll="sec_velocity">Another Limit and Computing Velocity</a></li>
+<li><a href="sec_lim_func.html" data-scroll="sec_lim_func">The Limit of a Function</a></li>
+<li><a href="sec_1_4.html" data-scroll="sec_1_4">Calculating Limits with Limit Laws</a></li>
+<li><a href="sec_1_5.html" data-scroll="sec_1_5">Limits at Infinity</a></li>
+<li><a href="sec_1_6.html" data-scroll="sec_1_6">Continuity</a></li>
+<li><a href="sec_opt_formal_limit.html" data-scroll="sec_opt_formal_limit">(Optional) — Making the Informal a Little More Formal</a></li>
+<li><a href="sec_lim_inf_formal.html" data-scroll="sec_lim_inf_formal">(Optional) — Making Infinite Limits a Little More Formal</a></li>
+<li><a href="sec_proof_arith_lim.html" data-scroll="sec_proof_arith_lim">(Optional) — Proving the Arithmetic of Limits</a></li>
+</ul>
+<h2 class="link"><a href="chap_deriv.html" data-scroll="chap_deriv"><span class="codenumber">2</span> <span class="title">Derivatives</span></a></h2>
+<ul>
+<li><a href="sec_2_1.html" data-scroll="sec_2_1">Revisiting Tangent Lines</a></li>
+<li><a href="sec_def_deriv.html" data-scroll="sec_def_deriv">Definition of the Derivative</a></li>
+<li><a href="sec_2_3.html" data-scroll="sec_2_3">Interpretations of the Derivative</a></li>
+<li><a href="sec_2_4.html" data-scroll="sec_2_4">Arithmetic of Derivatives - a Differentiation Toolbox</a></li>
+<li><a href="sec_proof_arith_deriv.html" data-scroll="sec_proof_arith_deriv">Proofs of the Arithmetic of Derivatives</a></li>
+<li><a href="sec_2_6.html" data-scroll="sec_2_6">Using the Arithmetic of Derivatives –  Examples</a></li>
+<li><a href="sec_exp_func.html" data-scroll="sec_exp_func">Derivatives of Exponential Functions</a></li>
+<li><a href="sec_diff_trig.html" data-scroll="sec_diff_trig">Derivatives of Trigonometric Functions</a></li>
+<li><a href="sec_chain_rule.html" data-scroll="sec_chain_rule">One More Tool  – the Chain Rule</a></li>
+<li><a href="sec_diff_logs.html" data-scroll="sec_diff_logs">The Natural Logarithm</a></li>
+<li><a href="sec_2_11.html" data-scroll="sec_2_11">Implicit Differentiation</a></li>
+<li><a href="sec_invTrig.html" data-scroll="sec_invTrig">Inverse Trigonometric Functions</a></li>
+<li><a href="sec_mvt.html" data-scroll="sec_mvt">The Mean Value Theorem</a></li>
+<li><a href="sec_higher_diff.html" data-scroll="sec_higher_diff">Higher Order Derivatives</a></li>
+<li><a href="sec_cont_deriv.html" data-scroll="sec_cont_deriv">(Optional) — Is \(\lim_{x\to c}f'(x)\) Equal to \(f'(c)\text{?}\)</a></li>
+</ul>
+<h2 class="link"><a href="chap_appl_deriv.html" data-scroll="chap_appl_deriv"><span class="codenumber">3</span> <span class="title">Applications of derivatives</span></a></h2>
+<ul>
+<li><a href="sec_vel_acc.html" data-scroll="sec_vel_acc">Velocity and Acceleration</a></li>
+<li><a href="sec_rrates.html" data-scroll="sec_rrates">Related Rates</a></li>
+<li><a href="sec_ExpGthDecay.html" data-scroll="sec_ExpGthDecay">Exponential Growth and Decay</a></li>
+<li><a href="sec_DIFFTaylor.html" data-scroll="sec_DIFFTaylor">Taylor Polynomials</a></li>
+<li><a href="sec_optimise.html" data-scroll="sec_optimise">Optimisation</a></li>
+<li><a href="sec_curve_sketch.html" data-scroll="sec_curve_sketch">Sketching Graphs</a></li>
+<li><a href="sec_4_7.html" data-scroll="sec_4_7">L'Hôpital's Rule and Indeterminate Forms</a></li>
+</ul>
+<h2 class="link"><a href="chapter-5.html" data-scroll="chapter-5"><span class="codenumber">4</span> <span class="title">Towards Integral Calculus</span></a></h2>
+<ul><li><a href="sec_antidiff.html" data-scroll="sec_antidiff">Introduction to Antiderivatives</a></li></ul>
+<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Appendices</span></a></h2>
+<h2 class="link"><a href="app_highschool.html" data-scroll="app_highschool"><span class="codenumber">A</span> <span class="title">High School Material</span></a></h2>
+<ul>
+<li><a href="sec_simtri.html" data-scroll="sec_simtri">Similar Triangles</a></li>
+<li><a href="sec_A_2.html" data-scroll="sec_A_2">Pythagoras</a></li>
+<li><a href="sec_A_3.html" data-scroll="sec_A_3">Trigonometry — Definitions</a></li>
+<li><a href="app_rad_arc_sec.html" data-scroll="app_rad_arc_sec">Radians, Arcs and Sectors</a></li>
+<li><a href="app_sec_trig_graphs.html" data-scroll="app_sec_trig_graphs">Trigonometry — Graphs</a></li>
+<li><a href="sec_A_6.html" data-scroll="sec_A_6">Trigonometry — Special Triangles</a></li>
+<li><a href="sec_A_7.html" data-scroll="sec_A_7">Trigonometry — Simple Identities</a></li>
+<li><a href="sec_trig_add.html" data-scroll="sec_trig_add">Trigonometry — Add and Subtract Angles</a></li>
+<li><a href="sec_inv_trig.html" data-scroll="sec_inv_trig">Inverse Trig Functions</a></li>
+<li><a href="app_sec_areas.html" data-scroll="app_sec_areas">Areas</a></li>
+<li><a href="sec_volumes.html" data-scroll="sec_volumes">Volumes</a></li>
+<li><a href="sec_powers.html" data-scroll="sec_powers">Powers</a></li>
+<li><a href="sec_logs.html" data-scroll="sec_logs">Logarithms</a></li>
+<li><a href="sec_must_deriv.html" data-scroll="sec_must_deriv">You Should be Able to Derive</a></li>
+</ul>
+<h2 class="link"><a href="chap_app_B.html" data-scroll="chap_app_B"><span class="codenumber">B</span> <span class="title">Origin of Trig, Area and Volume Formulas</span></a></h2>
+<ul>
+<li><a href="sec_B_1.html" data-scroll="sec_B_1">Theorems about Triangles</a></li>
+<li><a href="sec_B_2.html" data-scroll="sec_B_2">Trigonometry</a></li>
+<li><a href="sec_B_3.html" data-scroll="sec_B_3">Inverse Trigonometric Functions</a></li>
+<li><a href="sec_B_4.html" data-scroll="sec_B_4">Cosine and Sine Laws</a></li>
+<li><a href="sec_B_5.html" data-scroll="sec_B_5">Circles, cones and spheres</a></li>
+</ul>
+<h2 class="link"><a href="app_root_finding.html" data-scroll="app_root_finding"><span class="codenumber">C</span> <span class="title">Root Finding</span></a></h2>
+<ul>
+<li><a href="sec_C_1.html" data-scroll="sec_C_1">Newton's Method</a></li>
+<li><a href="sec_C_2.html" data-scroll="sec_C_2">The Error Behaviour of Newton's Method</a></li>
+<li><a href="sec_C_3.html" data-scroll="sec_C_3">The false position (regula falsi) method</a></li>
+<li><a href="sec_C_4.html" data-scroll="sec_C_4">The secant method</a></li>
+<li><a href="sec_C_5.html" data-scroll="sec_C_5">The Error Behaviour of the Secant Method</a></li>
+</ul>
+<h2 class="link"><a href="app_hint.html" data-scroll="app_hint"><span class="codenumber">D</span> <span class="title">Hints for Exercises</span></a></h2>
+<h2 class="link"><a href="app_answ.html" data-scroll="app_answ"><span class="codenumber">E</span> <span class="title">Answers to Exercises</span></a></h2>
+<h2 class="link"><a href="app_soln.html" data-scroll="app_soln"><span class="codenumber">F</span> <span class="title">Solutions to Exercises</span></a></h2></nav><div class="extras"><nav><a class="feedback-link" href="mailto:clp@ugrad.math.ubc.ca?subject=clp-pretext" target="_blank">Feedback</a><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="mathbook-content"><section class="subsection" id="ssec_taylor_eg"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.4.6</span> <span class="title">Some Examples</span>
+</h3>
+<a href="ssec_taylor_eg.html" class="permalink">¶</a><p id="p-3538">Let us return to our running example of \(e^x\text{:}\)</p>
+<article class="example-like" id="eg_taylor_e_to_the_x"><a knowl="" class="id-ref" refid="hk-eg_taylor_e_to_the_x"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">3.4.12</span> <span class="title">Taylor approximations of \(e^x\)</span>
+</h6></a></article><div id="hk-eg_taylor_e_to_the_x" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-3539">The constant, linear and quadratic approximations we used above were the first few Maclaurin polynomial approximations of \(e^x\text{.}\) That is</p>
+<div class="displaymath">
+\begin{align*}
+T_0 (x) &amp; = 1 &amp; T_1(x) &amp;= 1+x &amp; T_2(x) &amp;= 1+x+\frac{x^2}{2}
+\end{align*}
+</div>
+<p>Since \(\diff{}{x} e^x = e^x\text{,}\) the Maclaurin polynomials are very easy to compute. Indeed this invariance under differentiation means that</p>
+<div class="displaymath">
+\begin{align*}
+f^{(n)}(x) &amp;= e^x &amp; n=0,1,2,\dots &amp;&amp; \text{so}\\
+f^{(n)}(0) &amp;= 1
+\end{align*}
+</div>
+<p>Substituting this into equation <a knowl="./knowl/eq_taylorPoly.html" title="Equation 3.4.10: Taylor polynomial">3.4.10</a> we get</p>
+<div class="displaymath">
+\begin{align*}
+T_n(x) &amp;= \sum_{k=0}^n \frac{1}{k!} x^k
+\end{align*}
+</div>
+<p>Thus we can write down the seventh Maclaurin polynomial very easily:</p>
+<div class="displaymath">
+\begin{align*}
+T_7(x) &amp;= 1 + x + \frac{x^2}{2} + \frac{x^3}{6} + \frac{x^4}{24} + \frac{x^5}{120} +
+\frac{x^6}{720} + \frac{x^7}{5040}
+\end{align*}
+</div>
+<p>The following figure contains sketches of the graphs of \(e^x\) and its Taylor polynomials \(T_n(x)\) for \(n=0,1,2,3,4\text{.}\)</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/expT.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p id="p-3540">Also notice that if we use \(T_7(1)\) to approximate the value of \(e^1\) we obtain:</p>
+<div class="displaymath">
+\begin{align*}
+e^1 \approx T_7(1) &amp;= 1 + 1 + \frac{1}{2} + \frac{1}{6} + \frac{1}{24} + \frac{1}{120}
++ \frac{1}{720} + \frac{1}{5040}\\
+&amp;= \frac{685}{252} =  2.718253968\dots
+\end{align*}
+</div>
+<p>The true value of \(e\) is \(2.718281828\dots\text{,}\) so the approximation has an error of about \(3\times10^{-5}\text{.}\)</p>
+<p id="p-3541">Under the assumption that the accuracy of the approximation improves with \(n\) (an assumption we examine in Subsection <a href="ssec_taylor_error.html" class="xref" title="Subsection 3.4.9: The Error in the Taylor Polynomial Approximations">3.4.9</a> below) we can see that the approximation of \(e\) above can be improved by adding more and more terms. Indeed this is how the expression for \(e\) in equation <a knowl="./knowl/eq_eulerconst.html" title="Equation 2.7.4: Euler's constant">2.7.4</a> in Section <a href="sec_exp_func.html" class="xref" title="Section 2.7: Derivatives of Exponential Functions">2.7</a> comes about.</p></article></div>
+<p id="p-3542">Now that we have examined Maclaurin polynomials for \(e^x\) we should take a look at \(\log
+x\text{.}\) Notice that we cannot compute a Maclaurin polynomial for \(\log x\) since it is not defined at \(x=0\text{.}\)</p>
+<article class="example-like" id="eg_expand_logx"><a knowl="" class="id-ref" refid="hk-eg_expand_logx"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">3.4.13</span> <span class="title">Taylor approximation of \(\log x\)</span>
+</h6></a></article><div id="hk-eg_expand_logx" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-3543">Compute the \(5^\mathrm{th}\) Taylor polynomial for \(\log x\) about \(x=1\text{.}\)</p>
+<p id="p-3544"><em class="alert">Solution</em> We have been told \(a=1\) and fifth degree, so we should start by writing down the function and its first five derivatives:</p>
+<div class="displaymath">
+\begin{align*}
+f(x) &amp;= \log x &amp; f(1) &amp;= \log 1 = 0\\
+f'(x) &amp;= \frac{1}{x} &amp; f'(1) &amp;= 1\\
+f''(x) &amp;= \frac{-1}{x^2} &amp; f''(1) &amp;= -1\\
+f'''(x) &amp;= \frac{2}{x^3} &amp; f'''(1) &amp;= 2\\
+f^{(4)}(x) &amp;= \frac{-6}{x^4} &amp; f^{(4)}(1) &amp;= -6\\
+f^{(5)}(x) &amp;= \frac{24}{x^5} &amp; f^{(5)}(1) &amp;= 24
+\end{align*}
+</div>
+<p>Substituting this into equation <a knowl="./knowl/eq_taylorPoly.html" title="Equation 3.4.10: Taylor polynomial">3.4.10</a> gives</p>
+<div class="displaymath">
+\begin{align*}
+T_5(x)&amp;= 0 + 1\cdot (x-1)
++ \frac{1}{2} \cdot (-1) \cdot (x-1)^2
++ \frac{1}{6} \cdot 2 \cdot (x-1)^3\\
+\amp\hskip0.5in+ \frac{1}{24} \cdot (-6) \cdot (x-1)^4
++ \frac{1}{120} \cdot 24 \cdot (x-1)^5\\
+&amp;= (x-1) - \frac{1}{2}(x-1)^2 + \frac{1}{3}(x-1)^3 - \frac{1}{4}(x-1)^4 +
+\frac{1}{5}(x-1)^5
+\end{align*}
+</div>
+<p>Again, it is not too hard to generalise the above work to find the Taylor polynomial of degree \(n\text{:}\) With a little work one can show that</p>
+<div class="displaymath">
+\begin{align*}
+T_n(x) &amp;= \sum_{k=1}^n \frac{(-1)^{k+1}}{k} (x-1)^k.
+\end{align*}
+</div></article></div>
+<p id="p-3545">For cosine:</p>
+<article class="example-like" id="eg_expand_cosx"><a knowl="" class="id-ref" refid="hk-eg_expand_cosx"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">3.4.14</span> <span class="title">Maclaurin polynomial for \(\cos x\)</span>
+</h6></a></article><div id="hk-eg_expand_cosx" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-3546">Find the 4th degree Maclaurin polynomial for \(\cos x\text{.}\)</p>
+<p id="p-3547"><em class="alert">Solution</em> We have \(a=0\) and we need to find the first 4 derivatives of \(\cos x\text{.}\)</p>
+<div class="displaymath">
+\begin{align*}
+f(x) &amp;= \cos x &amp; f(0) &amp;= 1\\
+f'(x) &amp;= -\sin x &amp; f'(0) &amp;= 0\\
+f''(x) &amp;= -\cos x &amp; f''(0) &amp;= -1\\
+f'''(x) &amp;= \sin x &amp; f'''(0) &amp;= 0\\
+f^{(4)}(x) &amp;= \cos x &amp; f^{(4)}(0) &amp;= 1
+\end{align*}
+</div>
+<p>Substituting this into equation <a knowl="./knowl/eq_taylorPoly.html" title="Equation 3.4.10: Taylor polynomial">3.4.10</a> gives</p>
+<div class="displaymath">
+\begin{align*}
+T_4(x)&amp;= 1 + 1\cdot (0) \cdot x
++ \frac{1}{2} \cdot (-1) \cdot x^2
++ \frac{1}{6} \cdot 0 \cdot x^3
++ \frac{1}{24} \cdot (1) \cdot x^4\\
+&amp;= 1 - \frac{x^2}{2} + \frac{x^4}{24}
+\end{align*}
+</div>
+<p>Notice that since the \(4^\mathrm{th}\) derivative of \(\cos x\) is \(\cos x\) again, we also have that the fifth derivative is the same as the first derivative, and the sixth derivative is the same as the second derivative and so on. Hence the next four derivatives are</p>
+<div class="displaymath">
+\begin{align*}
+f^{(4)}(x) &amp;= \cos x &amp; f^{(4)}(0) &amp;= 1\\
+f^{(5)}(x) &amp;= -\sin x &amp; f^{(5)}(0) &amp;= 0\\
+f^{(6)}(x) &amp;= -\cos x &amp; f^{(6)}(0) &amp;= -1\\
+f^{(7)}(x) &amp;= \sin x &amp; f^{(7)}(0) &amp;= 0\\
+f^{(8)}(x) &amp;= \cos x &amp; f^{(8)}(0) &amp;= 1
+\end{align*}
+</div>
+<p>Using this we can find the \(8^\mathrm{th}\) degree Maclaurin polynomial:</p>
+<div class="displaymath">
+\begin{align*}
+T_8(x) &amp;=
+1 - \frac{x^2}{2} + \frac{x^4}{24} -\frac{x^6}{6!} + \frac{x^8}{8!}
+\end{align*}
+</div>
+<p>Continuing this process gives us the \(2n^\mathrm{th}\) Maclaurin polynomial</p>
+<div class="displaymath">
+\begin{align*}
+T_{2n}(x) &amp;= \sum_{k=0}^n \frac{(-1)^k}{(2k)!} \cdot x^{2k}
+\end{align*}
+</div>
+<article class="remark-like" id="warning-2"><h6 class="heading">
+<span class="type">Warning</span> <span class="codenumber">3.4.15</span>
+</h6>
+<p id="p-3548">The above formula only works when x is measured in radians, because all of our derivative formulae for trig functions were developed under the assumption that angles are measured in radians.</p></article><p id="p-3549">Below we plot \(\cos x\) against its first few Maclaurin polynomial approximations:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;">
+<div class="sbspanel" style="width:44.4444444444444%;justify-content:flex-start;"><img src="text/figs/approx1d.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:44.4444444444444%;justify-content:flex-start;"><img src="text/figs/approx2d.svg" style="width: 100%; height: auto;" alt=""></div>
+</div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;">
+<div class="sbspanel" style="width:44.4444444444444%;justify-content:flex-start;"><img src="text/figs/approx3d.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:44.4444444444444%;justify-content:flex-start;"><img src="text/figs/approx4d.svg" style="width: 100%; height: auto;" alt=""></div>
+</div></div></article></div>
+<p id="p-3550">The above work is quite easily recycled to get the Maclaurin polynomial for sine:</p>
+<article class="example-like" id="eg_expand_sinx"><a knowl="" class="id-ref" refid="hk-eg_expand_sinx"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">3.4.16</span> <span class="title">Maclaurin polynomial for \(\sin x\)</span>
+</h6></a></article><div id="hk-eg_expand_sinx" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-3551">Find the 5th degree Maclaurin polynomial for \(\sin x\text{.}\)</p>
+<p id="p-3552"><em class="alert">Solution</em> We could simply work as before and compute the first five derivatives of \(\sin x\text{.}\) But set \(g(x) = \sin x\) and notice that \(g(x) = - f'(x)\text{,}\) where \(f(x) =\cos x\text{.}\) Then we have</p>
+<div class="displaymath">
+\begin{align*}
+g(0) &amp;= -f'(0) = 0\\
+g'(0) &amp;= -f''(0) = 1\\
+g''(0) &amp;= -f'''(0) = 0\\
+g'''(0) &amp;= -f^{(4)}(0) = -1\\
+g^{(4)}(0) &amp;= -f^{(5)}(0) = 0\\
+g^{(5)}(0) &amp;= -f^{(6)}(0) = 1
+\end{align*}
+</div>
+<p>Hence the required Maclaurin polynomial is</p>
+<div class="displaymath">
+\begin{align*}
+T_5(x) &amp;= x - \frac{x^3}{3!} + \frac{x^5}{5!}
+\end{align*}
+</div>
+<p>Just as we extended to the \(2n^\mathrm{th}\) Maclaurin polynomial for cosine, we can also extend our work to compute the \((2n+1)^\mathrm{th}\) Maclaurin polynomial for sine:</p>
+<div class="displaymath">
+\begin{align*}
+T_{2n+1}(x) &amp;= \sum_{k=0}^n \frac{(-1)^k}{(2k+1)!} \cdot x^{2k+1}
+\end{align*}
+</div>
+<article class="remark-like" id="warning-3"><h6 class="heading">
+<span class="type">Warning</span> <span class="codenumber">3.4.17</span>
+</h6>
+<p id="p-3553">The above formula only works when x is measured in radians, because all of our derivative formulae for trig functions were developed under the assumption that angles are measured in radians.</p></article><p id="p-3554">Below we plot \(\sin x\) against its first few Maclaurin polynomial approximations.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;">
+<div class="sbspanel" style="width:44.4444444444444%;justify-content:flex-start;"><img src="text/figs/approx1c.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:44.4444444444444%;justify-content:flex-start;"><img src="text/figs/approx2c.svg" style="width: 100%; height: auto;" alt=""></div>
+</div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;">
+<div class="sbspanel" style="width:44.4444444444444%;justify-content:flex-start;"><img src="text/figs/approx3c.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:44.4444444444444%;justify-content:flex-start;"><img src="text/figs/approx4c.svg" style="width: 100%; height: auto;" alt=""></div>
+</div></div></article></div>
+<p id="p-3555">To get an idea of how good these Taylor polynomials are at approximating \(\sin\) and \(\cos\text{,}\) let's concentrate on \(\sin x\) and consider \(x\)'s whose magnitude \(|x|\le 1\text{.}\) There are tricks that you can employ <a knowl="" class="id-ref" refid="hk-fn-146" id="fn-146"><sup> 13 </sup></a><span id="hk-fn-146" class="hidden-content tex2jax_ignore"><span class="footnote">If you are writing software to evaluate \(\sin x\text{,}\) you can always use the trig identity \(\sin(x)=\sin(x-2n\pi)\text{,}\) to  easily restrict to \(|x|\le\pi\text{.}\) You can then use the trig identity \(\sin(x)=-\sin(x\pm\pi)\) to reduce to \(|x|\le\tfrac{\pi}{2}\text{.}\) Finally you can use the trig identity \(\sin(x)=\mp\cos(\tfrac{\pi}{2}\pm x))\) to reduce to \(|x|\le\tfrac{\pi}{4}  \lt  1\text{.}\)</span></span> to evaluate sine and cosine at values of \(x\) outside this range.</p>
+<p id="p-3556">If \(|x|\le 1\) radians <a knowl="" class="id-ref" refid="hk-fn-147" id="fn-147"><sup> 14 </sup></a><span id="hk-fn-147" class="hidden-content tex2jax_ignore"><span class="footnote">Recall that the derivative formulae that we used to derive the Taylor polynomials are valid only when \(x\) is in radians. The restriction \(-1 \leq x \leq 1\) radians translates to angles bounded by \(\tfrac{180}{\pi}\approx 57^\circ\text{.}\)</span></span>, then the magnitudes of the successive terms in the Taylor polynomials for \(\sin x\) are bounded by</p>
+<div class="displaymath">
+\begin{alignat*}{3}
+|x|&amp;\le 1 &amp;
+\tfrac{1}{3!}|x|^3&amp;\le\tfrac{1}{6} &amp;
+\tfrac{1}{5!}|x|^5&amp;\le\tfrac{1}{120}\approx 0.0083\\
+\tfrac{1}{7!}|x|^7&amp;\le\tfrac{1}{7!}\approx 0.0002\quad &amp;
+\tfrac{1}{9!}|x|^9&amp;\le\tfrac{1}{9!}\approx 0.000003\quad &amp;
+\tfrac{1}{11!}|x|^{11}&amp;\le\tfrac{1}{11!}\approx 0.000000025
+\end{alignat*}
+</div>
+<p>From these inequalities, and the graphs on the previous pages, it certainly looks like, for \(x\) not too large, even relatively low degree Taylor polynomials give very good approximations. In Section <a href="ssec_taylor_error.html" class="xref" title="Subsection 3.4.9: The Error in the Taylor Polynomial Approximations">3.4.9</a> we'll see how to get rigorous error bounds on our Taylor polynomial approximations.</p></section></div></main>
+</div>
+<!--Start: Google Universal code--><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-105798942-1', 'auto');
+ga('send', 'pageview');
+</script><!--End: Google Universal code--><div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.1/login.js"></script>
+</body>
+</html>

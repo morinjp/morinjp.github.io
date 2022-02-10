@@ -1,0 +1,50 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:11:39-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="example-like"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.6.4</span> <span class="title">Simple continuous and discontinuous functions</span>
+</h6>
+<p>Consider the functions drawn below</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/lim6.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p>These are</p>
+<div class="displaymath">
+\begin{align*}
+f(x) &amp;= \begin{cases} x&amp;x \lt 1  \\
+x+2 &amp; x\geq 1 \end{cases}\\
+g(x) &amp;= \begin{cases} 1/x^2&amp; x\neq0  \\
+0 &amp; x=0\end{cases}\\
+h(x) &amp;= \begin{cases}\frac{x^3-x^2}{x-1} &amp; x\neq 1 \\
+0 &amp; x=1 \end{cases}
+\end{align*}
+</div>
+<p>Determine where they are continuous and discontinuous:</p>
+<ul class="disc">
+<li>
+<p>When \(x \lt 1\) then \(f(x)\) is a straight line (and so a polynomial) and so it is  continuous at every point \(x \lt 1\text{.}\) Similarly when \(x \gt 1\) the function is a  straight line and so it is continuous at every point \(x \gt 1\text{.}\) The only point which  might be a discontinuity is at \(x=1\text{.}\) We see that the one sided limits are  different. Hence the limit at \(x=1\) does not exist and so the function is  discontinuous at \(x=1\text{.}\)</p>
+<p>But note that that \(f(x)\) is continuous from one side — which?</p>
+</li>
+<li>The middle case is much like the previous one. When \(x \neq 0\) the \(g(x)\)  is a rational function and so is continuous everywhere on its domain (which is  all reals except \(x=0\)). Thus the only point where \(g(x)\) might be discontinuous is at  \(x=0\text{.}\) We see that neither of the one-sided limits exist at \(x=0\text{,}\) so the limit  does not exist at \(x=0\text{.}\) Hence the function is discontinuous at \(x=0\text{.}\)</li>
+<li>
+<p>We have seen the function \(h(x)\) before. By the same reasoning as  above, we know it is continuous except at \(x=1\) which we must check separately.</p>
+<p>By definition of \(h(x)\text{,}\) \(h(1) = 0\text{.}\) We must compare this to the limit as \(x  \to 1\text{.}\) We did this before.</p>
+<div class="displaymath">
+\begin{align*}
+\frac{x^3-x^2}{x-1} &amp;= \frac{x^2(x-1)}{x-1} = x^2
+\end{align*}
+</div>
+<p>So \(\lim_{x  \to 1} \frac{x^3-x^2}{x-1} = \lim_{x  \to 1} x^2 = 1\neq h(1)\text{.}\) Hence \(h\)  is discontinuous at \(x=1\text{.}\)</p>
+</li>
+</ul></article><span class="incontext"><a href="subsection-9.html#eg_1_6_1">in-context</a></span>
+</body>
+</html>

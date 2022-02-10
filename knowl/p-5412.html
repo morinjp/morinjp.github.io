@@ -1,0 +1,80 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:22:40-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>We have chosen the hypotenuse and opposite sides of the triangle to be of length 1 and \(x\text{,}\) respectively, so that \(\sin(\theta)=x\text{.}\) That is, \(\theta =  \arcsin x\text{.}\) We can then read off of the triangle that</p>
+<div class="displaymath">
+\begin{align*}
+\cos(\arcsin x) &amp;= \cos(\theta) = \sqrt{1-x^2}
+\end{align*}
+</div>
+<p>We can reach the same conclusion using trig identities, as follows.</p>
+<ul class="disc">
+<li>Write \(\arcsin x=\theta\text{.}\) We know that \(\sin(\theta)=x\) and we wish to  compute \(\cos(\theta)\text{.}\) So we just need to express \(\cos(\theta)\) in terms of  \(\sin(\theta)\text{.}\)</li>
+<li>To do this we make use of one of the Pythagorean identities<div class="displaymath">
+\begin{align*}
+\sin^2\theta + \cos^2\theta &amp;=1\\
+\cos\theta &amp;= \pm \sqrt{1-\sin^2\theta}
+\end{align*}
+</div>
+</li>
+<li>Thus<div class="displaymath">
+\begin{gather*}
+\cos(\arcsin x) = \cos\theta = \pm\sqrt{1-\sin^2\theta}
+\end{gather*}
+</div>
+</li>
+<li>To determine which branch we should use we need to consider the domain  and range of \(\arcsin x\text{:}\)<div class="displaymath">
+\begin{align*}
+\text{Domain: } -1 \leq x \leq 1 &amp;&amp; \text{Range: } -\frac{\pi}{2} \leq \arcsin x \leq \frac{\pi}{2}
+\end{align*}
+</div>Thus we are applying cosine to an angle that always lies between \(-\frac{\pi}{2}\) and \(\frac{\pi}{2}\text{.}\) Cosine is non-negative on this range. Hence we should take the positive branch and<div class="displaymath">
+\begin{align*}
+\cos(\arcsin x) &amp;= \sqrt{1-\sin^2\theta}= \sqrt{1-\sin^2(\arcsin x)}\\
+&amp;= \sqrt{1-x^2}
+\end{align*}
+</div>
+</li>
+</ul>
+<p>In a very similar way we can simplify \(\tan(\arccos x)\text{.}\)</p>
+<ul class="disc">
+<li>Write \(\arccos x=\theta\text{,}\) and then<div class="displaymath">
+\begin{align*}
+\tan( \arccos x) &amp;= \tan \theta = \frac{\sin\theta}{\cos \theta}
+\end{align*}
+</div>
+</li>
+<li>Now the denominator is easy since \(\cos \theta = \cos \arccos x = x\text{.}\)</li>
+<li>The numerator is almost the same as the previous computation.<div class="displaymath">
+\begin{align*}
+\sin\theta &amp;= \pm \sqrt{1-\cos^2\theta}\\
+&amp;= \pm \sqrt{1-x^2}
+\end{align*}
+</div>
+</li>
+<li>To determine which branch we again consider domains and   and ranges:<div class="displaymath">
+\begin{align*}
+\text{Domain: } -1 \leq x \leq 1 &amp;&amp; \text{Range: } 0 \leq \arccos x \leq \pi
+\end{align*}
+</div>Thus we are applying sine to an angle that always lies between  \(0\) and \(\pi\text{.}\) Sine is non-negative on this range and so we take the positive  branch.</li>
+<li>Putting everything back together gives<div class="displaymath">
+\begin{align*}
+\tan(\arccos x) &amp;= \frac{\sqrt{1-x^2}}{x}
+\end{align*}
+</div>
+</li>
+</ul>
+<span class="incontext"><a href="sec_B_3.html#p-5412">in-context</a></span>
+</body>
+</html>

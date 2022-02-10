@@ -1,0 +1,622 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:02:20-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Related Rates</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.1/pretext.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on2.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="RQS.css">
+<link href="https://pretextbook.org/css/0.1/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\require{cancel}\newcommand{\dee}[1]{\mathrm{d}#1}
+\newcommand{\half}{ \frac{1}{2} }
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ts}{\textstyle}
+\newcommand{\es}{ {\varnothing}}
+\newcommand{\st}{ {\mbox{ s.t. }} }
+\newcommand{\pow}[1]{ \mathcal{P}\left(#1\right) }
+\newcommand{\set}[1]{ \left\{#1\right\} }
+\newcommand{\lin}{{\text{LIN}}}
+\newcommand{\quot}{{\text{QR}}}
+\newcommand{\simp}{{\text{SMP}}}
+\newcommand{\diff}[2]{ \frac{\mathrm{d}#1}{\mathrm{d}#2}}
+\newcommand{\bdiff}[2]{ \frac{\mathrm{d}}{\mathrm{d}#2} \left( #1 \right)}
+\newcommand{\ddiff}[3]{ \frac{\mathrm{d}^#1#2}{\mathrm{d}{#3}^#1}}
+\renewcommand{\neg}{ {\sim} }
+\newcommand{\limp}{ {\;\Rightarrow\;} }
+\newcommand{\nimp}{ {\;\not\Rightarrow\;} }
+\newcommand{\liff}{ {\;\Leftrightarrow\;} }
+\newcommand{\niff}{ {\;\not\Leftrightarrow\;} }
+\newcommand{\De}{\Delta}
+\newcommand{\bbbn}{\mathbb{N}}
+\newcommand{\bbbr}{\mathbb{R}}
+\newcommand{\bbbp}{\mathbb{P}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\Si}{\Sigma}
+
+\newcommand{\arccsc}{\mathop{\mathrm{arccsc}}}
+\newcommand{\arcsec}{\mathop{\mathrm{arcsec}}}
+\newcommand{\arccot}{\mathop{\mathrm{arccot}}}
+\newcommand{\erf}{\mathop{\mathrm{erf}}}
+\newcommand{\smsum}{\mathop{{\ts \sum}}}
+\newcommand{\atp}[2]{ \genfrac{}{}{0in}{}{#1}{#2} }
+
+\newcommand{\ave}{\mathrm{ave}}
+\newcommand{\llt}{\left \lt }
+\newcommand{\rgt}{\right \gt }
+
+
+\newcommand{\YEaxis}[2]{\draw[help lines] (-#1,0)--(#1,0) node[right]{$x$};\draw[help lines] (0,-#2)--(0,#2) node[above]{$y$};}
+
+\newcommand{\YEaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$x$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YEtaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+\newcommand{\YEtaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$}; \draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YExcoord}[2]{\draw (#1,.2)--(#1,-.2) node[below]{$#2$};}
+\newcommand{\YEycoord}[2]{\draw (.2,#1)--(-.2,#1) node[left]{$#2$};}
+\newcommand{\YEnxcoord}[2]{\draw (#1,-.2)--(#1,.2) node[above]{$#2$};}
+\newcommand{\YEnycoord}[2]{\draw (-.2,#1)--(.2,#1) node[right]{$#2$};}
+
+\newcommand{\YEstickfig}[3]{
+\draw (#1,#2) arc(-90:270:2mm);
+\draw (#1,#2)--(#1,#2-.5) (#1-.25,#2-.75)--(#1,#2-.5)--(#1+.25,#2-.75) (#1-.2,#2-.2)--(#1+.2,#2-.2);}
+
+
+\newcommand{\IBP}[7]{
+\begin{array}{|c  | l | l |}
+\hline
+\color{red}{\text{Option 1:}}
+&amp; u=#2
+&amp;\color{red}{\dee{u}=#3 ~ \dee{#1}}
+\\
+&amp; \dee{v}=#5~\dee{#1}
+&amp;\color{red}{v=#7}
+\\
+\hline
+\color{blue}{\text{Option 2:}}
+&amp; u=#5
+&amp;\color{blue}{\dee{u}=#6 ~ \dee{#1}}
+\\
+&amp;\dee{v}=#2 \dee{#1}
+&amp;\color{blue}{v=#4}
+\\
+\hline
+\end{array}
+}
+
+
+\renewcommand{\textcolor}[2]{{\color{#1}{#2}}}
+
+
+\newcommand{\trigtri}[4]{
+\begin{tikzpicture}
+\draw (-.5,0)--(2,0)--(2,1.5)--cycle;
+\draw (1.8,0) |- (2,.2);
+\draw[double] (0,0) arc(0:30:.5cm);
+\draw (0,.2) node[right]{$#1$};
+\draw (1,-.5) node{$#2$};
+\draw (2,.75) node[right]{$#3$};
+\draw (.6,1.1) node[rotate=30]{$#4$};
+\end{tikzpicture}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="clp_1_dc.html"><span class="title">CLP-1 Differential Calculus</span></a></h1>
+<p class="byline">Joel Feldman, Andrew Rechnitzer, Elyse Yeager</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec_rrates.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="sec_rrates.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="exercises-21.html" title="Next">Next</a></span></div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec_rrates.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="sec_rrates.html" title="Up">Up</a><a class="next-button button toolbar-item" href="exercises-21.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="index.html" data-scroll="index"><span class="title">Front Matter</span></a></h2>
+<ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface-2.html" data-scroll="preface-2">Using the exercises in this book</a></li>
+<li><a href="preface-3.html" data-scroll="preface-3">Feedback about the text</a></li>
+</ul>
+<h2 class="link"><a href="chap_basics.html" data-scroll="chap_basics"><span class="codenumber">0</span> <span class="title">The basics</span></a></h2>
+<ul>
+<li><a href="sec_0_1.html" data-scroll="sec_0_1">Numbers</a></li>
+<li><a href="sec_sets.html" data-scroll="sec_sets">Sets</a></li>
+<li><a href="sec_0_3.html" data-scroll="sec_0_3">Other Important Sets</a></li>
+<li><a href="sec_0_4.html" data-scroll="sec_0_4">Functions</a></li>
+<li><a href="sec_parsing.html" data-scroll="sec_parsing">Parsing Formulas</a></li>
+<li><a href="sec_inverse_functions.html" data-scroll="sec_inverse_functions">Inverse Functions</a></li>
+</ul>
+<h2 class="link"><a href="chap_limits.html" data-scroll="chap_limits"><span class="codenumber">1</span> <span class="title">Limits</span></a></h2>
+<ul>
+<li><a href="sec_first_lim.html" data-scroll="sec_first_lim">Drawing Tangents and a First Limit</a></li>
+<li><a href="sec_velocity.html" data-scroll="sec_velocity">Another Limit and Computing Velocity</a></li>
+<li><a href="sec_lim_func.html" data-scroll="sec_lim_func">The Limit of a Function</a></li>
+<li><a href="sec_1_4.html" data-scroll="sec_1_4">Calculating Limits with Limit Laws</a></li>
+<li><a href="sec_1_5.html" data-scroll="sec_1_5">Limits at Infinity</a></li>
+<li><a href="sec_1_6.html" data-scroll="sec_1_6">Continuity</a></li>
+<li><a href="sec_opt_formal_limit.html" data-scroll="sec_opt_formal_limit">(Optional) — Making the Informal a Little More Formal</a></li>
+<li><a href="sec_lim_inf_formal.html" data-scroll="sec_lim_inf_formal">(Optional) — Making Infinite Limits a Little More Formal</a></li>
+<li><a href="sec_proof_arith_lim.html" data-scroll="sec_proof_arith_lim">(Optional) — Proving the Arithmetic of Limits</a></li>
+</ul>
+<h2 class="link"><a href="chap_deriv.html" data-scroll="chap_deriv"><span class="codenumber">2</span> <span class="title">Derivatives</span></a></h2>
+<ul>
+<li><a href="sec_2_1.html" data-scroll="sec_2_1">Revisiting Tangent Lines</a></li>
+<li><a href="sec_def_deriv.html" data-scroll="sec_def_deriv">Definition of the Derivative</a></li>
+<li><a href="sec_2_3.html" data-scroll="sec_2_3">Interpretations of the Derivative</a></li>
+<li><a href="sec_2_4.html" data-scroll="sec_2_4">Arithmetic of Derivatives - a Differentiation Toolbox</a></li>
+<li><a href="sec_proof_arith_deriv.html" data-scroll="sec_proof_arith_deriv">Proofs of the Arithmetic of Derivatives</a></li>
+<li><a href="sec_2_6.html" data-scroll="sec_2_6">Using the Arithmetic of Derivatives –  Examples</a></li>
+<li><a href="sec_exp_func.html" data-scroll="sec_exp_func">Derivatives of Exponential Functions</a></li>
+<li><a href="sec_diff_trig.html" data-scroll="sec_diff_trig">Derivatives of Trigonometric Functions</a></li>
+<li><a href="sec_chain_rule.html" data-scroll="sec_chain_rule">One More Tool  – the Chain Rule</a></li>
+<li><a href="sec_diff_logs.html" data-scroll="sec_diff_logs">The Natural Logarithm</a></li>
+<li><a href="sec_2_11.html" data-scroll="sec_2_11">Implicit Differentiation</a></li>
+<li><a href="sec_invTrig.html" data-scroll="sec_invTrig">Inverse Trigonometric Functions</a></li>
+<li><a href="sec_mvt.html" data-scroll="sec_mvt">The Mean Value Theorem</a></li>
+<li><a href="sec_higher_diff.html" data-scroll="sec_higher_diff">Higher Order Derivatives</a></li>
+<li><a href="sec_cont_deriv.html" data-scroll="sec_cont_deriv">(Optional) — Is \(\lim_{x\to c}f'(x)\) Equal to \(f'(c)\text{?}\)</a></li>
+</ul>
+<h2 class="link"><a href="chap_appl_deriv.html" data-scroll="chap_appl_deriv"><span class="codenumber">3</span> <span class="title">Applications of derivatives</span></a></h2>
+<ul>
+<li><a href="sec_vel_acc.html" data-scroll="sec_vel_acc">Velocity and Acceleration</a></li>
+<li><a href="sec_rrates.html" data-scroll="sec_rrates">Related Rates</a></li>
+<li><a href="sec_ExpGthDecay.html" data-scroll="sec_ExpGthDecay">Exponential Growth and Decay</a></li>
+<li><a href="sec_DIFFTaylor.html" data-scroll="sec_DIFFTaylor">Taylor Polynomials</a></li>
+<li><a href="sec_optimise.html" data-scroll="sec_optimise">Optimisation</a></li>
+<li><a href="sec_curve_sketch.html" data-scroll="sec_curve_sketch">Sketching Graphs</a></li>
+<li><a href="sec_4_7.html" data-scroll="sec_4_7">L'Hôpital's Rule and Indeterminate Forms</a></li>
+</ul>
+<h2 class="link"><a href="chapter-5.html" data-scroll="chapter-5"><span class="codenumber">4</span> <span class="title">Towards Integral Calculus</span></a></h2>
+<ul><li><a href="sec_antidiff.html" data-scroll="sec_antidiff">Introduction to Antiderivatives</a></li></ul>
+<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Appendices</span></a></h2>
+<h2 class="link"><a href="app_highschool.html" data-scroll="app_highschool"><span class="codenumber">A</span> <span class="title">High School Material</span></a></h2>
+<ul>
+<li><a href="sec_simtri.html" data-scroll="sec_simtri">Similar Triangles</a></li>
+<li><a href="sec_A_2.html" data-scroll="sec_A_2">Pythagoras</a></li>
+<li><a href="sec_A_3.html" data-scroll="sec_A_3">Trigonometry — Definitions</a></li>
+<li><a href="app_rad_arc_sec.html" data-scroll="app_rad_arc_sec">Radians, Arcs and Sectors</a></li>
+<li><a href="app_sec_trig_graphs.html" data-scroll="app_sec_trig_graphs">Trigonometry — Graphs</a></li>
+<li><a href="sec_A_6.html" data-scroll="sec_A_6">Trigonometry — Special Triangles</a></li>
+<li><a href="sec_A_7.html" data-scroll="sec_A_7">Trigonometry — Simple Identities</a></li>
+<li><a href="sec_trig_add.html" data-scroll="sec_trig_add">Trigonometry — Add and Subtract Angles</a></li>
+<li><a href="sec_inv_trig.html" data-scroll="sec_inv_trig">Inverse Trig Functions</a></li>
+<li><a href="app_sec_areas.html" data-scroll="app_sec_areas">Areas</a></li>
+<li><a href="sec_volumes.html" data-scroll="sec_volumes">Volumes</a></li>
+<li><a href="sec_powers.html" data-scroll="sec_powers">Powers</a></li>
+<li><a href="sec_logs.html" data-scroll="sec_logs">Logarithms</a></li>
+<li><a href="sec_must_deriv.html" data-scroll="sec_must_deriv">You Should be Able to Derive</a></li>
+</ul>
+<h2 class="link"><a href="chap_app_B.html" data-scroll="chap_app_B"><span class="codenumber">B</span> <span class="title">Origin of Trig, Area and Volume Formulas</span></a></h2>
+<ul>
+<li><a href="sec_B_1.html" data-scroll="sec_B_1">Theorems about Triangles</a></li>
+<li><a href="sec_B_2.html" data-scroll="sec_B_2">Trigonometry</a></li>
+<li><a href="sec_B_3.html" data-scroll="sec_B_3">Inverse Trigonometric Functions</a></li>
+<li><a href="sec_B_4.html" data-scroll="sec_B_4">Cosine and Sine Laws</a></li>
+<li><a href="sec_B_5.html" data-scroll="sec_B_5">Circles, cones and spheres</a></li>
+</ul>
+<h2 class="link"><a href="app_root_finding.html" data-scroll="app_root_finding"><span class="codenumber">C</span> <span class="title">Root Finding</span></a></h2>
+<ul>
+<li><a href="sec_C_1.html" data-scroll="sec_C_1">Newton's Method</a></li>
+<li><a href="sec_C_2.html" data-scroll="sec_C_2">The Error Behaviour of Newton's Method</a></li>
+<li><a href="sec_C_3.html" data-scroll="sec_C_3">The false position (regula falsi) method</a></li>
+<li><a href="sec_C_4.html" data-scroll="sec_C_4">The secant method</a></li>
+<li><a href="sec_C_5.html" data-scroll="sec_C_5">The Error Behaviour of the Secant Method</a></li>
+</ul>
+<h2 class="link"><a href="app_hint.html" data-scroll="app_hint"><span class="codenumber">D</span> <span class="title">Hints for Exercises</span></a></h2>
+<h2 class="link"><a href="app_answ.html" data-scroll="app_answ"><span class="codenumber">E</span> <span class="title">Answers to Exercises</span></a></h2>
+<h2 class="link"><a href="app_soln.html" data-scroll="app_soln"><span class="codenumber">F</span> <span class="title">Solutions to Exercises</span></a></h2></nav><div class="extras"><nav><a class="feedback-link" href="mailto:clp@ugrad.math.ubc.ca?subject=clp-pretext" target="_blank">Feedback</a><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="mathbook-content"><section class="subsection" id="subsection-43"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.2.1</span> <span class="title">Related Rates</span>
+</h3>
+<p id="p-2999">Consider the following problem</p>
+<blockquote class="blockquote" id="blockquote-27"><p id="p-3000">A spherical balloon is being inflated at a rate of \(13cm^3/sec\text{.}\) How fast is the radius changing when the balloon has radius \(15cm\text{?}\)</p></blockquote>
+<p id="p-3001">There are several pieces of information in the statement:</p>
+<ul class="disc">
+<li id="li-811">The balloon is spherical</li>
+<li id="li-812">The volume is changing at a rate of \(13cm^3/sec\) — so we need variables for volume (in \(cm^3\)) and time (in \(sec\)). Good choices are \(V\) and \(t\text{.}\)</li>
+<li id="li-813">We are asked for the rate at which the radius is changing — so we need a variable for radius and units. A good choice is \(r\text{,}\) measured in \(cm\) — since volume is measured in \(cm^3\text{.}\)</li>
+</ul>
+<p>Since the balloon is a sphere we know <a knowl="" class="id-ref" refid="hk-fn-116" id="fn-116"><sup> 1 </sup></a><span id="hk-fn-116" class="hidden-content tex2jax_ignore"><span class="footnote">If you don't know the formula for the volume of a sphere, now is a good time to revise by looking at Appendix <a href="sec_volumes.html" class="xref" title="Section A.11: Volumes">A.11</a>.</span></span> that</p>
+<div class="displaymath">
+\begin{align*}
+V &amp;= \frac{4}{3} \pi r^3
+\end{align*}
+</div>
+<p>Since both the volume and radius are changing with time, both \(V\) and \(r\) are implicitly functions of time; we could really write</p>
+<div class="displaymath">
+\begin{align*}
+V(t) &amp;= \frac{4}{3}\pi r(t)^3.
+\end{align*}
+</div>
+<p>We are told the rate at which the volume is changing and we need to find the rate at which the radius is changing. That is, from a knowledge of \(\diff{V}{t}\text{,}\) find the related rate <a knowl="" class="id-ref" refid="hk-fn-117" id="fn-117"><sup> 2 </sup></a><span id="hk-fn-117" class="hidden-content tex2jax_ignore"><span class="footnote">Related rate problems are problems in which you are given the rate of change of one quantity and are to determine the rate of change of another, related, quantity.</span></span> \(\diff{r}{t}\text{.}\)</p>
+<p id="p-3002">In this case, we can just differentiate our equation by \(t\) to get</p>
+<div class="displaymath">
+\begin{align*}
+\diff{V}{t} &amp;= 4 \pi r^2 \diff{r}{t}\\
+\end{align*}
+<p class="intertext">This can then be rearranged to give</p>
+\begin{align*}
+\diff{r}{t} &amp;= \frac{1}{4\pi r^2} \diff{V}{t}.
+\end{align*}
+</div>
+<p>Now we were told that \(\diff{V}{t} = 13\text{,}\) so</p>
+<div class="displaymath">
+\begin{align*}
+\diff{r}{t} &amp;= \frac{13}{4\pi r^2}.
+\end{align*}
+</div>
+<p>We were also told that the radius is \(15cm\text{,}\) so at that moment in time</p>
+<div class="displaymath">
+\begin{align*}
+\diff{r}{t} &amp;= \frac{13}{\pi 4 \times 15^2}.
+\end{align*}
+</div>
+<p id="p-3003">This is a very typical example of a related rate problem. This section is really just a collection of problems, but all will follow a similar pattern.</p>
+<ul class="disc">
+<li id="li-814">The statement of the problem will tell you quantities that must be related (above it was volume, radius and, implicitly, time).</li>
+<li id="li-815">Typically a little geometry (or some physics or…) will allow you to relate these quantities (above it was the formula that links the volume of a sphere to its radius).</li>
+<li id="li-816">Implicit differentiation will then allow you to link the rate of change of one quantity to another.</li>
+</ul>
+<p id="p-3004">Another balloon example</p>
+<article class="example-like" id="eg_3_2_1"><a knowl="" class="id-ref" refid="hk-eg_3_2_1"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">3.2.1</span> <span class="title">A rising balloon</span>
+</h6></a></article><div id="hk-eg_3_2_1" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-3005">Consider a helium balloon rising vertically from a fixed point 200m away from you. You are trying to work out how fast it is rising. Now — computing the velocity directly is difficult, but you can measure angles. You observe that when it is at an angle of \(\pi/4\) its angle is changing by \(0.05\) radians per second.</p>
+<ul id="p-3006" class="disc">
+<li id="li-817">
+<p id="p-3007">Start by drawing a picture with the relevant variables</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:12.5%;margin-right:12.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/balloon1.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+</li>
+<li id="li-818">So denote the angle to be \(\theta\) (in radians), the height of the balloon (in m) by \(h\) and time (in seconds) by \(t\text{.}\) Then trigonometry tells us<div class="displaymath">
+\begin{align*}
+h &amp;= 200 \cdot \tan \theta
+\end{align*}
+</div>
+</li>
+<li id="li-819">Differentiating allows us to relate the rates of change<div class="displaymath">
+\begin{align*}
+\diff{h}{t} &amp;= 200 \sec^2 \theta \cdot \diff{\theta}{t}
+\end{align*}
+</div>
+</li>
+<li id="li-820">We are told that when \(\theta =\pi/4\) we observe \(\diff{\theta}{t} =
+0.05\text{,}\) so<div class="displaymath">
+\begin{align*}
+\diff{h}{t} &amp;= 200 \cdot \sec^2(\pi/4) \cdot 0.05\\
+&amp;= 200 \cdot 0.05 \cdot \left( \sqrt{2} \right)^2\\
+&amp;= 200 \cdot \frac{5}{100} \cdot 2\\
+&amp;= 20 m/s
+\end{align*}
+</div>
+</li>
+<li id="li-821">So the balloon is rising at a rate of 20m/s.</li>
+</ul></article></div>
+<p id="p-3008">The following problem is perhaps <em class="emphasis">the</em> classic related rate problem.</p>
+<article class="example-like" id="eg_3_2_2"><a knowl="" class="id-ref" refid="hk-eg_3_2_2"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">3.2.2</span> <span class="title">A sliding ladder</span>
+</h6></a></article><div id="hk-eg_3_2_2" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-3009">A 5m ladder is leaning against a wall. The floor is quite slippery and the base of the ladder slides out from the wall at a rate of \(1m/s\text{.}\) How fast is the top of the ladder sliding down the wall when the base of the ladder is 3m from the wall?</p>
+<ul id="p-3010" class="disc">
+<li id="li-822">
+<p id="p-3011">A good first step is to draw a picture stating all relevant quantities. This will also help us define variables and units.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:17%;margin-right:17%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/ladder1.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+</li>
+<li id="li-823">So now define \(x(t)\) to be the distance between the bottom of the ladder and the wall, at time \(t\text{,}\) and let \(y(t)\) be the distance between the top of the ladder and the ground at time \(t\text{.}\) Measure time in seconds, but both distances in meters.</li>
+<li id="li-824">We can relate the quantities using Pythagoras:<div class="displaymath">
+\begin{align*}
+x^2 + y^2 &amp;= 5^2
+\end{align*}
+</div>
+</li>
+<li id="li-825">Differentiating with respect to time then gives<div class="displaymath">
+\begin{align*}
+2x \diff{x}{t} + 2y \diff{y}{t} &amp;= 0
+\end{align*}
+</div>
+</li>
+<li id="li-826">We know that \(\diff{x}{t} = 1\) and \(x=3\text{,}\) so<div class="displaymath">
+\begin{align*}
+6 \cdot 1 + 2y \diff{y}{t} &amp;= 0
+\end{align*}
+</div>but we need to determine \(y\) before we can go further. Thankfully we know that \(x^2+y^2=25\) and \(x=3\text{,}\) so \(y^2=25-9=16\) and <a knowl="" class="id-ref" refid="hk-fn-118" id="fn-118"><sup> 3 </sup></a><span id="hk-fn-118" class="hidden-content tex2jax_ignore"><span class="footnote">Since the ladder isn't buried in the ground, we can discard the solution \(y=-4\text{.}\)</span></span> so \(y=4\text{.}\)</li>
+<li id="li-827">So finally putting everything together<div class="displaymath">
+\begin{align*}
+6 \cdot 1 + 8 \diff{y}{t} &amp;= 0\\
+\diff{y}{t} &amp;= - \frac{3}{4} m/s.
+\end{align*}
+</div>Thus the top of the ladder is sliding towards the floor at a rate of \(\frac{3}{4} m/s\text{.}\)</li>
+</ul></article></div>
+<p id="p-3012">The next example is complicated by the rates of change being stated not just as “the rate of change per unit time” but instead being stated as “the percentage rate of change per unit time”. If a quantity \(f\) is changing with rate \(\diff{f}{t}\text{,}\) then we can say that</p>
+<blockquote class="blockquote" id="blockquote-28"><p id="p-3013">\(f\) is changing at a rate of \(\ds 100 \cdot \frac{\diff{f}{t}}{f}\) percent.</p></blockquote>
+<p id="p-3014">Thus if, at time \(t\text{,}\) \(f\) has rate of change \(r\%\text{,}\) then</p>
+<div class="displaymath">
+\begin{gather*}
+100\frac{f'(t)}{f(t)}=r
+\implies f'(t) =\frac{r}{100} f(t)
+\end{gather*}
+</div>
+<p>so that if \(h\) is a very small time increment</p>
+<div class="displaymath">
+\begin{gather*}
+\frac{f(t+h) - f(t)}{h} \approx \frac{r}{100} f(t)
+\implies f(t+h) \approx f(t) + \frac{rh}{100} f(t)
+\end{gather*}
+</div>
+<p>That is, over a very small time interval \(h\text{,}\) \(f\) increases by the fraction \(\frac{rh}{100}\) of its value at time \(t\text{.}\)</p>
+<p id="p-3015">So armed with this, let's look at the problem.</p>
+<article class="example-like" id="eg_percentGrowth"><a knowl="" class="id-ref" refid="hk-eg_percentGrowth"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">3.2.3</span> <span class="title">Percentage rate of change of \(R=PQ\)</span>
+</h6></a></article><div id="hk-eg_percentGrowth" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-3016">The quantities \(P,\ Q\) and \(R\) are functions of time and are related by the equation \(R=PQ\text{.}\) Assume that \(P\) is increasing instantaneously at the rate of \(8\%\) per year (meaning that \(100\frac{P'}{P}=8\)) and that \(Q\) is decreasing instantaneously at the rate of \(2\%\) per year (meaning that \(100\frac{Q'}{Q}=-2\)). Determine the percentage rate of change for \(R\text{.}\)</p>
+<p id="p-3017"><em class="alert">Solution</em> This one is a little different — we are given the variables and the formula, so no picture drawing or defining required. Though we do need to define a time variable — let \(t\) denote time in years.</p>
+<ul class="disc">
+<li id="li-828">Since \(R(t) = P(t)\cdot Q(t)\) we can differentiate with respect to \(t\) to get<div class="displaymath">
+\begin{align*}
+\diff{R}{t} &amp;= P Q' + Q P'
+\end{align*}
+</div>
+</li>
+<li id="li-829">But we need the percentage change in \(R\text{,}\) namely<div class="displaymath">
+\begin{align*}
+100 \frac{R'}{R} &amp;= 100 \frac{PQ' +QP'}{R}\\
+\end{align*}
+<p class="intertext">but \(R = PQ\text{,}\) so rewrite it as</p>
+\begin{align*}
+&amp;= 100 \frac{PQ' +QP'}{PQ}\\
+&amp;= 100 \frac{PQ'}{PQ} + 100 \frac{QP'}{PQ}\\
+&amp;= 100 \frac{Q'}{Q} + 100 \frac{P'}{P}
+\end{align*}
+</div>so we have stated the instantaneous percentage rate of change in \(R\) as the sum of the percentage rate of change in \(P\) and \(Q\text{.}\)</li>
+<li id="li-830">We know the percentage rate of change of \(P\) and \(Q\text{,}\) so<div class="displaymath">
+\begin{align*}
+100 \frac{R'}{R} &amp;= -2 + 8 =6
+\end{align*}
+</div>That is, the instantaneous percentage rate of change of \(R\) is 6\(\%\) per year.</li>
+</ul></article></div>
+<p id="p-3018">Yet another falling object example.</p>
+<article class="example-like" id="eg_fallingBall"><a knowl="" class="id-ref" refid="hk-eg_fallingBall"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">3.2.4</span> <span class="title">The shadow of a falling ball</span>
+</h6></a></article><div id="hk-eg_fallingBall" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-3019">A ball is dropped from a height of \(49\)m above level ground. The height of the ball at time \(t\) is \(h(t)=49-4.9 t^2\) m. A light, which is also \(49\)m above the ground, is \(10\)m to the left of the ball's original position. As the ball descends, the shadow of the ball caused by the light moves across the ground. How fast is the shadow moving one second after the ball is dropped?</p>
+<p id="p-3020"><em class="alert">Solution</em> There is quite a bit going on in this example, so read carefully.</p>
+<ul class="disc">
+<li id="li-831">
+<p id="p-3021">First a diagram; the one below is perhaps a bit over the top.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/falling_ball.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+</li>
+<li id="li-832">Let's call \(s(t)\) the distance from the shadow to the point on the ground directly underneath the ball.</li>
+<li id="li-833">By similar triangles we see that<div class="displaymath">
+\begin{gather*}
+\frac{4.9 t^2}{10}=\frac{49-4.9 t^2}{s(t)}
+\end{gather*}
+</div>We can then solve for \(s(t)\) by just multiplying both sides by \(\frac{10}{4.9 t^2}s(t)\text{.}\) This gives<div class="displaymath">
+\begin{gather*}
+s(t)=10\frac{49-4.9 t^2}{4.9 t^2}=\frac{100}{t^2}-10
+\end{gather*}
+</div>
+</li>
+<li id="li-834">Differentiating with respect to \(t\) will then give us the rates,<div class="displaymath">
+\begin{gather*}
+s'(t)=-2\frac{100}{t^3}
+\end{gather*}
+</div>
+</li>
+<li id="li-835">So, at \(t=1\text{,}\) \(s'(1)=-200\)m/sec. That is, the shadow is moving to the left at \(200\)m/sec.</li>
+</ul></article></div>
+<p id="p-3022">A more nautical example.</p>
+<article class="example-like" id="eg_3_2_3"><a knowl="" class="id-ref" refid="hk-eg_3_2_3"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">3.2.5</span> <span class="title">The distance between moving boats</span>
+</h6></a></article><div id="hk-eg_3_2_3" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-3023">Two boats spot each other in the ocean at midday — Boat \(A\) is 15km west of Boat \(B\text{.}\) Boat \(A\) is travelling east at 3km/h and boat \(B\) is travelling north at 4km/h. At 3pm how fast is the distance between the boats changing.</p>
+<ul class="disc">
+<li id="li-836">
+<p id="p-3024">First we draw a picture.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/boats1.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+</li>
+<li id="li-837">Let \(x(t)\) be the distance at time \(t\text{,}\) in km, from boat \(A\) to the original position of boat \(B\) (i.e. to the position of boat \(B\) at noon). And let \(y(t)\) be the distance at time \(t\text{,}\) in km, of boat \(B\) from its original position. And let \(z(t)\) be the distance between the two boats at time \(t\text{.}\)</li>
+<li id="li-838">Additionally we are told that \(x'=-3\) and \(y'=4\) — notice that \(x'  \lt 0\) since that distance is getting smaller with time, while \(y' \gt 0\) since that distance is increasing with time.</li>
+<li id="li-839">Further at \(3pm\) boat \(A\) has travelled 9km towards the original position of boat \(B\text{,}\) so \(x=15-9 = 6\text{,}\) while boat \(B\) has travelled 12km away from its original position, so \(y=12\text{.}\)</li>
+<li id="li-840">The distances \(x,y\) and \(z\) form a right-angled triangle, and Pythagoras tells us that<div class="displaymath">
+\begin{align*}
+z^2 &amp;= x^2 + y^2.
+\end{align*}
+</div>At 3pm we know \(x=6,y=12\) so<div class="displaymath">
+\begin{align*}
+z^2 &amp;= 36 + 144 = 180\\
+z&amp;= \sqrt{180} = 6\sqrt{5}.
+\end{align*}
+</div>
+</li>
+<li id="li-841">Differentiating then gives<div class="displaymath">
+\begin{align*}
+2z \diff{z}{t} &amp;= 2x \diff{x}{t} + 2y \diff{y}{t}\\
+&amp;= 12 \cdot (-3) + 24 \cdot(4)\\
+&amp;= 60.\\
+\end{align*}
+<p class="intertext">Dividing through by \(2z = 12\sqrt{5}\) then gives</p>
+\begin{align*}
+\diff{z}{t} &amp;= \frac{60}{12\sqrt{5}} = \frac{5}{\sqrt{5}} = \sqrt{5}
+\end{align*}
+</div>So the distance between the boats is increasing at \(\sqrt{5} km/h\text{.}\)</li>
+</ul></article></div>
+<p id="p-3025">One last one before we move on to another topic.</p>
+<article class="example-like" id="eg_fuel"><a knowl="" class="id-ref" refid="hk-eg_fuel"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">3.2.6</span> <span class="title">Fuel level in a cylindrical tank</span>
+</h6></a></article><div id="hk-eg_fuel" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-3026">Consider a cylindrical fuel tank of radius \(r\) and length \(L\) (in some appropriate units) that is lying on its side. Suppose that fuel is being pumped into the tank at a rate \(q\text{.}\) At what rate is the fuel level rising?</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:37.5%;margin-right:37.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/fuel1.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p id="p-3027"><em class="alert">Solution</em> If the tank were vertical everything would be much easier. Unfortunately the tank is on its side, so we are going to have to work a bit harder to establish the relation between the depth and volume. Also notice that we have not been supplied with units for this problem — so we do not need to state the units of our variables.</p>
+<ul id="p-3028" class="disc">
+<li id="li-842">
+<p id="p-3029">Again — draw a picture. Here is an end view of the tank; the shaded part of the circle  is filled with fuel.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:35%;margin-right:35%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/fuel2.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+</li>
+<li id="li-843">Let us denote by \(V(t)\) the volume of fuel in the tank at time \(t\) and by \(h(t)\) the fuel level at time \(t\text{.}\)</li>
+<li id="li-844">We have been told that \(V'(t)=q\) and have been asked to determine \(h'(t)\text{.}\) While it is possible to do so by finding a formula relating \(V(t)\) and \(h(t)\text{,}\) it turns out to be quite a bit easier to first find a formula relating \(V\) and the angle \(\theta\) shown in the end view. We can then translate this back into a formula in terms of \(h\) using the relation<div class="displaymath">
+\begin{align*}
+h(t) &amp;= r - r\cos \theta(t).
+\end{align*}
+</div>Once we know \(\theta'(t)\text{,}\) we can easily obtain \(h'(t)\) by differentiating the above equation.</li>
+<li id="li-845">The computation that follows below gets a little involved in places, so we will drop the “\((t)\)” on the variables \(V,h\) and \(\theta\text{.}\) The reader must never forget that these three quantities are really functions of time, while \(r\) and \(L\) are constants that do not depend on time.</li>
+<li id="li-846">
+<p id="p-3030">The volume of fuel is \(L\) times the cross–sectional area filled by the fuel. That is,</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0.5%;margin-right:0.5%;">
+<div class="sbspanel" style="width:25.2525252525253%;justify-content:center;"><p id="p-3031"></p></div>
+<div class="sbspanel" style="width:5.05050505050505%;justify-content:center;"><p id="p-3032">\(V = \)</p></div>
+<div class="sbspanel" style="width:20.2020202020202%;justify-content:center;"><p id="p-3033">\(L \times\) Area of</p></div>
+<div class="sbspanel" style="width:20.2020202020202%;justify-content:center;"><img src="text/figs/fuel3.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:25.2525252525253%;justify-content:center;"><p id="p-3034"></p></div>
+</div></div>
+<p id="p-3035">While we do not have a canned formula for the area of a chord of a circle like this, it is easy to express the area of the chord in terms of two areas that we can compute.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0.0625%;margin-right:0.0625%;">
+<div class="sbspanel" style="width:7.008760951188986%;justify-content:center;"><p id="p-3036"></p></div>
+<div class="sbspanel" style="width:5.006257822277847%;justify-content:center;"><p id="p-3037">\(V\)</p></div>
+<div class="sbspanel" style="width:22.0275344180225%;justify-content:center;"><p id="p-3038">\(= L\times\text{Area of}\)</p></div>
+<div class="sbspanel" style="width:20.0250312891114%;justify-content:center;"><img src="text/figs/fuel3.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:18.0225281602002%;justify-content:center;"><p id="p-3039"></p></div>
+<div class="sbspanel" style="width:20.0250312891114%;justify-content:center;"><p id="p-3040"></p></div>
+<div class="sbspanel" style="width:0%;justify-content:center;"><p id="p-3041"></p></div>
+<div class="sbspanel" style="width:7.008760951188986%;justify-content:center;"><p id="p-3042"></p></div>
+</div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0.0625%;margin-right:0.0625%;">
+<div class="sbspanel" style="width:7.008760951188986%;justify-content:center;"><p id="p-3043"></p></div>
+<div class="sbspanel" style="width:5.006257822277847%;justify-content:center;"><p id="p-3044"></p></div>
+<div class="sbspanel" style="width:22.0275344180225%;justify-content:center;"><p id="p-3045">\(= L\times\bigg[ \text{Area of}\)</p></div>
+<div class="sbspanel" style="width:20.0250312891114%;justify-content:center;"><img src="text/figs/fuel4.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:18.0225281602002%;justify-content:center;"><p id="p-3046">- Area of</p></div>
+<div class="sbspanel" style="width:20.0250312891114%;justify-content:center;"><img src="text/figs/fuel5.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:0%;justify-content:center;"><p id="p-3047">\(\bigg]\)</p></div>
+<div class="sbspanel" style="width:7.008760951188986%;justify-content:center;"><p id="p-3048"></p></div>
+</div></div>
+</li>
+<li id="li-847">
+<p id="p-3049">The piece of pie</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:41%;margin-right:41%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/fuel4.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p id="p-3050">is the fraction \(\tfrac{2\theta}{2\pi}\) of the full circle, so its area is \(\tfrac{2\theta}{2\pi}\pi r^2=\theta r^2\text{.}\)</p>
+</li>
+<li id="li-848">
+<p id="p-3051">The triangle</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:41%;margin-right:41%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/fuel5.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p id="p-3052">has height \(r\cos\theta\) and base \(2r\sin\theta\) and hence has area \(\frac{1}{2}(r\cos\theta)(2r\sin\theta)=r^2\sin\theta\cos\theta =
+\frac{r^2}{2} \sin(2\theta)\text{,}\) where we have used a double-angle formula (see Appendix <a href="sec_must_deriv.html" class="xref" title="Section A.14: You Should be Able to Derive">A.14</a>).</p>
+</li>
+<li id="li-849">Subbing these two areas into the above expression for \(V\) gives<div class="displaymath">
+\begin{align*}
+V &amp; = L\times\left[\theta r^2- \frac{r^2}{2}\sin2\theta\right]
+= \frac{Lr^2}{2} \big[2\theta-\sin2\theta \big]
+\end{align*}
+</div>Oof!</li>
+<li id="li-850">Now we can differentiate to find the rate of change. Recalling that \(V=V(t)\) and \(\theta=\theta(t)\text{,}\) while \(r\) and \(L\) are constants,<div class="displaymath">
+\begin{align*}
+V'
+&amp;=\frac{Lr^2}{2} \left[ 2\theta' - 2\cos2\theta \cdot \theta' \right]\\
+&amp;= Lr^2 \cdot \theta' \cdot \left[1 - \cos2\theta \right]
+\end{align*}
+</div>Solving this for \(\theta'\) and using \(V'=q\) gives<div class="displaymath">
+\begin{align*}
+\theta' &amp;= \frac{q}{Lr^2 (1-\cos2\theta)}
+\end{align*}
+</div>This is the rate at which \(\theta\) is changing, but we need the rate at which \(h\) is changing. We get this from<div class="displaymath">
+\begin{align*}
+h &amp;= r - r\cos \theta &amp; \text{differentiating this gives}\\
+h' &amp;= r\sin\theta \cdot \theta'
+\end{align*}
+</div>Substituting our expression for \(\theta'\) into the expression for \(h'\) gives<div class="displaymath">
+\begin{align*}
+h' &amp;= r\sin\theta \cdot \frac{q}{Lr^2 (1-\cos2\theta)}
+\end{align*}
+</div>
+</li>
+<li id="li-851">We can clean this up a bit more — recall more double-angle formulas <a knowl="" class="id-ref" refid="hk-fn-119" id="fn-119"><sup> 4 </sup></a><span id="hk-fn-119" class="hidden-content tex2jax_ignore"><span class="footnote">Take another look at Appendix <a href="sec_must_deriv.html" class="xref" title="Section A.14: You Should be Able to Derive">A.14</a>.</span></span><div class="displaymath">
+\begin{align*}
+h'
+&amp;= r\sin\theta \cdot \frac{q}{Lr^2 (1-\cos2\theta)} &amp; \text{substitute $\cos2\theta =
+1-2\sin^2\theta$}\\
+&amp;= r\sin\theta \cdot \frac{q}{Lr^2 \cdot 2\sin^2\theta} &amp; \text{now cancel $r$'s and a $\sin\theta$}\\
+&amp;= \frac{q}{2Lr\sin\theta}
+\end{align*}
+</div>
+</li>
+<li id="li-852">
+<p id="p-3053">But we can clean this up even more — instead of writing this rate in terms of \(\theta\) it is more natural to write it in terms of \(h\) (since the initial problem is stated in terms of \(h\)). From the triangle</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:41%;margin-right:41%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/fuel6.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p id="p-3054">and Pythagoras we have</p>
+<div class="displaymath">
+\begin{gather*}
+\sin\theta =\frac{\sqrt{r^2-(r-h)^2}}{r}=\frac{\sqrt{2rh-h^2}}{r}
+\end{gather*}
+</div>
+<p>and hence</p>
+<div class="displaymath">
+\begin{gather*}
+h' = \frac{q}{2L\sqrt{2rh-h^2}}.
+\end{gather*}
+</div>
+</li>
+<li id="li-853">As a check, notice that \(h'\) becomes undefined when \(h \lt 0\) and also when \(h \gt 2r\text{,}\) because then the argument of the square root in the denominator is negative. Both make sense — the fuel level in the tank must obey \(0\le h\le 2r\text{.}\)</li>
+</ul></article></div></section></div></main>
+</div>
+<!--Start: Google Universal code--><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-105798942-1', 'auto');
+ga('send', 'pageview');
+</script><!--End: Google Universal code--><div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.1/login.js"></script>
+</body>
+</html>

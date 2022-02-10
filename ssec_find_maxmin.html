@@ -1,0 +1,411 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:03:05-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Finding Global Maxima and Minima</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.1/pretext.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on2.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="RQS.css">
+<link href="https://pretextbook.org/css/0.1/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\require{cancel}\newcommand{\dee}[1]{\mathrm{d}#1}
+\newcommand{\half}{ \frac{1}{2} }
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ts}{\textstyle}
+\newcommand{\es}{ {\varnothing}}
+\newcommand{\st}{ {\mbox{ s.t. }} }
+\newcommand{\pow}[1]{ \mathcal{P}\left(#1\right) }
+\newcommand{\set}[1]{ \left\{#1\right\} }
+\newcommand{\lin}{{\text{LIN}}}
+\newcommand{\quot}{{\text{QR}}}
+\newcommand{\simp}{{\text{SMP}}}
+\newcommand{\diff}[2]{ \frac{\mathrm{d}#1}{\mathrm{d}#2}}
+\newcommand{\bdiff}[2]{ \frac{\mathrm{d}}{\mathrm{d}#2} \left( #1 \right)}
+\newcommand{\ddiff}[3]{ \frac{\mathrm{d}^#1#2}{\mathrm{d}{#3}^#1}}
+\renewcommand{\neg}{ {\sim} }
+\newcommand{\limp}{ {\;\Rightarrow\;} }
+\newcommand{\nimp}{ {\;\not\Rightarrow\;} }
+\newcommand{\liff}{ {\;\Leftrightarrow\;} }
+\newcommand{\niff}{ {\;\not\Leftrightarrow\;} }
+\newcommand{\De}{\Delta}
+\newcommand{\bbbn}{\mathbb{N}}
+\newcommand{\bbbr}{\mathbb{R}}
+\newcommand{\bbbp}{\mathbb{P}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\Si}{\Sigma}
+
+\newcommand{\arccsc}{\mathop{\mathrm{arccsc}}}
+\newcommand{\arcsec}{\mathop{\mathrm{arcsec}}}
+\newcommand{\arccot}{\mathop{\mathrm{arccot}}}
+\newcommand{\erf}{\mathop{\mathrm{erf}}}
+\newcommand{\smsum}{\mathop{{\ts \sum}}}
+\newcommand{\atp}[2]{ \genfrac{}{}{0in}{}{#1}{#2} }
+
+\newcommand{\ave}{\mathrm{ave}}
+\newcommand{\llt}{\left \lt }
+\newcommand{\rgt}{\right \gt }
+
+
+\newcommand{\YEaxis}[2]{\draw[help lines] (-#1,0)--(#1,0) node[right]{$x$};\draw[help lines] (0,-#2)--(0,#2) node[above]{$y$};}
+
+\newcommand{\YEaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$x$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YEtaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+\newcommand{\YEtaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$}; \draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YExcoord}[2]{\draw (#1,.2)--(#1,-.2) node[below]{$#2$};}
+\newcommand{\YEycoord}[2]{\draw (.2,#1)--(-.2,#1) node[left]{$#2$};}
+\newcommand{\YEnxcoord}[2]{\draw (#1,-.2)--(#1,.2) node[above]{$#2$};}
+\newcommand{\YEnycoord}[2]{\draw (-.2,#1)--(.2,#1) node[right]{$#2$};}
+
+\newcommand{\YEstickfig}[3]{
+\draw (#1,#2) arc(-90:270:2mm);
+\draw (#1,#2)--(#1,#2-.5) (#1-.25,#2-.75)--(#1,#2-.5)--(#1+.25,#2-.75) (#1-.2,#2-.2)--(#1+.2,#2-.2);}
+
+
+\newcommand{\IBP}[7]{
+\begin{array}{|c  | l | l |}
+\hline
+\color{red}{\text{Option 1:}}
+&amp; u=#2
+&amp;\color{red}{\dee{u}=#3 ~ \dee{#1}}
+\\
+&amp; \dee{v}=#5~\dee{#1}
+&amp;\color{red}{v=#7}
+\\
+\hline
+\color{blue}{\text{Option 2:}}
+&amp; u=#5
+&amp;\color{blue}{\dee{u}=#6 ~ \dee{#1}}
+\\
+&amp;\dee{v}=#2 \dee{#1}
+&amp;\color{blue}{v=#4}
+\\
+\hline
+\end{array}
+}
+
+
+\renewcommand{\textcolor}[2]{{\color{#1}{#2}}}
+
+
+\newcommand{\trigtri}[4]{
+\begin{tikzpicture}
+\draw (-.5,0)--(2,0)--(2,1.5)--cycle;
+\draw (1.8,0) |- (2,.2);
+\draw[double] (0,0) arc(0:30:.5cm);
+\draw (0,.2) node[right]{$#1$};
+\draw (1,-.5) node{$#2$};
+\draw (2,.75) node[right]{$#3$};
+\draw (.6,1.1) node[rotate=30]{$#4$};
+\end{tikzpicture}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="clp_1_dc.html"><span class="title">CLP-1 Differential Calculus</span></a></h1>
+<p class="byline">Joel Feldman, Andrew Rechnitzer, Elyse Yeager</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="ssec_maxmin.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="sec_optimise.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="sec_opt_eg.html" title="Next">Next</a></span></div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="ssec_maxmin.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="sec_optimise.html" title="Up">Up</a><a class="next-button button toolbar-item" href="sec_opt_eg.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="index.html" data-scroll="index"><span class="title">Front Matter</span></a></h2>
+<ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface-2.html" data-scroll="preface-2">Using the exercises in this book</a></li>
+<li><a href="preface-3.html" data-scroll="preface-3">Feedback about the text</a></li>
+</ul>
+<h2 class="link"><a href="chap_basics.html" data-scroll="chap_basics"><span class="codenumber">0</span> <span class="title">The basics</span></a></h2>
+<ul>
+<li><a href="sec_0_1.html" data-scroll="sec_0_1">Numbers</a></li>
+<li><a href="sec_sets.html" data-scroll="sec_sets">Sets</a></li>
+<li><a href="sec_0_3.html" data-scroll="sec_0_3">Other Important Sets</a></li>
+<li><a href="sec_0_4.html" data-scroll="sec_0_4">Functions</a></li>
+<li><a href="sec_parsing.html" data-scroll="sec_parsing">Parsing Formulas</a></li>
+<li><a href="sec_inverse_functions.html" data-scroll="sec_inverse_functions">Inverse Functions</a></li>
+</ul>
+<h2 class="link"><a href="chap_limits.html" data-scroll="chap_limits"><span class="codenumber">1</span> <span class="title">Limits</span></a></h2>
+<ul>
+<li><a href="sec_first_lim.html" data-scroll="sec_first_lim">Drawing Tangents and a First Limit</a></li>
+<li><a href="sec_velocity.html" data-scroll="sec_velocity">Another Limit and Computing Velocity</a></li>
+<li><a href="sec_lim_func.html" data-scroll="sec_lim_func">The Limit of a Function</a></li>
+<li><a href="sec_1_4.html" data-scroll="sec_1_4">Calculating Limits with Limit Laws</a></li>
+<li><a href="sec_1_5.html" data-scroll="sec_1_5">Limits at Infinity</a></li>
+<li><a href="sec_1_6.html" data-scroll="sec_1_6">Continuity</a></li>
+<li><a href="sec_opt_formal_limit.html" data-scroll="sec_opt_formal_limit">(Optional) — Making the Informal a Little More Formal</a></li>
+<li><a href="sec_lim_inf_formal.html" data-scroll="sec_lim_inf_formal">(Optional) — Making Infinite Limits a Little More Formal</a></li>
+<li><a href="sec_proof_arith_lim.html" data-scroll="sec_proof_arith_lim">(Optional) — Proving the Arithmetic of Limits</a></li>
+</ul>
+<h2 class="link"><a href="chap_deriv.html" data-scroll="chap_deriv"><span class="codenumber">2</span> <span class="title">Derivatives</span></a></h2>
+<ul>
+<li><a href="sec_2_1.html" data-scroll="sec_2_1">Revisiting Tangent Lines</a></li>
+<li><a href="sec_def_deriv.html" data-scroll="sec_def_deriv">Definition of the Derivative</a></li>
+<li><a href="sec_2_3.html" data-scroll="sec_2_3">Interpretations of the Derivative</a></li>
+<li><a href="sec_2_4.html" data-scroll="sec_2_4">Arithmetic of Derivatives - a Differentiation Toolbox</a></li>
+<li><a href="sec_proof_arith_deriv.html" data-scroll="sec_proof_arith_deriv">Proofs of the Arithmetic of Derivatives</a></li>
+<li><a href="sec_2_6.html" data-scroll="sec_2_6">Using the Arithmetic of Derivatives –  Examples</a></li>
+<li><a href="sec_exp_func.html" data-scroll="sec_exp_func">Derivatives of Exponential Functions</a></li>
+<li><a href="sec_diff_trig.html" data-scroll="sec_diff_trig">Derivatives of Trigonometric Functions</a></li>
+<li><a href="sec_chain_rule.html" data-scroll="sec_chain_rule">One More Tool  – the Chain Rule</a></li>
+<li><a href="sec_diff_logs.html" data-scroll="sec_diff_logs">The Natural Logarithm</a></li>
+<li><a href="sec_2_11.html" data-scroll="sec_2_11">Implicit Differentiation</a></li>
+<li><a href="sec_invTrig.html" data-scroll="sec_invTrig">Inverse Trigonometric Functions</a></li>
+<li><a href="sec_mvt.html" data-scroll="sec_mvt">The Mean Value Theorem</a></li>
+<li><a href="sec_higher_diff.html" data-scroll="sec_higher_diff">Higher Order Derivatives</a></li>
+<li><a href="sec_cont_deriv.html" data-scroll="sec_cont_deriv">(Optional) — Is \(\lim_{x\to c}f'(x)\) Equal to \(f'(c)\text{?}\)</a></li>
+</ul>
+<h2 class="link"><a href="chap_appl_deriv.html" data-scroll="chap_appl_deriv"><span class="codenumber">3</span> <span class="title">Applications of derivatives</span></a></h2>
+<ul>
+<li><a href="sec_vel_acc.html" data-scroll="sec_vel_acc">Velocity and Acceleration</a></li>
+<li><a href="sec_rrates.html" data-scroll="sec_rrates">Related Rates</a></li>
+<li><a href="sec_ExpGthDecay.html" data-scroll="sec_ExpGthDecay">Exponential Growth and Decay</a></li>
+<li><a href="sec_DIFFTaylor.html" data-scroll="sec_DIFFTaylor">Taylor Polynomials</a></li>
+<li><a href="sec_optimise.html" data-scroll="sec_optimise">Optimisation</a></li>
+<li><a href="sec_curve_sketch.html" data-scroll="sec_curve_sketch">Sketching Graphs</a></li>
+<li><a href="sec_4_7.html" data-scroll="sec_4_7">L'Hôpital's Rule and Indeterminate Forms</a></li>
+</ul>
+<h2 class="link"><a href="chapter-5.html" data-scroll="chapter-5"><span class="codenumber">4</span> <span class="title">Towards Integral Calculus</span></a></h2>
+<ul><li><a href="sec_antidiff.html" data-scroll="sec_antidiff">Introduction to Antiderivatives</a></li></ul>
+<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Appendices</span></a></h2>
+<h2 class="link"><a href="app_highschool.html" data-scroll="app_highschool"><span class="codenumber">A</span> <span class="title">High School Material</span></a></h2>
+<ul>
+<li><a href="sec_simtri.html" data-scroll="sec_simtri">Similar Triangles</a></li>
+<li><a href="sec_A_2.html" data-scroll="sec_A_2">Pythagoras</a></li>
+<li><a href="sec_A_3.html" data-scroll="sec_A_3">Trigonometry — Definitions</a></li>
+<li><a href="app_rad_arc_sec.html" data-scroll="app_rad_arc_sec">Radians, Arcs and Sectors</a></li>
+<li><a href="app_sec_trig_graphs.html" data-scroll="app_sec_trig_graphs">Trigonometry — Graphs</a></li>
+<li><a href="sec_A_6.html" data-scroll="sec_A_6">Trigonometry — Special Triangles</a></li>
+<li><a href="sec_A_7.html" data-scroll="sec_A_7">Trigonometry — Simple Identities</a></li>
+<li><a href="sec_trig_add.html" data-scroll="sec_trig_add">Trigonometry — Add and Subtract Angles</a></li>
+<li><a href="sec_inv_trig.html" data-scroll="sec_inv_trig">Inverse Trig Functions</a></li>
+<li><a href="app_sec_areas.html" data-scroll="app_sec_areas">Areas</a></li>
+<li><a href="sec_volumes.html" data-scroll="sec_volumes">Volumes</a></li>
+<li><a href="sec_powers.html" data-scroll="sec_powers">Powers</a></li>
+<li><a href="sec_logs.html" data-scroll="sec_logs">Logarithms</a></li>
+<li><a href="sec_must_deriv.html" data-scroll="sec_must_deriv">You Should be Able to Derive</a></li>
+</ul>
+<h2 class="link"><a href="chap_app_B.html" data-scroll="chap_app_B"><span class="codenumber">B</span> <span class="title">Origin of Trig, Area and Volume Formulas</span></a></h2>
+<ul>
+<li><a href="sec_B_1.html" data-scroll="sec_B_1">Theorems about Triangles</a></li>
+<li><a href="sec_B_2.html" data-scroll="sec_B_2">Trigonometry</a></li>
+<li><a href="sec_B_3.html" data-scroll="sec_B_3">Inverse Trigonometric Functions</a></li>
+<li><a href="sec_B_4.html" data-scroll="sec_B_4">Cosine and Sine Laws</a></li>
+<li><a href="sec_B_5.html" data-scroll="sec_B_5">Circles, cones and spheres</a></li>
+</ul>
+<h2 class="link"><a href="app_root_finding.html" data-scroll="app_root_finding"><span class="codenumber">C</span> <span class="title">Root Finding</span></a></h2>
+<ul>
+<li><a href="sec_C_1.html" data-scroll="sec_C_1">Newton's Method</a></li>
+<li><a href="sec_C_2.html" data-scroll="sec_C_2">The Error Behaviour of Newton's Method</a></li>
+<li><a href="sec_C_3.html" data-scroll="sec_C_3">The false position (regula falsi) method</a></li>
+<li><a href="sec_C_4.html" data-scroll="sec_C_4">The secant method</a></li>
+<li><a href="sec_C_5.html" data-scroll="sec_C_5">The Error Behaviour of the Secant Method</a></li>
+</ul>
+<h2 class="link"><a href="app_hint.html" data-scroll="app_hint"><span class="codenumber">D</span> <span class="title">Hints for Exercises</span></a></h2>
+<h2 class="link"><a href="app_answ.html" data-scroll="app_answ"><span class="codenumber">E</span> <span class="title">Answers to Exercises</span></a></h2>
+<h2 class="link"><a href="app_soln.html" data-scroll="app_soln"><span class="codenumber">F</span> <span class="title">Solutions to Exercises</span></a></h2></nav><div class="extras"><nav><a class="feedback-link" href="mailto:clp@ugrad.math.ubc.ca?subject=clp-pretext" target="_blank">Feedback</a><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="mathbook-content"><section class="subsection" id="ssec_find_maxmin"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.5.2</span> <span class="title">Finding Global Maxima and Minima</span>
+</h3>
+<a href="ssec_find_maxmin.html" class="permalink">¶</a><p id="p-4188">We now have a technique for finding local maxima and minima — just look for values of \(x\) for which either \(f'(x)=0\) or \(f'(x)\) does not exist. What about finding global maxima and minima? We'll start by stating explicitly that, under appropriate hypotheses, global maxima and minima are guaranteed to exist.</p>
+<article class="theorem-like" id="thm_APPglobalMaxMinExist"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">3.5.11</span>
+</h6>
+<p id="p-4189">Let the function \(f(x)\) be defined and continuous on the closed, finite interval <a knowl="" class="id-ref" refid="hk-fn-161" id="fn-161"><sup> 5 </sup></a><span id="hk-fn-161" class="hidden-content tex2jax_ignore"><span class="footnote">The hypotheses that \(f(x)\) be continuous and that the interval be finite and closed are all essential. We suggest that you find three functions \(f_1(x)\text{,}\) \(f_2(x)\) and \(f_3(x)\) with \(f_1\) defined but not continuous on \(0\le x\le 1\text{,}\) \(f_2\) defined and continuous on \(-\infty \lt x \lt \infty\text{,}\) and \(f_3\) defined and continuous on \(0 \lt x \lt 1\text{,}\) and with none of \(f_1\text{,}\) \(f_2\) and \(f_3\) attaining either a global maximum or a global minimum.</span></span></p>
+<p id="p-4190">\(-\infty \lt a\le x\le b \lt \infty\text{.}\) Then \(f(x)\) attains a maximum and a minimum at least once. That is, there exist numbers \(a\le x_m, x_M\le b\) such that</p>
+<div class="displaymath">
+\begin{gather*}
+f(x_m)\le f(x)\le f(x_M)
+\qquad\text{for all }a\le x\le b
+\end{gather*}
+</div></article><p id="p-4191">So let's again consider the question</p>
+<blockquote class="blockquote" id="blockquote-36"><p id="p-4192">Suppose that the maximum (or minimum) value of \(f(x)\text{,}\) for \(a\le x\le b\text{,}\) is \(f(c)\text{.}\) What does that tell us about \(c\text{?}\)</p></blockquote>
+<p id="p-4193">If \(c\) obeys \(a \lt c \lt b\) (note the strict inequalities), then \(f\) has a local maximum (or minimum) at \(x=c\) and Theorem  <a knowl="./knowl/thm_APPlocalMaxMin.html" title="Theorem 3.5.4">3.5.4</a> tells us that either \(f'(c)=0\) or \(f'(c)\) does not exist. The only other place that a maximum or minimum can occur are at the ends of the interval. We can summarise this as:</p>
+<article class="theorem-like" id="thm_APPglobalMaxMin"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">3.5.12</span>
+</h6>
+<p id="p-4194">If \(f(x)\) has a global maximum or global minimum, for \(a\le x\le b\text{,}\) at \(x=c\) then there are 3 possibilities. Either</p>
+<ul class="disc">
+<li id="li-1250">\(f'(c)=0\text{,}\) or</li>
+<li id="li-1251">\(f'(c)\) does not exist, or</li>
+<li id="li-1252">\(c=a\) or \(c=b\text{.}\)</li>
+</ul>
+<p>That is, a global maximum or minimum must occur either at a critical point, a singular point or at the endpoints of the interval.</p></article><p id="p-4195">This theorem provides the basis for a method to find the maximum and minimum values of \(f(x)\) for \(a\le x\le b\text{:}\)</p>
+<article class="theorem-like" id="cor_find_maxmin"><h6 class="heading">
+<span class="type">Corollary</span> <span class="codenumber">3.5.13</span>
+</h6>
+<p id="p-4196">Let \(f(x)\) be a function on the interval \(a \leq x \leq b\text{.}\) Then to find the global maximum and minimum of the function:</p>
+<ul class="disc">
+<li id="li-1253">
+<p id="p-4197">Make a list of all values of \(c\text{,}\) with \(a\le c\le b\text{,}\) for which</p>
+<ul class="circle">
+<li id="li-1254">\(f'(c)=0\text{,}\) or</li>
+<li id="li-1255">\(f'(c)\) does not exist, or</li>
+<li id="li-1256">\(c=a\) or \(c=b\text{.}\)</li>
+</ul>
+<p>That is — compute the function at all the critical points, singular points, and endpoints.</p>
+</li>
+<li id="li-1257">Evaluate \(f(c)\) for each \(c\) in that list. The largest (or smallest) of those values is the largest (or smallest) value of \(f(x)\) for \(a\le x\le b\text{.}\)</li>
+</ul></article><p id="p-4198">Let's now demonstrate how to use this strategy. The function in  this first example is not too simple — but it is a good example of a function that contains both a singular point and a critical point.</p>
+<article class="example-like" id="APPglobalMaxMinA"><a knowl="" class="id-ref" refid="hk-APPglobalMaxMinA"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">3.5.14</span> <span class="title">Find max and min of \(2x^{5/3}+3x^{2/3}\)</span>
+</h6></a></article><div id="hk-APPglobalMaxMinA" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-4199">Find the largest and smallest values of the function \(f(x)=2x^{5/3}+3x^{2/3}\) for \(-1\le
+x\le 1\text{.}\)</p>
+<p id="p-4200"><em class="alert">Solution</em> We will apply the method in Corollary <a knowl="./knowl/cor_find_maxmin.html" title="Corollary 3.5.13">3.5.13</a>. It is perhaps easiest to find the values at the endpoints of the intervals and then move on to the values at any critical or singular points.</p>
+<ul class="disc">
+<li id="li-1258">Before we get into things, notice that we can rewrite the function by factoring it:<div class="displaymath">
+\begin{align*}
+f(x) &amp;= 2x^{5/3}+3x^{2/3} = x^{2/3} \cdot \left(2x + 3\right)
+\end{align*}
+</div>
+</li>
+<li id="li-1259">Let's compute the function at the endpoints of the interval:<div class="displaymath">
+\begin{align*}
+f(1) &amp;= 2 +3 = 5\\
+f(-1) &amp;= 2 \cdot(-1)^{5/3} + 3\cdot (-1)^{2/3} =-2 + 3 = 1
+\end{align*}
+</div>
+</li>
+<li id="li-1260">To compute the function at the critical and singular points we first need to find the derivative:<div class="displaymath">
+\begin{align*}
+f'(x) &amp;= 2 \cdot \frac{5}{3} x^{2/3} + 3 \cdot \frac{2}{3} x^{-1/3}\\
+&amp;= \frac{10}{3} x^{2/3} + 2 x^{-1/3}\\
+&amp;= \frac{10 x + 6}{3 x^{1/3}}
+\end{align*}
+</div>
+</li>
+<li id="li-1261">Notice that the numerator and denominator are defined for all \(x\text{.}\) The only place the derivative is undefined is when the denominator is zero. Hence the only singular point is at \(x=0\text{.}\) The corresponding function value is<div class="displaymath">
+\begin{align*}
+f(0) &amp;= 0
+\end{align*}
+</div>
+</li>
+<li id="li-1262">To find the critical points we need to solve \(f'(x) = 0\text{:}\)<div class="displaymath">
+\begin{align*}
+0 &amp;= \frac{10 x + 6}{3 x^{1/3}}
+\end{align*}
+</div>Hence we must have \(10x=-6\) or \(x=-3/5\text{.}\) The corresponding function value is<div class="displaymath">
+\begin{align*}
+f(x) &amp;= x^{2/3} \cdot \left(2x + 3\right) &amp; \text{recall this from above, then}\\
+f(-3/5) &amp;= (-3/5)^{2/3} \cdot\left(2 \cdot \frac{-3}{5} + 3 \right)\\
+&amp;= \left(\frac{9}{25}\right)^{1/3} \cdot \frac{-6 + 15}{5}\\
+&amp;= \left(\frac{9}{25}\right)^{1/3} \cdot \frac{9}{5}  \approx 1.28
+\end{align*}
+</div>Note that if we do not want to approximate the root (if, for example, we do not have a calculator handy), then we can also write<div class="displaymath">
+\begin{align*}
+f(-3/5) &amp;= \left(\frac{9}{25}\right)^{1/3} \cdot \frac{9}{5}\\
+&amp;= \left(\frac{9}{25}\right)^{1/3} \cdot \frac{9}{25} \cdot 5\\
+&amp;= 5 \cdot \left( \frac{9}{25} \right)^{4/3}
+\end{align*}
+</div>Since \(0 \lt 9/25 \lt 1\text{,}\) we know that \(0  \lt  \left( \frac{9}{25} \right)^{4/3}  \lt  1\text{,}\) and hence<div class="displaymath">
+\begin{gather*}
+0  \lt  f(-3/5) = 5 \cdot \left( \frac{9}{25} \right)^{4/3}  \lt  5.
+\end{gather*}
+</div>
+</li>
+<li id="li-1263">
+<p id="p-4201">We summarise our work in this table</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<tr>
+<td class="c m b1 r1 l1 t1 lines">\(c\)</td>
+<td class="c m b1 r1 l0 t1 lines">\(-\frac{3}{5}\)</td>
+<td class="c m b1 r1 l0 t1 lines">\(0\)</td>
+<td class="c m b1 r1 l0 t1 lines">\(-1\)</td>
+<td class="c m b1 r1 l0 t1 lines">\(1\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">type</td>
+<td class="c m b1 r1 l0 t0 lines">critical point</td>
+<td class="c m b1 r1 l0 t0 lines">singular point</td>
+<td class="c m b1 r1 l0 t0 lines">endpoint</td>
+<td class="c m b1 r1 l0 t0 lines">endpoint</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">\(f(c)\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\frac{9}{5}\root{3}\of{\frac{9}{25}}\approx 1.28\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(0\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(1\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(5\)</td>
+</tr>
+</table></div></div></div>
+</li>
+<li id="li-1264">The largest value of \(f\) in the table is \(5\) and the smallest value of \(f\) in the table is \(0\text{.}\)</li>
+<li id="li-1265">Thus on the interval \(-1\leq x \leq 1\) the global maximum of \(f\) is \(5\text{,}\) and is taken at \(x=1\text{,}\) while the global minimum value of \(f(x)\) is \(0\text{,}\) and is taken at \(x=0\text{.}\)</li>
+<li id="li-1266">
+<p id="p-4202">For completeness we also sketch the graph of this function on the same interval.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:17%;margin-right:17%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/globalMaxMinA.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p id="p-4203">Later (in Section <a href="sec_curve_sketch.html" class="xref" title="Section 3.6: Sketching Graphs">3.6</a>) we will see how to construct such a sketch without using a calculator or computer.</p>
+</li>
+</ul></article></div></section></div></main>
+</div>
+<!--Start: Google Universal code--><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-105798942-1', 'auto');
+ga('send', 'pageview');
+</script><!--End: Google Universal code--><div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.1/login.js"></script>
+</body>
+</html>

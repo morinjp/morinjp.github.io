@@ -1,0 +1,46 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:15:04-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p><em class="alert">Solution</em> This problem concerns some function \(y(x)\) that is not given to us explicitly. All that we are told is that \(y(x)\) satisfies</p>
+<div class="displaymath">
+\begin{equation*}
+y(x)=y(x)^3+xy(x)+x^3
+\tag{E1}
+\end{equation*}
+</div>
+<p>for all \(x\text{.}\) We are asked to find \(y''(x)\text{.}\) We cannot solve this equation to get an explicit formula for \(y(x)\text{.}\)  So we use implicit differentiation, as we did in Example <a knowl="./knowl/eg_DIFFimpldiffD.html" title="Example 2.11.1: Finding a tangent line using implicit differentiation">2.11.1</a>. That is, we apply \(\diff{}{x}\) to both sides of (E1). This gives</p>
+<div class="displaymath">
+\begin{equation*}
+y'(x)=3y(x)^2\,y'(x)+y(x)+x\,y'(x)+3x^2
+\tag{E2}
+\end{equation*}
+</div>
+<p>which we can solve for \(y'(x)\text{,}\) by moving all \(y'(x)\)'s to the left hand side, giving</p>
+<div class="displaymath">
+\begin{equation*}
+\big[1-x-3y(x)^2\big]y'(x) = y(x)+3x^2
+\end{equation*}
+</div>
+<p>and then dividing across.</p>
+<div class="displaymath">
+\begin{equation*}
+y'(x) = \frac{y(x)+3x^2}{1-x-3y(x)^2}
+\tag{E3}
+\end{equation*}
+</div>
+<p>To get \(y''(x)\text{,}\) we have two options.</p>
+<span class="incontext"><a href="subsection-41.html#p-2726">in-context</a></span>
+</body>
+</html>

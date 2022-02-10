@@ -1,0 +1,38 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:15:24-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>Consider the function</p>
+<div class="displaymath">
+\begin{equation*}
+f(x) = \begin{cases}
+\frac{\sin x^2}{x} \amp\text{if }x\ne 0 \\
+0                  \amp\text{if }x=0
+\end{cases}
+\end{equation*}
+</div>
+<p>For any \(x\ne 0\) we can easily use our differentiation rules to find</p>
+<div class="displaymath">
+\begin{equation*}
+f'(x) = \frac{2x^2\cos x^2 -\sin x^2}{x^2}
+\end{equation*}
+</div>
+<p>But for \(x=0\) none of our usual differentation rules apply. So how do we find \(f'(0)\text{?}\) One obviously legitimate strategy is to directly apply the Definition 2.2.1  of the derivative. As an alternative, we will now consider the question “Can one find \(f'(0)\) by taking the limit of \(f'(x)\) as \(x\) tends to zero?”. There is bad news and there is good news.</p>
+<ul class="disc">
+<li>The bad news is that, even for functions \(f(x)\) that are differentiable for all \(x\text{,}\) \(f'(x)\) need not be continuous. That is, it is <em class="emphasis">not</em> always true that \(\lim_{x\rightarrow 0}f'(x) = f'(0)\text{.}\) We will see a function for which \(\lim_{x\rightarrow 0}f'(x) \ne f'(0)\) in Example <a knowl="./knowl/eg_discontinuous_derivative.html" title="Example 2.15.1">2.15.1</a>, below.</li>
+<li>The good news is that Theorem <a knowl="./knowl/thm_continuous_derivative.html" title="Theorem 2.15.2">2.15.2</a>, below provides conditions which are sufficient to guarantee that \(f(x)\) is differentiable at \(x=0\) and that \(\lim_{x\rightarrow 0}f'(x) = f'(0)\text{.}\)</li>
+</ul>
+<span class="incontext"><a href="sec_cont_deriv.html#p-2848">in-context</a></span>
+</body>
+</html>

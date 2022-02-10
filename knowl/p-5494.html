@@ -1,0 +1,55 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:23:11-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>The recursion rule in (E8) is famous<a knowl="./knowl/fn-186-hidden.html" title="Footnote C.5.1"><sup> 1 </sup></a>. The Fibonacci<a knowl="./knowl/fn-187-hidden.html" title="Footnote C.5.2"><sup> 2 </sup></a> sequence (which is \(0\text{,}\) \(1\text{,}\) \(1\text{,}\) \(2\text{,}\) \(3\text{,}\) \(5\text{,}\) \(8\text{,}\) \(13\text{,}\) \(\cdots\)), is defined by</p>
+<div class="displaymath">
+\begin{align*}
+F_0\amp =0 \\
+F_1\amp =1 \\
+F_n\amp =F_{n-1}+F_{n-2}\qquad\text{for }n&gt;1
+\end{align*}
+</div>
+<p>So, for \(n\ge 2\text{,}\) \(\alpha_n = F_{n-1}\) and \(\beta_n=F_n\) and</p>
+<div class="displaymath">
+\begin{equation*}
+\delta_n \approx \delta_0^{\alpha_n}\delta_1^{\beta_n}
+= \delta_0^{F_{n-1}}\delta_1^{F_n}
+\end{equation*}
+</div>
+<p>One of the known properties of the Fibonacci sequence is that, for large \(n\text{,}\)</p>
+<div class="displaymath">
+\begin{equation*}
+F_n\approx\frac{\varphi^n}{\sqrt{5}}\qquad\text{where }
+\varphi=\frac{1+\sqrt{5}}{2} \approx 1.61803
+\end{equation*}
+</div>
+<p>This \(\varphi\) is the golden ratio<a knowl="./knowl/fn-188-hidden.html" title="Footnote C.5.3"><sup> 3 </sup></a>.  So, for large \(n\text{,}\)</p>
+<div class="displaymath">
+\begin{align*}
+K\varepsilon_n \amp = \delta_n
+\approx \delta_0^{F_{n-1}}\delta_1^{F_n}
+\approx \delta_0^{\frac{\varphi^{n-1}}{\sqrt{5}}}
+\delta_1^{\frac{\varphi^n}{\sqrt{5}}}
+= \delta_0^{\frac{1}{\sqrt{5}\varphi}\times\varphi^n}
+\delta_1^{\frac{1}{\sqrt{5}}\times\varphi^n}\\
+\amp = d^{\varphi^n}\qquad\text{where}\quad
+d=\delta_0^{\frac{1}{\sqrt{5}\,\varphi}}\delta_1^{\frac{1}{\sqrt{5}}}\\
+\amp \approx d^{1.6^n}
+\end{align*}
+</div>
+<p>Assuming that \(0\lt \delta_0=K\varepsilon_0\lt 1\) and \(0\lt \delta_1=K\varepsilon_1\lt 1\text{,}\) we will have \(0\lt d\lt 1\text{.}\)</p>
+<span class="incontext"><a href="sec_C_5.html#p-5494">in-context</a></span>
+</body>
+</html>

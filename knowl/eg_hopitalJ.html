@@ -1,0 +1,46 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:21:31-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="example-like"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">3.7.15</span> <span class="title">\(\ds \lim_{x\to 0^+} x \cdot \log x\)</span>
+</h6>
+<p>Consider the limit</p>
+<div class="displaymath">
+\begin{gather*}
+\lim_{x\to 0^+} x \cdot \log x
+\end{gather*}
+</div>
+<p>Here the function \(f(x)=x\) goes to zero, while \(g(x)=\log x\) goes to \(-\infty\text{.}\) If we rewrite this as the fraction</p>
+<div class="displaymath">
+\begin{align*}
+x \cdot \log x &amp;= \frac{\log x}{1/x}
+\end{align*}
+</div>
+<p>then the \(0 \cdot \infty\) form has become an \(\frac\infty\infty\) form.</p>
+<p>The result is then</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{x\rightarrow 0+}\underbrace{x}_{\rightarrow 0}
+\underbrace{\log x}_{\rightarrow-\infty}
+&amp; =\lim_{x\rightarrow 0+}\underbrace{\frac{\log x}
+{\frac{1}{x}}}_{\atp
+{\mathrm{num}\rightarrow-\infty}
+{\mathrm{den}\rightarrow\infty}}
+=\lim_{x\rightarrow 0+}\frac{\frac{1}{x}}{-\frac{1}{x^2}}
+=-\lim_{x\rightarrow 0+}x
+=0
+\end{align*}
+</div></article><span class="incontext"><a href="ssec_3_7_2.html#eg_hopitalJ">in-context</a></span>
+</body>
+</html>

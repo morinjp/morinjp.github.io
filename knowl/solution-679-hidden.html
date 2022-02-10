@@ -1,0 +1,33 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:22:12-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><div class="solution">
+<p>We notice that \(f(x)\) looks similar to the derivative of the arctangent function, \(\dfrac{1}{1+x^2}\text{.}\)</p>
+<div class="displaymath">
+\begin{align*}
+f(x)=\frac{1}{1+25x^2}&amp;=\frac{1}{1+(5x)^2}\\
+\end{align*}
+<p class="intertext">This gives us a first guess for our antiderivative: perhaps \(\arctan(5x)\) will work. We test it by differentiating, making sure we don't forget the chain rule.</p>
+\begin{align*}
+\diff{}{x}\left\{\arctan(\textcolor{red}{5x})\right\}&amp;=\frac{1}{1+\left(\textcolor{red}{5x}\right)^2}\cdot\textcolor{red}{5}\\
+\end{align*}
+<p class="intertext">We're close to \(f(x)\text{,}\) but we've multiplied by 5. That's easy to take care of: we can divide our guess by 5.</p>
+\begin{align*}
+\diff{}{x}\left\{\frac{1}{5}\arctan(\textcolor{red}{5x})\right\}&amp;=
+\frac{1}{5}\left(\frac{1}{1+\left(\textcolor{red}{5x}\right)^2}\right)\cdot\textcolor{red}{5}\\
+&amp;=\frac{1}{1+25x^2}=f(x)
+\end{align*}
+</div>
+<p>So, the most general antiderivative of \(f(x)\) is \(F(x)=\dfrac{1}{5}\arctan(5x)+C\text{.}\)</p>
+</div></body>
+</html>

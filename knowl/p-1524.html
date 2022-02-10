@@ -1,0 +1,45 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:12:45-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>Recall that in Theorem <a knowl="./knowl/thm_DIFFlinearity.html" title="Theorem 2.4.2: Linearity of differentiation">2.4.2</a> we defined  \(S(x)=\alpha\,f(x)+\beta\,g(x)\text{,}\) where \(\alpha,\beta\in\bbbr\)  are constants. We wish to compute \(S'(x)\text{,}\) so we start with the definition:</p>
+<div class="displaymath">
+\begin{align*}
+S'(x) &amp;= \lim_{h \to 0} \frac{S(x+h)-S(x)}{h}
+\end{align*}
+</div>
+<p>Let us concentrate on the numerator of the expression inside the limit and then come  back to the full limit in a moment. Substitute in the definition of \(S(x)\text{:}\)</p>
+<div class="displaymath">
+\begin{align*}
+S(x+h)-S(x) &amp;=
+\big[ \alpha f(x+h) + \beta g(x+h) \big] -
+\big[ \alpha f(x) + \beta g(x) \big]  &amp;\text{collect terms}\\
+&amp;=\alpha\big[f(x+h)-f(x)]+\beta\big[g(x+h)-g(x)\big]
+\end{align*}
+</div>
+<p>Now it is easy to see the structures we need — namely, we almost have the expressions  for the derivatives \(f'(x)\) and \(g'(x)\text{.}\) Indeed, all we need to do is divide by \(h\) and  take the limit. So let's finish things off.</p>
+<div class="displaymath">
+\begin{align*}
+S'(x) &amp;= \lim_{h \to 0} \frac{S(x+h)-S(x)}{h} &amp; \text{from above}\\
+&amp;= \lim_{h \to 0} \frac{\alpha\big[f(x+h)-f(x)]+\beta\big[g(x+h)-g(x)\big] }{h}\\
+&amp;= \lim_{h \to 0} \left[ \alpha\frac{f(x+h)-f(x)}{h} + \beta\frac{g(x+h)-g(x)}{h}
+\right] &amp;\text{limit laws}\\
+&amp;= \alpha\lim_{h \to 0} \frac{f(x+h)-f(x)}{h} + \beta\lim_{h\to0}\frac{g(x+h)-g(x)}{h}\\
+&amp;=\alpha f'(x) + \beta g'(x)
+\end{align*}
+</div>
+<p>as required.</p>
+<span class="incontext"><a href="subsection-17.html#p-1524">in-context</a></span>
+</body>
+</html>

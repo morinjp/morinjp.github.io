@@ -1,0 +1,43 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:13:58-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>We can also now finally get around to computing the derivative of \(a^x\) (which we started to do back in Section <a href="sec_exp_func.html" class="xref" title="Section 2.7: Derivatives of Exponential Functions">2.7</a>).</p>
+<div class="displaymath">
+\begin{align*}
+f(x) &amp;= a^x &amp; \text{take log of both sides}\\
+\log f(x) &amp;= x \log a &amp; \text{exponentiate both sides base $e$}\\
+f(x) &amp;= e^{x \log a} &amp; \text{chain rule}\\
+f'(x) &amp;= e^{x \log a} \cdot \log a\\
+&amp;= a^x \cdot \log a
+\end{align*}
+</div>
+<p>Notice that we could have also done the following:</p>
+<div class="displaymath">
+\begin{align*}
+f(x) &amp;= a^x &amp; \text{take log of both sides}\\
+\log f(x) &amp;= x \log a &amp; \text{differentiate both sides}\\
+\diff{}{x} \left( \log f(x) \right) &amp;=
+\log a\\
+\end{align*}
+<p class="intertext">We then process the left-hand side using the chain rule</p>
+\begin{align*}
+f'(x) \cdot \frac{1}{f(x)} &amp;= \log a\\
+f'(x) &amp;= f(x) \cdot \log a = a^x \cdot \log a
+\end{align*}
+</div>
+<p>We will see \(\diff{}{x} \log f(x)\) more below in the subsection on “logarithmic differentiation”.</p>
+<span class="incontext"><a href="subsection-33.html#p-2123">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,454 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:00:28-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>(Optional) — Making the Informal a Little More Formal</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.1/pretext.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on2.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="RQS.css">
+<link href="https://pretextbook.org/css/0.1/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\require{cancel}\newcommand{\dee}[1]{\mathrm{d}#1}
+\newcommand{\half}{ \frac{1}{2} }
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ts}{\textstyle}
+\newcommand{\es}{ {\varnothing}}
+\newcommand{\st}{ {\mbox{ s.t. }} }
+\newcommand{\pow}[1]{ \mathcal{P}\left(#1\right) }
+\newcommand{\set}[1]{ \left\{#1\right\} }
+\newcommand{\lin}{{\text{LIN}}}
+\newcommand{\quot}{{\text{QR}}}
+\newcommand{\simp}{{\text{SMP}}}
+\newcommand{\diff}[2]{ \frac{\mathrm{d}#1}{\mathrm{d}#2}}
+\newcommand{\bdiff}[2]{ \frac{\mathrm{d}}{\mathrm{d}#2} \left( #1 \right)}
+\newcommand{\ddiff}[3]{ \frac{\mathrm{d}^#1#2}{\mathrm{d}{#3}^#1}}
+\renewcommand{\neg}{ {\sim} }
+\newcommand{\limp}{ {\;\Rightarrow\;} }
+\newcommand{\nimp}{ {\;\not\Rightarrow\;} }
+\newcommand{\liff}{ {\;\Leftrightarrow\;} }
+\newcommand{\niff}{ {\;\not\Leftrightarrow\;} }
+\newcommand{\De}{\Delta}
+\newcommand{\bbbn}{\mathbb{N}}
+\newcommand{\bbbr}{\mathbb{R}}
+\newcommand{\bbbp}{\mathbb{P}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\Si}{\Sigma}
+
+\newcommand{\arccsc}{\mathop{\mathrm{arccsc}}}
+\newcommand{\arcsec}{\mathop{\mathrm{arcsec}}}
+\newcommand{\arccot}{\mathop{\mathrm{arccot}}}
+\newcommand{\erf}{\mathop{\mathrm{erf}}}
+\newcommand{\smsum}{\mathop{{\ts \sum}}}
+\newcommand{\atp}[2]{ \genfrac{}{}{0in}{}{#1}{#2} }
+
+\newcommand{\ave}{\mathrm{ave}}
+\newcommand{\llt}{\left \lt }
+\newcommand{\rgt}{\right \gt }
+
+
+\newcommand{\YEaxis}[2]{\draw[help lines] (-#1,0)--(#1,0) node[right]{$x$};\draw[help lines] (0,-#2)--(0,#2) node[above]{$y$};}
+
+\newcommand{\YEaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$x$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YEtaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+\newcommand{\YEtaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$}; \draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YExcoord}[2]{\draw (#1,.2)--(#1,-.2) node[below]{$#2$};}
+\newcommand{\YEycoord}[2]{\draw (.2,#1)--(-.2,#1) node[left]{$#2$};}
+\newcommand{\YEnxcoord}[2]{\draw (#1,-.2)--(#1,.2) node[above]{$#2$};}
+\newcommand{\YEnycoord}[2]{\draw (-.2,#1)--(.2,#1) node[right]{$#2$};}
+
+\newcommand{\YEstickfig}[3]{
+\draw (#1,#2) arc(-90:270:2mm);
+\draw (#1,#2)--(#1,#2-.5) (#1-.25,#2-.75)--(#1,#2-.5)--(#1+.25,#2-.75) (#1-.2,#2-.2)--(#1+.2,#2-.2);}
+
+
+\newcommand{\IBP}[7]{
+\begin{array}{|c  | l | l |}
+\hline
+\color{red}{\text{Option 1:}}
+&amp; u=#2
+&amp;\color{red}{\dee{u}=#3 ~ \dee{#1}}
+\\
+&amp; \dee{v}=#5~\dee{#1}
+&amp;\color{red}{v=#7}
+\\
+\hline
+\color{blue}{\text{Option 2:}}
+&amp; u=#5
+&amp;\color{blue}{\dee{u}=#6 ~ \dee{#1}}
+\\
+&amp;\dee{v}=#2 \dee{#1}
+&amp;\color{blue}{v=#4}
+\\
+\hline
+\end{array}
+}
+
+
+\renewcommand{\textcolor}[2]{{\color{#1}{#2}}}
+
+
+\newcommand{\trigtri}[4]{
+\begin{tikzpicture}
+\draw (-.5,0)--(2,0)--(2,1.5)--cycle;
+\draw (1.8,0) |- (2,.2);
+\draw[double] (0,0) arc(0:30:.5cm);
+\draw (0,.2) node[right]{$#1$};
+\draw (1,-.5) node{$#2$};
+\draw (2,.75) node[right]{$#3$};
+\draw (.6,1.1) node[rotate=30]{$#4$};
+\end{tikzpicture}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="clp_1_dc.html"><span class="title">CLP-1 Differential Calculus</span></a></h1>
+<p class="byline">Joel Feldman, Andrew Rechnitzer, Elyse Yeager</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="exercises-6.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="chap_limits.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="sec_lim_inf_formal.html" title="Next">Next</a></span></div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="exercises-6.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="chap_limits.html" title="Up">Up</a><a class="next-button button toolbar-item" href="sec_lim_inf_formal.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="index.html" data-scroll="index"><span class="title">Front Matter</span></a></h2>
+<ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface-2.html" data-scroll="preface-2">Using the exercises in this book</a></li>
+<li><a href="preface-3.html" data-scroll="preface-3">Feedback about the text</a></li>
+</ul>
+<h2 class="link"><a href="chap_basics.html" data-scroll="chap_basics"><span class="codenumber">0</span> <span class="title">The basics</span></a></h2>
+<ul>
+<li><a href="sec_0_1.html" data-scroll="sec_0_1">Numbers</a></li>
+<li><a href="sec_sets.html" data-scroll="sec_sets">Sets</a></li>
+<li><a href="sec_0_3.html" data-scroll="sec_0_3">Other Important Sets</a></li>
+<li><a href="sec_0_4.html" data-scroll="sec_0_4">Functions</a></li>
+<li><a href="sec_parsing.html" data-scroll="sec_parsing">Parsing Formulas</a></li>
+<li><a href="sec_inverse_functions.html" data-scroll="sec_inverse_functions">Inverse Functions</a></li>
+</ul>
+<h2 class="link"><a href="chap_limits.html" data-scroll="chap_limits"><span class="codenumber">1</span> <span class="title">Limits</span></a></h2>
+<ul>
+<li><a href="sec_first_lim.html" data-scroll="sec_first_lim">Drawing Tangents and a First Limit</a></li>
+<li><a href="sec_velocity.html" data-scroll="sec_velocity">Another Limit and Computing Velocity</a></li>
+<li><a href="sec_lim_func.html" data-scroll="sec_lim_func">The Limit of a Function</a></li>
+<li><a href="sec_1_4.html" data-scroll="sec_1_4">Calculating Limits with Limit Laws</a></li>
+<li><a href="sec_1_5.html" data-scroll="sec_1_5">Limits at Infinity</a></li>
+<li><a href="sec_1_6.html" data-scroll="sec_1_6">Continuity</a></li>
+<li><a href="sec_opt_formal_limit.html" data-scroll="sec_opt_formal_limit" class="active">(Optional) — Making the Informal a Little More Formal</a></li>
+<li><a href="sec_lim_inf_formal.html" data-scroll="sec_lim_inf_formal">(Optional) — Making Infinite Limits a Little More Formal</a></li>
+<li><a href="sec_proof_arith_lim.html" data-scroll="sec_proof_arith_lim">(Optional) — Proving the Arithmetic of Limits</a></li>
+</ul>
+<h2 class="link"><a href="chap_deriv.html" data-scroll="chap_deriv"><span class="codenumber">2</span> <span class="title">Derivatives</span></a></h2>
+<ul>
+<li><a href="sec_2_1.html" data-scroll="sec_2_1">Revisiting Tangent Lines</a></li>
+<li><a href="sec_def_deriv.html" data-scroll="sec_def_deriv">Definition of the Derivative</a></li>
+<li><a href="sec_2_3.html" data-scroll="sec_2_3">Interpretations of the Derivative</a></li>
+<li><a href="sec_2_4.html" data-scroll="sec_2_4">Arithmetic of Derivatives - a Differentiation Toolbox</a></li>
+<li><a href="sec_proof_arith_deriv.html" data-scroll="sec_proof_arith_deriv">Proofs of the Arithmetic of Derivatives</a></li>
+<li><a href="sec_2_6.html" data-scroll="sec_2_6">Using the Arithmetic of Derivatives –  Examples</a></li>
+<li><a href="sec_exp_func.html" data-scroll="sec_exp_func">Derivatives of Exponential Functions</a></li>
+<li><a href="sec_diff_trig.html" data-scroll="sec_diff_trig">Derivatives of Trigonometric Functions</a></li>
+<li><a href="sec_chain_rule.html" data-scroll="sec_chain_rule">One More Tool  – the Chain Rule</a></li>
+<li><a href="sec_diff_logs.html" data-scroll="sec_diff_logs">The Natural Logarithm</a></li>
+<li><a href="sec_2_11.html" data-scroll="sec_2_11">Implicit Differentiation</a></li>
+<li><a href="sec_invTrig.html" data-scroll="sec_invTrig">Inverse Trigonometric Functions</a></li>
+<li><a href="sec_mvt.html" data-scroll="sec_mvt">The Mean Value Theorem</a></li>
+<li><a href="sec_higher_diff.html" data-scroll="sec_higher_diff">Higher Order Derivatives</a></li>
+<li><a href="sec_cont_deriv.html" data-scroll="sec_cont_deriv">(Optional) — Is \(\lim_{x\to c}f'(x)\) Equal to \(f'(c)\text{?}\)</a></li>
+</ul>
+<h2 class="link"><a href="chap_appl_deriv.html" data-scroll="chap_appl_deriv"><span class="codenumber">3</span> <span class="title">Applications of derivatives</span></a></h2>
+<ul>
+<li><a href="sec_vel_acc.html" data-scroll="sec_vel_acc">Velocity and Acceleration</a></li>
+<li><a href="sec_rrates.html" data-scroll="sec_rrates">Related Rates</a></li>
+<li><a href="sec_ExpGthDecay.html" data-scroll="sec_ExpGthDecay">Exponential Growth and Decay</a></li>
+<li><a href="sec_DIFFTaylor.html" data-scroll="sec_DIFFTaylor">Taylor Polynomials</a></li>
+<li><a href="sec_optimise.html" data-scroll="sec_optimise">Optimisation</a></li>
+<li><a href="sec_curve_sketch.html" data-scroll="sec_curve_sketch">Sketching Graphs</a></li>
+<li><a href="sec_4_7.html" data-scroll="sec_4_7">L'Hôpital's Rule and Indeterminate Forms</a></li>
+</ul>
+<h2 class="link"><a href="chapter-5.html" data-scroll="chapter-5"><span class="codenumber">4</span> <span class="title">Towards Integral Calculus</span></a></h2>
+<ul><li><a href="sec_antidiff.html" data-scroll="sec_antidiff">Introduction to Antiderivatives</a></li></ul>
+<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Appendices</span></a></h2>
+<h2 class="link"><a href="app_highschool.html" data-scroll="app_highschool"><span class="codenumber">A</span> <span class="title">High School Material</span></a></h2>
+<ul>
+<li><a href="sec_simtri.html" data-scroll="sec_simtri">Similar Triangles</a></li>
+<li><a href="sec_A_2.html" data-scroll="sec_A_2">Pythagoras</a></li>
+<li><a href="sec_A_3.html" data-scroll="sec_A_3">Trigonometry — Definitions</a></li>
+<li><a href="app_rad_arc_sec.html" data-scroll="app_rad_arc_sec">Radians, Arcs and Sectors</a></li>
+<li><a href="app_sec_trig_graphs.html" data-scroll="app_sec_trig_graphs">Trigonometry — Graphs</a></li>
+<li><a href="sec_A_6.html" data-scroll="sec_A_6">Trigonometry — Special Triangles</a></li>
+<li><a href="sec_A_7.html" data-scroll="sec_A_7">Trigonometry — Simple Identities</a></li>
+<li><a href="sec_trig_add.html" data-scroll="sec_trig_add">Trigonometry — Add and Subtract Angles</a></li>
+<li><a href="sec_inv_trig.html" data-scroll="sec_inv_trig">Inverse Trig Functions</a></li>
+<li><a href="app_sec_areas.html" data-scroll="app_sec_areas">Areas</a></li>
+<li><a href="sec_volumes.html" data-scroll="sec_volumes">Volumes</a></li>
+<li><a href="sec_powers.html" data-scroll="sec_powers">Powers</a></li>
+<li><a href="sec_logs.html" data-scroll="sec_logs">Logarithms</a></li>
+<li><a href="sec_must_deriv.html" data-scroll="sec_must_deriv">You Should be Able to Derive</a></li>
+</ul>
+<h2 class="link"><a href="chap_app_B.html" data-scroll="chap_app_B"><span class="codenumber">B</span> <span class="title">Origin of Trig, Area and Volume Formulas</span></a></h2>
+<ul>
+<li><a href="sec_B_1.html" data-scroll="sec_B_1">Theorems about Triangles</a></li>
+<li><a href="sec_B_2.html" data-scroll="sec_B_2">Trigonometry</a></li>
+<li><a href="sec_B_3.html" data-scroll="sec_B_3">Inverse Trigonometric Functions</a></li>
+<li><a href="sec_B_4.html" data-scroll="sec_B_4">Cosine and Sine Laws</a></li>
+<li><a href="sec_B_5.html" data-scroll="sec_B_5">Circles, cones and spheres</a></li>
+</ul>
+<h2 class="link"><a href="app_root_finding.html" data-scroll="app_root_finding"><span class="codenumber">C</span> <span class="title">Root Finding</span></a></h2>
+<ul>
+<li><a href="sec_C_1.html" data-scroll="sec_C_1">Newton's Method</a></li>
+<li><a href="sec_C_2.html" data-scroll="sec_C_2">The Error Behaviour of Newton's Method</a></li>
+<li><a href="sec_C_3.html" data-scroll="sec_C_3">The false position (regula falsi) method</a></li>
+<li><a href="sec_C_4.html" data-scroll="sec_C_4">The secant method</a></li>
+<li><a href="sec_C_5.html" data-scroll="sec_C_5">The Error Behaviour of the Secant Method</a></li>
+</ul>
+<h2 class="link"><a href="app_hint.html" data-scroll="app_hint"><span class="codenumber">D</span> <span class="title">Hints for Exercises</span></a></h2>
+<h2 class="link"><a href="app_answ.html" data-scroll="app_answ"><span class="codenumber">E</span> <span class="title">Answers to Exercises</span></a></h2>
+<h2 class="link"><a href="app_soln.html" data-scroll="app_soln"><span class="codenumber">F</span> <span class="title">Solutions to Exercises</span></a></h2></nav><div class="extras"><nav><a class="feedback-link" href="mailto:clp@ugrad.math.ubc.ca?subject=clp-pretext" target="_blank">Feedback</a><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="mathbook-content"><section class="section" id="sec_opt_formal_limit"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1.7</span> <span class="title">(Optional) — Making the Informal a Little More Formal</span>
+</h2>
+<a href="sec_opt_formal_limit.html" class="permalink">¶</a><section class="introduction" id="introduction-23"><p id="p-1073">As we noted above, the definition of limits that we have been working with was  quite informal and not mathematically rigorous. In this (optional) section we  will work to understand the rigorous definition of limits.</p>
+<p id="p-1074">Here is the formal definition — we will work through it all very slowly and  carefully afterwards, so do not panic.</p>
+<article class="definition-like" id="def_1_7_1"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">1.7.1</span>
+</h6>
+<p id="p-1075">Let \(a \in \mathbb{R}\) and let \(f(x)\) be a function defined everywhere in a  neighbourhood of \(a\text{,}\) except possibly at \(a\text{.}\) We say that</p>
+<blockquote class="blockquote" id="blockquote-20"><p id="p-1076">the limit as \(x\) approaches \(a\) of \(f(x)\) is \(L\)</p></blockquote>
+<p id="p-1077">or equivalently</p>
+<blockquote class="blockquote" id="blockquote-21"><p id="p-1078">as \(x\) approaches \(a\text{,}\) \(f(x)\) approaches \(L\)</p></blockquote>
+<p id="p-1079">and write</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{x \to a} f(x) &amp;= L
+\end{align*}
+</div>
+<p>if and only if for every \(\epsilon  \gt 0\) there exists \(\delta \gt 0\) so that</p>
+<div class="displaymath">
+\begin{align*}
+|f(x) - L|  \lt \epsilon &amp; \text{ whenever } 0 \lt |x-a|  \lt  \delta
+\end{align*}
+</div>
+<p>Note that an equivalent way of writing this very last statement is</p>
+<div class="displaymath">
+\begin{gather*}
+\text{if } 0 \lt |x-a|  \lt  \delta \text{ then } |f(x) - L|  \lt \epsilon.
+\end{gather*}
+</div></article><p id="p-1080">This is quite a lot to take in, so let us break it down into pieces.</p>
+<article class="definition-like" id="def_1_7_2"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">1.7.2</span> <span class="title">The typical 3 pieces of a definition</span>
+</h6>
+<p id="p-1081">Usually a definition can be broken down into three pieces.</p>
+<ul class="disc">
+<li id="li-342">Scene setting — define symbols and any restrictions on the objects that we are talking about.</li>
+<li id="li-343">Naming — state the name and any notation for the property or object  that the definition is about.</li>
+<li id="li-344">Properties and restrictions — this is the heart of the definition  where we explain to the reader what it is that the object (in our case a  function) has to do in order to satisfy the definition.</li>
+</ul></article><p id="p-1082">Let us go back to the definition and look at each of these pieces in turn.</p>
+<ul class="disc">
+<li id="li-345">
+<p id="p-1083">Setting things up — The first sentence of the definition is really  just setting up the picture. It is telling us what the definition is about and  sorting out a few technical details.</p>
+<ul class="circle">
+<li id="li-346">
+<em class="alert">Let \(a \in \mathbb{R}\)</em> — This simply tells us that the symbol  “\(a\)” is a real number <a knowl="" class="id-ref" refid="hk-fn-52" id="fn-52"><sup> 1 </sup></a><span id="hk-fn-52" class="hidden-content tex2jax_ignore"><span class="footnote">The symbol “\(\in\)” is read as “is an element of” — it is definitely not the same as \(e\) or \(\epsilon\) or \(\varepsilon\text{.}\) If you do not recognise “\(\mathbb{R}\)” or understand the difference between \(\mathbb{R}\) and \(R\text{,}\) then please go back and read Chapter <a href="chap_basics.html" class="xref" title="Chapter 0: The basics">0</a> carefully.</span></span>.</li>
+<li id="li-347">
+<em class="alert">Let \(f(x)\) be a function</em> — This is just setting the scene so  that we understand all of the terms and symbols.</li>
+<li id="li-348">
+<em class="alert">defined everywhere in a neighbourhood of \(a\text{,}\) except possibly at  \(a\)</em> — This is just a technical requirement; we need our function to be  defined in a little region <a knowl="" class="id-ref" refid="hk-fn-53" id="fn-53"><sup> 2 </sup></a><span id="hk-fn-53" class="hidden-content tex2jax_ignore"><span class="footnote">The term “neighbourhood of \(a\)” means a  small open interval around \(a\) — for example \((a-0.01, a+0.01)\text{.}\) Typically  we don't really care how big this little interval is.</span></span> around \(a\text{.}\) The  function doesn't have to be defined everywhere, but it must be defined for all  \(x\)-values a little less than \(a\) and a little more than \(a\text{.}\) The definition  does not care about what the function does outside this little window, nor does  it care what happens exactly at \(a\text{.}\)</li>
+</ul>
+</li>
+<li id="li-349">Names, phrases and notation — The next part of the definition is simply  naming the property we are discussing and tells us how to write it down. i.e. we  are talking about “limits” and we write them down using the symbols  indicated.</li>
+<li id="li-350">
+<p id="p-1084">The heart of things — we explain this at length below, but for now we  will give a quick explanation. <em class="alert">Work on these two points. They are hard.</em></p>
+<ul class="circle">
+<li id="li-351">
+<em class="alert">for all \(\epsilon \gt 0\) there exists \(\delta  \gt 0\)</em> — It is  important we read this in order. It means that we can pick any positive number  \(\epsilon\) we want and there will always be another positive number \(\delta\)  that is going to make what ever follows be true.</li>
+<li id="li-352">
+<em class="alert">if \(0 \lt |x-a| \lt \delta\) then \(|f(x)-L| \lt \epsilon\)</em> — From the  previous point we have our two numbers — any \(\epsilon  \gt 0\) then based on that  choice of \(\epsilon\) we have a positive number \(\delta\text{.}\) The current statement  says that whenever we have chosen \(x\) so that it is very close to \(a\text{,}\) then  \(f(x)\) has to be very close to \(L\text{.}\) How close it “very close”? Well  \(0 \lt |x-a| \lt \delta\) means that \(x\) has to be within a distance \(\delta\) of \(a\)  (but not exactly \(a\)) and similarly \(|f(x)-L| \lt \epsilon\) means that \(f(x)\) has  to  be within a distance \(\epsilon\) of \(L\text{.}\)</li>
+</ul>
+</li>
+</ul>
+<p>That is the definition broken up into pieces which hopefully now make more  sense, but what does it actually <em class="emphasis">mean</em>? Consider a function we saw earlier</p>
+<div class="displaymath">
+\begin{align*}
+f(x) &amp;= \begin{cases}
+2x &amp; x\neq3\\
+9 &amp; x=3
+\end{cases}
+\end{align*}
+</div>
+<p>and sketch it again:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/epsdelt1.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p id="p-1085">We know (from our earlier work) that \(\lim_{x \to 3} f(x) = 6\text{,}\) so zoom in  around \((x,y)=(3,6)\text{.}\) To make this look more like our definition, we have \(a=3\)  and \(L=6\text{.}\)</p>
+<ul class="disc">
+<li id="li-353">Pick some small number \(\epsilon \gt 0\) and highlight the horizontal strip  of all points \((x,y)\) for which \(|y-L| \lt \epsilon\text{.}\) This means all the  \(y\)-values have to satisfy \(L-\epsilon  \lt  y  \lt  L+\epsilon\text{.}\)</li>
+<li id="li-354">You can see that the graph of the function passes through this strip for  some \(x\)-values close to \(a\text{.}\) What we need to be able to do is to pick a  vertical strip of \(x\)-values around \(a\) so that the function lies inside the  horizontal strip.</li>
+<li id="li-355">That is, we must find a small number \(\delta \gt 0\) so that for any \(x\)-value  inside the vertical strip \(a-\delta  \lt  x  \lt  a+\delta\text{,}\) <em class="emphasis">except exactly at  \(x=a\)</em>, the value of the function lies inside the horizontal strip, namely  \(L-\epsilon  \lt  y=f(x)  \lt  L+\epsilon\text{.}\)</li>
+<li id="li-356">We see (pictorially) that we can do this. If we were to choose a  smaller value of \(\epsilon\) making the horizontal strip narrower, it is clear  that we can choose the vertical strip to be narrower. Indeed, it  doesn't matter how small we make the horizontal strip, we will always be able  to construct the second vertical strip.</li>
+</ul>
+<p id="p-1086">The above is a pictorial argument, but we can quite easily make it into a  mathematical one. We want to show the limit is \(6\text{.}\) That means for any  \(\epsilon\) we need to find a \(\delta\) so that when</p>
+<div class="displaymath">
+\begin{align*}
+3-\delta  \lt  x  \lt  3+\delta \text{ with $x \neq 3$} &amp;&amp; \text{we have } &amp;&amp;
+6-\epsilon  \lt  f(x)  \lt  6+\epsilon
+\end{align*}
+</div>
+<p>Now we note that when \(x \neq 3\text{,}\) we have \(f(x)=2x\) and so</p>
+<div class="displaymath">
+\begin{align*}
+6-\epsilon  \lt  f(x)  \lt  6+\epsilon &amp;&amp; \text{implies that} &amp;&amp;
+6-\epsilon  \lt  2x  \lt  6+\epsilon\\
+\end{align*}
+<p class="intertext">this nearly specifies a range of \(x\) values, we just need to divide  by \(2\)</p>
+\begin{align*}
+3-\epsilon/2  \lt  x  \lt  3+\epsilon/2\\
+\end{align*}
+<p class="intertext">Hence if we choose \(\delta = \epsilon/2\) then we get the desired  inequality</p>
+\begin{align*}
+3-\delta  \lt  x  \lt  3+\delta
+\end{align*}
+</div>
+<p>i.e. — no matter what \(\epsilon \gt 0\) is chosen, if we put \(\delta=\epsilon/2\)  then when \(3-\delta \lt x \lt 3+\delta\) with \(x \neq 3\) we will have \(6-\epsilon  \lt  f(x)  \lt  6+\epsilon\text{.}\) This is exactly what we need to satisfy the definition of  “limit” above.</p>
+<p id="p-1087">The above work gives us the argument we need, but it still needs to be written up properly. We do this below.</p>
+<article class="example-like" id="eg_1_7_1"><a knowl="" class="id-ref" refid="hk-eg_1_7_1"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.7.3</span> <span class="title">Formal limit of a simple function</span>
+</h6></a></article><div id="hk-eg_1_7_1" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-1088">Find the limit as \(x \to 3\) of the following function</p>
+<div class="displaymath">
+\begin{align*}
+f(x) &amp;= \begin{cases}
+2x &amp; x\neq 3\\
+9 &amp; x=3
+\end{cases}
+\end{align*}
+</div>
+<article class="hiddenproof" id="proof-1"><a knowl="" class="id-ref" refid="hk-proof-1"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-1" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-1089">We will show that the limit is equal to \(6\text{.}\) Let \(\epsilon  \gt 0\) and \(\delta =
+\epsilon/2\text{.}\) It remains to show that \(|f(x)-6|  \lt \epsilon\) whenever \(|x-3| \lt \delta\text{.}\)</p>
+<p id="p-1090">So assume that \(|x-3| \lt \delta\text{,}\) and so</p>
+<div class="displaymath">
+\begin{align*}
+3-\delta  \lt  x  \lt  3+\delta &amp;&amp; \text{multiply both sides by 2}\\
+6-2\delta  \lt  2x  \lt  6+2\delta\\
+\end{align*}
+<p class="intertext">Recall that \(f(x)=2x\) and that since \(\delta=\epsilon/2\)</p>
+\begin{align*}
+6-\epsilon  \lt  f(x)  \lt  6+\epsilon.
+\end{align*}
+</div>
+<p>We can conclude that \(|f(x)-6|  \lt \epsilon\) as required.</p></article></div></article></div>
+<p id="p-1091">Because of the \(\epsilon\) and \(\delta\) in the definition of limits, we need to  have \(\epsilon\) and \(\delta\) in the proof. While \(\epsilon\) and \(\delta\) are  just symbols playing particular roles, and could be replaced with other symbols,  this style of proof is usually called \(\epsilon\)–\(\delta\) proof.</p>
+<p id="p-1092">In the above example everything works, but it can be very instructive to see  what happens in an example that doesn't work.</p>
+<article class="example-like" id="eg_1_7_2"><a knowl="" class="id-ref" refid="hk-eg_1_7_2"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.7.4</span> <span class="title">Formal limit where limit does not exist</span>
+</h6></a></article><div id="hk-eg_1_7_2" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-1093">Look again at the function</p>
+<div class="displaymath">
+\begin{align*}
+f(x) &amp;= \begin{cases}
+x &amp; x \lt 2\\
+-1 &amp; x=2\\
+x+3 &amp; x \gt 2
+\end{cases}
+\end{align*}
+</div>
+<p>and let us see why, according to the definition of the limit, that \(\ds \lim_{x
+\to 2} f(x) \neq 2\text{.}\) Again, start by sketching a picture and zooming in around \((x,y) = (2,2)\text{:}\)</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/epsdelt2.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p id="p-1094">Try to proceed through the same steps as before:</p>
+<ul class="disc">
+<li id="li-357">Pick some small number \(\epsilon \gt 0\) and highlight a horizontal  strip that  contains all \(y\)-values with \(|y-L| \lt \epsilon\text{.}\) This means all  the \(y\)-values have to satisfy \(L-\epsilon  \lt  y  \lt  L+\epsilon\text{.}\)</li>
+<li id="li-358">You can see that the graph of the function passes through this strip for  some \(x\)-values close to \(a\text{.}\) To the left of \(a\text{,}\) we can always find some  \(x\)-values that make the function sit inside the horizontal-\(\epsilon\)-strip.  However, unlike the previous example, there is a problem to the right of \(a\text{.}\)  Even for \(x\)-values just a little larger than \(a\text{,}\) the value of \(f(x)\) lies  well  outside the horizontal-\(\epsilon\)-strip.</li>
+<li id="li-359">So given this choice of \(\epsilon\text{,}\) we can find a \(\delta \gt 0\) so that for  \(x\) inside the vertical strip \(a-\delta  \lt  x  \lt  a\text{,}\) the value of the function sits  inside the horizontal-\(\epsilon\)-strip.</li>
+<li id="li-360">Unfortunately, there is no way to choose a \(\delta \gt 0\) so that for \(x\)  inside the vertical strip \(a \lt x \lt a+\delta\) (with \(x \neq a\)) the value of the  function sits inside the horizontal-\(epsilon\)-strip.</li>
+<li id="li-361">So it is impossible to choose \(\delta\) so that for \(x\) inside the  vertical strip \(a-\delta  \lt  x  \lt  a+\delta\) the value of the function sits inside  the horizontal strip \(L-\epsilon  \lt  y=f(x)  \lt  L+\epsilon\text{.}\)</li>
+<li id="li-362">Thus the limit of \(f(x)\) as \(x \to 2\) is not \(2\text{.}\)</li>
+</ul></article></div>
+<p id="p-1095">Doing things formally with \(\epsilon\)'s and \(\delta\)'s is quite painful for  general functions. It is far better to make use of the arithmetic of limits  (Theorem <a knowl="./knowl/thm_arith_lim.html" title="Theorem 1.4.3: Arithmetic of limits">1.4.3</a>) and some basic building blocks (like those in  Theorem <a knowl="./knowl/thm_easy_lim.html" title="Theorem 1.4.1: Easiest limits">1.4.1</a>). Thankfully for most of the problems we deal with in  calculus (at this level at least) can be approached in exactly this way.</p>
+<p id="p-1096">This does leave the problem of proving the arithmetic of limits and the limits  of the basic building blocks. The proof of the Theorem <a knowl="./knowl/thm_arith_lim.html" title="Theorem 1.4.3: Arithmetic of limits">1.4.3</a> is  quite involved and we leave it to the very end of this Chapter. Before we do  that we will prove Theorem <a knowl="./knowl/thm_easy_lim.html" title="Theorem 1.4.1: Easiest limits">1.4.1</a> by a formal \(\epsilon\)–\(\delta\)  proof. Then in the next section we will look at the formal definition of limits  at infinity and prove Theorem <a knowl="./knowl/thm_basic_lim_inf.html" title="Theorem 1.5.3">1.5.3</a>. The proof of the  Theorem <a knowl="./knowl/thm_arith_inf_lim.html" title="Theorem 1.5.9: Arithmetic of infinite limits">1.5.9</a>, the arithmetic of infinite limits, is very  similar to that of Theorem <a knowl="./knowl/thm_arith_lim.html" title="Theorem 1.4.3: Arithmetic of limits">1.4.3</a> and so we do not give it.</p>
+<p id="p-1097">So let us now prove Theorem <a knowl="./knowl/thm_easy_lim.html" title="Theorem 1.4.1: Easiest limits">1.4.1</a> in which we stated two simple  limits:</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{x \to a} c &amp;= c &amp; \text{ and } &amp;&amp; \lim_{x \to a} x &amp;= a.
+\end{align*}
+</div>
+<p>Here is the formal \(\epsilon\)–\(\delta\) proof:</p>
+<article class="hiddenproof" id="proof-2"><a knowl="" class="id-ref" refid="hk-proof-2"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-2" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-1098"><em class="alert">Proof of Theorem <a knowl="./knowl/thm_easy_lim.html" title="Theorem 1.4.1: Easiest limits">1.4.1</a></em></p>
+<p id="p-1099">Since there are two limits to prove, we do each in turn. Let \(a,c\) be real  numbers.</p>
+<ul class="disc">
+<li id="li-363">Let \(\epsilon \gt 0\) and set \(f(x)=c\text{.}\) Choose \(\delta=1\text{,}\) then for any  \(x\) satisfying \(|x-a| \lt \delta\) (or indeed any real number \(x\) at all) we have  \(|f(x)-c| = 0  \lt \epsilon\text{.}\) Hence \(\ds \lim_{x \to a} c = c\) as required.</li>
+<li id="li-364">Let \(\epsilon \gt 0\) and set \(f(x)=x\text{.}\) Choose \(\delta=\epsilon\text{,}\) then for  any \(x\) satisfying \(|x-a| \lt \delta\) we have<div class="displaymath">
+\begin{align*}
+a-\delta  \lt  x  \lt  a+\delta &amp; \text{ but $f(x) = x$ and $\delta=\epsilon$}\\
+a-\epsilon  \lt  f(x)  \lt  a+\epsilon
+\end{align*}
+</div>Thus we have \(|f(x)-a| \lt \epsilon\text{.}\) Hence \(\ds \lim_{x \to a} x = a\) as required.</li>
+</ul>
+<p>This completes the proof.</p></article></div></section></section></div></main>
+</div>
+<!--Start: Google Universal code--><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-105798942-1', 'auto');
+ga('send', 'pageview');
+</script><!--End: Google Universal code--><div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.1/login.js"></script>
+</body>
+</html>

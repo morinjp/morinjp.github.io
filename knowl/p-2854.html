@@ -1,0 +1,62 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:15:26-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>Let</p>
+<div class="displaymath">
+\begin{equation*}
+f(x) = \begin{cases}
+\frac{\sin x^2}{x} \amp\text{if }x\ne 0 \\
+0                 \amp\text{if }x=0
+\end{cases}
+\end{equation*}
+</div>
+<p>We have already observed above that, for \(x\ne 0\text{,}\)</p>
+<div class="displaymath">
+\begin{equation*}
+f'(x) = \frac{2x^2\cos x^2 -\sin x^2}{x^2}
+= 2\cos x^2 - \frac{\sin x^2}{x^2}
+\end{equation*}
+</div>
+<p>We use Theorem <a knowl="./knowl/thm_continuous_derivative.html" title="Theorem 2.15.2">2.15.2</a> with \(c=0\) to show that \(f(x)\) is differentiable at \(x=0\) and to evaluate \(f'(0)\text{.}\) That theorem has two hypotheses that we have not yet verified, namely the continuity of \(f(x)\) at \(x=0\text{,}\) and the existence of the limit \(\lim_{x\rightarrow 0}f'(x)\text{.}\) We verify them now.</p>
+<ul class="disc">
+<li>We already know, by Lemma <a knowl="./knowl/lem_sinhoverh.html" title="Lemma 2.8.1">2.8.1</a>,  that \(\lim_{h\rightarrow 0}\frac{\sin h}{h}=1\text{.}\) So<div class="displaymath">
+\begin{align*}
+\lim_{x\rightarrow 0}\frac{\sin x^2}{x^2} 
+\amp=\lim_{h\rightarrow 0^+}\frac{\sin h}{h}\qquad\text{with }h=x^2\\
+\amp=1
+\end{align*}
+</div>and<div class="displaymath">
+\begin{align*}
+\lim_{x\rightarrow 0} f(x) 
+\amp=\lim_{x\rightarrow 0}\frac{\sin x^2}{x}
+=\lim_{x\rightarrow 0}x\,\frac{\sin x^2}{x^2}
+=\lim_{x\rightarrow 0}x\ \lim_{x\rightarrow 0}\frac{\sin x^2}{x^2}
+=0\times 1
+=0
+\end{align*}
+</div>and \(f(x)\) is continuous at \(x=0\text{.}\)</li>
+<li>The limit of the derivative is<div class="displaymath">
+\begin{align*}
+\lim_{x\rightarrow 0}f'(x) 
+\amp= \lim_{x\rightarrow 0}\left[2\cos x^2 - \frac{\sin x^2}{x^2}\right]
+=2\times 1 -1 = 1
+\end{align*}
+</div>
+</li>
+</ul>
+<p>So, by Theorem <a knowl="./knowl/thm_continuous_derivative.html" title="Theorem 2.15.2">2.15.2</a>, \(f(x)\) is differentiable at \(x=0\) and \(f'(0)=1\text{.}\)</p>
+<span class="incontext"><a href="sec_cont_deriv.html#p-2854">in-context</a></span>
+</body>
+</html>

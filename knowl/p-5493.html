@@ -1,0 +1,50 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:23:10-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>To see the large \(n\) behaviour, we now iterate (E7). The formulae will look simpler if we multiply (E7) by \(K\) and write \(\delta_n=K\varepsilon_n\text{.}\) Then (E7) becomes \(\delta_{n+1}\approx\delta_{n-1}\delta_n\) (and we have eliminated \(K\)). The first iterations are</p>
+<div class="displaymath">
+\begin{alignat*}{2}
+\delta_2\amp \amp  \amp \approx \delta_0\delta_1 \\
+\delta_3\amp \approx \delta_1\delta_2 
+\amp \amp \approx \delta_0\delta_1^2 \\
+\delta_4\amp \approx \delta_2\delta_3 
+\amp \amp \approx \delta_0^2\delta_1^3 \\
+\delta_5\amp \approx \delta_3\delta_4 
+\amp \amp \approx \delta_0^3\delta_1^5 \\
+\delta_6\amp \approx \delta_4\delta_5 
+\amp \amp \approx \delta_0^5\delta_1^8 \\
+\delta_7\amp \approx \delta_5\delta_6 
+\amp \amp \approx \delta_0^8\delta_1^{13}
+\end{alignat*}
+</div>
+<p>Notice that every \(\delta_n\) is of the form \(\delta_0^{\alpha_n}\delta_1^{\beta_n}\text{.}\) Substituting  \(\delta_n=\delta_0^{\alpha_n}\delta_1^{\beta_n}\) into \(\delta_{n+1}\approx\delta_{n-1}\delta_n\) gives</p>
+<div class="displaymath">
+\begin{equation*}
+\delta_0^{\alpha_{n+1}}\delta_1^{\beta_{n+1}} 
+\approx \delta_0^{\alpha_{n-1}}\delta_1^{\beta_{n-1}}
+\delta_0^{\alpha_n}\delta_1^{\beta_n}
+\end{equation*}
+</div>
+<p>and we have</p>
+<div class="displaymath">
+\begin{equation*}
+\alpha_{n+1}=\alpha_{n-1}+\alpha_{n} \qquad
+\beta_{n+1}=\beta_{n-1}+\beta_{n} 
+\tag{E8}
+\end{equation*}
+</div>
+<span class="incontext"><a href="sec_C_5.html#p-5493">in-context</a></span>
+</body>
+</html>

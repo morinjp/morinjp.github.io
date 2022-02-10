@@ -1,0 +1,59 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:19:19-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="example-like"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">3.5.1</span> <span class="title">Enclosing a paddock</span>
+</h6>
+<p>A farmer has 400m of fencing materials. What is the largest rectangular paddock that can be enclosed?</p>
+<p><em class="alert">Solution</em> We will describe a general approach to these sorts of problems in Sections <a href="ssec_find_maxmin.html" class="xref" title="Subsection 3.5.2: Finding Global Maxima and Minima">3.5.2</a> and <a href="sec_opt_eg.html" class="xref" title="Subsection 3.5.3: Max/Min Examples">3.5.3</a> below, but here we can take a stab at starting the problem.</p>
+<ul class="disc">
+<li>Begin by defining variables and their units (more generally we might draw a picture too); let the dimensions of the paddock be \(x\) by \(y\) metres.</li>
+<li>The area enclosed is then \(A m^2\) where<div class="displaymath">
+\begin{align*}
+A &amp;= x \cdot y
+\end{align*}
+</div>At this stage we cannot apply the calculus we have developed since the area is a function of two variables and we only know how to work with functions of a single variable. We need to eliminate one variable.</li>
+<li>We know that the perimeter of the rectangle (and hence the dimensions \(x\) and \(y\)) are constrained by the amount of fencing materials the farmer has to hand:<div class="displaymath">
+\begin{align*}
+2x+2y &amp;\leq 400\\
+\end{align*}
+<p class="intertext">and so we have</p>
+\begin{align*}
+y &amp;\leq 200-x
+\end{align*}
+</div>Clearly the area of the paddock is maximised when we use all the fencing possible, so<div class="displaymath">
+\begin{gather*}
+y = 200-x
+\end{gather*}
+</div>
+</li>
+<li>Now substitute this back into our expression for the area<div class="displaymath">
+\begin{align*}
+A &amp;= x \cdot (200-x)
+\end{align*}
+</div>Since the area cannot be negative (and our lengths \(x,y\) cannot be negative either), we must also have<div class="displaymath">
+\begin{gather*}
+0 \leq x \leq 200
+\end{gather*}
+</div>
+</li>
+<li>Thus the question of the largest paddock enclosed becomes the problem of finding the maximum value of<div class="displaymath">
+\begin{align*}
+A &amp;= x \cdot (200-x) &amp;\text{ subject to the constraint $0 \leq x \leq 200$.}
+\end{align*}
+</div>
+</li>
+</ul></article><span class="incontext"><a href="sec_optimise.html#eg_3_5_1">in-context</a></span>
+</body>
+</html>

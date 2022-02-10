@@ -1,0 +1,41 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:21:24-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><article class="example-like"><p>Consider the limit</p>
+<div class="displaymath">
+\begin{gather*}
+\lim_{x\to 0} \frac{\sin(x)}{\sin(2x)}
+\end{gather*}
+</div>
+<ul class="disc">
+<li>First check<div class="displaymath">
+\begin{align*}
+\lim_{x\to 0} \sin 2x &amp;= 0\\
+\lim_{x\to 0} \sin x &amp;= 0
+\end{align*}
+</div>so we again have a \(\frac00\) indeterminate form.</li>
+<li>Set \(f(x)=\sin x\) and \(g(x)=\sin 2x\text{,}\) then<div class="displaymath">
+\begin{align*}
+f'(x) &amp;= \cos x &amp; f'(0)= 1\\
+g'(x) &amp;= 2\cos 2x &amp; g'(0)= 2
+\end{align*}
+</div>
+</li>
+<li>And by l'Hôpital's rule<div class="displaymath">
+\begin{align*}
+\lim_{x\to 0} \frac{\sin x}{\sin 2x} &amp;= \frac{f'(0)}{g'(0)} = \frac{1}{2}.
+\end{align*}
+</div>
+</li>
+</ul></article></body>
+</html>

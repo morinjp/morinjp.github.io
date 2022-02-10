@@ -1,0 +1,608 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:00:20-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Limits at Infinity</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.1/pretext.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on2.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="RQS.css">
+<link href="https://pretextbook.org/css/0.1/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\require{cancel}\newcommand{\dee}[1]{\mathrm{d}#1}
+\newcommand{\half}{ \frac{1}{2} }
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ts}{\textstyle}
+\newcommand{\es}{ {\varnothing}}
+\newcommand{\st}{ {\mbox{ s.t. }} }
+\newcommand{\pow}[1]{ \mathcal{P}\left(#1\right) }
+\newcommand{\set}[1]{ \left\{#1\right\} }
+\newcommand{\lin}{{\text{LIN}}}
+\newcommand{\quot}{{\text{QR}}}
+\newcommand{\simp}{{\text{SMP}}}
+\newcommand{\diff}[2]{ \frac{\mathrm{d}#1}{\mathrm{d}#2}}
+\newcommand{\bdiff}[2]{ \frac{\mathrm{d}}{\mathrm{d}#2} \left( #1 \right)}
+\newcommand{\ddiff}[3]{ \frac{\mathrm{d}^#1#2}{\mathrm{d}{#3}^#1}}
+\renewcommand{\neg}{ {\sim} }
+\newcommand{\limp}{ {\;\Rightarrow\;} }
+\newcommand{\nimp}{ {\;\not\Rightarrow\;} }
+\newcommand{\liff}{ {\;\Leftrightarrow\;} }
+\newcommand{\niff}{ {\;\not\Leftrightarrow\;} }
+\newcommand{\De}{\Delta}
+\newcommand{\bbbn}{\mathbb{N}}
+\newcommand{\bbbr}{\mathbb{R}}
+\newcommand{\bbbp}{\mathbb{P}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\Si}{\Sigma}
+
+\newcommand{\arccsc}{\mathop{\mathrm{arccsc}}}
+\newcommand{\arcsec}{\mathop{\mathrm{arcsec}}}
+\newcommand{\arccot}{\mathop{\mathrm{arccot}}}
+\newcommand{\erf}{\mathop{\mathrm{erf}}}
+\newcommand{\smsum}{\mathop{{\ts \sum}}}
+\newcommand{\atp}[2]{ \genfrac{}{}{0in}{}{#1}{#2} }
+
+\newcommand{\ave}{\mathrm{ave}}
+\newcommand{\llt}{\left \lt }
+\newcommand{\rgt}{\right \gt }
+
+
+\newcommand{\YEaxis}[2]{\draw[help lines] (-#1,0)--(#1,0) node[right]{$x$};\draw[help lines] (0,-#2)--(0,#2) node[above]{$y$};}
+
+\newcommand{\YEaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$x$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YEtaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+\newcommand{\YEtaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$}; \draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YExcoord}[2]{\draw (#1,.2)--(#1,-.2) node[below]{$#2$};}
+\newcommand{\YEycoord}[2]{\draw (.2,#1)--(-.2,#1) node[left]{$#2$};}
+\newcommand{\YEnxcoord}[2]{\draw (#1,-.2)--(#1,.2) node[above]{$#2$};}
+\newcommand{\YEnycoord}[2]{\draw (-.2,#1)--(.2,#1) node[right]{$#2$};}
+
+\newcommand{\YEstickfig}[3]{
+\draw (#1,#2) arc(-90:270:2mm);
+\draw (#1,#2)--(#1,#2-.5) (#1-.25,#2-.75)--(#1,#2-.5)--(#1+.25,#2-.75) (#1-.2,#2-.2)--(#1+.2,#2-.2);}
+
+
+\newcommand{\IBP}[7]{
+\begin{array}{|c  | l | l |}
+\hline
+\color{red}{\text{Option 1:}}
+&amp; u=#2
+&amp;\color{red}{\dee{u}=#3 ~ \dee{#1}}
+\\
+&amp; \dee{v}=#5~\dee{#1}
+&amp;\color{red}{v=#7}
+\\
+\hline
+\color{blue}{\text{Option 2:}}
+&amp; u=#5
+&amp;\color{blue}{\dee{u}=#6 ~ \dee{#1}}
+\\
+&amp;\dee{v}=#2 \dee{#1}
+&amp;\color{blue}{v=#4}
+\\
+\hline
+\end{array}
+}
+
+
+\renewcommand{\textcolor}[2]{{\color{#1}{#2}}}
+
+
+\newcommand{\trigtri}[4]{
+\begin{tikzpicture}
+\draw (-.5,0)--(2,0)--(2,1.5)--cycle;
+\draw (1.8,0) |- (2,.2);
+\draw[double] (0,0) arc(0:30:.5cm);
+\draw (0,.2) node[right]{$#1$};
+\draw (1,-.5) node{$#2$};
+\draw (2,.75) node[right]{$#3$};
+\draw (.6,1.1) node[rotate=30]{$#4$};
+\end{tikzpicture}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="clp_1_dc.html"><span class="title">CLP-1 Differential Calculus</span></a></h1>
+<p class="byline">Joel Feldman, Andrew Rechnitzer, Elyse Yeager</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec_1_5.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="sec_1_5.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="exercises-5.html" title="Next">Next</a></span></div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec_1_5.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="sec_1_5.html" title="Up">Up</a><a class="next-button button toolbar-item" href="exercises-5.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="index.html" data-scroll="index"><span class="title">Front Matter</span></a></h2>
+<ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface-2.html" data-scroll="preface-2">Using the exercises in this book</a></li>
+<li><a href="preface-3.html" data-scroll="preface-3">Feedback about the text</a></li>
+</ul>
+<h2 class="link"><a href="chap_basics.html" data-scroll="chap_basics"><span class="codenumber">0</span> <span class="title">The basics</span></a></h2>
+<ul>
+<li><a href="sec_0_1.html" data-scroll="sec_0_1">Numbers</a></li>
+<li><a href="sec_sets.html" data-scroll="sec_sets">Sets</a></li>
+<li><a href="sec_0_3.html" data-scroll="sec_0_3">Other Important Sets</a></li>
+<li><a href="sec_0_4.html" data-scroll="sec_0_4">Functions</a></li>
+<li><a href="sec_parsing.html" data-scroll="sec_parsing">Parsing Formulas</a></li>
+<li><a href="sec_inverse_functions.html" data-scroll="sec_inverse_functions">Inverse Functions</a></li>
+</ul>
+<h2 class="link"><a href="chap_limits.html" data-scroll="chap_limits"><span class="codenumber">1</span> <span class="title">Limits</span></a></h2>
+<ul>
+<li><a href="sec_first_lim.html" data-scroll="sec_first_lim">Drawing Tangents and a First Limit</a></li>
+<li><a href="sec_velocity.html" data-scroll="sec_velocity">Another Limit and Computing Velocity</a></li>
+<li><a href="sec_lim_func.html" data-scroll="sec_lim_func">The Limit of a Function</a></li>
+<li><a href="sec_1_4.html" data-scroll="sec_1_4">Calculating Limits with Limit Laws</a></li>
+<li><a href="sec_1_5.html" data-scroll="sec_1_5">Limits at Infinity</a></li>
+<li><a href="sec_1_6.html" data-scroll="sec_1_6">Continuity</a></li>
+<li><a href="sec_opt_formal_limit.html" data-scroll="sec_opt_formal_limit">(Optional) — Making the Informal a Little More Formal</a></li>
+<li><a href="sec_lim_inf_formal.html" data-scroll="sec_lim_inf_formal">(Optional) — Making Infinite Limits a Little More Formal</a></li>
+<li><a href="sec_proof_arith_lim.html" data-scroll="sec_proof_arith_lim">(Optional) — Proving the Arithmetic of Limits</a></li>
+</ul>
+<h2 class="link"><a href="chap_deriv.html" data-scroll="chap_deriv"><span class="codenumber">2</span> <span class="title">Derivatives</span></a></h2>
+<ul>
+<li><a href="sec_2_1.html" data-scroll="sec_2_1">Revisiting Tangent Lines</a></li>
+<li><a href="sec_def_deriv.html" data-scroll="sec_def_deriv">Definition of the Derivative</a></li>
+<li><a href="sec_2_3.html" data-scroll="sec_2_3">Interpretations of the Derivative</a></li>
+<li><a href="sec_2_4.html" data-scroll="sec_2_4">Arithmetic of Derivatives - a Differentiation Toolbox</a></li>
+<li><a href="sec_proof_arith_deriv.html" data-scroll="sec_proof_arith_deriv">Proofs of the Arithmetic of Derivatives</a></li>
+<li><a href="sec_2_6.html" data-scroll="sec_2_6">Using the Arithmetic of Derivatives –  Examples</a></li>
+<li><a href="sec_exp_func.html" data-scroll="sec_exp_func">Derivatives of Exponential Functions</a></li>
+<li><a href="sec_diff_trig.html" data-scroll="sec_diff_trig">Derivatives of Trigonometric Functions</a></li>
+<li><a href="sec_chain_rule.html" data-scroll="sec_chain_rule">One More Tool  – the Chain Rule</a></li>
+<li><a href="sec_diff_logs.html" data-scroll="sec_diff_logs">The Natural Logarithm</a></li>
+<li><a href="sec_2_11.html" data-scroll="sec_2_11">Implicit Differentiation</a></li>
+<li><a href="sec_invTrig.html" data-scroll="sec_invTrig">Inverse Trigonometric Functions</a></li>
+<li><a href="sec_mvt.html" data-scroll="sec_mvt">The Mean Value Theorem</a></li>
+<li><a href="sec_higher_diff.html" data-scroll="sec_higher_diff">Higher Order Derivatives</a></li>
+<li><a href="sec_cont_deriv.html" data-scroll="sec_cont_deriv">(Optional) — Is \(\lim_{x\to c}f'(x)\) Equal to \(f'(c)\text{?}\)</a></li>
+</ul>
+<h2 class="link"><a href="chap_appl_deriv.html" data-scroll="chap_appl_deriv"><span class="codenumber">3</span> <span class="title">Applications of derivatives</span></a></h2>
+<ul>
+<li><a href="sec_vel_acc.html" data-scroll="sec_vel_acc">Velocity and Acceleration</a></li>
+<li><a href="sec_rrates.html" data-scroll="sec_rrates">Related Rates</a></li>
+<li><a href="sec_ExpGthDecay.html" data-scroll="sec_ExpGthDecay">Exponential Growth and Decay</a></li>
+<li><a href="sec_DIFFTaylor.html" data-scroll="sec_DIFFTaylor">Taylor Polynomials</a></li>
+<li><a href="sec_optimise.html" data-scroll="sec_optimise">Optimisation</a></li>
+<li><a href="sec_curve_sketch.html" data-scroll="sec_curve_sketch">Sketching Graphs</a></li>
+<li><a href="sec_4_7.html" data-scroll="sec_4_7">L'Hôpital's Rule and Indeterminate Forms</a></li>
+</ul>
+<h2 class="link"><a href="chapter-5.html" data-scroll="chapter-5"><span class="codenumber">4</span> <span class="title">Towards Integral Calculus</span></a></h2>
+<ul><li><a href="sec_antidiff.html" data-scroll="sec_antidiff">Introduction to Antiderivatives</a></li></ul>
+<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Appendices</span></a></h2>
+<h2 class="link"><a href="app_highschool.html" data-scroll="app_highschool"><span class="codenumber">A</span> <span class="title">High School Material</span></a></h2>
+<ul>
+<li><a href="sec_simtri.html" data-scroll="sec_simtri">Similar Triangles</a></li>
+<li><a href="sec_A_2.html" data-scroll="sec_A_2">Pythagoras</a></li>
+<li><a href="sec_A_3.html" data-scroll="sec_A_3">Trigonometry — Definitions</a></li>
+<li><a href="app_rad_arc_sec.html" data-scroll="app_rad_arc_sec">Radians, Arcs and Sectors</a></li>
+<li><a href="app_sec_trig_graphs.html" data-scroll="app_sec_trig_graphs">Trigonometry — Graphs</a></li>
+<li><a href="sec_A_6.html" data-scroll="sec_A_6">Trigonometry — Special Triangles</a></li>
+<li><a href="sec_A_7.html" data-scroll="sec_A_7">Trigonometry — Simple Identities</a></li>
+<li><a href="sec_trig_add.html" data-scroll="sec_trig_add">Trigonometry — Add and Subtract Angles</a></li>
+<li><a href="sec_inv_trig.html" data-scroll="sec_inv_trig">Inverse Trig Functions</a></li>
+<li><a href="app_sec_areas.html" data-scroll="app_sec_areas">Areas</a></li>
+<li><a href="sec_volumes.html" data-scroll="sec_volumes">Volumes</a></li>
+<li><a href="sec_powers.html" data-scroll="sec_powers">Powers</a></li>
+<li><a href="sec_logs.html" data-scroll="sec_logs">Logarithms</a></li>
+<li><a href="sec_must_deriv.html" data-scroll="sec_must_deriv">You Should be Able to Derive</a></li>
+</ul>
+<h2 class="link"><a href="chap_app_B.html" data-scroll="chap_app_B"><span class="codenumber">B</span> <span class="title">Origin of Trig, Area and Volume Formulas</span></a></h2>
+<ul>
+<li><a href="sec_B_1.html" data-scroll="sec_B_1">Theorems about Triangles</a></li>
+<li><a href="sec_B_2.html" data-scroll="sec_B_2">Trigonometry</a></li>
+<li><a href="sec_B_3.html" data-scroll="sec_B_3">Inverse Trigonometric Functions</a></li>
+<li><a href="sec_B_4.html" data-scroll="sec_B_4">Cosine and Sine Laws</a></li>
+<li><a href="sec_B_5.html" data-scroll="sec_B_5">Circles, cones and spheres</a></li>
+</ul>
+<h2 class="link"><a href="app_root_finding.html" data-scroll="app_root_finding"><span class="codenumber">C</span> <span class="title">Root Finding</span></a></h2>
+<ul>
+<li><a href="sec_C_1.html" data-scroll="sec_C_1">Newton's Method</a></li>
+<li><a href="sec_C_2.html" data-scroll="sec_C_2">The Error Behaviour of Newton's Method</a></li>
+<li><a href="sec_C_3.html" data-scroll="sec_C_3">The false position (regula falsi) method</a></li>
+<li><a href="sec_C_4.html" data-scroll="sec_C_4">The secant method</a></li>
+<li><a href="sec_C_5.html" data-scroll="sec_C_5">The Error Behaviour of the Secant Method</a></li>
+</ul>
+<h2 class="link"><a href="app_hint.html" data-scroll="app_hint"><span class="codenumber">D</span> <span class="title">Hints for Exercises</span></a></h2>
+<h2 class="link"><a href="app_answ.html" data-scroll="app_answ"><span class="codenumber">E</span> <span class="title">Answers to Exercises</span></a></h2>
+<h2 class="link"><a href="app_soln.html" data-scroll="app_soln"><span class="codenumber">F</span> <span class="title">Solutions to Exercises</span></a></h2></nav><div class="extras"><nav><a class="feedback-link" href="mailto:clp@ugrad.math.ubc.ca?subject=clp-pretext" target="_blank">Feedback</a><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="mathbook-content"><section class="subsection" id="subsection-6"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.5.1</span> <span class="title">Limits at Infinity</span>
+</h3>
+<p id="p-688">Up until this point we have discussed what happens to a function as we move its input \(x\)  closer and closer to a particular point \(a\text{.}\) For a great many applications of  limits we need to understand what happens to a function when its input becomes  extremely large — for example what happens to a population at a time far in  the future.</p>
+<p id="p-689">The definition of a limit at infinity has a similar flavour to the definition of limits at  finite points that we saw above, but the details are a little different. We also  need to distinguish between positive and negative infinity. As \(x\) becomes  very large and positive it moves off towards \(+\infty\) but when it becomes very  large and negative it moves off towards \(-\infty\text{.}\)</p>
+<p id="p-690">Again we give an informal definition; the full formal definition can be found  in (the optional) Section <a href="sec_lim_inf_formal.html" class="xref" title="Section 1.8: (Optional) — Making Infinite Limits a Little More Formal">1.8</a> near the end of this chapter.</p>
+<article class="definition-like" id="def_1_5_1"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">1.5.1</span> <span class="title">Limits at infinity — informal</span>
+</h6>
+<p id="p-691">We write</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{x \to \infty} f(x) &amp;= L
+\end{align*}
+</div>
+<p>when the value of the function \(f(x)\) gets closer and closer to \(L\) as we make  \(x\) larger and larger and positive.</p>
+<p id="p-692">Similarly we write</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{x \to -\infty} f(x) &amp;= L
+\end{align*}
+</div>
+<p>when the value of the function \(f(x)\) gets closer and closer to \(L\) as we make  \(x\) larger and larger and negative.</p></article><article class="example-like" id="eg_1_5_1"><a knowl="" class="id-ref" refid="hk-eg_1_5_1"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.5.2</span> <span class="title">Limits to \(+\infty\) and \(-\infty\)</span>
+</h6></a></article><div id="hk-eg_1_5_1" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-693">Consider the two functions depicted below</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/lim7.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p id="p-694">The dotted horizontal lines indicate the behaviour as \(x\) becomes very large.  The function on the left has limits as \(x \to \infty\) and as \(x \to -\infty\)  since  the function “settles down” to a particular value. On the other hand,  the function  on the right does not have a limit as \(x \to -\infty\) since the  function just keeps getting bigger and bigger.</p></article></div>
+<p id="p-695">Just as was the case for limits as \(x \to a\) we will start with two very simple  building blocks and build other limits from those.</p>
+<article class="theorem-like" id="thm_basic_lim_inf"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">1.5.3</span>
+</h6>
+<p id="p-696">Let \(c \in \mathbb{R}\) then the following limits hold</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{x \to \infty} c &amp;= c &amp; \lim_{x \to -\infty} c &amp;= c\\
+\lim_{x \to \infty} \frac{1}{x} &amp;= 0 &amp; \lim_{x \to -\infty} \frac{1}{x} &amp;= 0
+\end{align*}
+</div></article><p id="p-697">Again, these limits interact nicely with standard arithmetic:</p>
+<article class="theorem-like" id="theorem-10"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">1.5.4</span> <span class="title">Arithmetic of limits at infinity</span>
+</h6>
+<p id="p-698">Let \(f(x), g(x)\) be two functions for which the limits</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{x \to \infty} f(x)&amp;=F &amp; \lim_{x \to \infty} g(x) &amp;=G
+\end{align*}
+</div>
+<p>exist. Then the following limits hold</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{x \to \infty} f(x) \pm g(x) &amp;= F \pm G\\
+\lim_{x \to \infty} f(x) g(x) &amp;= F  G\\
+\lim_{x \to \infty} \frac{f(x)}{ g(x) } &amp;= \frac{F}{G} &amp; \text{provided } G \neq 0\\
+\end{align*}
+<p class="intertext">and for real numbers \(p\)</p>
+\begin{align*}
+\lim_{x \to \infty} f(x)^p &amp;= F^p &amp; \text{provided $F^p$ and $f(x)^p$ are defined for all $x$}
+\end{align*}
+</div>
+<p>The analogous results hold for limits to \(-\infty\text{.}\)</p></article><p id="p-699">Note that, as was the case in Theorem <a knowl="./knowl/thm_lim_powers.html" title="Theorem 1.4.9: More arithmetic of limits — powers and roots">1.4.9</a>, we need a little extra care with powers of functions. We must avoid taking square roots of negative numbers, or  indeed any even root of a negative number <a knowl="" class="id-ref" refid="hk-fn-40" id="fn-40"><sup> 1 </sup></a><span id="hk-fn-40" class="hidden-content tex2jax_ignore"><span class="footnote">To be more precise, there is no real  number \(x\) so that \(x^\text{even power}\) is a negative number. Hence we cannot take the  even-root of a negative number and express it as a real number. This is precisely  what complex numbers allow us to do, but alas there is not space in the course for us to  explore them.</span></span>.</p>
+<p id="p-700">Hence we have for all rational \(r \gt 0\)</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{x \to \infty} \frac{1}{x^r} &amp;= 0
+\end{align*}
+</div>
+<p>but we have to be careful with</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{x \to -\infty} \frac{1}{x^r} &amp;= 0
+\end{align*}
+</div>
+<p>This is only true if the denominator of \(r\) is not an even  number <a knowl="" class="id-ref" refid="hk-fn-41" id="fn-41"><sup> 2 </sup></a><span id="hk-fn-41" class="hidden-content tex2jax_ignore"><span class="footnote">where we write \(r = \frac{p}{q}\) with \(p,q\) integers with no  common factors. For example,  \(r = \frac{6}{14}\) should be written as \(r =  \frac{3}{7}\) when considering this rule.</span></span>.</p>
+<p id="p-701">For example</p>
+<ul class="disc">
+<li id="li-239">\(\ds \lim_{x \to \infty} \frac{1}{x^{1/2}} = 0\text{,}\) but \(\ds \lim_{x \to  -\infty} \frac{1}{x^{1/2}}\) does not exist, because \(x^{1/2}\) is not defined for  \(x \lt 0\text{.}\)</li>
+<li id="li-240">On the other hand, \(x^{4/3}\) is defined for negative values of \(x\)  and \(\ds \lim_{x \to -\infty} \frac{1}{x^{4/3}} = 0\text{.}\)</li>
+</ul>
+<p id="p-702">Our first application of limits at infinity will be to examine the behaviour of  a rational function for very large \(x\text{.}\) To do this we use a “trick”.</p>
+<article class="example-like" id="eg_1_5_2"><a knowl="" class="id-ref" refid="hk-eg_1_5_2"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.5.5</span> <span class="title">\(\ds \lim_{x \to \infty} \frac{x^2-3x+4}{3x^2+8x+1}\)</span>
+</h6></a></article><div id="hk-eg_1_5_2" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-703">Compute the following limit:</p>
+<div class="displaymath">
+\begin{gather*}
+\lim_{x \to \infty} \frac{x^2-3x+4}{3x^2+8x+1}
+\end{gather*}
+</div>
+<p>As \(x\) becomes very  large, it is the \(x^2\) term that will dominate in both the  numerator and denominator and the other bits become irrelevant. That is,  for very large \(x\text{,}\) \(x^2\) is much much larger than \(x\) or any constant. So we  pull out these dominant parts</p>
+<div class="displaymath">
+\begin{align*}
+\frac{x^2-3x+4}{3x^2+8x+1}
+&amp;= \frac{x^2 \left(1-\frac{3}{x}+\frac{4}{x^2}\right)}
+{x^2 \left(3+\frac{8}{x}+\frac{1}{x^2} \right)}\\
+&amp;= \frac{1-\frac{3}{x}+\frac{4}{x^2}}
+{3+\frac{8}{x}+\frac{1}{x^2}} &amp; \text{ remove the common factors}
+\end{align*}
+</div>
+<div class="displaymath">
+\begin{align*}
+\lim_{x \to \infty} \frac{x^2-3x+4}{3x^2+8x+1}
+&amp;= \lim_{x \to \infty} \frac{1-\frac{3}{x}+\frac{4}{x^2}}
+{3+\frac{8}{x}+\frac{1}{x^2}}\\
+&amp;= \frac{\ds \lim_{x \to \infty}\left(1-\frac{3}{x}+\frac{4}{x^2}\right)}
+{\ds \lim_{x \to \infty}\left(3+\frac{8}{x}+\frac{1}{x^2} \right)}
+&amp; \text{arithmetic of limits}\\
+&amp;= \frac{\ds \lim_{x \to \infty} 1
+- \lim_{x \to \infty} \frac{3}{x} + \lim_{x \to \infty} \frac{4}{x^2}}
+{\ds \lim_{x \to \infty} 3
++ \lim_{x \to \infty} \frac{8}{x}+ \lim_{x \to \infty} \frac{1}{x^2} }
+&amp; \text{more arithmetic of limits}\\
+&amp;= \frac{1+0+0}{3+0+0}  = \frac{1}{3}
+\end{align*}
+</div></article></div>
+<p id="p-704">The following one gets a little harder</p>
+<article class="example-like" id="eg_lim_tricky"><a knowl="" class="id-ref" refid="hk-eg_lim_tricky"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.5.6</span> <span class="title">Be careful of limits involving roots</span>
+</h6></a></article><div id="hk-eg_lim_tricky" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-705">Find the limit as \(x \to \infty\) of \(\frac{\sqrt{4x^2+1}}{5x-1}\)</p>
+<p id="p-706">We use the same trick — try to work out what is the biggest term in the  numerator and denominator and pull it to one side.</p>
+<ul class="disc">
+<li id="li-241">The denominator is dominated by \(5x\text{.}\)</li>
+<li id="li-242">The biggest contribution to the numerator comes from the \(4x^2\) inside  the square-root. When we pull \(x^2\) outside the square-root it becomes \(x\text{,}\)  so the numerator is dominated by \(x \cdot \sqrt{4} = 2x\)</li>
+<li id="li-243">To see this more explicitly rewrite the numerator<div class="displaymath">
+\begin{align*}
+\sqrt{4x^2+1} &amp;= \sqrt{x^2 (4+1/x^2)} = \sqrt{x^2} \sqrt{4+1/x^2} =
+x\sqrt{4+1/x^2}.
+\end{align*}
+</div>
+</li>
+<li id="li-244">Thus the limit as \(x \to \infty\) is<div class="displaymath">
+\begin{align*}
+\lim_{x \to \infty} \frac{\sqrt{4x^2+1}}{5x-1}
+&amp;= \lim_{x \to \infty} \frac{x \sqrt{4+1/x^2}}{x(5-1/x)}\\
+&amp;= \lim_{x \to \infty} \frac{\sqrt{4+1/x^2}}{5-1/x}\\
+&amp; = \frac{2}{5}
+\end{align*}
+</div>
+</li>
+</ul></article></div>
+<p id="p-707">Now let us also think about the limit of the same function,                  \(\frac{\sqrt{4x^2+1}}{5x-1}\text{,}\) as \(x \rightarrow -\infty\text{.}\) There is something subtle going on because of the square-root. First consider the  function <a knowl="" class="id-ref" refid="hk-fn-42" id="fn-42"><sup> 3 </sup></a><span id="hk-fn-42" class="hidden-content tex2jax_ignore"><span class="footnote">Just to change things up let's use \(t\) and \(h(t)\) instead of  the ubiquitous \(x\) and \(f(x)\text{.}\)</span></span></p>
+<div class="displaymath" id="p-708">
+\begin{align*}
+h(t) &amp;= \sqrt{t^2}
+\end{align*}
+</div>
+<p>Evaluating this at \(t=7\) gives</p>
+<div class="displaymath">
+\begin{align*}
+h(7) &amp;= \sqrt{ 7^2 } = \sqrt{49} = 7
+\end{align*}
+</div>
+<p>We'll get much the same thing for any \(t \geq 0\text{.}\) For any \(t \ge 0\text{,}\) \(h(t)=\sqrt{t^2}\)  returns exactly \(t\text{.}\) However now consider the function at \(t=-3\)</p>
+<div class="displaymath">
+\begin{align*}
+h(-3) &amp;= \sqrt{ (-3)^2 } = \sqrt{9} = 3 = - (-3)
+\end{align*}
+</div>
+<p>that is the function is returning \(-1\) times the input.</p>
+<p id="p-709">This is because when we defined \(\sqrt{\text{ }}\text{,}\) we defined it to be the  <em class="emphasis">positive</em> square-root. i.e. the function \(\sqrt{t}\) can never return a  negative number. So being more careful</p>
+<div class="displaymath">
+\begin{align*}
+h(t) &amp;= \sqrt{t^2} = | t |
+\end{align*}
+</div>
+<p>Where the \(|t|\) is the absolute value of \(t\text{.}\) You are perhaps used to thinking  of absolute value as “remove the minus sign”, but this is not quite correct.  Let's sketch the function</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:30%;margin-right:30%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/abs.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p id="p-710">It is a piecewise function defined by</p>
+<div class="displaymath">
+\begin{align*}
+|x| &amp;= \begin{cases} x &amp; x \geq 0 \\ -x &amp; x  \lt  0 \end{cases}
+\end{align*}
+</div>
+<p>Hence our function \(h(t)\) is really</p>
+<div class="displaymath">
+\begin{align*}
+h(t) &amp;= \sqrt{t^2} =
+\begin{cases}
+t &amp; t \geq 0 \\
+-t &amp; t  \lt  0
+\end{cases}
+\end{align*}
+</div>
+<p>So that when we evaluate \(h(-7)\) it is</p>
+<div class="displaymath">
+\begin{align*}
+h(-7) &amp;= \sqrt{ (-7)^2 } = \sqrt{49} = 7 = -(-7)
+\end{align*}
+</div>
+<p>We are now ready to examine the limit as \(x \to -\infty\) in our previous  example. Mostly it is copy and paste from above.</p>
+<article class="example-like" id="eg_lim_tricky_part2"><a knowl="" class="id-ref" refid="hk-eg_lim_tricky_part2"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.5.7</span> <span class="title">Be careful of limits involving roots — continued</span>
+</h6></a></article><div id="hk-eg_lim_tricky_part2" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-711">Find the limit as \(x \to -\infty\) of \(\frac{\sqrt{4x^2+1}}{5x-1}\)</p>
+<p id="p-712">We use the same trick — try to work out what is the biggest term in the  numerator and denominator and pull it to one side. Since we are taking the  limit as \(x \to -\infty\) we should think of \(x\) as a large negative number.</p>
+<ul class="disc">
+<li id="li-245">The denominator is dominated by \(5x\text{.}\)</li>
+<li id="li-246">The biggest contribution to the numerator comes from the \(4x^2\) inside  the square-root. When we pull the \(x^2\) outside a square-root it becomes \(|x| =  -x\) (since we are taking the limit as \(x \to -\infty\)), so the numerator is  dominated by \(-x\cdot\sqrt{4} = -2x\)</li>
+<li id="li-247">To see this more explicitly rewrite the numerator<div class="displaymath">
+\begin{align*}
+\sqrt{4x^2+1} &amp;= \sqrt{x^2 (4+1/x^2)}  = \sqrt{x^2} \sqrt{4+1/x^2}\\
+&amp;= |x|\sqrt{4+1/x^2} \qquad \text{ and since $x \lt 0$ we have}\\
+&amp; = -x\sqrt{4+1/x^2}
+\end{align*}
+</div>
+</li>
+<li id="li-248">Thus the limit as \(x \to -\infty\) is<div class="displaymath">
+\begin{align*}
+\lim_{x \to -\infty} \frac{\sqrt{4x^2+1}}{5x-1}
+&amp;= \lim_{x \to -\infty} \frac{-x \sqrt{4+1/x^2}}{x(5-1/x)}\\
+&amp;= \lim_{x \to -\infty} \frac{-\sqrt{4+1/x^2}}{5-1/x}\\
+&amp; = -\frac{2}{5}
+\end{align*}
+</div>
+</li>
+</ul></article></div>
+<p id="p-713">So the limit as \(x \to -\infty\) is almost the same but we gain a minus sign.  This <em class="alert">is definitely not</em> the case in general — you have to think about each  example separately.</p>
+<p id="p-714">Here is a sketch of the function in question.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:30%;margin-right:30%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/neg_inf_lim.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<article class="example-like" id="eg_1_5_3"><a knowl="" class="id-ref" refid="hk-eg_1_5_3"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.5.8</span> <span class="title">Do not try to add and subtract infinity</span>
+</h6></a></article><div id="hk-eg_1_5_3" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-715">Compute the following limit:</p>
+<div class="displaymath">
+\begin{gather*}
+\lim_{x \to \infty} \left( x^{7/5}-x \right)
+\end{gather*}
+</div>
+<p>In this case we cannot use the arithmetic of limits to write this as</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{x \to \infty} \left( x^{7/5}-x \right)
+&amp;= \left( \lim_{x \to \infty} x^{7/5}\right)
+- \left( \lim_{x \to \infty} x \right)\\
+&amp;= \infty -\infty
+\end{align*}
+</div>
+<p>because the limits do not exist. We can only use the limit laws when the limits  exist. So we should go back and think some more.</p>
+<p id="p-716">When \(x\) is very large, \(x^{7/5} = x\cdot x^{2/5}\) will be much larger than \(x\text{,}\) so the  \(x^{7/5}\) term will dominate the \(x\) term. So factor out \(x^{7/5}\) and rewrite it as</p>
+<div class="displaymath">
+\begin{align*}
+x^{7/5}-x &amp;= x^{7/5} \left(1 - \frac{1}{x^{2/5}} \right)
+\end{align*}
+</div>
+<p>Consider what happens to each of the factors as \(x \to \infty\)</p>
+<ul class="disc">
+<li id="li-249">For large \(x\text{,}\) \(x^{7/5} \gt x\) (this is actually true for any \(x \gt 1\)).  In the limit as \(x \to +\infty\text{,}\) \(x\) becomes arbitrarily large and  positive, and \(x^{7/5}\) must be bigger still, so it follows that<div class="displaymath">
+\begin{align*}
+\lim_{x \to \infty} x^{7/5} &amp;= + \infty.
+\end{align*}
+</div>
+</li>
+<li id="li-250">On the other hand, \((1-x^{-2/5})\) becomes closer and closer to \(1\) —  we can use the arithmetic of limits to write this as<div class="displaymath">
+\begin{align*}
+\lim_{x \to \infty} (1-x^{-2/5}) &amp;= \lim_{x \to \infty} 1 - \lim_{x \to
+\infty} x^{-2/5} = 1-0 = 1
+\end{align*}
+</div>
+</li>
+</ul>
+<p>So the product of these two factors will be come larger and larger (and  positive) as \(x\) moves off to infinity. Hence we have</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{x \to \infty} x^{7/5} \left(1 - 1/x^{2/5} \right) &amp;= + \infty
+\end{align*}
+</div></article></div>
+<p id="p-717">But remember \(+\infty\) and \(-\infty\) are not numbers; the last equation in the example is shorthand for “the function becomes arbitrarily large”.</p>
+<p id="p-718">In the previous section we saw that finite limits and arithmetic interact very nicely  (see Theorems <a knowl="./knowl/thm_arith_lim.html" title="Theorem 1.4.3: Arithmetic of limits">1.4.3</a> and <a knowl="./knowl/thm_lim_powers.html" title="Theorem 1.4.9: More arithmetic of limits — powers and roots">1.4.9</a>). This enabled us to compute  the limits of more complicated function in terms of simpler ones. When limits of  functions go to plus or minus infinity we are quite a bit more restricted in what we can  deduce. The next theorem states some results concerning the sum, difference, ratio and  product of infinite limits — unfortunately in many cases we cannot make general  statements and the results will depend on the details of the problem at hand.</p>
+<article class="theorem-like" id="thm_arith_inf_lim"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">1.5.9</span> <span class="title">Arithmetic of infinite limits</span>
+</h6>
+<p id="p-719">Let \(a,c,H \in \mathbb{R}\) and let \(f,g,h\) be functions defined in  an interval around \(a\) (but they need not be defined at \(x=a\)), so that</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{x \to a} f(x) &amp;= +\infty &amp;
+\lim_{x \to a} g(x) &amp;= +\infty &amp;
+\lim_{x \to a} h(x) &amp;= H
+\end{align*}
+</div>
+<ul class="disc">
+<li id="li-251">\(\ds \lim_{x \to a} ( f(x) + g(x) ) = +\infty\)</li>
+<li id="li-252">\(\ds \lim_{x \to a} ( f(x) + h(x) ) = +\infty\)</li>
+<li id="li-253">\(\ds \lim_{x \to a} ( f(x) - g(x) )\) undetermined</li>
+<li id="li-254">\(\ds \lim_{x \to a} ( f(x) - h(x) ) = +\infty\)</li>
+<li id="li-255">\(\ds \lim_{x \to a} c f(x) =
+\begin{cases}
++\infty &amp; c \gt 0 \\
+0 &amp; c=0 \\
+-\infty &amp; c \lt 0
+\end{cases}\)</li>
+<li id="li-256">\(\ds \lim_{x \to a} ( f(x) \cdot g(x) ) = +\infty\text{.}\)</li>
+<li id="li-257">\(\ds \lim_{x \to a} f(x) h(x) =
+\begin{cases}
++\infty &amp; H \gt 0 \\
+-\infty &amp; H \lt 0\\
+\text{undetermined} &amp; H=0
+\end{cases}\)</li>
+<li id="li-258">\(\ds \lim_{x \to a} \frac{f(x)}{g(x)}\) undetermined</li>
+<li id="li-259">\(\ds \lim_{x \to a} \frac{f(x)}{h(x)} =
+\begin{cases}
++\infty &amp; H \gt 0 \\
+-\infty &amp; H \lt 0\\
+\text{undetermined} &amp; H=0
+\end{cases}\)</li>
+<li id="li-260">\(\ds \lim_{x \to a} \frac{h(x)}{f(x)} = 0\)</li>
+<li id="li-261">\(\ds \lim_{x \to a} f(x)^p =
+\begin{cases}
++\infty &amp; p \gt 0 \\
+0 &amp; p \lt 0\\
+1 &amp; p=0
+\end{cases}\)</li>
+</ul></article><p id="p-720">Note that by “undetermined” we mean that the limit may or may not exist, but  cannot be determined from the information given in the theorem. See  Example <a knowl="./knowl/eg_lim_rat.html" title="Example 1.4.7: Be careful with limits of ratios">1.4.7</a> for an example of what we mean by  “undetermined”. Additionally consider the following example.</p>
+<article class="example-like" id="eg_1_5_4"><a knowl="" class="id-ref" refid="hk-eg_1_5_4"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.5.10</span> <span class="title">Be careful with the arithmetic of infinite limits</span>
+</h6></a></article><div id="hk-eg_1_5_4" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-721">Consider the following 3 functions:</p>
+<div class="displaymath">
+\begin{align*}
+f(x)&amp;=x^{-2} &amp; g(x)&amp;=2x^{-2} &amp;h(x)&amp;=x^{-2}-1.\\
+\end{align*}
+<p class="intertext">Their limits as \(x \to 0\) are:</p>
+\begin{align*}
+\lim_{x\to0} f(x) &amp;= +\infty &amp;
+\lim_{x\to0} g(x) &amp;= +\infty &amp;
+\lim_{x\to0} h(x) &amp;= +\infty.
+\end{align*}
+</div>
+<p>Say we want to compute the limit of the difference of two of the above functions as \(x  \to 0\text{.}\) Then the previous theorem cannot help us. This is not because it is too weak,  rather it is because the difference of two infinite limits can be, either plus infinity,  minus infinity or some finite number depending on the details of the problem. For example,</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{x\to0} \left( f(x)-g(x) \right) &amp;= \lim_{x\to0} -x^{-2} = -\infty\\
+\lim_{x\to0} \left( f(x)-h(x) \right) &amp;= \lim_{x\to0} 1 = 1\\
+\lim_{x\to0} \left( g(x)-h(x) \right) &amp;= \lim_{x\to0} x^{-2}+1 = +\infty
+\end{align*}
+</div></article></div></section></div></main>
+</div>
+<!--Start: Google Universal code--><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-105798942-1', 'auto');
+ga('send', 'pageview');
+</script><!--End: Google Universal code--><div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.1/login.js"></script>
+</body>
+</html>

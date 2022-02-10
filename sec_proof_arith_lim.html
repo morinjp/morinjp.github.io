@@ -1,0 +1,506 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:00:31-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>(Optional) — Proving the Arithmetic of Limits</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.1/pretext.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on2.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="RQS.css">
+<link href="https://pretextbook.org/css/0.1/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\require{cancel}\newcommand{\dee}[1]{\mathrm{d}#1}
+\newcommand{\half}{ \frac{1}{2} }
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ts}{\textstyle}
+\newcommand{\es}{ {\varnothing}}
+\newcommand{\st}{ {\mbox{ s.t. }} }
+\newcommand{\pow}[1]{ \mathcal{P}\left(#1\right) }
+\newcommand{\set}[1]{ \left\{#1\right\} }
+\newcommand{\lin}{{\text{LIN}}}
+\newcommand{\quot}{{\text{QR}}}
+\newcommand{\simp}{{\text{SMP}}}
+\newcommand{\diff}[2]{ \frac{\mathrm{d}#1}{\mathrm{d}#2}}
+\newcommand{\bdiff}[2]{ \frac{\mathrm{d}}{\mathrm{d}#2} \left( #1 \right)}
+\newcommand{\ddiff}[3]{ \frac{\mathrm{d}^#1#2}{\mathrm{d}{#3}^#1}}
+\renewcommand{\neg}{ {\sim} }
+\newcommand{\limp}{ {\;\Rightarrow\;} }
+\newcommand{\nimp}{ {\;\not\Rightarrow\;} }
+\newcommand{\liff}{ {\;\Leftrightarrow\;} }
+\newcommand{\niff}{ {\;\not\Leftrightarrow\;} }
+\newcommand{\De}{\Delta}
+\newcommand{\bbbn}{\mathbb{N}}
+\newcommand{\bbbr}{\mathbb{R}}
+\newcommand{\bbbp}{\mathbb{P}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\Si}{\Sigma}
+
+\newcommand{\arccsc}{\mathop{\mathrm{arccsc}}}
+\newcommand{\arcsec}{\mathop{\mathrm{arcsec}}}
+\newcommand{\arccot}{\mathop{\mathrm{arccot}}}
+\newcommand{\erf}{\mathop{\mathrm{erf}}}
+\newcommand{\smsum}{\mathop{{\ts \sum}}}
+\newcommand{\atp}[2]{ \genfrac{}{}{0in}{}{#1}{#2} }
+
+\newcommand{\ave}{\mathrm{ave}}
+\newcommand{\llt}{\left \lt }
+\newcommand{\rgt}{\right \gt }
+
+
+\newcommand{\YEaxis}[2]{\draw[help lines] (-#1,0)--(#1,0) node[right]{$x$};\draw[help lines] (0,-#2)--(0,#2) node[above]{$y$};}
+
+\newcommand{\YEaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$x$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YEtaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+\newcommand{\YEtaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$}; \draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YExcoord}[2]{\draw (#1,.2)--(#1,-.2) node[below]{$#2$};}
+\newcommand{\YEycoord}[2]{\draw (.2,#1)--(-.2,#1) node[left]{$#2$};}
+\newcommand{\YEnxcoord}[2]{\draw (#1,-.2)--(#1,.2) node[above]{$#2$};}
+\newcommand{\YEnycoord}[2]{\draw (-.2,#1)--(.2,#1) node[right]{$#2$};}
+
+\newcommand{\YEstickfig}[3]{
+\draw (#1,#2) arc(-90:270:2mm);
+\draw (#1,#2)--(#1,#2-.5) (#1-.25,#2-.75)--(#1,#2-.5)--(#1+.25,#2-.75) (#1-.2,#2-.2)--(#1+.2,#2-.2);}
+
+
+\newcommand{\IBP}[7]{
+\begin{array}{|c  | l | l |}
+\hline
+\color{red}{\text{Option 1:}}
+&amp; u=#2
+&amp;\color{red}{\dee{u}=#3 ~ \dee{#1}}
+\\
+&amp; \dee{v}=#5~\dee{#1}
+&amp;\color{red}{v=#7}
+\\
+\hline
+\color{blue}{\text{Option 2:}}
+&amp; u=#5
+&amp;\color{blue}{\dee{u}=#6 ~ \dee{#1}}
+\\
+&amp;\dee{v}=#2 \dee{#1}
+&amp;\color{blue}{v=#4}
+\\
+\hline
+\end{array}
+}
+
+
+\renewcommand{\textcolor}[2]{{\color{#1}{#2}}}
+
+
+\newcommand{\trigtri}[4]{
+\begin{tikzpicture}
+\draw (-.5,0)--(2,0)--(2,1.5)--cycle;
+\draw (1.8,0) |- (2,.2);
+\draw[double] (0,0) arc(0:30:.5cm);
+\draw (0,.2) node[right]{$#1$};
+\draw (1,-.5) node{$#2$};
+\draw (2,.75) node[right]{$#3$};
+\draw (.6,1.1) node[rotate=30]{$#4$};
+\end{tikzpicture}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="clp_1_dc.html"><span class="title">CLP-1 Differential Calculus</span></a></h1>
+<p class="byline">Joel Feldman, Andrew Rechnitzer, Elyse Yeager</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec_lim_inf_formal.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="chap_limits.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="chap_deriv.html" title="Next">Next</a></span></div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec_lim_inf_formal.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="chap_limits.html" title="Up">Up</a><a class="next-button button toolbar-item" href="chap_deriv.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="index.html" data-scroll="index"><span class="title">Front Matter</span></a></h2>
+<ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface-2.html" data-scroll="preface-2">Using the exercises in this book</a></li>
+<li><a href="preface-3.html" data-scroll="preface-3">Feedback about the text</a></li>
+</ul>
+<h2 class="link"><a href="chap_basics.html" data-scroll="chap_basics"><span class="codenumber">0</span> <span class="title">The basics</span></a></h2>
+<ul>
+<li><a href="sec_0_1.html" data-scroll="sec_0_1">Numbers</a></li>
+<li><a href="sec_sets.html" data-scroll="sec_sets">Sets</a></li>
+<li><a href="sec_0_3.html" data-scroll="sec_0_3">Other Important Sets</a></li>
+<li><a href="sec_0_4.html" data-scroll="sec_0_4">Functions</a></li>
+<li><a href="sec_parsing.html" data-scroll="sec_parsing">Parsing Formulas</a></li>
+<li><a href="sec_inverse_functions.html" data-scroll="sec_inverse_functions">Inverse Functions</a></li>
+</ul>
+<h2 class="link"><a href="chap_limits.html" data-scroll="chap_limits"><span class="codenumber">1</span> <span class="title">Limits</span></a></h2>
+<ul>
+<li><a href="sec_first_lim.html" data-scroll="sec_first_lim">Drawing Tangents and a First Limit</a></li>
+<li><a href="sec_velocity.html" data-scroll="sec_velocity">Another Limit and Computing Velocity</a></li>
+<li><a href="sec_lim_func.html" data-scroll="sec_lim_func">The Limit of a Function</a></li>
+<li><a href="sec_1_4.html" data-scroll="sec_1_4">Calculating Limits with Limit Laws</a></li>
+<li><a href="sec_1_5.html" data-scroll="sec_1_5">Limits at Infinity</a></li>
+<li><a href="sec_1_6.html" data-scroll="sec_1_6">Continuity</a></li>
+<li><a href="sec_opt_formal_limit.html" data-scroll="sec_opt_formal_limit">(Optional) — Making the Informal a Little More Formal</a></li>
+<li><a href="sec_lim_inf_formal.html" data-scroll="sec_lim_inf_formal">(Optional) — Making Infinite Limits a Little More Formal</a></li>
+<li><a href="sec_proof_arith_lim.html" data-scroll="sec_proof_arith_lim" class="active">(Optional) — Proving the Arithmetic of Limits</a></li>
+</ul>
+<h2 class="link"><a href="chap_deriv.html" data-scroll="chap_deriv"><span class="codenumber">2</span> <span class="title">Derivatives</span></a></h2>
+<ul>
+<li><a href="sec_2_1.html" data-scroll="sec_2_1">Revisiting Tangent Lines</a></li>
+<li><a href="sec_def_deriv.html" data-scroll="sec_def_deriv">Definition of the Derivative</a></li>
+<li><a href="sec_2_3.html" data-scroll="sec_2_3">Interpretations of the Derivative</a></li>
+<li><a href="sec_2_4.html" data-scroll="sec_2_4">Arithmetic of Derivatives - a Differentiation Toolbox</a></li>
+<li><a href="sec_proof_arith_deriv.html" data-scroll="sec_proof_arith_deriv">Proofs of the Arithmetic of Derivatives</a></li>
+<li><a href="sec_2_6.html" data-scroll="sec_2_6">Using the Arithmetic of Derivatives –  Examples</a></li>
+<li><a href="sec_exp_func.html" data-scroll="sec_exp_func">Derivatives of Exponential Functions</a></li>
+<li><a href="sec_diff_trig.html" data-scroll="sec_diff_trig">Derivatives of Trigonometric Functions</a></li>
+<li><a href="sec_chain_rule.html" data-scroll="sec_chain_rule">One More Tool  – the Chain Rule</a></li>
+<li><a href="sec_diff_logs.html" data-scroll="sec_diff_logs">The Natural Logarithm</a></li>
+<li><a href="sec_2_11.html" data-scroll="sec_2_11">Implicit Differentiation</a></li>
+<li><a href="sec_invTrig.html" data-scroll="sec_invTrig">Inverse Trigonometric Functions</a></li>
+<li><a href="sec_mvt.html" data-scroll="sec_mvt">The Mean Value Theorem</a></li>
+<li><a href="sec_higher_diff.html" data-scroll="sec_higher_diff">Higher Order Derivatives</a></li>
+<li><a href="sec_cont_deriv.html" data-scroll="sec_cont_deriv">(Optional) — Is \(\lim_{x\to c}f'(x)\) Equal to \(f'(c)\text{?}\)</a></li>
+</ul>
+<h2 class="link"><a href="chap_appl_deriv.html" data-scroll="chap_appl_deriv"><span class="codenumber">3</span> <span class="title">Applications of derivatives</span></a></h2>
+<ul>
+<li><a href="sec_vel_acc.html" data-scroll="sec_vel_acc">Velocity and Acceleration</a></li>
+<li><a href="sec_rrates.html" data-scroll="sec_rrates">Related Rates</a></li>
+<li><a href="sec_ExpGthDecay.html" data-scroll="sec_ExpGthDecay">Exponential Growth and Decay</a></li>
+<li><a href="sec_DIFFTaylor.html" data-scroll="sec_DIFFTaylor">Taylor Polynomials</a></li>
+<li><a href="sec_optimise.html" data-scroll="sec_optimise">Optimisation</a></li>
+<li><a href="sec_curve_sketch.html" data-scroll="sec_curve_sketch">Sketching Graphs</a></li>
+<li><a href="sec_4_7.html" data-scroll="sec_4_7">L'Hôpital's Rule and Indeterminate Forms</a></li>
+</ul>
+<h2 class="link"><a href="chapter-5.html" data-scroll="chapter-5"><span class="codenumber">4</span> <span class="title">Towards Integral Calculus</span></a></h2>
+<ul><li><a href="sec_antidiff.html" data-scroll="sec_antidiff">Introduction to Antiderivatives</a></li></ul>
+<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Appendices</span></a></h2>
+<h2 class="link"><a href="app_highschool.html" data-scroll="app_highschool"><span class="codenumber">A</span> <span class="title">High School Material</span></a></h2>
+<ul>
+<li><a href="sec_simtri.html" data-scroll="sec_simtri">Similar Triangles</a></li>
+<li><a href="sec_A_2.html" data-scroll="sec_A_2">Pythagoras</a></li>
+<li><a href="sec_A_3.html" data-scroll="sec_A_3">Trigonometry — Definitions</a></li>
+<li><a href="app_rad_arc_sec.html" data-scroll="app_rad_arc_sec">Radians, Arcs and Sectors</a></li>
+<li><a href="app_sec_trig_graphs.html" data-scroll="app_sec_trig_graphs">Trigonometry — Graphs</a></li>
+<li><a href="sec_A_6.html" data-scroll="sec_A_6">Trigonometry — Special Triangles</a></li>
+<li><a href="sec_A_7.html" data-scroll="sec_A_7">Trigonometry — Simple Identities</a></li>
+<li><a href="sec_trig_add.html" data-scroll="sec_trig_add">Trigonometry — Add and Subtract Angles</a></li>
+<li><a href="sec_inv_trig.html" data-scroll="sec_inv_trig">Inverse Trig Functions</a></li>
+<li><a href="app_sec_areas.html" data-scroll="app_sec_areas">Areas</a></li>
+<li><a href="sec_volumes.html" data-scroll="sec_volumes">Volumes</a></li>
+<li><a href="sec_powers.html" data-scroll="sec_powers">Powers</a></li>
+<li><a href="sec_logs.html" data-scroll="sec_logs">Logarithms</a></li>
+<li><a href="sec_must_deriv.html" data-scroll="sec_must_deriv">You Should be Able to Derive</a></li>
+</ul>
+<h2 class="link"><a href="chap_app_B.html" data-scroll="chap_app_B"><span class="codenumber">B</span> <span class="title">Origin of Trig, Area and Volume Formulas</span></a></h2>
+<ul>
+<li><a href="sec_B_1.html" data-scroll="sec_B_1">Theorems about Triangles</a></li>
+<li><a href="sec_B_2.html" data-scroll="sec_B_2">Trigonometry</a></li>
+<li><a href="sec_B_3.html" data-scroll="sec_B_3">Inverse Trigonometric Functions</a></li>
+<li><a href="sec_B_4.html" data-scroll="sec_B_4">Cosine and Sine Laws</a></li>
+<li><a href="sec_B_5.html" data-scroll="sec_B_5">Circles, cones and spheres</a></li>
+</ul>
+<h2 class="link"><a href="app_root_finding.html" data-scroll="app_root_finding"><span class="codenumber">C</span> <span class="title">Root Finding</span></a></h2>
+<ul>
+<li><a href="sec_C_1.html" data-scroll="sec_C_1">Newton's Method</a></li>
+<li><a href="sec_C_2.html" data-scroll="sec_C_2">The Error Behaviour of Newton's Method</a></li>
+<li><a href="sec_C_3.html" data-scroll="sec_C_3">The false position (regula falsi) method</a></li>
+<li><a href="sec_C_4.html" data-scroll="sec_C_4">The secant method</a></li>
+<li><a href="sec_C_5.html" data-scroll="sec_C_5">The Error Behaviour of the Secant Method</a></li>
+</ul>
+<h2 class="link"><a href="app_hint.html" data-scroll="app_hint"><span class="codenumber">D</span> <span class="title">Hints for Exercises</span></a></h2>
+<h2 class="link"><a href="app_answ.html" data-scroll="app_answ"><span class="codenumber">E</span> <span class="title">Answers to Exercises</span></a></h2>
+<h2 class="link"><a href="app_soln.html" data-scroll="app_soln"><span class="codenumber">F</span> <span class="title">Solutions to Exercises</span></a></h2></nav><div class="extras"><nav><a class="feedback-link" href="mailto:clp@ugrad.math.ubc.ca?subject=clp-pretext" target="_blank">Feedback</a><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="mathbook-content"><section class="section" id="sec_proof_arith_lim"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1.9</span> <span class="title">(Optional) — Proving the Arithmetic of Limits</span>
+</h2>
+<a href="sec_proof_arith_lim.html" class="permalink">¶</a><section class="introduction" id="introduction-25"><p id="p-1112">Perhaps the most useful theorem of this chapter is Theorem <a knowl="./knowl/thm_arith_lim.html" title="Theorem 1.4.3: Arithmetic of limits">1.4.3</a>  which shows how limits interact with arithmetic. In this (optional) section we will prove both the arithmetic of limits Theorem <a knowl="./knowl/thm_arith_lim.html" title="Theorem 1.4.3: Arithmetic of limits">1.4.3</a> and the Squeeze Theorem <a knowl="./knowl/thm_squeeze.html" title="Theorem 1.4.18: Squeeze theorem (or sandwich theorem or pinch theorem)">1.4.18</a>. Before we get to the proofs it  is very helpful to prove three technical lemmas that we'll need. The first is a very general result about absolute values of numbers:</p>
+<article class="theorem-like" id="lem_1_9_1"><h6 class="heading">
+<span class="type">Lemma</span> <span class="codenumber">1.9.1</span> <span class="title">The triangle inequality</span>
+</h6>
+<p id="p-1113">For any \(x,y \in \mathbb{R}\)</p>
+<div class="displaymath">
+\begin{align*}
+|x+y| &amp; \leq |x| + |y|
+\end{align*}
+</div></article><article class="hiddenproof" id="proof-4"><a knowl="" class="id-ref" refid="hk-proof-4"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-4" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-1114">Notice that for any real number \(x\text{,}\) we always have \(-x,x\le|x|\) and either \(|x|=x\)  or \(|x|=-x\text{.}\) So now let  \(x,y \in \mathbb{R}\text{.}\) Then we must have either</p>
+<div class="displaymath">
+\begin{align*}
+|x+y|&amp;= x+y &amp;&amp;\le |x|+|y|\\
+\end{align*}
+<p class="intertext">or</p>
+\begin{align*}
+|x+y|&amp;= -x-y &amp;&amp;\le |x|+|y|
+\end{align*}
+</div>
+<p>In both cases we end up with \(|x+y| \le |x| + |y|\text{.}\)</p></article></div>
+<p id="p-1115">The second lemma is more specialised. It proves that if we have a function  \(f(x) \to F\) as \(x \to a\) then there must be a small window around \(x=a\) where  the function \(f(x)\) must only take values not far from \(F\text{.}\) In particular it tells  us that \(|f(x)|\) cannot be bigger than \(|F|+1\) when \(x\) is very close to \(a\text{.}\)</p>
+<article class="theorem-like" id="lem_fx_F1"><h6 class="heading">
+<span class="type">Lemma</span> <span class="codenumber">1.9.2</span>
+</h6>
+<p id="p-1116">Let \(a \in \mathbb{R}\) and let \(f\) be a function so that \(\ds \lim_{x \to  a} f(x) =F\text{.}\) Then there exists a \(\delta  \gt 0\) so that if \(0 \lt |x-a| \lt \delta\)  then we also have \(|f(x)| \leq |F|+1\text{.}\)</p></article><p id="p-1117">The proof is mostly just manipulating the \(\epsilon\)–\(\delta\) definition of  a limit with \(\epsilon=1\text{.}\)</p>
+<article class="hiddenproof" id="proof-5"><a knowl="" class="id-ref" refid="hk-proof-5"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-5" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-1118">Let \(\epsilon = 1\text{.}\) Then since \(f(x) \to F\) as \(x \to a\text{,}\) there exists  \(\delta \gt 0\) so that when \(0 \lt |x-a| \lt \delta\text{,}\) we also have \(|f(x)-F| \leq  \epsilon=1\text{.}\) So now assume \(0 \lt |x-a| \lt \delta\text{.}\) Then</p>
+<div class="displaymath">
+\begin{align*}
+-\epsilon &amp;\leq f(x) - F \leq \epsilon &amp; \text{rearrange a little}\\
+-\epsilon+F &amp;\leq f(x) \leq \epsilon+F\\
+\end{align*}
+<p class="intertext">Now \(\epsilon+F \leq \epsilon+|F|\) and \(-\epsilon+F \geq  -\epsilon-|F|\text{,}\) so</p>
+\begin{align*}
+-\epsilon-|F| &amp;\leq f(x) \leq \epsilon+|F|
+\end{align*}
+</div>
+<p>Hence we have \(|f(x)| \leq \epsilon+|F| = |F|+1\text{.}\)</p></article></div>
+<p id="p-1119">Finally our third technical lemma gives us a bound in the other direction; it  tells us that when \(x\) is close to \(a\text{,}\) the value of \(|f(x)|\) cannot be much  smaller than \(|F|\text{.}\)</p>
+<article class="theorem-like" id="lem_fx_F2"><h6 class="heading">
+<span class="type">Lemma</span> <span class="codenumber">1.9.3</span>
+</h6>
+<p id="p-1120">Let \(a \in \mathbb{R}\) and \(F\ne0\) and let \(f\) be a function so that \(\ds \lim_{x \to a}  f(x) = F\text{.}\) Then there exists \(\delta \gt 0\) so that when \(0 \lt |x-a| \lt \delta\text{,}\) we have  \(|f(x)| \gt  \frac{|F|}{2}\text{.}\)</p></article><article class="hiddenproof" id="proof-6"><a knowl="" class="id-ref" refid="hk-proof-6"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-6" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-1121">Set \(\epsilon = \frac{|F|}{2} \gt 0\text{.}\) Since \(f(x) \to F\text{,}\) we know there exists  a \(\delta \gt 0\) so that when \(0 \lt |x-a| \lt \delta\) we have \(|f(x)-F| \lt \epsilon\text{.}\) So now  assume \(0 \lt |x-a| \lt \delta\) so that \(|f(x)-F| \lt \epsilon = \frac{|F|}{2}\text{.}\)  Then</p>
+<div class="displaymath">
+\begin{align*}
+|F| &amp;= |F-f(x)+f(x)| &amp; \text{sneaky trick}\\
+&amp; \leq |f(x) - F| + |f(x)| &amp; \text{ but $|f(x)-F| \lt \epsilon$}\\
+&amp;  \lt  \epsilon + |f(x)|
+\end{align*}
+</div>
+<p>Hence \(|f(x)| \gt |F|-\epsilon= \frac{|F|}{2}\) as required.</p></article></div>
+<p id="p-1122">Now we are in a position to prove Theorem <a knowl="./knowl/thm_arith_lim.html" title="Theorem 1.4.3: Arithmetic of limits">1.4.3</a>. The proof has  more steps than the previous \(\epsilon-\delta\) proofs we have  seen. This is mostly because we do not have specific functions \(f(x)\) and  \(g(x)\) and instead must play with them in the abstract — and make good use of the  formal definition of limits.</p>
+<p id="p-1123">We will break the proof into three pieces. The minimum that is required is to  prove that</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{x \to a} ( f(x) + g(x) ) &amp;= F+G\\
+\lim_{x \to a} f(x) \cdot g(x) &amp;= F\cdot G\\
+\lim_{x \to a} \frac{1}{g(x)} &amp;= \frac{1}{G}\quad\text{if } G\ne 0.
+\end{align*}
+</div>
+<p>From these three we can prove that</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{x \to a} f(x) \cdot c &amp;= F\cdot c\\
+\lim_{x \to a} ( f(x) - g(x) ) &amp;= F-G\\
+\lim_{x \to a} \frac{f(x)}{g(x)} &amp;= \frac{F}{G}\quad\text{if } G\ne 0.
+\end{align*}
+</div>
+<p>The first follows by setting \(g(x) = c\) and using \(\lim f(x) \cdot  g(x)\text{.}\) The second follows by setting \(c=-1\text{,}\) putting \(h(x) = (-1)\cdot g(x)\)  and then applying both \(\lim f(x) \cdot g(x)\) and \(\lim f(x)+g(x)\text{.}\) The third  follows by setting \(h(x) = \frac{1}{g(x)}\) and then using \(\lim f(x) \cdot h(x)\text{.}\)</p>
+<p id="p-1124">Starting with addition, in order to satisfy the definition of limit, we are  going to have to show that</p>
+<div class="displaymath">
+\begin{align*}
+|( f(x) + g(x) )-(F+G) | &amp;\text{ is small}
+\end{align*}
+</div>
+<p>when we know that \(|f(x)-F|, |g(x)-G|\) are small. To do this we use the  triangle inequality above showing that</p>
+<div class="displaymath">
+\begin{align*}
+|( f(x) + g(x) )-(F+G) | &amp;=
+|(f(x)-F) + (g(x)-G) | \leq |f(x)-F| + |g(x)-G|
+\end{align*}
+</div>
+<p>This is the key technical piece of the proof. So if we want the LHS of the  above to be size \(\epsilon\text{,}\) we need to make sure that each term on the RHS is  of size \(\frac{\epsilon}{2}\text{.}\) The rest of the proof is setting up facts  based on the definition of limits and then rearranging facts to reach the  conclusion.</p>
+<article class="hiddenproof" id="proof-7"><a knowl="" class="id-ref" refid="hk-proof-7"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-7" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-1125"><em class="alert">Proof of Theorem <a knowl="./knowl/thm_arith_lim.html" title="Theorem 1.4.3: Arithmetic of limits">1.4.3</a> — limit of a sum.</em></p>
+<p id="p-1126">Let \(a \in \mathbb{R}\) and assume that</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{x \to a} f(x) &amp;= F &amp; \text{ and } &amp;&amp;
+\lim_{x \to a} g(x) &amp;= G.
+\end{align*}
+</div>
+<p>We wish to show that</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{x \to a} f(x)+g(x) &amp;= F+G.
+\end{align*}
+</div>
+<p id="p-1127">Let \(\epsilon \gt 0\) — we have to find a \(\delta \gt 0\) so that when  \(|x-a| \lt \delta\) we have \(|(f(x)+g(x))-(F+G)| \lt \epsilon\text{.}\)</p>
+<p id="p-1128">Let \(\epsilon \gt 0\) and set \(\epsilon_1 = \epsilon_2 = \frac{\epsilon}{2}\text{.}\) By the definition of limits, because \(f(x) \to F\) there exists some   \(\delta_1  \gt 0\) so that whenever \(|x-a| \lt \delta_1\text{,}\) we also  have \(|f(x)-F| \lt \epsilon_1\text{.}\) Similarly there exists \(\delta_2 \gt 0\) so that if  \(|x-a| \lt \delta_2\text{,}\) then we must have \(|g(x)-G| \lt \epsilon_2\text{.}\) So now choose  \(\delta = \min\{ \delta_1, \delta_2 \}\) and assume \(|x-a| \lt \delta\text{.}\) Then we must  have that \(|x-a| \lt \delta_1, \delta_2\) and so we also have</p>
+<div class="displaymath">
+\begin{align*}
+|f(x)-F|&amp; \lt \epsilon_1 &amp; |g(x)-G|&amp;  \lt  \epsilon_2
+\end{align*}
+</div>
+<p id="p-1129">Now consider \(|(f(x)+g(x))-(F+G)|\) and rearrange the terms:</p>
+<div class="displaymath">
+\begin{align*}
+|(f(x)+g(x))-(F+G)| &amp;= |(f(x)-F)+(g(x)-G)|\\
+\end{align*}
+<p class="intertext">now apply triangle inequality</p>
+\begin{align*}
+&amp;\leq |f(x)-F| + |g(x)-G| &amp; \text{ use facts from above}\\
+&amp;  \lt  \epsilon_1 + \epsilon_2\\
+&amp;= \epsilon.
+\end{align*}
+</div>
+<p id="p-1130">Hence we have shown that for any \(\epsilon \gt 0\) there exists some \(\delta \gt 0\) so  that when \(|x-a| \lt \delta\) we also have \(|(f(x)+g(x))-(F+G)| \lt \epsilon\text{.}\) Which  is exactly the formal definition of the limit we needed to prove.</p></article></div>
+<p id="p-1131">Let us do similarly for the limit of a product. Some of the details of the  proof are very similar, but there is a little technical trick in the middle to  make it work. In particular we need to show that</p>
+<div class="displaymath">
+\begin{align*}
+|f(x) \cdot g(x) - F\cdot G| &amp; \text{ is small}
+\end{align*}
+</div>
+<p>when we know that \(|f(x)-F|\) and \(|g(x)-G|\) are both small. Notice that</p>
+<div class="displaymath">
+\begin{align*}
+f(x) \cdot g(x) - F\cdot G
+&amp;= f(x) \cdot g(x) - F\cdot G + \underbrace{ f(x)\cdot G - f(x) \cdot G
+}_{=0}\\
+&amp;= f(x)\cdot g(x)- f(x) \cdot G + f(x) \cdot G - F\cdot G\\
+&amp;= f(x)\cdot( g(x)-G) + (f(x)-F)\cdot G
+\end{align*}
+</div>
+<p>So if we know \(|f(x)-F|\) is small and \(|g(x)-G|\) is small then we are done —  except that we also need to know that \(f(x)\) doesn't become really large near \(a\) — this is exactly why we needed to prove Lemma <a knowl="./knowl/lem_fx_F1.html" title="Lemma 1.9.2">1.9.2</a>.</p>
+<p id="p-1132">As was the case in the previous proof, we want the LHS to be of size at most \(\epsilon\text{,}\) so we want, for example,  the two terms on the RHS to be of size at most  \(\frac{\epsilon}{2}\text{.}\) This means</p>
+<ul class="disc">
+<li id="li-372">we need \(|G|\cdot|f(x)-F|\) to be of size at most \(\frac{\epsilon}{2}\text{,}\) and</li>
+<li id="li-373">we need \(|g(x)-G|\) to be of size at most \(\frac{\epsilon}{2(|F|+1)}\)  since we know that \(|f(x)| \leq |F|+1\) when \(x\) is close to \(a\text{.}\)</li>
+</ul>
+<p id="p-1133">Armed with these tricks we turn to the proofs.</p>
+<article class="hiddenproof" id="proof-8"><a knowl="" class="id-ref" refid="hk-proof-8"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-8" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-1134"><em class="alert">Proof of Theorem <a knowl="./knowl/thm_arith_lim.html" title="Theorem 1.4.3: Arithmetic of limits">1.4.3</a> — limit of a product.</em></p>
+<p id="p-1135">Let \(a \in \mathbb{R}\) and assume that</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{x \to a} f(x) &amp;= F &amp; \text{ and } &amp;&amp;
+\lim_{x \to a} g(x) &amp;= G.
+\end{align*}
+</div>
+<p>We wish to show that</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{x \to a} f(x)\cdot g(x) &amp;= F\cdot G.
+\end{align*}
+</div>
+<p id="p-1136">Let \(\epsilon \gt 0\text{.}\) Set \(\epsilon_1 = \frac{\epsilon}{2(|G|+1)}\) (the extra \(+1\) in the denominator is just there to make sure that \(\epsilon_1\) is well–defined even if \(G=0\)),  and \(\epsilon_2 = \frac{\epsilon}{2(|F|+1)}\text{.}\) From this we establish the  existence of \(\delta_1,  \delta_2, \delta_3\) which we need below.</p>
+<ul class="disc">
+<li id="li-374">By assumption \(f(x) \to F\) so there exists \(\delta_1 \gt 0\) so that whenever  \(|x-a| \lt \delta_1\text{,}\) we also have \(|f(x)-F| \lt \epsilon_1\text{.}\)</li>
+<li id="li-375">Similarly because \(g(x) \to G\text{,}\) there exists \(\delta_2 \gt 0\)  so that whenever \(|x-a| \lt \delta_2\text{,}\) we also have  \(|g(x)-G| \lt \epsilon_2\text{.}\)</li>
+<li id="li-376">By Lemma <a knowl="./knowl/lem_fx_F1.html" title="Lemma 1.9.2">1.9.2</a> there exists \(\delta_3 \gt 0\) so that whenever  \(|x-a| \lt \delta_3\text{,}\) we also have \(|f(x)| \leq |F|+1\text{.}\)</li>
+</ul>
+<p id="p-1137">Let \(\delta = \min\{\delta_1, \delta_2, \delta_3 \}\text{,}\) assume \(|x-a| \lt \delta\)   and consider \(|f(x) \cdot g(x) - F\cdot G|\text{.}\) Rearrange the terms as we did  above:</p>
+<div class="displaymath">
+\begin{align*}
+| f(x) \cdot g(x) - F\cdot G |
+&amp;= |f(x)\cdot( g(x)-G) + (f(x)-F)\cdot G |\\
+&amp; \leq |f(x)| \cdot |g(x)-G| + |G| \cdot |f(x)-F|
+\end{align*}
+</div>
+<p>By our three dot-points above we know that \(|f(x)-F| \lt \epsilon_1\) and  \(|g(x)-G| \lt \epsilon_2\) and \(|f(x)| \leq |F|+1\text{,}\) so we have</p>
+<div class="displaymath">
+\begin{align*}
+| f(x) \cdot g(x) - F\cdot G |  &amp; \lt  |f(x)| \cdot \epsilon_2 + |G| \cdot \epsilon_1\\
+\end{align*}
+<p class="intertext">sub in \(\epsilon_1,\epsilon_2\) and bound on \(f(x)\)</p>
+\begin{align*}
+&amp; \lt  (|F|+1) \cdot \frac{\epsilon}{2(|F|+1)} + |G|\cdot\frac{\epsilon}{2(|G|+1)}\\
+&amp;\leq  \frac{\epsilon}{2} + \frac{\epsilon}{2} = \epsilon.
+\end{align*}
+</div>
+<p id="p-1138">Thus we have shown that for any \(\epsilon \gt 0\) there exists \(\delta \gt 0\) so that  when \(|x-a| \lt \delta\) we also have \(|f(x)\cdot g(x)-F\cdot G| \lt \epsilon\text{.}\) Hence  \(f(x)\cdot g(x) \to F\cdot G\text{.}\)</p></article></div>
+<p id="p-1139">Finally we can prove the limit of a reciprocal. Notice that</p>
+<div class="displaymath">
+\begin{align*}
+\frac{1}{g(x)} - \frac{1}{G} &amp;= \frac{G-g(x)}{g(x) \cdot G}
+\end{align*}
+</div>
+<p>We need to show the LHS is of size at most \(\epsilon\) when \(x\) is close enough to \(a\text{,}\) so if \(G-g(x)\) is small we are done — except if \(g(x)\) or \(G\) are close to zero. By assumption  (go back and read Theorem <a knowl="./knowl/thm_arith_lim.html" title="Theorem 1.4.3: Arithmetic of limits">1.4.3</a>) we have \(G \neq 0\text{,}\) and we know from Lemma <a knowl="./knowl/lem_fx_F2.html" title="Lemma 1.9.3">1.9.3</a> that \(|g(x)|\) cannot be smaller than \(\frac{|G|}{2}\text{.}\) Together these imply that the denominator on the RHS cannot be zero and indeed must be  of magnitude at least \(\frac{|G|^2}{2}\text{.}\) Thus we need \(|G-g(x)|\) to be of size at most \(\epsilon \cdot \frac{|G|^2}{2}\text{.}\)</p>
+<article class="hiddenproof" id="proof-9"><a knowl="" class="id-ref" refid="hk-proof-9"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-9" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-1140"><em class="alert">Proof of Theorem <a knowl="./knowl/thm_arith_lim.html" title="Theorem 1.4.3: Arithmetic of limits">1.4.3</a> — limit of a reciprocal.</em></p>
+<p id="p-1141">Let \(\epsilon \gt 0\) and set \(\epsilon_1 = \epsilon|G|^2 \cdot \frac{1}{2}\text{.}\) We  now use this and Lemma <a knowl="./knowl/lem_fx_F2.html" title="Lemma 1.9.3">1.9.3</a> to establish the existence of \(\delta_1,  \delta_2\text{.}\)</p>
+<ul class="disc">
+<li id="li-377">Since \(g(x) \to G\) we know that there exists \(\delta_1 \gt 0\) so that when  \(|x-a| \lt \delta_1\) we also have \(|g(x)-G| \lt \epsilon_1\text{.}\)</li>
+<li id="li-378">By Lemma <a knowl="./knowl/lem_fx_F2.html" title="Lemma 1.9.3">1.9.3</a> there exists \(\delta_2\) so that when  \(|x-a| \lt \delta_2\) we also have \(|g(x)| \gt \frac{|G|}{2}\text{.}\) Equivalently, when \(|x-a| \lt \delta_2\) we also have \(\left|\frac{G}{2g(x)}\right| \lt 1\text{.}\)</li>
+</ul>
+<p id="p-1142">Set \(\delta = \min\{\delta_1,\delta_2\}\) and assume \(|x-a| \lt \delta\text{.}\) Then</p>
+<div class="displaymath">
+\begin{align*}
+\left| \frac{1}{g(x)} - \frac{1}{G} \right| &amp;= \left| \frac{G - g(x)}{g(x) \cdot G} \right|\\
+&amp;= |g(x) - G| \cdot \frac{1}{|G|\cdot |g(x)|} &amp; \text{ by assumption}\\
+&amp;  \lt  \frac{\epsilon_1}{|G| \cdot |g(x)|} &amp; \text{ sub in $\epsilon_1$}\\
+&amp; = \epsilon \cdot \frac{|G|}{2  |g(x)|} &amp; \text{ since $\left|\frac{G}{2g(x)}\right| \lt 1$}\\
+&amp;  \lt  \epsilon
+\end{align*}
+</div>
+<p>Thus we have shown that for any \(\epsilon \gt 0\) there exists \(\delta \gt 0\) so that  when \(|x-a| \lt \delta\) we also have \(|\frac{1}{g(x)} -  \frac{1}{G}| \lt \epsilon\text{.}\) Hence \(\frac{1}{g(x)} \to \frac{1}{G}\text{.}\)</p></article></div>
+<p id="p-1143">We can also now prove the Squeeze / sandwich / pinch theorem.</p>
+<article class="hiddenproof" id="proof-10"><a knowl="" class="id-ref" refid="hk-proof-10"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-10" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-1144"><em class="alert">Proof of Theorem <a knowl="./knowl/thm_squeeze.html" title="Theorem 1.4.18: Squeeze theorem (or sandwich theorem or pinch theorem)">1.4.18</a> — Squeeze / sandwich / pinch.</em></p>
+<p id="p-1145">In the squeeze theorem, we are given three functions \(f(x)\text{,}\) \(g(x)\) and \(h(x)\) and are told that</p>
+<div class="displaymath">
+\begin{align*}
+f(x) \leq g(x) \leq h(x) \quad\text{and}\quad \lim_{x \to a} f(x) &amp;= \lim_{x \to a} h(x) = L
+\end{align*}
+</div>
+<p>and we must conclude from this that \(\lim\limits_{x \to a} g(x) = L\) too. That is, we are given some fixed, but unspecified, \(\epsilon \gt 0\) and it is up to us to find a \(\delta \gt 0\) with the property that  \(\left| g(x) - L \right| \lt \epsilon\) whenever \(|x-a| \lt \delta\text{.}\) Now because we have been told that \(f\) and \(h\) both converge to \(L\text{,}\) there exist \(\delta_1 \gt 0\) and  \(\delta_2 \gt 0\) such that</p>
+<ul class="disc">
+<li id="li-379">\(\left| f(x) - L \right| \lt \epsilon\text{,}\)  i.e. \(L-\epsilon \lt f(x) \lt L+\epsilon\text{,}\)   whenever \(|x-a| \lt \delta_1\text{,}\) and</li>
+<li id="li-380">\(\left| h(x) - L \right| \lt \epsilon\text{,}\)   i.e. \(L-\epsilon \lt h(x) \lt L+\epsilon\text{,}\)   whenever \(|x-a| \lt \delta_2\)</li>
+</ul>
+<p>So set \(\delta = \min\{\delta_1,\delta_2\}\) and assume \(|x-a| \lt \delta\text{.}\) Then both \(L-\epsilon \lt f(x) \lt L+\epsilon\) and \(L-\epsilon \lt h(x) \lt L+\epsilon\) so that</p>
+<div class="displaymath">
+\begin{align*}
+L-\epsilon \lt f(x) &amp;\le g(x) \le h(x)  \lt  L+\epsilon &amp; \text{which implies that}\\
+L-\epsilon \lt  &amp; g(x)  \lt  L+\epsilon &amp; \text{which in turn gives us}\\
+&amp;\left| g(x) - L \right| \lt \epsilon
+\end{align*}
+</div>
+<p>as desired.</p></article></div></section></section></div></main>
+</div>
+<!--Start: Google Universal code--><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-105798942-1', 'auto');
+ga('send', 'pageview');
+</script><!--End: Google Universal code--><div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.1/login.js"></script>
+</body>
+</html>

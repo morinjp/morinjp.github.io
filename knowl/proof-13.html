@@ -1,0 +1,44 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:17:39-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="hiddenproof"><h6 class="heading"><span class="type">Proof</span></h6>
+<ul class="disc">
+<li>First we construct a new function \(h(x)\) as a linear combination of \(F(x)\) and \(G(x)\) so that \(h(a)=h(b)=0\text{.}\) Some experimentation yields<div class="displaymath">
+\begin{gather*}
+h(x)=\big[F(b)-F(a)\big]\cdot \big[G(x)-G(a)\big]-
+\big[G(b)-G(a)\big] \cdot \big[F(x)-F(a)\big]
+\end{gather*}
+</div>
+</li>
+<li>Since \(h(a)=h(b)=0\text{,}\) the Mean-Value theorem (actually Rolle's theorem) tells us that there is a number \(c\) obeying \(a \lt c \lt b\) such that \(h'(c)=0\text{:}\)<div class="displaymath">
+\begin{align*}
+h'(x) &amp;= \big[F(b)-F(a)\big] \cdot G'(x) - \big[G(b)-G(a)\big] \cdot F'(x) &amp; \text{
+so}\\
+0 &amp;= \big[F(b)-F(a)\big] \cdot G'(c) - \big[G(b)-G(a)\big] \cdot F'(c)
+\end{align*}
+</div>Now move the \(G'(c)\) terms to one side and the \(F'(c)\) terms to the other:<div class="displaymath">
+\begin{align*}
+\big[F(b)-F(a)\big] \cdot G'(c) &amp;= \big[G(b)-G(a)\big] \cdot F'(c).
+\end{align*}
+</div>
+</li>
+<li>Since we have \(G'(x) \neq 0\text{,}\) we know that \(G'(c) \neq 0\text{.}\) Further the Mean-Value theorem ensures <a knowl="./knowl/fn-156-hidden.html" title="Footnote 3.4.23"><sup> 23 </sup></a> that \(G(a) \neq G(b)\text{.}\) Hence we can move terms about to get<div class="displaymath">
+\begin{align*}
+\big[F(b)-F(a)\big] &amp;= \big[G(b)-G(a)\big] \cdot \frac{F'(c)}{G'(c)}\\
+\frac{F(b)-F(a)}{G(b)-G(a)} &amp;=  \frac{F'(c)}{G'(c)}
+\end{align*}
+</div>as required.</li>
+</ul></article><span class="incontext"><a href="subsec_GMVT.html#proof-13">in-context</a></span>
+</body>
+</html>

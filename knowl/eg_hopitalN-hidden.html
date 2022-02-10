@@ -1,0 +1,48 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:21:35-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><article class="example-like"><p>For example, in the limit</p>
+<div class="displaymath">
+\begin{gather*}
+\lim_{x\rightarrow +\infty}x^{\frac{1}{x}}
+\end{gather*}
+</div>
+<p>the base, \(x\text{,}\) goes to infinity and the exponent, \(\frac{1}{x}\text{,}\) goes to zero. But if we take logarithms</p>
+<div class="displaymath">
+\begin{gather*}
+\log x^{\frac{1}{x}} =\frac{\log x}{x}
+\end{gather*}
+</div>
+<p>which is an \(\frac\infty\infty\) form, which we know how to treat.</p>
+<div class="displaymath">
+\begin{gather*}
+\lim_{x\rightarrow +\infty}\underbrace{\frac{\log x}{x}}_{\atp
+{\mathrm{num}\rightarrow \infty}
+{\mathrm{den}\rightarrow \infty}}
+=\lim_{x\rightarrow +\infty}\underbrace{\frac{\frac{1}{x}}{1}}_{\atp
+{\mathrm{num}\rightarrow 0}
+{\mathrm{den}\rightarrow 1}}
+=0
+\end{gather*}
+</div>
+<p>Since the exponential is a continuous function</p>
+<div class="displaymath">
+\begin{gather*}
+\lim_{x\rightarrow +\infty}x^{\frac{1}{x}}
+=\lim_{x\rightarrow +\infty}\exp\Big(\frac{\log x}{x}\Big)
+=\exp\Big(\lim_{x\rightarrow \infty}\frac{\log x}{x}\Big)
+=e^0
+=1
+\end{gather*}
+</div></article></body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:21:27-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>Here is an example. Take</p>
+<div class="displaymath">
+\begin{gather*}
+a=0\qquad   \qquad f(x)=x^2\sin\frac{1}{x} \qquad g(x)= x
+\end{gather*}
+</div>
+<p>Then (with an application of the squeeze theorem)</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{x\to 0} f(x) &amp;= 0 &amp; \text{and}&amp;&amp;
+\lim_{x\to 0} g(x) &amp;= 0.
+\end{align*}
+</div>
+<p>If we attempt to apply l'Hôptial's rule then we have \(g'(x)=1\) and</p>
+<div class="displaymath">
+\begin{align*}
+f'(x)&amp;=2x\sin\frac{1}{x} -\cos\frac{1}{x}\\
+\end{align*}
+<p class="intertext">and we then try to compute the limit</p>
+\begin{align*}
+\lim_{x\to 0} \frac{f'(x)}{g'(x)}
+&amp;= \lim_{x\to 0} \left( 2x\sin\frac{1}{x} -\cos\frac{1}{x}\right)
+\end{align*}
+</div>
+<p>However, this limit does not exist. The first term converges to 0 (by the squeeze theorem), but the second term \(\cos(1/x)\) just oscillates wildly between \(\pm
+1\text{.}\) All we can conclude from this is</p>
+<span class="incontext"><a href="ssec_3_7_1.html#p-4989">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:12:53-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><article class="example-like"><p>In this example, we'll use the same trickery as in Example <a knowl="./knowl/eg_DIFFsimpleToolsF.html" title="Example 2.6.13: Derivative of a cube-root">2.6.13</a> to find the derivative \(x^{p/q}\) for any two natural numbers \(p\) and \(q\text{.}\) By definition of the \(q^{\rm th}\) root,</p>
+<div class="displaymath">
+\begin{gather*}
+x^p= \big(x^{p/q}\big)^q.
+\end{gather*}
+</div>
+<p>That is, \(x^p\) and  \(\big(x^{p/q}\big)^q\) are the same function, and so have the same  derivative. So we differentiate both of them. We already know that, by Lemma <a knowl="./knowl/lem_dxn.html" title="Lemma 2.6.9: Derivative of \(x^n\)">2.6.9</a>  with \(n=p\text{,}\)</p>
+<div class="displaymath">
+\begin{gather*}
+\diff{}{x}\big\{x^p\big\}=p x^{p-1}
+\end{gather*}
+</div>
+<p>and that, by Lemma <a knowl="./knowl/lem_diff_ftothen.html" title="Lemma 2.6.7">2.6.7</a> with \(n=q\) and \(f(x)=x^{p/q}\text{,}\)</p>
+<div class="displaymath">
+\begin{align*}
+\diff{}{x}\big\{\big(x^{p/q}\big)^q\big\}
+&amp; = q\ \big(x^{p/q}\big)^{q-1}\ \diff{}{x}\big\{x^{p/q}\big\}
+\end{align*}
+</div>
+<p>Remember that \((x^a)^b = x^{(a \cdot b)}\text{.}\) Now these two derivatives  must be the same. So</p>
+<div class="displaymath">
+\begin{align*}
+p x^{p-1} &amp;=q\cdot x^{(pq-p)/q} \diff{}{x}\big\{x^{p/q}\big\}\\
+\end{align*}
+<p class="intertext">and, rearranging things,</p>
+\begin{align*}
+\diff{}{x}\big\{x^{p/q}\big\}
+&amp; =\frac{p}{q} x^{p-1-(pq-p)/q}\\
+&amp; =\frac{p}{q} x^{(pq-q-pq+p)/q}\\
+&amp; =\frac{p}{q} x^{\frac{p}{q}-1}
+\end{align*}
+</div>
+<p>So finally</p>
+<div class="displaymath">
+\begin{equation*}
+\diff{}{x} \left\{ x^{p/q} \right\} = \frac{p}{q} x^{\frac{p}{q} -1 }
+\end{equation*}
+</div>
+<p>Notice that this has the same form as Lemma <a knowl="./knowl/lem_dxn.html" title="Lemma 2.6.9: Derivative of \(x^n\)">2.6.9</a>, above,  except with \(n=\frac{p}{q}\) allowed to be any positive rational  number, not just a positive integer.</p></article></body>
+</html>

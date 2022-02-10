@@ -1,0 +1,55 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:16:29-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p><em class="alert">Solution</em> We will assume <a knowl="./knowl/fn-127-hidden.html" title="Footnote 3.3.8"><sup> 8 </sup></a> that the body's temperature obeys Newton's law of cooling.</p>
+<ul class="disc">
+<li>Denote by \(T(t)\) the temperature of the body at time \(t\text{,}\) with \(t=0\) corresponding  to 3:45pm. We wish to find the time of death — call it \(t_d\text{.}\)</li>
+<li>
+<p>There is a lot of data in the statement of the problem; we are told that</p>
+<ul class="circle">
+<li>the ambient temperature: \(A=20\)</li>
+<li>the temperature of the body when discovered: \(T(0)=27\)</li>
+<li>the temperature of the body 2 hours later: \(T(2)=25.3\)</li>
+<li>assuming the person was a healthy adult right up until he died, the  temperature at the time of death: \(T(t_d)=37\text{.}\)</li>
+</ul>
+</li>
+<li>Since we assume the temperature of the body obeys Newton's law of cooling, we use   Corollary <a knowl="./knowl/cor_coolingDEsoln.html" title="Corollary 3.3.8">3.3.8</a> to find,<div class="displaymath">
+\begin{gather*}
+T(t) = [T(0)-A]\,e^{Kt} + A
+=20+7 e^{Kt}
+\end{gather*}
+</div>Two unknowns remain, \(K\) and \(t_d\text{.}\)</li>
+<li>We can find the constant \(K\) by using \(T(2)=25.3\text{:}\)<div class="displaymath">
+\begin{align*}
+25.3=T(2)&amp;= 20+7 e^{2K} &amp; \text{rearrange}\\
+7 e^{2K}&amp;=5.3 &amp; \text{rearrange a bit more}\\
+2K &amp;= \log\big(\tfrac{5.3}{7}\big)\\
+K &amp;= \tfrac{1}{2} \log\big(\tfrac{5.3}{7}\big) = -0.139 &amp; \text{to 3 decimal places}
+\end{align*}
+</div>
+</li>
+<li>Since we know <a knowl="./knowl/fn-128-hidden.html" title="Footnote 3.3.9"><sup> 9 </sup></a> that \(t_d\) is determined  by \(T(t_d)=37\text{,}\) we have<div class="displaymath">
+\begin{align*}
+37 = T(t_d) &amp;= 20+7 e^{-0.139 t_d} &amp; \text{rearrange}\\
+e^{-0.139 t_d} &amp;= \tfrac{17}{7}\\
+-0.139 t_d &amp;=\log\big(\tfrac{17}{7}\big)\\
+t_d &amp;= -\tfrac{1}{0.139}\log\big(\tfrac{17}{7}\big)\\
+&amp; = - 6.38 &amp;\text{to 2 decimal places}
+\end{align*}
+</div>Now \(6.38\) hours is \(6\) hours and \(0.38\times 60 = 23\) minutes. So the time of death was \(6\) hours and \(23\) minutes before 3:45pm, which is 9:22am.</li>
+</ul>
+<span class="incontext"><a href="sec_newtonCooling.html#p-3279">in-context</a></span>
+</body>
+</html>

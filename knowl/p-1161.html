@@ -1,0 +1,48 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:12:05-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>It is very easy to generalise what is happening in Example <a knowl="./knowl/eg_DIFFslopeA.html" title="Example 2.1.2: Slope of secants of \(y=x^2\)">2.1.2</a>.</p>
+<ul class="disc">
+<li>Fix any point \((x_0,y_0)\) on the parabola \(y=x^2\text{.}\) If \((x_1,y_1)\) is any other  point on the parabola \(y=x^2\text{,}\) then \(y_1=x_1^2\) and the slope of the secant through  \((x_0,y_0)\) and \((x_1,y_1)\) is<div class="displaymath">
+\begin{align*}
+\text{slope}
+&amp;= \frac{y_1-y_0}{x_1-x_0}
+=\frac{x_1^2-x_0^2}{x_1-x_0} &amp;&amp; \text{since }y=x^2\\
+&amp; =\frac{(x_1-x_0)(x_1+x_0)}{x_1-x_0} &amp;&amp; \text{remember } a^2-b^2 = (a-b)(a+b)\\
+&amp; =x_1+x_0
+\end{align*}
+</div>You should check the values given in the table of Example <a knowl="./knowl/eg_DIFFslopeA.html" title="Example 2.1.2: Slope of secants of \(y=x^2\)">2.1.2</a> above to convince yourself that the slope \(\tfrac{y_1-y_0}{x_1-x_0}\)  of the secant line really is \(x_0+x_1 = 2+x_1\) (since we set  \(x_0=2)\text{.}\)</li>
+<li>
+<p>Now as we move \(x_1\) closer and closer to \(x_0\text{,}\) the slope should move  closer and closer to \(2x_0\text{.}\) Indeed if we compute the limit carefully — we  now have the technology to do this — we see that in the limit as  \(x_1 \to x_0\) the slope becomes \(2x_0\text{.}\)  That is</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{x_1 \to x_0} \frac{y_1-y_0}{x_1-x_0}
+&amp;= \lim_{x_1 \to x_0} (x_1+x_0) \qquad \text{by the work we did just above}\\
+&amp;= 2x_0
+\end{align*}
+</div>
+<p>Taking this limit gives us our first derivative. Of course we haven't yet  given the definition of a derivative, so we perhaps wouldn't recognise it yet.  We rectify this in the next section.</p>
+<figure class="figure-like"><div style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="text/figs/slopeC.svg" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span> <span class="codenumber">2.1.6</span> Secants approaching a tangent line</figcaption></figure>
+</li>
+<li>
+<p>So it is reasonable to say “as \(x_1\) approaches \(x_0\text{,}\) the secant through  \((x_0,y_0)\) and \((x_1,y_1)\) approaches the tangent line to the parabola \(y=x^2\) at  \((x_0,y_0)\)”. This is what we did back in Section <a href="sec_first_lim.html" class="xref" title="Section 1.1: Drawing Tangents and a First Limit">1.1</a>.</p>
+<p>The figure above shows four different secants through \((x_0,y_0)\) for the curve \(y=x^2\text{.}\)  The four hollow circles are four different choices of \((x_1,y_1)\text{.}\) As \((x_1,y_1)\)  approaches \((x_0,y_0)\text{,}\) the corresponding secant does indeed approach the tangent to  \(y=x^2\) at \((x_0,y_0)\text{,}\) which is the heavy (red) straight line in the figure.</p>
+<p>Using limits we determined the slope of the tangent line to \(y=x^2\) at \(x_0\) to be  \(2x_0\text{.}\) Often we will be a little sloppy with our language and instead say “the  slope of the parabola \(y=x^2\) at \((x_0,y_0)\) is \(2x_0\)” — where we really mean the  slope of the line tangent to the parabola at \(x_0\text{.}\)</p>
+</li>
+</ul>
+<span class="incontext"><a href="subsection-10.html#p-1161">in-context</a></span>
+</body>
+</html>

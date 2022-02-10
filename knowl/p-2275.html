@@ -1,0 +1,36 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:14:14-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>Implicit differentiation is a simple trick that is used to compute derivatives of functions either</p>
+<ul class="disc">
+<li>when you don't know an explicit formula for the function, but you know an equation that the function obeys or</li>
+<li>even when you have an explicit, but complicated, formula for the function, and the function obeys a simple equation.</li>
+</ul>
+<p>The trick is just to differentiate both sides of the equation and then solve for the derivative we are seeking. In fact we have already done this, without using the name “implicit differentiation”, when we found the derivative of \(\log x\) in the previous section. There we knew that the function \(f(x)=\log x\) satisfied the equation \(e^{f(x)}=x\) for all \(x\text{.}\) That is, the functions \(e^{f(x)}\) and \(x\) are in fact the same function and so have the same derivative. So we had</p>
+<div class="displaymath">
+\begin{gather*}
+\diff{}{x}e^{f(x)} = \diff{}{x}x = 1
+\end{gather*}
+</div>
+<p>We then used the chain rule to get \(\diff{}{x}e^{f(x)}=e^{f(x)}f'(x)\text{,}\) which told us that \(f'(x)\) obeys the equation</p>
+<div class="displaymath">
+\begin{align*}
+e^{f(x)}f'(x) &amp;=1 &amp; \text{and we can now solve for $f'(x)$}\\
+f'(x) &amp;= e^{-f(x)} = e^{-\log x} = \frac{1}{x}.
+\end{align*}
+</div>
+<span class="incontext"><a href="subsection-35.html#p-2275">in-context</a></span>
+</body>
+</html>

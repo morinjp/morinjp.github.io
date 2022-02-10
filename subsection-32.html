@@ -1,0 +1,458 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:01:36-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Chain Rule Examples</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.1/pretext.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on2.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="RQS.css">
+<link href="https://pretextbook.org/css/0.1/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\require{cancel}\newcommand{\dee}[1]{\mathrm{d}#1}
+\newcommand{\half}{ \frac{1}{2} }
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ts}{\textstyle}
+\newcommand{\es}{ {\varnothing}}
+\newcommand{\st}{ {\mbox{ s.t. }} }
+\newcommand{\pow}[1]{ \mathcal{P}\left(#1\right) }
+\newcommand{\set}[1]{ \left\{#1\right\} }
+\newcommand{\lin}{{\text{LIN}}}
+\newcommand{\quot}{{\text{QR}}}
+\newcommand{\simp}{{\text{SMP}}}
+\newcommand{\diff}[2]{ \frac{\mathrm{d}#1}{\mathrm{d}#2}}
+\newcommand{\bdiff}[2]{ \frac{\mathrm{d}}{\mathrm{d}#2} \left( #1 \right)}
+\newcommand{\ddiff}[3]{ \frac{\mathrm{d}^#1#2}{\mathrm{d}{#3}^#1}}
+\renewcommand{\neg}{ {\sim} }
+\newcommand{\limp}{ {\;\Rightarrow\;} }
+\newcommand{\nimp}{ {\;\not\Rightarrow\;} }
+\newcommand{\liff}{ {\;\Leftrightarrow\;} }
+\newcommand{\niff}{ {\;\not\Leftrightarrow\;} }
+\newcommand{\De}{\Delta}
+\newcommand{\bbbn}{\mathbb{N}}
+\newcommand{\bbbr}{\mathbb{R}}
+\newcommand{\bbbp}{\mathbb{P}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\Si}{\Sigma}
+
+\newcommand{\arccsc}{\mathop{\mathrm{arccsc}}}
+\newcommand{\arcsec}{\mathop{\mathrm{arcsec}}}
+\newcommand{\arccot}{\mathop{\mathrm{arccot}}}
+\newcommand{\erf}{\mathop{\mathrm{erf}}}
+\newcommand{\smsum}{\mathop{{\ts \sum}}}
+\newcommand{\atp}[2]{ \genfrac{}{}{0in}{}{#1}{#2} }
+
+\newcommand{\ave}{\mathrm{ave}}
+\newcommand{\llt}{\left \lt }
+\newcommand{\rgt}{\right \gt }
+
+
+\newcommand{\YEaxis}[2]{\draw[help lines] (-#1,0)--(#1,0) node[right]{$x$};\draw[help lines] (0,-#2)--(0,#2) node[above]{$y$};}
+
+\newcommand{\YEaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$x$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YEtaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+\newcommand{\YEtaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$}; \draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YExcoord}[2]{\draw (#1,.2)--(#1,-.2) node[below]{$#2$};}
+\newcommand{\YEycoord}[2]{\draw (.2,#1)--(-.2,#1) node[left]{$#2$};}
+\newcommand{\YEnxcoord}[2]{\draw (#1,-.2)--(#1,.2) node[above]{$#2$};}
+\newcommand{\YEnycoord}[2]{\draw (-.2,#1)--(.2,#1) node[right]{$#2$};}
+
+\newcommand{\YEstickfig}[3]{
+\draw (#1,#2) arc(-90:270:2mm);
+\draw (#1,#2)--(#1,#2-.5) (#1-.25,#2-.75)--(#1,#2-.5)--(#1+.25,#2-.75) (#1-.2,#2-.2)--(#1+.2,#2-.2);}
+
+
+\newcommand{\IBP}[7]{
+\begin{array}{|c  | l | l |}
+\hline
+\color{red}{\text{Option 1:}}
+&amp; u=#2
+&amp;\color{red}{\dee{u}=#3 ~ \dee{#1}}
+\\
+&amp; \dee{v}=#5~\dee{#1}
+&amp;\color{red}{v=#7}
+\\
+\hline
+\color{blue}{\text{Option 2:}}
+&amp; u=#5
+&amp;\color{blue}{\dee{u}=#6 ~ \dee{#1}}
+\\
+&amp;\dee{v}=#2 \dee{#1}
+&amp;\color{blue}{v=#4}
+\\
+\hline
+\end{array}
+}
+
+
+\renewcommand{\textcolor}[2]{{\color{#1}{#2}}}
+
+
+\newcommand{\trigtri}[4]{
+\begin{tikzpicture}
+\draw (-.5,0)--(2,0)--(2,1.5)--cycle;
+\draw (1.8,0) |- (2,.2);
+\draw[double] (0,0) arc(0:30:.5cm);
+\draw (0,.2) node[right]{$#1$};
+\draw (1,-.5) node{$#2$};
+\draw (2,.75) node[right]{$#3$};
+\draw (.6,1.1) node[rotate=30]{$#4$};
+\end{tikzpicture}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="clp_1_dc.html"><span class="title">CLP-1 Differential Calculus</span></a></h1>
+<p class="byline">Joel Feldman, Andrew Rechnitzer, Elyse Yeager</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="subsection-31.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="sec_chain_rule.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="exercises-14.html" title="Next">Next</a></span></div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="subsection-31.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="sec_chain_rule.html" title="Up">Up</a><a class="next-button button toolbar-item" href="exercises-14.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="index.html" data-scroll="index"><span class="title">Front Matter</span></a></h2>
+<ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface-2.html" data-scroll="preface-2">Using the exercises in this book</a></li>
+<li><a href="preface-3.html" data-scroll="preface-3">Feedback about the text</a></li>
+</ul>
+<h2 class="link"><a href="chap_basics.html" data-scroll="chap_basics"><span class="codenumber">0</span> <span class="title">The basics</span></a></h2>
+<ul>
+<li><a href="sec_0_1.html" data-scroll="sec_0_1">Numbers</a></li>
+<li><a href="sec_sets.html" data-scroll="sec_sets">Sets</a></li>
+<li><a href="sec_0_3.html" data-scroll="sec_0_3">Other Important Sets</a></li>
+<li><a href="sec_0_4.html" data-scroll="sec_0_4">Functions</a></li>
+<li><a href="sec_parsing.html" data-scroll="sec_parsing">Parsing Formulas</a></li>
+<li><a href="sec_inverse_functions.html" data-scroll="sec_inverse_functions">Inverse Functions</a></li>
+</ul>
+<h2 class="link"><a href="chap_limits.html" data-scroll="chap_limits"><span class="codenumber">1</span> <span class="title">Limits</span></a></h2>
+<ul>
+<li><a href="sec_first_lim.html" data-scroll="sec_first_lim">Drawing Tangents and a First Limit</a></li>
+<li><a href="sec_velocity.html" data-scroll="sec_velocity">Another Limit and Computing Velocity</a></li>
+<li><a href="sec_lim_func.html" data-scroll="sec_lim_func">The Limit of a Function</a></li>
+<li><a href="sec_1_4.html" data-scroll="sec_1_4">Calculating Limits with Limit Laws</a></li>
+<li><a href="sec_1_5.html" data-scroll="sec_1_5">Limits at Infinity</a></li>
+<li><a href="sec_1_6.html" data-scroll="sec_1_6">Continuity</a></li>
+<li><a href="sec_opt_formal_limit.html" data-scroll="sec_opt_formal_limit">(Optional) — Making the Informal a Little More Formal</a></li>
+<li><a href="sec_lim_inf_formal.html" data-scroll="sec_lim_inf_formal">(Optional) — Making Infinite Limits a Little More Formal</a></li>
+<li><a href="sec_proof_arith_lim.html" data-scroll="sec_proof_arith_lim">(Optional) — Proving the Arithmetic of Limits</a></li>
+</ul>
+<h2 class="link"><a href="chap_deriv.html" data-scroll="chap_deriv"><span class="codenumber">2</span> <span class="title">Derivatives</span></a></h2>
+<ul>
+<li><a href="sec_2_1.html" data-scroll="sec_2_1">Revisiting Tangent Lines</a></li>
+<li><a href="sec_def_deriv.html" data-scroll="sec_def_deriv">Definition of the Derivative</a></li>
+<li><a href="sec_2_3.html" data-scroll="sec_2_3">Interpretations of the Derivative</a></li>
+<li><a href="sec_2_4.html" data-scroll="sec_2_4">Arithmetic of Derivatives - a Differentiation Toolbox</a></li>
+<li><a href="sec_proof_arith_deriv.html" data-scroll="sec_proof_arith_deriv">Proofs of the Arithmetic of Derivatives</a></li>
+<li><a href="sec_2_6.html" data-scroll="sec_2_6">Using the Arithmetic of Derivatives –  Examples</a></li>
+<li><a href="sec_exp_func.html" data-scroll="sec_exp_func">Derivatives of Exponential Functions</a></li>
+<li><a href="sec_diff_trig.html" data-scroll="sec_diff_trig">Derivatives of Trigonometric Functions</a></li>
+<li><a href="sec_chain_rule.html" data-scroll="sec_chain_rule">One More Tool  – the Chain Rule</a></li>
+<li><a href="sec_diff_logs.html" data-scroll="sec_diff_logs">The Natural Logarithm</a></li>
+<li><a href="sec_2_11.html" data-scroll="sec_2_11">Implicit Differentiation</a></li>
+<li><a href="sec_invTrig.html" data-scroll="sec_invTrig">Inverse Trigonometric Functions</a></li>
+<li><a href="sec_mvt.html" data-scroll="sec_mvt">The Mean Value Theorem</a></li>
+<li><a href="sec_higher_diff.html" data-scroll="sec_higher_diff">Higher Order Derivatives</a></li>
+<li><a href="sec_cont_deriv.html" data-scroll="sec_cont_deriv">(Optional) — Is \(\lim_{x\to c}f'(x)\) Equal to \(f'(c)\text{?}\)</a></li>
+</ul>
+<h2 class="link"><a href="chap_appl_deriv.html" data-scroll="chap_appl_deriv"><span class="codenumber">3</span> <span class="title">Applications of derivatives</span></a></h2>
+<ul>
+<li><a href="sec_vel_acc.html" data-scroll="sec_vel_acc">Velocity and Acceleration</a></li>
+<li><a href="sec_rrates.html" data-scroll="sec_rrates">Related Rates</a></li>
+<li><a href="sec_ExpGthDecay.html" data-scroll="sec_ExpGthDecay">Exponential Growth and Decay</a></li>
+<li><a href="sec_DIFFTaylor.html" data-scroll="sec_DIFFTaylor">Taylor Polynomials</a></li>
+<li><a href="sec_optimise.html" data-scroll="sec_optimise">Optimisation</a></li>
+<li><a href="sec_curve_sketch.html" data-scroll="sec_curve_sketch">Sketching Graphs</a></li>
+<li><a href="sec_4_7.html" data-scroll="sec_4_7">L'Hôpital's Rule and Indeterminate Forms</a></li>
+</ul>
+<h2 class="link"><a href="chapter-5.html" data-scroll="chapter-5"><span class="codenumber">4</span> <span class="title">Towards Integral Calculus</span></a></h2>
+<ul><li><a href="sec_antidiff.html" data-scroll="sec_antidiff">Introduction to Antiderivatives</a></li></ul>
+<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Appendices</span></a></h2>
+<h2 class="link"><a href="app_highschool.html" data-scroll="app_highschool"><span class="codenumber">A</span> <span class="title">High School Material</span></a></h2>
+<ul>
+<li><a href="sec_simtri.html" data-scroll="sec_simtri">Similar Triangles</a></li>
+<li><a href="sec_A_2.html" data-scroll="sec_A_2">Pythagoras</a></li>
+<li><a href="sec_A_3.html" data-scroll="sec_A_3">Trigonometry — Definitions</a></li>
+<li><a href="app_rad_arc_sec.html" data-scroll="app_rad_arc_sec">Radians, Arcs and Sectors</a></li>
+<li><a href="app_sec_trig_graphs.html" data-scroll="app_sec_trig_graphs">Trigonometry — Graphs</a></li>
+<li><a href="sec_A_6.html" data-scroll="sec_A_6">Trigonometry — Special Triangles</a></li>
+<li><a href="sec_A_7.html" data-scroll="sec_A_7">Trigonometry — Simple Identities</a></li>
+<li><a href="sec_trig_add.html" data-scroll="sec_trig_add">Trigonometry — Add and Subtract Angles</a></li>
+<li><a href="sec_inv_trig.html" data-scroll="sec_inv_trig">Inverse Trig Functions</a></li>
+<li><a href="app_sec_areas.html" data-scroll="app_sec_areas">Areas</a></li>
+<li><a href="sec_volumes.html" data-scroll="sec_volumes">Volumes</a></li>
+<li><a href="sec_powers.html" data-scroll="sec_powers">Powers</a></li>
+<li><a href="sec_logs.html" data-scroll="sec_logs">Logarithms</a></li>
+<li><a href="sec_must_deriv.html" data-scroll="sec_must_deriv">You Should be Able to Derive</a></li>
+</ul>
+<h2 class="link"><a href="chap_app_B.html" data-scroll="chap_app_B"><span class="codenumber">B</span> <span class="title">Origin of Trig, Area and Volume Formulas</span></a></h2>
+<ul>
+<li><a href="sec_B_1.html" data-scroll="sec_B_1">Theorems about Triangles</a></li>
+<li><a href="sec_B_2.html" data-scroll="sec_B_2">Trigonometry</a></li>
+<li><a href="sec_B_3.html" data-scroll="sec_B_3">Inverse Trigonometric Functions</a></li>
+<li><a href="sec_B_4.html" data-scroll="sec_B_4">Cosine and Sine Laws</a></li>
+<li><a href="sec_B_5.html" data-scroll="sec_B_5">Circles, cones and spheres</a></li>
+</ul>
+<h2 class="link"><a href="app_root_finding.html" data-scroll="app_root_finding"><span class="codenumber">C</span> <span class="title">Root Finding</span></a></h2>
+<ul>
+<li><a href="sec_C_1.html" data-scroll="sec_C_1">Newton's Method</a></li>
+<li><a href="sec_C_2.html" data-scroll="sec_C_2">The Error Behaviour of Newton's Method</a></li>
+<li><a href="sec_C_3.html" data-scroll="sec_C_3">The false position (regula falsi) method</a></li>
+<li><a href="sec_C_4.html" data-scroll="sec_C_4">The secant method</a></li>
+<li><a href="sec_C_5.html" data-scroll="sec_C_5">The Error Behaviour of the Secant Method</a></li>
+</ul>
+<h2 class="link"><a href="app_hint.html" data-scroll="app_hint"><span class="codenumber">D</span> <span class="title">Hints for Exercises</span></a></h2>
+<h2 class="link"><a href="app_answ.html" data-scroll="app_answ"><span class="codenumber">E</span> <span class="title">Answers to Exercises</span></a></h2>
+<h2 class="link"><a href="app_soln.html" data-scroll="app_soln"><span class="codenumber">F</span> <span class="title">Solutions to Exercises</span></a></h2></nav><div class="extras"><nav><a class="feedback-link" href="mailto:clp@ugrad.math.ubc.ca?subject=clp-pretext" target="_blank">Feedback</a><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="mathbook-content"><section class="subsection" id="subsection-32"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.9.3</span> <span class="title">Chain Rule Examples</span>
+</h3>
+<p id="p-1924">We'll now use the chain rule to compute some more derivatives.</p>
+<article class="example-like" id="eg_DIFFchainA"><a knowl="" class="id-ref" refid="hk-eg_DIFFchainA"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">2.9.11</span> <span class="title">\(\diff{}{x}\big(1+3x\big)^{75}\)</span>
+</h6></a></article><div id="hk-eg_DIFFchainA" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-1925">Find \(\diff{}{x}\big(1+3x\big)^{75}\text{.}\)</p>
+<p id="p-1926">This is a concrete version of Example <a knowl="./knowl/eg_DIFFchainaxb.html" title="Example 2.9.8: Derivative of \(f(ax+b)\)">2.9.8</a>. We are to find the derivative of a function that is built up by first computing \(1+3x\) and then taking the \(75^{\rm th}\) power of the result. So we set</p>
+<div class="displaymath">
+\begin{align*}
+f(u)&amp;=u^{75} &amp;
+f'(u)&amp;=75 u^{74}\\
+g(x)&amp;=1+3x &amp;
+g'(x)&amp;=3\\
+F(x)&amp;=f\big(g(x)\big)=g(x)^{75}=\big(1+3x\big)^{75}
+\end{align*}
+</div>
+<p>By the chain rule</p>
+<div class="displaymath">
+\begin{align*}
+F'(x)&amp;= f'\big(g(x)\big)\,g'(x)
+= 75\, g(x)^{74} \,g'(x)
+= 75\, \big(1+3x\big)^{74} \cdot 3\\
+&amp;= 225\, \big(1+3x\big)^{74}
+\end{align*}
+</div></article></div>
+<article class="example-like" id="eg_DIFFchainB"><a knowl="" class="id-ref" refid="hk-eg_DIFFchainB"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">2.9.12</span> <span class="title">\(\diff{}{x}\sin(x^2)\)</span>
+</h6></a></article><div id="hk-eg_DIFFchainB" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-1927">Find \(\diff{}{x}\sin(x^2)\text{.}\)</p>
+<p id="p-1928">In this example we are to compute the derivative of \(\sin\) with a (slightly) complicated argument. So we apply the chain rule with \(f\) being \(\sin\) and \(g(x)\) being the complicated argument. That is, we set</p>
+<div class="displaymath">
+\begin{align*}
+f(u)&amp;=\sin u &amp;
+f'(u)&amp;=\cos u\\
+g(x)&amp;=x^2 &amp;
+g'(x)&amp;=2x\\
+F(x)&amp;=f\big(g(x)\big)=\sin\big(g(x)\big)=\sin(x^2)
+\end{align*}
+</div>
+<p>By the chain rule</p>
+<div class="displaymath">
+\begin{align*}
+F'(x)&amp;= f'\big(g(x)\big)\,g'(x)
+= \cos\big(g(x)\big) \,g'(x)
+= \cos(x^2) \cdot 2x\\
+&amp;= 2x\cos(x^2)
+\end{align*}
+</div></article></div>
+<article class="example-like" id="eg_DIFFchainC"><a knowl="" class="id-ref" refid="hk-eg_DIFFchainC"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">2.9.13</span> <span class="title">\(\diff{}{x}\root{3}\of{\sin(x^2)}\)</span>
+</h6></a></article><div id="hk-eg_DIFFchainC" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-1929">Find \(\diff{}{x}\root{3}\of{\sin(x^2)}\text{.}\)</p>
+<p id="p-1930">In this example we are to compute the derivative of the cube root of a (moderately) complicated argument, namely \(\sin(x^2)\text{.}\) So we apply the chain rule with \(f\) being “cube root” and \(g(x)\) being the complicated argument. That is, we set</p>
+<div class="displaymath">
+\begin{align*}
+f(u)&amp;=\root{3}\of{u}=u^{\tfrac{1}{3}} &amp;
+f'(u)&amp;=\tfrac{1}{3}u^{-\tfrac{2}{3}}\\
+g(x)&amp;=\sin(x^2) &amp;
+g'(x)&amp;=2x\cos(x^2)\\
+F(x)&amp;=f\big(g(x)\big)=\root{3}\of{g(x)}=\root{3}\of{\sin(x^2)}
+\end{align*}
+</div>
+<p>In computing \(g'(x)\) here, we have already used the chain rule once (in Example <a knowl="./knowl/eg_DIFFchainB.html" title="Example 2.9.12: \(\diff{}{x}\sin(x^2)\)">2.9.12</a>). By the chain rule</p>
+<div class="displaymath">
+\begin{align*}
+F'(x)&amp;= f'\big(g(x)\big)\,y'(x)
+= \tfrac{1}{3} g(x)^{-\tfrac{2}{3}} \cdot 2x\cos(x^2)\\
+&amp;= \frac{2x}{3}\,\frac{\cos(x^2)}{[\sin(x^2)]^{\frac{2}{3}}}
+\end{align*}
+</div></article></div>
+<article class="example-like" id="eg_2_9_3"><a knowl="" class="id-ref" refid="hk-eg_2_9_3"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">2.9.14</span> <span class="title">Derivative of a double-composition</span>
+</h6></a></article><div id="hk-eg_2_9_3" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-1931">Find the derivative of \(\diff{}{x} f(g(h(x)))\text{.}\)</p>
+<p id="p-1932">This is very similar to the previous example. Let us set \(F(x) = f(g(h(x)))\) with \(u=g(h(x))\) then the chain rule tells us</p>
+<div class="displaymath">
+\begin{align*}
+\diff{F}{x} &amp;= \diff{f}{u} \cdot \diff{u}{x}\\
+&amp;= f'(g(h(x))) \cdot \diff{}{x} g(h(x))\\
+\end{align*}
+<p class="intertext">We now just apply the chain rule again</p>
+\begin{align*}
+&amp;= f'(g(h(x))) \cdot g'(h(x)) \cdot h'(x).
+\end{align*}
+</div>
+<p>Indeed it is not too hard to generalise further (in the manner of Example <a knowl="./knowl/eg_DIFFsimpleToolsA.html" title="Example 2.6.6: Extending the product rule to more than two factors">2.6.6</a> to find the derivative of the composition of 4 or more functions (though things start to become tedious to write down):</p>
+<div class="displaymath">
+\begin{align*}
+\diff{}{x} f_1(f_2(f_3(f_4(x))))
+&amp;= f'_1(f_2(f_3(f_4(x)))) \cdot \diff{}{x} f_2(f_3(f_4(x)))\\
+&amp;= f'_1(f_2(f_3(f_4(x)))) \cdot f'_2(f_3(f_4(x))) \cdot \diff{}{x} f_3(f_4(x))\\
+&amp;= f'_1(f_2(f_3(f_4(x)))) \cdot f'_2(f_3(f_4(x))) \cdot f'_3(f_4(x)) \cdot
+f'_4(x)
+\end{align*}
+</div></article></div>
+<article class="example-like" id="eg_2_9_4"><a knowl="" class="id-ref" refid="hk-eg_2_9_4"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">2.9.15</span> <span class="title">Finding the quotient rule from the chain rule</span>
+</h6></a></article><div id="hk-eg_2_9_4" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-1933">We can also use the chain rule to recover Corollary <a knowl="./knowl/cor_diff_recip.html" title="Corollary 2.4.6: Derivative of a reciprocal">2.4.6</a> and from there we can use the product rule to recover the quotient rule.</p>
+<p id="p-1934">We want to differentiate \(F(x) = \frac{1}{g(x)}\) so set \(f(u) = \frac{1}{u}\) and \(u=g(x)\text{.}\) Then the chain rule tells us</p>
+<div class="displaymath">
+\begin{align*}
+\diff{}{x} \left\{\frac{1}{g(x)}\right\} = \diff{F}{x}
+&amp;= \diff{f}{u} \cdot \diff{u}{x}\\
+&amp;= \frac{-1}{u^2} \cdot g'(x)\\
+&amp;= -\frac{g'(x)}{g(x)^2}.
+\end{align*}
+</div>
+<p>Once we know this, a quick application of the product rule will give us the quotient rule.</p>
+<div class="displaymath">
+\begin{align*}
+\amp\diff{}{x} \left\{ \frac{f(x)}{g(x)} \right\}
+= \diff{}{x} \left\{ f(x) \cdot \frac{1}{g(x)}  \right\} &amp; \text{use PR}\\
+&amp;= f'(x)\cdot \frac{1}{g(x)}  + f(x) \cdot \diff{}{x} \left\{\frac{1}{g(x)}\right\} &amp;
+\text{use the result from above}\\
+&amp;= f'(x)\cdot \frac{1}{g(x)}  - f(x) \cdot \frac{g'(x)}{g(x)^2} &amp;
+\text{place over a common denominator}\\
+&amp;= \frac{f'(x) \cdot g(x) - f(x) \cdot g'(x)}{g(x)^2}
+\end{align*}
+</div>
+<p>which is exactly the quotient rule.</p></article></div>
+<article class="example-like" id="eg_DIFFchainD"><a knowl="" class="id-ref" refid="hk-eg_DIFFchainD"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">2.9.16</span> <span class="title">A nice messy example</span>
+</h6></a></article><div id="hk-eg_DIFFchainD" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-1935">Compute the following derivative:</p>
+<div class="displaymath">
+\begin{gather*}
+\diff{}{x}\cos\left(\frac{x^5\sqrt{3+x^6}}{{(4+x^2)}^3}\right)
+\end{gather*}
+</div>
+<p id="p-1936">This time we are to compute the derivative of \(\cos\) with a really complicated argument.</p>
+<ul class="disc">
+<li id="li-525">So, to start, we apply the chain rule with \(g(x)=\frac{x^5\sqrt{3+x^6}}{{(4+x^2)}^3}\) being the really complicated argument and \(f\) being \(\cos\text{.}\) That is, \(f(u)=\cos(u)\text{.}\) Since  \(f'(u)=-\sin(u)\text{,}\) the chain rule gives<div class="displaymath">
+\begin{gather*}
+\diff{}{x}\cos\bigg(\frac{x^5\sqrt{3+x^6}}{{(4+x^2)}^3}\,\bigg)
+=-\sin\bigg(\frac{x^5\sqrt{3+x^6}}{{(4+x^2)}^3}\,\bigg)\
+\diff{}{x} \left\{\frac{x^5\sqrt{3+x^6}}{{(4+x^2)}^3} \right\}
+\end{gather*}
+</div>
+</li>
+<li id="li-526">This reduced our problem to that of computing the derivative of the really complicated argument \(\tfrac{x^5\sqrt{3+x^6}}{{(4+x^2)}^3}\text{.}\) We can think of the argument as being built up out of three pieces, namely \(x^5\text{,}\) multiplied by \(\sqrt{3+x^6}\text{,}\) divided by \({(4+x^2)}^3\text{,}\) or, equivalently, multiplied by \({(4+x^2)}^{-3}\text{.}\) So we may rewrite \(\tfrac{x^5\sqrt{3+x^6}}{{(4+x^2)}^3}\) as \(x^5\,\big(3+x^6\big)^{\frac{1}{2}}\ {(4+x^2)}^{-3}\text{,}\) and then apply the product rule to reduce the problem to that of computing the derivatives of the three pieces.</li>
+<li id="li-527">Here goes (recall Example <a knowl="./knowl/eg_DIFFsimpleToolsA.html" title="Example 2.6.6: Extending the product rule to more than two factors">2.6.6</a>):<div class="displaymath">
+\begin{align*}
+\diff{}{x}\big[x^5\,{(3+x^6)}^{\frac{1}{2}}\ {(4+x^2)}^{-3}\big]
+&amp;=\diff{}{x}\big[x^5\big] \cdot {(3+x^6)}^{\frac{1}{2}}\cdot {(4+x^2)}^{-3}\\
+&amp;\phantom{=} +x^5\cdot \diff{}{x}\big[{(3+x^6)}^{\frac{1}{2}}\big]
+\cdot {(4+x^2)}^{-3}\\
+&amp;\phantom{=} +x^5\cdot {(3+x^6)}^{\frac{1}{2}}\cdot
+\diff{}{x}\big[{(4+x^2)}^{-3}\big]
+\end{align*}
+</div>This has reduced our problem to computing the derivatives of \(x^5\text{,}\) which is easy, and of \({(3+x^6)}^{\frac{1}{2}}\) and \({(4+x^2)}^{-3}\text{,}\) both of which can be done by the chain rule. Doing so,<div class="displaymath">
+\begin{align*}
+\diff{}{x}\big[x^5\,{(3+x^6)}^{\frac{1}{2}}\ {(4+x^2)}^{-3}\big]
+&amp;=\overbrace{\diff{}{x}\big[x^5\big]}^{5x^4}
+\cdot{(3+x^6)}^{\frac{1}{2}}\cdot {(4+x^2)}^{-3}\\
+&amp; \phantom{=}+x^5\cdot
+\overbrace{\diff{}{x}\big[{(3+x^6)}^{\frac{1}{2}}\big]}^
+{\frac{1}{2}(3+x^6)^{-\frac{1}{2}}\cdot 6x^5}
+\cdot {(4+x^2)}^{-3}\\
+&amp;\phantom{=} +x^5\cdot{(3+x^6)}^{\frac{1}{2}}\cdot
+\overbrace{\diff{}{x}\big[{(4+x^2)}^{-3}\big]}^
+{-3{(4+x^2)}^{-4}\cdot 2x}
+\end{align*}
+</div>
+</li>
+<li id="li-528">
+<p id="p-1937">Now we can clean things up in a sneaky way by observing</p>
+<ul class="circle">
+<li id="li-529">differentiating \(x^5\text{,}\) to get \(5x^4\text{,}\) is the same as multiplying \(x^5\) by \(\frac{5}{x}\text{,}\) and</li>
+<li id="li-530">differentiating \({(3+x^6)}^{\frac{1}{2}}\) to get \(\frac{1}{2}(3+x^6)^{-\frac{1}{2}}\cdot 6x^5\) is the same as multiplying \({(3+x^6)}^{\frac{1}{2}}\) by  \(\frac{3x^5}{3+x^6}\text{,}\) and</li>
+<li id="li-531">differentiating \({(4+x^2)}^{-3}\) to get  \(-3{(4+x^2)}^{-4}\cdot 2x\) is the same as multiplying \({(4+x^2)}^{-3}\) by \(-\frac{6x}{4+x^2}\text{.}\)</li>
+</ul>
+<p>Using these sneaky tricks we can write our solution quite neatly:</p>
+<div class="displaymath">
+\begin{align*}
+\amp\diff{}{x}\cos\bigg(\frac{x^5\sqrt{3+x^6}}{{(4+x^2)}^3}\,\bigg)\\
+\amp=-\sin\bigg(\frac{x^5\sqrt{3+x^6}}{{(4+x^2)}^3}\,\bigg)\
+\frac{x^5\sqrt{3+x^6}}{{(4+x^2)}^3}\
+\bigg\{\frac{5}{x}+\frac{3x^5}{3+x^6}-\frac{6x}{4+x^2}\bigg\}
+\end{align*}
+</div>
+</li>
+<li id="li-532">This method of cleaning up the derivative of a messy product is actually something more systematic in disguise — namely logarithmic differentiation. We will come to this later.</li>
+</ul></article></div></section></div></main>
+</div>
+<!--Start: Google Universal code--><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-105798942-1', 'auto');
+ga('send', 'pageview');
+</script><!--End: Google Universal code--><div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.1/login.js"></script>
+</body>
+</html>

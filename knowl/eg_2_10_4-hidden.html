@@ -1,0 +1,48 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:13:59-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><article class="example-like"><p>Lets use logarithmic differentiation on the function from Example <a knowl="./knowl/eg_DIFFsimpleToolsNB.html" title="Example 2.6.18: Optional messy example">2.6.18</a>:</p>
+<div class="displaymath">
+\begin{align*}
+f(x) &amp;=\frac{(\sqrt{x}-1)(2-x)(1-x^2)}{\sqrt{x}(3+2x)}
+\end{align*}
+</div>
+<p>Beware however, that we may only take the logarithm of positive numbers, and this \(f(x)\) is often negative. For example, if \(1 \lt x \lt 2 \text{,}\) the factor \((1-x^2)\) in the definition of \(f(x)\) is negative while all of the other factors are positive, so that \(f(x)\lt 0 \text{.}\) None–the–less, we can use logarithmic differentiation to find \(f'(x)\text{,}\)  by exploiting the observation that \(\diff{}{x}\log|f(x)|=\frac{f'(x)}{f(x)}\text{.}\) (To see this, use the chain rule and Example <a knowl="./knowl/eg_diff_log_abs_x.html" title="Example 2.10.4: The derivative of \(\log|x|\)">2.10.4</a>.) So we take the logarithm of \(|f(x)|\) and expand.</p>
+<div class="displaymath">
+\begin{align*}
+\log |f(x)| &amp; = \log \frac{|\sqrt{x}-1|\,|2-x|\,|1-x^2|}{\sqrt{x}|3+2x|}\\
+&amp; = \log|\sqrt{x}\!-\!1| + \log|2\!-\!x| + \log|1\!-\!x^2| -
+\underbrace{\log(\sqrt{x})}_{=\frac{1}{2}\log x} - \log|3\!+\!2x|
+\end{align*}
+</div>
+<p>Now we can essentially just differentiate term-by-term:</p>
+<div class="displaymath">
+\begin{align*}
+\diff{}{x}\log |f(x)| &amp;= \diff{}{x} \Big(
+\log|\sqrt{x}-1| + \log|2-x| + \log|1-x^2| \\
+\amp\hskip2in- \frac{1}{2}\log|x| - \log|3+2x|
+\Big)\\
+\frac{f'(x)}{f(x)} &amp;= \frac{1/(2\sqrt{x})}{\sqrt{x}-1}
++ \frac{-1}{2-x} + \frac{-2x}{1-x^2} - \frac{1}{2x} - \frac{2}{3+2x}\\
+f'(x) &amp;= f(x) \cdot \left( \frac{1}{2 \sqrt{x} (\sqrt{x}\!-\!1)}
+- \frac{1}{2\!-\!x} - \frac{2x}{1\!-\!x^2} - \frac{1}{2x} - \frac{2}{3\!+\!2x}
+\right)\\
+&amp;= \frac{(\sqrt{x}-1)(2-x)(1-x^2)}{\sqrt{x}(3+2x)}
+\cdot \\
+\amp\hskip0.5in\left( \frac{1}{2 \sqrt{x} (\sqrt{x}-1)}
+- \frac{1}{2-x} - \frac{2x}{1-x^2} - \frac{1}{2x} - \frac{2}{3+2x}
+\right)
+\end{align*}
+</div>
+<p>just as we found previously.</p></article></body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:12:24-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>The function is differentiable at \(x=0\) if the following limit:</p>
+<div class="displaymath">
+\begin{equation*}
+\lim_{x\to 0}\frac{f(x)-f(0)}{x-0} = \lim_{x\to 0}\frac{f(x)-0}{x}=\lim_{x\to
+0} \frac{f(x)}{x}
+\end{equation*}
+</div>
+<p>exists (note that we used the fact that \(f(0)=0\) as per the definition of the first branch which includes the point \(x=0\)). We start by computing the left limit. For this computation, recall that if \(x \lt 0\) then \(\sqrt{x^2}=|x|=-x\text{.}\)</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{x\to 0^-}\frac{f(x)}{x}\amp
+=\lim_{x\to 0^-}\frac{\sqrt{x^2+x^4}}{x}
+=\lim_{x\to 0^-} \frac{\sqrt{x^2}\sqrt{1+x^2}}{x}\\
+\amp=\lim_{x \rightarrow 0}\frac{-x\sqrt{1+x^2}}{x}=-1
+\end{align*}
+</div>
+<p>Now, from the right:</p>
+<div class="displaymath">
+\begin{equation*}
+\lim_{x\to 0^+}\frac{x\cos x}{x}=\lim_{x\to
+0^+}\cos x = 1.
+\end{equation*}
+</div>
+<p>Since the limit from the left does not equal the limit from the right, the derivative does not exist at \(x=0\text{.}\)</p>
+<span class="incontext"><a href="exercises-8.html#p-1334">in-context</a></span>
+</body>
+</html>

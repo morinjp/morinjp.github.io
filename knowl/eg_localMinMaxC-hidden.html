@@ -1,0 +1,55 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:19:25-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><article class="example-like"><p>In this example, we'll look for local maxima and minima of the function</p>
+<div class="displaymath">
+\begin{align*}
+f(x) = |x| = \begin{cases}
+x  &amp; \text{if }x \ge 0\\
+-x &amp; \text{if }x  \lt   0
+\end{cases}
+\end{align*}
+</div>
+<p>on the interval \(-1\le x\le 1\) and we'll also look for local maxima and minima of the function</p>
+<div class="displaymath">
+\begin{equation*}
+g(x) = x^{2/3}
+\end{equation*}
+</div>
+<p>on the interval \(-1\le x\le 1\text{.}\)</p>
+<ul class="disc">
+<li>Again, start by computing the derivatives (reread Example <a knowl="./knowl/eg_diff_abs.html" title="Example 2.2.10: \(\diff{}{x} \left\{ |x| \right\}\)">2.2.10</a>):<div class="displaymath">
+\begin{align*}
+f'(x) &amp;= \begin{cases}
+1  &amp; \text{if }x  \gt  0\\
+\text{undefined}  &amp; \text{if }x = 0\\
+-1 &amp; \text{if }x  \lt   0
+\end{cases}\\
+g'(x) &amp;= \begin{cases}
+\frac{2}{3} x^{-1/3} &amp; \text{if }x \ne 0 \\
+\text{undefined}  &amp; \text{if }x = 0 
+\end{cases}
+\end{align*}
+</div>
+</li>
+<li>These derivatives <em class="emphasis">never</em> take the value \(0\text{,}\) so the functions \(f(x)\) and \(g(x)\) do not have any critical points. However both derivatives do not exist at the point \(x=0\text{,}\) so that point is a singular point for both \(f(x)\) and \(g(x)\text{.}\)</li>
+<li>
+<p>Here is a sketch of the graph of \(f(x)\)</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:22.5%;margin-right:22.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/localMaxMinC.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p>and a sketch of the graph of \(g(x)\text{.}\)</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:21.5%;margin-right:21.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/localMaxMinCC.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p>From the figures we see that both \(f(x)\) and \(g(x)\) have a local (and in fact global) minimum at \(x=0\) despite the fact that \(x=0\) is not a critical point.</p>
+</li>
+<li>Reread Theorem <a knowl="./knowl/thm_APPlocalMaxMin.html" title="Theorem 3.5.4">3.5.4</a> yet again. It says that, “if \(f(x)\) has a local maximum/minimum at \(x=c\) <em class="emphasis">and if \(f\) is differentiable at \(x=c\)</em>, then \(f'(c)=0\)”. It says nothing about what happens at points where the derivative does not exist. Indeed that is why we have to consider both critical points and singular points when we look for maxima and minima.</li>
+</ul></article></body>
+</html>

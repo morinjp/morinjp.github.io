@@ -1,0 +1,29 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:14:30-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="displaymath">
+\begin{align*}
+\diff{\theta}{x} &amp;= \diff{}{x} \arcsin\left(\frac{1}{x}\right)\\
+&amp;= \frac{1}{\sqrt{1-x^{-2}}} \cdot \frac{-1}{x^2}\\
+\end{align*}
+<p class="intertext">To simplify further we will factor \(x^{-2}\) out of the square root. We need to be a little careful doing that. Take another look at examples <a knowl="./knowl/eg_lim_tricky.html" title="Example 1.5.6: Be careful of limits involving roots">1.5.6</a> and <a knowl="./knowl/eg_lim_tricky_part2.html" title="Example 1.5.7: Be careful of limits involving roots — continued">1.5.7</a> and the discussion between them before proceeding.</p>
+\begin{align*}
+&amp;= \frac{1}{\sqrt{x^{-2}(x^2-1)}} \cdot \frac{-1}{x^2}\\
+&amp;= \frac{1}{|x^{-1}|\cdot \sqrt{x^2-1}} \cdot \frac{-1}{x^2} &amp; \text{note that $x^2 \cdot |x^{-1}| = |x|$.}\\
+&amp;= - \frac{1}{|x|\sqrt{x^2-1}}
+\end{align*}
+</div>
+<span class="incontext"><a href="subsection-36.html#mjx-eqn-mrow-1843">in-context</a></span>
+</body>
+</html>

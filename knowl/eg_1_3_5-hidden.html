@@ -1,0 +1,37 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:11:00-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><article class="example-like"><p>Consider the function</p>
+<div class="displaymath">
+\begin{align*}
+g(x) &amp;= \frac{1}{\sin(x)}
+\end{align*}
+</div>
+<p>Find the one-sided limits of this function as \(x \to \pi\text{.}\)</p>
+<p>Probably the easiest way to do this is to first plot the graph of \(\sin(x)\) and  \(1/x\) and then think carefully about the one-sided limits:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:12.5%;margin-right:12.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/sinx_1onx.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<ul class="disc">
+<li>
+<p>As \(x \to \pi\) from the left, \(\sin(x)\) is a small positive number that  is getting closer and closer to zero. That is, as \(x \to \pi^-\text{,}\) we have that  \(\sin(x) \to 0\) through positive numbers (i.e. from above). Now look at the graph  of \(1/x\text{,}\) and think what happens as we move \(x \to 0^+\text{,}\) the function is  positive and becomes larger and larger.</p>
+<p>So as \(x \to \pi\) from the left, \(\sin(x) \to 0\) from above, and so \(1/\sin(x)  \to +\infty\text{.}\)</p>
+</li>
+<li>By very similar reasoning, as \(x \to \pi\) from the right, \(\sin(x)\) is a  small negative number that gets closer and closer to zero. So as \(x \to \pi\)  from the right, \(\sin(x) \to 0\) through negative numbers (i.e. from below) and so  \(1/\sin(x)\) to \(-\infty\text{.}\)</li>
+</ul>
+<p>Thus</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{x \to \pi^-} \frac{1}{\sin(x)} &amp;= +\infty &amp;
+\lim_{x \to \pi^+} \frac{1}{\sin(x)} &amp;= -\infty
+\end{align*}
+</div></article></body>
+</html>

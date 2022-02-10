@@ -1,0 +1,388 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:00:06-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Drawing Tangents and a First Limit</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.1/pretext.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on2.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="RQS.css">
+<link href="https://pretextbook.org/css/0.1/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\require{cancel}\newcommand{\dee}[1]{\mathrm{d}#1}
+\newcommand{\half}{ \frac{1}{2} }
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ts}{\textstyle}
+\newcommand{\es}{ {\varnothing}}
+\newcommand{\st}{ {\mbox{ s.t. }} }
+\newcommand{\pow}[1]{ \mathcal{P}\left(#1\right) }
+\newcommand{\set}[1]{ \left\{#1\right\} }
+\newcommand{\lin}{{\text{LIN}}}
+\newcommand{\quot}{{\text{QR}}}
+\newcommand{\simp}{{\text{SMP}}}
+\newcommand{\diff}[2]{ \frac{\mathrm{d}#1}{\mathrm{d}#2}}
+\newcommand{\bdiff}[2]{ \frac{\mathrm{d}}{\mathrm{d}#2} \left( #1 \right)}
+\newcommand{\ddiff}[3]{ \frac{\mathrm{d}^#1#2}{\mathrm{d}{#3}^#1}}
+\renewcommand{\neg}{ {\sim} }
+\newcommand{\limp}{ {\;\Rightarrow\;} }
+\newcommand{\nimp}{ {\;\not\Rightarrow\;} }
+\newcommand{\liff}{ {\;\Leftrightarrow\;} }
+\newcommand{\niff}{ {\;\not\Leftrightarrow\;} }
+\newcommand{\De}{\Delta}
+\newcommand{\bbbn}{\mathbb{N}}
+\newcommand{\bbbr}{\mathbb{R}}
+\newcommand{\bbbp}{\mathbb{P}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\Si}{\Sigma}
+
+\newcommand{\arccsc}{\mathop{\mathrm{arccsc}}}
+\newcommand{\arcsec}{\mathop{\mathrm{arcsec}}}
+\newcommand{\arccot}{\mathop{\mathrm{arccot}}}
+\newcommand{\erf}{\mathop{\mathrm{erf}}}
+\newcommand{\smsum}{\mathop{{\ts \sum}}}
+\newcommand{\atp}[2]{ \genfrac{}{}{0in}{}{#1}{#2} }
+
+\newcommand{\ave}{\mathrm{ave}}
+\newcommand{\llt}{\left \lt }
+\newcommand{\rgt}{\right \gt }
+
+
+\newcommand{\YEaxis}[2]{\draw[help lines] (-#1,0)--(#1,0) node[right]{$x$};\draw[help lines] (0,-#2)--(0,#2) node[above]{$y$};}
+
+\newcommand{\YEaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$x$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YEtaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+\newcommand{\YEtaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$}; \draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YExcoord}[2]{\draw (#1,.2)--(#1,-.2) node[below]{$#2$};}
+\newcommand{\YEycoord}[2]{\draw (.2,#1)--(-.2,#1) node[left]{$#2$};}
+\newcommand{\YEnxcoord}[2]{\draw (#1,-.2)--(#1,.2) node[above]{$#2$};}
+\newcommand{\YEnycoord}[2]{\draw (-.2,#1)--(.2,#1) node[right]{$#2$};}
+
+\newcommand{\YEstickfig}[3]{
+\draw (#1,#2) arc(-90:270:2mm);
+\draw (#1,#2)--(#1,#2-.5) (#1-.25,#2-.75)--(#1,#2-.5)--(#1+.25,#2-.75) (#1-.2,#2-.2)--(#1+.2,#2-.2);}
+
+
+\newcommand{\IBP}[7]{
+\begin{array}{|c  | l | l |}
+\hline
+\color{red}{\text{Option 1:}}
+&amp; u=#2
+&amp;\color{red}{\dee{u}=#3 ~ \dee{#1}}
+\\
+&amp; \dee{v}=#5~\dee{#1}
+&amp;\color{red}{v=#7}
+\\
+\hline
+\color{blue}{\text{Option 2:}}
+&amp; u=#5
+&amp;\color{blue}{\dee{u}=#6 ~ \dee{#1}}
+\\
+&amp;\dee{v}=#2 \dee{#1}
+&amp;\color{blue}{v=#4}
+\\
+\hline
+\end{array}
+}
+
+
+\renewcommand{\textcolor}[2]{{\color{#1}{#2}}}
+
+
+\newcommand{\trigtri}[4]{
+\begin{tikzpicture}
+\draw (-.5,0)--(2,0)--(2,1.5)--cycle;
+\draw (1.8,0) |- (2,.2);
+\draw[double] (0,0) arc(0:30:.5cm);
+\draw (0,.2) node[right]{$#1$};
+\draw (1,-.5) node{$#2$};
+\draw (2,.75) node[right]{$#3$};
+\draw (.6,1.1) node[rotate=30]{$#4$};
+\end{tikzpicture}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="clp_1_dc.html"><span class="title">CLP-1 Differential Calculus</span></a></h1>
+<p class="byline">Joel Feldman, Andrew Rechnitzer, Elyse Yeager</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec_first_lim.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="sec_first_lim.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="exercises-1.html" title="Next">Next</a></span></div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec_first_lim.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="sec_first_lim.html" title="Up">Up</a><a class="next-button button toolbar-item" href="exercises-1.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="index.html" data-scroll="index"><span class="title">Front Matter</span></a></h2>
+<ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface-2.html" data-scroll="preface-2">Using the exercises in this book</a></li>
+<li><a href="preface-3.html" data-scroll="preface-3">Feedback about the text</a></li>
+</ul>
+<h2 class="link"><a href="chap_basics.html" data-scroll="chap_basics"><span class="codenumber">0</span> <span class="title">The basics</span></a></h2>
+<ul>
+<li><a href="sec_0_1.html" data-scroll="sec_0_1">Numbers</a></li>
+<li><a href="sec_sets.html" data-scroll="sec_sets">Sets</a></li>
+<li><a href="sec_0_3.html" data-scroll="sec_0_3">Other Important Sets</a></li>
+<li><a href="sec_0_4.html" data-scroll="sec_0_4">Functions</a></li>
+<li><a href="sec_parsing.html" data-scroll="sec_parsing">Parsing Formulas</a></li>
+<li><a href="sec_inverse_functions.html" data-scroll="sec_inverse_functions">Inverse Functions</a></li>
+</ul>
+<h2 class="link"><a href="chap_limits.html" data-scroll="chap_limits"><span class="codenumber">1</span> <span class="title">Limits</span></a></h2>
+<ul>
+<li><a href="sec_first_lim.html" data-scroll="sec_first_lim">Drawing Tangents and a First Limit</a></li>
+<li><a href="sec_velocity.html" data-scroll="sec_velocity">Another Limit and Computing Velocity</a></li>
+<li><a href="sec_lim_func.html" data-scroll="sec_lim_func">The Limit of a Function</a></li>
+<li><a href="sec_1_4.html" data-scroll="sec_1_4">Calculating Limits with Limit Laws</a></li>
+<li><a href="sec_1_5.html" data-scroll="sec_1_5">Limits at Infinity</a></li>
+<li><a href="sec_1_6.html" data-scroll="sec_1_6">Continuity</a></li>
+<li><a href="sec_opt_formal_limit.html" data-scroll="sec_opt_formal_limit">(Optional) — Making the Informal a Little More Formal</a></li>
+<li><a href="sec_lim_inf_formal.html" data-scroll="sec_lim_inf_formal">(Optional) — Making Infinite Limits a Little More Formal</a></li>
+<li><a href="sec_proof_arith_lim.html" data-scroll="sec_proof_arith_lim">(Optional) — Proving the Arithmetic of Limits</a></li>
+</ul>
+<h2 class="link"><a href="chap_deriv.html" data-scroll="chap_deriv"><span class="codenumber">2</span> <span class="title">Derivatives</span></a></h2>
+<ul>
+<li><a href="sec_2_1.html" data-scroll="sec_2_1">Revisiting Tangent Lines</a></li>
+<li><a href="sec_def_deriv.html" data-scroll="sec_def_deriv">Definition of the Derivative</a></li>
+<li><a href="sec_2_3.html" data-scroll="sec_2_3">Interpretations of the Derivative</a></li>
+<li><a href="sec_2_4.html" data-scroll="sec_2_4">Arithmetic of Derivatives - a Differentiation Toolbox</a></li>
+<li><a href="sec_proof_arith_deriv.html" data-scroll="sec_proof_arith_deriv">Proofs of the Arithmetic of Derivatives</a></li>
+<li><a href="sec_2_6.html" data-scroll="sec_2_6">Using the Arithmetic of Derivatives –  Examples</a></li>
+<li><a href="sec_exp_func.html" data-scroll="sec_exp_func">Derivatives of Exponential Functions</a></li>
+<li><a href="sec_diff_trig.html" data-scroll="sec_diff_trig">Derivatives of Trigonometric Functions</a></li>
+<li><a href="sec_chain_rule.html" data-scroll="sec_chain_rule">One More Tool  – the Chain Rule</a></li>
+<li><a href="sec_diff_logs.html" data-scroll="sec_diff_logs">The Natural Logarithm</a></li>
+<li><a href="sec_2_11.html" data-scroll="sec_2_11">Implicit Differentiation</a></li>
+<li><a href="sec_invTrig.html" data-scroll="sec_invTrig">Inverse Trigonometric Functions</a></li>
+<li><a href="sec_mvt.html" data-scroll="sec_mvt">The Mean Value Theorem</a></li>
+<li><a href="sec_higher_diff.html" data-scroll="sec_higher_diff">Higher Order Derivatives</a></li>
+<li><a href="sec_cont_deriv.html" data-scroll="sec_cont_deriv">(Optional) — Is \(\lim_{x\to c}f'(x)\) Equal to \(f'(c)\text{?}\)</a></li>
+</ul>
+<h2 class="link"><a href="chap_appl_deriv.html" data-scroll="chap_appl_deriv"><span class="codenumber">3</span> <span class="title">Applications of derivatives</span></a></h2>
+<ul>
+<li><a href="sec_vel_acc.html" data-scroll="sec_vel_acc">Velocity and Acceleration</a></li>
+<li><a href="sec_rrates.html" data-scroll="sec_rrates">Related Rates</a></li>
+<li><a href="sec_ExpGthDecay.html" data-scroll="sec_ExpGthDecay">Exponential Growth and Decay</a></li>
+<li><a href="sec_DIFFTaylor.html" data-scroll="sec_DIFFTaylor">Taylor Polynomials</a></li>
+<li><a href="sec_optimise.html" data-scroll="sec_optimise">Optimisation</a></li>
+<li><a href="sec_curve_sketch.html" data-scroll="sec_curve_sketch">Sketching Graphs</a></li>
+<li><a href="sec_4_7.html" data-scroll="sec_4_7">L'Hôpital's Rule and Indeterminate Forms</a></li>
+</ul>
+<h2 class="link"><a href="chapter-5.html" data-scroll="chapter-5"><span class="codenumber">4</span> <span class="title">Towards Integral Calculus</span></a></h2>
+<ul><li><a href="sec_antidiff.html" data-scroll="sec_antidiff">Introduction to Antiderivatives</a></li></ul>
+<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Appendices</span></a></h2>
+<h2 class="link"><a href="app_highschool.html" data-scroll="app_highschool"><span class="codenumber">A</span> <span class="title">High School Material</span></a></h2>
+<ul>
+<li><a href="sec_simtri.html" data-scroll="sec_simtri">Similar Triangles</a></li>
+<li><a href="sec_A_2.html" data-scroll="sec_A_2">Pythagoras</a></li>
+<li><a href="sec_A_3.html" data-scroll="sec_A_3">Trigonometry — Definitions</a></li>
+<li><a href="app_rad_arc_sec.html" data-scroll="app_rad_arc_sec">Radians, Arcs and Sectors</a></li>
+<li><a href="app_sec_trig_graphs.html" data-scroll="app_sec_trig_graphs">Trigonometry — Graphs</a></li>
+<li><a href="sec_A_6.html" data-scroll="sec_A_6">Trigonometry — Special Triangles</a></li>
+<li><a href="sec_A_7.html" data-scroll="sec_A_7">Trigonometry — Simple Identities</a></li>
+<li><a href="sec_trig_add.html" data-scroll="sec_trig_add">Trigonometry — Add and Subtract Angles</a></li>
+<li><a href="sec_inv_trig.html" data-scroll="sec_inv_trig">Inverse Trig Functions</a></li>
+<li><a href="app_sec_areas.html" data-scroll="app_sec_areas">Areas</a></li>
+<li><a href="sec_volumes.html" data-scroll="sec_volumes">Volumes</a></li>
+<li><a href="sec_powers.html" data-scroll="sec_powers">Powers</a></li>
+<li><a href="sec_logs.html" data-scroll="sec_logs">Logarithms</a></li>
+<li><a href="sec_must_deriv.html" data-scroll="sec_must_deriv">You Should be Able to Derive</a></li>
+</ul>
+<h2 class="link"><a href="chap_app_B.html" data-scroll="chap_app_B"><span class="codenumber">B</span> <span class="title">Origin of Trig, Area and Volume Formulas</span></a></h2>
+<ul>
+<li><a href="sec_B_1.html" data-scroll="sec_B_1">Theorems about Triangles</a></li>
+<li><a href="sec_B_2.html" data-scroll="sec_B_2">Trigonometry</a></li>
+<li><a href="sec_B_3.html" data-scroll="sec_B_3">Inverse Trigonometric Functions</a></li>
+<li><a href="sec_B_4.html" data-scroll="sec_B_4">Cosine and Sine Laws</a></li>
+<li><a href="sec_B_5.html" data-scroll="sec_B_5">Circles, cones and spheres</a></li>
+</ul>
+<h2 class="link"><a href="app_root_finding.html" data-scroll="app_root_finding"><span class="codenumber">C</span> <span class="title">Root Finding</span></a></h2>
+<ul>
+<li><a href="sec_C_1.html" data-scroll="sec_C_1">Newton's Method</a></li>
+<li><a href="sec_C_2.html" data-scroll="sec_C_2">The Error Behaviour of Newton's Method</a></li>
+<li><a href="sec_C_3.html" data-scroll="sec_C_3">The false position (regula falsi) method</a></li>
+<li><a href="sec_C_4.html" data-scroll="sec_C_4">The secant method</a></li>
+<li><a href="sec_C_5.html" data-scroll="sec_C_5">The Error Behaviour of the Secant Method</a></li>
+</ul>
+<h2 class="link"><a href="app_hint.html" data-scroll="app_hint"><span class="codenumber">D</span> <span class="title">Hints for Exercises</span></a></h2>
+<h2 class="link"><a href="app_answ.html" data-scroll="app_answ"><span class="codenumber">E</span> <span class="title">Answers to Exercises</span></a></h2>
+<h2 class="link"><a href="app_soln.html" data-scroll="app_soln"><span class="codenumber">F</span> <span class="title">Solutions to Exercises</span></a></h2></nav><div class="extras"><nav><a class="feedback-link" href="mailto:clp@ugrad.math.ubc.ca?subject=clp-pretext" target="_blank">Feedback</a><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="mathbook-content"><section class="subsection" id="subsection-2"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.1.1</span> <span class="title">Drawing Tangents and a First Limit</span>
+</h3>
+<p id="p-164">Our motivation for developing “limit” — being the title and subject of this  chapter — is going to be two related problems of drawing tangent lines and  computing velocity.</p>
+<p id="p-165">Now — our treatment of limits is not going to be completely mathematically  rigorous, so we won't have too many formal definitions. There will be a few  mathematically precise definitions and theorems as we go, but we'll make sure  there is plenty of explanation around them.</p>
+<p id="p-166">Let us start with the “tangent line” problem. Of course, we need to define  “tangent”, but we won't do this formally. Instead let us draw some pictures.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/tang1.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p id="p-167">Here we have drawn two very rough sketches of the curve \(y=x^2\) for \(x \geq 0\text{.}\)  These are not very good sketches for a couple of reasons</p>
+<ul class="disc">
+<li id="li-85">The curve in the figure does not pass through \((0,0)\text{,}\) even though  \((0,0)\) lies on \(y=x^2\text{.}\)</li>
+<li id="li-86">The top-right end of the curve doubles back on itself and so fails the  vertical line test  that all functions must satisfy <a knowl="" class="id-ref" refid="hk-fn-20" id="fn-20"><sup> 1 </sup></a><span id="hk-fn-20" class="hidden-content tex2jax_ignore"><span class="footnote">Take a moment to  go back and reread Definition <a knowl="./knowl/def_function.html" title="Definition 0.4.1">0.4.1</a>.</span></span> — for each \(x\)-value there  is exactly one \(y\)-value for which \((x,y)\) lies on the curve \(y=x^2\text{.}\)</li>
+</ul>
+<p>So let's draw those more carefully.</p>
+<figure class="figure-like" id="fig_tang1a"><div style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="text/figs/tang1a.svg" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span> <span class="codenumber">1.1.1</span> Sketches of the curve \({y=x^2}\text{.}\) (left) shows a tangent line, while  (right) shows a line that is not a tangent.</figcaption></figure><p id="p-168">These are better. In both cases we have drawn \(y=x^2\) (carefully) and then  picked a point on the curve — call it \(P\text{.}\) Let us zoom in on the “good”  example:</p>
+<figure class="figure-like" id="fig_tang1aa"><div style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="text/figs/tang1aa.svg" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span> <span class="codenumber">1.1.2</span> We see that, the more we zoom in on the point \(P\text{,}\) the more the graph of the function  (drawn in black) looks like a straight line — that line is the tangent line (drawn in  blue).</figcaption></figure><p id="p-169">We see that as we zoom in on the point \(P\text{,}\) the graph of the function looks  more and more like a straight line. If we kept on zooming in on \(P\) then the  graph of the function would be indistinguishable from a straight line. That  line is the tangent line (which we have drawn in blue). A little more  precisely, the blue line is “the tangent line to the function at \(P\)”. We  have to be a little careful, because if we zoom in at a different point, then  we will find a different tangent line.</p>
+<p id="p-170">Now let's zoom in on the “bad” example we see that the blue line looks very  different from the function; because of this, the blue line is not the tangent  line at \(P\text{.}\)</p>
+<figure class="figure-like" id="fig_tang1ab"><div style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="text/figs/tang1ab.svg" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span> <span class="codenumber">1.1.3</span> Zooming in on \(P\) we see that the function (drawn in black) looks more  and more like a straight line — however it is not the same line as that drawn  in blue. Because of this the blue line is not the tangent line.</figcaption></figure><p id="p-171">Here are a couple more examples of tangent lines</p>
+<figure class="figure-like" id="fig_tang1b"><div style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="text/figs/tang1b.svg" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span> <span class="codenumber">1.1.4</span> More examples of tangent lines.</figcaption></figure><p id="p-172">The one on the left is very similar to the good example on \(y=x^2\) that we saw  above, while the one on the right is different — it looks a little like the  “bad” example, in that it crosses our function the curve at some distant  point. Why is the line in Figure <a knowl="./knowl/fig_tang1b.html" title="Figure 1.1.4">1.1.4</a>(right) a tangent while the  line in Figure <a knowl="./knowl/fig_tang1a.html" title="Figure 1.1.1">1.1.1</a>(right) not a tangent? To see why, we should  again zoom in close to the point where we are trying to draw the tangent.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/tang1c.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p id="p-173">As we saw above in Figure <a knowl="./knowl/fig_tang1ab.html" title="Figure 1.1.3">1.1.3</a>, when we zoom in around our example  of “not a tangent line” we see that the straight line looks very different  from the curve at the “point of tangency” — i.e. where we are trying to draw  the tangent. The line drawn in Figure <a knowl="./knowl/fig_tang1b.html" title="Figure 1.1.4">1.1.4</a>(right) looks more and  more like the function as we zoom in.</p>
+<p id="p-174">This example raises an important point — when we are trying to draw a  tangent line, we don't care what the function does a long way from the  point; the tangent line to the curve at a particular point \(P\text{,}\) depends only on  what the function looks like close to that point \(P\text{.}\)</p>
+<p id="p-175">To illustrate this consider the sketch of the function \(y = \sin(x)\) and its  tangent line at \((x,y)=(0,0)\text{:}\)</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/tang1d.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p id="p-176">As we zoom in, the graph of \(\sin(x)\) looks more and more like a straight line  — in fact it looks more and more like the line \(y=x\text{.}\) We have also sketched  this tangent line. What makes this example a little odd is that the tangent  line crosses the function. In the examples above, our tangent lines just  “kissed” the curve and did not cross it (or at least did not cross it  nearby).</p>
+<p id="p-177">Using this idea of zooming in at a particular point, drawing a tangent line is  not too hard. However,  finding the equation of the tangent line presents us  with a few challenges. Rather than leaping into the general  theory, let us do a  specific example. Let us find the the equation of the tangent line to the curve  \(y=x^2\) at the point \(P\) with coordinates <a knowl="" class="id-ref" refid="hk-fn-21" id="fn-21"><sup> 2 </sup></a><span id="hk-fn-21" class="hidden-content tex2jax_ignore"><span class="footnote">Note that the <em class="emphasis">coordinates</em> \((x,y)\) is an ordered pair of two numbers \(x\)  and \(y\text{.}\) Traditionally the first number is called the <em class="emphasis">abscissa</em> while the  second is the <em class="emphasis">ordinate</em>, but these terms are a little archaic. It is now  much more common to hear people refer to the first number as  the <em class="emphasis">\(x\)-coordinate</em> and the second as <em class="emphasis">\(y\)-coordinate</em>.</span></span> \((x,y)=(1,1)\text{.}\)</p>
+<p id="p-178">To find the equation of a line we either need</p>
+<ul class="disc">
+<li id="li-87">the slope of the line and a point on the line, or</li>
+<li id="li-88">two points on the line, from which we can compute the slope via the  formula<div class="displaymath">
+\begin{equation*}
+m = \frac{y_2 - y_1}{x_2 - x_1}
+\end{equation*}
+</div>
+</li>
+</ul>
+<p>and then write down the equation for the line via a formula such as</p>
+<div class="displaymath">
+\begin{equation*}
+y = m \cdot(x - x_1) + y_1.
+\end{equation*}
+</div>
+<p id="p-179">We cannot use the first method because we do not know what the slope of the  tangent line should be. To work out the slope we need calculus — so we'll  be able to use this method once we get to the next chapter on “differentiation”.</p>
+<p id="p-180">It is not immediately obvious how we can use the second method, since we only  have one point on the curve, namely \((1,1)\text{.}\) However we can use it to “sneak  up” on the answer.  Let's approximate the tangent line, by drawing a line that  passes through \((1,1)\) and some nearby point — call it \(Q\text{.}\) Here is our recipe:</p>
+<ul class="disc">
+<li id="li-89">
+<p id="p-181">We are given the point \(P=(1,1)\) and we are told</p>
+<blockquote class="blockquote" id="blockquote-5"><p id="p-182">Find the tangent line to the curve \(y=x^2\) that passes through \(P = (1,1)\text{.}\)</p></blockquote>
+</li>
+<li id="li-90">
+<p id="p-183">We don't quite know how to find a line given just 1 point, however we do  know how to find a line passing through 2 points. So pick another point on the  curves whose coordinates are very close to \(P\text{.}\) Now rather than picking some  actual numbers, I am going to write our second point as \(Q = (1+h, (1+h)^2)\text{.}\)  That is, a point \(Q\) whose \(x\)-coordinate is equal to that of \(P\) plus a little  bit — where the little bit is some small number \(h\text{.}\)  And since this point  lies on the curve \(y=x^2\text{,}\) and \(Q\)'s x-coordinate is \(1+h\text{,}\) \(Q\)'s y-coordinate must  be \((1+h)^2\text{.}\)</p>
+<p id="p-184">If having \(h\) as an variable rather than a number bothers you, start by  thinking of \(h\) as \(0.1\text{.}\)</p>
+</li>
+<li id="li-91">A picture of the situation will help.</li>
+</ul>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/tang2.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<ul id="p-185" class="disc">
+<li id="li-92">This line that passes through the curve in two places \(P\) and \(Q\) is  called a “secant line”.</li>
+<li id="li-93">The slope of the line is then<div class="displaymath">
+\begin{align*}
+m &amp;= \frac{y_2 - y_1}{x_2-x_1}\\
+&amp;= \frac{(1+h)^2-1}{(1+h)-1}
+=  \frac{1+2h+h^2-1}{h}
+= \frac{2h+h^2}{h}
+= 2+h
+\end{align*}
+</div>where we have expanded \((1+h)^2 = 1+2h+h^2\) and then cleaned up a bit.</li>
+</ul>
+<p>Now this isn't our tangent line because it passes through 2 nearby points on  the curve — however it is a reasonable approximation of it. Now we can make  that approximation better and so “sneak up” on the tangent line by considering  what happens when we move this point \(Q\) closer and closer to \(P\text{.}\) i.e. make the  number \(h\) closer and closer to zero.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/tang2a.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p id="p-186">First look at the picture. The original choice of \(Q\) is on the left, while on  the right we have drawn what happens if we choose \(h'\) to be some number a  little smaller than \(h\text{,}\) so that our point \(Q\) becomes a new point \(Q'\) that is  a little closer to \(P\text{.}\) The new approximation is better than the first.</p>
+<p id="p-187">So as we make \(h\) smaller and smaller, we bring \(Q\) closer and closer to  \(P\text{,}\) and make our secant line a better and better approximation of the  tangent line. We can observe what happens to the slope of the line as we  make \(h\) smaller by plugging some numbers into our formula \(m=2+h\text{:}\)</p>
+<div class="displaymath">
+\begin{align*}
+h=0.1 &amp;&amp; m = 2.1\\
+h=0.01 &amp;&amp; m= 2.01\\
+h=0.001 &amp;&amp; m= 2.001.
+\end{align*}
+</div>
+<p>So again we see that as this difference in \(x\) becomes smaller and smaller, the  slope appears to be getting closer and closer to \(2\text{.}\) We can write this more  mathematically as</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{h \to 0} \frac{(1+h)^2-1}{h} &amp;= 2
+\end{align*}
+</div>
+<p>This is read as</p>
+<blockquote class="blockquote" id="blockquote-6"><p id="p-188">The limit, as \(h\) approaches \(0\text{,}\) of \(\frac{(1+h)^2-1}{h}\) is \(2\text{.}\)</p></blockquote>
+<p id="p-189">This is our first limit! Notice that we can see this a little more clearly with a quick  bit of algebra:</p>
+<div class="displaymath">
+\begin{align*}
+\frac{(1+h)^2-1}{h} &amp;= \frac{(1+2h+h^2)-1}{h}\\
+&amp;= \frac{2h+h^2}{h}
+&amp; (2+h)\\
+\end{align*}
+<p class="intertext">So it is not unreasonable to expect that</p>
+\begin{align*}
+\lim_{h \to 0} \frac{(1+h)^2-1}{h} &amp;= \lim_{h \to 0} (2+h) = 2.
+\end{align*}
+</div>
+<p id="p-190">Our tangent line can be thought of as the end of this process — namely as we  bring \(Q\) closer and closer to \(P\text{,}\) the slope of the secant line comes  closer and closer to that of the tangent line we want. Since we have worked out  what the slope is — that is the limit we saw just above — we now know  the slope of the tangent line is \(2\text{.}\) Given this, we can work out the  equation for the tangent line.</p>
+<ul class="disc">
+<li id="li-94">The equation for the line is \(y=mx+c\text{.}\) We have 2 unknowns \(m\) and \(c\) —  so we need 2 pieces of information to find them.</li>
+<li id="li-95">Since the line is tangent to \(P = (1,1)\) we know the line must pass  through \((1,1)\text{.}\) From the limit we computed above, we also know that the line  has slope \(2\text{.}\)</li>
+<li id="li-96">Since the slope is \(2\) we know that \(m=2\text{.}\) Thus the equation of the line  is \(y=2x+c\text{.}\)</li>
+<li id="li-97">We know that the line passes through \((1, 1)\text{,}\) so that \(y=2x+c\) must be \(1\) when \(x=1\text{.}\) So \(1 = 2 \cdot 1 + c\text{,}\) which forces \(c = -1\text{.}\)</li>
+</ul>
+<p>So our tangent line is \(y=2x-1\text{.}\)</p></section></div></main>
+</div>
+<!--Start: Google Universal code--><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-105798942-1', 'auto');
+ga('send', 'pageview');
+</script><!--End: Google Universal code--><div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.1/login.js"></script>
+</body>
+</html>

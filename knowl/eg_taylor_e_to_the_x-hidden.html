@@ -1,0 +1,52 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:17:16-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><article class="example-like"><p>The constant, linear and quadratic approximations we used above were the first few Maclaurin polynomial approximations of \(e^x\text{.}\) That is</p>
+<div class="displaymath">
+\begin{align*}
+T_0 (x) &amp; = 1 &amp; T_1(x) &amp;= 1+x &amp; T_2(x) &amp;= 1+x+\frac{x^2}{2}
+\end{align*}
+</div>
+<p>Since \(\diff{}{x} e^x = e^x\text{,}\) the Maclaurin polynomials are very easy to compute. Indeed this invariance under differentiation means that</p>
+<div class="displaymath">
+\begin{align*}
+f^{(n)}(x) &amp;= e^x &amp; n=0,1,2,\dots &amp;&amp; \text{so}\\
+f^{(n)}(0) &amp;= 1
+\end{align*}
+</div>
+<p>Substituting this into equation <a knowl="./knowl/eq_taylorPoly.html" title="Equation 3.4.10: Taylor polynomial">3.4.10</a> we get</p>
+<div class="displaymath">
+\begin{align*}
+T_n(x) &amp;= \sum_{k=0}^n \frac{1}{k!} x^k
+\end{align*}
+</div>
+<p>Thus we can write down the seventh Maclaurin polynomial very easily:</p>
+<div class="displaymath">
+\begin{align*}
+T_7(x) &amp;= 1 + x + \frac{x^2}{2} + \frac{x^3}{6} + \frac{x^4}{24} + \frac{x^5}{120} +
+\frac{x^6}{720} + \frac{x^7}{5040}
+\end{align*}
+</div>
+<p>The following figure contains sketches of the graphs of \(e^x\) and its Taylor polynomials \(T_n(x)\) for \(n=0,1,2,3,4\text{.}\)</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/expT.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p>Also notice that if we use \(T_7(1)\) to approximate the value of \(e^1\) we obtain:</p>
+<div class="displaymath">
+\begin{align*}
+e^1 \approx T_7(1) &amp;= 1 + 1 + \frac{1}{2} + \frac{1}{6} + \frac{1}{24} + \frac{1}{120}
++ \frac{1}{720} + \frac{1}{5040}\\
+&amp;= \frac{685}{252} =  2.718253968\dots
+\end{align*}
+</div>
+<p>The true value of \(e\) is \(2.718281828\dots\text{,}\) so the approximation has an error of about \(3\times10^{-5}\text{.}\)</p>
+<p>Under the assumption that the accuracy of the approximation improves with \(n\) (an assumption we examine in Subsection <a href="ssec_taylor_error.html" class="xref" title="Subsection 3.4.9: The Error in the Taylor Polynomial Approximations">3.4.9</a> below) we can see that the approximation of \(e\) above can be improved by adding more and more terms. Indeed this is how the expression for \(e\) in equation <a knowl="./knowl/eq_eulerconst.html" title="Equation 2.7.4: Euler's constant">2.7.4</a> in Section <a href="sec_exp_func.html" class="xref" title="Section 2.7: Derivatives of Exponential Functions">2.7</a> comes about.</p></article></body>
+</html>

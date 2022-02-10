@@ -1,0 +1,67 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:22:57-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>Now back to the original problem. We will be making 60 monthly payments of $420. The present value of all 60 payments is<a knowl="./knowl/fn-182-hidden.html" title="Footnote C.1.6"><sup> 6 </sup></a></p>
+<div class="displaymath">
+\begin{align*}
+\amp 420(1+r)^{-1}+420(1+r)^{-2}+\cdots +420(1+r)^{-60} \\
+\amp \hskip1in
+=420\frac{(1+r)^{-1}-(1+r)^{-61} }{1-(1+r)^{-1} } \\
+\amp \hskip1in=420\frac{1-(1+r)^{-60} }{(1+r)-1}\\
+\amp \hskip1in
+=420\frac{1-(1+r)^{-60} }{r}
+\end{align*}
+</div>
+<p>The interest rate \(100r\%\) being charged by the car dealer is such that the present value of 60 monthly payments of $420 is $23520. That is, the monthly interest rate being charged by the car dealer is the solution of</p>
+<div class="displaymath">
+\begin{align*}
+23520=420\frac{1-(1+r)^{-60} }{r} 
+\qquad\amp \text{or}\qquad 
+56=\frac{1-(1+r)^{-60} }{r} \\
+\amp \text{or}\qquad 
+56r=1-(1+r)^{-60} \\
+\amp \text{or}\qquad 
+56r(1+r)^{60}=(1+r)^{60}-1 \\
+\amp \text{or}\qquad 
+(1-56r)(1+r)^{60}=1
+\end{align*}
+</div>
+<p>Set \(f(r)=(1-56r)(1+r)^{60}-1\text{.}\) Then</p>
+<div class="displaymath">
+\begin{equation*}
+f'(r)=-56(1+r)^{60}+60(1-56r)(1+r)^{59}
+\end{equation*}
+</div>
+<p>or</p>
+<div class="displaymath">
+\begin{equation*}
+f'(r)=\big[-56(1+r)+60(1-56r)\big](1+r)^{59}
+=(4-3416r)(1+r)^{59}
+\end{equation*}
+</div>
+<p>Apply Newton's method with an initial guess of \(r_1=.002\text{.}\) (That's \(0.2\)% per month or 2.4% per year.) Then</p>
+<div class="displaymath">
+\begin{align*}
+r_2\amp =r_1-\frac{(1-56r_1)(1+r_1)^{60}-1}{(4-3416r_1)(1+r_1)^{59}}=0.002344\\
+\
+r_3\amp =r_2-\frac{(1-56r_2)(1+r_2)^{60}-1}{(4-3416r_2)(1+r_2)^{59}}=0.002292\\
+r_4\amp =r_3-\frac{(1-56r_3)(1+r_3)^{60}-1}{(4-3416r_3)(1+r_3)^{59}}=0.002290\\
+r_5\amp =r_4-\frac{(1-56r_4)(1+r_4)^{60}-1}{(4-3416r_4)(1+r_4)^{59}}=0.002290
+\end{align*}
+</div>
+<p>So the interest rate is 0.229% per month or 2.75% per year.</p>
+<span class="incontext"><a href="sec_C_1.html#p-5470">in-context</a></span>
+</body>
+</html>

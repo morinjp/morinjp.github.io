@@ -1,0 +1,678 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:03:28-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Exercises</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.1/pretext.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on2.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="RQS.css">
+<link href="https://pretextbook.org/css/0.1/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\require{cancel}\newcommand{\dee}[1]{\mathrm{d}#1}
+\newcommand{\half}{ \frac{1}{2} }
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ts}{\textstyle}
+\newcommand{\es}{ {\varnothing}}
+\newcommand{\st}{ {\mbox{ s.t. }} }
+\newcommand{\pow}[1]{ \mathcal{P}\left(#1\right) }
+\newcommand{\set}[1]{ \left\{#1\right\} }
+\newcommand{\lin}{{\text{LIN}}}
+\newcommand{\quot}{{\text{QR}}}
+\newcommand{\simp}{{\text{SMP}}}
+\newcommand{\diff}[2]{ \frac{\mathrm{d}#1}{\mathrm{d}#2}}
+\newcommand{\bdiff}[2]{ \frac{\mathrm{d}}{\mathrm{d}#2} \left( #1 \right)}
+\newcommand{\ddiff}[3]{ \frac{\mathrm{d}^#1#2}{\mathrm{d}{#3}^#1}}
+\renewcommand{\neg}{ {\sim} }
+\newcommand{\limp}{ {\;\Rightarrow\;} }
+\newcommand{\nimp}{ {\;\not\Rightarrow\;} }
+\newcommand{\liff}{ {\;\Leftrightarrow\;} }
+\newcommand{\niff}{ {\;\not\Leftrightarrow\;} }
+\newcommand{\De}{\Delta}
+\newcommand{\bbbn}{\mathbb{N}}
+\newcommand{\bbbr}{\mathbb{R}}
+\newcommand{\bbbp}{\mathbb{P}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\Si}{\Sigma}
+
+\newcommand{\arccsc}{\mathop{\mathrm{arccsc}}}
+\newcommand{\arcsec}{\mathop{\mathrm{arcsec}}}
+\newcommand{\arccot}{\mathop{\mathrm{arccot}}}
+\newcommand{\erf}{\mathop{\mathrm{erf}}}
+\newcommand{\smsum}{\mathop{{\ts \sum}}}
+\newcommand{\atp}[2]{ \genfrac{}{}{0in}{}{#1}{#2} }
+
+\newcommand{\ave}{\mathrm{ave}}
+\newcommand{\llt}{\left \lt }
+\newcommand{\rgt}{\right \gt }
+
+
+\newcommand{\YEaxis}[2]{\draw[help lines] (-#1,0)--(#1,0) node[right]{$x$};\draw[help lines] (0,-#2)--(0,#2) node[above]{$y$};}
+
+\newcommand{\YEaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$x$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YEtaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+\newcommand{\YEtaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$}; \draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YExcoord}[2]{\draw (#1,.2)--(#1,-.2) node[below]{$#2$};}
+\newcommand{\YEycoord}[2]{\draw (.2,#1)--(-.2,#1) node[left]{$#2$};}
+\newcommand{\YEnxcoord}[2]{\draw (#1,-.2)--(#1,.2) node[above]{$#2$};}
+\newcommand{\YEnycoord}[2]{\draw (-.2,#1)--(.2,#1) node[right]{$#2$};}
+
+\newcommand{\YEstickfig}[3]{
+\draw (#1,#2) arc(-90:270:2mm);
+\draw (#1,#2)--(#1,#2-.5) (#1-.25,#2-.75)--(#1,#2-.5)--(#1+.25,#2-.75) (#1-.2,#2-.2)--(#1+.2,#2-.2);}
+
+
+\newcommand{\IBP}[7]{
+\begin{array}{|c  | l | l |}
+\hline
+\color{red}{\text{Option 1:}}
+&amp; u=#2
+&amp;\color{red}{\dee{u}=#3 ~ \dee{#1}}
+\\
+&amp; \dee{v}=#5~\dee{#1}
+&amp;\color{red}{v=#7}
+\\
+\hline
+\color{blue}{\text{Option 2:}}
+&amp; u=#5
+&amp;\color{blue}{\dee{u}=#6 ~ \dee{#1}}
+\\
+&amp;\dee{v}=#2 \dee{#1}
+&amp;\color{blue}{v=#4}
+\\
+\hline
+\end{array}
+}
+
+
+\renewcommand{\textcolor}[2]{{\color{#1}{#2}}}
+
+
+\newcommand{\trigtri}[4]{
+\begin{tikzpicture}
+\draw (-.5,0)--(2,0)--(2,1.5)--cycle;
+\draw (1.8,0) |- (2,.2);
+\draw[double] (0,0) arc(0:30:.5cm);
+\draw (0,.2) node[right]{$#1$};
+\draw (1,-.5) node{$#2$};
+\draw (2,.75) node[right]{$#3$};
+\draw (.6,1.1) node[rotate=30]{$#4$};
+\end{tikzpicture}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="clp_1_dc.html"><span class="title">CLP-1 Differential Calculus</span></a></h1>
+<p class="byline">Joel Feldman, Andrew Rechnitzer, Elyse Yeager</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="ssec_sketch_SE.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="sec_curve_sketch.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="sec_4_7.html" title="Next">Next</a></span></div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="ssec_sketch_SE.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="sec_curve_sketch.html" title="Up">Up</a><a class="next-button button toolbar-item" href="sec_4_7.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="index.html" data-scroll="index"><span class="title">Front Matter</span></a></h2>
+<ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface-2.html" data-scroll="preface-2">Using the exercises in this book</a></li>
+<li><a href="preface-3.html" data-scroll="preface-3">Feedback about the text</a></li>
+</ul>
+<h2 class="link"><a href="chap_basics.html" data-scroll="chap_basics"><span class="codenumber">0</span> <span class="title">The basics</span></a></h2>
+<ul>
+<li><a href="sec_0_1.html" data-scroll="sec_0_1">Numbers</a></li>
+<li><a href="sec_sets.html" data-scroll="sec_sets">Sets</a></li>
+<li><a href="sec_0_3.html" data-scroll="sec_0_3">Other Important Sets</a></li>
+<li><a href="sec_0_4.html" data-scroll="sec_0_4">Functions</a></li>
+<li><a href="sec_parsing.html" data-scroll="sec_parsing">Parsing Formulas</a></li>
+<li><a href="sec_inverse_functions.html" data-scroll="sec_inverse_functions">Inverse Functions</a></li>
+</ul>
+<h2 class="link"><a href="chap_limits.html" data-scroll="chap_limits"><span class="codenumber">1</span> <span class="title">Limits</span></a></h2>
+<ul>
+<li><a href="sec_first_lim.html" data-scroll="sec_first_lim">Drawing Tangents and a First Limit</a></li>
+<li><a href="sec_velocity.html" data-scroll="sec_velocity">Another Limit and Computing Velocity</a></li>
+<li><a href="sec_lim_func.html" data-scroll="sec_lim_func">The Limit of a Function</a></li>
+<li><a href="sec_1_4.html" data-scroll="sec_1_4">Calculating Limits with Limit Laws</a></li>
+<li><a href="sec_1_5.html" data-scroll="sec_1_5">Limits at Infinity</a></li>
+<li><a href="sec_1_6.html" data-scroll="sec_1_6">Continuity</a></li>
+<li><a href="sec_opt_formal_limit.html" data-scroll="sec_opt_formal_limit">(Optional) — Making the Informal a Little More Formal</a></li>
+<li><a href="sec_lim_inf_formal.html" data-scroll="sec_lim_inf_formal">(Optional) — Making Infinite Limits a Little More Formal</a></li>
+<li><a href="sec_proof_arith_lim.html" data-scroll="sec_proof_arith_lim">(Optional) — Proving the Arithmetic of Limits</a></li>
+</ul>
+<h2 class="link"><a href="chap_deriv.html" data-scroll="chap_deriv"><span class="codenumber">2</span> <span class="title">Derivatives</span></a></h2>
+<ul>
+<li><a href="sec_2_1.html" data-scroll="sec_2_1">Revisiting Tangent Lines</a></li>
+<li><a href="sec_def_deriv.html" data-scroll="sec_def_deriv">Definition of the Derivative</a></li>
+<li><a href="sec_2_3.html" data-scroll="sec_2_3">Interpretations of the Derivative</a></li>
+<li><a href="sec_2_4.html" data-scroll="sec_2_4">Arithmetic of Derivatives - a Differentiation Toolbox</a></li>
+<li><a href="sec_proof_arith_deriv.html" data-scroll="sec_proof_arith_deriv">Proofs of the Arithmetic of Derivatives</a></li>
+<li><a href="sec_2_6.html" data-scroll="sec_2_6">Using the Arithmetic of Derivatives –  Examples</a></li>
+<li><a href="sec_exp_func.html" data-scroll="sec_exp_func">Derivatives of Exponential Functions</a></li>
+<li><a href="sec_diff_trig.html" data-scroll="sec_diff_trig">Derivatives of Trigonometric Functions</a></li>
+<li><a href="sec_chain_rule.html" data-scroll="sec_chain_rule">One More Tool  – the Chain Rule</a></li>
+<li><a href="sec_diff_logs.html" data-scroll="sec_diff_logs">The Natural Logarithm</a></li>
+<li><a href="sec_2_11.html" data-scroll="sec_2_11">Implicit Differentiation</a></li>
+<li><a href="sec_invTrig.html" data-scroll="sec_invTrig">Inverse Trigonometric Functions</a></li>
+<li><a href="sec_mvt.html" data-scroll="sec_mvt">The Mean Value Theorem</a></li>
+<li><a href="sec_higher_diff.html" data-scroll="sec_higher_diff">Higher Order Derivatives</a></li>
+<li><a href="sec_cont_deriv.html" data-scroll="sec_cont_deriv">(Optional) — Is \(\lim_{x\to c}f'(x)\) Equal to \(f'(c)\text{?}\)</a></li>
+</ul>
+<h2 class="link"><a href="chap_appl_deriv.html" data-scroll="chap_appl_deriv"><span class="codenumber">3</span> <span class="title">Applications of derivatives</span></a></h2>
+<ul>
+<li><a href="sec_vel_acc.html" data-scroll="sec_vel_acc">Velocity and Acceleration</a></li>
+<li><a href="sec_rrates.html" data-scroll="sec_rrates">Related Rates</a></li>
+<li><a href="sec_ExpGthDecay.html" data-scroll="sec_ExpGthDecay">Exponential Growth and Decay</a></li>
+<li><a href="sec_DIFFTaylor.html" data-scroll="sec_DIFFTaylor">Taylor Polynomials</a></li>
+<li><a href="sec_optimise.html" data-scroll="sec_optimise">Optimisation</a></li>
+<li><a href="sec_curve_sketch.html" data-scroll="sec_curve_sketch">Sketching Graphs</a></li>
+<li><a href="sec_4_7.html" data-scroll="sec_4_7">L'Hôpital's Rule and Indeterminate Forms</a></li>
+</ul>
+<h2 class="link"><a href="chapter-5.html" data-scroll="chapter-5"><span class="codenumber">4</span> <span class="title">Towards Integral Calculus</span></a></h2>
+<ul><li><a href="sec_antidiff.html" data-scroll="sec_antidiff">Introduction to Antiderivatives</a></li></ul>
+<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Appendices</span></a></h2>
+<h2 class="link"><a href="app_highschool.html" data-scroll="app_highschool"><span class="codenumber">A</span> <span class="title">High School Material</span></a></h2>
+<ul>
+<li><a href="sec_simtri.html" data-scroll="sec_simtri">Similar Triangles</a></li>
+<li><a href="sec_A_2.html" data-scroll="sec_A_2">Pythagoras</a></li>
+<li><a href="sec_A_3.html" data-scroll="sec_A_3">Trigonometry — Definitions</a></li>
+<li><a href="app_rad_arc_sec.html" data-scroll="app_rad_arc_sec">Radians, Arcs and Sectors</a></li>
+<li><a href="app_sec_trig_graphs.html" data-scroll="app_sec_trig_graphs">Trigonometry — Graphs</a></li>
+<li><a href="sec_A_6.html" data-scroll="sec_A_6">Trigonometry — Special Triangles</a></li>
+<li><a href="sec_A_7.html" data-scroll="sec_A_7">Trigonometry — Simple Identities</a></li>
+<li><a href="sec_trig_add.html" data-scroll="sec_trig_add">Trigonometry — Add and Subtract Angles</a></li>
+<li><a href="sec_inv_trig.html" data-scroll="sec_inv_trig">Inverse Trig Functions</a></li>
+<li><a href="app_sec_areas.html" data-scroll="app_sec_areas">Areas</a></li>
+<li><a href="sec_volumes.html" data-scroll="sec_volumes">Volumes</a></li>
+<li><a href="sec_powers.html" data-scroll="sec_powers">Powers</a></li>
+<li><a href="sec_logs.html" data-scroll="sec_logs">Logarithms</a></li>
+<li><a href="sec_must_deriv.html" data-scroll="sec_must_deriv">You Should be Able to Derive</a></li>
+</ul>
+<h2 class="link"><a href="chap_app_B.html" data-scroll="chap_app_B"><span class="codenumber">B</span> <span class="title">Origin of Trig, Area and Volume Formulas</span></a></h2>
+<ul>
+<li><a href="sec_B_1.html" data-scroll="sec_B_1">Theorems about Triangles</a></li>
+<li><a href="sec_B_2.html" data-scroll="sec_B_2">Trigonometry</a></li>
+<li><a href="sec_B_3.html" data-scroll="sec_B_3">Inverse Trigonometric Functions</a></li>
+<li><a href="sec_B_4.html" data-scroll="sec_B_4">Cosine and Sine Laws</a></li>
+<li><a href="sec_B_5.html" data-scroll="sec_B_5">Circles, cones and spheres</a></li>
+</ul>
+<h2 class="link"><a href="app_root_finding.html" data-scroll="app_root_finding"><span class="codenumber">C</span> <span class="title">Root Finding</span></a></h2>
+<ul>
+<li><a href="sec_C_1.html" data-scroll="sec_C_1">Newton's Method</a></li>
+<li><a href="sec_C_2.html" data-scroll="sec_C_2">The Error Behaviour of Newton's Method</a></li>
+<li><a href="sec_C_3.html" data-scroll="sec_C_3">The false position (regula falsi) method</a></li>
+<li><a href="sec_C_4.html" data-scroll="sec_C_4">The secant method</a></li>
+<li><a href="sec_C_5.html" data-scroll="sec_C_5">The Error Behaviour of the Secant Method</a></li>
+</ul>
+<h2 class="link"><a href="app_hint.html" data-scroll="app_hint"><span class="codenumber">D</span> <span class="title">Hints for Exercises</span></a></h2>
+<h2 class="link"><a href="app_answ.html" data-scroll="app_answ"><span class="codenumber">E</span> <span class="title">Answers to Exercises</span></a></h2>
+<h2 class="link"><a href="app_soln.html" data-scroll="app_soln"><span class="codenumber">F</span> <span class="title">Solutions to Exercises</span></a></h2></nav><div class="extras"><nav><a class="feedback-link" href="mailto:clp@ugrad.math.ubc.ca?subject=clp-pretext" target="_blank">Feedback</a><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="mathbook-content"><section class="subsection" id="subsection-69"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.6.7</span> <span class="title">Exercises</span>
+</h3>
+<section class="exercises" id="exercises-38"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber"></span> <span class="title">Exercises for § 3.6.1</span>
+</h4>
+<div class="exercisegroup" id="exercisegroup-98">
+<h6 class="heading"><span class="title"><p><alert>Exercises — Stage 1</alert></p></span></h6>
+<div class="introduction" id="introduction-137"></div>
+<div class="exercisegroup-exercises"><article class="exercise-like boxed" id="exercise-603"><h6 class="heading">
+<span class="codenumber">1</span> </h6>
+<p id="p-4563">Suppose \(f(x)\) is a function given by</p>
+<div class="displaymath">
+\begin{equation*}
+f(x)= \frac{g(x)}{x^2-9}
+\end{equation*}
+</div>
+<p id="p-4564">where \(g(x)\) is also a function. True or false: \(f(x)\) has a vertical asymptote at \(x=-3\text{.}\)</p></article></div>
+</div>
+<div class="exercisegroup" id="exercisegroup-99">
+<h6 class="heading"><span class="title"><p><alert>Exercises — Stage 2</alert></p></span></h6>
+<div class="introduction" id="introduction-138"></div>
+<div class="exercisegroup-exercises">
+<article class="exercise-like boxed" id="exercise-604"><h6 class="heading">
+<span class="codenumber">2</span> </h6>
+<p id="p-4569">Match the functions \(f(x)\text{,}\) \(g(x)\text{,}\) \(h(x)\text{,}\) and \(k(x)\) to the curves \(y=A(x)\) through \(y=D(x)\text{.}\)</p>
+<div class="displaymath">
+\begin{align*}
+f(x) &amp; =\sqrt{x^2+1} &amp;
+g(x) &amp;=\sqrt{x^2-1} \\
+h(x) &amp;=\sqrt{x^2+4} &amp;
+k(x) &amp;=\sqrt{x^2-4} 
+\end{align*}
+</div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel" style="width:50%;justify-content:flex-start;"><img src="images/image-420.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:50%;justify-content:flex-start;"><img src="images/image-421.svg" style="width: 100%; height: auto;" alt=""></div>
+</div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel" style="width:50%;justify-content:flex-start;"><img src="images/image-422.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:50%;justify-content:flex-start;"><img src="images/image-423.svg" style="width: 100%; height: auto;" alt=""></div>
+</div></div></article><article class="exercise-like boxed" id="exercise-605"><h6 class="heading">
+<span class="codenumber">3</span> </h6>
+<p id="p-4577">Below is the graph of</p>
+<div class="displaymath">
+\begin{equation*}
+y=f(x)=\sqrt{\log^2(x+p)}
+\end{equation*}
+</div>
+<ol id="p-4578" class="lower-alpha">
+<li id="li-1532">What is \(p\text{?}\)</li>
+<li id="li-1533">What is \(b\) (marked on the graph)?</li>
+<li id="li-1534">What is the \(x\)-intercept of \(f(x)\text{?}\)</li>
+</ol>
+<p>Remember \(\log(x+p)\) is the natural logarithm of \(x+p\text{,}\) \(\log_e(x+p)\text{.}\)</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-424.svg" style="width: 100%; height: auto;" alt=""></div></div></div></article><article class="exercise-like boxed" id="exercise-606"><h6 class="heading">
+<span class="codenumber">4</span> </h6>
+<p id="p-4587">Find all asymptotes of \(f(x)=\dfrac{x(2x+1)(x-7)}{3x^3-81}\text{.}\)</p></article><article class="exercise-like" id="exercise-607"><h6 class="heading">
+<span class="codenumber">5</span> </h6>
+<p id="p-4592">Find all asymptotes of \(f(x)=10^{3x-7}\text{.}\)</p></article>
+</div>
+</div></section><section class="exercises" id="exercises-39"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber"></span> <span class="title">Exercises for § 3.6.2</span>
+</h4>
+<div class="exercisegroup" id="exercisegroup-100">
+<h6 class="heading"><span class="title"><p><alert>Exercises — Stage 1</alert></p></span></h6>
+<div class="introduction" id="introduction-139"></div>
+<div class="exercisegroup-exercises"><article class="exercise-like boxed" id="exercise-608"><h6 class="heading">
+<span class="codenumber">1</span> </h6>
+<p id="p-4597">Match each function graphed below to its <em class="emphasis">derivative</em> from the list. (For example, which function on the list corresponds to \(A'(x)\text{?}\))</p>
+<p id="p-4598">The \(y\)-axes have been scaled to make the curve's behaviour clear, so the vertical scales differ from graph to graph.</p>
+<p id="p-4599">\(l(x)=(x-2)^4\)</p>
+<p id="p-4600">\(m(x)=(x-2)^4(x+2)\)</p>
+<p id="p-4601">\(n(x)=(x-2)^2(x+2)^2\)</p>
+<p id="p-4602">\(o(x)=(x-2)(x+2)^3\)</p>
+<p id="p-4603">\(p(x)=(x+2)^4\)</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:17%;margin-right:17%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-425.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-426.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:17%;margin-right:17%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-427.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:17%;margin-right:17%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-428.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:17%;margin-right:17%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-429.svg" style="width: 100%; height: auto;" alt=""></div></div></div></article></div>
+</div>
+<div class="exercisegroup" id="exercisegroup-101">
+<h6 class="heading"><span class="title"><p><alert>Exercises — Stage 2</alert></p></span></h6>
+<div class="introduction" id="introduction-140"></div>
+<div class="exercisegroup-exercises">
+<article class="exercise-like" id="exercise-609"><h6 class="heading">
+<span class="codenumber">2</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-4609">Find the interval(s) where \(f(x)=\dfrac{e^x}{x+3}\) is increasing.</p></article><article class="exercise-like" id="exercise-610"><h6 class="heading">
+<span class="codenumber">3</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-4613">Find the interval(s) where \(f(x)=\dfrac{\sqrt{x-1}}{2x+4}\) is increasing.</p></article><article class="exercise-like boxed" id="exercise-611"><h6 class="heading">
+<span class="codenumber">4</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-4619">Find the interval(s) where \(f(x)=2\arctan (x) - \log(1+x^2)\) is increasing.</p></article>
+</div>
+</div></section><section class="exercises" id="exercises-40"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber"></span> <span class="title">Exercises for § 3.6.3</span>
+</h4>
+<div class="exercisegroup" id="exercisegroup-102">
+<h6 class="heading"><span class="title"><p><alert>Exercises — Stage 1</alert></p></span></h6>
+<div class="introduction" id="introduction-141"></div>
+<div class="exercisegroup-exercises">
+<article class="exercise-like boxed" id="exercise-612"><h6 class="heading">
+<span class="codenumber">1</span> </h6>
+<p id="p-4624">On the graph below, mark the intervals where \(f''(x) \gt 0\) (i.e. \(f(x)\) is concave up) and where \(f''(x) \lt 0\) (i.e. \(f(x)\) is concave down).</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-430.svg" style="width: 100%; height: auto;" alt=""></div></div></div></article><article class="exercise-like boxed" id="exercise-613"><h6 class="heading">
+<span class="codenumber">2</span> </h6>
+<p id="p-4628">Sketch a curve that is:</p>
+<ul class="disc">
+<li id="li-1535">concave up when \(|x| \gt 5\text{,}\)</li>
+<li id="li-1536">concave down when \(|x| \lt 5\text{,}\)</li>
+<li id="li-1537">increasing when \(x \lt 0\text{,}\) and</li>
+<li id="li-1538">decreasing when \(x \gt 0\text{.}\)</li>
+</ul></article><article class="exercise-like" id="s3_6_3converse"><h6 class="heading">
+<span class="codenumber">3</span> </h6>
+<p id="p-4634">Suppose \(f(x)\) is a function whose second derivative exists and is continuous for all real numbers.</p>
+<p id="p-4635">True or false: if \(f''(3)=0\text{,}\) then \(x=3\) is an inflection point of \(f(x)\text{.}\)</p>
+<p id="p-4636">Remark: compare to Question <a knowl="./knowl/s3_6_3IVT.html" title="Exercise 3.6.7.7">3.6.7.7</a></p></article>
+</div>
+</div>
+<div class="exercisegroup" id="exercisegroup-103">
+<h6 class="heading"><span class="title"><p><alert>Exercises — Stage 2</alert></p></span></h6>
+<div class="introduction" id="introduction-142"></div>
+<div class="exercisegroup-exercises"><article class="exercise-like boxed" id="exercise-615"><h6 class="heading">
+<span class="codenumber">4</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-4642">Find all inflection points for the graph of \(f(x)=3x^5-5x^4+13x\text{.}\)</p></article></div>
+</div>
+<div class="exercisegroup" id="exercisegroup-104">
+<h6 class="heading"><span class="title"><p><alert>Exercises — Stage 3</alert></p></span></h6>
+<div class="introduction" id="introduction-143"><p id="p-4646">Questions <a knowl="./knowl/s3_6_3proof1.html" title="Exercise 3.6.7.5: (✳)">3.6.7.5</a> through <a knowl="./knowl/s3_6_3IVT.html" title="Exercise 3.6.7.7">3.6.7.7</a> ask you to show that certain things are true. Give a clear explanation using concepts and theorems from this semester.</p></div>
+<div class="exercisegroup-exercises">
+<article class="exercise-like boxed" id="s3_6_3proof1"><h6 class="heading">
+<span class="codenumber">5</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-4647">Let</p>
+<div class="displaymath">
+\begin{equation*}
+f(x)=\frac{x^5}{20}+\frac{5x^3}{6}-10x^2+500x+1000
+\end{equation*}
+</div>
+<p id="p-4648">Show that \(f(x)\) has exactly one inflection point.</p></article><article class="exercise-like boxed" id="exercise-617"><h6 class="heading">
+<span class="codenumber">6</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-4657">Let \(f(x)\) be a function whose first two derivatives exist everywhere, and \(f''(x) \gt 0\) for all \(x\text{.}\)</p>
+<ol class="lower-alpha">
+<li id="s3_6interval1">Show that \(f(x)\) has at most one critical point and that any critical point is an absolute minimum for \(f(x)\text{.}\)</li>
+<li id="s3_6interval2">Show that the maximum value of \(f(x)\) on any finite interval occurs at one of the endpoints of the interval.</li>
+</ol></article><article class="exercise-like" id="s3_6_3IVT"><h6 class="heading">
+<span class="codenumber">7</span> </h6>
+<p id="p-4673">Suppose \(f(x)\) is a function whose second derivative exists and is continuous for all real numbers, and \(x=3\) is an inflection point of \(f(x)\text{.}\) Use the Intermediate Value Theorem to show that \(f''(3)=0\text{.}\)</p>
+<p id="p-4674">Remark: compare to Question <a knowl="./knowl/s3_6_3converse.html" title="Exercise 3.6.7.3">3.6.7.3</a>.</p></article>
+</div>
+</div></section><section class="exercises" id="exercises-41"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber"></span> <span class="title">Exercises for § 3.6.4</span>
+</h4>
+<div class="exercisegroup" id="exercisegroup-105">
+<h6 class="heading"><span class="title"><p><alert>Exercises — Stage 1</alert></p></span></h6>
+<div class="introduction" id="introduction-144"></div>
+<div class="exercisegroup-exercises">
+<article class="exercise-like boxed" id="exercise-619"><h6 class="heading">
+<span class="codenumber">1</span> </h6>
+<p id="p-4684">What symmetries (even, odd, periodic) does the function graphed below have?</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-443.svg" style="width: 100%; height: auto;" alt=""></div></div></div></article><article class="exercise-like" id="exercise-620"><h6 class="heading">
+<span class="codenumber">2</span> </h6>
+<p id="p-4688">What symmetries (even, odd, periodic) does the function graphed below have?</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-444.svg" style="width: 100%; height: auto;" alt=""></div></div></div></article><article class="exercise-like" id="exercise-621"><h6 class="heading">
+<span class="codenumber">3</span> </h6>
+<p id="p-4695">Suppose \(f(x)\) is an even function defined for all real numbers. Below is the curve \(y=f(x)\) when \(x \gt 0\text{.}\) Complete the sketch of the curve.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-449.svg" style="width: 100%; height: auto;" alt=""></div></div></div></article><article class="exercise-like boxed" id="exercise-622"><h6 class="heading">
+<span class="codenumber">4</span> </h6>
+<p id="p-4698">Suppose \(f(x)\) is an odd function defined for all real numbers. Below is the curve \(y=f(x)\) when \(x \gt 0\text{.}\) Complete the sketch of the curve.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-452.svg" style="width: 100%; height: auto;" alt=""></div></div></div></article>
+</div>
+</div>
+<div class="exercisegroup" id="exercisegroup-106">
+<h6 class="heading"><span class="title"><p><alert>Exercises — Stage 2</alert></p></span></h6>
+<div class="introduction" id="introduction-145"></div>
+<div class="introduction" id="introduction-146"><p id="p-4711">In Questions <a knowl="./knowl/s3_6_4eqfirst.html" title="Exercise 3.6.7.7">3.6.7.7</a> through <a knowl="./knowl/s3_6_4eqlast.html" title="Exercise 3.6.7.10">3.6.7.10</a>, find the symmetries of a function from its equation.</p></div>
+<div class="exercisegroup-exercises">
+<article class="exercise-like boxed" id="exercise-623"><h6 class="heading">
+<span class="codenumber">5</span> </h6>
+<div class="displaymath" id="p-4701">
+\begin{equation*}
+f(x)=\frac{x^4-x^6}{e^{x^2}}
+\end{equation*}
+</div>
+<p id="p-4702">Show that \(f(x)\) is even.</p></article><article class="exercise-like" id="exercise-624"><h6 class="heading">
+<span class="codenumber">6</span> </h6>
+<div class="displaymath" id="p-4706">
+\begin{equation*}
+f(x)=\sin(x)+\cos\left(\frac{x}{2}\right)
+\end{equation*}
+</div>
+<p id="p-4707">Show that \(f(x)\) is periodic.</p></article><article class="exercise-like boxed" id="s3_6_4eqfirst"><h6 class="heading">
+<span class="codenumber">7</span> </h6>
+<div class="displaymath" id="p-4712">
+\begin{equation*}
+f(x)=x^4+5x^2+\cos\left(x^3\right)
+\end{equation*}
+</div>
+<p id="p-4713">What symmetries (even, odd, periodic) does \(f(x)\) have?</p></article><article class="exercise-like" id="exercise-626"><h6 class="heading">
+<span class="codenumber">8</span> </h6>
+<div class="displaymath" id="p-4718">
+\begin{equation*}
+f(x)=x^5+5x^4
+\end{equation*}
+</div>
+<p id="p-4719">What symmetries (even, odd, periodic) does \(f(x)\) have?</p></article><article class="exercise-like" id="exercise-627"><h6 class="heading">
+<span class="codenumber">9</span> </h6>
+<div class="displaymath" id="p-4724">
+\begin{equation*}
+f(x)=\tan\left(\pi x\right)
+\end{equation*}
+</div>
+<p id="p-4725">What is the period of \(f(x)\text{?}\)</p></article>
+</div>
+</div>
+<div class="exercisegroup" id="exercisegroup-107">
+<h6 class="heading"><span class="title"><p><alert>Exercises — Stage 3</alert></p></span></h6>
+<div class="introduction" id="introduction-147"></div>
+<div class="exercisegroup-exercises"><article class="exercise-like" id="s3_6_4eqlast"><h6 class="heading">
+<span class="codenumber">10</span> </h6>
+<div class="displaymath" id="p-4730">
+\begin{equation*}
+f(x)=\tan\left(3 x\right)+\sin\left(4 x\right)
+\end{equation*}
+</div>
+<p id="p-4731">What is the period of \(f(x)\text{?}\)</p></article></div>
+</div></section><section class="exercises" id="exercises-42"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber"></span> <span class="title">Exercises for § 3.6.6</span>
+</h4>
+<div class="exercisegroup" id="exercisegroup-108">
+<h6 class="heading"><span class="title"><p><alert>Exercises — Stage 1</alert></p></span></h6>
+<div class="introduction" id="introduction-148"></div>
+<div class="introduction" id="introduction-149"><p id="p-4753">In Questions <a knowl="./knowl/s3_6_6rationalfirst.html" title="Exercise 3.6.7.2: (✳)">3.6.7.2</a> through <a knowl="./knowl/s3_6_6rationallast.html" title="Exercise 3.6.7.4: (✳)">3.6.7.4</a>, you will sketch the graphs of rational functions.</p></div>
+<div class="introduction" id="introduction-150"><p id="p-4824">In Questions <a knowl="./knowl/s3_6_6expfirst.html" title="Exercise 3.6.7.6: (✳)">3.6.7.6</a> and <a knowl="./knowl/s3_6_6explast.html" title="Exercise 3.6.7.7: (✳)">3.6.7.7</a>, you will sketch the graphs of functions with an exponential component. In the next section, you will learn how to find their horizontal asymptotes, but for now these are given to you.</p></div>
+<div class="introduction" id="introduction-151"><p id="p-4854">In Questions <a knowl="./knowl/s3_6_6trig1.html" title="Exercise 3.6.7.8">3.6.7.8</a> and <a knowl="./knowl/s3_6_6trig2.html" title="Exercise 3.6.7.9: (✳)">3.6.7.9</a>, you will sketch the graphs of functions that have a trigonometric component.</p></div>
+<div class="exercisegroup-exercises">
+<article class="exercise-like boxed" id="exercise-629"><h6 class="heading">
+<span class="codenumber">1</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-4737">Let \(f(x) = x\sqrt{3 - x}\text{.}\)</p>
+<ol class="lower-alpha">
+<li id="s3_62007_1">Find the domain of \(f(x)\text{.}\)</li>
+<li id="s3_62007_2">Determine the \(x\)-coordinates of the local maxima and minima (if any) and intervals where \(f(x)\) is increasing or decreasing.</li>
+<li id="s3_62007_3">Determine intervals where \(f(x)\) is concave upwards or downwards, and the \(x\) coordinates of inflection points (if any). You may use, without verifying it, the formula \(f''(x) = (3x -12)(3 - x)^{-3/2}/4\text{.}\)</li>
+<li id="s3_62007_4">There is a point at which the tangent line to the curve \(y = f(x)\) is vertical. Find this point.</li>
+<li id="s3_62007_6">Sketch the graph \(y = f(x)\text{,}\) showing the features given in items (a) to (d) above and giving the \((x, y)\) coordinates for all points occurring above.</li>
+</ol></article><article class="exercise-like" id="s3_6_6rationalfirst"><h6 class="heading">
+<span class="codenumber">2</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-4754">Sketch the graph of</p>
+<div class="displaymath">
+\begin{equation*}
+f(x)= \dfrac{x^3-2}{x^4}.
+\end{equation*}
+</div>
+<p id="p-4755">Indicate the critical points, local and absolute maxima and minima, vertical and horizontal asymptotes, inflection points and regions where the curve is concave upward or downward.</p></article><article class="exercise-like" id="exercise-631"><h6 class="heading">
+<span class="codenumber">3</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-4775">The first and second derivatives of the function \(f(x)=\dfrac{x^4}{1+x^3}\) are:</p>
+<div class="displaymath">
+\begin{equation*}
+f'(x)=\frac{4x^3+x^6}{(1+x^3)^2}\qquad\hbox{and}\qquad f''(x)=\frac{12x^2-6x^5}{(1+x^3)^3}
+\end{equation*}
+</div>
+<p>Graph \(f(x)\text{.}\) Include local and absolute maxima and minima, regions where \(f(x)\) is increasing or decreasing, regions where the curve is concave upward or downward, and any asymptotes.</p></article><article class="exercise-like boxed" id="s3_6_6rationallast"><h6 class="heading">
+<span class="codenumber">4</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-4790">The first and second derivatives of the function \(f(x)=\dfrac{x^3}{1-x^2}\) are:</p>
+<div class="displaymath">
+\begin{equation*}
+f'(x)=\frac{3x^2-x^4}{(1-x^2)^2}\qquad\hbox{and}\qquad f''(x)=\frac{6x+2x^3}{(1-x^2)^3}
+\end{equation*}
+</div>
+<p>Graph \(f(x)\text{.}\) Include local and absolute maxima and minima, regions where the curve is concave upward or downward, and any asymptotes.</p></article><article class="exercise-like boxed" id="exercise-633"><h6 class="heading">
+<span class="codenumber">5</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-4809">The function \(f(x)\) is defined by</p>
+<div class="displaymath">
+\begin{equation*}
+f(x) =
+\left\{\begin{array}{lc}
+e^x &amp;x \lt 0\\
+\frac{x^2+3}{3(x+1)} &amp; x \ge 0
+\end{array}\right.
+\end{equation*}
+</div>
+<ol id="p-4810" class="lower-alpha">
+<li id="s3_6_2006_a">Explain why \(f(x)\) is continuous everywhere.</li>
+<li id="s3_6_2006_b">
+<p id="p-4811">Determine all of the following if they are present:</p>
+<ol class="lower-roman">
+<li id="s3_6_2006_i">\(x\)--coordinates of local maxima and minima, intervals where \(f(x)\) is increasing or decreasing;</li>
+<li id="s3_6_2006_ii">intervals where \(f(x)\) is concave upwards or downwards;</li>
+<li id="s3_6_2006_iii">equations of any horizontal or vertical asymptotes.</li>
+</ol>
+</li>
+<li id="s3_6_2006_c">Sketch the graph of \(y = f(x)\text{,}\) giving the \((x, y)\)  coordinates for all points of interest above.</li>
+</ol></article><article class="exercise-like" id="s3_6_6expfirst"><h6 class="heading">
+<span class="codenumber">6</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-4825">The function \(f(x)\) and its derivative are given below:</p>
+<div class="displaymath">
+\begin{equation*}
+f(x)=(1+2x)e^{-x^2}\qquad\hbox{and}\qquad f'(x)=2(1-x-2x^2)e^{-x^2}
+\end{equation*}
+</div>
+<p id="p-4826">Sketch the graph of \(f(x)\text{.}\) Indicate the critical points, local and/or absolute maxima and minima, and asymptotes. Without actually calculating the inflection points, indicate on the graph their approximate location.</p>
+<p id="p-4827">Note: \(\ds\lim_{x \to \pm\infty}f(x)=0\text{.}\)</p></article><article class="exercise-like boxed" id="s3_6_6explast"><h6 class="heading">
+<span class="codenumber">7</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-4840">Consider the function \(f(x) = xe^{-x^2/2}\text{.}\)</p>
+<p id="p-4841">Note: \(\ds\lim_{x \to \pm\infty}f(x)=0\text{.}\)</p>
+<ol class="lower-alpha">
+<li id="s3_62009_2">Find all inflection points and intervals of increase, decrease, convexity up, and convexity down. You may use without proof the formula \(f''(x) = (x^3-3x)e^{-x^2/2}\text{.}\)</li>
+<li id="s3_62009_3">Find local and global minima and maxima.</li>
+<li id="s3_62009_4">Use all the above to draw a graph for \(f\text{.}\) Indicate all special points on the graph.</li>
+</ol></article><article class="exercise-like" id="s3_6_6trig1"><h6 class="heading">
+<span class="codenumber">8</span> </h6>
+<p id="p-4855">Use the techniques from this section to sketch the graph of \(f(x)=x+2\sin x\text{.}\)</p></article><article class="exercise-like" id="s3_6_6trig2"><h6 class="heading">
+<span class="codenumber">9</span> <span class="title">(✳)</span>
+</h6>
+<div class="displaymath" id="p-4871">
+\begin{equation*}
+f(x) = 4\sin x - 2\cos 2x
+\end{equation*}
+</div>
+<p id="p-4872">Graph the equation \(y = f(x)\text{,}\) including all important features. (In particular, find all local maxima and minima and all inflection points.) Additionally, find the maximum and minimum values of \(f(x)\) on the interval \([0,\pi]\text{.}\)</p></article><article class="exercise-like boxed" id="exercise-638"><h6 class="heading">
+<span class="codenumber">10</span> </h6>
+<p id="p-4891">Sketch the curve \(y=\sqrt[3]{\dfrac{x+1}{x^2}}\text{.}\)</p>
+<p id="p-4892">You may use the facts  \(y'(x)=\dfrac{-(x+2)}{3x^{5/3}(x+1)^{2/3}}\) and \(y''(x)=\dfrac{4x^2+16x+10}{9x^{8/3}(x+1)^{5/3}}\text{.}\)</p></article>
+</div>
+</div>
+<div class="exercisegroup" id="exercisegroup-109">
+<h6 class="heading"><span class="title"><p><alert>Exercises — Stage 3</alert></p></span></h6>
+<div class="introduction" id="introduction-152"></div>
+<div class="exercisegroup-exercises">
+<article class="exercise-like" id="exercise-639"><h6 class="heading">
+<span class="codenumber">11</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-4904">A function \(f(x)\) defined on the whole real number line satisfies the following conditions</p>
+<div class="displaymath">
+\begin{equation*}
+f(0)=0\qquad
+f(2)=2\qquad
+\lim_{x\rightarrow+\infty}f(x)=0\qquad
+f'(x)=K(2x-x^2)e^{-x}
+\end{equation*}
+</div>
+<p>for some positive constant \(K\text{.}\) (Read carefully: you are given the <em class="emphasis">derivative</em> of \(f(x)\text{,}\) not \(f(x)\) itself.)</p>
+<ol id="p-4905" class="lower-alpha">
+<li id="s3_6K1">Determine the intervals on which \(f\) is increasing and decreasing and the location of any local maximum and minimum values of \(f\text{.}\)</li>
+<li id="s3_6K2">Determine the intervals on which \(f\) is concave up or down and the \(x\)--coordinates of any inflection points of \(f\text{.}\)</li>
+<li id="s3_6K3">Determine  \(\lim\limits_{x\rightarrow-\infty}f(x)\text{.}\)</li>
+<li id="s3_6K4">Sketch the graph of \(y=f(x)\text{,}\) showing any asymptotes and the information determined in parts <a knowl="./knowl/s3_6K1.html" title="Item 3.6.7.11.a">3.6.7.11.a</a> and <a knowl="./knowl/s3_6K2.html" title="Item 3.6.7.11.b">3.6.7.11.b</a>.</li>
+</ol></article><article class="exercise-like" id="exercise-640"><h6 class="heading">
+<span class="codenumber">12</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-4921">Let \(f(x) = e^{-x}\) , \(x \ge 0\text{.}\)</p>
+<ol class="lower-alpha">
+<li id="s3_62010exp1">Sketch the graph of the equation \(y = f(x)\text{.}\) Indicate any local extrema and inflection points.</li>
+<li id="s3_62010exp4">Sketch the graph of  the inverse function \(y = g (x)=f^{-1}(x)\text{.}\)</li>
+<li id="s3_62010exp2">Find the domain and range of the inverse function \(g(x)= f^{-1}(x)\text{.}\)</li>
+<li id="s3_62010exp3">Evaluate \(g'(\half)\text{.}\)</li>
+</ol></article><article class="exercise-like" id="exercise-641"><h6 class="heading">
+<span class="codenumber">13</span> <span class="title">(✳)</span>
+</h6>
+<ol id="p-4940" class="lower-alpha">
+<li id="li-1626">Sketch the graph of \(y=f(x)=x^5-x\text{,}\) indicating asymptotes, local maxima and minima, inflection points, and where the graph is concave up/concave down.</li>
+<li id="li-1627">Consider the function \(f(x)=x^5-x+k\text{,}\) where \(k\) is a constant, \(-\infty \lt k \lt \infty\text{.}\) How many roots does the function have? (Your answer might depend on the value of \(k\text{.}\))</li>
+</ol></article><article class="exercise-like" id="exercise-642"><h6 class="heading">
+<span class="codenumber">14</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-4948">The hyperbolic trigonometric functions \(\sinh(x)\) and \(\cosh(x)\) are defined by</p>
+<div class="displaymath">
+\begin{equation*}
+\sinh(x)=\dfrac{e^x-e^{-x}}{2}\qquad
+\cosh(x)=\dfrac{e^x+e^{-x}}{2}
+\end{equation*}
+</div>
+<p>They have many properties that are similar to corresponding properties of \(\sin(x)\) and \(\cos(x)\text{.}\) In particular, it is easy to see that</p>
+<div class="displaymath">
+\begin{equation*}
+\diff{}{x} \sinh(x)=\cosh(x)\qquad
+\diff{}{x} \cosh(x)=\sinh(x)\qquad
+\cosh^2(x)-\sinh^2(x)=1
+\end{equation*}
+</div>
+<p>You may use these properties in your solution to this question.</p>
+<ol class="lower-alpha">
+<li id="li-1646">Sketch the graphs of \(\sinh(x)\) and \(\cosh(x)\text{.}\)</li>
+<li id="li-1647">Define inverse hyperbolic trigonometric functions \(\sinh^{-1}(x)\) and \(\cosh^{-1}(x)\text{,}\) carefully specifing their domains of definition. Sketch the graphs of \(\sinh^{-1}(x)\) and \(\cosh^{-1}(x)\text{.}\)</li>
+<li id="li-1648">Find \(\diff{}{x}\left\{ \cosh^{-1}(x)\right\}\text{.}\)</li>
+</ol></article>
+</div>
+</div></section></section></div></main>
+</div>
+<!--Start: Google Universal code--><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-105798942-1', 'auto');
+ga('send', 'pageview');
+</script><!--End: Google Universal code--><div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.1/login.js"></script>
+</body>
+</html>

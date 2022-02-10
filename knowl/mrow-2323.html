@@ -1,0 +1,47 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:16:11-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="displaymath">
+\begin{align*}
+A&amp;=(\mbox{area of triangle})+(\mbox{area of sector})\\
+&amp;=(1-h)\sqrt{2h-h^2}+(\pi-\theta)\\
+&amp;=(1-h)\sqrt{2h-h^2}+\pi-\arccos\left(1-h\right)\\
+\end{align*}
+<p class="intertext">We want to differentiate with respect to \(t\text{.}\) Using the chain rule:</p>
+\begin{align*}
+\diff{A}{t}&amp;=\diff{A}{h}\cdot\diff{h}{t}\\
+\diff{A}{t}&amp;=\left((1-h)\frac{2-2h}{2\sqrt{2h-h^2}}+(-1)\sqrt{2h-h^2}
++\frac{-1}{\sqrt{1-(1-h)^2}}\right)\diff{h}{t}\\
+&amp;=\left(\frac{(1-h)^2}{\sqrt{2h-h^2}}-\sqrt{2h-h^2}-\frac{1}{\sqrt{2h-h^2}}\right)\diff{h}{t}\\
+&amp;=\left(\frac{(1-h)^2-1}{\sqrt{2h-h^2}}-\sqrt{2h-h^2}\right)\diff{h}{t}\\
+&amp;=\left(\frac{-(2h-h^2)}{\sqrt{2h-h^2}}-\sqrt{2h-h^2}\right)\diff{h}{t}\\
+&amp;=\left(-\sqrt{2h-h^2}-\sqrt{2h-h^2}\right)\diff{h}{t}\\
+&amp;=-2\sqrt{2h-h^2}\diff{h}{t}\\
+\end{align*}
+<p class="intertext">We note here that the negative sign makes sense: as the door lowers, \(h\) increases and \(A\) decreases, so \(\ds\diff{h}{t}\) and \(\ds\diff{A}{t}\) should have opposite signs.</p>
+\begin{align*}
+\\
+\end{align*}
+<p class="intertext">When \(h=\dfrac{1}{4}\) metres, and \(\ds\diff{h}{t}=\frac{1}{100}\) metres per second:</p>
+\begin{align*}
+\diff{A}{t}&amp;=-2\sqrt{\frac{2}{4}-\frac{1}{4^2}}\left(\frac{1}{100}\right)=-\frac{\sqrt{7}}{200}\;\frac{\mathrm{cm}^2}{\mathrm{s}}\\
+\end{align*}
+<p class="intertext">Since \(\ds\diff{F}{t}=\frac{1}{5}\ds\diff{A}{t}\text{:}\)</p>
+\begin{align*}
+\diff{F}{t}&amp;=-\frac{\sqrt{7}}{1000}\;\frac{\mathrm{m}^3}{\mathrm{sec^2}}
+\end{align*}
+</div>
+<span class="incontext"><a href="exercises-21.html#mjx-eqn-mrow-2323">in-context</a></span>
+</body>
+</html>

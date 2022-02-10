@@ -1,0 +1,591 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:00:26-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Back to the Main Text</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.1/pretext.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on2.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="RQS.css">
+<link href="https://pretextbook.org/css/0.1/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\require{cancel}\newcommand{\dee}[1]{\mathrm{d}#1}
+\newcommand{\half}{ \frac{1}{2} }
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ts}{\textstyle}
+\newcommand{\es}{ {\varnothing}}
+\newcommand{\st}{ {\mbox{ s.t. }} }
+\newcommand{\pow}[1]{ \mathcal{P}\left(#1\right) }
+\newcommand{\set}[1]{ \left\{#1\right\} }
+\newcommand{\lin}{{\text{LIN}}}
+\newcommand{\quot}{{\text{QR}}}
+\newcommand{\simp}{{\text{SMP}}}
+\newcommand{\diff}[2]{ \frac{\mathrm{d}#1}{\mathrm{d}#2}}
+\newcommand{\bdiff}[2]{ \frac{\mathrm{d}}{\mathrm{d}#2} \left( #1 \right)}
+\newcommand{\ddiff}[3]{ \frac{\mathrm{d}^#1#2}{\mathrm{d}{#3}^#1}}
+\renewcommand{\neg}{ {\sim} }
+\newcommand{\limp}{ {\;\Rightarrow\;} }
+\newcommand{\nimp}{ {\;\not\Rightarrow\;} }
+\newcommand{\liff}{ {\;\Leftrightarrow\;} }
+\newcommand{\niff}{ {\;\not\Leftrightarrow\;} }
+\newcommand{\De}{\Delta}
+\newcommand{\bbbn}{\mathbb{N}}
+\newcommand{\bbbr}{\mathbb{R}}
+\newcommand{\bbbp}{\mathbb{P}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\Si}{\Sigma}
+
+\newcommand{\arccsc}{\mathop{\mathrm{arccsc}}}
+\newcommand{\arcsec}{\mathop{\mathrm{arcsec}}}
+\newcommand{\arccot}{\mathop{\mathrm{arccot}}}
+\newcommand{\erf}{\mathop{\mathrm{erf}}}
+\newcommand{\smsum}{\mathop{{\ts \sum}}}
+\newcommand{\atp}[2]{ \genfrac{}{}{0in}{}{#1}{#2} }
+
+\newcommand{\ave}{\mathrm{ave}}
+\newcommand{\llt}{\left \lt }
+\newcommand{\rgt}{\right \gt }
+
+
+\newcommand{\YEaxis}[2]{\draw[help lines] (-#1,0)--(#1,0) node[right]{$x$};\draw[help lines] (0,-#2)--(0,#2) node[above]{$y$};}
+
+\newcommand{\YEaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$x$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YEtaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+\newcommand{\YEtaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$}; \draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YExcoord}[2]{\draw (#1,.2)--(#1,-.2) node[below]{$#2$};}
+\newcommand{\YEycoord}[2]{\draw (.2,#1)--(-.2,#1) node[left]{$#2$};}
+\newcommand{\YEnxcoord}[2]{\draw (#1,-.2)--(#1,.2) node[above]{$#2$};}
+\newcommand{\YEnycoord}[2]{\draw (-.2,#1)--(.2,#1) node[right]{$#2$};}
+
+\newcommand{\YEstickfig}[3]{
+\draw (#1,#2) arc(-90:270:2mm);
+\draw (#1,#2)--(#1,#2-.5) (#1-.25,#2-.75)--(#1,#2-.5)--(#1+.25,#2-.75) (#1-.2,#2-.2)--(#1+.2,#2-.2);}
+
+
+\newcommand{\IBP}[7]{
+\begin{array}{|c  | l | l |}
+\hline
+\color{red}{\text{Option 1:}}
+&amp; u=#2
+&amp;\color{red}{\dee{u}=#3 ~ \dee{#1}}
+\\
+&amp; \dee{v}=#5~\dee{#1}
+&amp;\color{red}{v=#7}
+\\
+\hline
+\color{blue}{\text{Option 2:}}
+&amp; u=#5
+&amp;\color{blue}{\dee{u}=#6 ~ \dee{#1}}
+\\
+&amp;\dee{v}=#2 \dee{#1}
+&amp;\color{blue}{v=#4}
+\\
+\hline
+\end{array}
+}
+
+
+\renewcommand{\textcolor}[2]{{\color{#1}{#2}}}
+
+
+\newcommand{\trigtri}[4]{
+\begin{tikzpicture}
+\draw (-.5,0)--(2,0)--(2,1.5)--cycle;
+\draw (1.8,0) |- (2,.2);
+\draw[double] (0,0) arc(0:30:.5cm);
+\draw (0,.2) node[right]{$#1$};
+\draw (1,-.5) node{$#2$};
+\draw (2,.75) node[right]{$#3$};
+\draw (.6,1.1) node[rotate=30]{$#4$};
+\end{tikzpicture}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="clp_1_dc.html"><span class="title">CLP-1 Differential Calculus</span></a></h1>
+<p class="byline">Joel Feldman, Andrew Rechnitzer, Elyse Yeager</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="subsection-8.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="sec_1_6.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="exercises-6.html" title="Next">Next</a></span></div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="subsection-8.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="sec_1_6.html" title="Up">Up</a><a class="next-button button toolbar-item" href="exercises-6.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="index.html" data-scroll="index"><span class="title">Front Matter</span></a></h2>
+<ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface-2.html" data-scroll="preface-2">Using the exercises in this book</a></li>
+<li><a href="preface-3.html" data-scroll="preface-3">Feedback about the text</a></li>
+</ul>
+<h2 class="link"><a href="chap_basics.html" data-scroll="chap_basics"><span class="codenumber">0</span> <span class="title">The basics</span></a></h2>
+<ul>
+<li><a href="sec_0_1.html" data-scroll="sec_0_1">Numbers</a></li>
+<li><a href="sec_sets.html" data-scroll="sec_sets">Sets</a></li>
+<li><a href="sec_0_3.html" data-scroll="sec_0_3">Other Important Sets</a></li>
+<li><a href="sec_0_4.html" data-scroll="sec_0_4">Functions</a></li>
+<li><a href="sec_parsing.html" data-scroll="sec_parsing">Parsing Formulas</a></li>
+<li><a href="sec_inverse_functions.html" data-scroll="sec_inverse_functions">Inverse Functions</a></li>
+</ul>
+<h2 class="link"><a href="chap_limits.html" data-scroll="chap_limits"><span class="codenumber">1</span> <span class="title">Limits</span></a></h2>
+<ul>
+<li><a href="sec_first_lim.html" data-scroll="sec_first_lim">Drawing Tangents and a First Limit</a></li>
+<li><a href="sec_velocity.html" data-scroll="sec_velocity">Another Limit and Computing Velocity</a></li>
+<li><a href="sec_lim_func.html" data-scroll="sec_lim_func">The Limit of a Function</a></li>
+<li><a href="sec_1_4.html" data-scroll="sec_1_4">Calculating Limits with Limit Laws</a></li>
+<li><a href="sec_1_5.html" data-scroll="sec_1_5">Limits at Infinity</a></li>
+<li><a href="sec_1_6.html" data-scroll="sec_1_6">Continuity</a></li>
+<li><a href="sec_opt_formal_limit.html" data-scroll="sec_opt_formal_limit">(Optional) — Making the Informal a Little More Formal</a></li>
+<li><a href="sec_lim_inf_formal.html" data-scroll="sec_lim_inf_formal">(Optional) — Making Infinite Limits a Little More Formal</a></li>
+<li><a href="sec_proof_arith_lim.html" data-scroll="sec_proof_arith_lim">(Optional) — Proving the Arithmetic of Limits</a></li>
+</ul>
+<h2 class="link"><a href="chap_deriv.html" data-scroll="chap_deriv"><span class="codenumber">2</span> <span class="title">Derivatives</span></a></h2>
+<ul>
+<li><a href="sec_2_1.html" data-scroll="sec_2_1">Revisiting Tangent Lines</a></li>
+<li><a href="sec_def_deriv.html" data-scroll="sec_def_deriv">Definition of the Derivative</a></li>
+<li><a href="sec_2_3.html" data-scroll="sec_2_3">Interpretations of the Derivative</a></li>
+<li><a href="sec_2_4.html" data-scroll="sec_2_4">Arithmetic of Derivatives - a Differentiation Toolbox</a></li>
+<li><a href="sec_proof_arith_deriv.html" data-scroll="sec_proof_arith_deriv">Proofs of the Arithmetic of Derivatives</a></li>
+<li><a href="sec_2_6.html" data-scroll="sec_2_6">Using the Arithmetic of Derivatives –  Examples</a></li>
+<li><a href="sec_exp_func.html" data-scroll="sec_exp_func">Derivatives of Exponential Functions</a></li>
+<li><a href="sec_diff_trig.html" data-scroll="sec_diff_trig">Derivatives of Trigonometric Functions</a></li>
+<li><a href="sec_chain_rule.html" data-scroll="sec_chain_rule">One More Tool  – the Chain Rule</a></li>
+<li><a href="sec_diff_logs.html" data-scroll="sec_diff_logs">The Natural Logarithm</a></li>
+<li><a href="sec_2_11.html" data-scroll="sec_2_11">Implicit Differentiation</a></li>
+<li><a href="sec_invTrig.html" data-scroll="sec_invTrig">Inverse Trigonometric Functions</a></li>
+<li><a href="sec_mvt.html" data-scroll="sec_mvt">The Mean Value Theorem</a></li>
+<li><a href="sec_higher_diff.html" data-scroll="sec_higher_diff">Higher Order Derivatives</a></li>
+<li><a href="sec_cont_deriv.html" data-scroll="sec_cont_deriv">(Optional) — Is \(\lim_{x\to c}f'(x)\) Equal to \(f'(c)\text{?}\)</a></li>
+</ul>
+<h2 class="link"><a href="chap_appl_deriv.html" data-scroll="chap_appl_deriv"><span class="codenumber">3</span> <span class="title">Applications of derivatives</span></a></h2>
+<ul>
+<li><a href="sec_vel_acc.html" data-scroll="sec_vel_acc">Velocity and Acceleration</a></li>
+<li><a href="sec_rrates.html" data-scroll="sec_rrates">Related Rates</a></li>
+<li><a href="sec_ExpGthDecay.html" data-scroll="sec_ExpGthDecay">Exponential Growth and Decay</a></li>
+<li><a href="sec_DIFFTaylor.html" data-scroll="sec_DIFFTaylor">Taylor Polynomials</a></li>
+<li><a href="sec_optimise.html" data-scroll="sec_optimise">Optimisation</a></li>
+<li><a href="sec_curve_sketch.html" data-scroll="sec_curve_sketch">Sketching Graphs</a></li>
+<li><a href="sec_4_7.html" data-scroll="sec_4_7">L'Hôpital's Rule and Indeterminate Forms</a></li>
+</ul>
+<h2 class="link"><a href="chapter-5.html" data-scroll="chapter-5"><span class="codenumber">4</span> <span class="title">Towards Integral Calculus</span></a></h2>
+<ul><li><a href="sec_antidiff.html" data-scroll="sec_antidiff">Introduction to Antiderivatives</a></li></ul>
+<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Appendices</span></a></h2>
+<h2 class="link"><a href="app_highschool.html" data-scroll="app_highschool"><span class="codenumber">A</span> <span class="title">High School Material</span></a></h2>
+<ul>
+<li><a href="sec_simtri.html" data-scroll="sec_simtri">Similar Triangles</a></li>
+<li><a href="sec_A_2.html" data-scroll="sec_A_2">Pythagoras</a></li>
+<li><a href="sec_A_3.html" data-scroll="sec_A_3">Trigonometry — Definitions</a></li>
+<li><a href="app_rad_arc_sec.html" data-scroll="app_rad_arc_sec">Radians, Arcs and Sectors</a></li>
+<li><a href="app_sec_trig_graphs.html" data-scroll="app_sec_trig_graphs">Trigonometry — Graphs</a></li>
+<li><a href="sec_A_6.html" data-scroll="sec_A_6">Trigonometry — Special Triangles</a></li>
+<li><a href="sec_A_7.html" data-scroll="sec_A_7">Trigonometry — Simple Identities</a></li>
+<li><a href="sec_trig_add.html" data-scroll="sec_trig_add">Trigonometry — Add and Subtract Angles</a></li>
+<li><a href="sec_inv_trig.html" data-scroll="sec_inv_trig">Inverse Trig Functions</a></li>
+<li><a href="app_sec_areas.html" data-scroll="app_sec_areas">Areas</a></li>
+<li><a href="sec_volumes.html" data-scroll="sec_volumes">Volumes</a></li>
+<li><a href="sec_powers.html" data-scroll="sec_powers">Powers</a></li>
+<li><a href="sec_logs.html" data-scroll="sec_logs">Logarithms</a></li>
+<li><a href="sec_must_deriv.html" data-scroll="sec_must_deriv">You Should be Able to Derive</a></li>
+</ul>
+<h2 class="link"><a href="chap_app_B.html" data-scroll="chap_app_B"><span class="codenumber">B</span> <span class="title">Origin of Trig, Area and Volume Formulas</span></a></h2>
+<ul>
+<li><a href="sec_B_1.html" data-scroll="sec_B_1">Theorems about Triangles</a></li>
+<li><a href="sec_B_2.html" data-scroll="sec_B_2">Trigonometry</a></li>
+<li><a href="sec_B_3.html" data-scroll="sec_B_3">Inverse Trigonometric Functions</a></li>
+<li><a href="sec_B_4.html" data-scroll="sec_B_4">Cosine and Sine Laws</a></li>
+<li><a href="sec_B_5.html" data-scroll="sec_B_5">Circles, cones and spheres</a></li>
+</ul>
+<h2 class="link"><a href="app_root_finding.html" data-scroll="app_root_finding"><span class="codenumber">C</span> <span class="title">Root Finding</span></a></h2>
+<ul>
+<li><a href="sec_C_1.html" data-scroll="sec_C_1">Newton's Method</a></li>
+<li><a href="sec_C_2.html" data-scroll="sec_C_2">The Error Behaviour of Newton's Method</a></li>
+<li><a href="sec_C_3.html" data-scroll="sec_C_3">The false position (regula falsi) method</a></li>
+<li><a href="sec_C_4.html" data-scroll="sec_C_4">The secant method</a></li>
+<li><a href="sec_C_5.html" data-scroll="sec_C_5">The Error Behaviour of the Secant Method</a></li>
+</ul>
+<h2 class="link"><a href="app_hint.html" data-scroll="app_hint"><span class="codenumber">D</span> <span class="title">Hints for Exercises</span></a></h2>
+<h2 class="link"><a href="app_answ.html" data-scroll="app_answ"><span class="codenumber">E</span> <span class="title">Answers to Exercises</span></a></h2>
+<h2 class="link"><a href="app_soln.html" data-scroll="app_soln"><span class="codenumber">F</span> <span class="title">Solutions to Exercises</span></a></h2></nav><div class="extras"><nav><a class="feedback-link" href="mailto:clp@ugrad.math.ubc.ca?subject=clp-pretext" target="_blank">Feedback</a><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="mathbook-content"><section class="subsection" id="subsection-9"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.6.3</span> <span class="title">Back to the Main Text</span>
+</h3>
+<p id="p-862">We already know from our work above that polynomials are continuous, and that  rational functions are continuous at all points in their domains — i.e. where  their denominators are non-zero. As we did for  limits, we will see that continuity interacts “nicely” with arithmetic. This  will allow us to construct complicated continuous functions from simpler  continuous building blocks (like polynomials).</p>
+<p id="p-863">But first, a few examples…</p>
+<article class="example-like" id="eg_1_6_1"><a knowl="" class="id-ref" refid="hk-eg_1_6_1"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.6.4</span> <span class="title">Simple continuous and discontinuous functions</span>
+</h6></a></article><div id="hk-eg_1_6_1" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-864">Consider the functions drawn below</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/lim6.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p id="p-865">These are</p>
+<div class="displaymath">
+\begin{align*}
+f(x) &amp;= \begin{cases} x&amp;x \lt 1  \\
+x+2 &amp; x\geq 1 \end{cases}\\
+g(x) &amp;= \begin{cases} 1/x^2&amp; x\neq0  \\
+0 &amp; x=0\end{cases}\\
+h(x) &amp;= \begin{cases}\frac{x^3-x^2}{x-1} &amp; x\neq 1 \\
+0 &amp; x=1 \end{cases}
+\end{align*}
+</div>
+<p>Determine where they are continuous and discontinuous:</p>
+<ul class="disc">
+<li id="li-275">
+<p id="p-866">When \(x \lt 1\) then \(f(x)\) is a straight line (and so a polynomial) and so it is  continuous at every point \(x \lt 1\text{.}\) Similarly when \(x \gt 1\) the function is a  straight line and so it is continuous at every point \(x \gt 1\text{.}\) The only point which  might be a discontinuity is at \(x=1\text{.}\) We see that the one sided limits are  different. Hence the limit at \(x=1\) does not exist and so the function is  discontinuous at \(x=1\text{.}\)</p>
+<p id="p-867">But note that that \(f(x)\) is continuous from one side — which?</p>
+</li>
+<li id="li-276">The middle case is much like the previous one. When \(x \neq 0\) the \(g(x)\)  is a rational function and so is continuous everywhere on its domain (which is  all reals except \(x=0\)). Thus the only point where \(g(x)\) might be discontinuous is at  \(x=0\text{.}\) We see that neither of the one-sided limits exist at \(x=0\text{,}\) so the limit  does not exist at \(x=0\text{.}\) Hence the function is discontinuous at \(x=0\text{.}\)</li>
+<li id="li-277">
+<p id="p-868">We have seen the function \(h(x)\) before. By the same reasoning as  above, we know it is continuous except at \(x=1\) which we must check separately.</p>
+<p id="p-869">By definition of \(h(x)\text{,}\) \(h(1) = 0\text{.}\) We must compare this to the limit as \(x  \to 1\text{.}\) We did this before.</p>
+<div class="displaymath">
+\begin{align*}
+\frac{x^3-x^2}{x-1} &amp;= \frac{x^2(x-1)}{x-1} = x^2
+\end{align*}
+</div>
+<p>So \(\lim_{x  \to 1} \frac{x^3-x^2}{x-1} = \lim_{x  \to 1} x^2 = 1\neq h(1)\text{.}\) Hence \(h\)  is discontinuous at \(x=1\text{.}\)</p>
+</li>
+</ul></article></div>
+<p id="p-870">This example illustrates different sorts of discontinuities:</p>
+<ul class="disc">
+<li id="li-278">The function \(f(x)\) has a “jump discontinuity” because the function  “jumps” from one finite value on the left to another value on the right.</li>
+<li id="li-279">The second function, \(g(x)\text{,}\) has an “infinite discontinuity” since  \(\lim f(x) =+\infty\text{.}\)</li>
+<li id="li-280">The third function, \(h(x)\text{,}\) has a “removable discontinuity” because we  could make the function continuous at that point by redefining the function at  that point. i.e. setting \(h(1)=1\text{.}\) That is<div class="displaymath">
+\begin{align*}
+\text{new function }h(x) &amp;= \begin{cases}
+\frac{x^3-x^2}{x-1} &amp; x\neq 1\\
+1 &amp; x=1
+\end{cases}
+\end{align*}
+</div>
+</li>
+</ul>
+<p id="p-871">Showing a function is continuous can be a pain, but just as the limit laws help  us compute complicated limits in terms of simpler limits, we can use them to  show that complicated functions are continuous by breaking them into simpler  pieces.</p>
+<article class="theorem-like" id="thm_arith_cont"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">1.6.5</span> <span class="title">Arithmetic of continuity</span>
+</h6>
+<p id="p-872">Let \(a,c \in \mathbb{R}\) and let \(f(x)\) and \(g(x)\) be functions that are  continuous at \(a\text{.}\) Then the following functions are also continuous at \(x=a\text{:}\)</p>
+<ul class="disc">
+<li id="li-281">\(f(x) + g(x)\) and \(f(x) - g(x)\text{,}\)</li>
+<li id="li-282">\(c f(x)\) and \(f(x) g(x)\text{,}\) and</li>
+<li id="li-283">\(\frac{f(x)}{g(x)}\) provided \(g(a) \neq 0\text{.}\)</li>
+</ul></article><p id="p-873">Above we stated that polynomials and rational functions are  continuous (being careful about domains of rational functions —  we must avoid the denominators being zero) without making it a formal  statement. This is easily fixed…</p>
+<article class="theorem-like" id="lem_1_6_1"><h6 class="heading">
+<span class="type">Lemma</span> <span class="codenumber">1.6.6</span>
+</h6>
+<p id="p-874">Let \(c \in \mathbb{R}\text{.}\) The functions</p>
+<div class="displaymath">
+\begin{align*}
+f(x) &amp;= x &amp; g(x) &amp;= c
+\end{align*}
+</div>
+<p>are continuous everywhere on the real line</p></article><p id="p-875">This isn't quite the result we wanted (that's a couple of lines below) but it  is a small result that we can combine with the arithmetic of limits to get the  result we want. Such small helpful results are called “lemmas” and they will  arise more as we go along.</p>
+<p id="p-876">Now since we can obtain any polynomial and any rational function by carefully  adding, subtracting, multiplying and dividing the functions \(f(x)=x\) and  \(g(x)=c\text{,}\) the above lemma combines with the “arithmetic of continuity”  theorem to give us the result we want:</p>
+<article class="theorem-like" id="theorem-13"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">1.6.7</span> <span class="title">Continuity of polynomials and rational functions</span>
+</h6>
+<p id="p-877">Every polynomial is continuous everywhere. Similarly every rational  function is continuous except where its denominator is zero (i.e. on all its  domain).</p></article><p id="p-878">With some more work this result can be extended to wider families of functions:</p>
+<article class="theorem-like" id="theorem-14"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">1.6.8</span>
+</h6>
+<p id="p-879">The following functions are continuous everywhere in their domains</p>
+<ul class="disc">
+<li id="li-284">polynomials, rational functions</li>
+<li id="li-285">roots and powers</li>
+<li id="li-286">trig functions and their inverses</li>
+<li id="li-287">exponential and the logarithm</li>
+</ul></article><p id="p-880">We haven't encountered inverse trigonometric functions, nor exponential  functions or logarithms, but we will see them in the next chapter. For the  moment, just file the information away.</p>
+<p id="p-881">Using a combination of the above results you can show that many complicated  functions are continuous except at a few points (usually where a denominator is  equal to zero).</p>
+<article class="example-like" id="eg_1_6_2"><a knowl="" class="id-ref" refid="hk-eg_1_6_2"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.6.9</span> <span class="title">Continuity of \(\frac{\sin(x)}{2+\cos(x)}\)</span>
+</h6></a></article><div id="hk-eg_1_6_2" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-882">Where is the function \(f(x) = \frac{\sin(x)}{2+\cos(x)}\) continuous?</p>
+<p id="p-883">We just break things down into pieces and then put them back together keeping  track of where things might go wrong.</p>
+<ul class="disc">
+<li id="li-288">The function is a ratio of two pieces — so check if the numerator is  continuous, the denominator is continuous, and if the denominator might be zero.</li>
+<li id="li-289">The numerator is \(\sin(x)\) which is “continuous on its domain”  according to one of the above theorems. Its domain is all real  numbers <a knowl="" class="id-ref" refid="hk-fn-43" id="fn-43"><sup> 1 </sup></a><span id="hk-fn-43" class="hidden-content tex2jax_ignore"><span class="footnote">Remember that \(\sin\) and \(\cos\) are defined on all real numbers, so  \(\tan(x) = \sin(x)/\cos(x)\) is continuous everywhere except where \(\cos(x)=0\text{.}\) This  happens when \(x = \frac{\pi}{2}+n\pi\) for any integer \(n\text{.}\) If you cannot remember where  \(\tan(x)\) “blows up” or \(\sin(x)=0\) or \(\cos(x)=0\) then you should definitely revise  trigonometric functions. Come to think of it — just revise them anyway.</span></span>, so it is  continuous everywhere. No problems here.</li>
+<li id="li-290">The denominator is the sum of \(2\) and \(\cos(x)\text{.}\) Since \(2\) is a constant  it is continuous everywhere. Similarly (we just checked things for the  previous point) we know that \(\cos(x)\) is continuous everywhere. Hence the  denominator is continuous.</li>
+<li id="li-291">So we just need to check if the denominator is zero. One of the facts  that we should know <a knowl="" class="id-ref" refid="hk-fn-44" id="fn-44"><sup> 2 </sup></a><span id="hk-fn-44" class="hidden-content tex2jax_ignore"><span class="footnote">If you do not know this fact then you should  revise trigonometric functions. See the previous footnote.</span></span> is that<div class="displaymath">
+\begin{gather*}
+-1 \leq \cos(x) \leq 1\\
+\end{gather*}
+<p class="intertext">and so by adding 2 we get</p>
+\begin{gather*}
+1 \leq 2+\cos(x) \leq 3
+\end{gather*}
+</div>Thus no matter what value of \(x\text{,}\) \(2+\cos(x) \geq 1\) and so cannot be zero.</li>
+<li id="li-292">So the numerator is continuous, the denominator is continuous and  nowhere zero, so the function is continuous everywhere.</li>
+</ul>
+<p id="p-884">If the function were changed to \(\ds \frac{\sin(x)}{x^2-5x+6}\) much of the same  reasoning can be used. Being a little terse we could answer with:</p>
+<ul class="disc">
+<li id="li-293">Numerator and denominator are continuous.</li>
+<li id="li-294">Since \(x^2-5x+6=(x-2)(x-3)\) the denominator is zero when \(x=2,3\text{.}\)</li>
+<li id="li-295">So the function is continuous everywhere except possibly  at \(x=2,3\text{.}\) In order to verify that the function really is discontinuous at  those points, it suffices to verify that the numerator is non-zero at \(x=2,3\text{.}\)  Indeed we know that \(\sin(x)\) is zero only when \(x = n\pi\) (for any integer  \(n\)). Hence \(\sin(2),\sin(3) \neq 0\text{.}\) Thus the numerator is non-zero, while the  denominator is zero and hence \(x=2,3\) really are points of discontinuity.</li>
+</ul>
+<p>Note that this example raises a subtle point about checking continuity when  numerator and denominator are <em class="emphasis">simultaneously</em> zero. There are quite a  few possible outcomes in this case and we need more sophisticated tools to  adequately analyse the behaviour of functions near such points. We will return  to this question later in the text after we have developed Taylor expansions (see  Section <a href="sec_DIFFTaylor.html" class="xref" title="Section 3.4: Taylor Polynomials">3.4</a>).</p></article></div>
+<p id="p-885">So we know what happens when we add subtract multiply and divide, what about  when we compose functions? Well - limits and compositions work nicely when  things are continuous.</p>
+<article class="theorem-like" id="thm_comp_cont"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">1.6.10</span> <span class="title">Compositions and continuity</span>
+</h6>
+<p id="p-886">If \(f\) is continuous at \(b\) and \(\ds \lim_{x \to a} g(x) = b\) then  \(\ds \lim_{x\to a} f(g(x)) = f(b)\text{.}\) I.e.</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{x \to a} f\left( g(x) \right) &amp;= f\left( \lim_{x \to a} g(x) \right)
+\end{align*}
+</div>
+<p>Hence if \(g\) is continuous at \(a\) and \(f\) is continuous at \(g(a)\) then the  composite function \((f \circ g)(x) = f(g(x))\) is continuous at \(a\text{.}\)</p></article><p id="p-887">So when we compose two continuous functions we get a new continuous function.</p>
+<p id="p-888">We can put this to use</p>
+<article class="example-like" id="eg_1_6_3"><a knowl="" class="id-ref" refid="hk-eg_1_6_3"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.6.11</span> <span class="title">Continuity of composed functions</span>
+</h6></a></article><div id="hk-eg_1_6_3" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-889">Where are the following functions continuous?</p>
+<div class="displaymath">
+\begin{align*}
+f(x) &amp;= \sin\left( x^2 +\cos(x) \right)\\
+g(x) &amp;= \sqrt{\sin(x)}
+\end{align*}
+</div>
+<p id="p-890">Our first step should be to break the functions down into pieces and study  them. When we put them back together we should be careful of dividing by zero,  or falling outside the domain.</p>
+<ul class="disc">
+<li id="li-296">The function \(f(x)\) is the composition of \(\sin(x)\) with \(x^2+\cos(x)\text{.}\)</li>
+<li id="li-297">These pieces, \(\sin(x), x^2, \cos(x)\) are continuous everywhere.</li>
+<li id="li-298">So the sum \(x^2+\cos(x)\) is continuous everywhere</li>
+<li id="li-299">And hence the composition of \(\sin(x)\) and \(x^2+\cos(x)\) is continuous  everywhere.</li>
+</ul>
+<p>The second function is a little trickier.</p>
+<ul class="disc">
+<li id="li-300">The function \(g(x)\) is the composition of \(\sqrt{x}\) with \(\sin(x)\text{.}\)</li>
+<li id="li-301">\(\sqrt{x}\) is continuous on its domain \(x \geq 0\text{.}\)</li>
+<li id="li-302">\(\sin(x)\) is continuous everywhere, but it is negative in many places.</li>
+<li id="li-303">In order for \(g(x)\) to be defined and continuous we must restrict \(x\) so that  \(\sin(x) \geq 0\text{.}\)</li>
+<li id="li-304">
+<p id="p-891">Recall the graph of \(\sin(x)\text{:}\)</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:17%;margin-right:17%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/sinx.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p id="p-892">Hence \(\sin(x)\geq 0\) when \(x\in[0,\pi]\) or \(x\in [2\pi,3\pi]\) or \(x\in[-2\pi,-\pi]\)  or…. To be more precise \(\sin(x)\) is positive when \(x \in [2n\pi,(2n+1)\pi]\) for any  integer \(n\text{.}\)</p>
+</li>
+<li id="li-305">Hence \(g(x)\) is continuous when \(x \in [2n\pi,(2n+1)\pi]\) for any  integer \(n\text{.}\)</li>
+</ul></article></div>
+<p id="p-893">Continuous functions are very nice (mathematically speaking). Functions  from the “real world” tend to be continuous (though not always). The key  aspect that  makes them nice is the fact that they don't jump about.</p>
+<p id="p-894">The absence of such jumps leads to the following theorem which, while it can be  quite confusing on first glance, actually says something very natural —  obvious even. It says, roughly speaking, that, as you draw the graph \(y=f(x)\) starting at  \(x=a\) and ending at \(x=b\text{,}\) \(y\) changes continuously from \(y=f(a)\) to \(y=f(b)\text{,}\) with no  jumps, and consequently \(y\) must take every value between \(f(a)\) and \(f(b)\) at least once.  We'll start by just giving the precise statement and then we'll explain it in detail.</p>
+<article class="theorem-like" id="thm_ivt"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">1.6.12</span> <span class="title">Intermediate value theorem (IVT)</span>
+</h6>
+<p id="p-895">Let \(a \lt b\) and let \(f\) be a function that is continuous at all points \(a\leq x  \leq b\text{.}\) If \(Y\) is any number between \(f(a)\) and \(f(b)\) then there exists some  number \(c \in [a,b]\) so that \(f(c) = Y\text{.}\)</p></article><p id="p-896">Like the \(\epsilon-\delta\) definition of limits <a knowl="" class="id-ref" refid="hk-fn-45" id="fn-45"><sup> 3 </sup></a><span id="hk-fn-45" class="hidden-content tex2jax_ignore"><span class="footnote">The interested student is  invited to take a look at the optional Section <a href="sec_opt_formal_limit.html" class="xref" title="Section 1.7: (Optional) — Making the Informal a Little More Formal">1.7</a></span></span>, we should  break this  theorem down into pieces. Before we do that, keep the following pictures in mind.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/IVT.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p id="p-897">Now the break-down</p>
+<ul class="disc">
+<li id="li-306">
+<em class="alert">Let \(a \lt b\) and let \(f\) be a function that is continuous at all  points \(a\leq x \leq b\text{.}\)</em> — This is setting the scene. We have \(a,b\) with  \(a \lt b\) (we can safely assume these to be real numbers). Our function must  be continuous at all points between \(a\) and \(b\text{.}\)</li>
+<li id="li-307">
+<em class="alert">if \(Y\) is any number between \(f(a)\) and \(f(b)\)</em> — Now we need  another number \(Y\) and the only restriction on it is that it lies between  \(f(a)\) and \(f(b)\text{.}\) That is, if \(f(a)\leq f(b)\) then \(f(a) \leq Y \leq f(b)\text{.}\) Or  if \(f(a) \geq f(b)\) then \(f(a) \geq Y \geq f(b)\text{.}\) So notice that \(Y\) could be  equal to \(f(a)\) or \(f(b)\) — if we wanted to avoid that possibility, then we  would normally explicitly say \(Y \neq f(a), f(b)\) or we would write that \(Y\)  is <em class="emphasis">strictly</em> between \(f(a)\) and \(f(b)\text{.}\)</li>
+<li id="li-308">
+<em class="alert">there exists some number \(c \in [a,b]\) so that \(f(c) = Y\)</em> — so  if we satisfy all of the above conditions, then there has to be some real  number \(c\) lying between \(a\) and \(b\) so that when we evaluate \(f(c)\) it is \(Y\text{.}\)</li>
+</ul>
+<p>So that breaks down the proof statement by statement, but what does it actually  mean?</p>
+<ul class="disc">
+<li id="li-309">Draw any continuous function you like between \(a\) and \(b\) — it must be continuous.</li>
+<li id="li-310">The function takes the value \(f(a)\) at \(x=a\) and \(f(b)\) at \(x=b\) — see  the left-hand figure above.</li>
+<li id="li-311">Now we can pick any \(Y\) that lies between \(f(a)\) and \(f(b)\) — see the  middle figure above. The IVT <a knowl="" class="id-ref" refid="hk-fn-46" id="fn-46"><sup> 4 </sup></a><span id="hk-fn-46" class="hidden-content tex2jax_ignore"><span class="footnote">Often with big important useful theorems  like this one, writing out the full name again and again becomes tedious, so we  abbreviate it. Such abbreviations are okay provided the reader knows this is  what you are doing, so the first time you use an abbreviation you should let  the reader know. Much like we are doing here in this footnote: : “IVT” stands for “intermediate value theorem”, which is Theorem <a knowl="./knowl/thm_ivt.html" title="Theorem 1.6.12: Intermediate value theorem (IVT)">1.6.12</a>.</span></span> tells us that  there must be some \(x\)-value that when plugged into the function gives us \(Y\text{.}\)  That is, there is some \(c\) between \(a\) and \(b\) so that \(f(c) = Y\text{.}\) We can also interpret  this graphically; the IVT tells us that the horizontal straight line \(y=Y\) must intersect  the graph \(y=f(x)\) at some point \((c,Y)\) with \(a\le c\le b\text{.}\)</li>
+<li id="li-312">Notice that the IVT does not tell us how many such \(c\)-values there are,  just that there is at least one of them. See the right-hand figure above. For  that particular choice of \(Y\) there are three different \(c\) values so that  \(f(c_1) = f(c_2) = f(c_3) = Y\text{.}\)</li>
+</ul>
+<p>This theorem says that if \(f(x)\) is a continuous function on all of the  interval \(a \leq x \leq b\) then as \(x\) moves from \(a\) to \(b\text{,}\) \(f(x)\) takes every value between \(f(a)\) and \(f(b)\) at least once. To put this slightly  differently, if \(f\) were to avoid a value between \(f(a)\) and \(f(b)\) then \(f\)  cannot be continuous on \([a,b]\text{.}\)</p>
+<p id="p-898">It is not hard to convince yourself that the continuity of \(f\) is crucial to  the IVT. Without it one can quickly construct examples of functions that  contradict the theorem. See the figure below for a few non-continuous examples:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/IVT2.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p id="p-899">In the left-hand example we see that a discontinuous function can “jump” over  the \(Y\)-value we have chosen, so there is no \(x\)-value that makes \(f(x)=Y\text{.}\) The  right-hand example demonstrates why we need to be be careful with the ends of  the interval. In particular, a function must be continuous over the whole  interval \([a,b]\) <em class="emphasis">including</em> the end-points of the interval. If we only  required the function to be continuous on \((a,b)\) (so strictly between \(a\) and  \(b\)) then the function could “jump” over the \(Y\)-value at \(a\) or \(b\text{.}\)</p>
+<p id="p-900">If you are still confused then here is a “real-world” example</p>
+<article class="example-like" id="eg_1_6_4"><a knowl="" class="id-ref" refid="hk-eg_1_6_4"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.6.13</span> <span class="title">The IVT in the “real world”</span>
+</h6></a></article><div id="hk-eg_1_6_4" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-901">You are climbing the Grouse-grind <a knowl="" class="id-ref" refid="hk-fn-47" id="fn-47"><sup> 5 </sup></a><span id="hk-fn-47" class="hidden-content tex2jax_ignore"><span class="footnote">If you don't know it then google it.</span></span> with a friend — call him Bob. Bob was eager and started at 9am. Bob,  while very eager, is also very clumsy; he sprained his ankle somewhere  along the path and has stopped moving at 9:21am and is just sitting <a knowl="" class="id-ref" refid="hk-fn-48" id="fn-48"><sup> 6 </sup></a><span id="hk-fn-48" class="hidden-content tex2jax_ignore"><span class="footnote">Hopefully he remembered to carry something warm.</span></span> enjoying the  view. You get there late and start climbing at 10am and being quite fit you get to the  top at 11am. The IVT implies that at some time between 10am and 11am you  meet up with Bob.</p>
+<p id="p-902">You can translate this situation into the form of the IVT as follows. Let \(t\)  be time and let \(a = \) 10am and \(b=\) 11am. Let \(g(t)\) be your distance along the trail. Hence <a knowl="" class="id-ref" refid="hk-fn-49" id="fn-49"><sup> 7 </sup></a><span id="hk-fn-49" class="hidden-content tex2jax_ignore"><span class="footnote">It's amazing what facts you can find on Wikipedia.</span></span> \(g(a) = 0\) and  \(g(b) = 2.9km\text{.}\) Since you are a mortal, your position along the trail is a  continuous function — no helicopters or teleportation or… We have no idea  where Bob is sitting, except that he is somewhere between \(g(a)\) and  \(g(b)\text{,}\) call this point \(Y\text{.}\) The IVT guarantees that there is some time \(c\)  between \(a\) and \(b\) (so between 10am and 11am) with \(g(c) = Y\) (and your  position will be the same as Bob's).</p></article></div>
+<p id="p-903">Aside from finding Bob sitting by the side of the trail, one of the most  important applications of the IVT is determining where a function is zero. For  quadratics we know (or should know) that</p>
+<div class="displaymath">
+\begin{align*}
+ax^2+bx+c &amp;= 0 &amp; \text{ when } x &amp;= \frac{-b \pm \sqrt{b^2-4ac}}{2a}
+\end{align*}
+</div>
+<p>While the Babylonians could (mostly, but not quite) do the above, the corresponding  formula for solving a cubic is uglier and that for a quartic is uglier still. One of  the most famous results in mathematics demonstrates that no such  formula exists for quintics or higher degree polynomials <a knowl="" class="id-ref" refid="hk-fn-50" id="fn-50"><sup> 8 </sup></a><span id="hk-fn-50" class="hidden-content tex2jax_ignore"><span class="footnote">The similar  (but uglier) formula for solving cubics took until the 15th century and the  work of del Ferro and Cardano (and Cardano's student Ferrari). A similar (but  even uglier) formula for quartics was also found by Ferrari. The extremely  famous  Abel-Ruffini Theorem (nearly by Ruffini in the late 18th century and  completely by Abel in early 19th century) demonstrates  that a similar formula  for the zeros of a quintic does not exist. Note that the theorem does  <em class="emphasis">not</em> say that quintics do not have zeros; rather it says that the zeros  cannot in general be expressed using a finite combination of addition,  multiplication, division, powers and roots. The interested student should also  look up Évariste Galois and his contributions to this area.</span></span>.</p>
+<p id="p-904">So even for polynomials we cannot, in general, write down explicit  formulae for their zeros and have to make do with numerical approximations —  i.e. write down the root as a decimal expansion to whatever precision we desire.  For more complicated functions we have no choice — there is no reason that the  zeros should be expressible as nice neat little formulas. At the same time,  finding the zeros of a function:</p>
+<div class="displaymath">
+\begin{align*}
+f(x) &amp;= 0
+\end{align*}
+</div>
+<p>or solving equations of the form <a knowl="" class="id-ref" refid="hk-fn-51" id="fn-51"><sup> 9 </sup></a><span id="hk-fn-51" class="hidden-content tex2jax_ignore"><span class="footnote">In fact both of these are the same because we  can write \(f(x)=g(x)-h(x)\) and then the zeros of \(f(x)\) are exactly when \(g(x)=h(x)\text{.}\)</span></span></p>
+<div class="displaymath">
+\begin{align*}
+g(x) &amp;= h(x)
+\end{align*}
+</div>
+<p>can be a crucial step in many mathematical proofs and applications.</p>
+<p id="p-905">For this reason there is a considerable body of mathematics which focuses just  on finding the zeros of functions. The IVT provides a very simple way to  “locate” the zeros of a function. In particular, if we know a continuous  function is  negative at a point \(x=a\) and positive at another point \(x=b\text{,}\) then  there must (by the IVT) be a point \(x=c\) between \(a\) and \(b\) where \(f(c)=0\text{.}\)</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/IVT3.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p id="p-906">Consider the leftmost of the above figures. It depicts a continuous function  that is negative at \(x=a\) and positive at \(x=b\text{.}\) So choose \(Y=0\) and apply the  IVT — there must be some \(c\) with \(a \leq c \leq b\) so that \(f(c) = Y = 0\text{.}\)  While this doesn't tell us \(c\) exactly, it does give us bounds on the possible positions  of at least one zero — there must be at least one c obeying \(a \le c \le b\text{.}\)</p>
+<p id="p-907">See middle figure. To get better bounds we could test a point half-way between  \(a\) and \(b\text{.}\) So set \(a' = \frac{a+b}{2}\text{.}\) In this example we see that \(f(a')\)  is  negative. Applying the IVT again tells us there is some \(c\) between \(a'\) and  \(b\)  so that \(f(c) = 0\text{.}\) Again — we don't have \(c\) exactly, but we have halved the  range of values it could take.</p>
+<p id="p-908">Look at the rightmost figure and do it again — test the point half-way between  \(a'\) and \(b\text{.}\) In this example we see that \(f(b')\) is positive. Applying the IVT  tells us that there is some \(c\) between \(a'\) and \(b'\) so that \(f(c) = 0\text{.}\) This  new range is a quarter of the length of the original. If we keep doing this  process the range will halve each time until we know that the zero is inside  some tiny range of possible values. This process is called the bisection method.</p>
+<p id="p-909">Consider the following zero-finding example</p>
+<article class="example-like" id="eg_pre_bisection"><a knowl="" class="id-ref" refid="hk-eg_pre_bisection"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.6.14</span> <span class="title">Show that \(f(x)=x-1+\sin(\pi x/2)\) has a zero</span>
+</h6></a></article><div id="hk-eg_pre_bisection" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-910">Show that the function \(f(x) = x-1+\sin(\pi x/2)\) has a zero  in \(0 \leq x \leq 1\text{.}\)</p>
+<p id="p-911">This question has been set up nicely to lead us towards using the IVT;  we are  already given a nice interval on which to look. In general we might have to  test a few points and experiment a bit with a calculator before we can  start narrowing down a range.</p>
+<p id="p-912">Let us start by testing the endpoints of the interval we are given</p>
+<div class="displaymath">
+\begin{align*}
+f(0) &amp;= 0 - 1 + \sin(0) = -1  \lt  0\\
+f(1) &amp;= 1-1+\sin(\pi/2) = 1  \gt  0
+\end{align*}
+</div>
+<p>So we know a point where \(f\) is positive and one where it is negative. So by  the IVT there is a point in between where it is zero.</p>
+<p id="p-913"><em class="emphasis">BUT</em> in order to apply the IVT we have to show that the function is  continuous, and we cannot simply write</p>
+<blockquote class="blockquote" id="blockquote-16"><p id="p-914">it is continuous</p></blockquote>
+<p id="p-915">We need to explain to the reader <em class="emphasis">why</em> it is continuous. That is — we  have to prove it.</p>
+<p id="p-916">So to write up our answer we can put something like the following —  keeping in mind we need to tell the reader what we are doing so they can follow along easily.</p>
+<ul class="disc">
+<li id="li-313">We will use the IVT to prove that there is a zero in \([0,1]\text{.}\)</li>
+<li id="li-314">
+<p id="p-917">First we must show that the function is continuous.</p>
+<ul class="circle">
+<li id="li-315">Since \(x-1\) is a polynomial it is continuous everywhere.</li>
+<li id="li-316">The function \(\sin(\pi x/2)\) is a trigonometric function and is also  continuous everywhere.</li>
+<li id="li-317">The sum of two continuous functions is also continuous, so \(f(x)\) is  continuous everywhere.</li>
+</ul>
+</li>
+<li id="li-318">Let \(a=0, b=1\text{,}\) then<div class="displaymath">
+\begin{align*}
+f(0) &amp;= 0 - 1 + \sin(0) = -1  \lt  0\\
+f(1) &amp;= 1-1+\sin(\pi/2) = 1  \gt  0
+\end{align*}
+</div>
+</li>
+<li id="li-319">The function is negative at \(x=0\) and positive at \(x=1\text{.}\) Since the  function is continuous we know there is a point \(c \in [0,1]\) so that \(f(c) =  0\text{.}\)</li>
+</ul>
+<p>Notice that though we have not used full sentences in our explanation here, we  are still using words. Your mathematics, unless it is very straight-forward  computation, should contain words as well as symbols.</p>
+<p id="p-918">The zero of this function is actually located at about \(x=0.4053883559\text{.}\)</p></article></div>
+<p id="p-919">The bisection method is really just the idea that we can keep repeating the above  reasoning (with a calculator handy). Each iteration will tell us the location of the zero  more precisely. The following example illustrates this.</p>
+<article class="example-like" id="eg_bisection"><a knowl="" class="id-ref" refid="hk-eg_bisection"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.6.15</span> <span class="title">Using the bisection method</span>
+</h6></a></article><div id="hk-eg_bisection" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-920">Use the bisection method to find a zero of</p>
+<div class="displaymath">
+\begin{align*}
+f(x) &amp;= x-1+\sin(\pi x/2)
+\end{align*}
+</div>
+<p>that lies between \(0\) and \(1\text{.}\)</p>
+<p id="p-921">So we start with the two points we worked out above:</p>
+<ul class="disc">
+<li id="li-320">\(a=0, b=1\) and<div class="displaymath">
+\begin{align*}
+f(0) &amp;= -1\\
+f(1) &amp;= 1
+\end{align*}
+</div>
+</li>
+<li id="li-321">Test the point in the middle \(x = \frac{0+1}{2} = 0.5\)<div class="displaymath">
+\begin{align*}
+f(0.5) &amp;= 0.2071067813  \gt  0
+\end{align*}
+</div>
+</li>
+<li id="li-322">So our new interval will be \([0,0.5]\) since the function is negative at  \(x=0\) and positive at \(x=0.5\)</li>
+</ul>
+<p>Repeat</p>
+<ul class="disc">
+<li id="li-323">\(a=0, b=0.5\) where \(f(0) \lt 0\) and \(f(0.5) \gt 0\text{.}\)</li>
+<li id="li-324">Test the point in the middle \(x = \frac{0+0.5}{2} = 0.25\)<div class="displaymath">
+\begin{align*}
+f(0.25) &amp;= -0.3673165675  \lt  0
+\end{align*}
+</div>
+</li>
+<li id="li-325">So our new interval will be \([0.25,0.5]\) since the function is negative  at \(x=0.25\) and positive at \(x=0.5\)</li>
+</ul>
+<p>Repeat</p>
+<ul class="disc">
+<li id="li-326">\(a=0.25, b=0.5\) where \(f(0.25) \lt 0\) and \(f(0.5) \gt 0\text{.}\)</li>
+<li id="li-327">Test the point in the middle \(x = \frac{0.25+0.5}{2} = 0.375\)<div class="displaymath">
+\begin{align*}
+f(0.375) &amp;= -0.0694297669  \lt  0
+\end{align*}
+</div>
+</li>
+<li id="li-328">So our new interval will be \([0.375,0.5]\) since the function is negative  at \(x=0.375\) and positive at \(x=0.5\)</li>
+</ul>
+<p>Below is an illustration of what we have observed so far together with a plot of the  actual function.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/ivt_eg.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p id="p-922">And one final iteration:</p>
+<ul class="disc">
+<li id="li-329">\(a=0.375, b=0.5\) where \(f(0.375) \lt 0\) and \(f(0.5) \gt 0\text{.}\)</li>
+<li id="li-330">Test the point in the middle \(x = \frac{0.375+0.5}{2} = 0.4375\)<div class="displaymath">
+\begin{align*}
+f(0.4375) &amp;= 0.0718932843 \gt 0
+\end{align*}
+</div>
+</li>
+<li id="li-331">So our new interval will be \([0.375,0.4375]\) since the function is  negative at \(x=0.375\) and positive at \(x=0.4375\)</li>
+</ul>
+<p>So without much work we know the location of a zero inside a range of length  \(0.0625 = 2^{-4}\text{.}\) Each iteration will halve the length of the range and we  keep going until we reach the precision we need, though it is much easier to  program a computer to do it.</p></article></div></section></div></main>
+</div>
+<!--Start: Google Universal code--><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-105798942-1', 'auto');
+ga('send', 'pageview');
+</script><!--End: Google Universal code--><div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.1/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-02-04T11:19:11-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><div class="solution"><ul class="disc">
+<li>By Equation <a knowl="./knowl/eq_taylorErrorN.html" title="Equation 3.4.33">3.4.33</a>, there is \(c\in(0,1)\) such that the error is<div class="displaymath">
+\begin{align*}
+\left|\frac{f'''(c)}{3!}\cdot (1-0)^3\right|
+&amp;=  \left|\frac{e^{-c}}{6(8+c^2)}\right|.
+\end{align*}
+</div>
+</li>
+<li>When \(0 \lt  c \lt 1\text{,}\) we know that \(1 \gt  e^{-c}  \gt  e^{-1}\) and \(8 \leq 8+c^2  \lt  9\text{,}\) so<div class="displaymath">
+\begin{align*}
+\left|\frac{e^{-c}}{6(8+c^2)}\right|
+&amp;=\frac{e^{-c}}{6(8+c^2)}\\
+&amp;  \lt  \frac{1}{6 |8+c^2|}\\
+&amp;  \lt  \frac{1}{6\times 8} = \frac{1}{48}  \lt  \frac{1}{40}
+\end{align*}
+</div>as required.</li>
+<li>Alternatively, notice that \(e^{-c}\) is a decreasing function of \(c\text{,}\) while for \(0 \lt c\) \(8+c^2\) is an increasing function of \(c\text{.}\) Hence the fraction is a decreasing function of \(c\) and takes its largest value at \(c=0\text{.}\) Hence<div class="displaymath">
+\begin{align*}
+\left|\frac{e^c}{6(8+c^2)}\right|
+&amp; \leq \frac{1}{6\times 8} = \frac{1}{48}  \lt  \frac{1}{40}.
+\end{align*}
+</div>
+</li>
+</ul></div></body>
+</html>
