@@ -1,0 +1,2 @@
+Test compilation CLP1
+=====================
