@@ -28,14 +28,14 @@
 
 
 	<book xml:id="clp_1_dc">
-		<title>CLP-1 Differential Calculus</title>
+		<title>CLP-1 Calcul différentiel</title>
 
 		<xi:include href="misc/frontmatter.xml" />
 		<xi:include href="text/basics00.xml" />
 		<xi:include href="text/limits00.xml" />
 		<xi:include href="text/deriv00.xml" />
-	        <xi:include href="text/applic00.xml" /> 
- 		<xi:include href="text/further00.xml" /> 
+	        <xi:include href="text/applic00.xml" />
+ 		<xi:include href="text/further00.xml" />
 		<backmatter>
 			<title>Appendices</title>
 			<xi:include href="text/app01.xml" />
